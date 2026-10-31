@@ -1,0 +1,58 @@
+[
+  {
+    "name": "holder_aggregate",
+    "observed": true,
+    "origin": 64501,
+    "peer": "172.31.0.11",
+    "peer_exact": true,
+    "prefix": "10.0.0.0/16"
+  },
+  {
+    "name": "listed_customer",
+    "observed": true,
+    "origin": 8075,
+    "peer": "172.31.0.12",
+    "peer_exact": true,
+    "prefix": "10.0.1.0/24"
+  },
+  {
+    "name": "open_delegate",
+    "observed": true,
+    "origin": 18403,
+    "peer": "172.31.0.13",
+    "peer_exact": true,
+    "prefix": "10.0.2.0/24"
+  },
+  {
+    "name": "public_subprefix_attacker",
+    "observed": true,
+    "origin": 15169,
+    "peer": "172.31.0.14",
+    "peer_exact": true,
+    "prefix": "10.0.3.0/24"
+  },
+  {
+    "name": "aggregate_attacker",
+    "observed": true,
+    "origin": 13335,
+    "peer": "172.31.0.15",
+    "peer_exact": true,
+    "prefix": "10.0.0.0/16"
+  },
+  {
+    "name": "private_origin",
+    "observed": true,
+    "origin": 64513,
+    "peer": "172.31.0.16",
+    "peer_exact": true,
+    "prefix": "10.0.4.0/24"
+  },
+  {
+    "name": "unrelated",
+    "observed": true,
+    "origin": 64496,
+    "peer": "172.31.0.17",
+    "peer_exact": true,
+    "prefix": "192.0.2.0/24"
+  }
+]

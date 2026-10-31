@@ -1,0 +1,15 @@
+[
+  {
+    "expected_local_preference": 300,
+    "expected_present": true,
+    "name": null,
+    "observed_local_preferences": [
+      300
+    ],
+    "origin": 8075,
+    "pass": true,
+    "prefix": "2001:db8:10::/48",
+    "present": true,
+    "state": "Explicit"
+  }
+]

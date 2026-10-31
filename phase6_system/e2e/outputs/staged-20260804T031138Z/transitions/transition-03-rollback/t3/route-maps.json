@@ -1,0 +1,285 @@
+{"zebra":{
+  "DROP-IN":{
+    "invoked":0,
+    "disabledOptimization":false,
+    "processedChange":false,
+    "rules":[
+      {
+        "sequenceNumber":10,
+        "type":"deny",
+        "invoked":0,
+        "cpuTimeMS":0,
+        "matchClauses":[],
+        "setClauses":[],
+        "action":"Exit routemap"
+      }
+    ],
+    "cpuTimeMS":0
+  },
+  "LEGACY-IN":{
+    "invoked":0,
+    "disabledOptimization":false,
+    "processedChange":false,
+    "rules":[
+      {
+        "sequenceNumber":10,
+        "type":"permit",
+        "invoked":0,
+        "cpuTimeMS":0,
+        "matchClauses":[],
+        "setClauses":[],
+        "action":"Exit routemap"
+      },
+      {
+        "sequenceNumber":20,
+        "type":"permit",
+        "invoked":0,
+        "cpuTimeMS":0,
+        "matchClauses":[],
+        "setClauses":[],
+        "action":"Exit routemap"
+      },
+      {
+        "sequenceNumber":90,
+        "type":"deny",
+        "invoked":0,
+        "cpuTimeMS":0,
+        "matchClauses":[],
+        "setClauses":[],
+        "action":"Exit routemap"
+      }
+    ],
+    "cpuTimeMS":0
+  },
+  "STG-IN-172-30-0-12":{
+    "invoked":0,
+    "disabledOptimization":false,
+    "processedChange":false,
+    "rules":[
+      {
+        "sequenceNumber":10,
+        "type":"permit",
+        "invoked":0,
+        "cpuTimeMS":0,
+        "matchClauses":[
+          "ip address prefix-list STG-P-172-30-0-12-1"
+        ],
+        "setClauses":[],
+        "action":"Exit routemap"
+      },
+      {
+        "sequenceNumber":20,
+        "type":"permit",
+        "invoked":0,
+        "cpuTimeMS":0,
+        "matchClauses":[
+          "ip address prefix-list STG-P-172-30-0-12-2"
+        ],
+        "setClauses":[],
+        "action":"Exit routemap"
+      },
+      {
+        "sequenceNumber":30,
+        "type":"permit",
+        "invoked":0,
+        "cpuTimeMS":0,
+        "matchClauses":[
+          "ip address prefix-list STG-P-172-30-0-12-3"
+        ],
+        "setClauses":[],
+        "action":"Exit routemap"
+      },
+      {
+        "sequenceNumber":40,
+        "type":"permit",
+        "invoked":0,
+        "cpuTimeMS":0,
+        "matchClauses":[
+          "ip address prefix-list STG-P-172-30-0-12-4"
+        ],
+        "setClauses":[],
+        "action":"Exit routemap"
+      },
+      {
+        "sequenceNumber":50,
+        "type":"permit",
+        "invoked":0,
+        "cpuTimeMS":0,
+        "matchClauses":[
+          "ip address prefix-list STG-P-172-30-0-12-5"
+        ],
+        "setClauses":[],
+        "action":"Exit routemap"
+      },
+      {
+        "sequenceNumber":9990,
+        "type":"deny",
+        "invoked":0,
+        "cpuTimeMS":0,
+        "matchClauses":[],
+        "setClauses":[],
+        "action":"Exit routemap"
+      }
+    ],
+    "cpuTimeMS":0
+  }
+}
+,"bgpd":{
+  "DROP-IN":{
+    "invoked":0,
+    "disabledOptimization":false,
+    "processedChange":false,
+    "rules":[
+      {
+        "sequenceNumber":10,
+        "type":"deny",
+        "invoked":0,
+        "cpuTimeMS":0,
+        "matchClauses":[],
+        "setClauses":[],
+        "action":"Exit routemap"
+      }
+    ],
+    "cpuTimeMS":0
+  },
+  "LEGACY-IN":{
+    "invoked":232,
+    "disabledOptimization":false,
+    "processedChange":false,
+    "rules":[
+      {
+        "sequenceNumber":10,
+        "type":"permit",
+        "invoked":134,
+        "cpuTimeMS":0,
+        "matchClauses":[
+          "rpki valid"
+        ],
+        "setClauses":[
+          "local-preference 300",
+          "community 65000:10"
+        ],
+        "action":"Exit routemap"
+      },
+      {
+        "sequenceNumber":20,
+        "type":"permit",
+        "invoked":74,
+        "cpuTimeMS":0,
+        "matchClauses":[
+          "rpki notfound"
+        ],
+        "setClauses":[
+          "local-preference 100",
+          "community 65000:40"
+        ],
+        "action":"Exit routemap"
+      },
+      {
+        "sequenceNumber":90,
+        "type":"deny",
+        "invoked":24,
+        "cpuTimeMS":0,
+        "matchClauses":[
+          "rpki invalid"
+        ],
+        "setClauses":[],
+        "action":"Exit routemap"
+      }
+    ],
+    "cpuTimeMS":0
+  },
+  "STG-IN-172-30-0-12":{
+    "invoked":33,
+    "disabledOptimization":false,
+    "processedChange":false,
+    "rules":[
+      {
+        "sequenceNumber":10,
+        "type":"permit",
+        "invoked":7,
+        "cpuTimeMS":0,
+        "matchClauses":[
+          "ip address prefix-list STG-P-172-30-0-12-1",
+          "as-path STG-A-172-30-0-12-1"
+        ],
+        "setClauses":[
+          "local-preference 300",
+          "community 65000:10"
+        ],
+        "action":"Exit routemap"
+      },
+      {
+        "sequenceNumber":20,
+        "type":"permit",
+        "invoked":7,
+        "cpuTimeMS":0,
+        "matchClauses":[
+          "ip address prefix-list STG-P-172-30-0-12-2",
+          "as-path STG-A-172-30-0-12-2"
+        ],
+        "setClauses":[
+          "local-preference 300",
+          "community 65000:10"
+        ],
+        "action":"Exit routemap"
+      },
+      {
+        "sequenceNumber":30,
+        "type":"permit",
+        "invoked":6,
+        "cpuTimeMS":0,
+        "matchClauses":[
+          "ip address prefix-list STG-P-172-30-0-12-3",
+          "as-path STG-A-172-30-0-12-3"
+        ],
+        "setClauses":[
+          "local-preference 200",
+          "community 65000:20"
+        ],
+        "action":"Exit routemap"
+      },
+      {
+        "sequenceNumber":40,
+        "type":"permit",
+        "invoked":6,
+        "cpuTimeMS":0,
+        "matchClauses":[
+          "ip address prefix-list STG-P-172-30-0-12-4",
+          "as-path STG-A-172-30-0-12-4"
+        ],
+        "setClauses":[
+          "local-preference 200",
+          "community 65000:20"
+        ],
+        "action":"Exit routemap"
+      },
+      {
+        "sequenceNumber":50,
+        "type":"permit",
+        "invoked":7,
+        "cpuTimeMS":0,
+        "matchClauses":[
+          "ip address prefix-list STG-P-172-30-0-12-5",
+          "as-path STG-A-172-30-0-12-5"
+        ],
+        "setClauses":[
+          "local-preference 100",
+          "community 65000:40"
+        ],
+        "action":"Exit routemap"
+      },
+      {
+        "sequenceNumber":9990,
+        "type":"deny",
+        "invoked":0,
+        "cpuTimeMS":0,
+        "matchClauses":[],
+        "setClauses":[],
+        "action":"Exit routemap"
+      }
+    ],
+    "cpuTimeMS":0
+  }
+}
+}

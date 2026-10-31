@@ -1,0 +1,12 @@
+{
+  "connectedGroup":1,
+  "connections":[
+    {
+      "mode":"tcp",
+      "host":"routinator",
+      "port":"3323",
+      "preference":1,
+      "state":"connected"
+    }
+  ]
+}

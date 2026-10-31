@@ -1,0 +1,8 @@
+{
+  "checksum": 1260000,
+  "max_ns_per_query": 27344,
+  "median_ns_per_query": 27328,
+  "min_ns_per_query": 27291,
+  "queries_per_sample": 140000,
+  "samples": 7
+}

@@ -1,0 +1,14 @@
+{
+ "vrfId": 0,
+ "vrfName": "default",
+ "tableVersion": 17,
+ "routerId": "172.31.0.10",
+ "defaultLocPrf": 100,
+ "localAS": 65000,
+ "routes": { "10.0.0.0/16": [{"rpkiValid":true,"valid":true,"bestpath":true,"selectionReason":"Older Path","pathFrom":"external","prefix":"10.0.0.0","prefixLen":16,"network":"10.0.0.0/16","version":12,"metric":0,"weight":0,"peerId":"172.31.0.11","path":"64501","origin":"IGP","nexthops":[{"ip":"172.31.0.11","hostname":"holder","afi":"ipv4","used":true}]},{"rpkiInvalid":true,"valid":true,"pathFrom":"external","prefix":"10.0.0.0","prefixLen":16,"network":"10.0.0.0/16","version":12,"metric":0,"weight":0,"peerId":"172.31.0.15","path":"13335","origin":"IGP","nexthops":[{"ip":"172.31.0.15","hostname":"aggregate-attacker","afi":"ipv4","used":true}]}]
+,"10.0.1.0/24": [{"rpkiInvalid":true,"valid":true,"bestpath":true,"selectionReason":"First path received","pathFrom":"external","prefix":"10.0.1.0","prefixLen":24,"network":"10.0.1.0/24","version":13,"metric":0,"weight":0,"peerId":"172.31.0.12","path":"8075","origin":"IGP","nexthops":[{"ip":"172.31.0.12","hostname":"customer","afi":"ipv4","used":true}]}]
+,"10.0.2.0/24": [{"rpkiInvalid":true,"valid":true,"bestpath":true,"selectionReason":"First path received","pathFrom":"external","prefix":"10.0.2.0","prefixLen":24,"network":"10.0.2.0/24","version":14,"metric":0,"weight":0,"peerId":"172.31.0.13","path":"18403","origin":"IGP","nexthops":[{"ip":"172.31.0.13","hostname":"delegate","afi":"ipv4","used":true}]}]
+,"10.0.3.0/24": [{"rpkiInvalid":true,"valid":true,"bestpath":true,"selectionReason":"First path received","pathFrom":"external","prefix":"10.0.3.0","prefixLen":24,"network":"10.0.3.0/24","version":15,"metric":0,"weight":0,"peerId":"172.31.0.14","path":"15169","origin":"IGP","nexthops":[{"ip":"172.31.0.14","hostname":"public-attacker","afi":"ipv4","used":true}]}]
+,"10.0.4.0/24": [{"rpkiInvalid":true,"valid":true,"bestpath":true,"selectionReason":"First path received","pathFrom":"external","prefix":"10.0.4.0","prefixLen":24,"network":"10.0.4.0/24","version":16,"metric":0,"weight":0,"peerId":"172.31.0.16","path":"64513","origin":"IGP","nexthops":[{"ip":"172.31.0.16","hostname":"private-origin","afi":"ipv4","used":true}]}]
+,"192.0.2.0/24": [{"rpkiNotFound":true,"valid":true,"bestpath":true,"selectionReason":"First path received","pathFrom":"external","prefix":"192.0.2.0","prefixLen":24,"network":"192.0.2.0/24","version":17,"metric":0,"weight":0,"peerId":"172.31.0.17","path":"64496","origin":"IGP","nexthops":[{"ip":"172.31.0.17","hostname":"unrelated","afi":"ipv4","used":true}]}]
+ } , "totalRoutes": 6, "totalPaths": 7 } 

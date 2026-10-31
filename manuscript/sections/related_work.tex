@@ -1,0 +1,13 @@
+\label{sec:related_work}
+
+\subsection{RPKI Measurements and Failure Modes}
+
+Longitudinal studies measure ROA coverage and invalid route origins~\cite{chung2019}, while passive and controlled methods infer whether networks filter invalid announcements~\cite{gilad2017rpki,hlavacek2023}. Later work traces conflicts to misconfiguration, changing origins, leasing, and operational coordination~\cite{demystifying2026,leasing2026}, and broader analyses cover repository, validator, and router security~\cite{sok2025} and the collateral damage of filtering~\cite{improv2025}. Conflicts therefore have heterogeneous causes; we address the preceding policy problem of specifying holder-signed prefix and length limits before a downstream origin is selected or reported.
+
+\subsection{Conflict Diagnosis and Mitigation}
+
+Diagnosis methods treat this heterogeneity as an inference problem. Early work classifies false alarms among routes that RPKI marks invalid~\cite{xu2019falsealarm}. SROV uses route duration and registry, routing, DNS, and data plane evidence to distinguish errors from hijacks~\cite{srov2022}; LOV combines a classifier, AS-visibility analysis, and quarantine into a benign-route whitelist~\cite{schulmann2025learning}; and Right the Ship assesses legitimacy from organization, path, and competition evidence~\cite{righttheship2025}. These systems decide whether a conflict should be tolerated; none changes the signed policy available before a downstream origin is known.
+
+\subsection{Authorization and Validation Mechanisms}
+
+Operational guidance favors narrow ROAs for known origins, while delegated certification lets a provisioned downstream holder publish an exact ROA~\cite{rfc7115,rfc9319,rfc6480,rfc6487,rfc9582}. Wildcard ROA provides policy signed by the holder for any origin at its target prefix, with a regular ROA taking priority~\cite{gilad2017rpki}. SLURM supplies local exceptions~\cite{rfc8416}; Hybrid ROA compresses origin lists~\cite{hybridroa2024}; Signed Prefix Lists enumerate prefixes without conveying holder permission~\cite{rpki-spl2025}; DISCO changes the validation path~\cite{disco2020}; and BGPsec and ASPA add path or provider evidence~\cite{rfc8205,aspa-profile2026}. None encodes a holder-signed proper-subprefix region with a maximum length as a separate validation input.

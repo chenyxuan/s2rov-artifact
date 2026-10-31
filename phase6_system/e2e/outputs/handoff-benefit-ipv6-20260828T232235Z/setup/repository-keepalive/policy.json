@@ -1,0 +1,10 @@
+{
+  "metadata": {
+    "generated": 1787959366,
+    "generatedTime": "2026-08-28T23:22:46Z"
+  }
+,
+  "roas": [
+    { "asn": "AS64501", "prefix": "2001:db8:ffff::/48", "minLength": 48, "maxLength": 48, "inclusivity": null, "ta": "krill" }
+  ]
+}

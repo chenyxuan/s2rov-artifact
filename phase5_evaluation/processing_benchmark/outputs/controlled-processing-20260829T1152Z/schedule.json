@@ -1,0 +1,1352 @@
+[
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/000-load-ipv4-subprefixes-64-rep-1.json",
+    "repetition": 1,
+    "schedule_index": 0,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/001-load-ipv4-subprefixes-0-rep-1.json",
+    "repetition": 1,
+    "schedule_index": 1,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/002-load-ipv6-subprefixes-256-rep-1.json",
+    "repetition": 1,
+    "schedule_index": 2,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/003-load-ipv4-subprefixes-256-rep-1.json",
+    "repetition": 1,
+    "schedule_index": 3,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/004-load-ipv6-subprefixes-0-rep-1.json",
+    "repetition": 1,
+    "schedule_index": 4,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/005-load-ipv6-subprefixes-64-rep-1.json",
+    "repetition": 1,
+    "schedule_index": 5,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/006-load-ipv6-subprefixes-0-rep-2.json",
+    "repetition": 2,
+    "schedule_index": 6,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/007-load-ipv6-subprefixes-64-rep-2.json",
+    "repetition": 2,
+    "schedule_index": 7,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/008-load-ipv4-subprefixes-256-rep-2.json",
+    "repetition": 2,
+    "schedule_index": 8,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/009-load-ipv4-subprefixes-64-rep-2.json",
+    "repetition": 2,
+    "schedule_index": 9,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/010-load-ipv6-subprefixes-256-rep-2.json",
+    "repetition": 2,
+    "schedule_index": 10,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/011-load-ipv4-subprefixes-0-rep-2.json",
+    "repetition": 2,
+    "schedule_index": 11,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/012-load-ipv6-subprefixes-64-rep-3.json",
+    "repetition": 3,
+    "schedule_index": 12,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/013-load-ipv6-subprefixes-0-rep-3.json",
+    "repetition": 3,
+    "schedule_index": 13,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/014-load-ipv4-subprefixes-256-rep-3.json",
+    "repetition": 3,
+    "schedule_index": 14,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/015-load-ipv4-subprefixes-64-rep-3.json",
+    "repetition": 3,
+    "schedule_index": 15,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/016-load-ipv6-subprefixes-256-rep-3.json",
+    "repetition": 3,
+    "schedule_index": 16,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/017-load-ipv4-subprefixes-0-rep-3.json",
+    "repetition": 3,
+    "schedule_index": 17,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/018-load-ipv6-subprefixes-256-rep-4.json",
+    "repetition": 4,
+    "schedule_index": 18,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/019-load-ipv4-subprefixes-0-rep-4.json",
+    "repetition": 4,
+    "schedule_index": 19,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/020-load-ipv6-subprefixes-0-rep-4.json",
+    "repetition": 4,
+    "schedule_index": 20,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/021-load-ipv4-subprefixes-256-rep-4.json",
+    "repetition": 4,
+    "schedule_index": 21,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/022-load-ipv6-subprefixes-64-rep-4.json",
+    "repetition": 4,
+    "schedule_index": 22,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/023-load-ipv4-subprefixes-64-rep-4.json",
+    "repetition": 4,
+    "schedule_index": 23,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/024-load-ipv4-subprefixes-64-rep-5.json",
+    "repetition": 5,
+    "schedule_index": 24,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/025-load-ipv4-subprefixes-256-rep-5.json",
+    "repetition": 5,
+    "schedule_index": 25,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/026-load-ipv6-subprefixes-0-rep-5.json",
+    "repetition": 5,
+    "schedule_index": 26,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/027-load-ipv6-subprefixes-256-rep-5.json",
+    "repetition": 5,
+    "schedule_index": 27,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/028-load-ipv6-subprefixes-64-rep-5.json",
+    "repetition": 5,
+    "schedule_index": 28,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/029-load-ipv4-subprefixes-0-rep-5.json",
+    "repetition": 5,
+    "schedule_index": 29,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/030-load-ipv6-subprefixes-64-rep-6.json",
+    "repetition": 6,
+    "schedule_index": 30,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/031-load-ipv6-subprefixes-0-rep-6.json",
+    "repetition": 6,
+    "schedule_index": 31,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/032-load-ipv4-subprefixes-64-rep-6.json",
+    "repetition": 6,
+    "schedule_index": 32,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/033-load-ipv4-subprefixes-256-rep-6.json",
+    "repetition": 6,
+    "schedule_index": 33,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/034-load-ipv4-subprefixes-0-rep-6.json",
+    "repetition": 6,
+    "schedule_index": 34,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/035-load-ipv6-subprefixes-256-rep-6.json",
+    "repetition": 6,
+    "schedule_index": 35,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/036-load-ipv6-subprefixes-256-rep-7.json",
+    "repetition": 7,
+    "schedule_index": 36,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/037-load-ipv6-subprefixes-64-rep-7.json",
+    "repetition": 7,
+    "schedule_index": 37,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/038-load-ipv4-subprefixes-0-rep-7.json",
+    "repetition": 7,
+    "schedule_index": 38,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/039-load-ipv6-subprefixes-0-rep-7.json",
+    "repetition": 7,
+    "schedule_index": 39,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/040-load-ipv4-subprefixes-64-rep-7.json",
+    "repetition": 7,
+    "schedule_index": 40,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/041-load-ipv4-subprefixes-256-rep-7.json",
+    "repetition": 7,
+    "schedule_index": 41,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/042-load-ipv4-subprefixes-0-rep-8.json",
+    "repetition": 8,
+    "schedule_index": 42,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/043-load-ipv4-subprefixes-64-rep-8.json",
+    "repetition": 8,
+    "schedule_index": 43,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/044-load-ipv6-subprefixes-0-rep-8.json",
+    "repetition": 8,
+    "schedule_index": 44,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/045-load-ipv6-subprefixes-256-rep-8.json",
+    "repetition": 8,
+    "schedule_index": 45,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/046-load-ipv6-subprefixes-64-rep-8.json",
+    "repetition": 8,
+    "schedule_index": 46,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/047-load-ipv4-subprefixes-256-rep-8.json",
+    "repetition": 8,
+    "schedule_index": 47,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/048-load-ipv4-subprefixes-256-rep-9.json",
+    "repetition": 9,
+    "schedule_index": 48,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/049-load-ipv6-subprefixes-256-rep-9.json",
+    "repetition": 9,
+    "schedule_index": 49,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/050-load-ipv4-subprefixes-0-rep-9.json",
+    "repetition": 9,
+    "schedule_index": 50,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/051-load-ipv6-subprefixes-64-rep-9.json",
+    "repetition": 9,
+    "schedule_index": 51,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/052-load-ipv4-subprefixes-64-rep-9.json",
+    "repetition": 9,
+    "schedule_index": 52,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/053-load-ipv6-subprefixes-0-rep-9.json",
+    "repetition": 9,
+    "schedule_index": 53,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/054-load-ipv6-subprefixes-64-rep-10.json",
+    "repetition": 10,
+    "schedule_index": 54,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/055-load-ipv4-subprefixes-64-rep-10.json",
+    "repetition": 10,
+    "schedule_index": 55,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/056-load-ipv6-subprefixes-256-rep-10.json",
+    "repetition": 10,
+    "schedule_index": 56,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/057-load-ipv4-subprefixes-256-rep-10.json",
+    "repetition": 10,
+    "schedule_index": 57,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/058-load-ipv6-subprefixes-0-rep-10.json",
+    "repetition": 10,
+    "schedule_index": 58,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/059-load-ipv4-subprefixes-0-rep-10.json",
+    "repetition": 10,
+    "schedule_index": 59,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/060-load-ipv4-subprefixes-64-rep-11.json",
+    "repetition": 11,
+    "schedule_index": 60,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/061-load-ipv4-subprefixes-256-rep-11.json",
+    "repetition": 11,
+    "schedule_index": 61,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/062-load-ipv6-subprefixes-64-rep-11.json",
+    "repetition": 11,
+    "schedule_index": 62,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/063-load-ipv6-subprefixes-0-rep-11.json",
+    "repetition": 11,
+    "schedule_index": 63,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/064-load-ipv6-subprefixes-256-rep-11.json",
+    "repetition": 11,
+    "schedule_index": 64,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/065-load-ipv4-subprefixes-0-rep-11.json",
+    "repetition": 11,
+    "schedule_index": 65,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/066-load-ipv4-subprefixes-256-rep-12.json",
+    "repetition": 12,
+    "schedule_index": 66,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/067-load-ipv6-subprefixes-256-rep-12.json",
+    "repetition": 12,
+    "schedule_index": 67,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/068-load-ipv4-subprefixes-64-rep-12.json",
+    "repetition": 12,
+    "schedule_index": 68,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/069-load-ipv6-subprefixes-0-rep-12.json",
+    "repetition": 12,
+    "schedule_index": 69,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/070-load-ipv6-subprefixes-64-rep-12.json",
+    "repetition": 12,
+    "schedule_index": 70,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/071-load-ipv4-subprefixes-0-rep-12.json",
+    "repetition": 12,
+    "schedule_index": 71,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/072-load-ipv6-subprefixes-0-rep-13.json",
+    "repetition": 13,
+    "schedule_index": 72,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/073-load-ipv4-subprefixes-64-rep-13.json",
+    "repetition": 13,
+    "schedule_index": 73,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/074-load-ipv4-subprefixes-256-rep-13.json",
+    "repetition": 13,
+    "schedule_index": 74,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/075-load-ipv6-subprefixes-256-rep-13.json",
+    "repetition": 13,
+    "schedule_index": 75,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/076-load-ipv6-subprefixes-64-rep-13.json",
+    "repetition": 13,
+    "schedule_index": 76,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/077-load-ipv4-subprefixes-0-rep-13.json",
+    "repetition": 13,
+    "schedule_index": 77,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/078-load-ipv6-subprefixes-0-rep-14.json",
+    "repetition": 14,
+    "schedule_index": 78,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/079-load-ipv6-subprefixes-256-rep-14.json",
+    "repetition": 14,
+    "schedule_index": 79,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/080-load-ipv6-subprefixes-64-rep-14.json",
+    "repetition": 14,
+    "schedule_index": 80,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/081-load-ipv4-subprefixes-256-rep-14.json",
+    "repetition": 14,
+    "schedule_index": 81,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/082-load-ipv4-subprefixes-64-rep-14.json",
+    "repetition": 14,
+    "schedule_index": 82,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/083-load-ipv4-subprefixes-0-rep-14.json",
+    "repetition": 14,
+    "schedule_index": 83,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/084-load-ipv6-subprefixes-64-rep-15.json",
+    "repetition": 15,
+    "schedule_index": 84,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/085-load-ipv4-subprefixes-0-rep-15.json",
+    "repetition": 15,
+    "schedule_index": 85,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/086-load-ipv4-subprefixes-64-rep-15.json",
+    "repetition": 15,
+    "schedule_index": 86,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/087-load-ipv4-subprefixes-256-rep-15.json",
+    "repetition": 15,
+    "schedule_index": 87,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/088-load-ipv6-subprefixes-256-rep-15.json",
+    "repetition": 15,
+    "schedule_index": 88,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/089-load-ipv6-subprefixes-0-rep-15.json",
+    "repetition": 15,
+    "schedule_index": 89,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/090-load-ipv4-subprefixes-64-rep-16.json",
+    "repetition": 16,
+    "schedule_index": 90,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/091-load-ipv4-subprefixes-0-rep-16.json",
+    "repetition": 16,
+    "schedule_index": 91,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/092-load-ipv6-subprefixes-64-rep-16.json",
+    "repetition": 16,
+    "schedule_index": 92,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/093-load-ipv4-subprefixes-256-rep-16.json",
+    "repetition": 16,
+    "schedule_index": 93,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/094-load-ipv6-subprefixes-256-rep-16.json",
+    "repetition": 16,
+    "schedule_index": 94,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/095-load-ipv6-subprefixes-0-rep-16.json",
+    "repetition": 16,
+    "schedule_index": 95,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/096-load-ipv6-subprefixes-0-rep-17.json",
+    "repetition": 17,
+    "schedule_index": 96,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/097-load-ipv4-subprefixes-0-rep-17.json",
+    "repetition": 17,
+    "schedule_index": 97,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/098-load-ipv6-subprefixes-64-rep-17.json",
+    "repetition": 17,
+    "schedule_index": 98,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/099-load-ipv4-subprefixes-256-rep-17.json",
+    "repetition": 17,
+    "schedule_index": 99,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/100-load-ipv6-subprefixes-256-rep-17.json",
+    "repetition": 17,
+    "schedule_index": 100,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/101-load-ipv4-subprefixes-64-rep-17.json",
+    "repetition": 17,
+    "schedule_index": 101,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/102-load-ipv4-subprefixes-256-rep-18.json",
+    "repetition": 18,
+    "schedule_index": 102,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/103-load-ipv6-subprefixes-0-rep-18.json",
+    "repetition": 18,
+    "schedule_index": 103,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/104-load-ipv4-subprefixes-0-rep-18.json",
+    "repetition": 18,
+    "schedule_index": 104,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/105-load-ipv6-subprefixes-256-rep-18.json",
+    "repetition": 18,
+    "schedule_index": 105,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/106-load-ipv6-subprefixes-64-rep-18.json",
+    "repetition": 18,
+    "schedule_index": 106,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/107-load-ipv4-subprefixes-64-rep-18.json",
+    "repetition": 18,
+    "schedule_index": 107,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/108-load-ipv6-subprefixes-0-rep-19.json",
+    "repetition": 19,
+    "schedule_index": 108,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/109-load-ipv4-subprefixes-64-rep-19.json",
+    "repetition": 19,
+    "schedule_index": 109,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/110-load-ipv6-subprefixes-256-rep-19.json",
+    "repetition": 19,
+    "schedule_index": 110,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/111-load-ipv4-subprefixes-0-rep-19.json",
+    "repetition": 19,
+    "schedule_index": 111,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/112-load-ipv4-subprefixes-256-rep-19.json",
+    "repetition": 19,
+    "schedule_index": 112,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/113-load-ipv6-subprefixes-64-rep-19.json",
+    "repetition": 19,
+    "schedule_index": 113,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/114-load-ipv6-subprefixes-64-rep-20.json",
+    "repetition": 20,
+    "schedule_index": 114,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/115-load-ipv4-subprefixes-64-rep-20.json",
+    "repetition": 20,
+    "schedule_index": 115,
+    "subprefix_entries": 64,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/116-load-ipv6-subprefixes-0-rep-20.json",
+    "repetition": 20,
+    "schedule_index": 116,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/117-load-ipv6-subprefixes-256-rep-20.json",
+    "repetition": 20,
+    "schedule_index": 117,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/118-load-ipv4-subprefixes-0-rep-20.json",
+    "repetition": 20,
+    "schedule_index": 118,
+    "subprefix_entries": 0,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/119-load-ipv4-subprefixes-256-rep-20.json",
+    "repetition": 20,
+    "schedule_index": 119,
+    "subprefix_entries": 256,
+    "worker": "load"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/120-classify-ipv6-subprefixes-256-rep-1.json",
+    "repetition": 1,
+    "schedule_index": 120,
+    "subprefix_entries": 256,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/121-classify-ipv4-subprefixes-256-rep-1.json",
+    "repetition": 1,
+    "schedule_index": 121,
+    "subprefix_entries": 256,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/122-classify-ipv4-subprefixes-0-rep-1.json",
+    "repetition": 1,
+    "schedule_index": 122,
+    "subprefix_entries": 0,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/123-classify-ipv6-subprefixes-64-rep-1.json",
+    "repetition": 1,
+    "schedule_index": 123,
+    "subprefix_entries": 64,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/124-classify-ipv4-subprefixes-64-rep-1.json",
+    "repetition": 1,
+    "schedule_index": 124,
+    "subprefix_entries": 64,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/125-classify-ipv6-subprefixes-0-rep-1.json",
+    "repetition": 1,
+    "schedule_index": 125,
+    "subprefix_entries": 0,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/126-classify-ipv4-subprefixes-0-rep-2.json",
+    "repetition": 2,
+    "schedule_index": 126,
+    "subprefix_entries": 0,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/127-classify-ipv4-subprefixes-256-rep-2.json",
+    "repetition": 2,
+    "schedule_index": 127,
+    "subprefix_entries": 256,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/128-classify-ipv6-subprefixes-256-rep-2.json",
+    "repetition": 2,
+    "schedule_index": 128,
+    "subprefix_entries": 256,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/129-classify-ipv6-subprefixes-64-rep-2.json",
+    "repetition": 2,
+    "schedule_index": 129,
+    "subprefix_entries": 64,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/130-classify-ipv6-subprefixes-0-rep-2.json",
+    "repetition": 2,
+    "schedule_index": 130,
+    "subprefix_entries": 0,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/131-classify-ipv4-subprefixes-64-rep-2.json",
+    "repetition": 2,
+    "schedule_index": 131,
+    "subprefix_entries": 64,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/132-classify-ipv6-subprefixes-64-rep-3.json",
+    "repetition": 3,
+    "schedule_index": 132,
+    "subprefix_entries": 64,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/133-classify-ipv6-subprefixes-256-rep-3.json",
+    "repetition": 3,
+    "schedule_index": 133,
+    "subprefix_entries": 256,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/134-classify-ipv4-subprefixes-0-rep-3.json",
+    "repetition": 3,
+    "schedule_index": 134,
+    "subprefix_entries": 0,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/135-classify-ipv4-subprefixes-64-rep-3.json",
+    "repetition": 3,
+    "schedule_index": 135,
+    "subprefix_entries": 64,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/136-classify-ipv6-subprefixes-0-rep-3.json",
+    "repetition": 3,
+    "schedule_index": 136,
+    "subprefix_entries": 0,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/137-classify-ipv4-subprefixes-256-rep-3.json",
+    "repetition": 3,
+    "schedule_index": 137,
+    "subprefix_entries": 256,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/138-classify-ipv4-subprefixes-0-rep-4.json",
+    "repetition": 4,
+    "schedule_index": 138,
+    "subprefix_entries": 0,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/139-classify-ipv6-subprefixes-256-rep-4.json",
+    "repetition": 4,
+    "schedule_index": 139,
+    "subprefix_entries": 256,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/140-classify-ipv6-subprefixes-0-rep-4.json",
+    "repetition": 4,
+    "schedule_index": 140,
+    "subprefix_entries": 0,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/141-classify-ipv4-subprefixes-256-rep-4.json",
+    "repetition": 4,
+    "schedule_index": 141,
+    "subprefix_entries": 256,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/142-classify-ipv6-subprefixes-64-rep-4.json",
+    "repetition": 4,
+    "schedule_index": 142,
+    "subprefix_entries": 64,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/143-classify-ipv4-subprefixes-64-rep-4.json",
+    "repetition": 4,
+    "schedule_index": 143,
+    "subprefix_entries": 64,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/144-classify-ipv6-subprefixes-256-rep-5.json",
+    "repetition": 5,
+    "schedule_index": 144,
+    "subprefix_entries": 256,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/145-classify-ipv4-subprefixes-64-rep-5.json",
+    "repetition": 5,
+    "schedule_index": 145,
+    "subprefix_entries": 64,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/146-classify-ipv4-subprefixes-0-rep-5.json",
+    "repetition": 5,
+    "schedule_index": 146,
+    "subprefix_entries": 0,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/147-classify-ipv6-subprefixes-0-rep-5.json",
+    "repetition": 5,
+    "schedule_index": 147,
+    "subprefix_entries": 0,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 4,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/148-classify-ipv4-subprefixes-256-rep-5.json",
+    "repetition": 5,
+    "schedule_index": 148,
+    "subprefix_entries": 256,
+    "worker": "classify"
+  },
+  {
+    "cpu": 31,
+    "ip_version": 6,
+    "raw_json": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/raw/149-classify-ipv6-subprefixes-64-rep-5.json",
+    "repetition": 5,
+    "schedule_index": 149,
+    "subprefix_entries": 64,
+    "worker": "classify"
+  }
+]

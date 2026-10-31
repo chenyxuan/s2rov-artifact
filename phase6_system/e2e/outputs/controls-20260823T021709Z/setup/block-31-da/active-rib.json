@@ -1,0 +1,65 @@
+{
+  "prefix":"10.0.10.0/24",
+  "version":47,
+  "advertisedTo":{
+    "172.30.50.11":{
+      "hostname":"origin-a"
+    },
+    "172.30.50.12":{
+      "hostname":"origin-b"
+    }
+  },
+  "pathCount":1,
+  "paths":[
+    {
+      "aspath":{
+        "string":"8075",
+        "segments":[
+          {
+            "type":"as-sequence",
+            "list":[
+              8075
+            ]
+          }
+        ],
+        "length":1
+      },
+      "origin":"IGP",
+      "metric":0,
+      "locPrf":200,
+      "valid":true,
+      "version":47,
+      "rpkiValidationState":"not found",
+      "bestpath":{
+        "overall":true,
+        "selectionReason":"First path received"
+      },
+      "community":{
+        "string":"65000:20",
+        "list":[
+          "65000:20"
+        ]
+      },
+      "lastUpdate":{
+        "epoch":1787451767,
+        "string":"Sun Aug 23 02:22:47 2026"
+      },
+      "nexthops":[
+        {
+          "ip":"172.30.50.11",
+          "hostname":"origin-a",
+          "afi":"ipv4",
+          "metric":0,
+          "accessible":true,
+          "used":true
+        }
+      ],
+      "peer":{
+        "peerId":"172.30.50.11",
+        "routerId":"172.30.50.11",
+        "hostname":"origin-a",
+        "type":"external"
+      }
+    }
+  ]
+}

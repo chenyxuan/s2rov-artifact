@@ -1,0 +1,62 @@
+\section{Aggregate--Subprefix Authorization Gap}
+\label{sec:background}
+
+Conventional ROV creates an aggregate--subprefix gap: when an aggregate remains \valid{} and no ROA matches a proper subprefix with a different origin, that route is \invalid{}. We formalize it, examine an operational source and observable pattern, then derive the constraints that guide the design.
+
+\subsection{A Formal Characterization of the Gap}
+\label{sec:formal-dilemma}
+
+\emph{ROV model.} A ROA entry is a triple $(q,a,\ell)$ giving prefix $q$, origin $a$, and maximum permitted length $\ell$~\cite{rfc6480,rfc9582}. We write $p\subseteq q$ when $p$ is equal to or more specific than $q$, $p\subset q$ for a proper subprefix, and $|p|$ for the length of $p$. A ROA \emph{covers} route $(p,o)$ when it holds an entry with $p\subseteq q$, and \emph{matches} it when that entry also lists $o=a$ and permits $|p|\leq\ell$. Conventional ROV returns \valid{} if a covering ROA matches, \invalid{} if one covers the route but none matches, and \notfound{} if none covers it~\cite{rfc6811,rfc8481}.
+
+\begin{proposition}[Aggregate--subprefix authorization dilemma]
+\label{prop:aggregate-subprefix-dilemma}
+Let $(p_0,a_h)$ denote an aggregate route and $(p,o_d)$ a proper subprefix route with a different origin, so $p\subset p_0$ and $o_d\neq a_h$. If conventional ROV classifies $(p_0,a_h)$ as \valid{} under a fixed set of ROAs and no covering ROA in that set matches $(p,o_d)$, then it classifies $(p,o_d)$ as \invalid{}.
+\end{proposition}
+\begin{proof}
+Because $(p_0,a_h)$ is \valid{}, some ROA contains a matching entry $(q,a_h,\ell)$. Thus $p_0\subseteq q$ and $|p_0|\leq\ell$. Since $p\subset p_0\subseteq q$, that ROA also covers $(p,o_d)$, regardless of whether $|p|\leq\ell$; $\ell$ affects matching, not coverage. No covering ROA matches the subprefix route by assumption, so coverage without a match yields \invalid{}.
+\end{proof}
+
+\emph{ROV consequence.} Every ROA that matches the aggregate also covers its proper subprefixes, and \emph{maxLength} does not remove that coverage. Preserving $(p_0,a_h)$ as \valid{} while avoiding \invalid{} for $(p,o_d)$ therefore requires a ROA that matches $(p,o_d)$; removing every covering ROA would leave the aggregate \notfound{} (Figure~\ref{fig:motivation}).
+
+\subsection{Observed Aggregate--Subprefix Origin Divergence}
+\label{sec:observed-divergence}
+
+Indirect allocation can produce the premise of a missing matching ROA. Suppose $A$ controls ROA issuance for $p_0$, names aggregate origin $a_h$, and allocates space to $B$, which assigns $p\subset p_0$ to $C$ using $o_d\neq a_h$~\cite{rfc6480}. If no channel reports $C$'s choice, $A$ cannot know that $C$ selected $o_d$; IP leasing through a broker exemplifies this pattern~\cite{leasing2026}.
+
+\begin{proposition}[Origin choice visibility limit]
+\label{prop:origin-choice-visibility}
+Consider two cases that differ only in whether the downstream operator selects $o_1$ or $o_2\neq o_1$ for $p$. If issuer $A$ cannot tell which case occurred, no deterministic ROA policy constructed by $A$ can guarantee both that the selected origin has a matching ROA and that the unselected origin does not.
+\end{proposition}
+\begin{proof}
+Let $L$ be the origins for which $A$ creates matching ROAs for $p$. Because $A$ cannot distinguish the two cases, $L$ is the same in both. If $L$ omits $o_1$ or $o_2$, that origin lacks a matching ROA when selected. If $L$ contains both, it gives the unselected origin a matching ROA in either case.
+\end{proof}
+
+Reporting the choice lets $A$ distinguish the cases, and a provisioned downstream issuer can supply the matching ROA directly~\cite{rfc6480,rfc9582}; until either occurs, Proposition~\ref{prop:aggregate-subprefix-dilemma} yields \invalid{} for the later route.
+
+From June 2026 snapshots of the RIPE Database and an RRC00 RIB~\cite{ripe-db,ripe-ris}, we build IPv4 and IPv6 paths along the RIPE status chains, each linking an assigned endpoint prefix to its nearest strictly enclosing allocation prefix, the aggregate prefix, with $d$ counting the intermediate allocations between them. The observations are nested: \emph{RIPE Database} keeps paths with at least one eligible intermediate range, \emph{BGP Data} those with unambiguous origin sets at both ends in RRC00, and \emph{Origin Divergence} those whose origin sets do not overlap.
+
+\begin{table}[t]
+\caption{RIPE allocation paths and origin divergence.}
+\label{tab:visibility-candidates}
+\centering\footnotesize\setlength{\tabcolsep}{3.0pt}
+
+\adjustbox{max width=\columnwidth}{%
+\begin{tabular}{@{}llrrrr@{}}\toprule
+Version & Observation & $d=1$ & $d=2$ & $d\geq3$ & All \\ \midrule
+\multirow{3}{*}{IPv4}
+ & RIPE Database & 49,724 & 1,630 & 17 & 51,371 \\
+ & BGP Data & 601 & 21 & 0 & 622 \\
+ & Origin Divergence & 483 & 21 & 0 & 504 \\ \midrule
+\multirow{3}{*}{IPv6}
+ & RIPE Database & 48,645 & 65,366 & 8,169 & 122,180 \\
+ & BGP Data & 98 & 42 & 0 & 140 \\
+ & Origin Divergence & 60 & 23 & 0 & 83 \\ \bottomrule
+\end{tabular}}
+\end{table}
+
+RIPE records contain paths up to $d=3$ (IPv4) and $d=7$ (IPv6). The RRC00 join observes both endpoints for only 622 of 51,371 IPv4 and 140 of 122,180 IPv6 paths, none at $d\geq3$; within this subset, 504 IPv4 and 83 IPv6 paths show origin divergence, giving 587 candidates under 97 aggregate prefixes.
+
+\subsection{Design Implications}
+\label{sec:requirements}
+
+Together, Propositions~\ref{prop:aggregate-subprefix-dilemma} and~\ref{prop:origin-choice-visibility} require a holder-signed policy that keeps the known aggregate origin \explicit{} without listing future proper-subprefix origins: prefix markers plus a maximum route-prefix length, with nonoverlapping markers applying only below that length. Because these fields do not authorize an origin, a qualifying route receives the \openscope{} state, and local policy decides whether to accept, deprefer, or reject it.

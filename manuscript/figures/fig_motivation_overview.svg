@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="550" viewBox="0 0 900 550"
+     role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">Concrete aggregate-subprefix authorization dilemma</title>
+  <desc id="svg-desc">An illustrative prefix example and timeline compare two conventional ROV choices. Publishing the aggregate ROA keeps the aggregate Valid but makes a later child with a different origin Invalid before a matching child ROA becomes available to ROV. Delaying the aggregate ROA leaves both routes NotFound during that gap.</desc>
+  <defs>
+    <marker id="small-arrow" viewBox="0 0 6.4 4.8" refX="6.1" refY="2.4"
+            markerWidth="6.4" markerHeight="4.8" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M 0 0 L 6.4 2.4 L 0 4.8 Z" fill="#71808c"/>
+    </marker>
+    <style>
+      text { font-family: "Nimbus Roman"; fill: #263746; }
+      .module { font-size: 34.8px; font-weight: 700; }
+      .body { font-size: 32.4px; font-weight: 400; }
+      .small { font-size: 30px; font-weight: 400; }
+      .strong { font-weight: 700; }
+      .state { font-size: 36px; font-weight: 700; }
+      .center { text-anchor: middle; }
+      .end { text-anchor: end; }
+      .muted { fill: #5b6975; }
+      .blue { fill: #145a9c; }
+      .red { fill: #b94444; }
+      .amber { fill: #8a580c; }
+      .connector { fill: none; stroke: #71808c; stroke-width: 3; stroke-linecap: round; }
+      .grid { fill: none; stroke: #8a98a5; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect id="canvas" x="0" y="0" width="900" height="550" fill="#ffffff"/>
+
+  <!-- Connectors first. -->
+  <g id="timeline-connectors">
+    <path id="time-axis" class="connector" d="M 125 140 L 817 140" marker-end="url(#small-arrow)"/>
+    <line x1="440" y1="140" x2="760" y2="140" stroke="#8a580c" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g id="lane-connectors">
+    <path class="connector" d="M 417 291 L 433 291" marker-end="url(#small-arrow)"/>
+    <path class="connector" d="M 417 401 L 433 401" marker-end="url(#small-arrow)"/>
+  </g>
+
+  <!-- Premise cards. -->
+  <g id="premise-cards">
+    <rect x="25" y="50" width="410" height="77" rx="9" fill="#e7f1fa" stroke="#145a9c" stroke-width="2"/>
+    <rect x="455" y="50" width="420" height="77" rx="9" fill="#fff3da" stroke="#8a580c" stroke-width="2"/>
+  </g>
+
+  <!-- Timeline nodes. -->
+  <g id="timeline-nodes">
+    <circle cx="130" cy="140" r="7" fill="#145a9c"/>
+    <circle cx="440" cy="140" r="7" fill="#8a580c"/>
+    <circle cx="760" cy="140" r="7" fill="#8a580c"/>
+  </g>
+
+  <!-- Publish lane. -->
+  <g id="publish-lane">
+    <rect x="25" y="240" width="390" height="102" rx="9" fill="#e7f1fa" stroke="#145a9c" stroke-width="2"/>
+    <rect x="435" y="240" width="440" height="102" rx="9" fill="#ffffff" stroke="#8a98a5" stroke-width="2"/>
+    <line x1="655" y1="240" x2="655" y2="342" class="grid"/>
+  </g>
+
+  <!-- Delay lane. -->
+  <g id="delay-lane">
+    <rect x="25" y="350" width="390" height="102" rx="9" fill="#fff3da" stroke="#8a580c" stroke-width="2"/>
+    <rect x="435" y="350" width="440" height="102" rx="9" fill="#f8fafc" stroke="#8a98a5" stroke-width="2"/>
+    <line x1="655" y1="350" x2="655" y2="452" class="grid"/>
+  </g>
+
+  <!-- Mechanism-neutral missing combination. -->
+  <g id="missing-outcome">
+    <rect x="25" y="462" width="850" height="82" rx="9" fill="#f8fafc" stroke="#71808c" stroke-width="2" stroke-dasharray="8 6"/>
+  </g>
+
+  <!-- Text last. -->
+  <g id="labels">
+    <text x="450" y="33" class="module center">Illustrative example at t0</text>
+    <text x="230" y="79" class="body strong center blue" dy="0 11 -11">p⁰ = 192.0.2.0/24</text>
+    <text x="230" y="110" class="small center">aggregate origin AS-H</text>
+    <text x="665" y="79" class="body strong center amber">Future child origins</text>
+    <text x="665" y="110" class="small center amber">not yet enumerable</text>
+
+    <text x="130" y="170" class="small strong center">t0: choose</text>
+    <text x="440" y="170" class="small strong center">t1: child route appears</text>
+    <text x="440" y="200" class="small center muted">p = 192.0.2.128/25 from AS-D</text>
+    <text x="865" y="170" class="small strong end">t2: child ROA</text>
+    <text x="865" y="200" class="small end amber">available to ROV</text>
+    <text x="450" y="234" class="module center">ROV states during t1 to t2</text>
+
+    <text x="220" y="270" class="body strong center blue" dy="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11">Publish ROA for p⁰</text>
+    <text x="220" y="301" class="small center" dy="0 10 -10">p⁰, AS-H, maxLength=25</text>
+    <text x="220" y="332" class="small center muted">ROA active before t1</text>
+
+    <text x="545" y="267" class="small strong center" dy="0 10 -10">p⁰ / AS-H</text>
+    <text x="545" y="301" class="state center blue">Valid</text>
+    <text x="545" y="332" class="small center">covered</text>
+    <text x="765" y="267" class="small strong center">p / AS-D</text>
+    <text x="765" y="301" class="state center red">Invalid</text>
+    <text x="765" y="332" class="small center red">origin mismatch</text>
+
+    <text x="220" y="380" class="body strong center amber">Delay aggregate ROA</text>
+    <text x="220" y="411" class="small center">Aggregate ROA withheld</text>
+    <text x="220" y="441" class="small center muted">No other covering ROA</text>
+
+    <text x="545" y="377" class="small strong center" dy="0 10 -10">p⁰ / AS-H</text>
+    <text x="545" y="411" class="state center muted">NotFound</text>
+    <text x="545" y="441" class="small center">uncovered</text>
+    <text x="765" y="377" class="small strong center">p / AS-D</text>
+    <text x="765" y="411" class="state center muted">NotFound</text>
+    <text x="765" y="441" class="small center">no covering ROA</text>
+
+    <text x="450" y="493" class="module center">Missing conventional ROV outcome</text>
+    <text x="450" y="528" class="small center">Aggregate covered, later child distinct from Valid and Invalid</text>
+  </g>
+</svg>

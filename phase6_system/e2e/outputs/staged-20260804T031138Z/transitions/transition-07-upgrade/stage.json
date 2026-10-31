@@ -1,0 +1,7 @@
+{
+  "label": "transition-07-upgrade",
+  "publication": "dual",
+  "pattern": "DDD",
+  "cases_file": "/home/cnic/stripe-roa-v3/phase6_system/e2e/config/staged/cases.json",
+  "elapsed_ms": 3463
+}

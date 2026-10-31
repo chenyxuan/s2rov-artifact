@@ -1,0 +1,45 @@
+{
+  "inference": "descriptive only; no population confidence interval",
+  "manifest_sha256": "e75b5b4a844a27646efddd99fecc2dfc457342a6f7d44f16176a750a28303bee",
+  "metrics": {
+    "delivery_gain_100_pp": {
+      "pair_median": 0.002583011533152657,
+      "pair_weighted_mean": 11.271585827630721,
+      "root_balanced_mean": 18.71823991287871,
+      "root_max": 99.12823360756306,
+      "root_median": 0.04787796377510589,
+      "root_min": 0.0
+    },
+    "delivery_gain_50_pp": {
+      "pair_median": 0.0,
+      "pair_weighted_mean": 1.6796954998404074,
+      "root_balanced_mean": 4.38843281310251,
+      "root_max": 35.004972297201306,
+      "root_median": 0.006134652391220213,
+      "root_min": 0.0
+    },
+    "exposure_change_100_pp": {
+      "pair_median": 13.9663433597231,
+      "pair_weighted_mean": 12.97286792385528,
+      "root_balanced_mean": 17.594552059674946,
+      "root_max": 85.67720104870268,
+      "root_median": 15.145488124604476,
+      "root_min": -32.19853026643764
+    },
+    "exposure_change_50_pp": {
+      "pair_median": 4.542225781038113,
+      "pair_weighted_mean": 9.362371302987869,
+      "root_balanced_mean": 15.867327417929422,
+      "root_max": 86.70265662736185,
+      "root_median": 11.45076687767411,
+      "root_min": -24.42883157473298
+    }
+  },
+  "open_100_equals_exact_intended": 21,
+  "pairs": 21,
+  "raw_rows": 210,
+  "root_clusters": 8,
+  "schema_version": 1,
+  "status": "VERIFIED_DESCRIPTIVE",
+  "zero_upgrade_equalities": 42
+}

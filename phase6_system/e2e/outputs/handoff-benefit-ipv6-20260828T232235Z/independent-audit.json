@@ -1,0 +1,568 @@
+{
+  "artifact_manifest_audit": {
+    "entries": [],
+    "manifest": null,
+    "present": false
+  },
+  "checks": {
+    "all_trial_assertions_pass": true,
+    "artifact_manifest_matches": true,
+    "completion_matches_terminal_events": true,
+    "derived_timings_are_nonnegative": true,
+    "event_roa_changes_match_policy_diff": true,
+    "event_roa_work_matches_metadata": true,
+    "event_timings_match_metadata": true,
+    "event_timings_match_trials_csv": true,
+    "event_trial_order_matches_schedule": true,
+    "final_rib_matches_target_origin": true,
+    "global_event_clock_is_strictly_monotonic": true,
+    "metadata_final_origin_matches_target": true,
+    "no_deadline_miss": true,
+    "nonreactive_arms_issue_no_handoff_roa_update": true,
+    "open_dynamic_compiles_after_observation": true,
+    "open_dynamic_has_one_observed_origin_decision": true,
+    "open_signed_policy_is_static_during_handoff": true,
+    "open_signed_policy_omits_endpoint_origins": true,
+    "per_trial_event_clock_is_strictly_monotonic": true,
+    "per_trial_event_sequences_match": true,
+    "probe_event_matches_ping_capture": true,
+    "protocol_arms_match": true,
+    "protocol_trial_arithmetic": true,
+    "reactive_exact_updates_each_handoff": true,
+    "schedule_is_complete_randomized_round": true,
+    "schedule_manifest_present": true,
+    "schedule_matches_seed": true,
+    "schedule_rows_parse": true,
+    "source_hashes_match": true,
+    "trial_events_are_contiguous": true,
+    "trial_metadata_has_endpoint_origins": true,
+    "trial_metadata_matches_schedule": true,
+    "trials_csv_matches_raw_artifacts": true,
+    "trials_csv_retains_all_trials": true,
+    "trials_csv_rows_parse": true,
+    "trials_csv_unique_keys": true
+  },
+  "descriptive_trial_level": {
+    "open_dynamic": {
+      "deadline_miss_n": 0,
+      "decision_origin_counts": {
+        "18403": 2
+      },
+      "failed_n": 0,
+      "final_state_counts": {
+        "OpenScope": 2
+      },
+      "metrics": {
+        "observed_to_action_ms": {
+          "max_ms": 939.104,
+          "mean_ms": 930.151,
+          "median_ms": 930.151,
+          "min_ms": 921.198,
+          "n_missing": 0,
+          "n_observed": 2,
+          "n_total": 2,
+          "p95_nearest_rank_ms": 939.104
+        },
+        "observed_to_probe_ms": {
+          "max_ms": 1025.368,
+          "mean_ms": 1017.093,
+          "median_ms": 1017.093,
+          "min_ms": 1008.818,
+          "n_missing": 0,
+          "n_observed": 2,
+          "n_total": 2,
+          "p95_nearest_rank_ms": 1025.368
+        },
+        "switch_to_action_ms": {
+          "max_ms": 2091.491,
+          "mean_ms": 2077.122,
+          "median_ms": 2077.122,
+          "min_ms": 2062.753,
+          "n_missing": 0,
+          "n_observed": 2,
+          "n_total": 2,
+          "p95_nearest_rank_ms": 2091.491
+        },
+        "switch_to_probe_ms": {
+          "max_ms": 2177.755,
+          "mean_ms": 2164.064,
+          "median_ms": 2164.064,
+          "min_ms": 2150.373,
+          "n_missing": 0,
+          "n_observed": 2,
+          "n_total": 2,
+          "p95_nearest_rank_ms": 2177.755
+        }
+      },
+      "passed_n": 2,
+      "policy_digests": [
+        "8215313a11132ebc5cbc5931f63f6f90e5876363ed5f24ef831b5736c6898d65"
+      ],
+      "roa_entry_changes_total": 0,
+      "signed_update_transactions_total": 0,
+      "trial_n": 2
+    },
+    "prepublished_exact": {
+      "deadline_miss_n": 0,
+      "decision_origin_counts": {
+        "8075": 2
+      },
+      "failed_n": 0,
+      "final_state_counts": {
+        "Explicit": 2
+      },
+      "metrics": {
+        "observed_to_action_ms": {
+          "max_ms": 950.097,
+          "mean_ms": 948.813,
+          "median_ms": 948.813,
+          "min_ms": 947.529,
+          "n_missing": 0,
+          "n_observed": 2,
+          "n_total": 2,
+          "p95_nearest_rank_ms": 950.097
+        },
+        "observed_to_probe_ms": {
+          "max_ms": 1078.714,
+          "mean_ms": 1061.337,
+          "median_ms": 1061.337,
+          "min_ms": 1043.959,
+          "n_missing": 0,
+          "n_observed": 2,
+          "n_total": 2,
+          "p95_nearest_rank_ms": 1078.714
+        },
+        "switch_to_action_ms": {
+          "max_ms": 2220.253,
+          "mean_ms": 2166.424,
+          "median_ms": 2166.424,
+          "min_ms": 2112.596,
+          "n_missing": 0,
+          "n_observed": 2,
+          "n_total": 2,
+          "p95_nearest_rank_ms": 2220.253
+        },
+        "switch_to_probe_ms": {
+          "max_ms": 2351.438,
+          "mean_ms": 2278.948,
+          "median_ms": 2278.948,
+          "min_ms": 2206.459,
+          "n_missing": 0,
+          "n_observed": 2,
+          "n_total": 2,
+          "p95_nearest_rank_ms": 2351.438
+        }
+      },
+      "passed_n": 2,
+      "policy_digests": [
+        "1b799993f7d233f71d05557d32da5a829fe828301ecb7b5af7af741f880269e5"
+      ],
+      "roa_entry_changes_total": 0,
+      "signed_update_transactions_total": 0,
+      "trial_n": 2
+    },
+    "reactive_exact": {
+      "deadline_miss_n": 0,
+      "decision_origin_counts": {
+        "18403": 1,
+        "8075": 1
+      },
+      "failed_n": 0,
+      "final_state_counts": {
+        "Explicit": 2
+      },
+      "metrics": {
+        "observed_to_action_ms": {
+          "max_ms": 2182.064,
+          "mean_ms": 2125.859,
+          "median_ms": 2125.859,
+          "min_ms": 2069.655,
+          "n_missing": 0,
+          "n_observed": 2,
+          "n_total": 2,
+          "p95_nearest_rank_ms": 2182.064
+        },
+        "observed_to_probe_ms": {
+          "max_ms": 2279.274,
+          "mean_ms": 2220.51,
+          "median_ms": 2220.51,
+          "min_ms": 2161.746,
+          "n_missing": 0,
+          "n_observed": 2,
+          "n_total": 2,
+          "p95_nearest_rank_ms": 2279.274
+        },
+        "switch_to_action_ms": {
+          "max_ms": 3443.247,
+          "mean_ms": 3337.357,
+          "median_ms": 3337.357,
+          "min_ms": 3231.467,
+          "n_missing": 0,
+          "n_observed": 2,
+          "n_total": 2,
+          "p95_nearest_rank_ms": 3443.247
+        },
+        "switch_to_probe_ms": {
+          "max_ms": 3540.457,
+          "mean_ms": 3432.008,
+          "median_ms": 3432.008,
+          "min_ms": 3323.558,
+          "n_missing": 0,
+          "n_observed": 2,
+          "n_total": 2,
+          "p95_nearest_rank_ms": 3540.457
+        }
+      },
+      "passed_n": 2,
+      "policy_digests": [
+        "b2b542e44e779a0842ce3e0f9f2d5a4e195807f00c8a5447b5a9c5e50d0ee72b",
+        "d70dac44bb3ed2c1e2a2dd297a95df989f208a2b3d890b1042f1148a0f2cb6be"
+      ],
+      "roa_entry_changes_total": 4,
+      "signed_update_transactions_total": 2,
+      "trial_n": 2
+    }
+  },
+  "design": {
+    "arms": [
+      "reactive_exact",
+      "open_dynamic",
+      "prepublished_exact"
+    ],
+    "inferential_n_complete_rounds": 2,
+    "random_seed": 20260828,
+    "total_trials": 6,
+    "trial_n_per_arm": 2,
+    "trials_per_arm_per_round": 1
+  },
+  "failed_trials": [],
+  "failures": {},
+  "inference": {
+    "bootstrap_replicates": 100000,
+    "bootstrap_rng": "Python random.Random (MT19937)",
+    "bootstrap_seed": 20260828,
+    "ci_method": "cluster percentile bootstrap; nearest-rank bounds",
+    "contrasts": {
+      "open_dynamic_minus_prepublished_exact": {
+        "arm_a": "open_dynamic",
+        "arm_b": "prepublished_exact",
+        "estimand": "mean across complete-round differences of within-arm trial means (arm_a - arm_b)",
+        "metrics": {
+          "observed_to_action_ms": {
+            "ci95_nearest_rank_ms": [
+              -28.899,
+              -8.425
+            ],
+            "estimate_ms": -18.662,
+            "excluded_rounds_missing_metric": [],
+            "included_rounds": [
+              1,
+              2
+            ],
+            "inferential_n_complete_rounds": 2,
+            "round_differences_ms": [
+              -8.425088,
+              -28.898853
+            ]
+          },
+          "observed_to_probe_ms": {
+            "ci95_nearest_rank_ms": [
+              -53.346,
+              -35.141
+            ],
+            "estimate_ms": -44.244,
+            "excluded_rounds_missing_metric": [],
+            "included_rounds": [
+              1,
+              2
+            ],
+            "inferential_n_complete_rounds": 2,
+            "round_differences_ms": [
+              -53.346097,
+              -35.141155
+            ]
+          }
+        }
+      },
+      "reactive_exact_minus_open_dynamic": {
+        "arm_a": "reactive_exact",
+        "arm_b": "open_dynamic",
+        "estimand": "mean across complete-round differences of within-arm trial means (arm_a - arm_b)",
+        "metrics": {
+          "observed_to_action_ms": {
+            "ci95_nearest_rank_ms": [
+              1130.551,
+              1260.866
+            ],
+            "estimate_ms": 1195.708,
+            "excluded_rounds_missing_metric": [],
+            "included_rounds": [
+              1,
+              2
+            ],
+            "inferential_n_complete_rounds": 2,
+            "round_differences_ms": [
+              1130.550827,
+              1260.866064
+            ]
+          },
+          "observed_to_probe_ms": {
+            "ci95_nearest_rank_ms": [
+              1136.378,
+              1270.456
+            ],
+            "estimate_ms": 1203.417,
+            "excluded_rounds_missing_metric": [],
+            "included_rounds": [
+              1,
+              2
+            ],
+            "inferential_n_complete_rounds": 2,
+            "round_differences_ms": [
+              1136.377926,
+              1270.456027
+            ]
+          }
+        }
+      },
+      "reactive_exact_minus_prepublished_exact": {
+        "arm_a": "reactive_exact",
+        "arm_b": "prepublished_exact",
+        "estimand": "mean across complete-round differences of within-arm trial means (arm_a - arm_b)",
+        "metrics": {
+          "observed_to_action_ms": {
+            "ci95_nearest_rank_ms": [
+              1122.126,
+              1231.967
+            ],
+            "estimate_ms": 1177.046,
+            "excluded_rounds_missing_metric": [],
+            "included_rounds": [
+              1,
+              2
+            ],
+            "inferential_n_complete_rounds": 2,
+            "round_differences_ms": [
+              1122.125739,
+              1231.967211
+            ]
+          },
+          "observed_to_probe_ms": {
+            "ci95_nearest_rank_ms": [
+              1083.032,
+              1235.315
+            ],
+            "estimate_ms": 1159.173,
+            "excluded_rounds_missing_metric": [],
+            "included_rounds": [
+              1,
+              2
+            ],
+            "inferential_n_complete_rounds": 2,
+            "round_differences_ms": [
+              1083.031829,
+              1235.314872
+            ]
+          }
+        }
+      }
+    },
+    "unit": "complete randomized round"
+  },
+  "inputs": {
+    "intentionally_not_read": [
+      "summary.json",
+      "summary.csv",
+      "REPORT.md",
+      "independent-audit.json"
+    ],
+    "used": [
+      "protocol.json",
+      "block-order.csv",
+      "events.jsonl",
+      "trials.csv (cross-check only)",
+      "raw/*/trial-*/metadata.json",
+      "raw/*/trial-*/pre-policy.json",
+      "raw/*/trial-*/final-policy.json",
+      "raw/*/trial-*/decisions.json",
+      "raw/*/trial-*/final-rib.json",
+      "raw/*/trial-*/ping.txt",
+      "source.sha256"
+    ]
+  },
+  "interpretation_cautions": [
+    "Trial-level descriptive n is 2 per arm, but inferential n is 2 complete randomized rounds.",
+    "All failed trials are retained. A timing contrast excludes a round only when either compared arm lacks that timing value.",
+    "The endpoints measure local action installation and the configured probe, not Internet-wide reachability."
+  ],
+  "passed": true,
+  "round_arm_means_ms": {
+    "1": {
+      "open_dynamic": {
+        "observed_to_action_ms": {
+          "mean_ms": 939.103948,
+          "n_observed": 1
+        },
+        "observed_to_probe_ms": {
+          "mean_ms": 1025.36793,
+          "n_observed": 1
+        }
+      },
+      "prepublished_exact": {
+        "observed_to_action_ms": {
+          "mean_ms": 947.529036,
+          "n_observed": 1
+        },
+        "observed_to_probe_ms": {
+          "mean_ms": 1078.714027,
+          "n_observed": 1
+        }
+      },
+      "reactive_exact": {
+        "observed_to_action_ms": {
+          "mean_ms": 2069.654775,
+          "n_observed": 1
+        },
+        "observed_to_probe_ms": {
+          "mean_ms": 2161.745856,
+          "n_observed": 1
+        }
+      }
+    },
+    "2": {
+      "open_dynamic": {
+        "observed_to_action_ms": {
+          "mean_ms": 921.198116,
+          "n_observed": 1
+        },
+        "observed_to_probe_ms": {
+          "mean_ms": 1008.818287,
+          "n_observed": 1
+        }
+      },
+      "prepublished_exact": {
+        "observed_to_action_ms": {
+          "mean_ms": 950.096969,
+          "n_observed": 1
+        },
+        "observed_to_probe_ms": {
+          "mean_ms": 1043.959442,
+          "n_observed": 1
+        }
+      },
+      "reactive_exact": {
+        "observed_to_action_ms": {
+          "mean_ms": 2182.06418,
+          "n_observed": 1
+        },
+        "observed_to_probe_ms": {
+          "mean_ms": 2279.274314,
+          "n_observed": 1
+        }
+      }
+    }
+  },
+  "run_dir": "/home/cnic/stripe-roa-v3/phase6_system/e2e/outputs/handoff-benefit-ipv6-20260828T232235Z",
+  "schema_version": 1,
+  "source_hash_audit": {
+    "entries": [
+      {
+        "actual_sha256": "c4b4073cf1db2689bdb7986ec2791ccbe02fcb06fb7b8ed4929a6acd3a06c793",
+        "expected_sha256": "c4b4073cf1db2689bdb7986ec2791ccbe02fcb06fb7b8ed4929a6acd3a06c793",
+        "matches": true,
+        "path": "scripts/run-handoff-benefit.sh"
+      },
+      {
+        "actual_sha256": "b00bacf4a569a6c4e6c5695373aa192f62efcd5143aa1b9c9c5e27498eb5646e",
+        "expected_sha256": "b00bacf4a569a6c4e6c5695373aa192f62efcd5143aa1b9c9c5e27498eb5646e",
+        "matches": true,
+        "path": "scripts/run-churn-experiment.sh"
+      },
+      {
+        "actual_sha256": "99de2f250d8207db34ed736d6262a8e366b028224604446b59ddaafdbddf033d",
+        "expected_sha256": "99de2f250d8207db34ed736d6262a8e366b028224604446b59ddaafdbddf033d",
+        "matches": true,
+        "path": "scripts/krill-entrypoint.sh"
+      },
+      {
+        "actual_sha256": "fb42d719852f4e53d93a273e390c291572e53ae53e6f6b670fac4ec30b66ec2e",
+        "expected_sha256": "fb42d719852f4e53d93a273e390c291572e53ae53e6f6b670fac4ec30b66ec2e",
+        "matches": true,
+        "path": "scripts/routinator-entrypoint.sh"
+      },
+      {
+        "actual_sha256": "ce1238badd774eb26f07bc439198fd93693618e53bd5ca4100b7a40c0b07a843",
+        "expected_sha256": "ce1238badd774eb26f07bc439198fd93693618e53bd5ca4100b7a40c0b07a843",
+        "matches": true,
+        "path": "src/daroa_agent.py"
+      },
+      {
+        "actual_sha256": "2931c1f640d94be7bbb9b31d2989040362589db47435fe1060f381dd3ed0e184",
+        "expected_sha256": "2931c1f640d94be7bbb9b31d2989040362589db47435fe1060f381dd3ed0e184",
+        "matches": true,
+        "path": "src/daroa_policy_dualstack.py"
+      },
+      {
+        "actual_sha256": "5a04bf3586714cfd713d90f1e969ac3f067edf2c74bd5c437077d676aea595c0",
+        "expected_sha256": "5a04bf3586714cfd713d90f1e969ac3f067edf2c74bd5c437077d676aea595c0",
+        "matches": true,
+        "path": "src/staged_policy.py"
+      },
+      {
+        "actual_sha256": "01ce7846d36d4f7e6cb687c38f20c2b8dd6bb3cafb6580d790da221702d14f75",
+        "expected_sha256": "01ce7846d36d4f7e6cb687c38f20c2b8dd6bb3cafb6580d790da221702d14f75",
+        "matches": true,
+        "path": "src/summarize_handoff_benefit.py"
+      },
+      {
+        "actual_sha256": "b14491aa9f62f72372628448db45a81013f7382c90a12696607714dc77ff427a",
+        "expected_sha256": "b14491aa9f62f72372628448db45a81013f7382c90a12696607714dc77ff427a",
+        "matches": true,
+        "path": "src/audit_handoff_benefit.py"
+      },
+      {
+        "actual_sha256": "d9bb59ac73382d146a14af35b479b88f587ef931db1223ac2514754d67d9371f",
+        "expected_sha256": "d9bb59ac73382d146a14af35b479b88f587ef931db1223ac2514754d67d9371f",
+        "matches": true,
+        "path": "config/krill/krill.conf.template"
+      },
+      {
+        "actual_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "expected_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "matches": true,
+        "path": "config/benefit-v6/empty-cases.json"
+      },
+      {
+        "actual_sha256": "2d1b28599445ecba9cc01062444b2d36ff19da2c5c3f81eb66e024d7a8b2b1be",
+        "expected_sha256": "2d1b28599445ecba9cc01062444b2d36ff19da2c5c3f81eb66e024d7a8b2b1be",
+        "matches": true,
+        "path": "config/benefit-v6/frr/collector.conf"
+      },
+      {
+        "actual_sha256": "044cf0a3933fe01b784fc90c4523ad9c84e78bfb5d0200fdc8b023e5a10d3a81",
+        "expected_sha256": "044cf0a3933fe01b784fc90c4523ad9c84e78bfb5d0200fdc8b023e5a10d3a81",
+        "matches": true,
+        "path": "config/benefit-v6/frr/origin-a.conf"
+      },
+      {
+        "actual_sha256": "e4517ee76cac1d957c49ac9c6d77d7a8e8a7c3fb8b0b7c095a1765e0394376a3",
+        "expected_sha256": "e4517ee76cac1d957c49ac9c6d77d7a8e8a7c3fb8b0b7c095a1765e0394376a3",
+        "matches": true,
+        "path": "config/benefit-v6/frr/origin-b.conf"
+      },
+      {
+        "actual_sha256": "c64dac7f6d11c47b77f3751fe78df20373d0bdfeae38986ca7c2114afa3c1895",
+        "expected_sha256": "c64dac7f6d11c47b77f3751fe78df20373d0bdfeae38986ca7c2114afa3c1895",
+        "matches": true,
+        "path": "config/benefit-v6/nginx.conf"
+      }
+    ],
+    "source_root": "/home/cnic/stripe-roa-v3/phase6_system/e2e"
+  },
+  "timing_provenance": {
+    "comparison_tolerance_ms": 0.001,
+    "raw_to_metadata_max_abs_error_ms": 0.000459,
+    "raw_to_trials_csv_max_abs_error_ms": 0.000459,
+    "source": "events.jsonl monotonic_ns"
+  }
+}

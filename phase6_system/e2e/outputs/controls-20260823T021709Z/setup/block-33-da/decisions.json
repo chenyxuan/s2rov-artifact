@@ -1,0 +1,36 @@
+[
+  {
+    "expected_da": "Delegated",
+    "explicit_origins": [
+      64501
+    ],
+    "name": "origin_a",
+    "origin": 8075,
+    "pass": true,
+    "peer": "172.30.50.11",
+    "prefix": "10.0.10.0/24",
+    "selected_stripe": "10.0.0.0/16",
+    "state": "Delegated",
+    "stripe_open": true,
+    "trust_anchors": [
+      "krill"
+    ]
+  },
+  {
+    "expected_da": "Delegated",
+    "explicit_origins": [
+      64501
+    ],
+    "name": "origin_b",
+    "origin": 18403,
+    "pass": true,
+    "peer": "172.30.50.12",
+    "prefix": "10.0.10.0/24",
+    "selected_stripe": "10.0.0.0/16",
+    "state": "Delegated",
+    "stripe_open": true,
+    "trust_anchors": [
+      "krill"
+    ]
+  }
+]

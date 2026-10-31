@@ -1,0 +1,770 @@
+{
+  "paper_title": "Protect the Parent, Spare the Child: Protecting Prefixes in RPKI before All Origins Are Known",
+  "abstract": "",
+  "keywords": [
+    "Routing security",
+    "BGP",
+    "RPKI",
+    "ROV"
+  ],
+  "title_contract": {
+    "status": "locked",
+    "parent": "the aggregate prefix p_0, whose origin a_h is already known and explicitly named",
+    "child": "a proper subprefix p contained by p_0, whose future origin may not yet be enumerable when policy is installed",
+    "all_origins": "the complete set of future proper-subprefix origins; the aggregate origin is not unknown",
+    "protecting_prefixes": "preserve explicit protection of the known-origin aggregate while bounding signed proper-subprefix scope",
+    "boundary": "OpenScope exposes weaker open-scope provenance. It neither authenticates nor conventionally authorizes an unlisted origin"
+  },
+  "paper_argument": "Subprefix-Scope ROV (S²-ROV) protects a known-origin aggregate before every future proper-subprefix origin can be enumerated, while giving scope-matched routes an independent OpenScope signal for local routing policy.",
+  "contributions": [
+    "C1: We formalize the aggregate-subprefix dilemma as a validation and origin-visibility problem and prove the aggregate-coverage and indistinguishable-origin limits.",
+    "C2: We design a deterministic four-state S²-ROV classifier whose OpenScope state separates holder-signed prefix and length limits from explicit origin authorization, making it strictly more expressive for the aggregate-subprefix dilemma.",
+    "C3: We identify 587 RIPE/RRC00 candidate paths across 97 roots, implement a dual-stack prototype, and evaluate conflicts during partial ROA issuance, policy prioritization, processing cost, intended-route delivery, and unlisted-origin exposure. At 50% ROA issuance, configuring S²-ROV policies for 80% of aggregate prefixes reduces both mean conflict rates by 79.1%."
+  ],
+  "terminology": {
+    "method_name": "Subprefix-Scope ROV (S²-ROV)",
+    "policy_object": "S²-ROV policy object",
+    "scope_unit": "OpenScope marker",
+    "state_explicit": "Explicit",
+    "state_open_scope": "OpenScope",
+    "state_invalid": "Invalid",
+    "state_notfound": "NotFound",
+    "holder": "resource holder that signs policy",
+    "holder_origin": "aggregate-origin AS a_h named by the resource holder",
+    "parent_prefix": "aggregate prefix p_0 with known named origin a_h",
+    "child_prefix": "proper subprefix p contained by p_0",
+    "future_origins": "not-yet-complete set of proper-subprefix origins at policy installation",
+    "roa_model": "ROA represented through a relevant prefix entry (q,a,ell), with ROA as the sole conventional-validation term",
+    "subprefix_operator": "downstream operator that selects an origin",
+    "intended_origin": "intended proper-subprefix observed origin AS o_d",
+    "s2_rov_capable": "lane, node, or network that implements S²-ROV",
+    "workload": "broad IPv4 RIPE/RouteViews construction workload; distinct from the status-specific dual-stack visibility-path characterization",
+    "prototype": "Krill-Routinator-FRR prototype",
+    "simulator": "BGPy campaign",
+    "baseline": "RFC 6811 ROV"
+  },
+  "notation": {
+    "p_0": "protected aggregate/base prefix",
+    "p": "route prefix currently being evaluated",
+    "o": "origin AS observed in the BGP route",
+    "a": "origin AS explicitly authorized by a modeled ROA",
+    "m": "longest permitted route length",
+    "a_h": "aggregate-origin AS named by an issuer authorized for p_0 under RPKI, not the holder identifier",
+    "v": "policy-profile version binding structural and ASN-eligibility rules",
+    "w_v": "address width selected by profile version v: 32 for IPv4 and 128 for IPv6",
+    "R": "finite set of pairwise prefix-disjoint OpenScope marker prefixes",
+    "q": "prefix variable used locally: a conventional ROA witness has p_0 subseteq q; an OpenScope marker has q subseteq p_0",
+    "ell": "maximum prefix length permitted by a conventional ROA",
+    "p_sub_q": "proper sub-prefix relation"
+  },
+  "experiment_design": {
+    "datasets": [
+      {
+        "name": "RIPE/RIS visibility-path characterization",
+        "description": "Status-specific IPv4 and IPv6 allocation paths from the RIPE Database, joined to exact-prefix origin sets from one RIPE RIS RRC00 RIB. Table I reports RIPE Database, BGP Data, and Origin Divergence observations by the number d of recorded intermediate allocations."
+      },
+      {
+        "name": "Partial S²-ROV deployment replay",
+        "description": "The 504 IPv4 and 83 IPv6 origin-divergence candidates from Table I are pooled into 587 endpoint-prefix bundles and expanded into 589 observed route-origin outcomes under 97 IP-version-qualified roots. All endpoint routes are announced. Figure 2 reports means over 1,000 fixed-seed randomized deployment replays, using independent nested orders for downstream exact ROAs, root ROAs, and aggregate prefixes configured with S²-ROV policies. It varies the ROA issuance target from 0% to 100% and compares S²-ROV policy shares of 0%, 20%, 40%, 60%, 80%, and 100%. Figure 3 fixes issuance at 50% and compares Route count, ASRank, AS degree, and Random prioritization."
+      },
+      {
+        "name": "Semantic-conformance corpus",
+        "description": "Frozen IPv4 correctness gate comprising 106,218 legal route-policy vectors, 100,000 malformed trials, 58 fixed parser mutations, 306,967 rule-order checks, and 264,532 projected ROA entries. Separate dual-stack checks cover boundary prefixes, encoding, and mixed-family rejection."
+      },
+      {
+        "name": "Construction stress corpus",
+        "description": "A separate IPv4 workload containing 8,830 leaves under 1,647 roots, used for policy construction, canonical round trips, and bounded ancestor-probe checks."
+      },
+      {
+        "name": "Selected fixture testbed",
+        "description": "A controlled Krill 0.14.4, Routinator 0.13.2, and FRR 10.6.1 path with one selected local fixture as the sole S²-ROV policy input and an ordinary RTR view as the conventional ROV baseline."
+      },
+      {
+        "name": "Controlled selected-policy replay",
+        "description": "Matched single-core IPv4 and IPv6 replays derived from the 24 June 2026 RRC00 RIB. Within each IP version, one fixed 4,096-route query set is repeated 32 times against policies containing 1, 64, 256, 1,024, and 4,096 total records. Active Figure 4(a) reports arithmetic-mean fixed-output classification throughput; the run's policy-load measurements remain historical and non-plotted."
+      },
+      {
+        "name": "Same-size policy update benchmark",
+        "description": "A matched single-core IPv4 and IPv6 benchmark adds the OpenScope marker to the base entry of an otherwise identical active policy at 1, 64, 256, 1,024, and 4,096 total records. Each of ten cells uses 20 fresh processes. Figure 4(b) reports arithmetic-mean deserialization, active-policy replacement, and first-classification latency."
+      },
+      {
+        "name": "Fixed-scenario routing model",
+        "description": "The frozen 36,800-scenario Phase 7 campaign is preserved. A separately hash-bound 14,000-scenario extension fills the seven missing decile points, yielding 11 coverage points from 0% to 100% of one opaque fixed 589-AS scenario set over the same 200 selected units and five fixed random orders. A separate 210-scenario IPv6 sensitivity covers 21 origin pairs under eight roots. Intended-only and origin-competition announcement sets separately quantify delivery benefit and unlisted-origin exposure on the family-neutral graph."
+      }
+    ],
+    "baselines": [
+      {
+        "name": "Separately implemented specification oracle",
+        "description": "Executable oracle used to check the reference classifier, encoding round trip, ordering, and projection invariants in the semantic corpus."
+      },
+      {
+        "name": "Conventional ROV view",
+        "description": "Ordinary RTR data used only for the conventional ROV column in the selected-fixture experiment."
+      },
+      {
+        "name": "Endpoint-specific exact placement",
+        "description": "At each q target, the s=0 condition supplies the aggregate-plus-matching-ROA baseline for the Invalid-route comparison."
+      },
+      {
+        "name": "Announcement-matched aggregate-only ROV",
+        "description": "Routing-model baseline matched to each panel's announcement set: intended-only for delivery benefit and competition for unlisted-origin exposure."
+      }
+    ],
+    "metrics": [
+      {
+        "name": "semantic conformance failures",
+        "description": "Zero-tolerance mismatch and invariant-failure counters over the frozen semantic corpus."
+      },
+      {
+        "name": "route-state and action agreement",
+        "description": "Number of selected-fixture outcomes matching the predeclared state and action oracle across 124 snapshots."
+      },
+      {
+        "name": "secondary equal-decision coverage",
+        "description": "Auxiliary share of the frozen IPv4 or IPv6 candidates addressed by equal numbers of endpoint-specific or root-scope decisions. This is retained as a secondary artifact, not as Figure 2 or a headline result."
+      },
+      {
+        "name": "replayed Invalid-route rate",
+        "description": "Mean share of the fixed 589 endpoint route-origin pairs classified Invalid at each downstream-ROA issuance level and each share of aggregate prefixes with an S²-ROV policy."
+      },
+      {
+        "name": "placement-sensitive Invalid-route rate",
+        "description": "Mean share of the fixed 589 endpoint route-origin pairs classified Invalid at 50% downstream ROA issuance as aggregate prefixes are configured with S²-ROV in each prioritization order."
+      },
+      {
+        "name": "selected-policy classification cost",
+        "description": "Arithmetic-mean single-core fixed-output classification throughput for controlled policies containing 1, 64, 256, 1,024, and 4,096 total records. Historical policy-load measurements are retained but not plotted."
+      },
+      {
+        "name": "same-size policy update latency",
+        "description": "Arithmetic-mean local policy-replacement latency at 1, 64, 256, 1,024, and 4,096 total records. Timing includes deserialization of the updated in-memory payload, active-policy replacement, and the fixed route's first OpenScope classification."
+      },
+      {
+        "name": "intended-route delivery",
+        "description": "Absolute destination-delivery percentage under S²-ROV, Aggregate-only ROV, and Exact-match ROV in the intended-only routing-model announcement set. OpenScope remains the S²-ROV route-classification state; the latter two labels denote conventional ROV under the stated ROA configurations."
+      },
+      {
+        "name": "unlisted-origin delivery",
+        "description": "Absolute destination-delivery percentage to the eligible unlisted origin under S²-ROV, Aggregate-only ROV, and Exact-match ROV in the separate competition announcement set. OpenScope remains the S²-ROV route-classification state; the latter two labels denote conventional ROV under the stated ROA configurations."
+      }
+    ],
+    "main_figure": {
+      "id": "partial_policy_deployment",
+      "evidence": [
+        "mean potential-conflict-rate series when all root ROAs are active and downstream ROA issuance varies from 0% to 100%",
+        "mean observed-conflict-rate series that rise and then fall as root and downstream ROAs are deployed independently at the same target rate",
+        "1,000 seeded replays over 587 endpoint-prefix deployment units, 589 route-origin outcomes, and 97 IP-version-qualified roots at six S²-ROV policy shares"
+      ]
+    },
+    "placement_figure": {
+      "id": "openscope_placement",
+      "evidence": [
+        "mean conflict rates at fixed 50% downstream ROA issuance across 11 shares of aggregate prefixes with an S²-ROV policy",
+        "paired comparison of Route count, ASRank, AS degree, and Random over the same 1,000 downstream-ROA selections"
+      ]
+    }
+  },
+  "section_order": [
+    "introduction",
+    "background",
+    "design",
+    "implementation",
+    "experiments",
+    "related_work",
+    "discussion",
+    "conclusion"
+  ],
+  "sections": {
+    "introduction": {
+      "title": "Introduction",
+      "target_words": [
+        500,
+        760
+      ],
+      "key_arguments": [
+        "ROV protects a known-origin aggregate but classifies a covered different-origin proper-subprefix route as Invalid when no other ROA matches",
+        "Ask whether a holder-signed policy can preserve aggregate protection while giving later proper-subprefix routes a signal that local policy handles separately from Invalid",
+        "S²-ROV preserves the aggregate's Explicit state and provides OpenScope as an independent local-policy signal"
+      ],
+      "citation_types": [
+        "CORE",
+        "CONTEXT",
+        "BASELINE"
+      ],
+      "paragraph_outline": [
+        {
+          "para": 1,
+          "topic": "ROV three-state model and the hidden coupling",
+          "key_points": [
+            "Valid/Invalid/NotFound",
+            "a covering ROA both names and rejects",
+            "concrete provider-customer example"
+          ],
+          "citations": "3-4",
+          "sentences": 5
+        },
+        {
+          "para": 2,
+          "topic": "The different-origin proper-subprefix conflict and its operational cost",
+          "key_points": [
+            "known aggregate origin vs not-yet-enumerable future proper-subprefix origins",
+            "exact ROAs track downstream choice",
+            "ImpROV-style de-prefer/reject harm"
+          ],
+          "citations": "2-3",
+          "sentences": 4
+        },
+        {
+          "para": 3,
+          "topic": "The aggregate--subprefix dilemma",
+          "key_points": [
+            "known aggregate origin and future proper-subprefix origins not yet enumerable",
+            "publishing now protects the aggregate but makes the later route Invalid",
+            "delaying publication leaves the aggregate uncovered"
+          ],
+          "citations": "1-2",
+          "sentences": 4
+        },
+        {
+          "para": 4,
+          "topic": "S²-ROV at a glance",
+          "key_points": [
+            "known aggregate remains Explicit",
+            "holder-signed prefix and length limits do not require enumerating every future origin",
+            "qualifying scope-only routes receive OpenScope as an independent local-policy signal"
+          ],
+          "citations": "0-1",
+          "sentences": 4
+        },
+        {
+          "para": 5,
+          "topic": "Contributions and roadmap",
+          "key_points": [
+            "formalization",
+            "design",
+            "implementation and measurement",
+            "evaluation framing measures both delivery and exposure"
+          ],
+          "citations": "1",
+          "sentences": 4
+        }
+      ],
+      "figures": [
+        {
+          "id": "motivation_overview",
+          "type": "semantic-schematic",
+          "caption": "Aggregate and proper subprefix validation outcomes.",
+          "label": "fig:motivation"
+        }
+      ],
+      "tables": []
+    },
+    "background": {
+      "title": "Aggregate--Subprefix Authorization Gap",
+      "target_words": [
+        650,
+        1100
+      ],
+      "key_arguments": [
+        "Formal ROV matching semantics",
+        "A proof that keeping an aggregate Valid necessarily makes an unmatched different-origin proper subprefix Invalid",
+        "A formal origin-choice visibility proposition showing why an issuer that cannot distinguish two downstream choices cannot guarantee an exact origin listing for both",
+        "A status-specific dual-stack characterization of RIPE Database paths, BGP Data, and Origin Divergence using RIPE RIS RRC00",
+        "Two requirements derived from Propositions 1 and 2: bounded descendant scope and provenance separation"
+      ],
+      "citation_types": [
+        "CORE",
+        "CONTEXT",
+        "METRIC"
+      ],
+      "paragraph_outline": [
+        {
+          "para": 1,
+          "topic": "RPKI/ROV formal model",
+          "key_points": [
+            "ROA prefix entry (q,a,ell)",
+            "ROA cover and match",
+            "RFC 6811/8481 states"
+          ],
+          "citations": "4-5",
+          "sentences": 5
+        },
+        {
+          "para": 2,
+          "topic": "Aggregate--subprefix authorization dilemma",
+          "key_points": [
+            "a Valid aggregate guarantees that some ROA covers every proper subprefix",
+            "a different-origin proper subprefix is Invalid until a matching ROA becomes available",
+            "the result holds for any maxLength because coverage is independent of the match conditions"
+          ],
+          "citations": "1-2",
+          "sentences": 5
+        },
+        {
+          "para": 3,
+          "topic": "II-A closing: ROV consequence and the missing-ROA premise",
+          "key_points": [
+            "changing maxLength cannot authorize a different origin",
+            "withholding the aggregate ROA avoids the conflict only by removing aggregate protection",
+            "retaining aggregate protection requires a matching subprefix ROA before route evaluation",
+            "the matching-ROA premise requires a separate explanation"
+          ],
+          "citations": "1-2",
+          "sentences": 5
+        },
+        {
+          "para": 4,
+          "topic": "II-B opening: visibility of downstream origin choices under indirect allocation",
+          "key_points": [
+            "A allocates to B and B later assigns a proper subprefix to C",
+            "ROA issuance remains with A while the downstream origin choice occurs at B",
+            "Proposition 2: identical issuer views with different exact target-origin sets cannot yield a deterministic set that is both complete and non-overauthorizing",
+            "reporting the choice or provisioning downstream issuance removes the information premise"
+          ],
+          "citations": "2-4",
+          "sentences": 8
+        },
+        {
+          "para": 5,
+          "topic": "II-B observable proxy and reader-level cohort definitions",
+          "key_points": [
+            "the selected RIPE/RIS snapshots reveal neither issuer views nor ROA state, so the analysis measures only registry structure and observed origin divergence",
+            "June 2026 RIPE Database and RIPE RIS RRC00 snapshots supply the IPv4 and IPv6 paths",
+            "Table I separates the retained RIPE paths, the subset observed at both endpoints in BGP, and the subset with divergent origins",
+            "depth counts eligible intermediate allocations and does not measure issuer visibility"
+          ],
+          "citations": "2",
+          "sentences": 4
+        },
+        {
+          "para": 6,
+          "topic": "II-B structural depth findings",
+          "key_points": [
+            "IPv4 depth is concentrated at one intermediate range; IPv6 is concentrated at two and reaches seven",
+            "the non-laminar audit finds no exception in the retained paths"
+          ],
+          "citations": "0",
+          "sentences": 2
+        },
+        {
+          "para": 7,
+          "topic": "II-B route-side candidates and interpretation boundary",
+          "key_points": [
+            "504 IPv4 and 83 IPv6 origin-disjoint candidates, with the low RRC00 exact-observation rate shown explicitly",
+            "no depth-three-or-greater path is exact-observed, so candidate incidence beyond depth two is undetermined",
+            "route-side evidence only, not visibility failures, ROV conflicts, causation, or allocation-tree prevalence"
+          ],
+          "citations": "2",
+          "sentences": 4
+        },
+        {
+          "para": 8,
+          "topic": "II-C design implications",
+          "key_points": [
+            "the policy preserves the known aggregate origin while bounding proper-descendant scope by prefix and route length",
+            "pairwise disjoint OpenScope markers make marker membership unique",
+            "scope evidence remains distinct from origin-specific evidence and routing action remains local",
+            "the mechanism classifies an unlisted-origin condition but does not estimate its duration"
+          ],
+          "citations": "0",
+          "sentences": 6
+        }
+      ],
+      "figures": [],
+      "tables": [
+        {
+          "id": "visibility_candidates",
+          "type": "data-table",
+          "caption": "RIPE allocation paths and origin-divergence candidates.",
+          "label": "tab:visibility-candidates"
+        }
+      ]
+    },
+    "related_work": {
+      "title": "Related Work",
+      "target_words": [
+        220,
+        500
+      ],
+      "key_arguments": [
+        "Measurements establish heterogeneous causes and operational consequences of Invalid routes",
+        "Conflict-diagnosis systems infer whether observed conflicts should be tolerated",
+        "Authorization and routing mechanisms expose different policy or evidence inputs"
+      ],
+      "citation_types": [
+        "CONTEXT",
+        "BASELINE"
+      ],
+      "paragraph_outline": [
+        {
+          "para": 1,
+          "topic": "RPKI measurements and failure modes",
+          "key_points": [
+            "deployment and filtering measurements",
+            "heterogeneous Invalid-route causes",
+            "system risks and filtering collateral damage"
+          ],
+          "citations": "6-7",
+          "sentences": 4
+        },
+        {
+          "para": 2,
+          "topic": "Conflict diagnosis and mitigation",
+          "key_points": [
+            "false-alarm classification",
+            "SROV diagnoses errors and hijacks from observed evidence",
+            "LOV and Right the Ship infer benign or legitimate conflicts"
+          ],
+          "citations": "4",
+          "sentences": 6
+        },
+        {
+          "para": 3,
+          "topic": "Authorization and validation mechanisms",
+          "key_points": [
+            "standards and delegated certification",
+            "wildcard and compact ROA encodings",
+            "local exceptions and alternative validation paths",
+            "path and provider evidence"
+          ],
+          "citations": "10-12",
+          "sentences": 5
+        }
+      ],
+      "figures": [],
+      "tables": []
+    },
+    "design": {
+      "title": "S²-ROV Design",
+      "target_words": [
+        550,
+        900
+      ],
+      "key_arguments": [
+        "A bounded OpenScope policy preserves the known aggregate origin and marks nonoverlapping descendant regions",
+        "A provenance-preserving classifier distinguishes Explicit from OpenScope and leaves routing action local",
+        "Marker containment, conventional ROV compatibility, and scoped-state separation"
+      ],
+      "citation_types": [
+        "CORE",
+        "DEFINITION"
+      ],
+      "paragraph_outline": [
+        {
+          "para": 1,
+          "topic": "Bounded OpenScope policy",
+          "key_points": [
+            "policy D=(v,p_0,m,a_h,R)",
+            "version-bound ASN eligibility and object validity",
+            "pairwise disjoint markers require no selection or priority",
+            "OpenScope applies only to proper subprefixes of a marked prefix"
+          ],
+          "citations": "4-5",
+          "sentences": 8
+        },
+        {
+          "para": 2,
+          "topic": "Provenance-preserving classification",
+          "key_points": [
+            "four-state State_D(p,o) function",
+            "conventional ROA matching first, maximum-length rejection, and proper-subprefix OpenScope guard",
+            "OpenScope reports scope evidence rather than an origin-specific listing",
+            "local routing policy maps the state to an action"
+          ],
+          "citations": "0",
+          "sentences": 8
+        },
+        {
+          "para": 3,
+          "topic": "Properties and boundaries",
+          "key_points": [
+            "marker containment and exact-ROA precedence",
+            "conventional ROV compatibility and conservative marker removal",
+            "one issuer, accepted object, version, and snapshot",
+            "no deployable signed-system composition, freshness, revocation, or speaker authentication"
+          ],
+          "citations": "1-2",
+          "sentences": 9
+        }
+      ],
+      "figures": [],
+      "tables": []
+    },
+    "implementation": {
+      "title": "Implementation",
+      "target_words": [
+        430,
+        720
+      ],
+      "key_arguments": [
+        "Canonical dual-stack reference engine, explicit-match-first classification, marker lookup, and bounded 33/129-probe behavior",
+        "Construction workload from the 8,830 candidates",
+        "Selected signed fixture through Krill, Routinator, a trusted compiler, and FRR",
+        "Incomplete carrier and interoperability boundary"
+      ],
+      "citation_types": [
+        "CORE",
+        "CONTEXT"
+      ],
+      "paragraph_outline": [
+        {
+          "para": 1,
+          "topic": "Reference implementation",
+          "key_points": [
+            "canonical encoder and rejecting parser",
+            "ancestor-indexed explicit matching and OpenScope-marker lookup",
+            "component tests and a separately implemented semantic oracle"
+          ],
+          "citations": "1-2",
+          "sentences": 5
+        },
+        {
+          "para": 2,
+          "topic": "Construction-stress corpus",
+          "key_points": [
+            "8,830 leaves under 1,647 roots",
+            "byte-for-byte round trips",
+            "33 IPv4 and 129 IPv6 ancestor-probe bounds independent of rule count",
+            "IPv4 version 1 byte preservation and tagged IPv6 version 2 encoding"
+          ],
+          "citations": "1",
+          "sentences": 4
+        },
+        {
+          "para": 3,
+          "topic": "Selected fixture enforcement path",
+          "key_points": [
+            "Krill/RRDP/Routinator/RTR/FRR stack",
+            "inclusive attribute in CMS-protected content",
+            "trusted batch compiler and per-neighbor route maps",
+            "one tested LP 300/200/reject/100 action mapping"
+          ],
+          "citations": "3-4",
+          "sentences": 6
+        },
+        {
+          "para": 4,
+          "topic": "Prototype boundary",
+          "key_points": [
+            "local API exposes one fixture at a time",
+            "carrier omits profile version and complete rule set",
+            "no standardized transport, native state, deployable multi-object composition, full RIB, or atomic updates"
+          ],
+          "citations": "2-3",
+          "sentences": 5
+        }
+      ],
+      "figures": [],
+      "tables": []
+    },
+    "discussion": {
+      "title": "Discussion",
+      "target_words": [
+        220,
+        500
+      ],
+      "key_arguments": [
+        "OpenScope records holder-signed prefix scope, not an origin-specific listing or speaker control",
+        "The partial placement replay, correctness gate, dual-stack system experiments, and routing-model lanes support different claim layers",
+        "RIPE/RIS, incomplete-carrier, composition, lifecycle, and action-policy boundaries"
+      ],
+      "citation_types": [
+        "CONTEXT"
+      ],
+      "paragraph_outline": [
+        {
+          "para": 1,
+          "topic": "Provenance semantics and operational guidance",
+          "key_points": [
+            "OpenScope must stay distinct from Valid",
+            "exact ROAs remain preferable when the origin is known",
+            "nonoverlapping markers bound OpenScope regions",
+            "ancestor-listed origins retain a same-origin maxLength surface"
+          ],
+          "citations": "2-3",
+          "sentences": 4
+        },
+        {
+          "para": 2,
+          "topic": "Evidence interpretation",
+          "key_points": [
+            "the semantic campaign and selected fixture form a correctness gate",
+            "the partial placement replay compares relative coverage within one frozen candidate frame",
+            "separate model lanes quantify intended-delivery benefit and unlisted-origin exposure",
+            "no complete-object, statistical-equivalence, Internet-wide reachability, action-safety, or Internet-wide deployment-benefit claim"
+          ],
+          "citations": "1-2",
+          "sentences": 4
+        },
+        {
+          "para": 3,
+          "topic": "Limits and next steps",
+          "key_points": [
+            "RIPE/RIS placement is not issuer adoption or issuer-view prevalence",
+            "signed-system composition and lifecycle remain undefined",
+            "carrier is incomplete and compiler trusted",
+            "standardized object, native support, and action-policy evaluation remain necessary"
+          ],
+          "citations": "2",
+          "sentences": 7
+        }
+      ],
+      "figures": [],
+      "tables": []
+    },
+    "conclusion": {
+      "title": "Conclusion",
+      "target_words": [
+        90,
+        190
+      ],
+      "key_arguments": [
+        "Propositions 1 and 2 establish the aggregate-subprefix validation and origin-visibility limits",
+        "Proposition 3 establishes a state separation that conventional ROV cannot represent",
+        "At 50% ROA issuance, configuring S²-ROV policies for 80% of aggregate prefixes lowers the mean potential conflict rate from 50.1% to 10.5% and the mean observed conflict rate from 24.8% to 5.2%",
+        "The dual-stack prototype and fixed routing analyses quantify processing cost, intended-route delivery, and unlisted-origin exposure",
+        "Exact ROAs provide origin-specific validation once the origin is known, while S²-ROV records holder-signed prefix and length limits until then"
+      ],
+      "citation_types": [],
+      "paragraph_outline": [
+        {
+          "para": 1,
+          "topic": "Summary and boundary",
+          "key_points": [
+            "two requirements and four-state semantics",
+            "at the 50% issuance target, configuring S²-ROV policies for 80% of aggregate prefixes lowers the mean potential conflict rate from 50.1% to 10.5% and the observed conflict rate from 24.8% to 5.2%",
+            "the dual-stack replay quantifies classification throughput and same-size policy-update latency",
+            "at full deployment within the fixed routing model, intended delivery is 99.2% under S²-ROV versus 82.1% under Aggregate-only ROV and equals the 99.2% Exact-match ROV reference; in a separate competition set, unlisted-origin delivery is 41.2%, 32.4%, and 11.7% under the same three configurations, respectively",
+            "complete objects, multi-object composition, lifecycle handling, and native enforcement remain open"
+          ],
+          "citations": "0",
+          "sentences": 4
+        }
+      ],
+      "figures": [],
+      "tables": []
+    },
+    "experiments": {
+      "title": "Evaluation",
+      "target_words": [
+        1100,
+        1400
+      ],
+      "key_arguments": [
+        "The semantic corpus and selected fixture are a compact correctness gate rather than a standalone evaluation question",
+        "Partial S²-ROV deployment separates potential conflict rates with every aggregate ROA active from observed conflict rates during independent aggregate and downstream ROA rollout",
+        "At a fixed S²-ROV policy share, prioritizing aggregate prefixes with more eligible observed routes reduces the conflict rate faster than ASRank, AS-degree, or random order",
+        "Controlled classification and same-size update replays measure system behavior; load measurements remain historical and non-plotted",
+        "Separate intended-only and origin-competition model lanes quantify delivery benefit and unlisted-origin exposure at 11 fixed-set coverage points"
+      ],
+      "citation_types": [
+        "METRIC",
+        "BASELINE",
+        "CONTEXT"
+      ],
+      "paragraph_outline": [
+        {
+          "para": 1,
+          "topic": "Evaluation setup and correctness gate",
+          "key_points": [
+            "106,218 IPv4 legal vectors evaluated by specification oracle, reference engine, and encode-decode path",
+            "38 dual-stack tests cover IPv6 boundary prefixes, encoding, and mixed-family rejection",
+            "100,000 generated malformed inputs rejected",
+            "zero failures on every reported conformance check and nine deterministic outputs reproduced byte for byte",
+            "seven selected route cases match the state and configured-action oracle across 124 snapshots, for 868 checks"
+          ],
+          "citations": "0-1",
+          "sentences": 5
+        },
+        {
+          "para": 2,
+          "topic": "Conflicts during partial ROA issuance and policy prioritization",
+          "key_points": [
+            "504 IPv4 and 83 IPv6 endpoint prefixes form 587 deployment bundles and 589 observed route-origin outcomes under 97 IP-version-qualified roots",
+            "1,000 fixed-seed replays use three independent nested random orders for downstream exact ROAs, root ROAs, and aggregate prefixes configured with S²-ROV policies",
+            "the potential panel fixes all root ROAs active, whereas the observed panel activates root and downstream ROAs independently at the same target issuance rate",
+            "Figure 2 compares S²-ROV policy shares of 0%, 20%, 40%, 60%, 80%, and 100% while varying the ROA issuance target from 0% to 100%",
+            "at the 50% issuance target, potential conflict rates across the six S²-ROV policy shares are 50.1%, 40.4%, 30.7%, 20.4%, 10.5%, and 0.1%; observed conflict rates are 24.8%, 19.9%, 15.2%, 10.1%, 5.2%, and less than 0.1%",
+            "Figure 2 displays arithmetic means only, without interval or range glyphs",
+            "Figure 3 fixes downstream ROA issuance at 50% and compares Route count, ASRank, AS degree, and Random across 11 root budgets",
+            "at the 20% root budget, the four conflict rates are 17.2%, 37.1%, 40.7%, and 40.4%; at 50%, they are 5.8%, 25.1%, 24.4%, and 25.6%"
+          ],
+          "citations": "1-2",
+          "sentences": 8
+        },
+        {
+          "para": 3,
+          "topic": "System cost and policy updates",
+          "key_points": [
+            "one fixed 4,096-route query set per IP version is repeated 32 times on the same fixed CPU core at every size, giving 131,072 timed calls per classification worker",
+            "1, 64, 256, 1,024, and 4,096 total records, including one base entry carrying the OpenScope marker in every policy",
+            "every query remains OpenScope, with identical query hashes, result hashes, and state vectors across sizes",
+            "Figure 4(a) shows mean classification throughput between 29,149.8 and 30,647.4 routes per second for IPv4 and between 18,346.0 and 19,794.3 routes per second for IPv6; the axis is Throughput (routes/s) with 0, 10000, 20000, and 30000 ticks",
+            "the same accepted source run retains arithmetic-mean load times from 0.3 to 272.8 ms for IPv4 and from 0.4 to 455.7 ms for IPv6 as historical, non-plotted measurements",
+            "the processing experiment is limited to a fixed-output selected-policy reference workload and does not represent a deployment-specific result mix",
+            "Figure 4(b) reports arithmetic-mean same-size policy replacement and first-classification latency at the same five total-record counts; IPv4 spans 0.3 to 273.0 ms and IPv6 spans 0.5 to 459.0 ms",
+            "each update cell uses 20 fresh processes; unmarked and marked snapshots have equal size and differ only in the base entry's OpenScope marker bit",
+            "the update benchmark excludes file acquisition, repository and relying-party refresh, RTR, router installation, and forwarding; the former phase-6 removal/restoration runs remain historical provenance"
+          ],
+          "citations": "1-4",
+          "sentences": 10
+        },
+        {
+          "para": 4,
+          "topic": "Benefit and exposure across the fixed scenario set",
+          "key_points": [
+            "the frozen 36,800 Phase 7 scenarios remain unchanged, while a separately audited 14,000-scenario extension supplies the missing decile cells",
+            "the combined analysis covers 0%, 10%, ..., 100% of an opaque fixed 589-AS scenario set over 200 selected units and five fixed random orders; 100% means all 589 ASes in that set",
+            "intended-only and competition announcement sets are analyzed separately",
+            "Figure 5 uses S²-ROV, Aggregate-only ROV, and Exact-match ROV as validator-configuration labels; OpenScope remains the S²-ROV route-classification state, while the latter two labels denote conventional ROV under the stated ROA configurations",
+            "with all 589 ASes upgraded, intended delivery is 99.2% under S²-ROV versus 82.1% under Aggregate-only ROV and equals the 99.2% Exact-match ROV reference in the intended-only lane",
+            "with all 589 ASes upgraded, unlisted-origin delivery is 41.2% under S²-ROV versus 32.4% under Aggregate-only ROV and 11.7% under Exact-match ROV in the separate competition lane",
+            "Figure 5 plots absolute percentages without bands; pointwise finite-frame and selected-unit stability intervals remain paired-change evidence in the prose and audit data, and individual fixed-order paths are not plotted",
+            "the IPv6 sensitivity uses 21 topology-eligible origin pairs under eight roots and reports root-balanced descriptive values only"
+          ],
+          "citations": "2",
+          "sentences": 8
+        }
+      ],
+      "figures": [
+        {
+          "id": "partial_policy_deployment",
+          "type": "quantitative",
+          "caption": "Conflicts during partial ROA issuance.",
+          "label": "fig:partial-policy-coverage",
+          "layout": "An independent shared legend is placed above two equal-height panels composed vertically by LaTeX subfig. Both panels use the same canvas size and axes bounding box, and neither panel contains a legend.",
+          "panels": [
+            "(a) potential conflicts",
+            "(b) observed conflicts"
+          ]
+        },
+        {
+          "id": "openscope_placement",
+          "type": "quantitative",
+          "caption": "Deployment strategy.",
+          "label": "fig:openscope-placement",
+          "x_axis_label": "ROA issuance (%)",
+          "y_axis_label": "Conflicting routes (%)"
+        },
+        {
+          "id": "system_cost",
+          "type": "quantitative",
+          "caption": "System cost.",
+          "label": "fig:system-cost",
+          "panels": [
+            "(a) IPv4 and IPv6 classification throughput",
+            "(b) IPv4 and IPv6 update latency"
+          ]
+        },
+        {
+          "id": "deployment_outcomes",
+          "type": "quantitative",
+          "caption": "Reachability and origin exposure.",
+          "label": "fig:deployment-outcomes",
+          "x_axis_label": "S²-ROV upgraded share (%)"
+        }
+      ],
+      "tables": []
+    }
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "bgp": {
+    "counts": {
+      "accepted_records": 54835466,
+      "ambiguous_prefixes": 253,
+      "ambiguous_terminal_segment_records": 7957,
+      "duplicate_prefix_origin_pairs_collapsed": 53442449,
+      "moas_prefixes": 7241,
+      "records_seen": 54843423,
+      "unique_prefix_origin_pairs": 1393017,
+      "unique_prefixes": 1384474
+    },
+    "provided": true,
+    "source_kind": "mrt_via_bgpdump"
+  },
+  "containment": {
+    "IPv4": {
+      "eligible_cidr_roots": 62792,
+      "eligible_non_cidr_roots": 3505,
+      "endpoints_matched_to_nearest_root": 3417197,
+      "endpoints_nearest_root_non_cidr_excluded": 453842,
+      "hops_matched_to_nearest_root": 15244,
+      "hops_nearest_root_non_cidr_excluded": 2022
+    },
+    "IPv6": {
+      "eligible_cidr_roots": 22637,
+      "endpoints_matched_to_nearest_root": 844614,
+      "hops_matched_to_nearest_root": 21197
+    }
+  },
+  "generated_at_utc": "2026-08-28T09:11:25.168396+00:00",
+  "inputs": {
+    "paths": {
+      "mrt": "/home/cnic/stripe-roa-v3/phase1_empirical/allocation_tree/visibility_experiment/input/data/bview.20260624.0000.gz",
+      "ripe": "/home/cnic/stripe-roa-v3/phase1_empirical/allocation_tree/data/ripe.db.gz"
+    },
+    "sha256": {
+      "mrt": "ad2fe1094df70c2d0f2ddb39cf5ab22b10add9073ee1cf6213c6d132ddfb04b9",
+      "ripe": "a385cf65c40109992e7c54a5dfabd6036470ffce866cb6ab6b22dd5126bac17c"
+    }
+  },
+  "method": {
+    "IPv4_chain": "ALLOCATED PA -> [SUB-ALLOCATED PA] -> ASSIGNED PA",
+    "IPv6_chain": "ALLOCATED-BY-RIR -> [ALLOCATED-BY-LIR] -> ASSIGNED",
+    "bgp_terminal_rule": "MOAS is preserved; ambiguous terminal AS_SET/confederation records are excluded",
+    "claim_boundary": "candidate only; registry/BGP data do not establish issuer knowledge, permission, ROA state, or route legitimacy",
+    "indirect_rule": "one or more eligible hops strictly between root and endpoint",
+    "org_confirmed_abc_rule": "root, one containing hop, and endpoint each have one exact org handle; the three handles are pairwise distinct",
+    "org_handle_rule": "strip whitespace and canonicalize exact org handles to uppercase",
+    "potential_conflict_rule": "registry-indirect path with non-empty disjoint exact-prefix root and endpoint origin-AS sets",
+    "registry_safety_gate": "abort if any object has multiple status values or an unparseable range",
+    "root_selection": "nearest strictly containing eligible root",
+    "same_range_rule": "identical status/org fingerprints are deduplicated; any range with different status or exact org-handle fingerprints is flagged; conflicting roots and hops remain poison barriers so paths cannot fall through",
+    "status_comment_rule": "strip and audit inline # comment suffixes before exact status matching"
+  },
+  "outputs": {
+    "audit_metrics": {
+      "path": "/home/cnic/stripe-roa-v3/phase1_empirical/allocation_tree/visibility_experiment/outputs/visibility_audit_metrics.csv",
+      "sha256": "9aa4e1235f45a7202e509c29b09afa46aadc492abbd4d7692cf5db100ccd22de"
+    },
+    "compact_table": {
+      "path": "/home/cnic/stripe-roa-v3/phase1_empirical/allocation_tree/visibility_experiment/outputs/visibility_by_afi.csv",
+      "sha256": "4a21e4736d386d52fa5804c17f3566ab5d468b54a4b9903ac5c2c913480b7576"
+    },
+    "potential_conflicts": {
+      "path": "/home/cnic/stripe-roa-v3/phase1_empirical/allocation_tree/visibility_experiment/outputs/visibility_candidates.csv",
+      "sha256": "0846c5f5775e92092b445b64851918ca6f6b3e45651598d9006d3f3aeb483918"
+    }
+  },
+  "range_resolution": {
+    "conflicting_ranges": 0,
+    "eligible_variants_excluded_by_same_range_conflict": 0,
+    "families": {
+      "IPv4": {
+        "clean_endpoint_ranges": 3901347,
+        "clean_hop_ranges": 17266,
+        "clean_root_ranges": 66297,
+        "non_cidr_endpoint_ranges_excluded": 30308,
+        "non_cidr_hop_ranges_retained": 405,
+        "non_cidr_root_ranges_excluded": 3505
+      },
+      "IPv6": {
+        "clean_endpoint_ranges": 844614,
+        "clean_hop_ranges": 21197,
+        "clean_root_ranges": 22637,
+        "non_cidr_endpoint_ranges_excluded": 0,
+        "non_cidr_hop_ranges_retained": 0,
+        "non_cidr_root_ranges_excluded": 0
+      }
+    },
+    "hop_conflict_barriers": 0,
+    "raw_objects_on_conflicting_ranges": 0,
+    "root_conflict_barriers": 0
+  },
+  "registry_ingest": {
+    "counts": {
+      "IPv4.endpoint_objects_seen": 3901347,
+      "IPv4.hop_objects_seen": 17266,
+      "IPv4.ip_objects_seen": 4127673,
+      "IPv4.org_handle_case_normalizations": 10683,
+      "IPv4.root_objects_seen": 66297,
+      "IPv6.endpoint_objects_seen": 844614,
+      "IPv6.hop_objects_seen": 21197,
+      "IPv6.ip_objects_seen": 964638,
+      "IPv6.org_handle_case_normalizations": 2623,
+      "IPv6.root_objects_seen": 22637,
+      "IPv6.status_comment_suffixes_normalized": 14,
+      "duplicate_object_occurrences_collapsed": 0,
+      "eligible_objects_seen": 4873358,
+      "ip_objects_seen": 5092311,
+      "org_handle_case_normalizations": 13306,
+      "range_fingerprint_variants": 5092311,
+      "status_comment_suffixes_normalized": 14
+    },
+    "status_counts": {
+      "IPv4": {
+        "AGGREGATED-BY-LIR": 868,
+        "ALLOCATED PA": 66297,
+        "ALLOCATED UNSPECIFIED": 4949,
+        "ALLOCATED-ASSIGNED PA": 2215,
+        "ASSIGNED ANYCAST": 50,
+        "ASSIGNED PA": 3901347,
+        "ASSIGNED PI": 19463,
+        "LEGACY": 104569,
+        "LIR-PARTITIONED PA": 10649,
+        "SUB-ALLOCATED PA": 17266
+      },
+      "IPv6": {
+        "AGGREGATED-BY-LIR": 72076,
+        "ALLOCATED-BY-LIR": 21197,
+        "ALLOCATED-BY-RIR": 22637,
+        "ASSIGNED": 844614,
+        "ASSIGNED ANYCAST": 68,
+        "ASSIGNED PI": 4046
+      }
+    }
+  },
+  "results": {
+    "IPv4": {
+      "direct_paths": 3365826,
+      "disjoint_origin_direct_paths": 6790,
+      "disjoint_origin_registry_indirect_paths": 504,
+      "exact_routed_direct_paths": 21922,
+      "exact_routed_registry_indirect_paths": 622,
+      "matched_endpoints": 3417197,
+      "org_confirmed_abc_conflicts": 82,
+      "org_confirmed_abc_paths": 3353,
+      "origin_ambiguous_direct_paths": 50,
+      "origin_ambiguous_registry_indirect_paths": 18,
+      "overlapping_origin_direct_paths": 15132,
+      "overlapping_origin_registry_indirect_paths": 118,
+      "potential_conflict_rate_pct": 81.02893890675242,
+      "potential_conflict_root_prefixes": 83,
+      "potential_conflicts": 504,
+      "registry_indirect_paths": 51371,
+      "unrouted_direct_paths": 3343854,
+      "unrouted_registry_indirect_paths": 50731
+    },
+    "IPv6": {
+      "direct_paths": 722434,
+      "disjoint_origin_direct_paths": 318,
+      "disjoint_origin_registry_indirect_paths": 83,
+      "exact_routed_direct_paths": 1251,
+      "exact_routed_registry_indirect_paths": 140,
+      "matched_endpoints": 844614,
+      "org_confirmed_abc_paths": 2143,
+      "origin_ambiguous_direct_paths": 12,
+      "origin_ambiguous_registry_indirect_paths": 2,
+      "overlapping_origin_direct_paths": 933,
+      "overlapping_origin_registry_indirect_paths": 57,
+      "potential_conflict_rate_pct": 59.285714285714285,
+      "potential_conflict_root_prefixes": 14,
+      "potential_conflicts": 83,
+      "registry_indirect_paths": 122180,
+      "unrouted_direct_paths": 721171,
+      "unrouted_registry_indirect_paths": 122038
+    }
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,1744 @@
+{
+  "source": "phase1_empirical including the tested deployment-conflict and OpenScope-placement replays and pooled route-state audit, phase4_encoding, phase5_evaluation, phase6_system, phase7_simulation including the independently audited deployment-grid extension, phase8_sibling_sensitivity, phase9_selected_unit_reanalysis, and phase10_semantic_gate artifacts; the primary V.A evidence pools IPv4 and IPv6 endpoint routes, V.B uses the controlled dual-stack classification and same-size update replays, and legacy phases retain their separately stated archive and provenance limits",
+  "results_mode": "data_aware",
+  "facts": {
+    "redesigned_evaluation": {
+      "version_label": "outcome-oriented-evaluation-v3",
+      "e1a_introduction_sha256_at_freeze": "7ce56be31c293989acaf2e5c99ded6d0dbc5edf8ce4e307c96c547791243a85b",
+      "current_introduction_sha256": "f28e5008b27807ea82ccbdfd9a3b8e9a739346e18548281d98f6374e4a410117",
+      "introduction_post_freeze_change": "later terminology revisions and the partial-policy evaluation restructure do not alter the frozen E1a outputs",
+      "gate_status": {
+        "E0_longitudinal_use_case": "not_run_external_data_and_license_gate",
+        "E_partial_policy_replay": "complete_pass_figures_2_and_3_seeded_replays_four_placement_orders_route_state_recomputation_19_tests",
+        "E1a_pure_semantic_differential": "complete_pass_for_historical_profile_1_only_not_current_profile_2",
+        "E1b_system_differential": "blocked_by_G1_full_carrier",
+        "E2_full_object_chain": "blocked_current_evidence_is_selected_fixture_only",
+        "E3_redesigned_handoff": "historical_inactive_removed_from_manuscript",
+        "E3_ipv6_handoff": "historical_inactive_removed_from_manuscript",
+        "E_processing_replay_legacy": "superseded_for_active_processing_result",
+        "E_processing_replay_dual_stack": "complete_pass_controlled-processing-20260830T-marker-final-v1_independently_recomputed",
+        "E_active_axis_style": "complete_pass_seven_coordinate_panels_four_sided_bottom_left_inward_tick_regression_7_tests",
+        "E_dual_stack_reference_core": "complete_pass_42_unit_and_golden-byte_tests",
+        "E_ipv6_routing_sensitivity": "complete_verified_descriptive_210_of_210_scenarios",
+        "E4_joint_delivery_exposure": "not_run_as_joint_frontier; verified intended-only and competition lanes are reported separately",
+        "E5_full_rib_fault_matrix": "not_run_legacy_fault_seeds_only",
+        "E6_shadow_or_canary": "not_run_external_authorization_required"
+      },
+      "active_figure_axis_style": {
+        "scope": "all seven coordinate panels in active Figures 2 through 5",
+        "four_sided_frames": true,
+        "tick_direction": "in",
+        "bottom_and_left_ticks": true,
+        "top_and_right_ticks": false,
+        "percentage_coordinate_panels": 5,
+        "percentage_x_axis_limits_percent": [0, 100],
+        "test": {
+          "path": "MSN-2026-0830/scripts/tests/test_active_axis_style.py",
+          "sha256": "f6ac78f9a264eb18f544f39a5c7fe5e2fe695364324c77f32b73f70b2c744afc",
+          "passed": 7
+        }
+      },
+      "partial_policy_placement_replay": {
+        "version_label": "partial-policy-placement-v8",
+        "status": "VERIFIED_RECOMPUTATION",
+        "analysis_role": "primary_V_A_benefit_evidence",
+        "input": {
+          "path": "phase1_empirical/allocation_tree/visibility_experiment/outputs/visibility_candidates.csv",
+          "sha256": "0846c5f5775e92092b445b64851918ca6f6b3e45651598d9006d3f3aeb483918",
+          "candidate_paths": {"IPv4": 504, "IPv6": 83},
+          "roots": {"IPv4": 83, "IPv6": 14},
+          "pooled_candidate_paths": 587,
+          "pooled_route_origin_pairs": 589,
+          "eligible_route_origin_pairs": 588,
+          "ineligible_route_origin_pairs": 1,
+          "pooled_version_qualified_roots": 97,
+          "exact_prefix_origin_entries": {"IPv4": 506, "IPv6": 83}
+        },
+        "design": {
+          "potential_panel_root_roa": "present for every retained root",
+          "observed_panel_root_roa": "selected independently at the same target issuance rate as downstream ROAs",
+          "all_endpoint_routes_announced": true,
+          "exact_selection_unit": "one endpoint-prefix bundle with its complete observed origin set",
+          "outcome_unit": "one observed endpoint prefix-origin route",
+          "scope_selection_unit": "one root covering every retained candidate path grouped below it",
+          "roa_targets_percent": [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+          "openscope_targets_percent": [0, 20, 40, 60, 80, 100],
+          "seeded_replays": 1000,
+          "master_seed": 20260829,
+          "placement_orders": {
+            "downstream_exact_roas": "uniform random order over 587 endpoint-prefix bundles",
+            "root_roas": "independent uniform random order over 97 roots",
+            "openscope_roots": "independent uniform random order over 97 roots",
+            "nesting": "each order is nested across target levels within one replay"
+          },
+          "primary_placement_model": "means over 1,000 fixed-seed randomized deployment replays",
+          "pooled_root_identity": "IP version plus canonical root prefix",
+          "main_comparison": "potential and observed conflict rates as the ROA issuance target varies across six S²-ROV policy shares, using the fixed 589-route denominator",
+          "main_scope_selected_roots": {"0": 0, "20": 19, "40": 38, "60": 58, "80": 77, "100": 97},
+          "q50_selected_units": {"downstream_endpoint_bundles": 293, "root_roas": 48},
+          "potential_definition": "mean Invalid-route count with every root ROA active and sampled downstream exact ROAs and S²-ROV policies installed",
+          "observed_definition": "mean Invalid-route count with independently sampled root ROAs, downstream exact ROAs, and S²-ROV policies installed",
+          "reported_statistic": "arithmetic mean across seeded replays",
+          "figure_2_range_encoding": "none; active panels display arithmetic means only",
+          "figure_2_layout": "one standalone shared legend above two equal-height panels with identical canvas and axes geometry; neither panel embeds a legend",
+          "figure_3_placement": {
+            "downstream_roa_issuance_percent": 50,
+            "downstream_endpoint_bundles": 293,
+            "root_roas_active": 97,
+            "placement_unit": "one IP-version-qualified root",
+            "root_scores": {
+              "most-routes-first": "eligible observed route-origin pairs below the root",
+              "asrank-first": "aggregate-origin ASN customer-cone order from CAIDA ASRank",
+              "degree-first": "aggregate-origin ASN total degree in the same CAIDA graph",
+              "random": "uniform seeded root permutation"
+            },
+            "scope_targets_percent": [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+            "displayed_strategies": ["most-routes-first", "asrank-first", "degree-first", "random"],
+            "as_score_input_sha256": "b6d87f20bed4ea347f417bca072a05048eea84439e86f4773cc8bc44017a8257",
+            "caida_graph_snapshot": "2026-07-01",
+            "caida_graph_uncompressed_sha256": "aabd0b2154d9dec5b4c0b63d1d9f88cbfbf381bbc4d2246fe0471dd4aacf2181",
+            "score_coverage": {"roots": 97, "unique_aggregate_origin_asns": 37, "covered_asns": 37},
+            "score_tie_break": "independent fixed-seed random order within equal score groups",
+            "paired_downstream_replays": 1000,
+            "random_baseline_relation": "the 50 percent issuance slice of Figure 2 potential conflict rates",
+            "reported_statistic": "arithmetic mean across paired seeded replays",
+            "range_encoding": "none"
+          }
+        },
+        "secondary_equal_decision_findings": {
+          "IPv4": {"decisions": 41, "exact_percent": 8.1, "random_scope_median_percent": 50.2, "random_scope_range_percent": [33.9, 65.5], "fanout_first_percent": 87.7, "fanout_last_percent": 11.7},
+          "IPv6": {"decisions": 7, "exact_percent": 8.4, "random_scope_median_percent": 50.0, "random_scope_range_percent": [14.5, 85.5], "fanout_first_percent": 91.6, "fanout_last_percent": 8.4}
+        },
+        "partial_policy_q50_findings": {
+          "statistic": "mean across 1,000 seeded replays",
+          "conflict_rate_denominator": 589,
+          "conflict_rate_definition": "100 * mean conflicting routes / 589",
+          "s0": {"selected_roots": 0, "potential_conflicts": 295.0, "observed_conflicts": 145.9, "potential_conflict_rate_percent": 50.1, "observed_conflict_rate_percent": 24.8},
+          "s20": {"selected_roots": 19, "potential_conflicts": 237.9, "observed_conflicts": 117.5, "potential_conflict_rate_percent": 40.4, "observed_conflict_rate_percent": 19.9},
+          "s40": {"selected_roots": 38, "potential_conflicts": 180.8, "observed_conflicts": 89.7, "potential_conflict_rate_percent": 30.7, "observed_conflict_rate_percent": 15.2},
+          "s60": {"selected_roots": 58, "potential_conflicts": 119.9, "observed_conflicts": 59.6, "potential_conflict_rate_percent": 20.4, "observed_conflict_rate_percent": 10.1},
+          "s80": {"selected_roots": 77, "potential_conflicts": 61.7, "observed_conflicts": 30.5, "potential_conflict_rate_percent": 10.5, "observed_conflict_rate_percent": 5.2},
+          "s100": {"selected_roots": 97, "potential_conflicts": 0.5, "observed_conflicts": 0.2, "potential_conflict_rate_percent": 0.1, "observed_conflict_rate_percent_exact": 0.0387, "observed_conflict_rate_display": "<0.1%"},
+          "scope_order": [0, 20, 40, 60, 80, 100],
+          "potential_conflicts_mean": [295.0, 237.9, 180.8, 119.9, 61.7, 0.5],
+          "observed_conflicts_mean": [145.9, 117.5, 89.7, 59.6, 30.5, 0.2],
+          "potential_conflict_rate_percent": [50.1, 40.4, 30.7, 20.4, 10.5, 0.1],
+          "observed_conflict_rate_percent_display": ["24.8%", "19.9%", "15.2%", "10.1%", "5.2%", "<0.1%"]
+        },
+        "openscope_placement_findings": {
+          "conflict_rate_denominator": 589,
+          "root_load": {"minimum": 1, "median": 2.0, "maximum": 64, "sum": 588},
+          "s0": {"selected_roots": 0, "most_routes_first": 295.0, "asrank_first": 295.0, "degree_first": 295.0, "random": 295.0, "conflict_rate_percent": {"most_routes_first": 50.1, "asrank_first": 50.1, "degree_first": 50.1, "random": 50.1}},
+          "s20": {"selected_roots": 19, "most_routes_first": 101.4, "asrank_first": 218.6, "degree_first": 239.9, "random": 237.9, "conflict_rate_percent": {"most_routes_first": 17.2, "asrank_first": 37.1, "degree_first": 40.7, "random": 40.4}, "reduction_percent": 57.4},
+          "s40": {"selected_roots": 38, "most_routes_first": 49.2, "asrank_first": 165.7, "degree_first": 161.3, "random": 180.8, "conflict_rate_percent": {"most_routes_first": 8.4, "asrank_first": 28.1, "degree_first": 27.4, "random": 30.7}},
+          "s50": {"selected_roots": 48, "most_routes_first": 34.2, "asrank_first": 147.9, "degree_first": 144.0, "random": 150.8, "conflict_rate_percent": {"most_routes_first": 5.8, "asrank_first": 25.1, "degree_first": 24.4, "random": 25.6}, "reduction_percent": 77.3},
+          "s60": {"selected_roots": 58, "most_routes_first": 24.1, "asrank_first": 130.1, "degree_first": 89.0, "random": 119.9, "conflict_rate_percent": {"most_routes_first": 4.1, "asrank_first": 22.1, "degree_first": 15.1, "random": 20.4}},
+          "s80": {"selected_roots": 77, "most_routes_first": 10.6, "asrank_first": 45.0, "degree_first": 43.5, "random": 61.7, "conflict_rate_percent": {"most_routes_first": 1.8, "asrank_first": 7.6, "degree_first": 7.4, "random": 10.5}},
+          "s100": {"selected_roots": 97, "most_routes_first": 0.5, "asrank_first": 0.5, "degree_first": 0.5, "random": 0.5, "conflict_rate_percent": {"most_routes_first": 0.1, "asrank_first": 0.1, "degree_first": 0.1, "random": 0.1}}
+        },
+        "q50_route_state_secondary_audit": {
+          "roa_selected_paths": 293,
+          "s0": {"selected_roots": 0, "invalid_count_median": 295.0, "invalid_count_range_p05_p95": [294.0, 296.0]},
+          "s20": {"selected_roots": 19, "invalid_count_median": 240.0, "invalid_count_range_p05_p95": [201.0, 265.0]},
+          "s40": {"selected_roots": 38, "invalid_count_median": 180.0, "invalid_count_range_p05_p95": [137.0, 221.0]},
+          "s60": {"selected_roots": 58, "invalid_count_median": 117.0, "invalid_count_range_p05_p95": [78.0, 160.0]},
+          "s80": {"selected_roots": 77, "invalid_count_median": 58.0, "invalid_count_range_p05_p95": [31.0, 98.0]},
+          "s100": {"selected_roots": 97, "invalid_count_median": 1.0, "invalid_count_range_p05_p95": [0.0, 1.0]}
+        },
+        "artifacts": {
+          "runner": {"path": "MSN-2026-0830/scripts/run_partial_policy_replay.py", "sha256": "a88c01dc169af89f0cf6909d02732c993caf8a45b31ba4fd23c05b364567f98a"},
+          "tests": {"path": "MSN-2026-0830/scripts/tests/test_partial_policy_replay.py", "sha256": "b51b7f2458e7bea4020052b4c3cb8dd06ef898cf652fdb7b9e0e47e177424e25", "passed": 19},
+          "placement_score_generator": {"path": "MSN-2026-0830/scripts/prepare_openscope_placement_scores.py", "sha256": "9bd5db17b49ea9411c6d44690205d33e9e0102006df3c4556a12d6842b4d9bdf"},
+          "placement_score_input": {"path": "MSN-2026-0830/figures/source_data/openscope_placement_as_scores.json", "sha256": "b6d87f20bed4ea347f417bca072a05048eea84439e86f4773cc8bc44017a8257"},
+          "manifest": {"path": "MSN-2026-0830/figures/fig_partial_policy_replay.manifest.json", "sha256": "6b2ec75e50f6ddb8405eeea719aa338f83fb31d46a7245d712d0689d6414180a"},
+          "figure_provenance": {"path": "MSN-2026-0830/figures/FIG_PARTIAL_POLICY_REPLAY_PROVENANCE.md", "sha256": "fcec35678110e40cc40fc377f3cfb24ea499c9d8b94c44e0fb8bf0d4d514da1c"},
+          "full_grid": {"path": "MSN-2026-0830/figures/source_data/fig_partial_policy_grid.csv", "sha256": "28dbb520de5488483f02f4dbb62066a495db0abb49fc92b268eff7b5d64760dc", "rows": 726},
+          "pooled_grid": {"path": "MSN-2026-0830/figures/source_data/fig_partial_policy_pooled.csv", "sha256": "c6df211d0f9a08875770633b80f1b013ef94a199dc19afbddd72360bec0e9135", "rows": 66},
+          "route_state_grid": {"path": "MSN-2026-0830/figures/source_data/fig_partial_policy_conflicts.csv", "sha256": "3668a4a70894af0535e29d5005ec785a0065f68eb1578323d5efeb6fb20c9737", "rows": 66},
+          "deployment_curves": {"path": "MSN-2026-0830/figures/source_data/fig_partial_policy_deployment_curves.csv", "sha256": "36676fb33ca3754c8095c662e8377e4b86817c19d8569883c86a004c5c277b21", "rows": 66},
+          "placement_curves": {"path": "MSN-2026-0830/figures/source_data/fig_openscope_placement.csv", "sha256": "a015a2ecf2be02a9d3acc592e420ab0a62c3d48c3639b7f8f0377496cba9f745", "rows": 44},
+          "decision_budget": {"path": "MSN-2026-0830/figures/source_data/fig_partial_policy_decision_budget.csv", "sha256": "5333969fbbe3df14e9cf96a3b51ada4bb5f01113948ff6928f0d0e1c932ef5a7", "rows": 297},
+          "active_figure_legend": {"path": "MSN-2026-0830/figures/fig_partial_policy_legend.pdf", "sha256": "c75ea102e322bf548fd9a3760409895b152f2d776e42be120afbcd0e29ad5d39"},
+          "active_figure_potential": {"path": "MSN-2026-0830/figures/fig_partial_policy_potential.pdf", "sha256": "439a6ac3e45e5f896b1acfb5aebd776a78e61e0bdfba76cbe59220890c015076"},
+          "active_figure_observed": {"path": "MSN-2026-0830/figures/fig_partial_policy_observed.pdf", "sha256": "84545ac5fd98d2e9a4de4b984cbcbe2ca2e9bc70ff55465e26efe05d1919dfaf"},
+          "active_figure_placement": {"path": "MSN-2026-0830/figures/fig_openscope_placement.pdf", "sha256": "f1294e20e50141b7e08f68bd3c98c05eaf4be8cb663b70da7cd74fa4a8f86669"}
+        },
+        "claim_boundary": "seeded randomized deployment replay over one RRC00-derived frame; active panels display arithmetic means only, and observed denotes conflicts realized in the constructed rollout rather than measured issuer adoption or a historical Internet time series"
+      },
+      "matched_unknown_origin_handoff": {
+        "version_label": "phase6-matched-handoff-v1",
+        "status": "HISTORICAL_INACTIVE",
+        "analysis_role": "removed_from_manuscript",
+        "accepted_run_id": "handoff-benefit-20260828T143741Z",
+        "design": "three-arm randomized complete-block unknown-origin handoff",
+        "arms": [
+          "reactive_exact",
+          "open_dynamic",
+          "prepublished_exact"
+        ],
+        "random_seed": 20260828,
+        "randomized_complete_rounds": 10,
+        "trials_per_arm_per_round": 4,
+        "trials_per_arm": 40,
+        "total_trials": 120,
+        "inferential_unit": "complete randomized round after averaging four within-arm trials",
+        "inferential_n_complete_rounds": 10,
+        "all_scheduled_trials_retained": true,
+        "failed_trials": 0,
+        "deadline_misses": 0,
+        "compiler_contract": "all arms compile only routes captured from live Adj-RIB-In after observation",
+        "open_scope_contract": "the signed policy and pretrial action map name neither endpoint origin; the route-specific action is compiled after the new origin is observed",
+        "runtime_to_manuscript_state_mapping": {
+          "Delegated": "OpenScope"
+        },
+        "endpoints": {
+          "primary": "first successful controlled ICMP probe after new-route Adj-RIB-In observation",
+          "secondary": "configured usable Loc-RIB action after new-route Adj-RIB-In observation",
+          "deadline_ms": 15000,
+          "timestamp_source": "events.jsonl monotonic_ns"
+        },
+        "trial_level_ms": {
+          "reactive_exact": {
+            "observed_to_probe_median": 2446.737,
+            "observed_to_probe_p95_nearest_rank": 2621.287,
+            "observed_to_action_median": 2346.217,
+            "observed_to_action_p95_nearest_rank": 2527.953
+          },
+          "open_dynamic": {
+            "observed_to_probe_median": 1075.251,
+            "observed_to_probe_p95_nearest_rank": 1107.648,
+            "observed_to_action_median": 976.179,
+            "observed_to_action_p95_nearest_rank": 1016.231
+          },
+          "prepublished_exact": {
+            "observed_to_probe_median": 1068.714,
+            "observed_to_probe_p95_nearest_rank": 1103.813,
+            "observed_to_action_median": 972.21,
+            "observed_to_action_p95_nearest_rank": 1010.552
+          }
+        },
+        "reactive_exact_minus_open_scope_round_mean_ms": {
+          "observed_to_probe": {
+            "estimate": 1375.25,
+            "cluster_bootstrap_ci95_nearest_rank": [1343.303, 1417.39]
+          },
+          "observed_to_action": {
+            "estimate": 1374.954,
+            "cluster_bootstrap_ci95_nearest_rank": [1343.811, 1415.752]
+          },
+          "bootstrap_replicates": 100000,
+          "bootstrap_seed": 20260828
+        },
+        "handoff_time_roa_work": {
+          "reactive_exact": {
+            "signed_update_transactions_total": 40,
+            "signed_update_transactions_per_handoff": 1,
+            "roa_entry_changes_total": 80,
+            "roa_entry_changes_per_handoff": 2
+          },
+          "open_dynamic": {
+            "signed_update_transactions_total": 0,
+            "signed_update_transactions_per_handoff": 0,
+            "roa_entry_changes_total": 0,
+            "roa_entry_changes_per_handoff": 0
+          },
+          "prepublished_exact": {
+            "signed_update_transactions_total": 0,
+            "signed_update_transactions_per_handoff": 0,
+            "roa_entry_changes_total": 0,
+            "roa_entry_changes_per_handoff": 0
+          },
+          "setup_work_excluded_from_endpoints": true,
+          "setup_signed_update_transactions": 31,
+          "setup_roa_entry_changes": 79
+        },
+        "artifacts": {
+          "run_directory": "phase6_system/e2e/outputs/handoff-benefit-20260828T143741Z",
+          "protocol": {
+            "path": "phase6_system/e2e/outputs/handoff-benefit-20260828T143741Z/protocol.json",
+            "sha256": "47f4145b9336aaf57773625b62e320e7035089b18fa03d5ca54097b035c48d3f"
+          },
+          "trials": {
+            "path": "phase6_system/e2e/outputs/handoff-benefit-20260828T143741Z/trials.csv",
+            "sha256": "eb7ea5a490c9755c2fc141491f67907cf9e40b0c39bbd7192fbf15ff3d61ef1c"
+          },
+          "events": {
+            "path": "phase6_system/e2e/outputs/handoff-benefit-20260828T143741Z/events.jsonl",
+            "sha256": "5ec7b8238a8d58f3d48376d15ff1670f9cd6e82c85ba44188f0d4082698fa6f7"
+          },
+          "summary": {
+            "path": "phase6_system/e2e/outputs/handoff-benefit-20260828T143741Z/summary.json",
+            "sha256": "2a9a7c6355cdeca3fed11bea865647f308c37c9a18443d7e858b96b0b14da45f"
+          },
+          "raw_hash_inventory": {
+            "path": "phase6_system/e2e/outputs/handoff-benefit-20260828T143741Z/raw.sha256",
+            "sha256": "0f80c464bbd69e2f27554660e4e0ca4420106384f768f5f94c08a6119b19f43b"
+          },
+          "source_hash_inventory": {
+            "path": "phase6_system/e2e/outputs/handoff-benefit-20260828T143741Z/source.sha256",
+            "sha256": "2ba376a8d430e6d33d583c29fea0c2dc882f2269c50102ef0116e00f693539b6"
+          },
+          "artifact_manifest": {
+            "path": "phase6_system/e2e/outputs/handoff-benefit-20260828T143741Z/manifest.sha256",
+            "sha256": "2388faf2fed40fa3bd4fbd9b7d1bbfa882643438fd8f5759a91f6b2ef9938b5c",
+            "entries": 2837
+          },
+          "independent_audit": {
+            "path": "phase6_system/e2e/outputs/handoff-benefit-20260828T143741Z/independent-audit.json",
+            "sha256": "b3471111394a7c7501bfe5396c456df2919c24136fc164c66ad5304f54587be3",
+            "passed": true,
+            "reads_summary_outputs": false
+          },
+          "figure_generator": {
+            "path": "MSN-2026-0830/scripts/analyze_handoff_fig2.py",
+            "sha256": "d136de733bfb97c5db6e192615c60e0ea082b4578a76059be8b8c31fef75d937"
+          },
+          "figure_source_data": {
+            "scope": "IPv4 and IPv6 accepted matched-handoff runs",
+            "trial_path": "MSN-2026-0830/figures/source_data/handoff_latency_trials.csv",
+            "trial_sha256": "89d87933ea2bf06166b39238666052358eca6d691e7f1cbdd90e0cc01b23e535",
+            "trial_rows": 240,
+            "stage_path": "MSN-2026-0830/figures/source_data/handoff_latency_stages.csv",
+            "stage_sha256": "31f4e14439dc85ed687773fdfe8320da0b7ec004b299828624e049e8fe12b198",
+            "stage_rows": 30,
+            "round_path": "MSN-2026-0830/figures/source_data/handoff_endpoint_rounds_recomputed.csv",
+            "round_sha256": "ebf5cb221c22d1cbc865be2cb762b67afc6bd9936f575e896d7632981dfa93f0",
+            "round_arm_rows": 60,
+            "contrast_path": "MSN-2026-0830/figures/source_data/handoff_latency_contrasts.csv",
+            "contrast_sha256": "224882ba7116f3ee0781e192fcbe6a1fa80aad3f0b8e3c1694f4181fe8671c33",
+            "contrast_rows": 4
+          },
+          "historical_figure_pdf": {
+            "path": "MSN-2026-0830/figures/fig_handoff_benefit.pdf",
+            "sha256": "ae9de9d398ab0ba6ace42b1d81ee40a6d81a165d80c6a094061940f8ad287495"
+          },
+          "figure_provenance_report": {
+            "path": "MSN-2026-0830/figures/HANDOFF_FIG2_REANALYSIS_PROVENANCE.md",
+            "sha256": "81dd8f52a46cbbc307b7521bdb2b71a7af490cd01003b64af6b1e872e53c6d15"
+          }
+        },
+        "claim_boundary": "conditional workflow effect in the controlled Krill-RRDP-Routinator-classifier-FRR-probe stack; the experiment supports neither statistical equivalence between preinstalled scope and prepublished exact, nor Internet-wide reachability or deployment benefit"
+      },
+      "processing_benchmark_legacy": {
+        "version_label": "phase5-selected-policy-replay-v1",
+        "status": "SUPERSEDED_FOR_ACTIVE_PROCESSING_RESULT",
+        "accepted_run_id": "processing-20260828T1553Z",
+        "workload": {
+          "source": "24 June 2026 RIPE RIS RRC00 exact-prefix origin table",
+          "source_ipv4_rows": 1135687,
+          "ambiguous_origin_markers_excluded": 220,
+          "timed_prefix_origin_pairs": 1135467,
+          "source_sha256": "cafac01fa95e4d5e7eef4da22d2fa26b32216c110fe3a3073312bc79762edb29",
+          "derived_ipv4_workload_sha256": "cb623f332f10788c1b403fd78a48b3ae47f69b3190825c6ab200cc172c1fe963"
+        },
+        "execution": {
+          "cpu": "one pinned Kunpeng 920 core, CPU 31",
+          "platform": "Ubuntu 24.04.3, Linux 6.8, AArch64",
+          "python": "3.12.3",
+          "repetitions_per_cell": 3,
+          "batch_size_pairs": 4096,
+          "warmup_pairs_per_worker": 8192,
+          "fresh_worker_per_cell": true,
+          "timed_scopes": {
+            "classify": "preloaded prefix strings and integer origins; validate_route, internal CIDR parsing, and state capture timed",
+            "csv_plus_classify": "CSV row decoding and ASN integer conversion added to the classify scope"
+          }
+        },
+        "rows": [
+          {
+            "policy_records": 1,
+            "payload_kib": 0.0205078125,
+            "classify_kpairs_s_median": 26.2106924874,
+            "csv_plus_classify_kpairs_s_median": 24.0652618466,
+            "preload_peak_rss_mib_max": 204.25,
+            "stream_peak_rss_mib_max": 35.0859375
+          },
+          {
+            "policy_records": 64,
+            "payload_kib": 0.6357421875,
+            "classify_kpairs_s_median": 26.0420016714,
+            "csv_plus_classify_kpairs_s_median": 24.3706242691,
+            "preload_peak_rss_mib_max": 204.25,
+            "stream_peak_rss_mib_max": 35.0859375
+          },
+          {
+            "policy_records": 256,
+            "payload_kib": 2.5068359375,
+            "classify_kpairs_s_median": 26.3322424326,
+            "csv_plus_classify_kpairs_s_median": 24.2566364241,
+            "preload_peak_rss_mib_max": 204.75,
+            "stream_peak_rss_mib_max": 35.0859375
+          },
+          {
+            "policy_records": 1024,
+            "payload_kib": 9.9775390625,
+            "classify_kpairs_s_median": 26.2432935699,
+            "csv_plus_classify_kpairs_s_median": 23.6799129427,
+            "preload_peak_rss_mib_max": 205.5,
+            "stream_peak_rss_mib_max": 35.0859375
+          },
+          {
+            "policy_records": 4097,
+            "payload_kib": 40.0068359375,
+            "classify_kpairs_s_median": 26.0096674208,
+            "csv_plus_classify_kpairs_s_median": 23.8527220946,
+            "preload_peak_rss_mib_max": 209.0,
+            "stream_peak_rss_mib_max": 35.0859375
+          }
+        ],
+        "integrity": {
+          "worker_records": 30,
+          "expected_worker_records": 30,
+          "all_roundtrips_identical": true,
+          "all_independent_oracle_spot_checks_pass": true,
+          "one_checksum_and_state_count_vector_per_policy_size": true,
+          "independent_raw_to_summary_cells_recomputed": 10,
+          "independent_raw_to_summary_cells_passed": 10
+        },
+        "artifacts": {
+          "run_directory": "phase5_evaluation/processing_benchmark/outputs/processing-20260828T1553Z",
+          "benchmark_script_sha256": "53246ca76fccbe48ff3d4579e8cd12ffcb72a4f861b3b469cab2a9ae81ca19a1",
+          "classifier_sha256": "4aa40fb8736de32d28041ba3b87260e96cbc91ea2e8ed20d8550d17706dff7e8",
+          "summary_csv_sha256": "73bcb39b890d5f5b03c325a7e84d4a030ae7c131b81305c3bff7e7754e04a204",
+          "raw_runs_csv_sha256": "f8a4bd012d0dc522b4f29e95cfee21a7131e26193724b02a7cf4dcdce60d45fc",
+          "raw_batch_samples_csv_sha256": "015be0a3d12c90eb634495ea94bc2944a8f58edb3da0bd07f6f409798d53a299",
+          "recomputation_audit_sha256": "653ee0129e0d42f8dab5d3a2e1788d416750eb449b54a09c55ec7edefc0aeabc",
+          "independent_audit_sha256": "98acd9baf331290796ffeef4dec6b7236f2bbb9d2f5b1fde1446b3c5efce1498",
+          "legacy_table_source": "MSN-2026-0830/outputs/tables/processing_cost_legacy.csv",
+          "legacy_table_source_sha256": "0548634ccc5e9e776188db9f9aef2ea82d76d05dc7a6a92d47967b4af0a61017"
+        },
+        "claim_boundary": "historical only; policy growth changed the selected-state mix, so this run no longer supplies the active processing-cost result"
+      },
+      "dual_stack_reference_core": {
+        "version_label": "phase4-dual-stack-reference-core-v3-marker-only",
+        "status": "VERIFIED_UNIT_AND_GOLDEN_BYTES",
+        "tests_passed": 42,
+        "tests_failed": 0,
+        "families": ["IPv4", "IPv6"],
+        "encoding": {
+          "IPv4": "version 1 with preserved golden bytes",
+          "IPv6": "experimental tagged version 2 with a 16-byte base prefix",
+          "mixed_family_policy_rejected": true,
+          "canonical_roundtrip_checked": true,
+          "malformed_input_rejected": true
+        },
+        "boundary_prefix_lengths": {
+          "IPv4": [0, 32],
+          "IPv6": [0, 32, 48, 64, 128]
+        },
+        "maximum_ancestor_probes": {
+          "IPv4": 33,
+          "IPv6": 129
+        },
+        "classifier_path": "phase4_encoding/scripts/utils/daroa.py",
+        "classifier_sha256": "eb11dd64f5cc3175557462367796541a45d971459f5a16f46a655e1aee614377",
+        "claim_boundary": "reference classifier and experimental encoding only; not standardized transport or full relying-party interoperability"
+      },
+      "matched_unknown_origin_handoff_ipv6": {
+        "version_label": "phase6-matched-handoff-ipv6-v1",
+        "status": "HISTORICAL_INACTIVE",
+        "analysis_role": "removed_from_manuscript",
+        "accepted_run_id": "handoff-benefit-ipv6-20260829T002536Z",
+        "address_family": "IPv6",
+        "prefix": "2001:db8:10::/48",
+        "design": "three-arm randomized complete-block unknown-origin handoff",
+        "arms": ["reactive_exact", "open_dynamic", "prepublished_exact"],
+        "randomized_complete_rounds": 10,
+        "trials_per_arm_per_round": 4,
+        "trials_per_arm": 40,
+        "total_trials": 120,
+        "failed_trials": 0,
+        "deadline_misses": 0,
+        "inferential_unit": "complete randomized round after averaging four within-arm trials",
+        "trial_level_observed_to_probe_ms": {
+          "reactive_exact": {"median": 2441.911, "p95_nearest_rank": 2581.848},
+          "open_dynamic": {"median": 1070.611, "p95_nearest_rank": 1119.831},
+          "prepublished_exact": {"median": 1067.513, "p95_nearest_rank": 1104.77}
+        },
+        "complete_round_contrasts_ms": {
+          "reactive_exact_minus_open_dynamic_probe": {
+            "estimate": 1376.771,
+            "cluster_bootstrap_ci95_nearest_rank": [1334.178, 1438.862]
+          },
+          "reactive_exact_minus_open_dynamic_action": {
+            "estimate": 1377.401,
+            "cluster_bootstrap_ci95_nearest_rank": [1334.967, 1440.075]
+          },
+          "open_dynamic_minus_prepublished_exact_probe": {
+            "estimate": 4.714,
+            "cluster_bootstrap_ci95_nearest_rank": [-3.622, 13.422]
+          }
+        },
+        "handoff_time_roa_work": {
+          "reactive_exact": {"signed_update_transactions": 40, "roa_entry_changes": 80},
+          "open_dynamic": {"signed_update_transactions": 0, "roa_entry_changes": 0},
+          "prepublished_exact": {"signed_update_transactions": 0, "roa_entry_changes": 0}
+        },
+        "artifacts": {
+          "run_directory": "phase6_system/e2e/outputs/handoff-benefit-ipv6-20260829T002536Z",
+          "protocol_sha256": "645fe44ad48b31df6ae59ccba371a69abe5e824df1ced30f6319d63237396c10",
+          "trials_sha256": "b6eb75721bcce3ceb0f5d4b5342ca5a29b82cf047e794d51ed7561b7dde84b10",
+          "events_sha256": "e4db8f4cdd12e832af8ccc614da3cfb06788b0911e7d993f7f8266553fe70c1b",
+          "summary_sha256": "e3900119be1e03de04ffedaf1aa9c055c2588351d739ce02690634f2c55388d6",
+          "raw_inventory_sha256": "3d67363042d87a2ed2396fdc61a29c97690657883b4804b7b27303d6ea43fba1",
+          "source_inventory_sha256": "963b255d186891234b7ad9966beae2603916494a7cde3b5c5e8c88b40b7e9fee",
+          "manifest_sha256": "5972a257a048c93ece1cf6a1802b9c2400f503da64cd301e4011b81c6e599045",
+          "manifest_entries": 2837,
+          "independent_audit_sha256": "11f752c8bec49e7583646bda37210a5a74353b24c2d86a4942c6706b70442b4d",
+          "historical_dual_stack_figure": {
+            "path": "MSN-2026-0830/figures/fig_handoff_benefit.pdf",
+            "sha256": "ae9de9d398ab0ba6ace42b1d81ee40a6d81a165d80c6a094061940f8ad287495",
+            "generator_sha256": "d136de733bfb97c5db6e192615c60e0ea082b4578a76059be8b8c31fef75d937",
+            "contrast_source_sha256": "224882ba7116f3ee0781e192fcbe6a1fa80aad3f0b8e3c1694f4181fe8671c33"
+          }
+        },
+        "claim_boundary": "controlled IPv6 selected-fixture path using an independent dual-stack policy model over validated local output; not evidence that the Phase 4 version 2 bytes traverse Krill, Routinator, and FRR"
+      },
+      "processing_benchmark_dual_stack": {
+        "version_label": "phase5-controlled-policy-processing-marker-final-v1",
+        "status": "VERIFIED_RAW_TO_SUMMARY_RECOMPUTATION",
+        "analysis_role": "V_B_system_cost_panel_a",
+        "active_display_metric": "fixed_query_classification_throughput",
+        "historical_nonplotted_metric": "in_memory_policy_load_time",
+        "classifier_sha256": "eb11dd64f5cc3175557462367796541a45d971459f5a16f46a655e1aee614377",
+        "source": "controlled policies and fixed query sets derived from the 24 June 2026 RIPE RIS RRC00 scalar-origin tables",
+        "execution": {
+          "cpu": "one pinned Kunpeng 920 core, CPU 31",
+          "python": "3.12.3",
+          "load_repetitions_per_cell": 20,
+          "classify_repetitions_per_cell": 5,
+          "fresh_worker_per_cell": true,
+          "total_record_counts": [1, 64, 256, 1024, 4096],
+          "unmarked_ordinary_record_counts": [0, 63, 255, 1023, 4095],
+          "marked_base_records": 1,
+          "query_count": 4096,
+          "query_loops": 32,
+          "warmup_calls": 8192,
+          "timed_calls_per_classify_worker": 131072,
+          "timed_scopes": ["in_memory_load", "fixed_query_classify"],
+          "display_statistic": "arithmetic_mean",
+          "display_intervals": false,
+          "display_unit": "routes/s",
+          "display_ticks": [0, 10000, 20000, 30000]
+        },
+        "controlled_inputs": {
+          "IPv4": {
+            "base_prefix": "38.0.0.0/8",
+            "base_origin": 174,
+            "query_count": 4096,
+            "queries_sha256": "c9afa7c71ce3b9991427ca291abc27a4ce37b724b5353271ec6b00530e55fd8e"
+          },
+          "IPv6": {
+            "base_prefix": "2409:8000::/20",
+            "base_origin": 9808,
+            "query_count": 4096,
+            "queries_sha256": "deef554b86fcf5fdda3df8e68f9b99238b48fbe3e4cdc2e442db57408e930451"
+          }
+        },
+        "rows": [
+          {"family": "IPv4", "unmarked_ordinary_records": 0, "total_policy_records": 1, "load_ms_mean": 0.31997605, "classification_routes_s_mean": 30647.35981851366},
+          {"family": "IPv4", "unmarked_ordinary_records": 63, "total_policy_records": 64, "load_ms_mean": 4.7924853, "classification_routes_s_mean": 29423.71898383142},
+          {"family": "IPv4", "unmarked_ordinary_records": 255, "total_policy_records": 256, "load_ms_mean": 17.7197563, "classification_routes_s_mean": 29876.423555947696},
+          {"family": "IPv4", "unmarked_ordinary_records": 1023, "total_policy_records": 1024, "load_ms_mean": 70.35235804999999, "classification_routes_s_mean": 29571.134433523377},
+          {"family": "IPv4", "unmarked_ordinary_records": 4095, "total_policy_records": 4096, "load_ms_mean": 276.02745530000004, "classification_routes_s_mean": 29149.84282382185},
+          {"family": "IPv6", "unmarked_ordinary_records": 0, "total_policy_records": 1, "load_ms_mean": 0.45908424999999997, "classification_routes_s_mean": 19794.272577728018},
+          {"family": "IPv6", "unmarked_ordinary_records": 63, "total_policy_records": 64, "load_ms_mean": 7.857324350000001, "classification_routes_s_mean": 19754.72942476603},
+          {"family": "IPv6", "unmarked_ordinary_records": 255, "total_policy_records": 256, "load_ms_mean": 29.1347742, "classification_routes_s_mean": 18991.02622867415},
+          {"family": "IPv6", "unmarked_ordinary_records": 1023, "total_policy_records": 1024, "load_ms_mean": 114.62098519999999, "classification_routes_s_mean": 18885.772931115218},
+          {"family": "IPv6", "unmarked_ordinary_records": 4095, "total_policy_records": 4096, "load_ms_mean": 462.36627065000005, "classification_routes_s_mean": 18345.99111927492}
+        ],
+        "integrity": {
+          "matrix_cells": 10,
+          "source_worker_records": 250,
+          "active_classification_worker_records": 50,
+          "historical_nonplotted_load_worker_records": 200,
+          "load_worker_records": 200,
+          "classification_worker_records": 50,
+          "all_roundtrips_identical": true,
+          "all_results_open_scope": true,
+          "fixed_query_hashes_by_family": true,
+          "fixed_result_hashes_by_family": true,
+          "fixed_state_vectors_by_family": true,
+          "all_summary_cells_independently_recomputed": true
+        },
+        "artifacts": {
+          "run_directory": "phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-marker-final-v1",
+          "runner_sha256": "c24545a6f854f0bb36a5ee325452f21dabe8b1a020ba46f53a322b9441fb4746",
+          "independent_auditor_sha256": "360f63fee5988b3cd8e0eedf85840032a50733f66e18d2b3b1c33565703aea33",
+          "run_config_sha256": "a5bb450af5cf112922efa91705d74e5ccff32d8a227150ffee2c9e749f6d3676",
+          "selection_manifest_sha256": "72124524d307837dda1dac7cc6f0c3e4458eb62eeb84c8b97daef1dc0b758881",
+          "summary_sha256": "ebb77c5bf194de663b81aea82fc2a06abe5a8f878c571080accfc3ad146f0a6a",
+          "independent_audit_sha256": "586c3a0f4efc4ea75c374f7f5c2ad258c66434e5888c5313f765a85f8a3c3a6f",
+          "system_cost_generator": {
+            "path": "MSN-2026-0830/scripts/build_processing_cost_figure.py",
+            "sha256": "35f808ddca2f3e03ba3ab89ed90bc88b5d47bf1e8015947095eaf10d5bfd1221"
+          },
+          "system_cost_tests": {
+            "path": "MSN-2026-0830/scripts/tests/test_build_processing_cost_figure.py",
+            "sha256": "a88bf78704630a60b51db28da10066a4f9996d563dc3029346873ee98ebbe5f1",
+            "passed": 11
+          },
+          "system_cost_manifest": {
+            "path": "MSN-2026-0830/figures/fig_processing_cost.manifest.json",
+            "sha256": "05557cc36bde9efc589da37d8386e1064036913931d58c29536b65d7311cbe33"
+          },
+          "system_cost_provenance": {
+            "path": "MSN-2026-0830/figures/FIG_PROCESSING_COST_PROVENANCE.md",
+            "sha256": "2f5aa0f567d0028525a304e57373edf72cb317b71eeddd0f8d6676ccde49efb9"
+          },
+          "active_classification_figure": {
+            "path": "MSN-2026-0830/figures/fig_processing_cost_classify.pdf",
+            "sha256": "db2749b554c2ed62abdd9d6739461e69df944cbe06fec7b6188cbc4acdb6e77d"
+          },
+          "historical_nonplotted_load_figure": {
+            "path": "MSN-2026-0830/figures/fig_processing_cost_load.pdf",
+            "sha256": "7c47cb30a40efba5765fdc4e6b7af07dea9b0195deba0897103a4667a2924a2c"
+          },
+          "historical_run_directory": "phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z",
+          "source_git_commit": "4ffaaedf25b70760f9adf11825bb2c15463f15d5",
+          "source_worktree_dirty": true
+        },
+        "claim_boundary": "fixed-query, fixed-output active-policy reference replays supply active Figure 4(a) classification throughput within each IP version; load measurements remain historical and non-plotted, and the run does not represent a deployment-specific outcome mix or measure relying-party, RTR, FRR, forwarding, line-rate, or causal cross-version cost"
+      },
+      "policy_update_benchmark": {
+        "version_label": "same-size-policy-update-v1",
+        "status": "VERIFIED_RAW_TO_SUMMARY_RECOMPUTATION",
+        "analysis_role": "V_B_system_cost_panel_b",
+        "manuscript_panel_b_caption": "Update latency.",
+        "manuscript_series": ["IPv4", "IPv6"],
+        "execution": {
+          "cpu": "one pinned Kunpeng 920 core, CPU 31",
+          "python": "3.12.3",
+          "total_record_counts": [1, 64, 256, 1024, 4096],
+          "repetitions_per_cell": 20,
+          "fresh_worker_per_observation": true,
+          "worker_records": 200,
+          "timed_scope": ["updated_policy_deserialization", "active_policy_pointer_replacement", "first_fixed_route_classification"],
+          "excluded_scope": ["file_acquisition", "unmarked_policy_preload", "unmarked_probe_precheck", "garbage_collection", "policy_distribution", "repository_and_relying_party_refresh", "RTR", "router_installation", "forwarding"],
+          "display_statistic": "arithmetic_mean",
+          "display_intervals": false
+        },
+        "transition": {
+          "source": "immutable unmarked snapshot already active",
+          "target": "immutable same-size marked snapshot",
+          "only_semantic_delta": "OpenScope marker is added to the base record",
+          "probe_state_before": "Invalid",
+          "probe_state_after": "OpenScope"
+        },
+        "rows": [
+          {"version": "IPv4", "total_policy_records": 1, "update_ms_mean": 0.331044},
+          {"version": "IPv4", "total_policy_records": 64, "update_ms_mean": 4.6171939},
+          {"version": "IPv4", "total_policy_records": 256, "update_ms_mean": 17.3457573},
+          {"version": "IPv4", "total_policy_records": 1024, "update_ms_mean": 68.10254575},
+          {"version": "IPv4", "total_policy_records": 4096, "update_ms_mean": 273.04924855},
+          {"version": "IPv6", "total_policy_records": 1, "update_ms_mean": 0.46656555},
+          {"version": "IPv6", "total_policy_records": 64, "update_ms_mean": 7.62994275},
+          {"version": "IPv6", "total_policy_records": 256, "update_ms_mean": 28.89234075},
+          {"version": "IPv6", "total_policy_records": 1024, "update_ms_mean": 113.67727585},
+          {"version": "IPv6", "total_policy_records": 4096, "update_ms_mean": 459.01222900000005}
+        ],
+        "integrity": {
+          "matrix_cells": 10,
+          "worker_records": 200,
+          "twenty_fresh_workers_per_cell": true,
+          "same_size_snapshot_pairs": true,
+          "only_base_marker_state_changes": true,
+          "all_unmarked_probes_invalid": true,
+          "all_updated_probes_open_scope": true,
+          "all_summary_cells_independently_recomputed": true
+        },
+        "artifacts": {
+          "run_directory": "phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-marker-final-v1",
+          "runner_sha256": "1d42a413aef8095bccbed9a5e7dae087f6438182b65b5c2e22e6c74d7ea7a487",
+          "auditor_sha256": "558b3f810f9e97180c27ba4115ee4d572141cf2b59c76480cbaf292141636de4",
+          "classifier_sha256": "eb11dd64f5cc3175557462367796541a45d971459f5a16f46a655e1aee614377",
+          "run_config_sha256": "badb9b5ba9f7f255bb7f01b940eaa9f83794a50a7329fe7cab0c7dc12999e11b",
+          "schedule_sha256": "773e0ee7de23031a4c2dbd1d6749600ad17914346d1cbd213da3a235bc99511f",
+          "input_manifest_sha256": "8681d009b22b66541df46083ebd8519bdab6d3c74c45cbf130dd71cf10c646a7",
+          "summary_json_sha256": "0e900d7b4b9561fdb3c6db3c4d3c8596d8390a9e7dc0be625db51dec90e74e4b",
+          "summary_csv_sha256": "b74022aa5ec7470d3006334f2fde67eaea116a77827353129036311c39409a63",
+          "artifact_manifest_sha256": "f193d682dacecc43f0f4c193e172ff294e544cf35707e096b660bdf0af9c9357",
+          "independent_audit_sha256": "40d583d46e7678a442161153dafbc9176da57eacca07a9d2e19feb7de0523ab8",
+          "active_figure": {
+            "path": "MSN-2026-0830/figures/fig_processing_cost_update.pdf",
+            "sha256": "424859bf329b08363e419d5b7b33f96e7f65d03335af234c149269e065483a96"
+          }
+        },
+        "historical_inactive_controls": {
+          "ipv4_policy_scale_run": "phase6_system/e2e/outputs/policy-scale-ipv4-20260830T081349Z",
+          "ipv6_policy_scale_run": "phase6_system/e2e/outputs/policy-scale-ipv6-20260830T081712Z",
+          "ipv4_panel": "MSN-2026-0830/figures/fig_update_latency_ipv4.pdf",
+          "ipv6_panel": "MSN-2026-0830/figures/fig_update_latency_ipv6.pdf",
+          "former_single_panel": "MSN-2026-0830/figures/fig_update_latency.pdf",
+          "former_ipv4_scale_run": "phase6_system/e2e/outputs/scale-20260823T025539Z",
+          "outage_episode": "phase6_system/e2e/outputs/run-20260823T024129Z/failures/routinator-outage"
+        },
+        "claim_boundary": "descriptive latency of one single-core Python reference-engine policy replacement and first classification; not file acquisition, ROA publication, relying-party refresh, RTR, router installation, forwarding, Internet convergence, tail reliability, or a causal address-family effect"
+      },
+      "ipv6_routing_sensitivity": {
+        "version_label": "phase7-ipv6-candidate-sensitivity-v1",
+        "status": "VERIFIED_DESCRIPTIVE",
+        "candidate_funnel": {
+          "table_candidates": 83,
+          "topology_eligible_rows": 42,
+          "collapsed_origin_pairs": 21,
+          "root_prefixes": 8
+        },
+        "fixed_model": {
+          "as_count": 77429,
+          "fixed_scenario_as_set_size": 589,
+          "deployment_levels_pct": [0, 50, 100],
+          "announcement_settings": ["intended_only", "competition"],
+          "planned_scenarios": 210,
+          "completed_scenarios": 210
+        },
+        "integrity": {
+          "zero_deployment_equalities_passed": 42,
+          "zero_deployment_equalities_expected": 42,
+          "open_100_equals_exact_intended_only": 21,
+          "open_100_equals_exact_intended_only_expected": 21,
+          "open_100_equals_exact_competition_count": 0,
+          "outcome_partitions_checked": 420,
+          "outcome_partitions_failed": 0
+        },
+        "root_balanced_descriptive_means_pp": {
+          "deployment_50": {"delivery_gain": 4.388433, "unlisted_origin_exposure_change": 15.867327},
+          "deployment_100": {"delivery_gain": 18.71824, "unlisted_origin_exposure_change": 17.594552}
+        },
+        "pair_medians_at_full_deployment_pp": {
+          "delivery_gain": 0.002583,
+          "unlisted_origin_exposure_change": 13.966343
+        },
+        "artifacts": {
+          "run_directory": "phase7_simulation/results/ipv6_sensitivity",
+          "runner_sha256": "c100743e879dd21552902bc71ba6b1041c2c398ce4fef9584370ddd964e00855",
+          "frozen_manifest_file_sha256": "e25208d0f3e66e8c4a59c31fb457967bfe551da792cc3ed01a2afd1708ea2762",
+          "frozen_manifest_canonical_sha256": "e75b5b4a844a27646efddd99fecc2dfc457342a6f7d44f16176a750a28303bee",
+          "checkpoint_sha256": "23dd0c1a7c9119bb0ff0cc68e30070c0cccc2518d6f9c75fd7ed94097bf189b7",
+          "raw_scenarios_sha256": "6ea654edb3cdb228a98d7c4cf5b9c48deb37f66b496ae33a946ce2091e1faa06",
+          "analysis_summary_sha256": "1757287366635414225004bebfdf2dcce16ac1fde1880c5dd4a949b7be803de3",
+          "pair_effects_sha256": "96f5beba27770e4323a54efc9fd4c205b75e7a0686b07ef4713cf3c89d6824a0"
+        },
+        "manifest_status_note": "manifest.json is the frozen pre-execution plan and retains planned_not_executed; checkpoint.json and analysis/summary.json record completion and verification",
+        "claim_boundary": "root-balanced descriptive sensitivity on one family-neutral graph and one fixed 589-AS set; not an IPv6 topology model, population estimate, or confidence interval"
+      },
+      "e1a": {
+        "contract_version": "e1a-v3-audit-repair",
+        "verification_status": "VERIFIED_EXACT_REPRODUCTION",
+        "current_profile_status": "historical profile-1 evidence only; current profile 2 has no E1a differential gate",
+        "legal_seed": 20260826,
+        "invalid_seed": 120260826,
+        "bounded_exhaustive_vectors": 6080,
+        "deterministic_boundary_vectors": 138,
+        "property_generated_legal_vectors": 100000,
+        "property_generated_invalid_objects": 100000,
+        "total_legal_vectors": 106218,
+        "semantic_mismatch_count": 0,
+        "order_dependent_count": 0,
+        "forbidden_state_upgrade_count": 0,
+        "metadata_mismatch_count": 0,
+        "permutation_checks": 306967,
+        "unique_policies": 100091,
+        "projected_roa_entries_checked": 264532,
+        "projection_negative_control_failure_count": 0,
+        "fixed_parser_mutations": 58,
+        "fixed_parser_unexpected_accept_count": 0,
+        "generated_invalid_failure_count": 0,
+        "snapshot_differential_checks": 16,
+        "snapshot_differential_failure_count": 0,
+        "baseline_oracle_checks": 20,
+        "baseline_oracle_failure_count": 0,
+        "coverage_failure_count": 0,
+        "state_counts": {
+          "Explicit": 21419,
+          "OpenScope": 5760,
+          "Invalid": 61369,
+          "NotFound": 17670
+        },
+        "route_relationship_counts": {
+          "descendant_of_nested_rule": 10817,
+          "exact_base": 23349,
+          "exact_nested_rule": 16497,
+          "outside": 17670,
+          "overlength": 16689,
+          "proper_descendant": 21196
+        },
+        "selected_rule_counts": {
+          "closed": 44546,
+          "none": 17670,
+          "open": 44002
+        },
+        "baseline_state_counts": {
+          "B1": {"Valid": 16834, "Invalid": 71714, "NotFound": 17670},
+          "B3": {"Valid": 18184, "Invalid": 70364, "NotFound": 17670},
+          "B4_exact": {"RegularValid": 675, "WildcardValid": 7813, "Invalid": 6997, "NotFound": 90733}
+        },
+        "semantic_vectors_sha256": "140bc6cb5c7506d0adeceee7b1708292a64907a54b943c8cc5cd785411229e3b",
+        "differential_results_sha256": "f811d821a0c968fbe8e315b9c958879b68473684ff8648faaaceb2c0b65f5b24",
+        "invalid_objects_sha256": "4768f73f261beba531169743c2de4be86e09440cb6bc56f58f9671ad1169a604",
+        "invalid_results_sha256": "ce2a557cccb5e8c5e49c4c9834fa34d241d6facbef10714ef6b4062c67e372e3",
+        "projection_census_sha256": "2fd3e2201e2bb60f66f5627e332c7f68cc1ed0c50f73ebd0644fa9aca865b036",
+        "coverage_sha256": "bc4aac39afa0dec6d67c40d5f2cdb7fa63ff0db7efda7ca6f863bf752fd21ef1",
+        "composition_results_sha256": "374d6b60fb335df999e2ec9e3980f7f087082de350f965909dddb2b920c33047",
+        "baseline_matrix_sha256": "fb7eac851506e1b99d65541d98aa53ef95f9cefc4437c703565d7670fa5a7836",
+        "mutation_results_sha256": "b424e7b5665d9a05fe971871b39d87d5628b8c89283a9c2741371140cc78603a",
+        "scientific_results_sha256": "f1bc1349f5cf7dd2bd6eccbec5edf087ce5b86ae14b6bc0e0b67df2b9643f4d1",
+        "historical_accepted_20260826": {
+          "role": "original accepted E1a V3 evidence",
+          "verification_status": "VERIFIED_EXACT_REPRODUCTION",
+          "production_output": "MSN-2026-0830-no-use/experiment_redesign/execution/e1a-v3-production-2",
+          "reproduction_output": "MSN-2026-0830-no-use/experiment_redesign/execution/e1a-v3-reproduction-2",
+          "comparison_output": "MSN-2026-0830-no-use/experiment_redesign/execution/E1A_V3_REPRODUCTION_COMPARISON_2.json",
+          "production_elapsed_seconds": 303.3122383058071,
+          "reproduction_elapsed_seconds": 300.9328451603651,
+          "production_peak_rss_kib": 424404,
+          "reproduction_peak_rss_kib": 424404,
+          "production_summary_sha256": "e9547c54f66cc68a31e7b03bf8f43ad5496efa497e2cf238967f5edbd17fc7c6",
+          "reproduction_summary_sha256": "54be7341f5787277e54e4e2583f743fd18220636e05bac860b78712f7610da6c",
+          "production_manifest_sha256": "332c52cb71c6e6682c72311ca21219a159c3b965f3ae5e5e0e67ff8292c4eeda",
+          "reproduction_manifest_sha256": "f5b7efacc7b5d0f7b306f9c1899a8f0d007137b18fcf3f5dfe179bc2fc6a3e68",
+          "comparison_report_sha256": "19a318a63ee26617e6c7b46d3e7ee1a672bd4cdc34402b5d3cff2d02ea534b34",
+          "source_bundle_manifest_sha256": "1844d64051c08de213a1ebf651089f0e7882e06f4efef55c55b2d8934b86ab81",
+          "source_bundle_content_sha256": "ca7fbf35b2d9bbc114bfc2b0f2760ebc47db655e51f9f0138c38f5f01d0e6dde",
+          "experiment_design_sha256": "0e753b0b9663b3b3d7c943080060879b9cbd7ca64d352085389edd35dc94b0c4",
+          "git_commit": "a7a1c9707eb2e354584e6b75a27f3cc1bbdb639c"
+        },
+        "reaudit_20260828": {
+          "role": "fresh formal-worktree reaudit; does not replace historical acceptance",
+          "verification_status": "VERIFIED_EXACT_REPRODUCTION",
+          "production_output": "MSN-2026-0830/experiment_redesign/execution/e1a-v3-reaudit-production-20260828",
+          "reproduction_output": "MSN-2026-0830/experiment_redesign/execution/e1a-v3-reaudit-reproduction-20260828",
+          "comparison_output": "MSN-2026-0830/experiment_redesign/execution/E1A_V3_REAUDIT_COMPARISON_20260828.json",
+          "production_elapsed_seconds": 304.42910804226995,
+          "reproduction_elapsed_seconds": 299.39902037009597,
+          "production_peak_rss_kib": 214808,
+          "reproduction_peak_rss_kib": 203056,
+          "production_summary_sha256": "af2fb27936cfaba4dbf52ce8eaab4dad6ee028a24998c82c6b3b3405698dac51",
+          "reproduction_summary_sha256": "56c7b5a230b5c74805ed2ab108527750a5a60d2cfc6fd0c8344008f17d574fe8",
+          "production_manifest_sha256": "7aa8bc589ad924ee8bbf4909feb224b7f1823008fd45f0cb9368faef78dc181e",
+          "reproduction_manifest_sha256": "69dc135f6d490207fbd31bf4a8b911dd006491ff23e9090663016b640cc1c938",
+          "comparison_report_sha256": "39b9dd7e3c208c6f01f9975a013943dfe97e2742016e281a38b95176390f3ea6",
+          "source_bundle_manifest_sha256": "2a23c4baed20266f64d1160f84316656aef560189bf01ce30b61a01a1601278d",
+          "source_bundle_content_sha256": "4b5aa9a376e9f059d70fbd11bbc413ed3da6ecbde67be17154532dcc693d196f",
+          "experiment_design_sha256": "890db41a7facc231719acb34886c644104965f1051d783d0645fb9b3c96658fd",
+          "git_commit": "4ffaaedf25b70760f9adf11825bb2c15463f15d5",
+          "git_diff_sha256": "8bbf36afcaae845fbaa745bb159424a329d00d0a99a79f52ea65e6422649aec4",
+          "loaded_repo_source_files": 13,
+          "allowed_artifacts_per_run": 28,
+          "all_nine_deterministic_outputs_match_within_pair": true,
+          "deterministic_outputs_match_historical_acceptance": true
+        },
+        "exact_rerun_all_nine_deterministic_outputs_match": true,
+        "source_bundle_present_in_author_workspace_and_hash_bound": true,
+        "reaudit_outputs_present_in_local_manuscript_tree": true,
+        "reaudit_outputs_gitignored_from_compact_review_package": true,
+        "source_bundle_present_in_compact_review_package": false,
+        "manuscript_design_sha256_at_20260828_reaudit": "bc6e3329a9d2e829bb922e2798d30d06ff3296b825d8c09faee646caf9836d40",
+        "manuscript_design_in_execution_source_bundle": false,
+        "archived_to_manuscript_state_mapping": {"Delegated": "OpenScope"},
+        "loaded_repo_source_files": 13,
+        "prefrozen_allowed_artifacts": 28,
+        "final_allowed_artifacts": 28,
+        "superseded_v1_v2_status": "diagnostic_only_after_independent_audits_found_incomplete_projection_quantification_then_incomplete_source_closure_and_maxLength_enforcement",
+        "first_diagnostic_failure": "W5 unshadowed fixture was mislabeled because its route lay inside a nested /20; the oracle exposed the fixture error before the production run",
+        "claim_boundary": "historical profile-1 executable semantic, encoding, baseline-oracle, and snapshot-contract evidence only; not current profile-2 conformance and no CMS/RPKI carrier, RP/router path, operational, Internet-scale, interoperability, or production claim"
+      },
+      "deployment_outcomes_reanalysis": {
+        "version_label": "fixed-model-split-lane-reanalysis-v4-absolute",
+        "status": "VERIFIED_DETERMINISTIC_REBUILD",
+        "role": "active 11-point renderer using preserved Phase 7 anchors and the separately audited extension; complete cell evidence is recorded under facts.deployment_grid_extension",
+        "physical_rows_verified": 36800,
+        "fixed_root_origin_units": 200,
+        "topology_ases": 77429,
+        "opaque_fixed_scenario_set_ases": 589,
+        "deployment_percent": [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+        "visual_encoding": {
+          "outcome_metric": "absolute_destination_delivery_pct",
+          "individual_order_paths_plotted": false,
+          "baseline_at_axis_zero": false,
+          "interval_bands_plotted": false,
+          "legend_series": ["S²-ROV", "Aggregate-only ROV", "Exact-match ROV"],
+          "endpoint_value_annotations": false,
+          "x_axis_label": "S²-ROV upgraded share (%)",
+          "x_axis_limits_percent": [0, 100],
+          "scenario_set_size_shown_in_plot": false
+        },
+        "intended_only": {
+          "baseline_delivery_pct": 82.13820363958291,
+          "open_scope_delivery_at_0pct_pct": 82.13820363958291,
+          "open_scope_delivery_at_100pct_pct": 99.23127330189003,
+          "delta_at_100pct_pp": 17.093069662307133,
+          "interval95_at_100pct_pp": [13.31303570782103, 21.029264624489258],
+          "interval_interpretation": "pointwise finite-frame paired-change design interval retained in prose and provenance; not plotted as an absolute-outcome band",
+          "exact_roa_reference_delivery_pct": 99.23127330189003
+        },
+        "competition": {
+          "aggregate_only_unlisted_origin_delivery_pct": 32.35482713550432,
+          "open_scope_unlisted_origin_delivery_at_0pct_pct": 32.35482713550432,
+          "open_scope_unlisted_origin_delivery_at_80pct_pct": 41.55784077356225,
+          "open_scope_unlisted_origin_delivery_at_90pct_pct": 41.26947333609715,
+          "open_scope_unlisted_origin_delivery_at_100pct_pct": 41.233720658591686,
+          "delta_at_100pct_pp": 8.878893523087369,
+          "interval95_at_100pct_pp": [4.461928915447847, 13.424339827015604],
+          "exact_roa_unlisted_origin_delivery_pct": 11.656181128842953,
+          "exact_roa_minus_aggregate_pp": -20.69864600666137,
+          "exact_roa_interval95_pp": [-23.60618713873701, -17.924187617173543],
+          "interval_interpretation": "pointwise selected-unit paired-change bootstrap stability interval retained in prose and provenance; not plotted as an absolute-outcome band"
+        },
+        "scenario_relationship": "intended-only and competition are different announcement sets with separately matched baselines; they are not a joint frontier",
+        "artifacts": {
+          "generator": {
+            "path": "MSN-2026-0830/scripts/build_fig_deployment_outcomes.py",
+            "sha256": "7b35280c2b40b8bf7c883fc3b92254ffd2aaa5c175949c43b29a4003e2477951"
+          },
+          "source_csv": {
+            "path": "MSN-2026-0830/figures/source_data/fig_deployment_outcomes.csv",
+            "rows": 24,
+            "sha256": "7a209d91e0333f630d45ceb799fbde9d94cfc6c2fc4dd4b4b1154ede05611f76"
+          },
+          "fixed_order_source_csv": {
+            "path": "MSN-2026-0830/figures/source_data/fig_deployment_outcomes_orders.csv",
+            "rows": 110,
+            "sha256": "44a472033b1fd158c3e093a262e11f4c7ceda268ed06734cf6aba1ae5848063a"
+          },
+          "figure_panel_pdfs": [
+            {
+              "panel": "a",
+              "path": "MSN-2026-0830/figures/fig_deployment_outcomes_a.pdf",
+              "sha256": "526bca6e3760f0f6bf78d599c30ca93fd2e56bd320d891056b1f2c658b270cb2"
+            },
+            {
+              "panel": "b",
+              "path": "MSN-2026-0830/figures/fig_deployment_outcomes_b.pdf",
+              "sha256": "ae7144be192826ffeaf12f08af4b55a1136e25b7564289e8d4610a36d96b50c2"
+            }
+          ],
+          "provenance_report": {
+            "path": "MSN-2026-0830/figures/FIG_DEPLOYMENT_OUTCOMES_PROVENANCE.md",
+            "sha256": "6a8f6df34105a14b02e597033a30f08bd9927910857d0d168cf46d09953a5358"
+          },
+          "component_manifest": {
+            "path": "MSN-2026-0830/figures/fig_deployment_outcomes.manifest.json",
+            "sha256": "b45e2ac74eae36dd259b5b9a701a79905362dd87f8ed7cf8fb68f51081eea412"
+          }
+        },
+        "claim_boundary": "conditional absolute destination-delivery outcomes in one fixed routing model; paired-change intervals remain contrast evidence rather than absolute-outcome bands; no same-announcement joint frontier or Internet-wide estimate"
+      },
+      "legacy_joint_diagnostic": {
+        "version_label": "phase7-legacy-w2-joint-diagnostic-v1",
+        "status": "inactive_audit_history_do_not_cite",
+        "physical_rows_verified": 36800,
+        "joint_rows": 6600,
+        "selected_units": 200,
+        "deployment_percent": [0, 1, 5, 10, 25, 50, 75, 100],
+        "delta_intended_delivery_pp": [0.0, 0.083655, -0.594979, -0.681079, -1.584214, -1.212194, -1.647120, -1.344168],
+        "delta_unlisted_competitor_exposure_pp": [0.0, -0.008114, 1.463549, 2.525407, 7.003532, 7.994909, 9.004988, 8.878894],
+        "script_sha256": "886429796712ea4588df6d7859a5a5eea0a994c7b073509c3eb4273cfeca473e",
+        "result_sha256": "31e0ae3ec3d1dd123a6c27f7acb2b06444e75ccf2f640c00d3ede5ee008036a4",
+        "exact_reaudit_20260828": {
+          "status": "EXACT_MATCH",
+          "output": "MSN-2026-0830/experiment_redesign/execution/q3-legacy-diagnostic-reaudit-20260828.json",
+          "wall_seconds": 49.03,
+          "maximum_resident_set_kib": 219080,
+          "python": "CPython 3.12.3",
+          "numpy": "2.5.1",
+          "output_bytes": 12494,
+          "output_sha256": "31e0ae3ec3d1dd123a6c27f7acb2b06444e75ccf2f640c00d3ede5ee008036a4",
+          "reference_sha256": "31e0ae3ec3d1dd123a6c27f7acb2b06444e75ccf2f640c00d3ede5ee008036a4",
+          "byte_identical": true,
+          "input_manifest_sha256": "a674b87afd90716521f19673c4ddbd1153c1b911ec5021a99e0eabe579bcbeae",
+          "raw_scenarios_sha256": "fb9ec8fa80d41b5a98b4bc956d82ebfec0514eaab27fd183f86683dfed6925b7",
+          "analysis_manifest_sha256": "27298f787bfb8856b23d5c21138526dd9adbb3259a57e64067268eb2fc4c2a73"
+        },
+        "claim_boundary": "single opaque topology and fixed 589-AS scenario over selected synthetic units; post-hoc point estimates, not a preregistered joint frontier or Internet estimate"
+      },
+      "legacy_evidence_mapping": {
+        "phase6_selected_fixture": "seven route cases checked in each of 124 snapshots, for 868 checks; signed-fixture-to-action smoke test, not E1b or E2 full-object evidence",
+        "phase6_handoff_controls_20260823": "pilot_only; 160 transitions whose old open arm precompiled both endpoint origins into route actions, so this run is not benefit evidence",
+        "phase6_staging_and_faults": "regression and sizing seeds only; no atomicity, full-RIB, concurrency, or declared stale-window evidence",
+        "phase7_phase8_simulation": "opaque fixed topology/scenario regression; the old headline delivery and exposure curves came from separate lanes and are not a joint E4 frontier"
+      }
+    },
+    "workload": {
+      "raw_root_leaf_pairs": 3950990,
+      "root_leaf_pairs_after_pseudo_root": 3929262,
+      "canonicalized_pairs": 3441429,
+      "exact_route_pairs": 24663,
+      "strict_origin_divergence_candidates": 8830,
+      "candidates_share_of_exact_pairs_pct": 35.8,
+      "candidate_roots": 1647,
+      "distinct_root_origin_asns": 731,
+      "distinct_leaf_origin_asns": 2719,
+      "leaves_assigned_pa": 7113,
+      "leaves_sub_allocated_pa": 1631,
+      "leaves_lir_partitioned_pa": 86,
+      "leaves_per_root_median": 2,
+      "leaves_per_root_p95": 19,
+      "leaves_per_root_max": 207,
+      "routeviews_rib": "rib.20260624.0000.bz2",
+      "routeviews_collector": "main RouteViews collector (route-views2 archive root)",
+      "routeviews_rib_url": "http://archive.routeviews.org/bgpdata/2026.06/RIBS/rib.20260624.0000.bz2",
+      "routeviews_rib_bytes": 73677492,
+      "routeviews_rib_sha256": "65cb4fe4d3d778f94b8abac6f0240c227b7ba585e0c63e7296aeda907f19e034",
+      "routeviews_parser": "bgpdump 1.6.2-2; rightmost scalar AS-path element; multi-member AS_SET tails excluded",
+      "ripe_input_file": "ripe.db.gz",
+      "ripe_input_url": "https://ftp.ripe.net/ripe/dbase/ripe.db.gz",
+      "ripe_input_captured_utc": "2026-06-25T00:18:29Z",
+      "ripe_input_bytes": 367373318,
+      "ripe_input_sha256": "a385cf65c40109992e7c54a5dfabd6036470ffce866cb6ab6b22dd5126bac17c",
+      "allocation_tree_pairs_sha256": "4125be93823ef9b179be57fffda8075218e8443c34be823a2b3643c5fe1bf02a",
+      "bgp_origins_sha256": "854deee33792067f3dab5ca7d3636d0af04be0b16206ead7443bf1c22c67d7dc",
+      "candidate_table_sha256": "b046e31aec24b3c9e48e99f17185be211f0229a898ee00c28e72d10097079b27",
+      "rib_peer_origin_records": 18148394,
+      "excluded_multi_member_as_set_records": 252,
+      "excluded_multi_member_as_set_prefixes": 20,
+      "excluded_as_set_allocation_pair_endpoints": 0
+    },
+    "visibility_paths": {
+      "purpose": "status-specific dual-stack characterization for Section II.B; separate from the broad IPv4 construction workload",
+      "path_definition": {
+        "root_selection": "identify the nearest strict containing eligible root and retain the endpoint only when that root is canonical and unambiguous; a nearer non-CIDR or conflicting root is an exclusion barrier with no fallback",
+        "IPv4_chain": "ALLOCATED PA -> one or more SUB-ALLOCATED PA objects -> ASSIGNED PA",
+        "IPv6_chain": "ALLOCATED-BY-RIR -> one or more ALLOCATED-BY-LIR objects -> ASSIGNED",
+        "registry_indirect": "at least one eligible intermediate allocation object strictly between root and assigned endpoint",
+        "registry_containment_depth": "maximum number of eligible intermediate ranges in a strictly nested root-to-endpoint chain; this is registry structure, not an organization count, communication-hop count, proven delegation count, or issuer-knowledge distance",
+        "depth_non_laminar_audit": "compare the longest strictly nested chain with the total number of clean eligible ranges containing the endpoint; inequality marks overlapping ranges that cannot be interpreted as one path",
+        "exact_observed": "both exact prefixes have nonempty scalar origin sets and neither prefix is terminal-path ambiguous",
+        "potential_conflict_candidate": "registry-indirect exact-observed pair whose root and endpoint origin sets are disjoint",
+        "three_handle_subset": "candidate with one exact RIPE org handle at root, one containing intermediate object, and endpoint, all pairwise distinct"
+      },
+      "ripe_database": {
+        "file": "ripe.db.gz",
+        "captured_utc": "2026-06-25T00:18:29Z",
+        "bytes": 367373318,
+        "sha256": "a385cf65c40109992e7c54a5dfabd6036470ffce866cb6ab6b22dd5126bac17c"
+      },
+      "ripe_ris_rib": {
+        "collector": "RRC00",
+        "file": "bview.20260624.0000.gz",
+        "timestamp_utc": "2026-06-24T00:00:00Z",
+        "bytes": 411493623,
+        "sha256": "ad2fe1094df70c2d0f2ddb39cf5ab22b10add9073ee1cf6213c6d132ddfb04b9"
+      },
+      "bgp_origin_extraction": {
+        "records_seen": 54843423,
+        "accepted_scalar_records": 54835466,
+        "unique_prefix_origin_pairs": 1393017,
+        "moas_prefixes": 7241,
+        "ambiguous_prefixes": 253,
+        "prefixes_with_scalar_origins": 1384474,
+        "prefixes_including_ambiguity_only": 1384700,
+        "ambiguity_only_prefixes": 226,
+        "mixed_scalar_and_ambiguous_prefixes": 27,
+        "independent_origin_csv_sha256": "cafac01fa95e4d5e7eef4da22d2fa26b32216c110fe3a3073312bc79762edb29"
+      },
+      "IPv4": {
+        "matched_endpoints": 3417197,
+        "nearest_root_non_cidr_excluded_endpoints": 453842,
+        "registry_indirect_paths": 51371,
+        "registry_containment_depth": {
+          "all_registry_indirect": {
+            "distribution": {"1": 49724, "2": 1630, "3": 17},
+            "depth_1_share_pct": 96.793911,
+            "table_depth_1_share_pct": 96.79,
+            "median": 1,
+            "p95_nearest_rank": 1,
+            "maximum": 3,
+            "non_laminar_paths": 0
+          },
+          "exact_observed": {"1": 601, "2": 21, "3_or_more": 0},
+          "origin_disjoint_candidates": {"1": 483, "2": 21, "3_or_more": 0}
+        },
+        "exact_observed_registry_indirect_paths": 622,
+        "exact_observed_share_of_indirect_pct": 1.2108,
+        "table_exact_observed_share_pct": 1.21,
+        "origin_disjoint_candidates": 504,
+        "candidate_share_of_exact_observed_pct": 81.028939,
+        "table_candidate_share_pct": 81.0,
+        "three_handle_candidates": 82,
+        "candidate_root_prefixes": 83,
+        "registry_direct_exact_observed_paths": 21922,
+        "registry_direct_origin_disjoint_paths": 6790,
+        "registry_direct_disjoint_share_pct": 30.973451,
+        "table_registry_direct_disjoint_share_pct": 31.0
+      },
+      "IPv6": {
+        "matched_endpoints": 844614,
+        "registry_indirect_paths": 122180,
+        "registry_containment_depth": {
+          "all_registry_indirect": {
+            "distribution": {"1": 48645, "2": 65366, "3": 7712, "4": 213, "5": 185, "6": 7, "7": 52},
+            "depth_2_share_pct": 53.499754,
+            "table_depth_2_share_pct": 53.50,
+            "depth_3_or_more_share_pct": 6.686037,
+            "table_depth_3_or_more_share_pct": 6.69,
+            "median": 2,
+            "p95_nearest_rank": 3,
+            "maximum": 7,
+            "non_laminar_paths": 0
+          },
+          "exact_observed": {"1": 98, "2": 42, "3_or_more": 0},
+          "origin_disjoint_candidates": {"1": 60, "2": 23, "3_or_more": 0}
+        },
+        "exact_observed_registry_indirect_paths": 140,
+        "exact_observed_share_of_indirect_pct": 0.114585,
+        "table_exact_observed_share_pct": 0.11,
+        "origin_disjoint_candidates": 83,
+        "candidate_share_of_exact_observed_pct": 59.285714,
+        "table_candidate_share_pct": 59.3,
+        "three_handle_candidates": 0,
+        "candidate_root_prefixes": 14,
+        "registry_direct_exact_observed_paths": 1251,
+        "registry_direct_origin_disjoint_paths": 318,
+        "registry_direct_disjoint_share_pct": 25.419664,
+        "table_registry_direct_disjoint_share_pct": 25.4
+      },
+      "combined": {
+        "registry_indirect_paths": 173551,
+        "exact_observed_registry_indirect_paths": 762,
+        "origin_disjoint_candidates": 587,
+        "candidate_root_prefixes": 97,
+        "three_handle_candidates": 82
+      },
+      "primary_run": {
+        "elapsed_seconds": 2577.67,
+        "maximum_resident_set_kib": 303816,
+        "observed_peak_work_database_bytes": 1770348544,
+        "analysis_script_sha256": "16dd1879d7b3db7bb706dc95d37e48284b19afcfd17a45b761cfd038acfa01e9",
+        "test_script_sha256": "a095bb81e5cfd8a5171bd449bf415e3fdde07933514cada668f8a900f3f2c251"
+      },
+      "independent_rerun": {
+        "elapsed_seconds": 796.83,
+        "maximum_resident_set_kib": 304820,
+        "scientific_results_equal": true,
+        "compact_table_byte_identical": true,
+        "candidate_table_byte_identical": true,
+        "candidate_invariant_checks": 7686,
+        "candidate_invariant_failures": 0
+      },
+      "independent_tree_crosscheck": {
+        "elapsed_seconds": 388.69222,
+        "maximum_resident_set_mb": 953,
+        "ripe_ip_objects_reparsed": 5092311,
+        "matched_path_counts_equal": true,
+        "registry_indirect_counts_equal": true,
+        "registry_direct_counts_equal": true,
+        "three_handle_path_counts_equal": true,
+        "implementation": "independent compact range catalogue, longest-prefix root lookup, and per-root interval prefix-max hop indexes"
+      },
+      "depth_extension": {
+        "elapsed_seconds": 793.18,
+        "maximum_resident_set_kib": 305192,
+        "source_kind": "independently extracted RRC00 origin CSV",
+        "analysis_script_sha256": "40a700fada2978db7879903c6ef5639d41856da39625833f12e9e7e84b2f0d58",
+        "test_script_sha256": "ab2d050532c48f8880d16cd7e814bf00ad27fb760798e998c6d2b437b5b197a9",
+        "compact_table_byte_identical_to_primary": true,
+        "candidate_table_byte_identical_to_primary": true,
+        "independent_depth_implementation_equal_for_all_afi_cohort_depth_cells": true,
+        "independent_exact_observed_total": 762,
+        "independent_candidate_total": 587,
+        "independent_candidate_key_symmetric_difference": 0
+      },
+      "output_sha256": {
+        "visibility_by_afi_csv": "4a21e4736d386d52fa5804c17f3566ab5d468b54a4b9903ac5c2c913480b7576",
+        "visibility_candidates_csv": "0846c5f5775e92092b445b64851918ca6f6b3e45651598d9006d3f3aeb483918",
+        "visibility_audit_metrics_csv": "9aa4e1235f45a7202e509c29b09afa46aadc492abbd4d7692cf5db100ccd22de",
+        "visibility_summary_json": "45f50105ef44c92d25435e0e77a7a55a8366de566c630d3990c9aa9714c48088",
+        "outputs_depth_visibility_depth_by_afi_csv": "fc4805415625bbd0215cd7aadadf3bbaec2dcfdfccbc58c49237d8bba12bc541"
+      },
+      "schema_note": "the compact CSV explicitly records the IPv6 three-handle count as zero; the primary JSON Counter omits that zero-valued key",
+      "claim_boundary": "registry/BGP data identify conditional route-side candidates only; they do not establish issuer knowledge, communication-channel absence, permission, ROA state, route legitimacy, causation, or allocation-tree prevalence"
+    },
+    "construction_stress": {
+      "policies_roundtrip": 1647,
+      "stripes_per_policy_median": 3,
+      "stripes_per_policy_p95": 20,
+      "stripes_per_policy_max": 208,
+      "payload_bytes_median": 44,
+      "payload_bytes_p95": 213,
+      "payload_bytes_max": 2093,
+      "policy_cases_before_after_serialization": 8,
+      "historical_unit_tests": 14,
+      "current_unit_tests": 27,
+      "current_unit_test_status_20260828": "PASS",
+      "encoder_roundtrips": 5,
+      "malformed_rejected": 3,
+      "max_payload_kb": 2.1
+    },
+    "enforcement": {
+      "snapshots": 124,
+      "route_outcomes": 868,
+      "route_checks": 868,
+      "accepted_run_id": "run-20260823T024129Z",
+      "summary_sha256": "0992ad215592227b3ca98605e0ae359be19ab86eb06c41ac5af6afec34b5b74e",
+      "source_manifest_sha256": "316a251543710ba0b9538415f2934fb0202accce480493a0445afe68fef8615c",
+      "source_hashes_match": true,
+      "baseline_state_counts": {"Valid": 1, "Invalid": 5, "NotFound": 1},
+      "da_state_counts": {"Explicit": 2, "Delegated": 2, "Invalid": 2, "NotFound": 1},
+      "outage_policy_retained": true,
+      "independent_expected_present_outcomes": 617,
+      "independent_expected_absent_outcomes": 251,
+      "dynamic_policies_checked": 122,
+      "dynamic_route_clauses_checked": 854,
+      "independent_aggregate_audit": {
+        "path": "phase6_system/e2e/audits/run-20260823T024129Z/q2_aggregate_audit.json",
+        "verification_status": "VERIFIED_OUTCOME_AGGREGATE",
+        "provenance_status": "PARTIAL",
+        "audit_sha256": "02abf4e0b1558085a897c0b0c38e2599afb3dbad502501949afc781fdb022e9f",
+        "auditor_sha256": "6d252222578a5eeec6dad6e71f8567e895ca32eacd534565035c60e26b0225b8",
+        "test_sha256": "fe270a6056e9965db81f13393cec0cea8fd53d35bc05709f5d9b8db70075b3d3",
+        "evidence_unique_files": 466,
+        "evidence_inventory_sha256": "14f0dbed89b5acdf5ddd031771988028fdcecb035e2e84b651fcb2de89ba8dd2",
+        "snapshot_count": 124,
+        "configured_route_cases": 7,
+        "evaluation_count": 868,
+        "state_counts": {"Valid": 1, "Explicit": 216, "Delegated": 276, "Invalid": 251, "NotFound": 124},
+        "action_counts": {"LP300": 217, "LP200": 276, "LP100": 124, "reject": 251},
+        "legacy_snapshot_decision_pass_false_count": 30,
+        "all_independent_cross_checks_pass": true,
+        "production_evaluator_imported": false
+      },
+      "raw_experimental_manifest_sha256": "0b8a6822cc411cd874793436289490a90fd38a7952185a9cd710f5baf3a5b23d",
+      "outage_before_during_rib_sha256": "fa21f7abf23a3e716e733c847765b650c8a154041999e3867f75f7e3712d0e6b",
+      "generic_fixture_false_flags_in_removal_context": 31,
+      "generic_fixture_false_flag_explanation": "thirty audited removal snapshots and one auxiliary copied decision retain static expected_da=Explicit while the transition-specific oracle is Delegated; independently recomputed state, raw FRR action, stored decision, and enforcement checks pass"
+    },
+    "origin_churn": {
+      "status": "pilot_only",
+      "analysis_role": "legacy_sizing_and_regression_artifact_not_benefit_evidence",
+      "design": "10-round randomized complete block; four direction-balanced four-trial arm blocks per round",
+      "random_seed": 20260823,
+      "randomized_complete_block_rounds": 10,
+      "trials_per_block": 4,
+      "arms": ["reactive_exact", "open_da", "bgp_only", "prepublished_exact"],
+      "trials_per_lane": 40,
+      "total_transitions": 160,
+      "total_events": 760,
+      "failed_trials": 0,
+      "retried_trials": 0,
+      "exact_lane_signed_transactions": 40,
+      "exact_lane_roa_entry_changes": 80,
+      "control_handoff_signed_transactions": 0,
+      "control_handoff_roa_entry_changes": 0,
+      "exact_invalid_exposure_median_s": 3.211,
+      "exact_invalid_exposure_p95_nearest_rank_s": 3.427,
+      "exact_unavailable_median_s": 3.441,
+      "exact_unavailable_p95_nearest_rank_s": 3.654,
+      "exact_completion_mean_s": 3.433,
+      "exact_completion_median_s": 3.668,
+      "exact_completion_p95_nearest_rank_s": 3.897,
+      "da_unavailable_median_s": 0.616,
+      "da_unavailable_p95_nearest_rank_s": 0.645,
+      "da_completion_mean_s": 0.853,
+      "da_completion_median_s": 0.843,
+      "da_completion_p95_nearest_rank_s": 0.900,
+      "bgp_only_unavailable_median_s": 0.625,
+      "bgp_only_unavailable_p95_nearest_rank_s": 0.648,
+      "bgp_only_completion_mean_s": 0.865,
+      "bgp_only_completion_median_s": 0.854,
+      "bgp_only_completion_p95_nearest_rank_s": 0.998,
+      "prepublished_exact_unavailable_median_s": 0.623,
+      "prepublished_exact_unavailable_p95_nearest_rank_s": 0.652,
+      "prepublished_exact_completion_mean_s": 0.856,
+      "prepublished_exact_completion_median_s": 0.856,
+      "prepublished_exact_completion_p95_nearest_rank_s": 0.887,
+      "nonreactive_completion_median_span_ms": 12.339,
+      "exact_minus_prepublished_mean_completion_s": 2.578,
+      "exact_minus_prepublished_completion_ci95_s": [2.403, 2.738],
+      "exact_minus_prepublished_paired_t_ci95_s": [2.374, 2.781],
+      "exact_minus_prepublished_exact_sign_flip_p": 0.001953125,
+      "exact_minus_prepublished_round_effects_s": [1.999, 2.526, 2.540, 2.417, 2.416, 2.893, 2.441, 2.854, 2.853, 2.837],
+      "exact_old_absence_to_adj_rib_median_s": 0.233,
+      "exact_signed_request_to_routinator_median_s": 2.321,
+      "exact_routinator_to_rtr_median_s": 0.124,
+      "exact_rtr_to_acceptance_median_s": 0.392,
+      "exact_minus_da_mean_completion_s": 2.580,
+      "exact_minus_da_completion_ci95_s": [2.410, 2.735],
+      "da_minus_bgp_only_mean_completion_s": -0.0119,
+      "da_minus_bgp_only_completion_ci95_s": [-0.0272, 0.0056],
+      "da_minus_prepublished_mean_completion_s": -0.0024,
+      "da_minus_prepublished_completion_ci95_s": [-0.0160, 0.0126],
+      "bootstrap_unit": "complete temporal round after averaging four within-arm trials",
+      "bootstrap_replicates": 100000,
+      "bootstrap_seed": 20260823,
+      "historical_initial_mean_completion_penalty_s": 2.652,
+      "historical_initial_completion_ci95_s": [2.489, 2.809],
+      "transitions_pass": 160,
+      "routinator_refresh_s": 2,
+      "rtr_frr_poll_retry_s": 1,
+      "frr_state_query_interval_s": 0.05,
+      "routinator_rtr_query_interval_s": 0.1,
+      "timestamp_source": "one persistent Python time.monotonic_ns() helper; UTC timestamps are metadata only",
+      "quantile_method": "nearest-rank p05 and p95",
+      "accepted_run_id": "controls-20260823T022857Z",
+      "trials_csv_sha256": "a5ccadddbd159dd40fa6599e97bc3568e61e531640fc42d9086ed79bea820157",
+      "events_jsonl_sha256": "5ae0b640f3f6baab1c854d94de8293506645a9fac4c7728f58800a53660d01f3",
+      "block_order_sha256": "888ef90ae3052d89b17dfe81b77b398b281f65e31f1a5363a25c7138e8e9b1ae",
+      "independent_audit_sha256": "de1fe82d21c418357bcbe0ae871b523a9fa9a18b78d857d4a97d5cfde74f01e6",
+      "matched_bgponly_control": true,
+      "matched_prepublished_exact_control": true,
+      "da_state_source": "DA agent decision installed as an FRR route-map action; not FRR's native rpkiValidationState",
+      "endpoint_origins_precompiled_in_open_action_map": true,
+      "claim_boundary": "the open arm precompiled both endpoint origins into route actions before handoff; this archived run is permanently pilot_only and must not support an operational-benefit claim",
+      "manuscript_formatted_values": {
+        "rounded_mean_completion_penalty_s": "2.58",
+        "exact_completion_median_s": "3.67",
+        "da_completion_median_s": "0.84",
+        "prepublished_exact_completion_median_s": "0.86",
+        "exact_minus_prepublished_ci95_lower_s": "2.403",
+        "exact_minus_prepublished_ci95_upper_s": "2.738",
+        "round_effect_3_s": "2.540",
+        "full_exposure_at_75_pct": "9.00"
+      }
+    },
+    "staged_deployment": {
+      "stages": 12,
+      "per_hop_assertions": 213,
+      "rollback_median_s": 8.125,
+      "rollback_p95_s": 8.255,
+      "upgrade_median_s": 9.198,
+      "upgrade_p95_s": 9.378,
+      "transitions_observations": 60,
+      "accepted_run_id": "staged-20260823T024131Z",
+      "transition_trials_sha256": "49223051ecb7d20fbe20fea348b5fee78ee06127d2ed32c8f961ba2199925e9b",
+      "summary_sha256": "c7e7e2a508622a03b3b80b15e29e37059f429b9dc6e262d6544755175addd17a",
+      "source_manifest_sha256": "7a48e96ef014ed7031c0ba25419b3affe4bd631e2b58d53686f653fc9a0e6b37",
+      "source_hashes_match": true,
+      "independent_stage_assertions_passed": 213,
+      "independent_transition_assertions_passed": 1110,
+      "raw_main_stages_sha256": "e13546ef5793ee5723918945a14199b312d4dc1ffd2e15bef0a9dd142313aa4d",
+      "raw_transitions_sha256": "85fa16f6442a2d0941327ea7e1a1d3ae5d3822d5ccadeaef8c343c22fe3728a0",
+      "independent_audit_inputs_sha256": "1229ba5633d51d53de89cf3fc670c35caec09c310f5c1439b6d1513e88da0416"
+    },
+    "signed_transitions": {
+      "cycles": 30,
+      "removal_to_delegated_median_s": 3.612,
+      "removal_to_delegated_p95_s": 3.786,
+      "restoration_to_explicit_median_s": 3.668,
+      "restoration_to_explicit_p95_s": 3.873,
+      "samples_sha256": "fabf0c730e7eadb242a00ffaf743e97b7c10803cb233eb306a0bd52447060e0a"
+    },
+    "policy_scale_historical_ipv4": {
+      "status": "HISTORICAL_SUPERSEDED_FOR_FIGURE_3",
+      "updates": 80,
+      "route_checks": 560,
+      "trials_per_transition_cell": 10,
+      "p95_method_note": "nearest-rank p95 equals the maximum when n=10; manuscript reports medians rather than presenting this as a stable tail estimate",
+      "cell_median_range_s": [
+        3.158,
+        3.853
+      ],
+      "cell_max_range_s": [
+        3.695,
+        4.769
+      ],
+      "validated_json_start_bytes": 362,
+      "validated_json_end_bytes": 129202,
+      "accepted_run_id": "scale-20260823T025539Z",
+      "samples_sha256": "8d1cb3edc2e72595bb9fda54753ad3c1093f5c38adc973ac02543c74adaaaf00",
+      "payloads_sha256": "1657a745f5a604afa5f9eb9310f8b038d5d7bb3fb895f4fdfef3a2358e1bc069",
+      "summary_sha256": "a5825f1ec21773233d9ceb1a489a0370385990ac0370027ba79c3b312d1fa70c",
+      "source_manifest_sha256": "316a251543710ba0b9538415f2934fb0202accce480493a0445afe68fef8615c",
+      "source_addendum_sha256": "0e0a875bb801408fb12caaa16dbb91d0b1505f3ea66126bcb7fb2cbd57b6d2a4",
+      "summarizer_sha256": "9e05bc315fc00e9e4176ad67bd0ba1c334945a277a3bb51ba768fbb7b44b29b2",
+      "source_hashes_match": true,
+      "manuscript_formatted_values": {
+        "cell_median_lower_s": "3.16",
+        "cell_median_upper_s": "3.85"
+      }
+    },
+    "recovery": {
+      "routinator_restart_median_s": 11.832,
+      "routinator_restart_p95_s": 11.912,
+      "frr_restart_median_s": 7.925,
+      "frr_restart_p95_s": 7.994,
+      "trials_per_condition": 30,
+      "outage_seconds": 15,
+      "routinator_samples_sha256": "1f31e3effe673c934606c71d94f9a4713ac5a7f78ed0bd6719cb7b4869997d38",
+      "frr_samples_sha256": "fe2875b0765c9cd62aacf9bcbfebac9e4780e91e721665a7d3fac17555f36bc6"
+    },
+    "deployment_frontier": {
+      "total_trials": 36800,
+      "graph_ases": 77429,
+      "graph_relationships": 477782,
+      "rov_set_ases": 589,
+      "topology_sha256": "fff3684dc18a3411e87f8f7cd06b9cb211322d8f7c4f169781ee664fe78b6d69",
+      "rov_set_label": "hlavacek_589",
+      "rov_set_label_interpretation": "historical local filename only; not verified source attribution",
+      "rov_set_derivation": "exact local list is reproducible from AMBER commit 92d7f443d367d5b8bc3e79428c3ac3fef1e066ca categories 3/6/7 and its retained topology membership file; the upstream category-table vintage is unreconstructed",
+      "topology_upstream_provenance": "unreconstructed; manuscript treats the hash-bound graph as an opaque fixed model input",
+      "manuscript_scenario_set_description": "frozen 589-AS conventional-ROV scenario set of unreconstructed upstream provenance",
+      "rov_set_sha256": "be4bb53be5001819e2d75ae849ce4d03198fdd1ad19c990c5f6ff13b3c011433",
+      "source_rov_json_sha256": "027c2ace3bce39a308e7d09eddcbc30f619b051af7977e9b5ff4a322cc0bbe1f",
+      "holder_frame": 691,
+      "manuscript_unit_definition": "candidate-bearing root-origin unit: a synthetic root-origin ASN selected from an observed root prefix, not a verified resource holder",
+      "eligible_frame_rows": 8293,
+      "eligible_frame_roots": 1569,
+      "frame_filter_pipeline": [
+        {"rule": "root_origin_not_singleton", "before": 8830, "excluded": 20, "remaining": 8810},
+        {"rule": "leaf_origin_not_singleton", "before": 8810, "excluded": 7, "remaining": 8803},
+        {"rule": "leaf_not_proper_descendant", "before": 8803, "excluded": 0, "remaining": 8803},
+        {"rule": "holder_equals_delegate", "before": 8803, "excluded": 0, "remaining": 8803},
+        {"rule": "holder_absent_from_topology", "before": 8803, "excluded": 4, "remaining": 8799},
+        {"rule": "delegate_absent_from_topology", "before": 8799, "excluded": 506, "remaining": 8293}
+      ],
+      "holders_sampled": 200,
+      "holders_per_degree_stratum": 50,
+      "holder_degree_strata": [
+        {"degree": "1-2", "population": 161, "weight": 3.22},
+        {"degree": "3-18", "population": 177, "weight": 3.54},
+        {"degree": "19-101", "population": 179, "weight": 3.58},
+        {"degree": ">=102", "population": 174, "weight": 3.48}
+      ],
+      "stratum_weights": [3.22, 3.54, 3.58, 3.48],
+      "holder_sampling_seed": 20260804,
+      "within_holder_selection": "namespace-separated SHA-256 ranks select holder, then one root, one distinct delegate within root, and one leaf within (holder, root, delegate)",
+      "attacker_sampling_seed": 20260805,
+      "selected_holder_delegate_endpoints_excluded": 383,
+      "attacker_pool_sizes": {
+        "uniform": 77046,
+        "degree_one": 28815,
+        "high_degree": 720
+      },
+      "random_deployment_seeds": [1, 2, 3, 4, 5],
+      "primary_deployment_orders": "random seeds 1-5, averaged within sample unit at intermediate levels",
+      "primary_competition_attacker_class": "uniform",
+      "competition_scope": "Phase 7 evaluates one same-prefix eligible unlisted origin; Phase 8 separately evaluates one deterministic same-length sibling; strictly more-specific routes exceed the configured maxLength and are rejected by both enforcing policies; broader maxLength not evaluated",
+      "campaign_max_length": "DA object and exact-child ROA use selected leaf length; aggregate-only ROA uses root length",
+      "primary_open_arms": ["D1_open_delegate_only", "A1_open_competition_uniform"],
+      "sensitivity_deployment_orders": ["degree", "customer_cone"],
+      "sensitivity_attacker_classes": ["edge", "high_degree"],
+      "delegate_bootstrap_unit": "candidate-bearing root-origin sample unit, resampled within four sampling strata after within-unit random-order averaging",
+      "delegate_bootstrap_replicates": 10000,
+      "delegate_bootstrap_seed": 20260804,
+      "delegate_interval_type": "pointwise stratified paired rescaled bootstrap for the 691-unit finite frame with SRSWOR finite-population correction",
+      "competition_target": "200 selected synthetic units after fixed 161:177:179:174 stratum-share standardization; unselected units have no post-sample competitor outcome",
+      "competition_bootstrap_replicates": 10000,
+      "competition_bootstrap_seed": 20260804,
+      "competition_interval_type": "ordinary within-stratum paired bootstrap stability interval without finite-population correction; not 691-frame confidence",
+      "scenarios_per_holder": 184,
+      "fixed_reference_scenarios_per_holder": 8,
+      "shared_endpoint_scenarios_per_holder": 8,
+      "intermediate_scenarios_per_holder": 168,
+      "deployment_as_counts": [0, 5, 29, 58, 147, 294, 441, 589],
+      "deployment_levels": [
+        0,
+        1,
+        5,
+        10,
+        25,
+        50,
+        75,
+        100
+      ],
+      "at_1_pct_delegate_pp": 0.14,
+      "at_1_pct_delegate_ci": [
+        0.04,
+        0.32
+      ],
+      "at_1_pct_exposure_pp": -0.01,
+      "at_1_pct_exposure_stability_interval": [
+        -0.27,
+        0.24
+      ],
+      "at_5_pct_delegate_pp": 1.08,
+      "at_5_pct_delegate_ci": [
+        0.69,
+        1.53
+      ],
+      "at_5_pct_exposure_pp": 1.46,
+      "at_5_pct_exposure_stability_interval": [
+        0.89,
+        2.04
+      ],
+      "at_5_pct_delegate_order_specific_range_pp": [
+        0.13,
+        3.32
+      ],
+      "at_5_pct_exposure_order_specific_range_pp": [
+        0.07,
+        6.10
+      ],
+      "partial_adoption_interval_conditioning": "delegate intervals quantify finite-frame unit-sampling uncertainty; competition intervals summarize selected-unit resampling stability; both condition on five fixed deployment schedules and omit order-assignment uncertainty",
+      "at_5_pct_strategy_sensitivity_pp": {
+        "random": {"delegate": 1.08, "exposure": 1.46},
+        "degree": {"delegate": 9.08, "exposure": 10.99},
+        "customer_cone": {"delegate": 9.54, "exposure": 9.72}
+      },
+      "at_10_pct_delegate_pp": 2.36,
+      "at_10_pct_exposure_pp": 2.53,
+      "at_25_pct_delegate_pp": 7.62,
+      "at_25_pct_exposure_pp": 7.00,
+      "at_50_pct_delegate_pp": 11.40,
+      "at_50_pct_exposure_pp": 7.99,
+      "at_75_pct_delegate_pp": 13.96,
+      "at_75_pct_exposure_pp": 9.00,
+      "full_delegate_pp": 17.09,
+      "full_delegate_ci": [
+        13.31,
+        21.03
+      ],
+      "full_exposure_pp": 8.88,
+      "full_exposure_stability_interval": [
+        4.46,
+        13.42
+      ],
+      "full_exposure_holder_weighted_median_pp": 3.22,
+      "full_exposure_holder_weighted_iqr_pp": [-9.09, 29.26],
+      "full_child_route_selection_delegate_pp": 43.51,
+      "full_destination_delivery_delegate_pp": 17.09,
+      "exact_child_reference_delegate_pct": 99.23,
+      "full_unlisted_above_reference_pp": 29.58,
+      "full_unlisted_above_reference_stability_interval": [
+        26.27,
+        33.03
+      ],
+      "edge_exposure_full_pp": 6.58,
+      "edge_exposure_full_stability_interval": [
+        2.43,
+        10.82
+      ],
+      "high_degree_exposure_full_pp": 15.62,
+      "high_degree_exposure_full_stability_interval": [
+        12.50,
+        18.68
+      ],
+      "outcome_partition_audit_sha256": "c32643e44ec67d7df5b9ed3f21c1531a7d31246d91d7986b2e3d33e4187df3e2",
+      "outcome_partition_order": ["delegate", "unlisted", "holder_fallback", "disconnected", "loop"],
+      "full_partition_pct": {
+        "exact_delegate_only": [99.23127330, 0.0, 0.00003009, 0.76869661, 0.0],
+        "open_delegate_only": [99.23127330, 0.0, 0.00003009, 0.76869661, 0.0],
+        "aggregate_only_competition": [59.37378713, 32.35482714, 7.22019682, 1.05118892, 0.0],
+        "exact_child_competition": [87.58678129, 11.65618113, 0.00003009, 0.75700749, 0.0],
+        "open_competition": [58.02961929, 41.23372066, 0.00003009, 0.73662996, 0.0]
+      },
+      "holder_median_delegate_gain": 0,
+      "sample_unit_median_delegate_gain": 0,
+      "root_leaf_millions": 3.93,
+      "aggregate_baseline_delegate_pct": 82.14,
+      "aggregate_baseline_unlisted_pct": 32.35,
+      "open_delegate_delivery_pct": [82.14, 82.28, 83.22, 84.49, 89.76, 93.54, 96.10, 99.23],
+      "open_unlisted_delivery_pct": [32.35, 32.35, 33.82, 34.88, 39.36, 40.35, 41.36, 41.23]
+    },
+    "deployment_grid_extension": {
+      "version_label": "phase7-deployment-grid-extension-analysis-v1",
+      "status": "VERIFIED_WITH_INDEPENDENT_READ_ONLY_AUDIT",
+      "purpose": "fill the seven missing decile cells for the two active routing-model panels while preserving the frozen Phase 7 campaign",
+      "scope_label": "opaque fixed 589-AS scenario set",
+      "scope_semantics": "coverage is the share of this one fixed set assigned the modeled upgraded policy; 0% means none of the 589 ASes and 100% means all 589 ASes, with no claim beyond this set",
+      "historical_manifest_string": "fixed measured 589-AS ROV set",
+      "historical_manifest_string_status": "immutable historical scenario label in the hash-bound formal manifest; it does not establish that the 589-AS set is measured, current, representative, or an estimate of Internet conditions",
+      "legacy_phase7_physical_scenarios_preserved": 36800,
+      "legacy_phase7_manifest_file_sha256": "a674b87afd90716521f19673c4ddbd1153c1b911ec5021a99e0eabe579bcbeae",
+      "legacy_phase7_raw_sha256": "fb9ec8fa80d41b5a98b4bc956d82ebfec0514eaab27fd183f86683dfed6925b7",
+      "extension_physical_scenarios": 14000,
+      "extension_first_attempt_successes": 14000,
+      "extension_failed_scenarios": 0,
+      "extension_retries": 0,
+      "extension_factorization": "200 selected units x 7 new coverage points x 5 fixed random orders x 2 lanes",
+      "extension_lanes": ["D1_open_delegate_only", "A1_open_competition"],
+      "competition_attacker_class": "uniform",
+      "selected_units": 200,
+      "fixed_random_orders": ["random_01", "random_02", "random_03", "random_04", "random_05"],
+      "fixed_set_coverage_percent": [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+      "upgraded_as_counts": [0, 58, 117, 176, 235, 294, 353, 412, 471, 530, 589],
+      "new_extension_coverage_percent": [20, 30, 40, 60, 70, 80, 90],
+      "coverage_points": 11,
+      "order_level_unit_contrasts": 22000,
+      "unit_averaged_contrasts": 4400,
+      "summary_cells": 22,
+      "order_trajectory_points": 110,
+      "independent_unit": "holder/root-origin unit",
+      "random_order_role": "five fixed within-unit blocks retained for descriptive trajectories and averaged within unit before interval calculation; they are not independent units",
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 20260804,
+      "deployment_outcomes_display": {
+        "metric": "absolute_destination_delivery_pct",
+        "panel_a": "intended-route delivery under S²-ROV, Aggregate-only ROV, and Exact-match ROV",
+        "panel_b": "delivery to the eligible unlisted origin under S²-ROV, Aggregate-only ROV, and Exact-match ROV",
+        "interval_bands_plotted": false,
+        "contrast_interval_role": "paired-change evidence retained in manuscript prose and provenance; not an absolute-outcome interval"
+      },
+      "panels": {
+        "intended_only_delivery_change": {
+          "estimand": "Delta_R",
+          "metric": "destination delivery change relative to the announcement-matched aggregate-only reference",
+          "interval_type": "pointwise stratified paired rescaled percentile interval for the finite frozen eligible-holder frame with SRSWOR finite-population correction",
+          "cells": [
+            {"fixed_set_coverage_percent": 0, "upgraded_as_count": 0, "point_estimate_pp": 0.0, "interval95_pp": [0.0, 0.0], "fixed_order_min_max_pp": [0.0, 0.0], "source": "frozen_phase7"},
+            {"fixed_set_coverage_percent": 10, "upgraded_as_count": 58, "point_estimate_pp": 2.3563214917829867, "interval95_pp": [1.642710973266316, 3.1530762716962686], "fixed_order_min_max_pp": [0.8987498541916156, 5.858268475041391], "source": "frozen_phase7"},
+            {"fixed_set_coverage_percent": 20, "upgraded_as_count": 117, "point_estimate_pp": 6.998228962441089, "interval95_pp": [5.330019579406011, 8.85736097654143], "fixed_order_min_max_pp": [5.458964086401998, 8.394972816607174], "source": "grid_extension"},
+            {"fixed_set_coverage_percent": 30, "upgraded_as_count": 176, "point_estimate_pp": 8.280889353673137, "interval95_pp": [6.378356580221503, 10.308005451814742], "fixed_order_min_max_pp": [7.509239807930852, 9.412754010074007], "source": "grid_extension"},
+            {"fixed_set_coverage_percent": 40, "upgraded_as_count": 235, "point_estimate_pp": 10.178675938942918, "interval95_pp": [7.865620668160654, 12.628380628613503], "fixed_order_min_max_pp": [8.846705835114637, 12.107734121539366], "source": "grid_extension"},
+            {"fixed_set_coverage_percent": 50, "upgraded_as_count": 294, "point_estimate_pp": 11.40388722302505, "interval95_pp": [8.907002970667047, 14.054665972973151], "fixed_order_min_max_pp": [9.792196310969842, 12.894417796209327], "source": "frozen_phase7"},
+            {"fixed_set_coverage_percent": 60, "upgraded_as_count": 353, "point_estimate_pp": 12.311947947869296, "interval95_pp": [9.624269884815101, 15.141432486315798], "fixed_order_min_max_pp": [11.306298871741687, 13.406761273794007], "source": "grid_extension"},
+            {"fixed_set_coverage_percent": 70, "upgraded_as_count": 412, "point_estimate_pp": 12.979085878946961, "interval95_pp": [10.090339144944513, 16.019088911215775], "fixed_order_min_max_pp": [11.352351126438808, 14.565421934840488], "source": "grid_extension"},
+            {"fixed_set_coverage_percent": 80, "upgraded_as_count": 471, "point_estimate_pp": 14.996342474359455, "interval95_pp": [11.700843565124705, 18.42310086301951], "fixed_order_min_max_pp": [13.673437103734583, 15.601518250069871], "source": "grid_extension"},
+            {"fixed_set_coverage_percent": 90, "upgraded_as_count": 530, "point_estimate_pp": 16.26796572833384, "interval95_pp": [12.698634619311164, 19.998028588217682], "fixed_order_min_max_pp": [15.57268713138234, 17.087166303459487], "source": "grid_extension"},
+            {"fixed_set_coverage_percent": 100, "upgraded_as_count": 589, "point_estimate_pp": 17.093069662307133, "interval95_pp": [13.31303570782103, 21.029264624489258], "fixed_order_min_max_pp": [17.09306966230713, 17.09306966230713], "source": "frozen_phase7"}
+          ]
+        },
+        "competition_unlisted_origin_exposure_change": {
+          "estimand": "Delta_E_rov",
+          "metric": "destination exposure change relative to the announcement-matched aggregate-only reference in the separate uniform-origin competition lane",
+          "interval_type": "descriptive ordinary stratified paired selected-unit stability interval without finite-population correction",
+          "cells": [
+            {"fixed_set_coverage_percent": 0, "upgraded_as_count": 0, "point_estimate_pp": 0.0, "interval95_pp": [0.0, 0.0], "fixed_order_min_max_pp": [0.0, 0.0], "source": "frozen_phase7"},
+            {"fixed_set_coverage_percent": 10, "upgraded_as_count": 58, "point_estimate_pp": 2.525407310733802, "interval95_pp": [1.6503084495185443, 3.4262152487057884], "fixed_order_min_max_pp": [0.4112880295414283, 7.785755080154755], "source": "frozen_phase7"},
+            {"fixed_set_coverage_percent": 20, "upgraded_as_count": 117, "point_estimate_pp": 7.010572348442874, "interval95_pp": [4.83288687629967, 9.236125640260246], "fixed_order_min_max_pp": [3.839776168406671, 8.83965511076774], "source": "grid_extension"},
+            {"fixed_set_coverage_percent": 30, "upgraded_as_count": 176, "point_estimate_pp": 7.3316305966799655, "interval95_pp": [4.938731535742964, 9.69885534292478], "fixed_order_min_max_pp": [4.5487959007644365, 9.47615939229626], "source": "grid_extension"},
+            {"fixed_set_coverage_percent": 40, "upgraded_as_count": 235, "point_estimate_pp": 7.809604709708474, "interval95_pp": [5.171666238687946, 10.527960571282156], "fixed_order_min_max_pp": [5.747145337704369, 9.978640999132788], "source": "grid_extension"},
+            {"fixed_set_coverage_percent": 50, "upgraded_as_count": 294, "point_estimate_pp": 7.9949088281970075, "interval95_pp": [5.084712741923002, 10.981411050792452], "fixed_order_min_max_pp": [5.595727070927162, 10.124274142452789], "source": "frozen_phase7"},
+            {"fixed_set_coverage_percent": 60, "upgraded_as_count": 353, "point_estimate_pp": 8.517761574167224, "interval95_pp": [5.364454218727885, 11.792573726335608], "fixed_order_min_max_pp": [6.099053258987707, 10.301942161138465], "source": "grid_extension"},
+            {"fixed_set_coverage_percent": 70, "upgraded_as_count": 412, "point_estimate_pp": 9.093835093478758, "interval95_pp": [5.587648200520343, 12.764602550314565], "fixed_order_min_max_pp": [6.7503884750286804, 10.557839805400175], "source": "grid_extension"},
+            {"fixed_set_coverage_percent": 80, "upgraded_as_count": 471, "point_estimate_pp": 9.20301363805792, "interval95_pp": [5.124905699986873, 13.38291824176012], "fixed_order_min_max_pp": [8.539631891699523, 9.85486263789511], "source": "grid_extension"},
+            {"fixed_set_coverage_percent": 90, "upgraded_as_count": 530, "point_estimate_pp": 8.914646200592827, "interval95_pp": [4.722946075858788, 13.262546572940852], "fixed_order_min_max_pp": [8.386792407867466, 9.434416505451177], "source": "grid_extension"},
+            {"fixed_set_coverage_percent": 100, "upgraded_as_count": 589, "point_estimate_pp": 8.878893523087369, "interval95_pp": [4.461928915447847, 13.424339827015604], "fixed_order_min_max_pp": [8.878893523087369, 8.878893523087369], "source": "frozen_phase7"}
+          ]
+        }
+      },
+      "artifacts": {
+        "formal_manifest": {
+          "path": "phase7_simulation/results/deployment_grid_extension/manifest.json",
+          "file_sha256": "f5a20c7a2592b6cac6231fba4d2635806644432da9c6ee207ae97d470a049999",
+          "internal_manifest_sha256": "cb5947b3574b0b95d5d1c2f7272b7fa392811741c34af7044822e7e419691258"
+        },
+        "formal_checkpoint": {
+          "path": "phase7_simulation/results/deployment_grid_extension/checkpoint.json",
+          "file_sha256": "f1bbc3717592a4b941421d784a5d61e9d0997b44c0b88fa6b256c72e522ace01",
+          "completed_scenarios": 14000,
+          "failed_scenarios": 0,
+          "retries_authorized": false
+        },
+        "formal_raw": {
+          "path": "phase7_simulation/results/deployment_grid_extension/raw_scenarios.jsonl",
+          "file_sha256": "d1ad91a251a06899179e353d0771bca53b2cbd7ffff95dad8dc0d12531878716"
+        },
+        "independent_audit": {
+          "path": "phase7_simulation/results/deployment_grid_extension/independent_audit.json",
+          "file_sha256": "c5201a212681c150e9574e0c5885eabb607ff990647ab475787c0f0bcd185713",
+          "canonical_core_sha256": "45f982e5a596d9f62894640d86d35abfd6bf9c28a9fe840903b61476d88d84bd",
+          "passed": true
+        },
+        "analysis_manifest": {
+          "path": "phase7_simulation/results/deployment_grid_extension/analysis/analysis_manifest.json",
+          "file_sha256": "51e9488e7d3b1e607581128ee5e89f692bab1ddd64b6902919e92ccaf6591a39",
+          "status": "VERIFIED"
+        },
+        "analysis_outputs_sha256": {
+          "cell_summary_csv": "cd9c3c2966e19c43dc991de1980bf4d80a0f75b4656f84b14bb9e5b7e75042fc",
+          "cell_summary_json": "4e1cf522e822c69fc478ed824d1086f9a837c6f1fb4ab0b79d7b4b26cb7bc0b7",
+          "order_level_unit_contrasts_jsonl": "4bd56f2e20ada3fb764bbabefc89f3a4e5a9e93ca8a890e6cb2a09271dbeb981",
+          "unit_contrasts_jsonl": "e2b7807e64892c90b681217724ca603715705635aa21794411b0c4e2c7e41c7e",
+          "order_trajectories_csv": "267c83c962a051ef480f9b6965deb62ec377db54d8b39d2e3418dab923865bbc",
+          "order_trajectories_json": "09aaf1e49c5327d95d22bc49e1f1eee432a660f2f6a3463df468198555d933f7"
+        },
+        "contract_sha256": "e1573e9e9c9196b769087db43fe4d2e801fc9700fd3419887e3753757887829c",
+        "runner_sha256": "8f5d5567427c4db214d77f375807179608d114a03c39cde6eea55b00db6942fb",
+        "auditor_sha256": "0b67e0a4f4c4e0d34c68521542de49602cc23556e591005708d00c1256b4f12a",
+        "analyzer_sha256": "14b0d03b819934b92cd09bb2eaefc217bce8473c087f1af9350c53f5dd2f2e69"
+      },
+      "claim_boundary": "conditional routing outcomes over one opaque fixed topology and one opaque fixed 589-AS scenario set; neither 100% nor any intermediate point describes the Internet, and the two panels remain separate announcement-set comparisons"
+    },
+    "selected_unit_reanalysis": {
+      "version_label": "phase9-selected-unit-reanalysis-v1",
+      "status": "VERIFIED",
+      "purpose": "replace invalid finite-frame interpretations for current manuscript competitor-dependent intervals while preserving frozen propagation outputs and point estimates",
+      "selected_units": 200,
+      "stratum_standardization_population_shares": [161, 177, 179, 174],
+      "bootstrap_replicates": 10000,
+      "finite_population_correction": false,
+      "interval_interpretation": "ordinary stratified paired bootstrap stability over selected units; not a confidence interval for the 691-unit frame",
+      "contract_sha256": "acf565552a21a342b20c3806cf15a582bdca491c72c44dd7f3d2559a79ec3b03",
+      "script_sha256": "40e78d20f6f11b1cacc808df05dff6a18aa90c31be1c3115245975461a1a39fb",
+      "competition_cells_sha256": "176547af20b4b661ddbbdf647fc62233602838eaa086ed20237854f7007a170d",
+      "sibling_cells_sha256": "b4eb30ec1a3ac796410e7e4ded8fb26904c3a25f5dab1eec88fe2f053b73f25f",
+      "summary_sha256": "64448d3464f26202436bec12016bceb266d65d40ebd1118115a3c92f75ba716f",
+      "phase7_max_point_error_vs_frozen": 1.1102230246251565e-16,
+      "phase8_max_point_error_vs_frozen": 0.0,
+      "superseded_fpc_intervals_pp": {
+        "at_1_pct_exposure": [-0.23, 0.21],
+        "at_5_pct_exposure": [0.98, 1.95],
+        "full_exposure": [5.12, 12.76],
+        "full_open_minus_exact": [26.75, 32.53],
+        "edge_exposure": [3.04, 10.2],
+        "high_degree_exposure": [12.96, 18.24],
+        "sibling_route": [43.23, 49.69],
+        "sibling_destination": [25.96, 34.62]
+      }
+    },
+    "sibling_sensitivity": {
+      "version_label": "phase8-sibling-endpoint-v1",
+      "status": "VERIFIED",
+      "design": "200 candidate-bearing root-origin sample units x conventional/open-0/open-100 endpoint cells; one deterministic same-length sibling and the frozen uniform competitor per unit",
+      "sample_unit": "candidate-bearing root-origin ASN (historical artifact field holder_asn), not a verified resource holder",
+      "scenario_set": "opaque fixed 589-AS scenario set reused unchanged from Phase 7",
+      "physical_trials_planned": 600,
+      "physical_trials_completed": 600,
+      "failed_trials": 0,
+      "retries": 0,
+      "open0_conventional_exact_equivalence_units": 200,
+      "leaf_invariance_partition_comparisons": 3600,
+      "leaf_invariance_mismatches": 0,
+      "bootstrap_unit": "selected sample unit, paired within four frozen strata",
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 20260823,
+      "reported_interval_source": "phase9-selected-unit-reanalysis-v1",
+      "reported_interval_type": "ordinary stratified paired bootstrap stability interval without finite-population correction",
+      "sibling_route_attacker_reference_pct": 51.74780376267029,
+      "sibling_route_attacker_treatment_pct": 98.20092166411959,
+      "sibling_route_attacker_delta_pp": 46.4531179014493,
+      "sibling_route_attacker_stability_interval95_pp": [42.664574917324466, 50.24950641210185],
+      "sibling_destination_attacker_reference_pct": 67.98056225881107,
+      "sibling_destination_attacker_treatment_pct": 98.23789424077957,
+      "sibling_destination_attacker_delta_pp": 30.257331981968494,
+      "sibling_destination_attacker_stability_interval95_pp": [25.21275965737455, 35.377615553833835],
+      "manifest_canonical_sha256": "af0041cf390d22266a65033ada7ad97fc93a713b61cb0575d9e82d67acae7d26",
+      "manifest_file_sha256": "9e6cd9431e9bc460d71efd852c155a7990e9248852133be71e939559448b48f4",
+      "raw_file_sha256": "52b112e380124d25aee1cc8d30e0a175af24acb0b3ab9ed3d2674fac68a035ba",
+      "raw_scientific_sha256": "5ff15da60061d899b45bc09dcb14aeea0e793cab36682902338b52e2384c4cd5",
+      "summary_sha256": "610cd1cb7c82e73b4c7f9c4aa0cbbab39237fbd32c5b132d02c19fd8fd652801",
+      "reproduction_audit_canonical_sha256": "b652c7fde64e62c21e3361abf36add98c65ceaaf88ab90999edfab42da61484f",
+      "spark_to_paper_ledger_canonical_sha256": "351b643fde0e1e848bc84f276bb8c686c0ff4bb30ad440ad32e4979fb6a5baeb",
+      "spark_to_paper_ledger_file_sha256": "5446d1323127fdbcbfeda6d80078024e326223d289f18ac12f377d7e2d4226c5",
+      "claim_boundary": "conditional AS-level endpoint exposure only; no traffic, sibling utilization, delegation legitimacy, attack prevalence, or topology/scenario-set generalization",
+      "manuscript_formatted_values": {
+        "sibling_route_attacker_delta_pp": "46.45",
+        "sibling_route_attacker_stability_interval95_pp": ["42.66", "50.25"],
+        "sibling_destination_attacker_delta_pp": "30.26",
+        "sibling_destination_attacker_stability_interval95_pp": ["25.21", "35.38"]
+      }
+    },
+    "versions": {
+      "krill_version": "0.14.4",
+      "routinator_version": "0.13.2",
+      "frr_version": "10.6.1",
+      "bgpy_version": "13.0.10",
+      "docker_version": "29.1.3",
+      "linux_kernel": "6.8.0-90-generic",
+      "host_hardware_archived": true,
+      "host_architecture": "aarch64",
+      "host_cpu": "32-core Kunpeng-920",
+      "host_ram_gib": 62.7
+    },
+    "accepted_run_archives": {
+      "partial_policy_placement_replay": "partial-policy-placement-v8",
+      "steady_state_and_recovery": "run-20260823T024129Z",
+      "matched_unknown_origin_handoff": "handoff-benefit-20260828T143741Z",
+      "matched_unknown_origin_handoff_ipv6": "handoff-benefit-ipv6-20260829T002536Z",
+      "processing_replay_controlled_dual_stack": "controlled-processing-20260830T-marker-final-v1",
+      "same_size_policy_update": "policy-update-20260830T-marker-final-v1",
+      "processing_replay_controlled_dual_stack_historical": "controlled-processing-20260829T1152Z",
+      "processing_replay_ipv4_historical": "processing-ipv4-dualstack-20260828",
+      "processing_replay_ipv6_historical": "processing-ipv6-dualstack-20260829",
+      "ipv6_routing_sensitivity": "ipv6_sensitivity",
+      "origin_churn_pilot_only": "controls-20260823T022857Z",
+      "origin_churn_initial_unbalanced": "controls-20260823T014138Z",
+      "origin_churn_historical_two_arm": "churn-20260804T030715Z",
+      "policy_input_sensitivity_historical_ipv4_matched": "policy-scale-ipv4-20260830T081349Z",
+      "policy_input_sensitivity_historical_ipv6_matched": "policy-scale-ipv6-20260830T081712Z",
+      "policy_input_sensitivity_historical_ipv4": "scale-20260823T025539Z",
+      "staged_deployment": "staged-20260823T024131Z"
+    }
+  }
+}

@@ -1,0 +1,4 @@
+Krill 0.14.4
+Routinator 0.13.2
+bgpd version 10.6.1_git
+[churn] experiment failed; partial evidence retained in /home/cnic/stripe-roa-v3/phase6_system/e2e/outputs/churn-20260804T030402Z

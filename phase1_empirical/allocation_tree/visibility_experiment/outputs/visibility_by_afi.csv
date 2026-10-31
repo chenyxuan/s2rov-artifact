@@ -1,0 +1,4 @@
+family,matched_endpoints,direct_paths,registry_indirect_paths,org_confirmed_abc_paths,exact_routed_registry_indirect_paths,potential_conflicts,potential_conflict_rate_pct,org_confirmed_abc_conflicts,potential_conflict_root_prefixes
+IPv4,3417197,3365826,51371,3353,622,504,81.028939,82,83
+IPv6,844614,722434,122180,2143,140,83,59.285714,0,14
+Total,4261811,4088260,173551,5496,762,587,77.034121,82,97

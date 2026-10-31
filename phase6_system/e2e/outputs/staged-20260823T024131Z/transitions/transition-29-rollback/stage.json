@@ -1,0 +1,7 @@
+{
+  "label": "transition-29-rollback",
+  "publication": "dual",
+  "pattern": "LLL",
+  "cases_file": "/home/cnic/stripe-roa-v3/phase6_system/e2e/config/staged/cases.json",
+  "elapsed_ms": 2625
+}

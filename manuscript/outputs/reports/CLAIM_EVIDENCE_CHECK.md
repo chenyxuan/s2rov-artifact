@@ -1,0 +1,27 @@
+# Claim-Evidence Check
+
+> Superseded for active Figure 2 on 2026-08-30. The entries below audit the
+> retired family-specific, fixed-$s=10\%$ view; the pooled v2 evidence is
+> recorded in `figures/FIG_PARTIAL_POLICY_REPLAY_PROVENANCE.md`.
+
+Date: 2026-08-29
+
+| Claim | Location | Label | Evidence | Action | Notes |
+|---|---|---|---|---|---|
+| Layered RIPE allocation paths and route-side origin divergence coexist in the retained observations. | Sec. II-B, Table I | Supported | `phase1_empirical/allocation_tree/visibility_experiment/outputs_depth/visibility_depth_by_afi.csv`; independent candidate and depth audits | keep | The 587 candidates are structural observations, not proven visibility failures or legitimacy judgments. |
+| With the root-scope target fixed at 10%, OpenScope can reduce the candidates left by partial exact-endpoint deployment, and the reduction depends strongly on root placement. | Fig. 2, Sec. V-A | Supported within the frozen candidate frame | `MSN-2026-0830/figures/fig_partial_policy_replay.manifest.json`; `FIG_PARTIAL_POLICY_REPLAY_PROVENANCE.md` | keep | At the 50% exact target, the IPv4 exact-only/random/fanout-first/fanout-last residuals are 252/233/129/248; IPv6 residuals are 42/41/25/41. The random 5th--95th ranges are [201.9, 244.0] and [27.0, 42.0]. The 10% target selects 8/83 and 1/14 roots. These are rollout percentiles over a counterfactual candidate frame, not confidence intervals or actual ROV-conflict prevalence. |
+| The single-object classifier follows the specified four-state semantics on the tested corpus. | Secs. III-IV, evaluation gate | Supported | `MSN-2026-0830/experiment_redesign/execution/e1a-v3-reaudit-production-20260828`; reproduction run; exact comparison report | keep | 106,218 legal vectors and 100,000 malformed trials; nine deterministic outputs reproduced exactly. |
+| Preinstalled scope removes the handoff-time exact-ROA update in the tested workflow. | Sec. V-B | Supported | Accepted handoff run, `events.jsonl`, `trials.csv`, independent audit | keep | Reactive exact used one signed transaction and two ROA-entry changes per handoff; preinstalled scope used neither. |
+| Preinstalled scope reduces mean observation-to-probe time by 1.4 s relative to reactive exact publication. | Sec. V-B | Supported | `MSN-2026-0830/figures/source_data/handoff_endpoint_rounds_recomputed.csv`; `MSN-2026-0830/figures/HANDOFF_FIG2_REANALYSIS_PROVENANCE.md` | keep | Ten-round paired contrast; 95% cluster-bootstrap interval [1.3, 1.4] s in both IP-version lanes. |
+| With one fixed base plus 0, 64, or 256 subprefix entries, policy loading rises from 0.3 to 17.8 ms for IPv4 and from 0.4 to 29.2 ms for IPv6. | Table II, Sec. V-B | Supported | Controlled run `controlled-processing-20260829T1152Z`, `summary.json`, independent audit | keep | Load covers in-memory decoding, validation, canonicalization, and index construction. |
+| Under fixed queries and fixed OpenScope results, classification remains between 27.5 and 28.4 thousand pairs/s for IPv4 and between 18.5 and 19.1 thousand pairs/s for IPv6. | Table II, Sec. V-B | Supported | Same controlled replay; 150 raw workers; fixed query, result, and state hashes | keep | Single Kunpeng 920 core, Python 3.12.3; not full relying-party or router throughput, and not a causal cross-version comparison. |
+| Larger noncovering policy input did not break the tested live path. | Sec. V-B | Supported | `phase6_system/e2e/outputs/scale-20260823T025539Z/policy-scale-samples.csv`; report and summary | keep | 80 transitions and 560 route outcomes passed; cell medians were 3.2--3.9 s. |
+| At full deployment within the fixed 589-AS ROV set, intended delivery gains 17.1 percentage points and reaches the exact-ROA reference in the intended-only lane. | Intro., Fig. 3(a), Sec. V-C, Conclusion | Supported | `MSN-2026-0830/figures/source_data/fig_deployment_outcomes.csv`; `MSN-2026-0830/figures/FIG_DEPLOYMENT_OUTCOMES_PROVENANCE.md` | keep | 95% finite-frame interval [13.3, 21.0] percentage points; equality is lane-specific. |
+| In the separate competition lane, delivery to an eligible unlisted origin gains 8.9 percentage points. | Fig. 3(b), Sec. V-C, Conclusion | Supported | Same Fig. 3 source; `phase9_selected_unit_reanalysis/results/competition_cells.csv` | keep | 95% selected-unit stability interval [4.5, 13.4] percentage points; not an Internet estimate. |
+| OpenScope records prefix-scope evidence but does not identify the intended origin. | Secs. III, V-C, VI | Supported | Classifier definition, semantic gate, and separate competition lane | keep | This is the security boundary, not a claim that every unlisted origin is legitimate. |
+| Preinstalled scope is statistically equivalent to prepublished exact ROAs. | Not claimed | Unsupported as an equivalence claim | No preregistered equivalence margin | exclude | The 5-ms mean difference is descriptive only. |
+| Fig. 3 is a same-scenario benefit-exposure frontier or an Internet-wide deployment estimate. | Not claimed | Unsupported | Panels use different announcement sets and inference targets | exclude | The manuscript explicitly separates the two lanes. |
+| Table II measures complete relying-party, FRR, router, or line-rate throughput. | Not claimed | Unsupported | The controlled benchmark times one in-process Python reference implementation | exclude | Keep as an explicit boundary. |
+
+All supported empirical claims have a concrete artifact. No retained claim
+requires weakening after the final evidence check.

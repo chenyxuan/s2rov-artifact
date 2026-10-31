@@ -1,0 +1,112 @@
+{
+  "auditor": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/audit_controlled_policy_benchmark.py",
+  "auditor_sha256": "b5ca64ae5fe74481c5774600a96a241fbd718b09eb4926bedb4eef4a856014dd",
+  "checks": {
+    "all_checks_pass": true,
+    "all_results_open_scope": true,
+    "all_roundtrips_identical": true,
+    "all_summary_cells_recomputed": true,
+    "cpu_affinity_match": true,
+    "exact_cell_matrix": true,
+    "fixed_results_by_family": {
+      "4": {
+        "one_query_content": true,
+        "one_query_file": true,
+        "one_result_checksum": true,
+        "one_state_vector": true
+      },
+      "6": {
+        "one_query_content": true,
+        "one_query_file": true,
+        "one_result_checksum": true,
+        "one_state_vector": true
+      }
+    },
+    "input_hashes_match": true,
+    "no_missing_raw_records": true,
+    "policy_hashes_match": true,
+    "query_hashes_match": true,
+    "repetition_counts_match": true,
+    "runner_hash_matches_config": true,
+    "schedule_identity_match": true
+  },
+  "missing_raw_records": [],
+  "recomputed_rows": [
+    {
+      "batch_ms_p50": 0.6431074999999999,
+      "batch_ms_p95": 0.67214555,
+      "batch_ms_p99": 0.6747267100000001,
+      "classify_kpairs_s_max": 24.8791998227357,
+      "classify_kpairs_s_median": 24.8791998227357,
+      "classify_kpairs_s_min": 24.8791998227357,
+      "ip_version": 4,
+      "load_ms_median": 0.315521,
+      "load_ms_q1": 0.315521,
+      "load_ms_q3": 0.315521,
+      "subprefix_entries": 0
+    },
+    {
+      "batch_ms_p50": 0.675967,
+      "batch_ms_p95": 0.7155805,
+      "batch_ms_p99": 0.7191017000000001,
+      "classify_kpairs_s_max": 23.669794531389844,
+      "classify_kpairs_s_median": 23.669794531389844,
+      "classify_kpairs_s_min": 23.669794531389844,
+      "ip_version": 4,
+      "load_ms_median": 0.543172,
+      "load_ms_q1": 0.543172,
+      "load_ms_q3": 0.543172,
+      "subprefix_entries": 2
+    },
+    {
+      "batch_ms_p50": 0.9693435,
+      "batch_ms_p95": 1.01817705,
+      "batch_ms_p99": 1.02251781,
+      "classify_kpairs_s_max": 16.506016700994024,
+      "classify_kpairs_s_median": 16.506016700994024,
+      "classify_kpairs_s_min": 16.506016700994024,
+      "ip_version": 6,
+      "load_ms_median": 0.450802,
+      "load_ms_q1": 0.450802,
+      "load_ms_q3": 0.450802,
+      "subprefix_entries": 0
+    },
+    {
+      "batch_ms_p50": 0.9586035,
+      "batch_ms_p95": 1.0126039500000001,
+      "batch_ms_p99": 1.01740399,
+      "classify_kpairs_s_max": 16.690946778308238,
+      "classify_kpairs_s_median": 16.690946778308238,
+      "classify_kpairs_s_min": 16.690946778308238,
+      "ip_version": 6,
+      "load_ms_median": 0.780773,
+      "load_ms_q1": 0.780773,
+      "load_ms_q3": 0.780773,
+      "subprefix_entries": 2
+    }
+  ],
+  "run_dir": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1",
+  "schema_version": "controlled-policy-processing-independent-audit-v1",
+  "summary_cell_checks": [
+    {
+      "ip_version": 4,
+      "matches": true,
+      "subprefix_entries": 0
+    },
+    {
+      "ip_version": 4,
+      "matches": true,
+      "subprefix_entries": 2
+    },
+    {
+      "ip_version": 6,
+      "matches": true,
+      "subprefix_entries": 0
+    },
+    {
+      "ip_version": 6,
+      "matches": true,
+      "subprefix_entries": 2
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+\section{Prototype Implementation}
+\label{sec:implementation}
+
+The prototype implements the policy path in three stages: policy representation, validation and classification, and route enforcement.
+
+\subsection{Policy Representation}
+\label{sec:impl-representation}
+
+The reference engine serializes $D$ canonically for IPv4 and IPv6 replay. Address format tags distinguish the original 14-byte IPv4 header from the IPv6 header, which adds a full 16-byte base address, and remain separate from the profile version bound by the envelope and snapshot. A single flag marks a prefix as a marker: marked records populate $\mathcal{R}$, and unmarked records carry ordinary origin information. Canonical prefixes and sorted origin sets make the encoding independent of input order. Before activation, the parser rejects unsupported versions, mixed address families, noncanonical prefixes, overlapping markers, duplicate keys, invalid ASNs, inconsistent lengths, and trailing bytes. A legacy projection removes the markers and emits the ordinary entries unchanged, so routes matched by those entries remain \explicit{}.
+
+\subsection{Validation and Classification}
+\label{sec:impl-engine}
+
+The signed path uses Krill~0.14.4~\cite{krill}, RRDP~\cite{rfc8182}, and Routinator~0.13.2~\cite{routinator}. Experimental Krill adds an \texttt{inclusive} prefix attribute to a fixture derived from a ROA and protected by CMS. Modified Routinator verifies the certification chain and CRL~\cite{rfc6487}, manifest~\cite{rfc9286}, and signed object~\cite{rfc6488}, then exposes validated ordinary and experimental entries through its local JSON API. The engine receives one validated policy with the ordinary entries of the same view, checks covering ordinary entries for an origin and length match, and tests only an otherwise \invalid{} route against the unique applicable marker. One ancestor walk answers that second step, bounded at 33 probes for IPv4 and 129 for IPv6, and the engine returns the state, supporting evidence, and profile version.
+
+\subsection{Route Enforcement}
+\label{sec:impl-enforcement}
+
+A Routinator build compatible with legacy clients omits experimental entries from its RFC~8210 RTR output~\cite{rfc8210}, so FRR~10.6.1~\cite{frr} receives only ordinary entries. The compiler reads each neighbor's Adj-RIB-In, extracts the terminal origin, evaluates each prefix, origin, and peer tuple against the selected policy, and rebuilds one inbound route map per neighbor. Clauses match prefix and origin, and a final clause denies the remainder. Recompilation removes stale maps and match objects before attaching the replacement. The action map assigns \explicit{} LP~300, \openscope{} LP~200, \invalid{} rejection, and \notfound{} LP~100 with audit communities. After installation through \texttt{vtysh}, a soft inbound reevaluation applies the replacement to received routes, and the harness checks route presence, rejection, and local preference in the resulting Loc-RIB.

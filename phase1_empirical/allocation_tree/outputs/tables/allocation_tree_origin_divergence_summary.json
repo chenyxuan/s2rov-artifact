@@ -1,0 +1,54 @@
+{
+  "method": {
+    "root_and_leaf": "exact canonical IPv4 CIDRs",
+    "bgp_match": "exact prefix match in RouteViews RIB",
+    "candidate_rule": "non-empty, disjoint complete origin sets",
+    "interpretation": "counterfactual candidate only; no inference of delegation, authorization, current ROA state, or legitimacy"
+  },
+  "counts": {
+    "matched_pairs_raw": 3950990,
+    "matched_pairs_without_zero_root": 3929262,
+    "excluded_non_cidr_pair": 487833,
+    "exact_cidr_pairs": 3441429,
+    "exact_routes_at_both_endpoints": 24663,
+    "overlapping_origin_sets": 15833,
+    "no_exact_leaf_route": 3354021,
+    "no_exact_root_route": 678882,
+    "disjoint_origin_candidates": 8830,
+    "excluded_zero_root": 21728
+  },
+  "candidate_root_prefixes": 1647,
+  "candidate_leaf_prefixes": 8830,
+  "candidate_root_origin_asns": 731,
+  "candidate_leaf_origin_asns": 2719,
+  "candidate_root_statuses": {
+    "ALLOCATED PA": 8830
+  },
+  "candidate_leaf_statuses": {
+    "ASSIGNED PA": 7113,
+    "LIR-PARTITIONED PA": 86,
+    "SUB-ALLOCATED PA": 1631
+  },
+  "candidate_leaves_per_root": {
+    "mean": 5.361262902246509,
+    "median": 2,
+    "p90_nearest_rank": 11,
+    "p95_nearest_rank": 19,
+    "maximum": 207,
+    "single_leaf_roots": 742
+  },
+  "inputs": {
+    "allocation_pairs": {
+      "path": "/home/cnic/stripe-roa-v3/phase1_empirical/allocation_tree/outputs/tables/allocation_tree_pairs.csv",
+      "sha256": "4125be93823ef9b179be57fffda8075218e8443c34be823a2b3643c5fe1bf02a"
+    },
+    "bgp_origins": {
+      "path": "/home/cnic/stripe-roa-v3/phase1_empirical/allocation_tree/outputs/tables/bgp_origins.csv",
+      "sha256": "854deee33792067f3dab5ca7d3636d0af04be0b16206ead7443bf1c22c67d7dc"
+    }
+  },
+  "output": {
+    "path": "/home/cnic/stripe-roa-v3/phase1_empirical/allocation_tree/outputs/tables/allocation_tree_origin_divergence.csv",
+    "sha256": "b046e31aec24b3c9e48e99f17185be211f0229a898ee00c28e72d10097079b27"
+  }
+}

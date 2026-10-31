@@ -1,0 +1,161 @@
+{
+   "version": "routinator/0.13.2",
+   "serial": 1,
+   "now": "2026-07-29T02:37:23.942841477+00:00",
+   "lastUpdateStart": "2026-07-29T02:37:23.685401822+00:00",
+   "lastUpdateDone": "2026-07-29T02:37:23.693002443+00:00",
+   "lastUpdateDuration": 0.008,
+   "payload": {
+      "routeOriginsIPv4": {
+         "total": 1,
+         "unsafe": 0,
+         "locallyFiltered": 0,
+         "duplicate": 0,
+         "final": 1
+      },
+      "routeOriginsIPv6": {
+         "total": 0,
+         "unsafe": 0,
+         "locallyFiltered": 0,
+         "duplicate": 0,
+         "final": 0
+      },
+      "routerKeys": {
+         "total": 0,
+         "locallyFiltered": 0,
+         "duplicate": 0,
+         "final": 0
+      }
+   },
+   "tals": {
+      "krill": {
+         "vrpsTotal": 1,
+         "vrpsUnsafe": 0,
+         "vrpsLocallyFiltered": 0,
+         "vrpsDuplicate": 0,
+         "vrpsFinal": 1,
+         "payload": {
+            "routeOriginsIPv4": {
+               "total": 1,
+               "unsafe": 0,
+               "locallyFiltered": 0,
+               "duplicate": 0,
+               "final": 1
+            },
+            "routeOriginsIPv6": {
+               "total": 0,
+               "unsafe": 0,
+               "locallyFiltered": 0,
+               "duplicate": 0,
+               "final": 0
+            },
+            "routerKeys": {
+               "total": 0,
+               "locallyFiltered": 0,
+               "duplicate": 0,
+               "final": 0
+            }
+         },
+         "validPublicationPoints": 2,
+         "rejectedPublicationPoints": 0,
+         "validManifests": 2,
+         "invalidManifests": 0,
+         "prematureManifests": 0,
+         "staleManifests": 0,
+         "missingManifests": 0,
+         "validCRLs": 2,
+         "invalidCRLs": 0,
+         "staleCRLs": 0,
+         "strayCRLs": 0,
+         "validCACerts": 1,
+         "validEECerts": 0,
+         "validRouterCerts": 0,
+         "invalidCerts": 0,
+         "validROAs": 1,
+         "invalidROAs": 0,
+         "validGBRs": 0,
+         "invalidGBRs": 0,
+         "otherObjects": 0
+      }
+   },
+   "repositories": {
+      "https://krill/rrdp/notification.xml": {
+         "type": "RRDP",
+         "vrpsTotal": 1,
+         "vrpsUnsafe": 0,
+         "vrpsLocallyFiltered": 0,
+         "vrpsDuplicate": 0,
+         "vrpsFinal": 1,
+         "payload": {
+            "routeOriginsIPv4": {
+               "total": 1,
+               "unsafe": 0,
+               "locallyFiltered": 0,
+               "duplicate": 0,
+               "final": 1
+            },
+            "routeOriginsIPv6": {
+               "total": 0,
+               "unsafe": 0,
+               "locallyFiltered": 0,
+               "duplicate": 0,
+               "final": 0
+            },
+            "routerKeys": {
+               "total": 0,
+               "locallyFiltered": 0,
+               "duplicate": 0,
+               "final": 0
+            }
+         },
+         "validPublicationPoints": 2,
+         "rejectedPublicationPoints": 0,
+         "validManifests": 2,
+         "invalidManifests": 0,
+         "prematureManifests": 0,
+         "staleManifests": 0,
+         "missingManifests": 0,
+         "validCRLs": 2,
+         "invalidCRLs": 0,
+         "staleCRLs": 0,
+         "strayCRLs": 0,
+         "validCACerts": 1,
+         "validEECerts": 0,
+         "validRouterCerts": 0,
+         "invalidCerts": 0,
+         "validROAs": 1,
+         "invalidROAs": 0,
+         "validGBRs": 0,
+         "invalidGBRs": 0,
+         "otherObjects": 0
+      }
+   },
+   "vrpsAddedLocally": 0,
+   "rsync": {
+
+   },
+   "rrdp": {
+      "https://krill/rrdp/notification.xml": {
+         "status": 200,
+         "notifyStatus": 200,
+         "payloadStatus": 0,
+         "duration": 0.002,
+         "serial": 4,
+         "session": "45b6df2d-e371-468f-8ea3-4f1fa7e6f88a",
+         "delta": true,
+         "snapshot_reason": null
+      }
+   },
+   "rtr": {
+      "currentConnections": 1,
+      "bytesRead": 164,
+      "bytesWritten": 480
+   },
+   "http": {
+      "totalConnections": 9,
+      "currentConnections": 1,
+      "requests": 9,
+      "bytesRead": 749,
+      "bytesWritten": 3357
+   }
+}

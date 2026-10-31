@@ -1,0 +1,96 @@
+\documentclass[10pt,conference,letterpaper]{IEEEtran}
+
+\usepackage[T1]{fontenc}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage[caption=false,font=footnotesize]{subfig}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{adjustbox}
+\usepackage{float}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage[unicode,hidelinks]{hyperref}
+\usepackage{accsupp}
+
+% Camera-ready revision marks.  Set \showrevfalse before the final upload to
+% print the same text in black.
+\newif\ifshowrev
+\showrevfalse
+\newcommand{\rev}[1]{\ifshowrev\textcolor{red}{#1}\else#1\fi}
+\newcommand{\revstart}{\ifshowrev\color{red}\fi}
+
+% Keep figure captions visually attached to their figures.  This overrides
+% IEEEtran's figure-only caption hook and leaves table-caption spacing intact.
+\makeatletter
+\renewcommand{\@IEEEfigurecaptionsepspace}{\vskip 2pt\relax}
+\makeatother
+
+% Keep the main caption distinct from the final subfigure caption without
+% changing the spacing used by single-panel figures.
+\newcommand{\subfigmaincaptionskip}{\par\addvspace{4pt}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newcommand{\valid}{\textnormal{\textsc{Valid}}}
+\newcommand{\explicit}{\textnormal{\textsc{Explicit}}}
+\newcommand{\openscope}{\mbox{\textnormal{\textsc{OpenScope}}}}
+\newcommand{\invalid}{\textnormal{\textsc{Invalid}}}
+\newcommand{\notfound}{\textnormal{\textsc{NotFound}}}
+\DeclareRobustCommand{\ssrov}{%
+  \texorpdfstring{%
+    \mbox{\BeginAccSupp{method=pdfstringdef,unicode,ActualText={S²-ROV}}%
+    S\textsuperscript{2}-ROV%
+    \EndAccSupp{}}%
+  }{S²-ROV}%
+}
+
+\hypersetup{pdftitle={Protect the Parent, Spare the Child: Protecting Prefixes in RPKI before All Origins Are Known},pdfauthor={Yuxuan Chen, Chenhui Yu, Hui Zou, Ke Rui, Yanbiao Li, Gaogang Xie}}
+
+\begin{document}
+
+\title{Protect the Parent, Spare the Child: Protecting Prefixes in RPKI before All Origins Are Known}
+\author{%
+\IEEEauthorblockN{Yuxuan Chen\IEEEauthorrefmark{1}\IEEEauthorrefmark{2},
+Chenhui Yu\IEEEauthorrefmark{1}\IEEEauthorrefmark{2},
+Hui Zou\IEEEauthorrefmark{1}\IEEEauthorrefmark{2},
+Ke Rui\IEEEauthorrefmark{2}\IEEEauthorrefmark{3},
+Yanbiao Li\IEEEauthorrefmark{1}\IEEEauthorrefmark{2},
+Gaogang Xie\IEEEauthorrefmark{1}\IEEEauthorrefmark{2}}%
+\IEEEauthorblockA{\IEEEauthorrefmark{1}Computer Network Information Center, CAS, Beijing, China}%
+\IEEEauthorblockA{\IEEEauthorrefmark{2}University of Chinese Academy of Sciences, Beijing, China}%
+\IEEEauthorblockA{\IEEEauthorrefmark{3}Institute of Computing Technology, CAS, Beijing, China}%
+\IEEEauthorblockA{Email: \{chenyuxuan, chyu, zouhui, lybmath, xie\}@cnic.cn; rui\_ke21b@ict.ac.cn}%
+}
+\maketitle
+
+\begin{abstract}
+Route Origin Validation (ROV) builds on the Resource Public Key Infrastructure (RPKI) through Route Origin Authorizations (ROAs). When the issuer does not yet know which AS will originate a proper subprefix, an aggregate ROA protects the aggregate but makes the resulting unmatched route \invalid{}. A matching ROA still requires the issuer to know and explicitly list that downstream origin in advance. To address this limitation, we introduce Subprefix-Scope ROV (\ssrov{}). It preserves explicit aggregate authorization while adding a holder-signed policy, limited by prefix and maximum route-prefix length, for future proper-subprefix routes without naming downstream origins. We formalize the design, prove strict expressiveness for this dilemma, and evaluate a prototype. With aggregate and downstream ROA issuance each at 50\%, configuring \ssrov{} policies for 80\% of aggregate prefixes leaves 79.1\% fewer conflicting routes on average than conventional ROV. When all 589 ASes in the fixed upgrade set use \ssrov{}, intended-origin delivery reaches 99.2\%, versus 82.1\% under aggregate-only ROV. Operators keep the aggregate ROA and accept an intended subprefix route before a matching ROA lists its origin.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Routing security, BGP, RPKI, ROV
+\end{IEEEkeywords}
+
+\input{build/introduction.proc}
+\input{build/background.proc}
+\input{build/design.proc}
+\input{build/implementation.proc}
+\input{build/experiments.proc}
+\input{build/related_work.proc}
+\input{build/discussion.proc}
+\input{build/conclusion.proc}
+
+\section*{Acknowledgment}
+
+This work was supported by the National Natural Science Foundation of China
+under Grant No.~62302476.
+
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+
+\end{document}

@@ -1,0 +1,428 @@
+{
+  "address_family": "IPv6",
+  "checks": [
+    {
+      "expected": "Invalid",
+      "origin": 39891,
+      "prefix": "2001:16a2:c292::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 25019,
+      "prefix": "2001:16a3:d03::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 39891,
+      "prefix": "2001:16a2:c3f9::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 11172,
+      "prefix": "2001:1248:3af6::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 42298,
+      "prefix": "2001:1a11:411::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 11172,
+      "prefix": "2001:1248:3aaf::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 11172,
+      "prefix": "2001:1248:c2e8::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 11172,
+      "prefix": "2001:1248:5f6c::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 39891,
+      "prefix": "2001:16a4:80::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 39891,
+      "prefix": "2001:16a2:c19a::/47"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 11172,
+      "prefix": "2001:1248:9fc0::/42"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 3356,
+      "prefix": "2001:13b2:9009::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 25019,
+      "prefix": "2001:16a3:d46::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 25019,
+      "prefix": "2001:16a3:d22::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 39891,
+      "prefix": "2001:16a4:240::/47"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 42298,
+      "prefix": "2001:1a11:3a4::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 39891,
+      "prefix": "2001:16a4:110::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 39790,
+      "prefix": "2001:1568:8000::/33"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 11172,
+      "prefix": "2001:1248:c293::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 39891,
+      "prefix": "2001:16a2:c26c::/47"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 11172,
+      "prefix": "2001:1248:9b3c::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 11172,
+      "prefix": "2001:1248:472b::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 278,
+      "prefix": "2001:1218:60b5::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 25019,
+      "prefix": "2001:16a2:bd46::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 11172,
+      "prefix": "2001:1248:98d0::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 39891,
+      "prefix": "2001:16a2:c0d5::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 22908,
+      "prefix": "2001:1270:3002::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 23352,
+      "prefix": "2001:1838:2007::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 7303,
+      "prefix": "2001:13d2:1800::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 11172,
+      "prefix": "2001:1248:483e::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 273280,
+      "prefix": "2001:1226:1000::/40"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 39891,
+      "prefix": "2001:16a2:c261::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 11172,
+      "prefix": "2001:1248:3178::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 11172,
+      "prefix": "2001:1248:3be7::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 11172,
+      "prefix": "2001:1248:2437::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 11172,
+      "prefix": "2001:1248:9819::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 25019,
+      "prefix": "2001:16a2:4a::/47"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 39891,
+      "prefix": "2001:16a2:c2cc::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 42298,
+      "prefix": "2001:1a11:26::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 39891,
+      "prefix": "2001:16a4:37a::/47"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 11172,
+      "prefix": "2001:1248:3bf8::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 42298,
+      "prefix": "2001:1a11:342::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 11172,
+      "prefix": "2001:1248:a5a8::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 42298,
+      "prefix": "2001:1a11:236::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 11172,
+      "prefix": "2001:1248:318b::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 42298,
+      "prefix": "2001:1a11:157::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 11172,
+      "prefix": "2001:1248:b180::/42"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 11172,
+      "prefix": "2001:1248:c358::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 39891,
+      "prefix": "2001:16a4:285::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 42298,
+      "prefix": "2001:1a11:2e4::/48"
+    },
+    {
+      "expected": "Explicit",
+      "origin": 278,
+      "prefix": "2001:1218:6016::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 39891,
+      "prefix": "2001:16a2:c232::/47"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 11172,
+      "prefix": "2001:1248:a002::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 39891,
+      "prefix": "2001:16a4:2d5::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 39891,
+      "prefix": "2001:16a2:c073::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 28640,
+      "prefix": "2001:1288:4000::/34"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 39891,
+      "prefix": "2001:16a2:c1fc::/47"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 39891,
+      "prefix": "2001:16a2:c162::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 11172,
+      "prefix": "2001:1248:9652::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 11172,
+      "prefix": "2001:1248:3a81::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 25019,
+      "prefix": "2001:16a3:2108::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 39891,
+      "prefix": "2001:16a2:c236::/47"
+    },
+    {
+      "expected": "Explicit",
+      "origin": 278,
+      "prefix": "2001:1218:6022::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 25019,
+      "prefix": "2001:16a3:212b::/48"
+    },
+    {
+      "expected": "Explicit",
+      "origin": 174,
+      "prefix": "100::1/128"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 15169,
+      "prefix": "100::1/128"
+    },
+    {
+      "expected": "Explicit",
+      "origin": 270172,
+      "prefix": "2001:1203:a100::/40"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 15169,
+      "prefix": "2001:1203:a100::/40"
+    },
+    {
+      "expected": "Explicit",
+      "origin": 28461,
+      "prefix": "2001:1204::/32"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 15169,
+      "prefix": "2001:1204::/32"
+    },
+    {
+      "expected": "Explicit",
+      "origin": 28459,
+      "prefix": "2001:1207:ffff::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 15169,
+      "prefix": "2001:1207:ffff::/48"
+    },
+    {
+      "expected": "Explicit",
+      "origin": 278,
+      "prefix": "2001:1218:101::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 15169,
+      "prefix": "2001:1218:101::/48"
+    },
+    {
+      "expected": "Explicit",
+      "origin": 278,
+      "prefix": "2001:1218:6004::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 15169,
+      "prefix": "2001:1218:6004::/48"
+    },
+    {
+      "expected": "Explicit",
+      "origin": 278,
+      "prefix": "2001:1218:600c::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 15169,
+      "prefix": "2001:1218:600c::/48"
+    },
+    {
+      "expected": "Explicit",
+      "origin": 278,
+      "prefix": "2001:1218:6015::/48"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 15169,
+      "prefix": "2001:1218:6015::/48"
+    },
+    {
+      "expected": "Explicit",
+      "origin": 174,
+      "prefix": "::/0"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 15169,
+      "prefix": "::/0"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 15169,
+      "prefix": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff/128"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 64513,
+      "prefix": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff/128"
+    }
+  ],
+  "oracle": "independent linear IPv6 most-specific-rule scan",
+  "policy_size_stripes": 64,
+  "schema_version": 1
+}

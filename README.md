@@ -1,54 +1,58 @@
 # S²-ROV artifact
 
-Companion artifact for the paper *Protect the Parent, Spare the Child:
-Protecting Prefixes in RPKI before All Origins Are Known* (IEEE MSN 2026).
+Companion artifact for *Protect the Parent, Spare the Child: Protecting
+Prefixes in RPKI before All Origins Are Known* (IEEE MSN 2026).
 
-The bundle contains the reference implementation, the experiment and analysis
-scripts, their configurations, aggregate result tables, and the source data
-behind every figure in the manuscript.
+Two things a reader usually wants are separated here:
+
+- **what the paper reports** — `00-reproduce/`, one plainly named file per
+  table, figure, and measured section;
+- **how it was produced** — the experiment pipeline in `phase*/`, kept at its
+  original paths so the scripts still find their inputs.
+
+Start with `REPRODUCE.md`; it walks from reading a number to re-running the
+pipeline that produced it.
 
 ## Layout
 
-| Directory | Contents | Manuscript |
-|---|---|---|
-| `01-implementation/` | DAROA codec, four-state classifier, validator and router glue | Sections III–IV |
-| `02-experiments/` | Per-phase scripts, tests, contracts, configs, and the figure/assembly pipeline | Section V |
-| `03-results/` | Aggregate result tables and analysis summaries | Tables and reported numbers |
-| `04-figure-source-data/` | Per-figure source data and figure manifests | Figures 1–5 |
+| Path | Contents |
+|---|---|
+| `00-reproduce/` | One file per manuscript item, renamed for reading, with the original path recorded |
+| `phase1_empirical/` … `phase10_semantic_gate/` | The experiment pipeline, numbered in run order |
+| `manuscript/` | Paper build: figure and replay scripts, `Makefile`, figure source data |
+| `MANIFEST.json` | Every file with its size and SHA-256 |
+| `EXCLUDED-RAW-DATA.md` | Raw inputs that are regenerated rather than shipped |
 
-`MANIFEST.json` lists every file with its size and SHA-256, and
-`EXCLUDED-RAW-DATA.md` records the raw inputs that are not shipped here.
+Which phase is which: `phase1` observed candidates (Table I), `phase2`–`phase3`
+formal statements, `phase4` the DAROA codec and classifier (Sections III–IV),
+`phase5` cost benchmarks (Fig. 4), `phase6` the Krill/Routinator/FRR prototype,
+`phase7` the routing model (Fig. 5 and the IPv6 sensitivity), `phase8` attack
+reachability (Sec. V-D), `phase9` selected-unit reanalysis, `phase10` semantic
+gate.
 
 ## Requirements
 
-- Python 3.12
+- Python 3.12.
 - `phase7_simulation/requirements-bgpy.txt` for the routing model, installed in
-  its own environment; the other phases need only the standard library plus the
-  packages pinned in their own directories.
-- No network access is required to reuse the shipped result tables.
+  its own environment.
+- No setup at all to read `00-reproduce/`.
 
-## Reproducing the manuscript items
+## Reproducing
 
-| Item | Entry point |
-|---|---|
-| Table I (registry paths, origin divergence) | `02-experiments/phase1_empirical/allocation_tree/visibility_experiment/` |
-| Fig. 2, Fig. 3 (conflicts, prioritization) | `02-experiments/scripts/run_partial_policy_replay.py` |
-| Fig. 4 (classification and update cost) | `02-experiments/phase5_evaluation/processing_benchmark/` |
-| Fig. 5 (reachability, origin exposure) | `02-experiments/phase7_simulation/campaign/` |
-| Attack reachability (Sec. V-D) | `02-experiments/phase8_sibling_sensitivity/` |
-| IPv6 candidate sensitivity | `02-experiments/phase7_simulation/campaign/ipv6_sensitivity.py` |
-| Formal statements and semantics | `02-experiments/phase2_formal/`, `02-experiments/phase3_semantics/` |
+See `REPRODUCE.md` for the three levels: read the numbers, re-run one figure,
+or rebuild from raw inputs. In short:
 
-Each phase directory keeps its own `README.md` and, where the campaign is
-hash-bound, its `EXPERIMENT_CONTRACT.md`.
+```bash
+cd manuscript && make figures && make refresh && make check
+```
 
 ## Verifying the bundle
 
 ```bash
-python3 tools/prepare_artifact.py --check   # from the repository root
+python3 tools/prepare_artifact.py --check    # from the repository root
 ```
 
-The check recomputes SHA-256 for every file listed in `MANIFEST.json`.
+Recomputes SHA-256 for every file listed in `MANIFEST.json`.
 
 ## Notes on paths
 
@@ -59,8 +63,8 @@ otherwise unchanged.
 
 ## License and data terms
 
-This bundle is released under the MIT License; see `LICENSE`. It covers the
-code, scripts, configurations and derived figure source data in this package.
+Code, scripts, configurations and derived figure source data are released under
+the MIT License (`LICENSE`).
 
 Third-party inputs keep their own terms. Registry and routing data come from
 RIPE NCC (RIPE Database, RIS/RRC00) and AS-relationship data from CAIDA; they

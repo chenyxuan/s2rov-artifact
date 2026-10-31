@@ -1,0 +1,13 @@
+{
+ "vrfId": 0,
+ "vrfName": "default",
+ "tableVersion": 121,
+ "routerId": "172.30.0.13",
+ "defaultLocPrf": 100,
+ "localAS": 65003,
+ "routes": { "10.0.0.0/16": [{"rpkiValid":true,"valid":true,"bestpath":true,"selectionReason":"First path received","pathFrom":"external","prefix":"10.0.0.0","prefixLen":16,"network":"10.0.0.0/16","version":10,"locPrf":300,"weight":0,"peerId":"172.30.0.12","path":"65002 65001 64501","origin":"IGP","nexthops":[{"ip":"172.30.0.21","hostname":"t2","afi":"ipv4","used":true}]}]
+,"10.0.1.0/24": [{"rpkiValid":true,"valid":true,"bestpath":true,"selectionReason":"First path received","pathFrom":"external","prefix":"10.0.1.0","prefixLen":24,"network":"10.0.1.0/24","version":11,"locPrf":300,"weight":0,"peerId":"172.30.0.12","path":"65002 65001 8075","origin":"IGP","nexthops":[{"ip":"172.30.0.22","hostname":"t2","afi":"ipv4","used":true}]}]
+,"10.0.2.0/24": [{"rpkiInvalid":true,"valid":true,"bestpath":true,"selectionReason":"First path received","pathFrom":"external","prefix":"10.0.2.0","prefixLen":24,"network":"10.0.2.0/24","version":120,"locPrf":200,"weight":0,"peerId":"172.30.0.12","path":"65002 65001 18403","origin":"IGP","nexthops":[{"ip":"172.30.0.23","hostname":"t2","afi":"ipv4","used":true}]}]
+,"10.0.3.0/24": [{"rpkiInvalid":true,"valid":true,"bestpath":true,"selectionReason":"First path received","pathFrom":"external","prefix":"10.0.3.0","prefixLen":24,"network":"10.0.3.0/24","version":121,"locPrf":200,"weight":0,"peerId":"172.30.0.12","path":"65002 65001 15169","origin":"IGP","nexthops":[{"ip":"172.30.0.24","hostname":"t2","afi":"ipv4","used":true}]}]
+,"192.0.2.0/24": [{"rpkiNotFound":true,"valid":true,"bestpath":true,"selectionReason":"First path received","pathFrom":"external","prefix":"192.0.2.0","prefixLen":24,"network":"192.0.2.0/24","version":6,"locPrf":100,"weight":0,"peerId":"172.30.0.12","path":"65002 65001 64496","origin":"IGP","nexthops":[{"ip":"172.30.0.28","hostname":"t2","afi":"ipv4","used":true}]}]
+ } , "totalRoutes": 5, "totalPaths": 5 } 
