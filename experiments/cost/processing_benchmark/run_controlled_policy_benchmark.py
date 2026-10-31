@@ -32,12 +32,12 @@ from typing import Any, Iterable, Sequence
 SCRIPT = Path(__file__).resolve()
 BENCHMARK_DIR = SCRIPT.parent
 REPO_ROOT = SCRIPT.parents[2]
-DAROA_CODEC_SCRIPTS = REPO_ROOT / "implementation" / "daroa_codec" / "scripts"
-if str(DAROA_CODEC_SCRIPTS) not in sys.path:
-    sys.path.insert(0, str(DAROA_CODEC_SCRIPTS))
+S2ROV_CODEC_SCRIPTS = REPO_ROOT / "implementation" / "s2rov_codec" / "scripts"
+if str(S2ROV_CODEC_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(S2ROV_CODEC_SCRIPTS))
 
-from utils.daroa import (  # noqa: E402
-    DAROA,
+from utils.s2rov import (  # noqa: E402
+    S2ROV,
     Stripe,
     ValidationState,
     is_eligible_delegated_origin,
@@ -326,7 +326,7 @@ def select_fixture(
 
 def build_policy(
     fixture: dict[str, Any], subprefix_count: int
-) -> tuple[DAROA, bytes, dict[str, Any]]:
+) -> tuple[S2ROV, bytes, dict[str, Any]]:
     children = fixture["selected_children"]
     if not 0 <= subprefix_count <= len(children):
         raise ValueError(f"invalid subprefix count: {subprefix_count}")
@@ -341,14 +341,14 @@ def build_policy(
                 False,
             )
         )
-    policy = DAROA(
+    policy = S2ROV(
         base_prefix,
         int(FAMILY_CONFIG[int(fixture["ip_version"])]["max_length"]),
         holder_asn,
         stripes,
     )
     payload = policy.serialize()
-    decoded = DAROA.deserialize(payload)
+    decoded = S2ROV.deserialize(payload)
     if decoded.serialize() != payload:
         raise AssertionError("policy round trip is not byte-identical")
     if len(decoded.stripes) != subprefix_count + 1:
@@ -413,7 +413,7 @@ def worker_load(args: argparse.Namespace) -> int:
     rss_before = current_rss_kib()
     gc.collect()
     started = time.perf_counter_ns()
-    policy = DAROA.deserialize(payload)
+    policy = S2ROV.deserialize(payload)
     load_ns = time.perf_counter_ns() - started
     rss_after = current_rss_kib()
     roundtrip_identical = policy.serialize() == payload
@@ -459,7 +459,7 @@ def worker_load(args: argparse.Namespace) -> int:
 def worker_classify(args: argparse.Namespace) -> int:
     cpu = pin_to_cpu(args.cpu)
     payload = args.policy.read_bytes()
-    policy = DAROA.deserialize(payload)
+    policy = S2ROV.deserialize(payload)
     queries, query_document = read_queries(args.queries)
     if not queries:
         raise ValueError("query set is empty")
@@ -909,8 +909,8 @@ def run_orchestrator(args: argparse.Namespace) -> int:
         "ipv6_workload": str(workload_paths[6]),
         "script": str(SCRIPT),
         "script_sha256": sha256_file(SCRIPT),
-        "classifier": str(DAROA_CODEC_SCRIPTS / "utils" / "daroa.py"),
-        "classifier_sha256": sha256_file(DAROA_CODEC_SCRIPTS / "utils" / "daroa.py"),
+        "classifier": str(S2ROV_CODEC_SCRIPTS / "utils" / "s2rov.py"),
+        "classifier_sha256": sha256_file(S2ROV_CODEC_SCRIPTS / "utils" / "s2rov.py"),
         "source_git_commit": git_commit,
         "source_worktree_dirty": git_dirty,
         "python": sys.version,

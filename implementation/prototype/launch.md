@@ -1,6 +1,6 @@
 # 当前可重复部署入口
 
-完整的 Krill–Routinator–FRR 基线和 DA-aware FRR 执行已经迁移到：
+完整的 Krill–Routinator–FRR 基线和 S2-ROV-aware FRR 执行已经迁移到：
 
 ```bash
 cd implementation/prototype/e2e

@@ -83,7 +83,6 @@
   "material_passport": {
     "origin_date": "2026-08-23",
     "origin_mode": "validate",
-    "origin_skill": "academic-research-suite/experiment-agent",
     "verification_status": "ANALYZED",
     "version_label": "attack_reachability-sibling-endpoint-v1"
   },

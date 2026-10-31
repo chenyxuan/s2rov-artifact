@@ -23,10 +23,10 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[2]
 HERE_DIR = Path(__file__).resolve().parents[1]
-DAROA_CODEC_SCRIPTS = ROOT / "implementation" / "daroa_codec" / "scripts"
-sys.path.insert(0, str(DAROA_CODEC_SCRIPTS))
+S2ROV_CODEC_SCRIPTS = ROOT / "implementation" / "s2rov_codec" / "scripts"
+sys.path.insert(0, str(S2ROV_CODEC_SCRIPTS))
 
-from utils.daroa import DAROA, Stripe, ValidationState
+from utils.s2rov import S2ROV, Stripe, ValidationState
 
 
 TABLE_DIR = HERE_DIR / "outputs" / "tables"
@@ -60,12 +60,12 @@ def load_candidates_dataframe() -> pd.DataFrame:
     raise FileNotFoundError(f"no processed candidate-selection table under {CANDIDATES_TABLE_DIR}")
 
 
-def constructed_policy(route_prefix: str, holder_asn: int, open_base: bool) -> DAROA:
+def constructed_policy(route_prefix: str, holder_asn: int, open_base: bool) -> S2ROV:
     route = ip.IPv4Network(route_prefix, strict=False)
     if route.prefixlen == 0:
         raise ValueError("cannot construct a proper parent for /0")
     parent = route.supernet()
-    return DAROA(
+    return S2ROV(
         str(parent),
         route.prefixlen,
         holder_asn,

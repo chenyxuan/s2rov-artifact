@@ -17,8 +17,8 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Any, Iterable
 
-from daroa_agent import COMMUNITY, LOCAL_PREFERENCE, load_json
-from daroa_policy_dualstack import Policy
+from s2rov_agent import COMMUNITY, LOCAL_PREFERENCE, load_json
+from s2rov_policy_dualstack import Policy
 
 
 def origin_from_path(value: Any) -> int | None:

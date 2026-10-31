@@ -452,7 +452,7 @@
         "actual_sha256": "ce1238badd774eb26f07bc439198fd93693618e53bd5ca4100b7a40c0b07a843",
         "expected_sha256": "ce1238badd774eb26f07bc439198fd93693618e53bd5ca4100b7a40c0b07a843",
         "matches": true,
-        "path": "src/daroa_agent.py"
+        "path": "src/s2rov_agent.py"
       },
       {
         "actual_sha256": "ffd43ff3f7edadb70791c95ed03738aa4a162313e64654c9c1a70ac2c2f0f559",

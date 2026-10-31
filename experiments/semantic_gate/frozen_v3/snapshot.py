@@ -14,7 +14,7 @@ import json
 import re
 from typing import Iterable
 
-from .daroa import DAROA, ValidationState
+from .s2rov import S2ROV, ValidationState
 
 
 SUPPORTED_PROFILE_VERSION = 1
@@ -40,7 +40,7 @@ class PolicyEnvelope:
     not_before: int
     not_after: int
     revoked: bool
-    policy: DAROA
+    policy: S2ROV
 
     def __post_init__(self) -> None:
         if not _IDENTIFIER_RE.fullmatch(self.issuer):
@@ -64,8 +64,8 @@ class PolicyEnvelope:
             raise SnapshotError("not_before must precede not_after")
         if not isinstance(self.revoked, bool):
             raise SnapshotError("revoked must be bool")
-        if not isinstance(self.policy, DAROA):
-            raise SnapshotError("policy must be a DAROA")
+        if not isinstance(self.policy, S2ROV):
+            raise SnapshotError("policy must be a S2ROV")
 
     @property
     def identity(self) -> tuple[str, str]:

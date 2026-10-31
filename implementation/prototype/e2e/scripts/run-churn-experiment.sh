@@ -5,11 +5,11 @@ SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 E2E_DIR=$(cd "${SCRIPT_DIR}/.." && pwd)
 CONFIG_DIR="${E2E_DIR}/config"
 CHURN_CONFIG="${CONFIG_DIR}/churn"
-AGENT="${E2E_DIR}/src/daroa_agent.py"
+AGENT="${E2E_DIR}/src/s2rov_agent.py"
 SUMMARIZER="${E2E_DIR}/src/summarize_churn.py"
 
-NETWORK="daroa-churn"
-VOLUME="daroa-churn-krill-data"
+NETWORK="s2rov-churn"
+VOLUME="s2rov-churn-krill-data"
 BGP_AF=${BGP_AF:-ipv4}
 PREFIX="10.0.10.0/24"
 PREFIX_ADDRESS="10.0.10.0"
@@ -18,7 +18,7 @@ OPEN_POLICY="10.0.0.0/16, 16-24 => 64501 inclusive"
 FRR_IMAGE="quay.io/frrouting/frr:10.6.1"
 CHURN_TRIALS=${CHURN_TRIALS:-30}
 POLL_SECONDS=${CHURN_POLL_SECONDS:-0.05}
-CONTAINER_PREFIX="daroa-churn-"
+CONTAINER_PREFIX="s2rov-churn-"
 KRILL="${CONTAINER_PREFIX}krill"
 ROUTINATOR="${CONTAINER_PREFIX}routinator"
 COLLECTOR="${CONTAINER_PREFIX}collector"
@@ -63,14 +63,14 @@ start_monotonic_clock() {
     if [ -n "${MONOTONIC_CLOCK_PID}" ]; then
         return 0
     fi
-    coproc DAROA_MONOTONIC_CLOCK {
+    coproc S2ROV_MONOTONIC_CLOCK {
         python3 -u -c 'import sys, time
 for _ in sys.stdin:
     print(time.monotonic_ns(), flush=True)'
     }
-    MONOTONIC_CLOCK_OUT=${DAROA_MONOTONIC_CLOCK[0]}
-    MONOTONIC_CLOCK_IN=${DAROA_MONOTONIC_CLOCK[1]}
-    MONOTONIC_CLOCK_PID=${DAROA_MONOTONIC_CLOCK_PID}
+    MONOTONIC_CLOCK_OUT=${S2ROV_MONOTONIC_CLOCK[0]}
+    MONOTONIC_CLOCK_IN=${S2ROV_MONOTONIC_CLOCK[1]}
+    MONOTONIC_CLOCK_PID=${S2ROV_MONOTONIC_CLOCK_PID}
 }
 
 monotonic_ns() {
@@ -244,10 +244,10 @@ start_lab() {
         -e "KRILL_CLI_TOKEN=${token}" \
         -v "${VOLUME}:<home>/data" \
         -v "${CONFIG_DIR}/krill/nginx.conf:/etc/nginx/sites-enabled/testbed:ro" \
-        -v "${CONFIG_DIR}/krill/krill.conf.template:/opt/daroa/krill.conf.template:ro" \
-        -v "${SCRIPT_DIR}/krill-entrypoint.sh:/opt/daroa/krill-entrypoint.sh:ro" \
+        -v "${CONFIG_DIR}/krill/krill.conf.template:/opt/s2rov/krill.conf.template:ro" \
+        -v "${SCRIPT_DIR}/krill-entrypoint.sh:/opt/s2rov/krill-entrypoint.sh:ro" \
         stripe-testbed:latest \
-        bash /opt/daroa/krill-entrypoint.sh >/dev/null
+        bash /opt/s2rov/krill-entrypoint.sh >/dev/null
     wait_krill
 
     docker run -d \
@@ -255,9 +255,9 @@ start_lab() {
         --hostname routinator \
         --network "${NETWORK}" \
         --ip 172.30.50.3 \
-        -v "${SCRIPT_DIR}/routinator-entrypoint.sh:/opt/daroa/routinator-entrypoint.sh:ro" \
+        -v "${SCRIPT_DIR}/routinator-entrypoint.sh:/opt/s2rov/routinator-entrypoint.sh:ro" \
         stripe-routinator:latest \
-        bash /opt/daroa/routinator-entrypoint.sh >/dev/null
+        bash /opt/s2rov/routinator-entrypoint.sh >/dev/null
     wait_routinator
 
     run_frr collector 172.30.50.10 collector.conf

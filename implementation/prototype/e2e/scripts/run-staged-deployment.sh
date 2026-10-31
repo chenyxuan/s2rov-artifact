@@ -9,9 +9,9 @@ CASES="${STAGED_CONFIG}/cases.json"
 POLICY_COMPILER="${E2E_DIR}/src/staged_policy.py"
 SUMMARIZER="${E2E_DIR}/src/summarize_staged.py"
 
-NETWORK="daroa-staged"
-VOLUME="daroa-staged-krill-data"
-PREFIX="daroa-staged-"
+NETWORK="s2rov-staged"
+VOLUME="s2rov-staged-krill-data"
+PREFIX="s2rov-staged-"
 FRR_IMAGE="quay.io/frrouting/frr:10.6.1"
 ROUTINATOR_IMAGE="stripe-routinator-staged:latest"
 TRANSITION_TRIALS=${STAGED_TRANSITION_TRIALS:-30}
@@ -146,10 +146,10 @@ start_lab() {
         -e "KRILL_CLI_TOKEN=${token}" \
         -v "${VOLUME}:<home>/data" \
         -v "${CONFIG_DIR}/krill/nginx.conf:/etc/nginx/sites-enabled/testbed:ro" \
-        -v "${CONFIG_DIR}/krill/krill.conf.template:/opt/daroa/krill.conf.template:ro" \
-        -v "${SCRIPT_DIR}/krill-entrypoint.sh:/opt/daroa/krill-entrypoint.sh:ro" \
+        -v "${CONFIG_DIR}/krill/krill.conf.template:/opt/s2rov/krill.conf.template:ro" \
+        -v "${SCRIPT_DIR}/krill-entrypoint.sh:/opt/s2rov/krill-entrypoint.sh:ro" \
         stripe-testbed:latest \
-        bash /opt/daroa/krill-entrypoint.sh >/dev/null
+        bash /opt/s2rov/krill-entrypoint.sh >/dev/null
     wait_krill
 
     docker run -d \
@@ -157,9 +157,9 @@ start_lab() {
         --hostname routinator \
         --network "${NETWORK}" \
         --ip 172.30.0.3 \
-        -v "${SCRIPT_DIR}/routinator-entrypoint.sh:/opt/daroa/routinator-entrypoint.sh:ro" \
+        -v "${SCRIPT_DIR}/routinator-entrypoint.sh:/opt/s2rov/routinator-entrypoint.sh:ro" \
         "${ROUTINATOR_IMAGE}" \
-        bash /opt/daroa/routinator-entrypoint.sh >/dev/null
+        bash /opt/s2rov/routinator-entrypoint.sh >/dev/null
     wait_routinator
 
     run_frr t1 172.30.0.11 t1.conf

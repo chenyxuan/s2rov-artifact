@@ -1,11 +1,11 @@
-# DAROA encoding processing benchmark
+# S2-ROV encoding processing benchmark
 
 The independent IPv6 companion is documented in
 [`README_IPV6.md`](README_IPV6.md); it does not modify this IPv4 driver or its
 existing outputs.
 
 This directory contains a reproducible, single-core microbenchmark for the
-existing DAROA-encoding Python `DAROA.validate_route` classifier. It uses the local
+existing S2-ROV-encoding Python `S2ROV.validate_route` classifier. It uses the local
 RRC00 prefix-origin CSV as the route workload and deterministic benchmark
 policies with 1, 64, 256, 1,024, and 4,097 total Stripes.
 

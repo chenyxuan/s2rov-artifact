@@ -25,7 +25,7 @@ from bgpy.shared.enums import Relationships
 from bgpy.simulation_engine import Announcement, BGP, ROV, SimulationEngine
 from bgpy.simulation_framework import Scenario, ScenarioConfig
 
-from implementation.daroa_codec.scripts.utils.daroa import DAROA, Stripe
+from implementation.s2rov_codec.scripts.utils.s2rov import S2ROV, Stripe
 
 from .policy import S2ROV
 
@@ -47,10 +47,10 @@ FULL_DA_ASNS = ROV_ASNS
 ANNOUNCEMENT_KEYS = ("aggregate", "delegate", "attacker")
 
 
-def make_open_policy() -> DAROA:
+def make_open_policy() -> S2ROV:
     """Return the pilot's holder-signed open policy."""
 
-    return DAROA(
+    return S2ROV(
         base_prefix=AGGREGATE,
         max_length=24,
         holder_asn=HOLDER_ASN,
@@ -58,10 +58,10 @@ def make_open_policy() -> DAROA:
     )
 
 
-def make_policy_with_exact_overlay() -> DAROA:
+def make_policy_with_exact_overlay() -> S2ROV:
     """Return an open base plus an ordinary exact child ROA."""
 
-    return DAROA(
+    return S2ROV(
         base_prefix=AGGREGATE,
         max_length=24,
         holder_asn=HOLDER_ASN,
@@ -147,18 +147,18 @@ def run_trial(
     include_attacker: bool,
     announcement_order: Sequence[str] | None = None,
     enable_s2rov: bool = True,
-    daroa: DAROA | None = None,
+    s2rov: S2-ROV | None = None,
 ) -> dict[str, object]:
     """Run one deterministic BGPy trial and return its outcome partitions."""
 
     started = perf_counter()
     da_set = frozenset(da_aware_asns)
     if not da_set.issubset(ROV_ASNS):
-        raise ValueError("DA-aware ASes must be a subset of the pilot ROV set")
+        raise ValueError("S2-ROV-aware ASes must be a subset of the pilot ROV set")
     if da_set and not enable_s2rov:
-        raise ValueError("conventional ROV baseline cannot contain DA-aware ASes")
+        raise ValueError("conventional ROV baseline cannot contain S2-ROV-aware ASes")
 
-    policy = daroa or make_open_policy()
+    policy = s2rov or make_open_policy()
     S2ROV.configure(policy)
     graph = build_pilot_graph()
     engine = SimulationEngine(graph)
@@ -368,7 +368,7 @@ def run_pilot() -> dict[str, object]:
             "version": version("bgpy_pkg"),
             "vendor_modified": False,
         },
-        "semantic_oracle": "implementation/daroa_codec/scripts/utils/daroa.py",
+        "semantic_oracle": "implementation/s2rov_codec/scripts/utils/s2rov.py",
         "scenario": {
             "aggregate": AGGREGATE,
             "child": CHILD,

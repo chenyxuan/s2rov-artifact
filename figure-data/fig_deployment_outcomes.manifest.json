@@ -91,7 +91,7 @@
     "x_axis_label": "S\u00b2-ROV upgraded share (%)"
   },
   "generator": {
-    "path": "experiments/analysis-scripts/build_fig_deployment_outcomes.py",
+    "path": "experiments/analysis_scripts/build_fig_deployment_outcomes.py",
     "sha256": "2d3f9e9470751a7a1bc2b9bb98be59aa71604879efc879c50711681cebe29853"
   },
   "input_sha256": {

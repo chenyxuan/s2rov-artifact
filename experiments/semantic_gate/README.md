@@ -8,7 +8,7 @@ diagnostic audit history; V3 is the accepted contract.
 
 V3 models the archived longest-prefix rule profile and is not a conformance
 claim for the current conventional-ROV-first OpenScope profile. Current profile
-version 2 is tested in DAROA-encoding and the later replay suites; it requires a new
+version 2 is tested in S2-ROV-encoding and the later replay suites; it requires a new
 E1a contract before a comparable differential-gate claim can be made.
 
 From the repository root:
@@ -16,7 +16,7 @@ From the repository root:
 ```bash
 python3 -m unittest discover -s experiments/semantic_gate/tests -v
 python3 -m experiments.semantic_gate.run_e1a \
-  --output-dir runs/e1a-v3-production \
+  --output-dir experiments/semantic_gate/runs/e1a-v3-production \
   --seed 20260826 --generated-vectors 100000 \
   --invalid-seed 120260826 --invalid-objects 100000
 ```

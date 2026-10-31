@@ -1,15 +1,5 @@
 # Routing model paper campaign contract
 
-## Material Passport
-
-- **Origin skill:** experiment-agent
-- **Origin modes:** plan + run + validate
-- **Origin date:** 2026-08-04
-- **Version label:** routing_model-paper-campaign-v1
-- **Verification status:** ANALYZED; freeze this contract before production
-  propagation starts.
-- **Simulator:** pinned BGPy 13.0.10; no vendored source modifications.
-
 ## 1. Research question and estimand
 
 The campaign estimates how upgrading the fixed measured set of 589 ROV ASes
@@ -61,7 +51,7 @@ changed after any production outcome is inspected.
 Assign three attacker classes to every selected unit and keep each attacker
 fixed across all matched lanes and deployment cells:
 
-- `uniform`: sampled from all DAROA-encoding-eligible public ASes;
+- `uniform`: sampled from all S2-ROV-encoding-eligible public ASes;
 - `edge`: sampled from eligible ASes with total degree one; and
 - `high_degree`: sampled from the top one percent of eligible ASes by total
   degree, with ASN as the tie breaker.
@@ -80,7 +70,7 @@ target percentages and exact floor-rule counts:
 
 | Target | 0% | 1% | 5% | 10% | 25% | 50% | 75% | 100% |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| DA-aware ASes | 0 | 5 | 29 | 58 | 147 | 294 | 441 | 589 |
+| S2-ROV-aware ASes | 0 | 5 | 29 | 58 | 147 | 294 | 441 | 589 |
 
 Construct seven global nested deployment orders, shared by every sampled
 unit and lane:

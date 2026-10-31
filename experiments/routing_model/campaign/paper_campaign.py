@@ -33,7 +33,7 @@ import bgpy
 from bgpy.as_graphs import ASGraph
 from bgpy.simulation_engine import SimulationEngine
 
-from implementation.daroa_codec.scripts.utils.daroa import is_eligible_delegated_origin
+from implementation.s2rov_codec.scripts.utils.s2rov import is_eligible_delegated_origin
 from experiments.routing_model.campaign.full_graph_gate import (
     A1_OPEN_COMPETITION,
     B1_COMPETITION,

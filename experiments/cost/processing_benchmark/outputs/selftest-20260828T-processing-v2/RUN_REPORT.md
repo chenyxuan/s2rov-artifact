@@ -1,10 +1,10 @@
-# DAROA encoding reference-classifier processing benchmark
+# S2-ROV encoding reference-classifier processing benchmark
 
 Generated: 2026-08-28T15:51:02Z
 
 ## Scope
 
-This run measures the existing Python `DAROA.validate_route` reference classifier on
+This run measures the existing Python `S2ROV.validate_route` reference classifier on
 8,192 IPv4 prefix-origin pairs derived from the local RRC00 CSV.
 It does not measure FRR, RTR transfer, router installation, forwarding, or line rate.
 
@@ -15,7 +15,7 @@ integer conversion. The classifier internally parses textual CIDRs in both modes
 Each policy contains one open `/0` base and the first `size-1` unique non-`/0`
 prefixes in source order as closed exact-origin Stripes. These are deterministic
 benchmark policies, not observed published authorizations. Policy size means total
-Stripe count. Serialized bytes refer only to the experimental DAROA-encoding binary format.
+Stripe count. Serialized bytes refer only to the experimental S2-ROV-encoding binary format.
 
 ## Configuration
 

@@ -35,8 +35,8 @@ from typing import Any, Iterable, Mapping, Sequence
 
 from bgpy.simulation_engine import SimulationEngine
 
-from implementation.daroa_codec.scripts.utils.daroa import (
-    DAROA,
+from implementation.s2rov_codec.scripts.utils.s2rov import (
+    S2ROV,
     Stripe,
     ValidationState,
     is_eligible_delegated_origin,
@@ -49,7 +49,7 @@ from experiments.routing_model.campaign.full_graph_gate import (
     B2_DELEGATE,
     D1_OPEN_DELEGATE,
     PAIR_TABLE_PATH,
-    DAROA_CODEC_ORACLE_PATH,
+    S2ROV_CODEC_ORACLE_PATH,
     POLICY_PATH,
     ROV_JSON_PATH,
     TOPOLOGY_PATH,
@@ -611,8 +611,8 @@ def build_trial_plan(units: Sequence[IPv6Unit]) -> tuple[IPv6Trial, ...]:
     return tuple(trials)
 
 
-def _daroa_codec_ipv6_interface_check() -> dict[str, Any]:
-    policy = DAROA(
+def _s2rov_codec_ipv6_interface_check() -> dict[str, Any]:
+    policy = S2ROV(
         base_prefix="2001:db8::/32",
         max_length=48,
         holder_asn=3257,
@@ -621,13 +621,13 @@ def _daroa_codec_ipv6_interface_check() -> dict[str, Any]:
     state = policy.validate_route("2001:db8:1::/48", 25973)
     if state != ValidationState.DELEGATED:
         raise IPv6CampaignError(
-            f"DAROA-encoding IPv6 interface returned {state}, expected Delegated"
+            f"S2-ROV-encoding IPv6 interface returned {state}, expected Delegated"
         )
     encoded = policy.serialize()
-    if DAROA.deserialize(encoded) != policy:
-        raise IPv6CampaignError("DAROA-encoding IPv6 encoding did not round-trip")
+    if S2ROV.deserialize(encoded) != policy:
+        raise IPv6CampaignError("S2-ROV-encoding IPv6 encoding did not round-trip")
     return {
-        "class": "implementation.daroa_codec.scripts.utils.daroa.DAROA",
+        "class": "implementation.s2rov_codec.scripts.utils.s2rov.S2ROV",
         "ip_version": policy.ip_version,
         "delegated_state": state.value,
         "round_trip": True,
@@ -693,7 +693,7 @@ def build_manifest_document() -> dict[str, Any]:
             "visibility_candidates": file_record(SOURCE_CANDIDATES_PATH),
             "as_relationship_topology": file_record(TOPOLOGY_PATH),
             "rov_asns": file_record(ROV_JSON_PATH),
-            "daroa_codec_oracle": file_record(DAROA_CODEC_ORACLE_PATH),
+            "s2rov_codec_oracle": file_record(S2ROV_CODEC_ORACLE_PATH),
             "frozen_graph_helper": file_record(
                 REPOSITORY_ROOT
                 / "experiments" / "routing_model"
@@ -707,7 +707,7 @@ def build_manifest_document() -> dict[str, Any]:
             "path": relative_path(PAIR_TABLE_PATH),
             "reason": "the IPv6 frame is derived from visibility_candidates.csv",
         },
-        "daroa_codec_ipv6_interface": _daroa_codec_ipv6_interface_check(),
+        "s2rov_codec_ipv6_interface": _s2rov_codec_ipv6_interface_check(),
         "topology": topology_summary,
         "filter_audit": {
             **filter_audit,

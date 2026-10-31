@@ -11,7 +11,7 @@ import statistics
 from pathlib import Path
 from typing import Any
 
-from daroa_agent import extract_frr_records
+from s2rov_agent import extract_frr_records
 from staged_policy import received_records
 
 

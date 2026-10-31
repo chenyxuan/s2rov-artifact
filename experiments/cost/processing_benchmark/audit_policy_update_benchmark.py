@@ -18,11 +18,11 @@ from typing import Any, Sequence
 
 SCRIPT = Path(__file__).resolve()
 REPO_ROOT = SCRIPT.parents[2]
-DAROA_CODEC_SCRIPTS = REPO_ROOT / "implementation" / "daroa_codec" / "scripts"
-if str(DAROA_CODEC_SCRIPTS) not in sys.path:
-    sys.path.insert(0, str(DAROA_CODEC_SCRIPTS))
+S2ROV_CODEC_SCRIPTS = REPO_ROOT / "implementation" / "s2rov_codec" / "scripts"
+if str(S2ROV_CODEC_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(S2ROV_CODEC_SCRIPTS))
 
-from utils.daroa import DAROA, ValidationState  # noqa: E402
+from utils.s2rov import S2ROV, ValidationState  # noqa: E402
 
 
 SCHEMA_VERSION = "same-size-policy-update-v1"
@@ -91,7 +91,7 @@ def expected_schedule(seed: int) -> list[dict[str, Any]]:
     return result
 
 
-def policy_semantic_delta(open_policy: DAROA, closed_policy: DAROA) -> list[dict[str, Any]]:
+def policy_semantic_delta(open_policy: S2ROV, closed_policy: S2ROV) -> list[dict[str, Any]]:
     deltas = []
     for before, after in zip(open_policy.stripes, closed_policy.stripes):
         before_row = (before.prefix, tuple(sorted(before.as_set)), before.is_open)
@@ -205,8 +205,8 @@ def audit(run_dir: Path) -> dict[str, Any]:
 
             open_payload = frozen_open.read_bytes()
             closed_payload = frozen_closed.read_bytes()
-            open_policy = DAROA.deserialize(open_payload)
-            closed_policy = DAROA.deserialize(closed_payload)
+            open_policy = S2ROV.deserialize(open_payload)
+            closed_policy = S2ROV.deserialize(closed_payload)
             roundtrips_ok = (
                 open_policy.serialize() == open_payload
                 and closed_policy.serialize() == closed_payload

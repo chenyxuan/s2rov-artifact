@@ -16,7 +16,7 @@ Krill → RRDP → Routinator → RFC 8210 RTR → FRR RPKI module
                                              ↓
                                     RPKI route maps
 
-DA-aware lane
+S2-ROV-aware lane
 Krill → signed experimental OpenScope ROA → RRDP → Routinator
                                                         ↓ validated JSON API
 validated DA policy + FRR Adj-RIB-In → four-state decisions → FRR route maps
@@ -28,7 +28,7 @@ The baseline ROA is `10.0.0.0/16-24 => AS64501`; therefore each tested `/24`
 is permitted by `maxLength` and remains Invalid only when its origin is not
 named by a matching VRP.
 
-The DA-aware lane is a research profile. The modified Krill build signs an
+The S2-ROV-aware lane is a research profile. The modified Krill build signs an
 `inclusive` prefix field in a CMS-protected ROA object, and the modified
 Routinator validates the certificate chain, manifest, CRL, and object before
 exporting the field in its JSON output. The DA evaluation process interprets
@@ -90,8 +90,8 @@ If the custom images are absent, `make images` rebuilds them from
 `../dockerfiles/stripe-roa-system.zip`. The FRR image is pinned to
 `quay.io/frrouting/frr:10.6.1`.
 
-The experiment creates only resources prefixed with `daroa-e2e-`, plus the
-Docker network `daroa-e2e` and volume `daroa-e2e-krill-data`. A random Krill
+The experiment creates only resources prefixed with `s2rov-e2e-`, plus the
+Docker network `s2rov-e2e` and volume `s2rov-e2e-krill-data`. A random Krill
 token is generated in memory for each run and is not written to the output.
 
 ```bash
@@ -127,7 +127,7 @@ debugging; paper results use the defaults.
 2. baseline FRR accepts/denies the correct paths with the expected preference;
 3. all seven controlled routes are observed before DA policy;
 4. all seven DA states match the four-state model;
-5. DA-aware FRR enforcement and preferences match the decisions;
+5. S2-ROV-aware FRR enforcement and preferences match the decisions;
 6. removing the unmarked exact `/24` changes its listed origin from `Explicit` to
    `Delegated` in the live FRR RIB;
 7. restoring the unmarked exact `/24` changes it back to `Explicit`.
@@ -226,7 +226,7 @@ make churn-controls        # default four-arm campaign, 30 transitions per arm
 # accepted direction-balanced replication (40 per arm):
 CONTROL_TRIALS=40 CONTROL_BLOCK_SIZE=4 CONTROL_RANDOM_SEED=20260823 \
   bash scripts/run-churn-controls.sh
-make churn-status  # inspect the isolated daroa-churn-* stack
+make churn-status  # inspect the isolated s2rov-churn-* stack
 make churn-down    # remove churn containers/network; preserve volume and outputs
 ```
 
@@ -280,7 +280,7 @@ policy compiler, fixtures, and summarizer used by the run.
 
 ```bash
 make staged-smoke   # one rollback and one upgrade for debugging only
-make staged-status  # inspect the isolated daroa-staged-* stack
+make staged-status  # inspect the isolated s2rov-staged-* stack
 make staged-down    # remove staged containers/network; preserve volume and outputs
 make staged-clean   # also remove the dedicated staged Krill volume
 ```
@@ -289,6 +289,6 @@ make staged-clean   # also remove the dedicated staged Krill volume
 
 This prototype provides real signing, repository publication, relying-party
 validation, live BGP input, and FRR enforcement. It does not define a production
-DA-ROA OID/profile, capability-negotiated RTR PDU, or native FRR
+S2-ROV OID/profile, capability-negotiated RTR PDU, or native FRR
 `match da-rov delegated` command. Those require standards work and coordinated
 changes to the CA, relying party, RTR library, and router.

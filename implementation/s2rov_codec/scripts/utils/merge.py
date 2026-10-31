@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from typing import List
 
-from .daroa import Stripe
+from .s2rov import Stripe
 
 
 def merge_stripes(stripes: List[Stripe]) -> List[Stripe]:

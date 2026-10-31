@@ -5,7 +5,7 @@ set -euo pipefail
 
 mkdir -p <home>/data <home>/data/rsync_cer /run/nginx
 sed "s/__ADMIN_TOKEN__/${KRILL_CLI_TOKEN}/" \
-    /opt/daroa/krill.conf.template > <home>/data/krill.conf
+    /opt/s2rov/krill.conf.template > <home>/data/krill.conf
 rm -f <home>/data/krill.pid
 
 if [ ! -s /etc/pki/CA/server.crt ] || [ ! -s /etc/pki/CA/server.key ]; then

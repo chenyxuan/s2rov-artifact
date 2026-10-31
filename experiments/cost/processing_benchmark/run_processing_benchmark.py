@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-"""Reproducible single-core processing benchmark for the DAROA-encoding classifier.
+"""Reproducible single-core processing benchmark for the S2-ROV-encoding classifier.
 
 This benchmark intentionally measures the Python reference classifier.  It is
 not an FRR, RTR, data-plane, or line-rate benchmark.  The two timing scopes are:
 
 * parse_excluded: the CSV has already been loaded as ``(prefix, origin)``
-  tuples; the timer covers ``DAROA.validate_route`` plus state capture.
+  tuples; the timer covers ``S2ROV.validate_route`` plus state capture.
 * parse_included: the timer additionally covers CSV row decoding and integer
   conversion.  ``validate_route`` parses the textual CIDR in both modes because
-  that is the public DAROA-encoding API.
+  that is the public S2-ROV-encoding API.
 
 The orchestrator launches one fresh worker process per condition so peak RSS is
 condition-local rather than a monotonically increasing process-wide value.
@@ -39,10 +39,10 @@ from typing import Any, Iterable, Iterator, Sequence
 
 SCRIPT = Path(__file__).resolve()
 REPO_ROOT = SCRIPT.parents[2]
-DAROA_CODEC_SCRIPTS = REPO_ROOT / "implementation" / "daroa_codec" / "scripts"
-sys.path.insert(0, str(DAROA_CODEC_SCRIPTS))
+S2ROV_CODEC_SCRIPTS = REPO_ROOT / "implementation" / "s2rov_codec" / "scripts"
+sys.path.insert(0, str(S2ROV_CODEC_SCRIPTS))
 
-from utils.daroa import DAROA, Stripe, ValidationState  # noqa: E402
+from utils.s2rov import S2ROV, Stripe, ValidationState  # noqa: E402
 
 
 SCHEMA_VERSION = 1
@@ -324,7 +324,7 @@ def create_policies(
                 }
             )
 
-        policy = DAROA(
+        policy = S2ROV(
             "0.0.0.0/0",
             32,
             holder,
@@ -338,7 +338,7 @@ def create_policies(
             ],
         )
         payload = policy.serialize()
-        roundtrip = DAROA.deserialize(payload)
+        roundtrip = S2ROV.deserialize(payload)
         if roundtrip.serialize() != payload:
             raise AssertionError(f"policy round trip failed for size {size}")
         if len(roundtrip.stripes) != size:
@@ -427,10 +427,10 @@ def create_policies(
 
 def load_policy_and_check(
     policy_path: Path, spots_path: Path
-) -> tuple[DAROA, dict[str, Any]]:
+) -> tuple[S2ROV, dict[str, Any]]:
     payload = policy_path.read_bytes()
     parse_started = time.perf_counter_ns()
-    policy = DAROA.deserialize(payload)
+    policy = S2ROV.deserialize(payload)
     policy_parse_ns = time.perf_counter_ns() - parse_started
     roundtrip_identical = policy.serialize() == payload
     document = json.loads(spots_path.read_text(encoding="utf-8"))
@@ -451,7 +451,7 @@ def load_policy_and_check(
     return policy, check
 
 
-def warm_policy(policy: DAROA, workload: Path, count: int) -> int:
+def warm_policy(policy: S2ROV, workload: Path, count: int) -> int:
     warmed = 0
     for prefix, origin in iter_workload(workload):
         policy.validate_route(prefix, origin)
@@ -462,7 +462,7 @@ def warm_policy(policy: DAROA, workload: Path, count: int) -> int:
 
 
 def capture_batch(
-    policy: DAROA, rows: Iterable[tuple[str, int]]
+    policy: S2ROV, rows: Iterable[tuple[str, int]]
 ) -> tuple[bytearray, Counter[str]]:
     codes = bytearray()
     counts: Counter[str] = Counter()
@@ -474,7 +474,7 @@ def capture_batch(
 
 
 def process_preloaded(
-    policy: DAROA, workload_rows: list[tuple[str, int]], batch_size: int
+    policy: S2ROV, workload_rows: list[tuple[str, int]], batch_size: int
 ) -> tuple[list[dict[str, int]], str, Counter[str]]:
     batches: list[dict[str, int]] = []
     checksum = hashlib.sha256()
@@ -491,7 +491,7 @@ def process_preloaded(
 
 
 def process_streaming(
-    policy: DAROA, workload: Path, batch_size: int
+    policy: S2ROV, workload: Path, batch_size: int
 ) -> tuple[list[dict[str, int]], str, Counter[str]]:
     batches: list[dict[str, int]] = []
     checksum = hashlib.sha256()
@@ -873,13 +873,13 @@ def write_run_report(
 ) -> None:
     config = json.loads((run_dir / "run_config.json").read_text(encoding="utf-8"))
     manifest = json.loads((run_dir / "input_manifest.json").read_text(encoding="utf-8"))
-    report = f"""# DAROA-encoding reference-classifier processing benchmark
+    report = f"""# S2-ROV-encoding reference-classifier processing benchmark
 
 Generated: {utc_now()}
 
 ## Scope
 
-This run measures the existing Python `DAROA.validate_route` reference classifier on
+This run measures the existing Python `S2ROV.validate_route` reference classifier on
 {manifest['ipv4_rows']:,} valid scalar-origin IPv4 prefix-origin pairs derived from
 {manifest['source_ipv4_rows']:,} IPv4 rows in the local RRC00 CSV. Preprocessing
 excluded {manifest['source_ipv4_ambiguous_markers_excluded']:,} rows whose origin is
@@ -894,7 +894,7 @@ Each policy contains one `/0` entry carrying an OpenScope marker and the first
 `size-1` unique non-`/0` prefixes in source order as unmarked exact-origin records.
 These are deterministic benchmark policies, not observed published authorizations.
 Policy size means total record count. Serialized bytes refer only to the
-experimental DAROA-encoding binary format.
+experimental S2-ROV-encoding binary format.
 
 ## Configuration
 
@@ -1025,8 +1025,8 @@ def run_orchestrator(args: argparse.Namespace) -> int:
         "platform": platform.platform(),
         "script": str(SCRIPT),
         "script_sha256": sha256_file(SCRIPT),
-        "classifier": str(DAROA_CODEC_SCRIPTS / "utils" / "daroa.py"),
-        "classifier_sha256": sha256_file(DAROA_CODEC_SCRIPTS / "utils" / "daroa.py"),
+        "classifier": str(S2ROV_CODEC_SCRIPTS / "utils" / "s2rov.py"),
+        "classifier_sha256": sha256_file(S2ROV_CODEC_SCRIPTS / "utils" / "s2rov.py"),
         "source_git_commit": subprocess.run(
             ["git", "rev-parse", "HEAD"],
             cwd=REPO_ROOT,

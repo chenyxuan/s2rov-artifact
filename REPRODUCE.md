@@ -14,7 +14,7 @@ Paths are relative to the bundle root. The paper itself is not bundled.
 | `fig4-processing-cost.json` | Fig. 4, classification throughput and update latency |
 | `fig5-deployment-outcomes.csv` | Fig. 5, reachability and origin exposure |
 | `section5c-ipv6-sensitivity.json` | Sec. V-C, IPv6 candidate sensitivity |
-| `section5d-attack_reachability.json` | Sec. V-D, attack reachability |
+| `section5d-attack-reachability.json` | Sec. V-D, attack reachability |
 
 `results/README.md` names the pipeline file each one came from, and
 `results/numbers.json` is the ledger of every number quoted in the paper.

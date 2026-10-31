@@ -189,10 +189,10 @@ start_lab() {
         -e "KRILL_CLI_TOKEN=${token}" \
         -v "${VOLUME}:<home>/data" \
         -v "${NGINX_CONFIG}:/etc/nginx/sites-enabled/testbed:ro" \
-        -v "${CONFIG_DIR}/krill/krill.conf.template:/opt/daroa/krill.conf.template:ro" \
-        -v "${SCRIPT_DIR}/krill-entrypoint.sh:/opt/daroa/krill-entrypoint.sh:ro" \
+        -v "${CONFIG_DIR}/krill/krill.conf.template:/opt/s2rov/krill.conf.template:ro" \
+        -v "${SCRIPT_DIR}/krill-entrypoint.sh:/opt/s2rov/krill-entrypoint.sh:ro" \
         stripe-testbed:latest \
-        bash /opt/daroa/krill-entrypoint.sh >/dev/null
+        bash /opt/s2rov/krill-entrypoint.sh >/dev/null
     wait_krill
 
     local -a routinator_ipv6_args=()
@@ -205,9 +205,9 @@ start_lab() {
         --network "${NETWORK}" \
         --ip "${ROUTINATOR_IPV4}" \
         "${routinator_ipv6_args[@]}" \
-        -v "${SCRIPT_DIR}/routinator-entrypoint.sh:/opt/daroa/routinator-entrypoint.sh:ro" \
+        -v "${SCRIPT_DIR}/routinator-entrypoint.sh:/opt/s2rov/routinator-entrypoint.sh:ro" \
         stripe-routinator:latest \
-        bash /opt/daroa/routinator-entrypoint.sh >/dev/null
+        bash /opt/s2rov/routinator-entrypoint.sh >/dev/null
     wait_routinator
 
     run_frr collector "${COLLECTOR_IPV4}" collector.conf "${COLLECTOR_IPV6}"
@@ -733,8 +733,8 @@ capture_environment() {
             scripts/run-churn-experiment.sh \
             scripts/krill-entrypoint.sh \
             scripts/routinator-entrypoint.sh \
-            src/daroa_agent.py \
-            src/daroa_policy_dualstack.py \
+            src/s2rov_agent.py \
+            src/s2rov_policy_dualstack.py \
             src/staged_policy.py \
             src/summarize_handoff_benefit.py \
             src/audit_handoff_benefit.py \

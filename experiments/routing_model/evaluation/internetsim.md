@@ -1,17 +1,5 @@
 # InternetSim evaluation for S2-ROV Internet-scale experiments
 
-## Material Passport
-
-- **Origin skill:** `academic-research-suite`, experiment `run` / compatibility audit
-- **Evaluation date:** 2026-08-04
-- **Verification status:** **ANALYZED; build conditionally verified; official example failed**
-- **Evaluated source:** official paper metadata, authors' publication page, official GitHub repository, and the checked-out source
-- **Official repository:** <https://github.com/internetsys/InternetSim>
-- **Pinned commit:** `a96b15716f579658b9d745c8abe1805dd869e375`
-- **Paper:** Jiahong Lai, Jessie Hui Wang, Yunhao Liu, and Jilong Wang, “InternetSim: A Fast and Memory-Efficient Internet-Scale Inter-Domain Routing Simulator,” ACM IMC 2025, pp. 204–212, DOI [10.1145/3730567.3732924](https://doi.org/10.1145/3730567.3732924)
-- **Host:** Ubuntu 24.04.3 LTS, aarch64, CPython 3.12.3, GCC 13.3.0, CMake 3.28.3, 32 logical CPUs, 62 GiB RAM
-- **Upstream code modified:** no tracked file was edited
-
 ## Bottom line
 
 **Do not use InternetSim as the primary routing-model platform. Use BGPy.**

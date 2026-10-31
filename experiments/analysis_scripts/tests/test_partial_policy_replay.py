@@ -281,7 +281,7 @@ class PartialPolicyReplayTests(unittest.TestCase):
         )
 
     def test_exact_record_coexists_with_base_marker(self) -> None:
-        policy = REPLAY.DAROA(
+        policy = REPLAY.S2ROV(
             "10.0.0.0/8",
             24,
             15169,

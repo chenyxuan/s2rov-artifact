@@ -1,7 +1,7 @@
 """S2-ROV policy adapter for the pinned BGPy engine.
 
 The routing engine remains unmodified.  This adapter delegates all DA policy
-semantics to the executable DAROA-encoding oracle and changes only BGPy's inbound
+semantics to the executable S2-ROV-encoding oracle and changes only BGPy's inbound
 route-admission decision.
 """
 
@@ -12,7 +12,7 @@ from typing import ClassVar
 from bgpy.shared.enums import Relationships
 from bgpy.simulation_engine import Announcement, BGP, ROV
 
-from implementation.daroa_codec.scripts.utils.daroa import DAROA, ValidationState
+from implementation.s2rov_codec.scripts.utils.s2rov import S2ROV, ValidationState
 
 
 class S2ROV(ROV):
@@ -20,27 +20,27 @@ class S2ROV(ROV):
 
     ``Explicit`` and ``Delegated`` are admitted, ``Invalid`` is rejected, and
     ``NotFound`` falls back to BGPy's native conventional ROV check.  The
-    configured :class:`DAROA` is immutable during one simulation run.
+    configured :class:`S2ROV` is immutable during one simulation run.
     """
 
     name = "S2-ROV routing-model"
-    _daroa: ClassVar[DAROA | None] = None
+    _s2rov: ClassVar[S2-ROV | None] = None
 
     @classmethod
-    def configure(cls, daroa: DAROA) -> None:
+    def configure(cls, s2rov: S2ROV) -> None:
         """Install the signed-policy semantic oracle for the next run."""
 
-        if not isinstance(daroa, DAROA):
-            raise TypeError(f"expected DAROA, got {type(daroa).__name__}")
-        cls._daroa = daroa
+        if not isinstance(s2rov, S2ROV):
+            raise TypeError(f"expected S2ROV, got {type(s2rov).__name__}")
+        cls._s2rov = s2rov
 
     @classmethod
     def validation_state(cls, prefix: str, origin_asn: int) -> ValidationState:
-        """Return the DAROA-encoding oracle state for a route."""
+        """Return the S2-ROV-encoding oracle state for a route."""
 
-        if cls._daroa is None:
+        if cls._s2rov is None:
             raise RuntimeError("S2ROV.configure() must be called before simulation")
-        return cls._daroa.validate_route(prefix, origin_asn)
+        return cls._s2rov.validate_route(prefix, origin_asn)
 
     def _valid_ann(
         self,

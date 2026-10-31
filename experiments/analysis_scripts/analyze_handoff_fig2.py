@@ -1132,7 +1132,7 @@ figure_table_trace:
       dataset_id: "dual-stack matched unknown-origin handoff"
       file: "figure-data/source_data/handoff_endpoint_rounds_recomputed.csv"
     transformation:
-      script: "experiments/analysis-scripts/analyze_handoff_fig2.py"
+      script: "experiments/analysis_scripts/analyze_handoff_fig2.py"
       hash: "{sha256(SCRIPT)}"
     caption_claim: "Reactive exact adds 1.4 s relative to preinstalled scope in both tested handoff lanes."
     supported_manuscript_claims:

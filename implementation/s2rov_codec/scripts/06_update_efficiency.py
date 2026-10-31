@@ -10,15 +10,15 @@ import time
 
 HERE_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(HERE_DIR / "scripts"))
-from utils.daroa import DAROA, Stripe  # noqa: E402
+from utils.s2rov import S2ROV, Stripe  # noqa: E402
 from utils.merge import merge_stripes  # noqa: E402
 
 TABLE_DIR = HERE_DIR / "outputs/tables"
 TABLE_DIR.mkdir(parents=True, exist_ok=True)
 
 
-def build_daroa(num_customers: int) -> DAROA:
-    """Build a DA-ROA with N explicit customer Stripes."""
+def build_s2rov(num_customers: int) -> S2ROV:
+    """Build a S2-ROV with N explicit customer Stripes."""
     stripes = [
         Stripe("10.0.0.0/16", {64501}, is_open=True),
     ]
@@ -27,7 +27,7 @@ def build_daroa(num_customers: int) -> DAROA:
         stripes.append(Stripe(prefix, {64502 + i}, is_open=False))
 
     merged = merge_stripes(stripes)
-    return DAROA("10.0.0.0/16", 24, 64501, merged)
+    return S2ROV("10.0.0.0/16", 24, 64501, merged)
 
 
 def main():
@@ -35,8 +35,8 @@ def main():
     sizes = [10, 50, 100, 200]
 
     for n in sizes:
-        daroa = build_daroa(n)
-        base_stripes = list(daroa.stripes)
+        s2rov = build_s2rov(n)
+        base_stripes = list(s2rov.stripes)
 
         # ── Add Stripe ──
         # Keep the inserted prefix outside every baseline set (N <= 200).
@@ -59,8 +59,8 @@ def main():
         # ── Full re-encode ──
         t0 = time.perf_counter_ns()
         for _ in range(trials):
-            _ = build_daroa(n)
-            _ = merge_stripes(list(daroa.stripes))
+            _ = build_s2rov(n)
+            _ = merge_stripes(list(s2rov.stripes))
         reencode_ns = (time.perf_counter_ns() - t0) / trials
 
         results.append({

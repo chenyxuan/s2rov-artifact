@@ -35,11 +35,11 @@ from typing import Any, Sequence
 SCRIPT = Path(__file__).resolve()
 BENCHMARK_DIR = SCRIPT.parent
 REPO_ROOT = SCRIPT.parents[2]
-DAROA_CODEC_SCRIPTS = REPO_ROOT / "implementation" / "daroa_codec" / "scripts"
-if str(DAROA_CODEC_SCRIPTS) not in sys.path:
-    sys.path.insert(0, str(DAROA_CODEC_SCRIPTS))
+S2ROV_CODEC_SCRIPTS = REPO_ROOT / "implementation" / "s2rov_codec" / "scripts"
+if str(S2ROV_CODEC_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(S2ROV_CODEC_SCRIPTS))
 
-from utils.daroa import DAROA, Stripe, ValidationState  # noqa: E402
+from utils.s2rov import S2ROV, Stripe, ValidationState  # noqa: E402
 
 
 SCHEMA_VERSION = "same-size-policy-update-v1"
@@ -103,7 +103,7 @@ def pin_to_cpu(cpu: int) -> list[int]:
     return observed
 
 
-def policy_rows(policy: DAROA) -> list[dict[str, Any]]:
+def policy_rows(policy: S2ROV) -> list[dict[str, Any]]:
     return [
         {
             "prefix": stripe.prefix,
@@ -121,7 +121,7 @@ def build_unmarked_counterpart(marked_payload: bytes) -> tuple[bytes, dict[str, 
     it does not create a restrictive region or affect explicit origin records.
     """
     open_payload = marked_payload
-    open_policy = DAROA.deserialize(open_payload)
+    open_policy = S2ROV.deserialize(open_payload)
     if open_policy.serialize() != open_payload:
         raise ValueError("source marked payload is not canonical")
     base_matches = [
@@ -145,14 +145,14 @@ def build_unmarked_counterpart(marked_payload: bytes) -> tuple[bytes, dict[str, 
         )
         for stripe in open_policy.stripes
     )
-    closed_policy = DAROA(
+    closed_policy = S2ROV(
         open_policy.base_prefix,
         open_policy.max_length,
         open_policy.holder_asn,
         closed_stripes,
     )
     closed_payload = closed_policy.serialize()
-    roundtrip = DAROA.deserialize(closed_payload)
+    roundtrip = S2ROV.deserialize(closed_payload)
     if roundtrip.serialize() != closed_payload:
         raise AssertionError("constructed unmarked policy is not canonical")
     if len(open_policy.stripes) != len(closed_policy.stripes):
@@ -292,8 +292,8 @@ def prepare_inputs(run_dir: Path, source_run: Path) -> dict[str, Any]:
             frozen_open.write_bytes(open_payload)
             frozen_closed.write_bytes(closed_payload)
 
-            open_policy = DAROA.deserialize(open_payload)
-            closed_policy = DAROA.deserialize(closed_payload)
+            open_policy = S2ROV.deserialize(open_payload)
+            closed_policy = S2ROV.deserialize(closed_payload)
             open_state = open_policy.validate_route(probe_prefix, probe_origin)
             closed_state = closed_policy.validate_route(probe_prefix, probe_origin)
             if closed_state is not ValidationState.INVALID:
@@ -376,7 +376,7 @@ def worker_update(args: argparse.Namespace) -> int:
     probe_prefix, probe_origin, query_document = read_probe(
         args.queries, args.probe_index
     )
-    closed_policy = DAROA.deserialize(closed_payload)
+    closed_policy = S2ROV.deserialize(closed_payload)
     if len(closed_policy.stripes) != args.rules:
         raise AssertionError("unmarked policy size mismatch")
     if int(query_document["ip_version"]) != closed_policy.ip_version:
@@ -393,7 +393,7 @@ def worker_update(args: argparse.Namespace) -> int:
     gc.disable()
     try:
         started_ns = time.perf_counter_ns()
-        updated_policy = DAROA.deserialize(open_payload)
+        updated_policy = S2ROV.deserialize(open_payload)
         active_policy[0] = updated_policy
         updated_state = active_policy[0].validate_route(probe_prefix, probe_origin)
         update_ns = time.perf_counter_ns() - started_ns
@@ -443,7 +443,7 @@ def worker_update(args: argparse.Namespace) -> int:
         "update_ns": update_ns,
         "update_ms": update_ns / 1_000_000,
         "timed_scope": [
-            "DAROA.deserialize(open_payload)",
+            "S2ROV.deserialize(open_payload)",
             "active_policy_pointer_replacement",
             "first_validate_route",
         ],
@@ -627,7 +627,7 @@ def build_run_config(
         "worker_process_model": "one fresh subprocess per observation",
         "schedule_model": "one seeded shuffle of all AF-size-repetition conditions",
         "timed_scope": [
-            "DAROA.deserialize(open_payload)",
+            "S2ROV.deserialize(open_payload)",
             "active_policy_pointer_replacement",
             "first_validate_route",
         ],
@@ -639,8 +639,8 @@ def build_run_config(
         "script_sha256": sha256_file(SCRIPT),
         "auditor": str(AUDIT_SCRIPT.resolve()),
         "auditor_sha256": sha256_file(AUDIT_SCRIPT),
-        "classifier": str(DAROA_CODEC_SCRIPTS / "utils" / "daroa.py"),
-        "classifier_sha256": sha256_file(DAROA_CODEC_SCRIPTS / "utils" / "daroa.py"),
+        "classifier": str(S2ROV_CODEC_SCRIPTS / "utils" / "s2rov.py"),
+        "classifier_sha256": sha256_file(S2ROV_CODEC_SCRIPTS / "utils" / "s2rov.py"),
         "input_manifest_sha256": sha256_file(run_dir / "input_manifest.json"),
         "schedule_sha256": sha256_file(run_dir / "schedule.json"),
         "source_git_commit": git_commit,

@@ -27,8 +27,8 @@ semantics.  Detailed evidence is in `evaluation/bgpy.md` and
   analysis, and report. High-volume raw trials and reproducible pilot/gate
   outputs are intentionally ignored.
 
-No vendored source is patched.  The DA-aware policy calls the DAROA-encoding semantic
-oracle in `implementation/daroa_codec/scripts/utils/daroa.py`.
+No vendored source is patched.  The S2-ROV-aware policy calls the S2-ROV-encoding semantic
+oracle in `implementation/s2rov_codec/scripts/utils/s2rov.py`.
 
 ## Reproduce the verified local checks
 

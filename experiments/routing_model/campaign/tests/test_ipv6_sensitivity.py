@@ -112,8 +112,8 @@ def test_manifest_records_complete_selection_provenance(tmp_path) -> None:
     assert loaded["filter_audit"]["rows_collapsed_as_repeated_pair_prefixes"] == 21
     assert loaded["filter_audit"]["unique_roots_after_collapse"] == 8
     assert loaded["design"]["planned_trials"] == 210
-    assert loaded["daroa_codec_ipv6_interface"]["round_trip"] is True
-    assert loaded["daroa_codec_ipv6_interface"]["delegated_state"] == "Delegated"
+    assert loaded["s2rov_codec_ipv6_interface"]["round_trip"] is True
+    assert loaded["s2rov_codec_ipv6_interface"]["delegated_state"] == "Delegated"
     assert (output_dir / "selected_units.csv").is_file()
 
 
@@ -169,4 +169,4 @@ def test_in_memory_manifest_is_bound_to_ipv6_inputs() -> None:
     assert manifest["deployment_order_length"] == 589
     assert manifest["sources"]["visibility_candidates"]["sha256"]
     assert manifest["sources"]["as_relationship_topology"]["sha256"]
-    assert manifest["sources"]["daroa_codec_oracle"]["sha256"]
+    assert manifest["sources"]["s2rov_codec_oracle"]["sha256"]

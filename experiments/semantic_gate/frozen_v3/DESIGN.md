@@ -1,4 +1,4 @@
-# DA-ROA Reference Encoding Specification
+# S2-ROV Reference Encoding Specification
 
 **Version:** 2.1
 **Re-audited:** 2026-08-26
@@ -52,7 +52,7 @@ prefix bits, and reserved flags are rejected.
 
 ## 4. Policy Invariants
 
-The `DAROA` constructor and deserializer require:
+The `S2ROV` constructor and deserializer require:
 
 1. exactly one Stripe prefix per policy;
 2. a base Stripe exactly at the base prefix;
@@ -74,7 +74,7 @@ lengths/origins, out-of-range origins, and non-increasing encoded AS lists are
 rejected so Python's `bool`-is-`int` behavior and alternate set orderings cannot
 create ambiguous semantics or bytes.
 
-Constructed Stripe and DAROA values are immutable. Their explicit origin sets
+Constructed Stripe and S2-ROV values are immutable. Their explicit origin sets
 and canonical Stripe sequences use immutable collections, so mutating a caller
 owned input collection cannot alter policy bytes or decisions. Adding a Stripe
 returns a new validated policy rather than changing an existing policy. This

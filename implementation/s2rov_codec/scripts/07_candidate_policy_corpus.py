@@ -4,7 +4,7 @@
 The generated policies are synthetic constructions over observed endpoint
 prefix/origin sets.  They are useful for structural and serialization tests;
 they do not assert that the candidate rows are authorized delegations or real
-DA-ROAs.
+S2-ROVs.
 """
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[2]
 HERE_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(HERE_DIR / "scripts"))
 
-from utils.daroa import DAROA, Stripe  # noqa: E402
+from utils.s2rov import S2ROV, Stripe  # noqa: E402
 
 
 CANDIDATES = (
@@ -69,9 +69,9 @@ def main() -> None:
             Stripe(prefix, origins, is_open=False)
             for prefix, origins in sorted(leaves.items())
         )
-        policy = DAROA(root, max_length, holder, stripes)
+        policy = S2ROV(root, max_length, holder, stripes)
         payload = policy.serialize()
-        decoded = DAROA.deserialize(payload)
+        decoded = S2ROV.deserialize(payload)
         assert decoded.serialize() == payload
         rows.append(
             {

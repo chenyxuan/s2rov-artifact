@@ -35,7 +35,7 @@ PROVENANCE = FIGURES / "FIG_PROTOTYPE_PATH_PROVENANCE.md"
 
 EVIDENCE = (
     REPO / "implementation/prototype/e2e/src/staged_policy.py",
-    REPO / "implementation/prototype/e2e/src/daroa_policy_dualstack.py",
+    REPO / "implementation/prototype/e2e/src/s2rov_policy_dualstack.py",
     REPO / "implementation/prototype/e2e/scripts/run-handoff-benefit.sh",
 )
 

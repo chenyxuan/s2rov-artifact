@@ -16,7 +16,7 @@ if [ ! -f "${ARCHIVE}" ]; then
     exit 1
 fi
 
-BUILD_DIR=$(mktemp -d /tmp/daroa-images.XXXXXX)
+BUILD_DIR=$(mktemp -d /tmp/s2rov-images.XXXXXX)
 trap 'rm -rf "${BUILD_DIR}"' EXIT
 unzip -q "${ARCHIVE}" -d "${BUILD_DIR}"
 

@@ -4,7 +4,7 @@ Generated: 2026-08-29T00:54:15Z
 
 ## Scope
 
-This run measures the Python `DAROA.validate_route` reference classifier on
+This run measures the Python `S2ROV.validate_route` reference classifier on
 257,550 valid scalar-origin IPv6 prefix-origin pairs derived from
 257,583 IPv6 rows encountered in the mixed RRC00 CSV.
 Preprocessing excluded 33 rows

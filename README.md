@@ -7,7 +7,7 @@ Origins Are Known* (IEEE MSN 2026).
 The paper itself is not bundled; it is published by the conference.
 
 ```text
-implementation/   the DAROA codec, the four-state classifier, the prototype
+implementation/   the S2-ROV codec, the four-state classifier, the prototype
 experiments/      one directory per experiment, named for what it does
 results/          the reported tables and the ledger of quoted numbers
 figure-data/      the plotted data behind the figures
@@ -18,7 +18,7 @@ verify.py         checks this tree against MANIFEST.json
 
 | Promised material | In this bundle |
 |---|---|
-| **implementation** | `implementation/daroa_codec/` — encoding, merging, four-state classifier; `implementation/prototype/` — Krill / Routinator / FRR prototype |
+| **implementation** | `implementation/s2rov_codec/` — encoding, merging, four-state classifier; `implementation/prototype/` — Krill / Routinator / FRR prototype |
 | **experiment and analysis scripts** | `experiments/*/` and `experiments/analysis_scripts/` |
 | **configurations** | the `*.json` contracts and manifests inside each experiment directory |
 | **result tables** | `results/` for the reported items, `results/tables/` for the full tables |
@@ -64,9 +64,6 @@ machine-specific paths. That rewriting changes file digests, so the SHA-256
 values frozen inside the experiment contracts no longer match; verify the
 bundle through `MANIFEST.json` instead.
 
-The scheme was developed under the internal codename S2-ROV before the paper
-settled on S²-ROV. The codename is rewritten throughout the bundle, so every
-class, module and result key here uses the published name.
 
 ## License and data terms
 

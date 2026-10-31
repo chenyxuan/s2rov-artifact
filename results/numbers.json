@@ -1,5 +1,5 @@
 {
-  "source": "candidates including the tested deployment-conflict and OpenScope-placement replays and pooled route-state audit, daroa_codec, cost, prototype, routing_model including the independently audited deployment-grid extension, attack_reachability, reanalysis, and semantic_gate artifacts; the primary V.A evidence pools IPv4 and IPv6 endpoint routes, V.B uses the controlled dual-stack classification and same-size update replays, and legacy phases retain their separately stated archive and provenance limits",
+  "source": "candidates including the tested deployment-conflict and OpenScope-placement replays and pooled route-state audit, s2rov_codec, cost, prototype, routing_model including the independently audited deployment-grid extension, attack_reachability, reanalysis, and semantic_gate artifacts; the primary V.A evidence pools IPv4 and IPv6 endpoint routes, V.B uses the controlled dual-stack classification and same-size update replays, and legacy phases retain their separately stated archive and provenance limits",
   "results_mode": "data_aware",
   "facts": {
     "redesigned_evaluation": {
@@ -33,7 +33,7 @@
         "percentage_coordinate_panels": 5,
         "percentage_x_axis_limits_percent": [0, 100],
         "test": {
-          "path": "experiments/analysis-scripts/tests/test_active_axis_style.py",
+          "path": "experiments/analysis_scripts/tests/test_active_axis_style.py",
           "sha256": "f6ac78f9a264eb18f544f39a5c7fe5e2fe695364324c77f32b73f70b2c744afc",
           "passed": 7
         }
@@ -146,9 +146,9 @@
           "s100": {"selected_roots": 97, "invalid_count_median": 1.0, "invalid_count_range_p05_p95": [0.0, 1.0]}
         },
         "artifacts": {
-          "runner": {"path": "experiments/analysis-scripts/run_partial_policy_replay.py", "sha256": "a88c01dc169af89f0cf6909d02732c993caf8a45b31ba4fd23c05b364567f98a"},
-          "tests": {"path": "experiments/analysis-scripts/tests/test_partial_policy_replay.py", "sha256": "b51b7f2458e7bea4020052b4c3cb8dd06ef898cf652fdb7b9e0e47e177424e25", "passed": 19},
-          "placement_score_generator": {"path": "experiments/analysis-scripts/prepare_openscope_placement_scores.py", "sha256": "9bd5db17b49ea9411c6d44690205d33e9e0102006df3c4556a12d6842b4d9bdf"},
+          "runner": {"path": "experiments/analysis_scripts/run_partial_policy_replay.py", "sha256": "a88c01dc169af89f0cf6909d02732c993caf8a45b31ba4fd23c05b364567f98a"},
+          "tests": {"path": "experiments/analysis_scripts/tests/test_partial_policy_replay.py", "sha256": "b51b7f2458e7bea4020052b4c3cb8dd06ef898cf652fdb7b9e0e47e177424e25", "passed": 19},
+          "placement_score_generator": {"path": "experiments/analysis_scripts/prepare_openscope_placement_scores.py", "sha256": "9bd5db17b49ea9411c6d44690205d33e9e0102006df3c4556a12d6842b4d9bdf"},
           "placement_score_input": {"path": "figure-data/source_data/openscope_placement_as_scores.json", "sha256": "b6d87f20bed4ea347f417bca072a05048eea84439e86f4773cc8bc44017a8257"},
           "manifest": {"path": "figure-data/fig_partial_policy_replay.manifest.json", "sha256": "6b2ec75e50f6ddb8405eeea719aa338f83fb31d46a7245d712d0689d6414180a"},
           "figure_provenance": {"path": "figure-data/FIG_PARTIAL_POLICY_REPLAY_PROVENANCE.md", "sha256": "fcec35678110e40cc40fc377f3cfb24ea499c9d8b94c44e0fb8bf0d4d514da1c"},
@@ -290,7 +290,7 @@
             "reads_summary_outputs": false
           },
           "figure_generator": {
-            "path": "experiments/analysis-scripts/analyze_handoff_fig2.py",
+            "path": "experiments/analysis_scripts/analyze_handoff_fig2.py",
             "sha256": "d136de733bfb97c5db6e192615c60e0ea082b4578a76059be8b8c31fef75d937"
           },
           "figure_source_data": {
@@ -410,7 +410,7 @@
         "claim_boundary": "historical only; policy growth changed the selected-state mix, so this run no longer supplies the active processing-cost result"
       },
       "dual_stack_reference_core": {
-        "version_label": "daroa_codec-dual-stack-reference-core-v3-marker-only",
+        "version_label": "s2rov_codec-dual-stack-reference-core-v3-marker-only",
         "status": "VERIFIED_UNIT_AND_GOLDEN_BYTES",
         "tests_passed": 42,
         "tests_failed": 0,
@@ -430,7 +430,7 @@
           "IPv4": 33,
           "IPv6": 129
         },
-        "classifier_path": "implementation/daroa_codec/scripts/utils/daroa.py",
+        "classifier_path": "implementation/s2rov_codec/scripts/utils/s2rov.py",
         "classifier_sha256": "eb11dd64f5cc3175557462367796541a45d971459f5a16f46a655e1aee614377",
         "claim_boundary": "reference classifier and experimental encoding only; not standardized transport or full relying-party interoperability"
       },
@@ -492,7 +492,7 @@
             "contrast_source_sha256": "224882ba7116f3ee0781e192fcbe6a1fa80aad3f0b8e3c1694f4181fe8671c33"
           }
         },
-        "claim_boundary": "controlled IPv6 selected-fixture path using an independent dual-stack policy model over validated local output; not evidence that the DAROA-encoding version 2 bytes traverse Krill, Routinator, and FRR"
+        "claim_boundary": "controlled IPv6 selected-fixture path using an independent dual-stack policy model over validated local output; not evidence that the S2-ROV-encoding version 2 bytes traverse Krill, Routinator, and FRR"
       },
       "processing_benchmark_dual_stack": {
         "version_label": "cost-controlled-policy-processing-marker-final-v1",
@@ -570,11 +570,11 @@
           "summary_sha256": "ebb77c5bf194de663b81aea82fc2a06abe5a8f878c571080accfc3ad146f0a6a",
           "independent_audit_sha256": "586c3a0f4efc4ea75c374f7f5c2ad258c66434e5888c5313f765a85f8a3c3a6f",
           "system_cost_generator": {
-            "path": "experiments/analysis-scripts/build_processing_cost_figure.py",
+            "path": "experiments/analysis_scripts/build_processing_cost_figure.py",
             "sha256": "35f808ddca2f3e03ba3ab89ed90bc88b5d47bf1e8015947095eaf10d5bfd1221"
           },
           "system_cost_tests": {
-            "path": "experiments/analysis-scripts/tests/test_build_processing_cost_figure.py",
+            "path": "experiments/analysis_scripts/tests/test_build_processing_cost_figure.py",
             "sha256": "a88bf78704630a60b51db28da10066a4f9996d563dc3029346873ee98ebbe5f1",
             "passed": 11
           },
@@ -786,9 +786,9 @@
         "historical_accepted_20260826": {
           "role": "original accepted E1a V3 evidence",
           "verification_status": "VERIFIED_EXACT_REPRODUCTION",
-          "production_output": "experiment_redesign/execution/e1a-v3-production-2",
-          "reproduction_output": "experiment_redesign/execution/e1a-v3-reproduction-2",
-          "comparison_output": "experiment_redesign/execution/E1A_V3_REPRODUCTION_COMPARISON_2.json",
+          "production_output": "experiments/semantic_gate/runs/e1a-v3-production-2",
+          "reproduction_output": "experiments/semantic_gate/runs/e1a-v3-reproduction-2",
+          "comparison_output": "experiments/semantic_gate/runs/E1A_V3_REPRODUCTION_COMPARISON_2.json",
           "production_elapsed_seconds": 303.3122383058071,
           "reproduction_elapsed_seconds": 300.9328451603651,
           "production_peak_rss_kib": 424404,
@@ -806,9 +806,9 @@
         "reaudit_20260828": {
           "role": "fresh formal-worktree reaudit; does not replace historical acceptance",
           "verification_status": "VERIFIED_EXACT_REPRODUCTION",
-          "production_output": "runs/e1a-v3-reaudit-production-20260828",
-          "reproduction_output": "runs/e1a-v3-reaudit-reproduction-20260828",
-          "comparison_output": "runs/E1A_V3_REAUDIT_COMPARISON_20260828.json",
+          "production_output": "experiments/semantic_gate/runs/e1a-v3-reaudit-production-20260828",
+          "reproduction_output": "experiments/semantic_gate/runs/e1a-v3-reaudit-reproduction-20260828",
+          "comparison_output": "experiments/semantic_gate/runs/E1A_V3_REAUDIT_COMPARISON_20260828.json",
           "production_elapsed_seconds": 304.42910804226995,
           "reproduction_elapsed_seconds": 299.39902037009597,
           "production_peak_rss_kib": 214808,
@@ -888,7 +888,7 @@
         "scenario_relationship": "intended-only and competition are different announcement sets with separately matched baselines; they are not a joint frontier",
         "artifacts": {
           "generator": {
-            "path": "experiments/analysis-scripts/build_fig_deployment_outcomes.py",
+            "path": "experiments/analysis_scripts/build_fig_deployment_outcomes.py",
             "sha256": "7b35280c2b40b8bf7c883fc3b92254ffd2aaa5c175949c43b29a4003e2477951"
           },
           "source_csv": {
@@ -937,7 +937,7 @@
         "result_sha256": "31e0ae3ec3d1dd123a6c27f7acb2b06444e75ccf2f640c00d3ede5ee008036a4",
         "exact_reaudit_20260828": {
           "status": "EXACT_MATCH",
-          "output": "runs/q3-legacy-diagnostic-reaudit-20260828.json",
+          "output": "experiments/semantic_gate/runs/q3-legacy-diagnostic-reaudit-20260828.json",
           "wall_seconds": 49.03,
           "maximum_resident_set_kib": 219080,
           "python": "CPython 3.12.3",
@@ -1699,8 +1699,8 @@
       "raw_scientific_sha256": "5ff15da60061d899b45bc09dcb14aeea0e793cab36682902338b52e2384c4cd5",
       "summary_sha256": "610cd1cb7c82e73b4c7f9c4aa0cbbab39237fbd32c5b132d02c19fd8fd652801",
       "reproduction_audit_canonical_sha256": "b652c7fde64e62c21e3361abf36add98c65ceaaf88ab90999edfab42da61484f",
-      "spark_to_paper_ledger_canonical_sha256": "351b643fde0e1e848bc84f276bb8c686c0ff4bb30ad440ad32e4979fb6a5baeb",
-      "spark_to_paper_ledger_file_sha256": "5446d1323127fdbcbfeda6d80078024e326223d289f18ac12f377d7e2d4226c5",
+      "evidence_ledger_canonical_sha256": "351b643fde0e1e848bc84f276bb8c686c0ff4bb30ad440ad32e4979fb6a5baeb",
+      "evidence_ledger_file_sha256": "5446d1323127fdbcbfeda6d80078024e326223d289f18ac12f377d7e2d4226c5",
       "claim_boundary": "conditional AS-level endpoint exposure only; no traffic, sibling utilization, delegation legitimacy, attack prevalence, or topology/scenario-set generalization",
       "manuscript_formatted_values": {
         "sibling_route_attacker_delta_pp": "46.45",

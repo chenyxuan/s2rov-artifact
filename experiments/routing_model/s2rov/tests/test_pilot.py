@@ -8,7 +8,7 @@ from roa_checker import ROA
 from bgpy.shared.enums import Relationships
 from bgpy.simulation_engine import Announcement, Policy
 
-from implementation.daroa_codec.scripts.utils.daroa import ValidationState
+from implementation.s2rov_codec.scripts.utils.s2rov import ValidationState
 
 from experiments.routing_model.s2rov.policy import S2ROV
 from experiments.routing_model.s2rov.pilot import (
@@ -36,7 +36,7 @@ def _stable_outcomes(result: dict[str, object]) -> tuple[object, object, object]
     )
 
 
-def test_daroa_codec_oracle_exercises_all_four_states() -> None:
+def test_s2rov_codec_oracle_exercises_all_four_states() -> None:
     policy = make_open_policy()
 
     assert policy.validate_route(AGGREGATE, HOLDER_ASN) == ValidationState.EXPLICIT
@@ -48,8 +48,8 @@ def test_daroa_codec_oracle_exercises_all_four_states() -> None:
 def test_s2rov_policy_composes_four_states_with_native_rov() -> None:
     """Exercise the project adapter, including NotFound-to-ROV fallback."""
 
-    daroa = make_open_policy()
-    S2ROV.configure(daroa)
+    s2rov = make_open_policy()
+    S2ROV.configure(s2rov)
     receiver = S2ROV(as_=SimpleNamespace(asn=400))
     unrelated_roa = ROA(ip_network(UNRELATED), 999, max_length=24)
     Policy.roa_checker.clear()
@@ -71,7 +71,7 @@ def test_s2rov_policy_composes_four_states_with_native_rov() -> None:
             ann(AGGREGATE, ATTACKER_ASN), Relationships.CUSTOMERS
         )
         # The route is DA-NotFound, then rejected by the unrelated native ROA.
-        assert daroa.validate_route(UNRELATED, ATTACKER_ASN) == ValidationState.NOT_FOUND
+        assert s2rov.validate_route(UNRELATED, ATTACKER_ASN) == ValidationState.NOT_FOUND
         assert not receiver._valid_ann(
             ann(UNRELATED, ATTACKER_ASN), Relationships.CUSTOMERS
         )

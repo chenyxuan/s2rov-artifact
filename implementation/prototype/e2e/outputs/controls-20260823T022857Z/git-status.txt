@@ -3,9 +3,9 @@
  M README.md
  M config/krill/krill.conf.template
  M scripts/run-churn-experiment.sh
- M src/daroa_agent.py
+ M src/s2rov_agent.py
  M src/staged_policy.py
- M tests/test_daroa_agent.py
+ M tests/test_s2rov_agent.py
  M tests/test_staged_policy.py
 ?? config/churn/frr/bgp-only-policy.vty
 ?? scripts/run-churn-controls.sh

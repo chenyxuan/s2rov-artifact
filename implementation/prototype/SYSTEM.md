@@ -1,7 +1,7 @@
 # Prototype: S2-ROV System Prototype
 
 **Date:** 2026-07-29
-**Status:** Conventional Krill–Routinator–RTR–FRR baseline and DA-aware
+**Status:** Conventional Krill–Routinator–RTR–FRR baseline and S2-ROV-aware
 local-API enforcement complete
 **Dependency:** Phases 1-5 (completed)
 
@@ -13,7 +13,7 @@ This directory contains an RPKI testbed that previously reproduced the RFC 6811
 semantic conflict through Krill publication and Routinator validation. Unlike
 the analytical evaluation in processing-cost, it targets operational feasibility.
 The deterministic experiment in `e2e/` now demonstrates stock RTR-to-FRR
-validation and DA-aware enforcement against live FRR BGP routes.
+validation and S2-ROV-aware enforcement against live FRR BGP routes.
 
 ### 1.1 Architecture
 
@@ -29,7 +29,7 @@ validation and DA-aware enforcement against live FRR BGP routes.
 ├──────────────────────────────────────────────────┤
 │  FRR 10.6.1 collector + seven BGP speakers       │
 │  → stock RFC 6811 RTR validation                 │
-│  → DA-aware local API and route-map enforcement  │
+│  → S2-ROV-aware local API and route-map enforcement  │
 └──────────────────────────────────────────────────┘
 ```
 
@@ -66,7 +66,7 @@ implementation/prototype/
 | **T3** | RPKI validation: Routinator fetches ROA, validates routes | ✅ |
 | **T4** | Semantic conflict reproduction: customer delegation → Invalid | ✅ |
 | **T5** | Stock RTR/router integration: connect Routinator to FRR | ✅ |
-| **T6** | DA-aware local-API enforcement on live FRR routes | ✅ |
+| **T6** | S2-ROV-aware local-API enforcement on live FRR routes | ✅ |
 
 ### 3.1 Current audit
 
@@ -82,9 +82,9 @@ The passing 2026-07-29 run is under `e2e/outputs/latest/`.
 ## 4. Relationship to Research Phases
 
 ```
-Candidate-selection ──→ formal-statement ──→ classifier-semantics ──→ DAROA-encoding ──→ processing-cost
+Candidate-selection ──→ formal-statement ──→ classifier-semantics ──→ S2-ROV-encoding ──→ processing-cost
   │           │           │           │           │
-  Empirical   Formal      S2-ROV      DA-ROA      Evaluation
+  Empirical   Formal      S2-ROV      S2-ROV      Evaluation
   evidence    proof       semantics   encoding    (synthetic)
                                                      │
 Prototype ←─────────────────────────────────────────────┘

@@ -4,7 +4,7 @@ import ast
 from pathlib import Path
 import unittest
 
-from experiments.semantic_gate.frozen_v3.daroa import DAROA, Stripe, ValidationState
+from experiments.semantic_gate.frozen_v3.s2rov import S2ROV, Stripe, ValidationState
 from experiments.semantic_gate.frozen_v3.snapshot import (
     PolicyEnvelope,
     PolicySnapshot,
@@ -65,8 +65,8 @@ def implementation_policy(
     max_length: int,
     holder_asn: int,
     is_open: bool,
-) -> DAROA:
-    return DAROA(
+) -> S2ROV:
+    return S2ROV(
         base_prefix,
         max_length,
         holder_asn,
@@ -106,7 +106,7 @@ def implementation_envelope(
 
 
 class SnapshotOracleIndependenceTests(unittest.TestCase):
-    def test_oracle_imports_no_snapshot_or_daroa_implementation(self) -> None:
+    def test_oracle_imports_no_snapshot_or_s2rov_implementation(self) -> None:
         source_path = Path(snapshot_oracle.__file__).resolve()
         tree = ast.parse(source_path.read_text(encoding="utf-8"))
         imported_modules: list[str] = []
@@ -119,9 +119,9 @@ class SnapshotOracleIndependenceTests(unittest.TestCase):
             module
             for module in imported_modules
             if module == "snapshot"
-            or module == "daroa"
+            or module == "s2rov"
             or module.endswith(".snapshot")
-            or module.endswith(".daroa")
+            or module.endswith(".s2rov")
             or module.startswith("experiments.semantic_gate.frozen_v3")
         }
         self.assertEqual(forbidden, set())

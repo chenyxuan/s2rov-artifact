@@ -167,7 +167,7 @@ def verify_inputs() -> dict[str, str]:
     ):
         raise ValueError("accepted policy-update run failed its independent audit")
     expected_timed_scope = [
-        "DAROA.deserialize(open_payload)",
+        "S2ROV.deserialize(open_payload)",
         "active_policy_pointer_replacement",
         "first_validate_route",
     ]

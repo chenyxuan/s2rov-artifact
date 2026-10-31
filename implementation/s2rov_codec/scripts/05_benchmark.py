@@ -16,7 +16,7 @@ from pathlib import Path
 HERE_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(HERE_DIR / "scripts"))
 
-from utils.daroa import DAROA, Stripe  # noqa: E402
+from utils.s2rov import S2ROV, Stripe  # noqa: E402
 
 
 TABLE_DIR = HERE_DIR / "outputs" / "tables"
@@ -35,9 +35,9 @@ def make_policy(
     stripes.extend(
         Stripe(prefix, {asn}, is_open=False) for prefix, asn in customers
     )
-    policy = DAROA(base_prefix, max_length, holder_asn, stripes)
+    policy = S2ROV(base_prefix, max_length, holder_asn, stripes)
     payload = policy.serialize()
-    decoded = DAROA.deserialize(payload)
+    decoded = S2ROV.deserialize(payload)
     assert decoded.serialize() == payload
 
     return {

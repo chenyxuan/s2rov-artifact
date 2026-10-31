@@ -52,7 +52,7 @@ class ControlledPolicyBenchmarkTests(unittest.TestCase):
             self.assertEqual(len(policy.stripes), count + 1)
             self.assertEqual(spec["subprefix_entries"], count)
             self.assertEqual(spec["total_policy_entries"], count + 1)
-            self.assertEqual(MODULE.DAROA.deserialize(payload).serialize(), payload)
+            self.assertEqual(MODULE.S2ROV.deserialize(payload).serialize(), payload)
 
     def test_fixed_queries_are_open_scope_at_every_size(self):
         fixture = self.fixture()

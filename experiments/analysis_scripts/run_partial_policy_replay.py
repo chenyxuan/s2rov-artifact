@@ -51,12 +51,12 @@ configure_body_font()
 
 REPO = Path(__file__).resolve().parents[2]
 MANUSCRIPT = Path(__file__).resolve().parents[1]
-REFERENCE_SCRIPTS = REPO / "implementation" / "daroa_codec" / "scripts"
+REFERENCE_SCRIPTS = REPO / "implementation" / "s2rov_codec" / "scripts"
 if str(REFERENCE_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(REFERENCE_SCRIPTS))
 
-from utils.daroa import (  # noqa: E402
-    DAROA,
+from utils.s2rov import (  # noqa: E402
+    S2ROV,
     Stripe,
     ValidationState,
     is_eligible_delegated_origin,
@@ -1102,9 +1102,9 @@ def build_reference_route_states(
         for root in roots
     }
 
-    unmarked_policies: dict[tuple[str, str], DAROA] = {}
-    marked_policies: dict[tuple[str, str], DAROA] = {}
-    aggregate_policies: dict[tuple[str, str], DAROA] = {}
+    unmarked_policies: dict[tuple[str, str], S2ROV] = {}
+    marked_policies: dict[tuple[str, str], S2ROV] = {}
+    aggregate_policies: dict[tuple[str, str], S2ROV] = {}
     root_route_states: list[ValidationState] = []
     for root, root_candidates in grouped.items():
         root_origins = root_candidates[0].root_origins
@@ -1118,13 +1118,13 @@ def build_reference_route_states(
         holder = root_origins[0]
         unmarked_base = Stripe(base_prefix, frozenset(root_origins), False)
         marked_base = Stripe(base_prefix, frozenset(root_origins), True)
-        unmarked_policies[root] = DAROA(
+        unmarked_policies[root] = S2ROV(
             base_prefix, maximum_length, holder, (unmarked_base,)
         )
-        marked_policies[root] = DAROA(
+        marked_policies[root] = S2ROV(
             base_prefix, maximum_length, holder, (marked_base,)
         )
-        aggregate_policies[root] = DAROA(
+        aggregate_policies[root] = S2ROV(
             base_prefix,
             ipaddress.ip_network(base_prefix).prefixlen,
             holder,
@@ -1161,13 +1161,13 @@ def build_reference_route_states(
         exact_rule = Stripe(
             candidate.endpoint_prefix, frozenset(candidate.endpoint_origins), False
         )
-        exact_policy = DAROA(
+        exact_policy = S2ROV(
             candidate.root_prefix,
             maximum_length,
             candidate.root_origins[0],
             (unmarked_base, exact_rule),
         )
-        exact_marked_policy = DAROA(
+        exact_marked_policy = S2ROV(
             candidate.root_prefix,
             maximum_length,
             candidate.root_origins[0],
@@ -1264,9 +1264,9 @@ def build_reference_route_states(
         },
         "ineligible_routes": ineligible_routes,
         "state_table_sha256": state_digest.hexdigest(),
-        "reference_classifier": relative_to_repo(REFERENCE_SCRIPTS / "utils" / "daroa.py"),
+        "reference_classifier": relative_to_repo(REFERENCE_SCRIPTS / "utils" / "s2rov.py"),
         "reference_classifier_sha256": sha256_file(
-            REFERENCE_SCRIPTS / "utils" / "daroa.py"
+            REFERENCE_SCRIPTS / "utils" / "s2rov.py"
         ),
     }
     return arrays, metadata

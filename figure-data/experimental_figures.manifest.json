@@ -156,10 +156,10 @@
     "processing_cost_test_sha256": "9fcdea4809c90fd6d68e9a610748d0de5aefb7e0d91da412d3eaf671c1f8e5c2"
   },
   "generator_sha256": {
-    "experiments/analysis-scripts/run_partial_policy_replay.py": "ff4982ccbe832bf70c53b682a9f9ac6283a6d9c4adfb9e7be9dc559664129314",
-    "experiments/analysis-scripts/prepare_openscope_placement_scores.py": "9bd5db17b49ea9411c6d44690205d33e9e0102006df3c4556a12d6842b4d9bdf",
-    "experiments/analysis-scripts/build_processing_cost_figure.py": "521f3ebde0e8cb4f41e7524daf2fbc3f22b0e790dfbd7278aef7218d12704e25",
-    "experiments/analysis-scripts/build_fig_deployment_outcomes.py": "2d3f9e9470751a7a1bc2b9bb98be59aa71604879efc879c50711681cebe29853"
+    "experiments/analysis_scripts/run_partial_policy_replay.py": "ff4982ccbe832bf70c53b682a9f9ac6283a6d9c4adfb9e7be9dc559664129314",
+    "experiments/analysis_scripts/prepare_openscope_placement_scores.py": "9bd5db17b49ea9411c6d44690205d33e9e0102006df3c4556a12d6842b4d9bdf",
+    "experiments/analysis_scripts/build_processing_cost_figure.py": "521f3ebde0e8cb4f41e7524daf2fbc3f22b0e790dfbd7278aef7218d12704e25",
+    "experiments/analysis_scripts/build_fig_deployment_outcomes.py": "2d3f9e9470751a7a1bc2b9bb98be59aa71604879efc879c50711681cebe29853"
   },
   "historical_claim_boundaries": {
     "fig_e1a_validation": "inactive frozen semantic-conformance artifact; the checks remain a setup gate",
@@ -183,7 +183,7 @@
     }
   },
   "historical_generator_sha256": {
-    "experiments/analysis-scripts/analyze_handoff_fig2.py": "d136de733bfb97c5db6e192615c60e0ea082b4578a76059be8b8c31fef75d937"
+    "experiments/analysis_scripts/analyze_handoff_fig2.py": "d136de733bfb97c5db6e192615c60e0ea082b4578a76059be8b8c31fef75d937"
   },
   "historical_inactive": [
     "fig_e1a_validation",

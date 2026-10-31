@@ -9,7 +9,7 @@ import csv
 
 HERE_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(HERE_DIR / "scripts"))
-from utils.daroa import Stripe  # noqa: E402
+from utils.s2rov import Stripe  # noqa: E402
 from utils.merge import merge_ratio, merge_stripes  # noqa: E402
 
 TABLE_DIR = HERE_DIR / "outputs/tables"

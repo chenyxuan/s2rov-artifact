@@ -113,8 +113,8 @@ class PolicyUpdateBenchmarkTests(unittest.TestCase):
         source = RUNNER.source_policy_path(SOURCE_RUN, 4, 64)
         open_payload = source.read_bytes()
         closed_payload, spec = RUNNER.build_unmarked_counterpart(open_payload)
-        open_policy = RUNNER.DAROA.deserialize(open_payload)
-        closed_policy = RUNNER.DAROA.deserialize(closed_payload)
+        open_policy = RUNNER.S2ROV.deserialize(open_payload)
+        closed_policy = RUNNER.S2ROV.deserialize(closed_payload)
 
         self.assertEqual(len(open_policy.stripes), 64)
         self.assertEqual(len(closed_policy.stripes), 64)

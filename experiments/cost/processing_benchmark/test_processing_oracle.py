@@ -12,7 +12,7 @@ BENCHMARK_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(BENCHMARK_DIR))
 
 import run_processing_benchmark as benchmark  # noqa: E402
-from utils.daroa import DAROA, Stripe, ValidationState  # noqa: E402
+from utils.s2rov import S2ROV, Stripe, ValidationState  # noqa: E402
 
 
 class IPv4OracleTests(unittest.TestCase):
@@ -25,7 +25,7 @@ class IPv4OracleTests(unittest.TestCase):
                 "is_open": False,
             },
         ]
-        policy = DAROA(
+        policy = S2ROV(
             "0.0.0.0/0",
             32,
             174,
@@ -69,7 +69,7 @@ class IPv4OracleTests(unittest.TestCase):
                 "is_open": False,
             },
         ]
-        policy = DAROA(
+        policy = S2ROV(
             "0.0.0.0/0",
             32,
             174,

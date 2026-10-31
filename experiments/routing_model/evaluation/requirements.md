@@ -1,22 +1,5 @@
 # Routing model Internet-Scale Simulation: Framework Decision and Experiment Contract
 
-## Material Passport
-
-- **Mode:** experiment planning and implementation-readiness audit
-- **Research question:** How much intended delegated-destination delivery does
-  S2-ROV restore as measured ROV networks upgrade, and how much additional
-  traffic attraction does the same open scope permit for an unlisted eligible
-  origin?
-- **Local evidence inspected:** Phases 1--6, the AMBER topology and measured
-  ROV deployment inputs, the AMBER simulation semantics, BGPy 13.0.10, and
-  InternetSim at its current public `master` commit.
-- **Verification status:** **ANALYZED**.  Framework source and local input
-  artifacts were inspected; no routing-model production simulation result is
-  claimed by this document.
-- **Scope:** this document specifies and selects the simulator.  It does not
-  modify the manuscript and does not treat AMBER's classifier output as a
-  S2-ROV result.
-
 ## 1. Decision
 
 Use **BGPy as the primary routing-model simulator**.  Keep InternetSim vendored and
@@ -56,7 +39,7 @@ The inspected local pins are:
 | Requirement | BGPy | InternetSim | Consequence for S2-ROV |
 |---|---|---|---|
 | Conventional ROV | Native covering-ROA checker and `ROV` policy | Static invalid-pair set | BGPy preserves the correct baseline without reimplementing RFC 6811 logic. |
-| Custom DA validation | Override a policy validity hook and call the DAROA-encoding oracle | Change Cython `nogil` validation plus policy storage | BGPy keeps DA semantics outside the engine. |
+| Custom DA validation | Override a policy validity hook and call the S2-ROV-encoding oracle | Change Cython `nogil` validation plus policy storage | BGPy keeps DA semantics outside the engine. |
 | Mixed deployment | Scenario-level adopting and hard-coded AS policy classes | Per-AS ROV set exists; a separate DA set and actions must be added | Both are possible, but BGPy is already structured for comparisons. |
 | Equal-prefix competition | Native announcements and deterministic Gao--Rexford selection | Native route-table competition | Both can represent the primary attack, subject to validation changes. |
 | Aggregate plus child prefix | Native multi-prefix local RIB | Native multi-prefix route table | Both can propagate the routes. |
@@ -90,7 +73,7 @@ resource gate in Section 11, not merely because its core is compiled.
 |---|---|---|
 | `experiments/formal/FORMAL_ANALYSIS.md` | Supplies exact aggregate protection, proper-descendant scope, precedence, and provenance requirements. | It does not identify legitimate delegates. |
 | `experiments/semantics/S2-ROV_SEMANTICS.md` | Normative four-state semantics and security boundary. | `Delegated` is not ordinary RPKI `Valid`. |
-| `implementation/daroa_codec/scripts/utils/daroa.py` | Executable oracle for policy state in simulation and unit tests. | Its interpreter timing is not router performance. |
+| `implementation/s2rov_codec/scripts/utils/s2rov.py` | Executable oracle for policy state in simulation and unit tests. | Its interpreter timing is not router performance. |
 | candidate-selection allocation-tree candidates | Supplies observed holder/child prefix lengths and topological origin placements for counterfactual sampling. | A candidate is not evidence of contractual delegation or route legitimacy. |
 | processing-cost semantic cases | Supplies regression vectors for `Explicit`, `Delegated`, `Invalid`, and `NotFound`. | They are not Internet-scale propagation evidence. |
 | prototype Krill--Routinator--FRR prototype | Anchors actions and staged-deployment interpretation. | The simulator must not replace the signed-system experiment. |
@@ -114,7 +97,7 @@ Every AS is assigned exactly one routing policy in a run:
 
 For a route `(p, a)`, `S2ROV` must apply the following composition:
 
-1. Evaluate the DAROA-encoding DA policy.
+1. Evaluate the S2-ROV-encoding DA policy.
 2. If the result is `Explicit` or `Delegated`, admit the route subject to
    ordinary BGP loop/export checks.
 3. If the result is `Invalid`, reject it.
@@ -143,7 +126,7 @@ The conventional view of an open policy contains only:
 - exact VRPs for explicitly named child Stripes.
 
 Open intent itself emits no VRP.  Thus, a legacy ROV AS rejects an unlisted
-child route while a DA-aware AS may classify it as `Delegated`.
+child route while a S2-ROV-aware AS may classify it as `Delegated`.
 
 For the measured deployment experiment, let `V` be the 589-AS Hlavacek ROV
 set and let `S` be the subset upgraded to S2-ROV:
@@ -200,7 +183,7 @@ covering and longest-prefix relationships.
 All rows announce the holder aggregate unless the row explicitly says
 otherwise.
 
-| ID | Policy condition | Child/attack announcements | Purpose | Required outcome at a DA-aware AS |
+| ID | Policy condition | Child/attack announcements | Purpose | Required outcome at a S2-ROV-aware AS |
 |---|---|---|---|---|
 | B0 | No ROV anywhere | `D -> p` | Unfiltered propagation ceiling | child admitted |
 | B1 | Measured ROV, aggregate-only projection | `D -> p` | Conventional policy-gap baseline | child is conventional `Invalid` at ROV ASes |
@@ -220,7 +203,7 @@ contributions.
 ## 7. Staged deployment matrix
 
 Upgrade only within the fixed measured ROV set.  Report the horizontal axis as
-"DA-aware ASes among 589 measured ROV ASes," not as global Internet adoption.
+"S2-ROV-aware ASes among 589 measured ROV ASes," not as global Internet adoption.
 
 Required upgrade fractions are:
 
@@ -302,7 +285,7 @@ intervals.  Do not treat ASes inside one topology run as independent samples.
 
 The run must fail closed if any invariant fails.
 
-1. The simulation policy state matches the DAROA-encoding `DAROA.validate_route`
+1. The simulation policy state matches the S2-ROV-encoding `S2ROV.validate_route`
    oracle for every generated route.
 2. An unlisted origin at the exact aggregate is `Invalid` even when the base
    Stripe is open.
@@ -340,7 +323,7 @@ a production run.
 | AS relationships | `<home>/AMBER/data/simulation/topo/as-rel-fixed.txt` | 477,782 links, 77,429 linked ASNs; SHA-256 `fff3684dc18a3411e87f8f7cd06b9cb211322d8f7c4f169781ee664fe78b6d69` |
 | Measured ROV set | `<home>/AMBER/data/simulation/deploy/hlavacek_rov.json` | one deployment containing 589 ASes, all present in the topology; SHA-256 `027c2ace3bce39a308e7d09eddcbc30f619b051af7977e9b5ff4a322cc0bbe1f` |
 | Counterfactual holder/child rows | `experiments/candidates/allocation_tree/outputs/tables/allocation_tree_origin_divergence.csv` | 8,830 rows; SHA-256 `b046e31aec24b3c9e48e99f17185be211f0229a898ee00c28e72d10097079b27` |
-| DA semantic oracle | `implementation/daroa_codec/scripts/utils/daroa.py` | SHA-256 `7685f8e5583ef2da851085fe119e365255c590d59d853bd90c2068417cd494dc` |
+| DA semantic oracle | `implementation/s2rov_codec/scripts/utils/s2rov.py` | SHA-256 `7685f8e5583ef2da851085fe119e365255c590d59d853bd90c2068417cd494dc` |
 | Staged control vectors | `implementation/prototype/e2e/config/staged/cases.json` | SHA-256 `ed0f88dd3d25397be25abd9dbcb121be9487ad76c3072f2b23a327c18e8b3fbb` |
 
 The relationship file has three fields (`asn1|asn2|relationship`), whereas the
@@ -356,7 +339,7 @@ cross-check.
 ### Gate A: deterministic semantic smoke test
 
 Use a hand-checked small topology and run all B0--C4 cases.  Compare route
-states to DAROA-encoding and destination outcomes to a manually specified fixture.
+states to S2-ROV-encoding and destination outcomes to a manually specified fixture.
 Run twice with the same seed and require byte-identical structured output.
 
 ### Gate B: topology and deployment audit

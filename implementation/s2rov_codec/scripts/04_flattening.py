@@ -9,7 +9,7 @@ import csv
 
 HERE_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(HERE_DIR / "scripts"))
-from utils.daroa import DAROA, Stripe, ValidationState  # noqa: E402
+from utils.s2rov import S2ROV, Stripe, ValidationState  # noqa: E402
 from utils.flatten import (  # noqa: E402
     derive_standard_roa,
     flatten_to_vrps,
@@ -24,7 +24,7 @@ def main():
     results = []
 
     # Test 1: Enterprise PI
-    pi = DAROA("203.0.113.0/24", 24, 64500, [
+    pi = S2ROV("203.0.113.0/24", 24, 64500, [
         Stripe("203.0.113.0/24", {64500}, is_open=False),
     ])
     std_roa = derive_standard_roa(pi)
@@ -41,7 +41,7 @@ def main():
           f"vrps={len(vrps)}")
 
     # Test 2: ISP /16 with an OpenScope marker
-    isp_marked = DAROA("10.0.0.0/16", 24, 64501, [
+    isp_marked = S2ROV("10.0.0.0/16", 24, 64501, [
         Stripe("10.0.0.0/16", {64501}, is_open=True),
     ])
     std_roa2 = derive_standard_roa(isp_marked)
@@ -58,7 +58,7 @@ def main():
           f"vrps={len(vrps2)}")
 
     # Test 3: ISP with explicit customers
-    isp_cust = DAROA("10.0.0.0/16", 24, 64501, [
+    isp_cust = S2ROV("10.0.0.0/16", 24, 64501, [
         Stripe("10.0.0.0/16", {64501}, is_open=True),
         Stripe("10.0.1.0/24", {64502}, is_open=False),
         Stripe("10.0.2.0/24", {64503}, is_open=False),

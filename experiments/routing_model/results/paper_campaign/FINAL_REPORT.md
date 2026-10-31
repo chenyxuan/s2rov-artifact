@@ -35,7 +35,7 @@ are averaged within holder before inference.
 reachability benefit. `Delta_E_rov = A1 attacker delivery - B1 attacker
 delivery`; positive values are an exposure penalty.
 
-| DA-aware share of the 589 ROV ASes | B1 delegate | D1 delegate | Delta_R (pp, 95% CI) | B1 attacker | A1 attacker | Delta_E_rov (pp, 95% CI) |
+| S2-ROV-aware share of the 589 ROV ASes | B1 delegate | D1 delegate | Delta_R (pp, 95% CI) | B1 attacker | A1 attacker | Delta_E_rov (pp, 95% CI) |
 |---:|---:|---:|---:|---:|---:|---:|
 | 0% | 82.14 | 82.14 | 0.00 [0.00, 0.00] | 32.35 | 32.35 | 0.00 [0.00, 0.00] |
 | 1% | 82.14 | 82.28 | 0.14 [0.04, 0.32] | 32.35 | 32.35 | -0.01 [-0.23, 0.21] |
@@ -100,7 +100,7 @@ the paper results.
 - Per holder: one frozen root/delegate/leaf configuration and three fixed
   attacker classes (`uniform`, `edge`, and `high_degree`).
 - Deployment targets: 0/1/5/10/25/50/75/100%, corresponding to
-  0/5/29/58/147/294/441/589 DA-aware ASes.
+  0/5/29/58/147/294/441/589 S2-ROV-aware ASes.
 - Deployment orders: degree, customer cone, and five fixed random orders;
   shared 0% and 100% endpoints are physically simulated once.
 - Scenario count: 184 per holder, 36,800 total.
@@ -134,44 +134,6 @@ restarted.
   requirements. Eight unrelated pre-existing routing-model files would be
   reformatted by the current Ruff formatter and were intentionally not
   rewritten.
-
-## Material Passport
-
-- Origin: `academic-research-suite / experiment-agent`.
-- Modes: plan + run + validate.
-- Version: `routing_model-paper-campaign-v1 -- SRSWOR FPC analysis amendment`.
-- Simulator: BGPy 13.0.10, clean vendor commit
-  `c3b1be48148e8c246a60b9dec6513b688a4736a5`.
-- Imported BGPy tree SHA-256:
-  `caa381c953bd38ee25e303249d86276430762c59ceb1d00c97aa3f5e3714f133`.
-- Runtime: CPython 3.12.3 with 39 exact locked dependencies.
-- Manifest file SHA-256:
-  `a674b87afd90716521f19673c4ddbd1153c1b911ec5021a99e0eabe579bcbeae`.
-- Manifest canonical SHA-256:
-  `1394b5aab7020cd0ae7a8cc9d8866ecc86eb06d1bb49e5e2ec85127bb1c3f277`.
-- Runner SHA-256:
-  `9500cd43d7ee6a409c9d0dc83e41fc44dd85311c5b0dfd69f89ac1405d98ed50`.
-- Raw-scenario SHA-256:
-  `fb9ec8fa80d41b5a98b4bc956d82ebfec0514eaab27fd183f86683dfed6925b7`.
-- Analyzer SHA-256:
-  `c0ca2612fd1fb1dbc267257069b72826d4ec6fb36b15a7fbdc3aec43806f01fe`.
-- Analysis-manifest SHA-256:
-  `27298f787bfb8856b23d5c21138526dd9adbb3259a57e64067268eb2fc4c2a73`.
-- Holder-contrast SHA-256:
-  `407194fa21a41a7c748caf114ed81183915a538b2d6ebebdbd3805b95edc2413`.
-- Summary JSON SHA-256:
-  `2483ed7399cdf63914faa16aa242109368b12a70f67193b54b31845a9c358b16`.
-
-The SRSWOR finite-population rescaling was added after propagation began but
-before formal analysis. It changes only interval estimation, not the frozen
-manifest, runner, raw scenarios, contrast definitions, or point estimates.
-The pre-amendment contract/analyzer hashes were `0413690d...` and
-`9656ad64...`; the analyzed versions are contract
-`72521f48c73b5011befa432a8d701c957d525f6aa879ccb40ce85b1c8b542196`
-and analyzer `c0ca2612...`. At execution time, `experiments/routing_model/` was still
-untracked, so the frozen run was bound to these content hashes rather than to a
-Git revision. The archived code and result commit now provide the corresponding
-repository history without rewriting the immutable run manifest.
 
 ## Claim boundary
 

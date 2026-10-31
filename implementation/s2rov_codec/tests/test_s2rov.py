@@ -10,8 +10,8 @@ HERE_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(HERE_DIR / "scripts"))
 
 from utils.as_set import AsSetType, decode, encode  # noqa: E402
-from utils.daroa import (  # noqa: E402
-    DAROA,
+from utils.s2rov import (  # noqa: E402
+    S2ROV,
     Stripe,
     ValidationState,
     is_eligible_delegated_origin,
@@ -20,8 +20,8 @@ from utils.flatten import flatten_to_vrps, flattening_validation  # noqa: E402
 from utils.merge import merge_stripes  # noqa: E402
 
 
-def example_policy() -> DAROA:
-    return DAROA(
+def example_policy() -> S2ROV:
+    return S2ROV(
         "10.0.0.0/16",
         24,
         64501,
@@ -32,8 +32,8 @@ def example_policy() -> DAROA:
     )
 
 
-def example_ipv6_policy() -> DAROA:
-    return DAROA(
+def example_ipv6_policy() -> S2ROV:
+    return S2ROV(
         "2001:db8::/32",
         128,
         15169,
@@ -78,7 +78,7 @@ class SemanticsTests(unittest.TestCase):
             ("10.0.2.0/24", 64513, ValidationState.INVALID),
             ("192.0.2.0/24", 64501, ValidationState.NOT_FOUND),
         ]
-        decoded = DAROA.deserialize(policy.serialize())
+        decoded = S2ROV.deserialize(policy.serialize())
         for prefix, asn, expected in cases:
             self.assertEqual(policy.validate_route(prefix, asn), expected)
             self.assertEqual(decoded.validate_route(prefix, asn), expected)
@@ -92,7 +92,7 @@ class SemanticsTests(unittest.TestCase):
             )
 
     def test_unmarked_empty_record_does_not_cancel_marker(self) -> None:
-        policy = DAROA(
+        policy = S2ROV(
             "10.0.0.0/16",
             24,
             64501,
@@ -111,7 +111,7 @@ class SemanticsTests(unittest.TestCase):
         )
 
     def test_base_max_length_and_nonbase_exact_match(self) -> None:
-        policy = DAROA(
+        policy = S2ROV(
             "10.0.0.0/16",
             24,
             15169,
@@ -121,7 +121,7 @@ class SemanticsTests(unittest.TestCase):
                 Stripe("10.0.17.0/24", {16509}),
             ],
         )
-        decoded = DAROA.deserialize(policy.serialize())
+        decoded = S2ROV.deserialize(policy.serialize())
         cases = [
             ("10.0.16.0/20", 18403, ValidationState.EXPLICIT),
             ("10.0.16.0/20", 16509, ValidationState.OPEN_SCOPE),
@@ -137,7 +137,7 @@ class SemanticsTests(unittest.TestCase):
 
     def test_ipv6_records_and_address_family_scope(self) -> None:
         policy = example_ipv6_policy()
-        decoded = DAROA.deserialize(policy.serialize())
+        decoded = S2ROV.deserialize(policy.serialize())
         cases = [
             ("2001:db8::/32", 15169, ValidationState.EXPLICIT),
             ("2001:db8::/32", 16509, ValidationState.INVALID),
@@ -164,7 +164,7 @@ class SemanticsTests(unittest.TestCase):
 class StructureTests(unittest.TestCase):
     def test_boolean_length_and_malformed_route_inputs_are_rejected(self) -> None:
         with self.assertRaisesRegex(TypeError, "max_length"):
-            DAROA(
+            S2ROV(
                 "0.0.0.0/0",
                 True,
                 15169,
@@ -186,8 +186,8 @@ class StructureTests(unittest.TestCase):
         base = Stripe("10.0.0.0/16", {64501}, True)
         child = Stripe("10.0.1.0/24", {64502})
         self.assertFalse(child.has_openscope_marker)
-        forward = DAROA("10.0.0.0/16", 24, 64501, [base, child])
-        reverse = DAROA("10.0.0.0/16", 24, 64501, [child, base])
+        forward = S2ROV("10.0.0.0/16", 24, 64501, [base, child])
+        reverse = S2ROV("10.0.0.0/16", 24, 64501, [child, base])
         self.assertEqual(forward.serialize(), reverse.serialize())
 
     def test_classification_is_independent_of_record_order_and_lpm(self) -> None:
@@ -196,8 +196,8 @@ class StructureTests(unittest.TestCase):
             Stripe("10.0.16.0/20", {18403}, False),
             Stripe("10.0.17.0/24", {16509}, False),
         ]
-        forward = DAROA("10.0.0.0/16", 24, 15169, records)
-        reverse = DAROA("10.0.0.0/16", 24, 15169, reversed(records))
+        forward = S2ROV("10.0.0.0/16", 24, 15169, records)
+        reverse = S2ROV("10.0.0.0/16", 24, 15169, reversed(records))
         cases = (
             (18403, ValidationState.OPEN_SCOPE),
             (16509, ValidationState.EXPLICIT),
@@ -213,7 +213,7 @@ class StructureTests(unittest.TestCase):
 
     def test_overlapping_openscope_markers_are_rejected(self) -> None:
         with self.assertRaisesRegex(ValueError, "prefix-disjoint"):
-            DAROA(
+            S2ROV(
                 "10.0.0.0/16",
                 24,
                 15169,
@@ -223,7 +223,7 @@ class StructureTests(unittest.TestCase):
                 ],
             )
 
-        policy = DAROA(
+        policy = S2ROV(
             "10.0.0.0/16",
             24,
             15169,
@@ -244,7 +244,7 @@ class StructureTests(unittest.TestCase):
 
     def test_openscope_marker_at_max_length_is_rejected(self) -> None:
         with self.assertRaisesRegex(ValueError, "proper descendants"):
-            DAROA(
+            S2ROV(
                 "10.0.0.0/16",
                 24,
                 15169,
@@ -262,7 +262,7 @@ class StructureTests(unittest.TestCase):
         )
 
     def test_dual_stack_prefix_length_boundaries_round_trip(self) -> None:
-        ipv4 = DAROA(
+        ipv4 = S2ROV(
             "0.0.0.0/0",
             32,
             15169,
@@ -271,7 +271,7 @@ class StructureTests(unittest.TestCase):
                 Stripe("255.255.255.255/32", {16509}, False),
             ],
         )
-        ipv6 = DAROA(
+        ipv6 = S2ROV(
             "::/0",
             128,
             15169,
@@ -293,12 +293,12 @@ class StructureTests(unittest.TestCase):
         )
         for policy in (ipv4, ipv6):
             payload = policy.serialize()
-            decoded = DAROA.deserialize(payload)
+            decoded = S2ROV.deserialize(payload)
             self.assertEqual(decoded, policy)
             self.assertEqual(decoded.serialize(), payload)
 
     def test_ipv6_constructor_canonicalizes_host_bits_and_text(self) -> None:
-        policy = DAROA(
+        policy = S2ROV(
             "2001:0DB8:ffff::1/32",
             64,
             15169,
@@ -312,10 +312,10 @@ class StructureTests(unittest.TestCase):
             [stripe.prefix for stripe in policy.stripes],
             ["2001:db8:1:2::/64", "2001:db8::/32"],
         )
-        self.assertEqual(DAROA.deserialize(policy.serialize()), policy)
+        self.assertEqual(S2ROV.deserialize(policy.serialize()), policy)
 
     def test_ipv6_max_length_boundaries(self) -> None:
-        policy = DAROA(
+        policy = S2ROV(
             "2001:db8::/32",
             64,
             15169,
@@ -331,14 +331,14 @@ class StructureTests(unittest.TestCase):
         )
         for max_length in (31, 129):
             with self.assertRaisesRegex(ValueError, "max_length"):
-                DAROA(
+                S2ROV(
                     "2001:db8::/32",
                     max_length,
                     15169,
                     [Stripe("2001:db8::/32", {15169}, True)],
                 )
         with self.assertRaisesRegex(ValueError, "exceeds"):
-            DAROA(
+            S2ROV(
                 "2001:db8::/32",
                 64,
                 15169,
@@ -350,7 +350,7 @@ class StructureTests(unittest.TestCase):
 
     def test_mixed_address_families_are_rejected(self) -> None:
         with self.assertRaisesRegex(ValueError, "address families"):
-            DAROA(
+            S2ROV(
                 "0.0.0.0/0",
                 32,
                 15169,
@@ -366,13 +366,13 @@ class StructureTests(unittest.TestCase):
             Stripe("10.0.0.0/16", origins, True),
             Stripe("10.0.1.0/24", {64502}, False),
         ]
-        policy = DAROA("10.0.0.0/16", 24, 64501, stripes)
+        policy = S2ROV("10.0.0.0/16", 24, 64501, stripes)
         canonical = policy.serialize()
 
         origins.add(64503)
         stripes.reverse()
         self.assertEqual(policy.serialize(), canonical)
-        self.assertEqual(DAROA.deserialize(canonical).serialize(), canonical)
+        self.assertEqual(S2ROV.deserialize(canonical).serialize(), canonical)
 
         with self.assertRaises(FrozenInstanceError):
             policy.max_length = 32
@@ -386,7 +386,7 @@ class StructureTests(unittest.TestCase):
         extended = policy.add_stripe(Stripe("10.0.2.0/24", {64503}, False))
         self.assertEqual(len(policy.stripes), 2)
         self.assertEqual(len(extended.stripes), 3)
-        self.assertEqual(DAROA.deserialize(extended.serialize()), extended)
+        self.assertEqual(S2ROV.deserialize(extended.serialize()), extended)
 
     def test_deserializer_rejects_noncanonical_stripe_order(self) -> None:
         policy = example_policy()
@@ -399,15 +399,15 @@ class StructureTests(unittest.TestCase):
             ["10.0.1.0/24", "10.0.0.0/16"],
         )
         with self.assertRaisesRegex(ValueError, "order"):
-            DAROA.deserialize(header + base + child)
+            S2ROV.deserialize(header + base + child)
 
     def test_missing_base_rejected(self) -> None:
         with self.assertRaisesRegex(ValueError, "base Stripe"):
-            DAROA("10.0.0.0/16", 24, 64501, [])
+            S2ROV("10.0.0.0/16", 24, 64501, [])
 
     def test_duplicate_prefix_rejected(self) -> None:
         with self.assertRaisesRegex(ValueError, "duplicate"):
-            DAROA(
+            S2ROV(
                 "10.0.0.0/16",
                 24,
                 64501,
@@ -419,7 +419,7 @@ class StructureTests(unittest.TestCase):
 
     def test_outside_and_overlong_stripes_rejected(self) -> None:
         with self.assertRaisesRegex(ValueError, "outside"):
-            DAROA(
+            S2ROV(
                 "10.0.0.0/16",
                 24,
                 64501,
@@ -429,7 +429,7 @@ class StructureTests(unittest.TestCase):
                 ],
             )
         with self.assertRaisesRegex(ValueError, "exceeds"):
-            DAROA(
+            S2ROV(
                 "10.0.0.0/16",
                 23,
                 64501,
@@ -453,10 +453,10 @@ class StructureTests(unittest.TestCase):
             corrupted = bytearray(payload)
             corrupted[index] = value
             with self.assertRaisesRegex(ValueError, message):
-                DAROA.deserialize(bytes(corrupted))
+                S2ROV.deserialize(bytes(corrupted))
 
     def test_ipv6_deserializer_rejects_noncanonical_and_malformed_wire(self) -> None:
-        policy = DAROA(
+        policy = S2ROV(
             "2001:db8::/32",
             64,
             15169,
@@ -470,41 +470,41 @@ class StructureTests(unittest.TestCase):
         noncanonical_base = bytearray(payload)
         noncanonical_base[18] = 1
         with self.assertRaisesRegex(ValueError, "non-canonical base"):
-            DAROA.deserialize(bytes(noncanonical_base))
+            S2ROV.deserialize(bytes(noncanonical_base))
 
         # The /49 child is first. Its seventh prefix byte has one network bit,
         # so setting the low bit produces a noncanonical wire prefix.
         noncanonical_stripe = bytearray(payload)
         noncanonical_stripe[37] |= 0x01
         with self.assertRaisesRegex(ValueError, "non-canonical Stripe"):
-            DAROA.deserialize(bytes(noncanonical_stripe))
+            S2ROV.deserialize(bytes(noncanonical_stripe))
 
         bad_tag = bytearray(payload)
         bad_tag[0] ^= 0x01
         with self.assertRaisesRegex(ValueError, "version or header tag"):
-            DAROA.deserialize(bytes(bad_tag))
+            S2ROV.deserialize(bytes(bad_tag))
 
         with self.assertRaisesRegex(ValueError, "truncated IPv6"):
-            DAROA.deserialize(bytes(payload[:29]))
+            S2ROV.deserialize(bytes(payload[:29]))
 
         header = bytes(payload[:30])
         child = policy.stripes[0].serialize()
         base = policy.stripes[1].serialize()
         with self.assertRaisesRegex(ValueError, "order"):
-            DAROA.deserialize(header + base + child)
+            S2ROV.deserialize(header + base + child)
 
         overlong_prefix = bytearray(payload)
         overlong_prefix[30] = 129
         with self.assertRaisesRegex(ValueError, "IPv6 Stripe prefix length"):
-            DAROA.deserialize(bytes(overlong_prefix))
+            S2ROV.deserialize(bytes(overlong_prefix))
 
     def test_deserializer_rejects_truncation_and_trailing_bytes(self) -> None:
         payload = example_policy().serialize()
         for cut in (0, 13, len(payload) - 1):
             with self.assertRaises(ValueError):
-                DAROA.deserialize(payload[:cut])
+                S2ROV.deserialize(payload[:cut])
         with self.assertRaisesRegex(ValueError, "trailing"):
-            DAROA.deserialize(payload + b"\x00")
+            S2ROV.deserialize(payload + b"\x00")
 
 
 class LookupBoundTests(unittest.TestCase):
@@ -531,13 +531,13 @@ class LookupBoundTests(unittest.TestCase):
             for index in range(4_096)
         ]
         policies = (
-            DAROA(
+            S2ROV(
                 "0.0.0.0/0",
                 32,
                 64_501,
                 [Stripe("0.0.0.0/0", {64_501}, True)],
             ),
-            DAROA(
+            S2ROV(
                 "0.0.0.0/0",
                 32,
                 64_501,
@@ -574,13 +574,13 @@ class LookupBoundTests(unittest.TestCase):
             for index in range(4_096)
         ]
         policies = (
-            DAROA(
+            S2ROV(
                 "::/0",
                 128,
                 15169,
                 [Stripe("::/0", {15169}, True)],
             ),
-            DAROA(
+            S2ROV(
                 "::/0",
                 128,
                 15169,
@@ -601,7 +601,7 @@ class LookupBoundTests(unittest.TestCase):
 
 class ProjectionAndMergeTests(unittest.TestCase):
     def test_all_base_origins_use_policy_max_length(self) -> None:
-        policy = DAROA(
+        policy = S2ROV(
             "10.0.0.0/16",
             24,
             15169,

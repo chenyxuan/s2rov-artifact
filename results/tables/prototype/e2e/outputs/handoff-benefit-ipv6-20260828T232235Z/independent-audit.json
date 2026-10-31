@@ -494,13 +494,13 @@
         "actual_sha256": "ce1238badd774eb26f07bc439198fd93693618e53bd5ca4100b7a40c0b07a843",
         "expected_sha256": "ce1238badd774eb26f07bc439198fd93693618e53bd5ca4100b7a40c0b07a843",
         "matches": true,
-        "path": "src/daroa_agent.py"
+        "path": "src/s2rov_agent.py"
       },
       {
         "actual_sha256": "2931c1f640d94be7bbb9b31d2989040362589db47435fe1060f381dd3ed0e184",
         "expected_sha256": "2931c1f640d94be7bbb9b31d2989040362589db47435fe1060f381dd3ed0e184",
         "matches": true,
-        "path": "src/daroa_policy_dualstack.py"
+        "path": "src/s2rov_policy_dualstack.py"
       },
       {
         "actual_sha256": "5a04bf3586714cfd713d90f1e969ac3f067edf2c74bd5c437077d676aea595c0",

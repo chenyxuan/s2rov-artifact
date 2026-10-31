@@ -1,166 +1,160 @@
 {
  "by_directory": {
-  "experiments": 152,
+  "experiments": 151,
   "figure-data": 24,
-  "implementation": 411,
+  "implementation": 410,
   "results": 173
  },
- "file_count": 760,
+ "file_count": 758,
  "files": [
   {
-   "bundle_path": "implementation/daroa_codec/ANALYSIS_PLAN.md",
-   "bytes": 3766,
-   "sha256": "b47408cc597d968930a776a24ef848b3cb6c54384f3217d8165813202f339c56",
-   "source_path": "implementation/daroa_codec/ANALYSIS_PLAN.md"
+   "bundle_path": "implementation/s2rov_codec/ANALYSIS_PLAN.md",
+   "bytes": 3767,
+   "sha256": "9fbe16a5be6eb830b3e8ff750d05c0910bcde6fded79a0dc1ea319a512d43ce5",
+   "source_path": "implementation/s2rov_codec/ANALYSIS_PLAN.md"
   },
   {
-   "bundle_path": "implementation/daroa_codec/DESIGN.md",
-   "bytes": 8084,
-   "sha256": "d0a88e7f99f53783a6695ad98a7063a4096de7d9476a284901f60c2332e02341",
-   "source_path": "implementation/daroa_codec/DESIGN.md"
+   "bundle_path": "implementation/s2rov_codec/DESIGN.md",
+   "bytes": 8085,
+   "sha256": "811383a11c8a2ad3e5d1194dd73799c4040e5d24d3a381e10b8ac70fb833120d",
+   "source_path": "implementation/s2rov_codec/DESIGN.md"
   },
   {
-   "bundle_path": "results/tables/daroa_codec/outputs/tables/as_set_stats.csv",
+   "bundle_path": "results/tables/s2rov_codec/outputs/tables/as_set_stats.csv",
    "bytes": 331,
    "sha256": "b4aab409971df36ebe48aff9c57afafc6285a9e98ed93189bf278c5c34c6bcbf",
-   "source_path": "implementation/daroa_codec/outputs/tables/as_set_stats.csv"
+   "source_path": "implementation/s2rov_codec/outputs/tables/as_set_stats.csv"
   },
   {
-   "bundle_path": "results/tables/daroa_codec/outputs/tables/candidate_policy_corpus.csv",
+   "bundle_path": "results/tables/s2rov_codec/outputs/tables/candidate_policy_corpus.csv",
    "bytes": 133123,
    "sha256": "5a6d8baff76cdfb12c3d3efd2c70c820537fdb91bea596262b0a6f7c740d27cf",
-   "source_path": "implementation/daroa_codec/outputs/tables/candidate_policy_corpus.csv"
+   "source_path": "implementation/s2rov_codec/outputs/tables/candidate_policy_corpus.csv"
   },
   {
-   "bundle_path": "results/tables/daroa_codec/outputs/tables/encoding_sizes.csv",
+   "bundle_path": "results/tables/s2rov_codec/outputs/tables/encoding_sizes.csv",
    "bytes": 247,
    "sha256": "bd6966a0f11f50aed06b09dfbd56a1fa1851b3930a151194e7e558f9dbb19b6a",
-   "source_path": "implementation/daroa_codec/outputs/tables/encoding_sizes.csv"
+   "source_path": "implementation/s2rov_codec/outputs/tables/encoding_sizes.csv"
   },
   {
-   "bundle_path": "results/tables/daroa_codec/outputs/tables/flattening_validation.csv",
+   "bundle_path": "results/tables/s2rov_codec/outputs/tables/flattening_validation.csv",
    "bytes": 209,
    "sha256": "709c51a90b7e2d4a37ff99c1c385960bb1f6f48c4862bdadf343b6fd78193a53",
-   "source_path": "implementation/daroa_codec/outputs/tables/flattening_validation.csv"
+   "source_path": "implementation/s2rov_codec/outputs/tables/flattening_validation.csv"
   },
   {
-   "bundle_path": "results/tables/daroa_codec/outputs/tables/merge_ratios.csv",
+   "bundle_path": "results/tables/s2rov_codec/outputs/tables/merge_ratios.csv",
    "bytes": 5359,
    "sha256": "c02638fae4b05ffab75e25ea96de6906b876da6d9a6d23d2d040443a439a865a",
-   "source_path": "implementation/daroa_codec/outputs/tables/merge_ratios.csv"
+   "source_path": "implementation/s2rov_codec/outputs/tables/merge_ratios.csv"
   },
   {
-   "bundle_path": "results/tables/daroa_codec/outputs/tables/reference_format_sizes.csv",
+   "bundle_path": "results/tables/s2rov_codec/outputs/tables/reference_format_sizes.csv",
    "bytes": 364,
    "sha256": "7bbaa39171529f05e3b28b78a111c7d1394c273796d0fec1ebab07048bf43439",
-   "source_path": "implementation/daroa_codec/outputs/tables/reference_format_sizes.csv"
+   "source_path": "implementation/s2rov_codec/outputs/tables/reference_format_sizes.csv"
   },
   {
-   "bundle_path": "results/tables/daroa_codec/outputs/tables/update_costs.csv",
+   "bundle_path": "results/tables/s2rov_codec/outputs/tables/update_costs.csv",
    "bytes": 262,
    "sha256": "5cc948275b31d2e4e8f55fd0a5e6c68a67522f7dc4ea1c22d40425456571b6b3",
-   "source_path": "implementation/daroa_codec/outputs/tables/update_costs.csv"
+   "source_path": "implementation/s2rov_codec/outputs/tables/update_costs.csv"
   },
   {
-   "bundle_path": "implementation/daroa_codec/scripts/01_encoding.py",
+   "bundle_path": "implementation/s2rov_codec/scripts/01_encoding.py",
    "bytes": 4429,
-   "sha256": "568de623b4f060e878834370c36071be3e473feb1846cdd0097aaaf9343dab21",
-   "source_path": "implementation/daroa_codec/scripts/01_encoding.py"
+   "sha256": "ea8d74ed4785a884bea7f4dc11756ba7f3ebb127a92f54788534a6d4ce95c028",
+   "source_path": "implementation/s2rov_codec/scripts/01_encoding.py"
   },
   {
-   "bundle_path": "implementation/daroa_codec/scripts/02_as_set_compression.py",
+   "bundle_path": "implementation/s2rov_codec/scripts/02_as_set_compression.py",
    "bytes": 2227,
    "sha256": "0fc52c1209f3c0d140912665a686965bb8c1e1b756d3cbd1a990cc63fc6e05b7",
-   "source_path": "implementation/daroa_codec/scripts/02_as_set_compression.py"
+   "source_path": "implementation/s2rov_codec/scripts/02_as_set_compression.py"
   },
   {
-   "bundle_path": "implementation/daroa_codec/scripts/03_stripe_merging.py",
+   "bundle_path": "implementation/s2rov_codec/scripts/03_stripe_merging.py",
    "bytes": 4703,
-   "sha256": "c033c45a73a5ac2b3c4d801689d777504206f9e74bdb7f49cd75af7426b074d1",
-   "source_path": "implementation/daroa_codec/scripts/03_stripe_merging.py"
+   "sha256": "a851975d8dd3a91328ed8f39ba419a5b6727153f9688c651e35d40da34843398",
+   "source_path": "implementation/s2rov_codec/scripts/03_stripe_merging.py"
   },
   {
-   "bundle_path": "implementation/daroa_codec/scripts/04_flattening.py",
+   "bundle_path": "implementation/s2rov_codec/scripts/04_flattening.py",
    "bytes": 3479,
-   "sha256": "4f78a9647287e88662d5712caff885424fd9cf20993018b6573ba8eb1361ce72",
-   "source_path": "implementation/daroa_codec/scripts/04_flattening.py"
+   "sha256": "558c339dbfad616fb41f1bb8c73dfe08c8e3d78e4ac05fc226f60b55fc7e8f76",
+   "source_path": "implementation/s2rov_codec/scripts/04_flattening.py"
   },
   {
-   "bundle_path": "implementation/daroa_codec/scripts/05_benchmark.py",
+   "bundle_path": "implementation/s2rov_codec/scripts/05_benchmark.py",
    "bytes": 3295,
-   "sha256": "41098cd156b7f0eae4594a379b29f145b88b63bea2110c855804c7160d86a0e1",
-   "source_path": "implementation/daroa_codec/scripts/05_benchmark.py"
+   "sha256": "52f1c0a0ad0e6d46250d3f930aa8b3f7fecac9cbfe1fa9cecc7ff70111f7ea7b",
+   "source_path": "implementation/s2rov_codec/scripts/05_benchmark.py"
   },
   {
-   "bundle_path": "implementation/daroa_codec/scripts/06_update_efficiency.py",
+   "bundle_path": "implementation/s2rov_codec/scripts/06_update_efficiency.py",
    "bytes": 3163,
-   "sha256": "4d445cb9217e42904662fb6441f0dfe91dd027233c16db2825cfdc145e73384e",
-   "source_path": "implementation/daroa_codec/scripts/06_update_efficiency.py"
+   "sha256": "6f46feed26388e53edf79ab4ddd5cd6e5ac1541cb3242a344381b4d33b4a7b39",
+   "source_path": "implementation/s2rov_codec/scripts/06_update_efficiency.py"
   },
   {
-   "bundle_path": "implementation/daroa_codec/scripts/07_candidate_policy_corpus.py",
+   "bundle_path": "implementation/s2rov_codec/scripts/07_candidate_policy_corpus.py",
    "bytes": 3441,
-   "sha256": "7b212c21b9ddb5e6c08eaf50e56cbbccc3f523971619fbf75277faf8e5026d19",
-   "source_path": "implementation/daroa_codec/scripts/07_candidate_policy_corpus.py"
+   "sha256": "72f27a80fff93dd8b10e146ddf827a5b331f45904d038914bef3c0a1121ac9ce",
+   "source_path": "implementation/s2rov_codec/scripts/07_candidate_policy_corpus.py"
   },
   {
-   "bundle_path": "implementation/daroa_codec/scripts/utils/__init__.py",
+   "bundle_path": "implementation/s2rov_codec/scripts/utils/__init__.py",
    "bytes": 28,
-   "sha256": "77a0a69882d755950c7f56717f8aaebe0554b863df580189193c82fd46d224f8",
-   "source_path": "implementation/daroa_codec/scripts/utils/__init__.py"
+   "sha256": "5d51c47c619b9d79e9b46efae34029e1930753edf923fe9b2c6f614de1fbda07",
+   "source_path": "implementation/s2rov_codec/scripts/utils/__init__.py"
   },
   {
-   "bundle_path": "implementation/daroa_codec/scripts/utils/as_set.py",
+   "bundle_path": "implementation/s2rov_codec/scripts/utils/as_set.py",
    "bytes": 3111,
    "sha256": "fed735453efd53c3b212f2835c11b683ad25f03f2af03d34fa29ebc567051d0f",
-   "source_path": "implementation/daroa_codec/scripts/utils/as_set.py"
+   "source_path": "implementation/s2rov_codec/scripts/utils/as_set.py"
   },
   {
-   "bundle_path": "implementation/daroa_codec/scripts/utils/daroa.py",
+   "bundle_path": "implementation/s2rov_codec/scripts/utils/s2rov.py",
    "bytes": 20416,
-   "sha256": "f7a6b2b85d2f0319c12de42fc0e0b71ada07325fecb5cf14a4c2c7c4652b109f",
-   "source_path": "implementation/daroa_codec/scripts/utils/daroa.py"
+   "sha256": "7687342bd1ae19e7182856ee448df8adf1ce72b1b234c70cd7737893a8bf4d67",
+   "source_path": "implementation/s2rov_codec/scripts/utils/s2rov.py"
   },
   {
-   "bundle_path": "implementation/daroa_codec/scripts/utils/flatten.py",
+   "bundle_path": "implementation/s2rov_codec/scripts/utils/flatten.py",
    "bytes": 3144,
-   "sha256": "e80fbc025ec950f4573589bc83f6c94bc05dc26c5452b827fa544094786c679c",
-   "source_path": "implementation/daroa_codec/scripts/utils/flatten.py"
+   "sha256": "67cf01d97fefccd1fbc2cd280f54714c4b26cb92a982008d3ea037d7a2ba8abf",
+   "source_path": "implementation/s2rov_codec/scripts/utils/flatten.py"
   },
   {
-   "bundle_path": "implementation/daroa_codec/scripts/utils/merge.py",
+   "bundle_path": "implementation/s2rov_codec/scripts/utils/merge.py",
    "bytes": 977,
-   "sha256": "4ea3058005b9ee37672793e16c284322b6034a87e47231e76a81229c22ab57e5",
-   "source_path": "implementation/daroa_codec/scripts/utils/merge.py"
+   "sha256": "c929f54eb940d917c0719d043e0b683635c589b88acb86adaedc1c8e46fc5629",
+   "source_path": "implementation/s2rov_codec/scripts/utils/merge.py"
   },
   {
-   "bundle_path": "implementation/daroa_codec/scripts/utils/snapshot.py",
+   "bundle_path": "implementation/s2rov_codec/scripts/utils/snapshot.py",
    "bytes": 9233,
-   "sha256": "e3dd8fc6274891f42667993f367963ca0dae44709f269ab8b72d19c2066b2a35",
-   "source_path": "implementation/daroa_codec/scripts/utils/snapshot.py"
+   "sha256": "33f9a7f7c4c3fdf86e9d5a2f9c38e25f96b6495fdff639d3fe11617d5bd31123",
+   "source_path": "implementation/s2rov_codec/scripts/utils/snapshot.py"
   },
   {
-   "bundle_path": "implementation/daroa_codec/tests/test_daroa.py",
+   "bundle_path": "implementation/s2rov_codec/tests/test_s2rov.py",
    "bytes": 25297,
-   "sha256": "3937d207f0d8ad3fec6926c8de295de7908bfc0198ecd3ec63f55304a0c65f1e",
-   "source_path": "implementation/daroa_codec/tests/test_daroa.py"
+   "sha256": "2afbe5c8ab478dbd77041ed020a3765c64e3d08619bb61b4fc7902cc142f521b",
+   "source_path": "implementation/s2rov_codec/tests/test_s2rov.py"
   },
   {
-   "bundle_path": "implementation/daroa_codec/tests/test_snapshot.py",
+   "bundle_path": "implementation/s2rov_codec/tests/test_snapshot.py",
    "bytes": 6696,
-   "sha256": "3c37237e8d1773988920c999dfbae542c459b6a196e2503d9ada9c7af1580c5e",
-   "source_path": "implementation/daroa_codec/tests/test_snapshot.py"
-  },
-  {
-   "bundle_path": "implementation/prototype/MSN_SYSTEM_GAP_ASSESSMENT.md",
-   "bytes": 6319,
-   "sha256": "7e1732fbbb70512f04798c956a4dc8c79445abc0d93cab7003ff547faef6c31c",
-   "source_path": "implementation/prototype/MSN_SYSTEM_GAP_ASSESSMENT.md"
+   "sha256": "eae5e04791458c4250d813c1eb1bc84b9a17a0f38bcb828376ac359c8c336d2d",
+   "source_path": "implementation/s2rov_codec/tests/test_snapshot.py"
   },
   {
    "bundle_path": "implementation/prototype/SYSTEM.md",
-   "bytes": 6876,
-   "sha256": "c31bbb6b77b08c89c7753036259a4784ad39734aa5a05e7b2457e0b4f5e9bf81",
+   "bytes": 6893,
+   "sha256": "6473ea5233192c9b6b2bcbdbe016ede9f7a55b1376f2f9f8c92742ae689cca90",
    "source_path": "implementation/prototype/SYSTEM.md"
   },
   {
@@ -177,14 +171,14 @@
   },
   {
    "bundle_path": "implementation/prototype/e2e/README.md",
-   "bytes": 14602,
-   "sha256": "c768af3c1eac91ec82797003de506df4889a8de9a183eabf60d8c87ff0f13fef",
+   "bytes": 14614,
+   "sha256": "b2a2f64c6988ae2454eac87e05cc7302d36a5a00d7dfd9d02fa169b55b0fcf59",
    "source_path": "implementation/prototype/e2e/README.md"
   },
   {
    "bundle_path": "results/tables/prototype/e2e/audits/run-20260823T024129Z/q2_aggregate_audit.json",
    "bytes": 441229,
-   "sha256": "750c47d6e4748faa64daa5afd325258794071652025e27f5235d89b3c05a2540",
+   "sha256": "612e27a5f506e7eb4abe82c6dd8973d6edcf2ebbd9536ee1c72ec17a8a9b184a",
    "source_path": "implementation/prototype/e2e/audits/run-20260823T024129Z/q2_aggregate_audit.json"
   },
   {
@@ -1030,13 +1024,13 @@
   {
    "bundle_path": "implementation/prototype/e2e/outputs/controls-20260823T022857Z/git-status.txt",
    "bytes": 453,
-   "sha256": "de97417890e6815e6a2fe306ccf7e701423ed0f4aa86c2069b3310c200de4c14",
+   "sha256": "ab69925c79587ee8184e092a5078ebb4e79a6635264117c959b8fdc81e50a089",
    "source_path": "implementation/prototype/e2e/outputs/controls-20260823T022857Z/git-status.txt"
   },
   {
    "bundle_path": "results/tables/prototype/e2e/outputs/controls-20260823T022857Z/independent-audit.json",
    "bytes": 28923,
-   "sha256": "302a68eaf40a59c529e52b637a382d2dd14d129372f76f35b1f05670c0508374",
+   "sha256": "0cc58d86d23da24515f7397737622433314e6917b517d67bbd76f5f7555c5db1",
    "source_path": "implementation/prototype/e2e/outputs/controls-20260823T022857Z/independent-audit.json"
   },
   {
@@ -1324,7 +1318,7 @@
   {
    "bundle_path": "results/tables/prototype/e2e/outputs/handoff-benefit-20260828T143645Z/independent-audit.json",
    "bytes": 16399,
-   "sha256": "90508d76279ac0192b0dd38b48735557ae7b67fa904fda96a5af685a77abde6b",
+   "sha256": "d564ecb3de56431060c3e740686de5ae52331fff8eb45ea494545f3a0c982db5",
    "source_path": "implementation/prototype/e2e/outputs/handoff-benefit-20260828T143645Z/independent-audit.json"
   },
   {
@@ -1396,7 +1390,7 @@
   {
    "bundle_path": "results/tables/prototype/e2e/outputs/handoff-benefit-20260828T143741Z/independent-audit.json",
    "bytes": 866172,
-   "sha256": "e5a3183b2826b72b70d5bf4b704bb9317f1c7d0cd33cf7497422c49e1d5227e6",
+   "sha256": "1315339fe845efe526254a90ba3843566d70532f62b1bcec5e40fd4895dec5ef",
    "source_path": "implementation/prototype/e2e/outputs/handoff-benefit-20260828T143741Z/independent-audit.json"
   },
   {
@@ -1786,13 +1780,13 @@
   {
    "bundle_path": "implementation/prototype/e2e/outputs/handoff-benefit-ipv6-20260828T232235Z/git-status.txt",
    "bytes": 492,
-   "sha256": "4dbd161ab6a2fc0e3f71349ceb038dd9afbb06d3755278e8293f645b5fa15dd9",
+   "sha256": "3a9bd5029fa762577a09211408dc7375034e4941ec2c440d40af445c1f7e196b",
    "source_path": "implementation/prototype/e2e/outputs/handoff-benefit-ipv6-20260828T232235Z/git-status.txt"
   },
   {
    "bundle_path": "results/tables/prototype/e2e/outputs/handoff-benefit-ipv6-20260828T232235Z/independent-audit.json",
    "bytes": 17949,
-   "sha256": "2ae3de7367664fe2d9e1e13482e4ad4e54d992728260c1205e7bb2c9030bbf16",
+   "sha256": "0791f27d3404b02bffe8902ca908995f5e768b82428e9e38b3a80c2c2ce1c2d4",
    "source_path": "implementation/prototype/e2e/outputs/handoff-benefit-ipv6-20260828T232235Z/independent-audit.json"
   },
   {
@@ -1894,13 +1888,13 @@
   {
    "bundle_path": "implementation/prototype/e2e/outputs/handoff-benefit-ipv6-20260829T002536Z/git-status.txt",
    "bytes": 492,
-   "sha256": "4dbd161ab6a2fc0e3f71349ceb038dd9afbb06d3755278e8293f645b5fa15dd9",
+   "sha256": "3a9bd5029fa762577a09211408dc7375034e4941ec2c440d40af445c1f7e196b",
    "source_path": "implementation/prototype/e2e/outputs/handoff-benefit-ipv6-20260829T002536Z/git-status.txt"
   },
   {
    "bundle_path": "results/tables/prototype/e2e/outputs/handoff-benefit-ipv6-20260829T002536Z/independent-audit.json",
    "bytes": 866777,
-   "sha256": "b276b14318ed61fa3c5ee4a1f4e00a31b23a348cb75b028b2ac17187d046ace2",
+   "sha256": "32a556df0b8599a8c1c9038134a383c0eee8e787308571eaa1065da477d5a47c",
    "source_path": "implementation/prototype/e2e/outputs/handoff-benefit-ipv6-20260829T002536Z/independent-audit.json"
   },
   {
@@ -2290,7 +2284,7 @@
   {
    "bundle_path": "implementation/prototype/e2e/outputs/policy-scale-ipv4-20260830T081349Z/git-status.txt",
    "bytes": 628,
-   "sha256": "5720408e5af8b08e5b2d5e88e86fec48d6f3689d2e87357270843f441e031f65",
+   "sha256": "ad850d0851b41de6f3ad3fc6ca343f54243faced0d0f7b259f152d277eb24593",
    "source_path": "implementation/prototype/e2e/outputs/policy-scale-ipv4-20260830T081349Z/git-status.txt"
   },
   {
@@ -2320,7 +2314,7 @@
   {
    "bundle_path": "implementation/prototype/e2e/outputs/policy-scale-ipv6-20260830T081712Z/git-status.txt",
    "bytes": 628,
-   "sha256": "5720408e5af8b08e5b2d5e88e86fec48d6f3689d2e87357270843f441e031f65",
+   "sha256": "ad850d0851b41de6f3ad3fc6ca343f54243faced0d0f7b259f152d277eb24593",
    "source_path": "implementation/prototype/e2e/outputs/policy-scale-ipv6-20260830T081712Z/git-status.txt"
   },
   {
@@ -2433,8 +2427,8 @@
   },
   {
    "bundle_path": "implementation/prototype/e2e/outputs/run-20260729T023834Z/VALIDATION.md",
-   "bytes": 1779,
-   "sha256": "34eb8d767e52ccfa84901aa4fb99475f21af3a66a9192e32e30840e9d62ca05b",
+   "bytes": 1299,
+   "sha256": "8773397f21cecd7a985c3d074152f75f7580f3946f675932f1f80a9b09bfeaa1",
    "source_path": "implementation/prototype/e2e/outputs/run-20260729T023834Z/VALIDATION.md"
   },
   {
@@ -2596,7 +2590,7 @@
   {
    "bundle_path": "implementation/prototype/e2e/outputs/scale-20260823T025539Z/git-status.txt",
    "bytes": 518,
-   "sha256": "9cb87d0b1bccaaab05e04566b56fd041f37a402c88c5023ecdda2b8b467c0c19",
+   "sha256": "66bac2e1a9aac8483f318c9ff693519b4823ccdbc8b2b5863cb416822b50d5d2",
    "source_path": "implementation/prototype/e2e/outputs/scale-20260823T025539Z/git-status.txt"
   },
   {
@@ -2662,7 +2656,7 @@
   {
    "bundle_path": "implementation/prototype/e2e/outputs/staged-20260823T024131Z/git-status.txt",
    "bytes": 518,
-   "sha256": "9cb87d0b1bccaaab05e04566b56fd041f37a402c88c5023ecdda2b8b467c0c19",
+   "sha256": "66bac2e1a9aac8483f318c9ff693519b4823ccdbc8b2b5863cb416822b50d5d2",
    "source_path": "implementation/prototype/e2e/outputs/staged-20260823T024131Z/git-status.txt"
   },
   {
@@ -2674,19 +2668,19 @@
   {
    "bundle_path": "implementation/prototype/e2e/scripts/build-images.sh",
    "bytes": 1146,
-   "sha256": "a412deb9fa703065a7ff8fd2378cfbbe68741eaabc81c2c8feffc8ea8ac1c2fe",
+   "sha256": "8219b506ca1e721b7f2187877e5bb60d451a01ebbb4ff7fb80c861b2b7a4558f",
    "source_path": "implementation/prototype/e2e/scripts/build-images.sh"
   },
   {
    "bundle_path": "implementation/prototype/e2e/scripts/build-staged-images.sh",
    "bytes": 971,
-   "sha256": "a8b0652f628d8b279e7237f6f12b3832a63bba72951667d775c02f6834b61ee7",
+   "sha256": "07792da45a982f434dda7bbd654f852f078ad3da16f9966f8508c9d413c0df97",
    "source_path": "implementation/prototype/e2e/scripts/build-staged-images.sh"
   },
   {
    "bundle_path": "implementation/prototype/e2e/scripts/krill-entrypoint.sh",
    "bytes": 556,
-   "sha256": "505415136ccec730752fc4125b8b957ced7560725cf4fa1a5f73de51f8c11b00",
+   "sha256": "58a00e665ed33b3393d223493cd1cdf28d2a351d16d0f44bd2898ef4b3a09f95",
    "source_path": "implementation/prototype/e2e/scripts/krill-entrypoint.sh"
   },
   {
@@ -2698,31 +2692,31 @@
   {
    "bundle_path": "implementation/prototype/e2e/scripts/run-churn-controls.sh",
    "bytes": 22104,
-   "sha256": "7af611f987cab0a5b9835bcd9413a64a5f5024e9528ebc3d6341b3493776c281",
+   "sha256": "ac9e9950ddaefdbce931b3ab37edc94f0dd5fb6cdd24a412c5e6d783a26829b4",
    "source_path": "implementation/prototype/e2e/scripts/run-churn-controls.sh"
   },
   {
    "bundle_path": "implementation/prototype/e2e/scripts/run-churn-experiment.sh",
    "bytes": 33791,
-   "sha256": "ed2cce8d65b59b60e9b262b6d13692c45525c5f929da10860b2cc1023f9fca7c",
+   "sha256": "7f70c28e69d9cc47bb498f3cf42210d21237ec478e8dc1a901f8f9f71216cd2c",
    "source_path": "implementation/prototype/e2e/scripts/run-churn-experiment.sh"
   },
   {
    "bundle_path": "implementation/prototype/e2e/scripts/run-experiment.sh",
    "bytes": 28902,
-   "sha256": "2fda1a67abc979af96e411208bf329eb73b34cf11743dc4b65ba4e2be91950b4",
+   "sha256": "f8dc19eed27b8d8229a645ab38fd2e885ee3646dd4201b9f88db4ae642f34cb0",
    "source_path": "implementation/prototype/e2e/scripts/run-experiment.sh"
   },
   {
    "bundle_path": "implementation/prototype/e2e/scripts/run-handoff-benefit.sh",
    "bytes": 47104,
-   "sha256": "31bb55cd32bf3b49968e9947078ec130780e4bb1cbf285db318595c605d27fa0",
+   "sha256": "ccfbf6268ab65a48d5bf1b9d5540def4ae964922303c1b12c7f9ee0fa97491a5",
    "source_path": "implementation/prototype/e2e/scripts/run-handoff-benefit.sh"
   },
   {
    "bundle_path": "implementation/prototype/e2e/scripts/run-staged-deployment.sh",
    "bytes": 20456,
-   "sha256": "3b79841cfc1dd43b460b9db6fe9bab4e75d86b191d335c4bf5b88bc99eb91dc5",
+   "sha256": "dcd4021c469b89e296de46ad576780a22eac4b1027f84f6c9b94483987d911b8",
    "source_path": "implementation/prototype/e2e/scripts/run-staged-deployment.sh"
   },
   {
@@ -2750,21 +2744,21 @@
    "source_path": "implementation/prototype/e2e/src/audit_selected_fixture_run.py"
   },
   {
-   "bundle_path": "implementation/prototype/e2e/src/daroa_agent.py",
+   "bundle_path": "implementation/prototype/e2e/src/s2rov_agent.py",
    "bytes": 24502,
    "sha256": "fbcd3d3b1313e433fc085627d7eb718191b2f00a54d3350859204d87047f3c72",
-   "source_path": "implementation/prototype/e2e/src/daroa_agent.py"
+   "source_path": "implementation/prototype/e2e/src/s2rov_agent.py"
   },
   {
-   "bundle_path": "implementation/prototype/e2e/src/daroa_policy_dualstack.py",
+   "bundle_path": "implementation/prototype/e2e/src/s2rov_policy_dualstack.py",
    "bytes": 6986,
-   "sha256": "604869d6bad9b62fd2855f5d343c85221579066a14de3d9f2c940d706873c99c",
-   "source_path": "implementation/prototype/e2e/src/daroa_policy_dualstack.py"
+   "sha256": "1c9b0bd86fc739d1cce34a0fba6cffeab68e689fc141f21bc6c6a985790b4c21",
+   "source_path": "implementation/prototype/e2e/src/s2rov_policy_dualstack.py"
   },
   {
    "bundle_path": "implementation/prototype/e2e/src/staged_policy.py",
    "bytes": 8638,
-   "sha256": "c95a712bf425c3bf88d1cac7b8681fe23eb930edab89d8ed71cf0baaf4fbcc38",
+   "sha256": "8ab330294c2cc3f28bf1c39bc37ba5077148e2fd98261d8e0cf959fed10702e2",
    "source_path": "implementation/prototype/e2e/src/staged_policy.py"
   },
   {
@@ -2800,7 +2794,7 @@
   {
    "bundle_path": "implementation/prototype/e2e/src/summarize_staged.py",
    "bytes": 12536,
-   "sha256": "8242ab070a65e7d72852bcde132e1b5bcea25b5cecf6c20c09e21936b295c779",
+   "sha256": "03734924c49cd2fc51872fc8b8d35d74ba5393944c8f27ad8862c7931d460d2e",
    "source_path": "implementation/prototype/e2e/src/summarize_staged.py"
   },
   {
@@ -2834,16 +2828,16 @@
    "source_path": "implementation/prototype/e2e/tests/test_audit_selected_fixture_run.py"
   },
   {
-   "bundle_path": "implementation/prototype/e2e/tests/test_daroa_agent.py",
+   "bundle_path": "implementation/prototype/e2e/tests/test_s2rov_agent.py",
    "bytes": 10493,
-   "sha256": "4a4b2656d3a18260aedaeea0247afe76753896af14b70e1852c4c8f0418f037f",
-   "source_path": "implementation/prototype/e2e/tests/test_daroa_agent.py"
+   "sha256": "a3caa7f384c262d769aee02e3927804ac86449fb4f71988c934353db6ccd1048",
+   "source_path": "implementation/prototype/e2e/tests/test_s2rov_agent.py"
   },
   {
-   "bundle_path": "implementation/prototype/e2e/tests/test_daroa_policy_dualstack.py",
+   "bundle_path": "implementation/prototype/e2e/tests/test_s2rov_policy_dualstack.py",
    "bytes": 5167,
-   "sha256": "9ab2c0fdbe95fe9403e39e80fa0c859a49e2bb80ab5baf6f19b222e3846c6578",
-   "source_path": "implementation/prototype/e2e/tests/test_daroa_policy_dualstack.py"
+   "sha256": "a0df7548aa0a53edaa57190336d99473844de151e757537c923f9fdac8e7d9ec",
+   "source_path": "implementation/prototype/e2e/tests/test_s2rov_policy_dualstack.py"
   },
   {
    "bundle_path": "implementation/prototype/e2e/tests/test_staged_policy.py",
@@ -2883,8 +2877,8 @@
   },
   {
    "bundle_path": "implementation/prototype/launch.md",
-   "bytes": 2770,
-   "sha256": "3aa6c6c03541e415c9535cb18dde0c381fd6e8dccfa5fbad2b50fa6c14ca64ff",
+   "bytes": 2774,
+   "sha256": "105a9d4a3dd1aa4e52b2d8b72d1c54a0d229c537eb35a16d056bb91979770ceb",
    "source_path": "implementation/prototype/launch.md"
   },
   {
@@ -2955,8 +2949,8 @@
   },
   {
    "bundle_path": "experiments/candidates/allocation_tree/visibility_experiment/outputs/reports/DATASET_LICENSE_GATE.md",
-   "bytes": 2808,
-   "sha256": "c6dbbb914766aa08b1109edd9652c2c23e81ac8dacd1acef9269bb63cd528239",
+   "bytes": 2793,
+   "sha256": "079d303ced4eefdb0b6c399c97c35610456cfc4fc0e963ea65530b94cf42028c",
    "source_path": "experiments/candidates/allocation_tree/visibility_experiment/outputs/reports/DATASET_LICENSE_GATE.md"
   },
   {
@@ -3111,27 +3105,27 @@
   },
   {
    "bundle_path": "experiments/semantics/S2-ROV_SEMANTICS.md",
-   "bytes": 8867,
-   "sha256": "3b4321e821a933026f33f0394df507dd20cc2da9e812bab109d83bcd0d5a9811",
+   "bytes": 8869,
+   "sha256": "96be0456b9c8ed83c0e3206b1bae7351d74ab1e63227b665466bfbb61e90e53e",
    "source_path": "experiments/semantics/S2-ROV_SEMANTICS.md"
   },
   {
    "bundle_path": "experiments/cost/README.md",
    "bytes": 951,
-   "sha256": "6a9f43220a13139c22599166efa21da946ab06aeeaa3e642feb76b6ce05ac718",
+   "sha256": "744f735aed47a7883e21e14828711a924b6b191806cbce33802d10c172a987e3",
    "source_path": "experiments/cost/README.md"
   },
   {
-   "bundle_path": "results/tables/cost/outputs/tables/daroa_policy_cases.csv",
+   "bundle_path": "results/tables/cost/outputs/tables/s2rov_policy_cases.csv",
    "bytes": 648,
    "sha256": "8f255db192c6fac988e5aefe26949b32925c9d0989681c3d12d5e71de8a4204a",
-   "source_path": "experiments/cost/outputs/tables/daroa_policy_cases.csv"
+   "source_path": "experiments/cost/outputs/tables/s2rov_policy_cases.csv"
   },
   {
-   "bundle_path": "results/tables/cost/outputs/tables/daroa_reference_benchmark.csv",
+   "bundle_path": "results/tables/cost/outputs/tables/s2rov_reference_benchmark.csv",
    "bytes": 319,
    "sha256": "d4b122263c1ed79021ddec8b7e5f141882e0866190bf221d94762ef8a5f0ca7d",
-   "source_path": "experiments/cost/outputs/tables/daroa_reference_benchmark.csv"
+   "source_path": "experiments/cost/outputs/tables/s2rov_reference_benchmark.csv"
   },
   {
    "bundle_path": "results/tables/cost/outputs/tables/label_coverage_adoption.csv",
@@ -3153,8 +3147,8 @@
   },
   {
    "bundle_path": "experiments/cost/processing_benchmark/README.md",
-   "bytes": 3877,
-   "sha256": "14e8436993c0df37b8e35c5d9d7981201b05891d19869513ea485f99c443db39",
+   "bytes": 3879,
+   "sha256": "c74d4e7064087f0f76db68103793d09a2dfffc61a145c15c007f0da17bcb8907",
    "source_path": "experiments/cost/processing_benchmark/README.md"
   },
   {
@@ -3172,7 +3166,7 @@
   {
    "bundle_path": "experiments/cost/processing_benchmark/audit_policy_update_benchmark.py",
    "bytes": 22148,
-   "sha256": "6a530ba945ef08f2bd28ef7a2713f07a6c9a6a94b76a9b34ff15b32c7ab53d54",
+   "sha256": "ff3545a99172daf7f0d79e3cfb4743d1e6ece1ec87563f5856e8b04c88276def",
    "source_path": "experiments/cost/processing_benchmark/audit_policy_update_benchmark.py"
   },
   {
@@ -3339,8 +3333,8 @@
   },
   {
    "bundle_path": "experiments/cost/processing_benchmark/outputs/processing-20260828T1553Z/INDEPENDENT_AUDIT.md",
-   "bytes": 3117,
-   "sha256": "40af4eb4d05eb4b9ecfd483904f441cbc0eb2f3fea64ba187b10a5146007f743",
+   "bytes": 3119,
+   "sha256": "4425b78e61122de85cb42328e8ead9019447390aa8f9e17dc0a5a91729ad7833",
    "source_path": "experiments/cost/processing_benchmark/outputs/processing-20260828T1553Z/INDEPENDENT_AUDIT.md"
   },
   {
@@ -3351,8 +3345,8 @@
   },
   {
    "bundle_path": "experiments/cost/processing_benchmark/outputs/processing-20260828T1553Z/RUN_REPORT.md",
-   "bytes": 4499,
-   "sha256": "b505faf86eae176d11d71d20b97a140a4ac60f3411f22da478e61ee60d6d7137",
+   "bytes": 4501,
+   "sha256": "b56b60132db2123237d4d8b7d8c910ab3cc4bb64c3177b143eb23b509bbeb8c1",
    "source_path": "experiments/cost/processing_benchmark/outputs/processing-20260828T1553Z/RUN_REPORT.md"
   },
   {
@@ -3381,8 +3375,8 @@
   },
   {
    "bundle_path": "experiments/cost/processing_benchmark/outputs/processing-ipv4-dualstack-20260828/RUN_REPORT.md",
-   "bytes": 4499,
-   "sha256": "1407def8008599a9e5529d290bbf6dee58306145b09a84b967c95d88f6c8a388",
+   "bytes": 4501,
+   "sha256": "9e7300e217850a8e96b80de904cc420c595f2338fe42f51cd87e9f23cee08d95",
    "source_path": "experiments/cost/processing_benchmark/outputs/processing-ipv4-dualstack-20260828/RUN_REPORT.md"
   },
   {
@@ -3418,7 +3412,7 @@
   {
    "bundle_path": "experiments/cost/processing_benchmark/outputs/processing-ipv6-dualstack-20260829/RUN_REPORT.md",
    "bytes": 4415,
-   "sha256": "eab005ccf1f3626b4aa8473a5ea8ff026344c6d6151b70b055abc90579b879c2",
+   "sha256": "2959e131996fbf25f681a61c33450342671489011499f9a4c1107d1871a5d6a2",
    "source_path": "experiments/cost/processing_benchmark/outputs/processing-ipv6-dualstack-20260829/RUN_REPORT.md"
   },
   {
@@ -3441,8 +3435,8 @@
   },
   {
    "bundle_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/RUN_REPORT.md",
-   "bytes": 3715,
-   "sha256": "3831ea51d788046693a56ff9d4bf508c532cbb3eea88d693bdbf0878e09d016d",
+   "bytes": 3717,
+   "sha256": "005e94c33c2996b85472d0e6e1f53eb153d0df6c1af98c81ef00ba6dd0d0e74e",
    "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/RUN_REPORT.md"
   },
   {
@@ -3465,8 +3459,8 @@
   },
   {
    "bundle_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/RUN_REPORT.md",
-   "bytes": 3715,
-   "sha256": "7f6cc46025b54199f1d546fa49c511fab86f33313d76bbc7cf1efb18f6f2d648",
+   "bytes": 3717,
+   "sha256": "825445857858050f05b953fd35e45dc3551cb17fe81a387f5de4c5c2033bc50c",
    "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/RUN_REPORT.md"
   },
   {
@@ -3489,8 +3483,8 @@
   },
   {
    "bundle_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/RUN_REPORT.md",
-   "bytes": 3882,
-   "sha256": "3d40bcb0ad14df8071e671e41674c09be44bbb487a60d129c01e9250e991394d",
+   "bytes": 3884,
+   "sha256": "2c2d78f0165e1e4946d5e2baa3fe6c96d3e8af552f6175ee5244fcdeef4b98ab",
    "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/RUN_REPORT.md"
   },
   {
@@ -3549,8 +3543,8 @@
   },
   {
    "bundle_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/RUN_REPORT.md",
-   "bytes": 3883,
-   "sha256": "7cd63548682ffdcd99f6c86198000b38568d759e543135fb060f47484412df43",
+   "bytes": 3885,
+   "sha256": "735a4c885771bc15dcf5a95375d9f97a2b58f8aeb9d6c772ed7e23e1402b0e96",
    "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/RUN_REPORT.md"
   },
   {
@@ -3580,7 +3574,7 @@
   {
    "bundle_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/RUN_REPORT.md",
    "bytes": 3807,
-   "sha256": "d61868936030d20ea5eaa507794fd6bffdedaed7a84da9e2a66ee91ba8720581",
+   "sha256": "db543face75ad667b8ccbcc8beff1bcd489d0d88d4d85b45c7d4db7c0f6c2f88",
    "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/RUN_REPORT.md"
   },
   {
@@ -3604,55 +3598,55 @@
   {
    "bundle_path": "experiments/cost/processing_benchmark/run_controlled_policy_benchmark.py",
    "bytes": 40254,
-   "sha256": "1fa23e618a179036a26457caff8635e229d22a9ee1616389a4ad1747d711531e",
+   "sha256": "640e82b649ca3f243ac7d80fa70f55e7b60edcd8741261bb7f88fe7fec894443",
    "source_path": "experiments/cost/processing_benchmark/run_controlled_policy_benchmark.py"
   },
   {
    "bundle_path": "experiments/cost/processing_benchmark/run_ipv6_processing_benchmark.py",
-   "bytes": 44946,
-   "sha256": "2af4e69f7c5a172b063912eb975bed7f6489ee26140ed10a197f580538e5d1b5",
+   "bytes": 44947,
+   "sha256": "03abb23d82eafebebbf6abd23896c7eed1155bfa28702308d9940fb028d4c3bd",
    "source_path": "experiments/cost/processing_benchmark/run_ipv6_processing_benchmark.py"
   },
   {
    "bundle_path": "experiments/cost/processing_benchmark/run_policy_update_benchmark.py",
    "bytes": 31927,
-   "sha256": "3a07995971cede3f7bed72c3c63da1f3aaef1651d63bd935d84e8196ce77889b",
+   "sha256": "3c32e1c00d7416519a3b1b8da0ae6727d9d7562d5eb54385a40e8b7de90d6c76",
    "source_path": "experiments/cost/processing_benchmark/run_policy_update_benchmark.py"
   },
   {
    "bundle_path": "experiments/cost/processing_benchmark/run_processing_benchmark.py",
-   "bytes": 46060,
-   "sha256": "8edba9930b5f1eb895636aa4c89174233ab71b8ff2fe96be1b407389658dad36",
+   "bytes": 46064,
+   "sha256": "c2cf27a3b6f18ab9d254d5a5e1860167cad3ec1117e69a440cd3d43bd114d322",
    "source_path": "experiments/cost/processing_benchmark/run_processing_benchmark.py"
   },
   {
    "bundle_path": "experiments/cost/processing_benchmark/test_controlled_policy_benchmark.py",
    "bytes": 2670,
-   "sha256": "443ccaaee66f55374be89a2adeffad93a1c0d19d70fa441f6dfc56a5a23abfa8",
+   "sha256": "96a56e4e5f45e68afa667fe408e70927433d8a7b823f67f5c0d22bec196b0e2f",
    "source_path": "experiments/cost/processing_benchmark/test_controlled_policy_benchmark.py"
   },
   {
    "bundle_path": "experiments/cost/processing_benchmark/test_ipv6_processing_benchmark.py",
    "bytes": 7554,
-   "sha256": "cfcec4b69910aa823097632be3f04a145e0e2837d33468df546f544510eb1ee3",
+   "sha256": "f1320aad011cefc86f0acf574f2a7b17ad37f28f7fc8665b753278b82907aef7",
    "source_path": "experiments/cost/processing_benchmark/test_ipv6_processing_benchmark.py"
   },
   {
    "bundle_path": "experiments/cost/processing_benchmark/test_policy_update_benchmark.py",
    "bytes": 7195,
-   "sha256": "d3e10290e754bc950d6f1800ae6d6026ef0a75cf56b83543a51f768808519d75",
+   "sha256": "f5ac273b5cd5c0ea1e00559d6f9a30e856da62d846da9deef4b2e3f528aeaf21",
    "source_path": "experiments/cost/processing_benchmark/test_policy_update_benchmark.py"
   },
   {
    "bundle_path": "experiments/cost/processing_benchmark/test_processing_oracle.py",
    "bytes": 3566,
-   "sha256": "b74c7e3b1e4dd15311b6e4c5e83f705465fbbe85c729f8488f4f4662872f5e40",
+   "sha256": "0af82ea2a4c7a9faf4ed366b0a6800776cf483ba36d5d38c355e16cb2000d1a8",
    "source_path": "experiments/cost/processing_benchmark/test_processing_oracle.py"
   },
   {
    "bundle_path": "experiments/cost/scripts/08_semantic_boundary.py",
    "bytes": 5406,
-   "sha256": "9d9e0a343d09ac4386b99ae76c6730013c4532f746fa3b9c259e772fc7229377",
+   "sha256": "d11bbe97b6ca9d8079aa474b630140c2b4e177a51126a3812610497c28731a35",
    "source_path": "experiments/cost/scripts/08_semantic_boundary.py"
   },
   {
@@ -3662,10 +3656,10 @@
    "source_path": "experiments/cost/scripts/09_label_coverage_adoption.py"
   },
   {
-   "bundle_path": "experiments/cost/scripts/10_daroa_reference_eval.py",
+   "bundle_path": "experiments/cost/scripts/10_s2rov_reference_eval.py",
    "bytes": 5538,
-   "sha256": "7926a76ced4c002751109db2f408c99a6f625b5d86dd726483658e4b3b3ed407",
-   "source_path": "experiments/cost/scripts/10_daroa_reference_eval.py"
+   "sha256": "e050ba1478781587e6a8fbe439115e0ffb7282c140b85902bef9ecbb69bbf17a",
+   "source_path": "experiments/cost/scripts/10_s2rov_reference_eval.py"
   },
   {
    "bundle_path": "experiments/routing_model/.deps-internetsim/share/mongo-c-driver/2.3.3/README.rst",
@@ -3693,14 +3687,14 @@
   },
   {
    "bundle_path": "experiments/routing_model/README.md",
-   "bytes": 3294,
-   "sha256": "869ec7eef237f96c524cf26725e6fbeaf6858d66c352d67f48d1c2ab33756595",
+   "bytes": 3299,
+   "sha256": "679293fc1db2e43cc775088222d356fa5eda2283aa5253282707b86b95268e7b",
    "source_path": "experiments/routing_model/README.md"
   },
   {
    "bundle_path": "experiments/routing_model/campaign/README.md",
-   "bytes": 13612,
-   "sha256": "cad467a5dd26b0250fd7e793bdf82502cc7c3ece372855afdcea7f98c2a62512",
+   "bytes": 13613,
+   "sha256": "056631d9014c5365ceac7629f3a724c90a2dfb7cd7d6b99a906d815c210337b5",
    "source_path": "experiments/routing_model/campaign/README.md"
   },
   {
@@ -3724,7 +3718,7 @@
   {
    "bundle_path": "experiments/routing_model/campaign/audit_deployment_grid_extension.py",
    "bytes": 48504,
-   "sha256": "c0980afd5d9ffb22b7c0b903050e38034f0b5a9a0b47ad4ccfd7019c3114afe5",
+   "sha256": "aab820d0d961ca221aff2cdbdcaa64946019e2c527a1425016ac5061e5fff569",
    "source_path": "experiments/routing_model/campaign/audit_deployment_grid_extension.py"
   },
   {
@@ -3741,20 +3735,20 @@
   },
   {
    "bundle_path": "experiments/routing_model/campaign/full_graph_gate.py",
-   "bytes": 41701,
-   "sha256": "e46f56255b2eba7cb3865f42091eb5ca45a4c58679bf281475fed6e2b4e1bec2",
+   "bytes": 41714,
+   "sha256": "fb60e1b7f5d9ce1732222c8a92c16833f6c728f0e2f991e49eee451ead585dd4",
    "source_path": "experiments/routing_model/campaign/full_graph_gate.py"
   },
   {
    "bundle_path": "experiments/routing_model/campaign/ipv6_sensitivity.py",
-   "bytes": 48168,
-   "sha256": "8a779f987f31ea68afb79caab15d3150e3a4cf9548e30d906f108269003dfb95",
+   "bytes": 48170,
+   "sha256": "24bc0625af9558e1ec2cb27392f7665a54b3af55e1d457a77a065f6cee54fe5d",
    "source_path": "experiments/routing_model/campaign/ipv6_sensitivity.py"
   },
   {
    "bundle_path": "experiments/routing_model/campaign/paper_campaign.py",
    "bytes": 92034,
-   "sha256": "644f2d70a2560e14034517691f2e37f5626092a4d555e7a0fabb115073ca2760",
+   "sha256": "65825584d059be721d884b27edf4ebe7849d8836df27ee79e07d7d9bf976896b",
    "source_path": "experiments/routing_model/campaign/paper_campaign.py"
   },
   {
@@ -3796,13 +3790,13 @@
   {
    "bundle_path": "experiments/routing_model/campaign/tests/test_full_graph_gate.py",
    "bytes": 6512,
-   "sha256": "0f3d6f52db6fd5de0178835fce65c204f8a8864752eb4518953c27cafb87464c",
+   "sha256": "4d39d256989f484cd5d4cc16dc5b4574af908d8a24a89cdfa5fcba2a6a7c5b32",
    "source_path": "experiments/routing_model/campaign/tests/test_full_graph_gate.py"
   },
   {
    "bundle_path": "experiments/routing_model/campaign/tests/test_ipv6_sensitivity.py",
    "bytes": 6154,
-   "sha256": "b1d772b53a6b90b0d7ec100ce15c948260fe5eca41890973b0357b817228a339",
+   "sha256": "2f8b28f183f1413207cab3185fffdec507e83a6520207884af3d2edd15bea9b1",
    "source_path": "experiments/routing_model/campaign/tests/test_ipv6_sensitivity.py"
   },
   {
@@ -3837,38 +3831,38 @@
   },
   {
    "bundle_path": "experiments/routing_model/s2rov/pilot.py",
-   "bytes": 14808,
-   "sha256": "25e4abafa58f04178db1c0b588902f35084440c6b46f02b5393345405fb6d941",
+   "bytes": 14817,
+   "sha256": "d15bfd7bc2bc479f4a8e5821f84682c901767bf7b360b08f166b1a9f32ee0289",
    "source_path": "experiments/routing_model/s2rov/pilot.py"
   },
   {
    "bundle_path": "experiments/routing_model/s2rov/policy.py",
-   "bytes": 2274,
-   "sha256": "6aced2b6369539fc0aba21f67fb4ceb8eec9c6191708a98c930a8f2db9da32ca",
+   "bytes": 2277,
+   "sha256": "193ee4960f371ca9ce36624d5e457a58b77c3c94272ef90fd6ef075698549a4e",
    "source_path": "experiments/routing_model/s2rov/policy.py"
   },
   {
    "bundle_path": "experiments/routing_model/s2rov/tests/test_pilot.py",
    "bytes": 5568,
-   "sha256": "3c33d069e5188d52f3858e3eb52a72863d9c1e221899c39af9d7946f30463dc1",
+   "sha256": "a423ecc77b5fe7a0c366c870cb2ee228d81409593126467acfcfba28c4e4fc3e",
    "source_path": "experiments/routing_model/s2rov/tests/test_pilot.py"
   },
   {
    "bundle_path": "experiments/routing_model/evaluation/bgpy.md",
-   "bytes": 17924,
-   "sha256": "6f255e8c556b84e5a544d79690eb2b62976adfa49724b2effb925fb691d6c1e1",
+   "bytes": 16941,
+   "sha256": "ccb72625429bc4a7b7a3fbc4e6aea9c6485cff38f5ae6b412d9393fefaf11cf7",
    "source_path": "experiments/routing_model/evaluation/bgpy.md"
   },
   {
    "bundle_path": "experiments/routing_model/evaluation/deployment_grid_extension_contract.md",
-   "bytes": 4473,
-   "sha256": "cccaebb1212dec73b0b257d60075aa8942e8cea098a60422b68378b08eb5870d",
+   "bytes": 4082,
+   "sha256": "96e697208226e0721fe28f8e9bcdce38df1ba867a004d77c6a2e4eca19f37114",
    "source_path": "experiments/routing_model/evaluation/deployment_grid_extension_contract.md"
   },
   {
    "bundle_path": "experiments/routing_model/evaluation/internetsim.md",
-   "bytes": 12594,
-   "sha256": "820bc7f73f42ae1b7df5b84e5e7bfbcf5f9c8a2aea9fd678b2326e7ddcc749d6",
+   "bytes": 11655,
+   "sha256": "d602cc9dcab8231c5fdd30aa42112868ba7e0b89578bef5e9d2f8cdc297ed1b5",
    "source_path": "experiments/routing_model/evaluation/internetsim.md"
   },
   {
@@ -3879,14 +3873,14 @@
   },
   {
    "bundle_path": "experiments/routing_model/evaluation/paper_campaign_contract.md",
-   "bytes": 11057,
-   "sha256": "d425a2458896bb6d0ead8d74797d80c3191106a9745c1c3152d49c2e32049e40",
+   "bytes": 10707,
+   "sha256": "81d44535c477008239568bb0a9e50b71e4465e9863956a650abfaaa3f0235a00",
    "source_path": "experiments/routing_model/evaluation/paper_campaign_contract.md"
   },
   {
    "bundle_path": "experiments/routing_model/evaluation/requirements.md",
-   "bytes": 21895,
-   "sha256": "8e4cfb2190416fca17c85c061f8497ba18bd456831cf371192de1987be7799bb",
+   "bytes": 21026,
+   "sha256": "22202c0e2f6c71ea2b1522d693a04f300d506f3b1678465a37c8979661f8dba7",
    "source_path": "experiments/routing_model/evaluation/requirements.md"
   },
   {
@@ -3964,13 +3958,13 @@
   {
    "bundle_path": "results/tables/routing_model/results/deployment_grid_extension_smoke/manifest.json",
    "bytes": 37901,
-   "sha256": "88da4c452a6818e4f11c154e6ced5aa468cd03e3dcdf5c4cc3202dcda6016e70",
+   "sha256": "38930a92e7450f644638fba5cc8bba3386b3c9c659fb3f138cfe69f42335e6bf",
    "source_path": "experiments/routing_model/results/deployment_grid_extension_smoke/manifest.json"
   },
   {
    "bundle_path": "results/tables/routing_model/results/full_graph_gate/summary.json",
-   "bytes": 68772,
-   "sha256": "810ae54dde3f58f79056e5924ee62dee666e77a19d5fd0b50a6d74a1991be62b",
+   "bytes": 68773,
+   "sha256": "16cc5c623ac1e88a521b0e908cd756068c8957958fe824a8b74a355608aada96",
    "source_path": "experiments/routing_model/results/full_graph_gate/summary.json"
   },
   {
@@ -3988,19 +3982,19 @@
   {
    "bundle_path": "results/tables/routing_model/results/ipv6_sensitivity/manifest.json",
    "bytes": 110838,
-   "sha256": "61f777db8e32759bf3b3d34091c4dceda03cb9f5cc93a816654aa7b656872402",
+   "sha256": "c89ddf3a0305a807b23df3fba56425b3cd5fc2e878b2719379ea6dbc0531c54c",
    "source_path": "experiments/routing_model/results/ipv6_sensitivity/manifest.json"
   },
   {
    "bundle_path": "results/tables/routing_model/results/ipv6_sensitivity_smoke/manifest_snapshot.json",
    "bytes": 110838,
-   "sha256": "1c364370b03fd98501d0cc8051ece81b1d741b400bce81cc708ba586e4075e10",
+   "sha256": "4f74ca35081ce684ad54a71c787cbe7f0a93ec2a7c3d51e95cd01a7c9fe320f3",
    "source_path": "experiments/routing_model/results/ipv6_sensitivity_smoke/manifest_snapshot.json"
   },
   {
    "bundle_path": "experiments/routing_model/results/paper_campaign/FINAL_REPORT.md",
-   "bytes": 10152,
-   "sha256": "ea812a0b9c594d9db6d2ba83f0b645073943149140bc58c2d4fe2a07b461b9fa",
+   "bytes": 8236,
+   "sha256": "29d3a8c553e1d937e2c66956fda210de763617d7ce2ca9818d26cefbd4b43ce3",
    "source_path": "experiments/routing_model/results/paper_campaign/FINAL_REPORT.md"
   },
   {
@@ -4083,32 +4077,32 @@
   },
   {
    "bundle_path": "experiments/attack_reachability/analyze.py",
-   "bytes": 29734,
-   "sha256": "8a35951f5dbb7fc9cad4b5999639b4cf2d38c20bd03396127ac451a8f4a42edc",
+   "bytes": 29407,
+   "sha256": "765d133b3335cd69f56ae5bb9f6a960a75ea3bf0857311685462ee4ce2ac31e2",
    "source_path": "experiments/attack_reachability/analyze.py"
   },
   {
    "bundle_path": "results/tables/attack_reachability/failed_plan_relative_path_20260823/manifest.json",
-   "bytes": 244841,
-   "sha256": "943c0cef32d6cf8dffaee84e24b2007000327b5417e94894b68bfa1754a4d205",
+   "bytes": 244777,
+   "sha256": "09857bad9cd33932e49b32d5cb8d044187433070d8ac75355bc6f4d26d9670a0",
    "source_path": "experiments/attack_reachability/failed_plan_relative_path_20260823/manifest.json"
   },
   {
-   "bundle_path": "results/tables/attack_reachability/results/SPARK_TO_PAPER_EVIDENCE_LEDGER.json",
-   "bytes": 5193,
-   "sha256": "ccc2687026bfec3c41f1f96baa935cfa926fcedb553e95ddaf6e752306258b89",
+   "bundle_path": "results/tables/attack_reachability/results/EVIDENCE_LEDGER.json",
+   "bytes": 5049,
+   "sha256": "a038fb6fb84796fc3026f828abf01ee8fd11172e2cae6c3c92cc35a249b47126",
    "source_path": "experiments/attack_reachability/results/SPARK_TO_PAPER_EVIDENCE_LEDGER.json"
   },
   {
    "bundle_path": "experiments/attack_reachability/results/analysis/RESULTS.md",
-   "bytes": 1201,
-   "sha256": "ed17a51fcf4d14bcc978200692bca53f0488d24de76f91a10f2959a858d872dc",
+   "bytes": 928,
+   "sha256": "c9d890148b5884787a7f5883a74f53b20277e862cf70851036a00843341d62f9",
    "source_path": "experiments/attack_reachability/results/analysis/RESULTS.md"
   },
   {
    "bundle_path": "results/tables/attack_reachability/results/analysis/analysis_manifest.json",
-   "bytes": 4009,
-   "sha256": "7892b771d09c2b6c511a6acdddb200dc05c54ca5c783524e1da0efa920223b50",
+   "bytes": 3945,
+   "sha256": "0afd530aa7436152ca5189a6bf6d49c0b6b12244db2fe61714d1c2bae7b82788",
    "source_path": "experiments/attack_reachability/results/analysis/analysis_manifest.json"
   },
   {
@@ -4137,14 +4131,14 @@
   },
   {
    "bundle_path": "experiments/attack_reachability/results/analysis_recheck/RESULTS.md",
-   "bytes": 1201,
-   "sha256": "ed17a51fcf4d14bcc978200692bca53f0488d24de76f91a10f2959a858d872dc",
+   "bytes": 928,
+   "sha256": "c9d890148b5884787a7f5883a74f53b20277e862cf70851036a00843341d62f9",
    "source_path": "experiments/attack_reachability/results/analysis_recheck/RESULTS.md"
   },
   {
    "bundle_path": "results/tables/attack_reachability/results/analysis_recheck/analysis_manifest.json",
-   "bytes": 4009,
-   "sha256": "8fd4e4092241b9e0f8a316d720d2a9be26d3fc743df59c229a5caf30ec437bb9",
+   "bytes": 3945,
+   "sha256": "3a2d600235b797741de799aefb305263bd364c3a22244e132bb7f01a21e5bdec",
    "source_path": "experiments/attack_reachability/results/analysis_recheck/analysis_manifest.json"
   },
   {
@@ -4167,14 +4161,14 @@
   },
   {
    "bundle_path": "results/tables/attack_reachability/results/manifest.json",
-   "bytes": 244967,
-   "sha256": "acc4a4a11094e7d4502b10d1e81f76718cc7d97aee66daf0489803227e9b73f6",
+   "bytes": 244903,
+   "sha256": "661d76213cf14168e55b16d131c48fccf777005504c1c2181743a2581c464987",
    "source_path": "experiments/attack_reachability/results/manifest.json"
   },
   {
    "bundle_path": "experiments/attack_reachability/runner.py",
-   "bytes": 76067,
-   "sha256": "e3b0e0a485ad7f994b09dc3f4ba31f4bbe43da692811d4e99847133f53486143",
+   "bytes": 75999,
+   "sha256": "5aef8cfc53dd2c85d2ac74bbb3feb00cd5663dd3b352021133d89e3109940cdd",
    "source_path": "experiments/attack_reachability/runner.py"
   },
   {
@@ -4215,14 +4209,14 @@
   },
   {
    "bundle_path": "experiments/semantic_gate/EXPERIMENT_CONTRACT.md",
-   "bytes": 8297,
-   "sha256": "31c2bd73e1aac03c521e550ae5fa8459dcfc0d17c4bf3be3a9a2b31036fcf9ab",
+   "bytes": 7352,
+   "sha256": "6ffb6bb84bc4f460708e2410c05d4de75afc945a4ba780067fda5c89218397f8",
    "source_path": "experiments/semantic_gate/EXPERIMENT_CONTRACT.md"
   },
   {
    "bundle_path": "experiments/semantic_gate/README.md",
-   "bytes": 1432,
-   "sha256": "dd9c14e6a9512c917402ce43f513cd142e6289e40db5f79b8d4220b84edfdec3",
+   "bytes": 1459,
+   "sha256": "668dcc8ae37371a171c808dc633ddc932eefd8fc7743f3be144cefe7ae7f35d6",
    "source_path": "experiments/semantic_gate/README.md"
   },
   {
@@ -4239,14 +4233,14 @@
   },
   {
    "bundle_path": "experiments/semantic_gate/frozen_v3/DESIGN.md",
-   "bytes": 5507,
-   "sha256": "c62e93d15d16cba2946f2c4d5ea2ecbde7dbf951dae2dc5a58a06f33e4ec0eec",
+   "bytes": 5508,
+   "sha256": "f31afd8e052825a55f1764b5f3b1d0c99bee410a996b7380af15df0e85010dc2",
    "source_path": "experiments/semantic_gate/frozen_v3/DESIGN.md"
   },
   {
    "bundle_path": "experiments/semantic_gate/frozen_v3/__init__.py",
    "bytes": 28,
-   "sha256": "77a0a69882d755950c7f56717f8aaebe0554b863df580189193c82fd46d224f8",
+   "sha256": "5d51c47c619b9d79e9b46efae34029e1930753edf923fe9b2c6f614de1fbda07",
    "source_path": "experiments/semantic_gate/frozen_v3/__init__.py"
   },
   {
@@ -4256,21 +4250,21 @@
    "source_path": "experiments/semantic_gate/frozen_v3/as_set.py"
   },
   {
-   "bundle_path": "experiments/semantic_gate/frozen_v3/daroa.py",
+   "bundle_path": "experiments/semantic_gate/frozen_v3/s2rov.py",
    "bytes": 15316,
-   "sha256": "9d44cb18f05eb1e3c02c9666aa1792beddb662123d37973db8bb3d5cd07110c2",
-   "source_path": "experiments/semantic_gate/frozen_v3/daroa.py"
+   "sha256": "91731e946977d1cf9b5873ae314d75844ee6582ca33e7ff262afc289f6ed80d6",
+   "source_path": "experiments/semantic_gate/frozen_v3/s2rov.py"
   },
   {
    "bundle_path": "experiments/semantic_gate/frozen_v3/flatten.py",
    "bytes": 2418,
-   "sha256": "df46ada29029d4a15ea2ce4dfce70bd24ba086bc9f836afec8b5b9b6d1a56228",
+   "sha256": "e8bb2eb0124a1bf978c961800f215e3b38d91140cb94adcb0cdf9aa62cd4dc2f",
    "source_path": "experiments/semantic_gate/frozen_v3/flatten.py"
   },
   {
    "bundle_path": "experiments/semantic_gate/frozen_v3/snapshot.py",
    "bytes": 8998,
-   "sha256": "61cee41deaea473987a84a3d9901a8df0031c3536c8e3c633ee058de1a9dd2a5",
+   "sha256": "adf3ee391f19d7ba3b66f5e1956f98729ff178f43facdd331e0bbc06b4189b7a",
    "source_path": "experiments/semantic_gate/frozen_v3/snapshot.py"
   },
   {
@@ -4281,14 +4275,14 @@
   },
   {
    "bundle_path": "experiments/semantic_gate/run_e1a.py",
-   "bytes": 93235,
-   "sha256": "89c5c027400a7f974f1a3c6b2384033dd678e982ce84d9ddf8349a3a4ca676f8",
+   "bytes": 92287,
+   "sha256": "b073dd5b73d4a499482b9be4ea8f19b564ceb5ca935e936b663ab4a2f3ba2e9d",
    "source_path": "experiments/semantic_gate/run_e1a.py"
   },
   {
    "bundle_path": "experiments/semantic_gate/snapshot_oracle.py",
-   "bytes": 17048,
-   "sha256": "b970450dc8275b5a2a4fd52a81b38ec193625f6895306aae10099f5d46bda031",
+   "bytes": 17049,
+   "sha256": "c2454691b2bf05cb83eeb191273ebdd79f4f66f1e426022acc6af9b8d79a84f9",
    "source_path": "experiments/semantic_gate/snapshot_oracle.py"
   },
   {
@@ -4312,20 +4306,14 @@
   {
    "bundle_path": "experiments/semantic_gate/tests/test_snapshot_oracle.py",
    "bytes": 13315,
-   "sha256": "787919ca12e38312f91adcb5123318037c1e6b88a171794a04d1588e9cc2d7a2",
+   "sha256": "93b8f66728918080066e4636add542b359bb6b5b8e3e94768a4085085258beae",
    "source_path": "experiments/semantic_gate/tests/test_snapshot_oracle.py"
   },
   {
    "bundle_path": "experiments/analysis_scripts/analyze_handoff_fig2.py",
    "bytes": 45369,
-   "sha256": "21f593d4bcd091e1fdfcfba996ec62000d934a05b39be46ffa03b8860cb6fddd",
+   "sha256": "5c3e1b2921760ca2ef73c3e2ffe71d69e5f043d56201508f90ae7662086c0c8e",
    "source_path": "scripts/analyze_handoff_fig2.py"
-  },
-  {
-   "bundle_path": "experiments/analysis_scripts/assemble_paper.py",
-   "bytes": 15685,
-   "sha256": "d83bfc737cdbb17910a56990751cd015e2409e0a3d29143a213ab45b2680e0f0",
-   "source_path": "scripts/assemble_paper.py"
   },
   {
    "bundle_path": "experiments/analysis_scripts/build_fig_deployment_outcomes.py",
@@ -4342,7 +4330,7 @@
   {
    "bundle_path": "experiments/analysis_scripts/build_processing_cost_figure.py",
    "bytes": 30940,
-   "sha256": "a78d50f0b63c6dd46316424cc9aa946860fdfa1a06f41ca35b5a3daeb6acbd2d",
+   "sha256": "058f20b428b0cabcc106891c99e70c769439acfdee58c726d1716c590240a4e9",
    "source_path": "scripts/build_processing_cost_figure.py"
   },
   {
@@ -4354,7 +4342,7 @@
   {
    "bundle_path": "experiments/analysis_scripts/build_prototype_path_figure.py",
    "bytes": 11196,
-   "sha256": "501cb6e68336ea95f69ee34b761ee1c8d666a11dfcb9e6d46e982f08fef0660b",
+   "sha256": "209d642f93b83a0ed490d493503bbe1c0e036dc84f2ca38b2aa455b18f49a52b",
    "source_path": "scripts/build_prototype_path_figure.py"
   },
   {
@@ -4384,7 +4372,7 @@
   {
    "bundle_path": "experiments/analysis_scripts/run_partial_policy_replay.py",
    "bytes": 138727,
-   "sha256": "1dff9d0da0eaad42ef2881879e1f400b51bf4cae64221dee9ae240b146b7dc6a",
+   "sha256": "8318c88cdc6a8cba2682aee0ba823736f00acb3fdf54654492da69aadbfd4c92",
    "source_path": "scripts/run_partial_policy_replay.py"
   },
   {
@@ -4414,13 +4402,13 @@
   {
    "bundle_path": "experiments/analysis_scripts/tests/test_partial_policy_replay.py",
    "bytes": 31484,
-   "sha256": "a0b779674277906253f70f091f5d3a19eb64d9b08c78a0614f68a23ec5c69006",
+   "sha256": "f2ff6eaf60b34a52acd9f22f4e69cae00cd45deaf3e58d9d59a45932a11c51ec",
    "source_path": "scripts/tests/test_partial_policy_replay.py"
   },
   {
    "bundle_path": "results/numbers.json",
-   "bytes": 111573,
-   "sha256": "4b2e03e29996a101cb8191984c11356cbf24f2c84a05f99aa47ce7533cf3b462",
+   "bytes": 111669,
+   "sha256": "1532214f002249f5ba774059444bff9384ec3498707af77b616b770c2763c496",
    "source_path": "results.facts.json"
   },
   {
@@ -4552,24 +4540,24 @@
   {
    "bundle_path": "figure-data/experimental_figures.manifest.json",
    "bytes": 26427,
-   "sha256": "d573663b4bd3c800ea69a3219c05073d7aa674533e564eccf41c9242de46e78d",
+   "sha256": "dff4550c50f4fad38879fe1f2398619603e35669f7a3b350034baf70d390a447",
    "source_path": "figures/experimental_figures.manifest.json"
   },
   {
    "bundle_path": "figure-data/fig_deployment_outcomes.manifest.json",
    "bytes": 8732,
-   "sha256": "010a365d8ed60fe92bef4cb784bf66dd645d08f17e3e1b3627ec9f03b3aa0c32",
+   "sha256": "71137d546f4d6d78da9b315f2f6b12c0b0f6166e197a637dd11715758f250e09",
    "source_path": "figures/fig_deployment_outcomes.manifest.json"
   },
   {
    "bundle_path": "figure-data/fig_partial_policy_replay.manifest.json",
    "bytes": 50789,
-   "sha256": "dca4c9e5684c3b6b371645249a138d37118796cee6100e1873f4a9ec6cdf466a",
+   "sha256": "60e06ad1aa9fc1c876d8aff4aa96d829d961188c1a1ac95acb789c0ad01c51cc",
    "source_path": "figures/fig_partial_policy_replay.manifest.json"
   }
  ],
  "generated_by": "tools/prepare_artifact.py",
  "size_cap_bytes": 2097152,
  "source_path": "where the file came from, under the naming used here rather than the authors' internal directory names",
- "total_bytes": 13698146
+ "total_bytes": 13667182
 }

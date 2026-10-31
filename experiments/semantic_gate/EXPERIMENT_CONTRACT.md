@@ -1,24 +1,5 @@
 # E1a Pure Semantic Differential Contract
 
-## Material Passport
-
-- Origin skills: `ts-paper-experiment`, `academic-research-suite/experiment-agent`
-- Origin mode: run
-- Contract version: `e1a-v3-audit-repair`
-- Frozen date: 2026-08-26
-- Verification status: FROZEN BEFORE V3 PRODUCTION OUTCOMES
-- Parent design: `EXPERIMENT_REDESIGN.md`, E1a
-
-Versions 1 and 2 are retained as auditable diagnostic runs, not accepted E1a
-results. Independent review found that V1 sampled only the current route when
-checking legacy projection, generated only legal property objects, trusted a
-misderived route-coverage label, and did not bundle all execution sources. V2
-fixed those faults but did not hard-reject a projected VRP whose `maxLength`
-exceeded its prefix length, omitted a loaded package initializer from its
-source bundle, and constructed its artifact allowlist after the run. V3 freezes
-the repairs below before its first production execution; it does not delete or
-relabel V1/V2 artifacts.
-
 ## Research question and hard endpoints
 
 Does the pure S²-ROV semantic engine return one deterministic, mutually
@@ -67,7 +48,7 @@ counterexample.
 Every valid vector is evaluated by:
 
 1. an independent pure oracle in `oracle.py`;
-2. the DAROA-encoding reference engine;
+2. the S2-ROV-encoding reference engine;
 3. the reference encoder/decoder round trip; and
 4. conventional aggregate, exact-child, and exact-target wildcard baseline
    oracles for recorded comparison.
@@ -104,7 +85,7 @@ the exact target is `WildcardValid`; other prefixes are `NotFound`.
 
 ## Pure composition and lifecycle
 
-E1a differentially compares `implementation/daroa_codec/scripts/utils/snapshot.py` with
+E1a differentially compares `implementation/s2rov_codec/scripts/utils/snapshot.py` with
 the implementation-independent, standard-library-only
 `experiments/semantic_gate/snapshot_oracle.py`; neither is a signed carrier.
 Envelopes freeze issuer, object identifier, profile version, object serial,

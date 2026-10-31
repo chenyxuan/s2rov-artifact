@@ -1,13 +1,3 @@
-## Material Passport
-
-- **Material ID:** `daroa-prototype-run-20260729T023834Z`
-- **Material type:** experiment result
-- **Verification status:** VERIFIED
-- **Experiment type:** controlled end-to-end system experiment
-- **System under test:** Krill–Routinator–policy-agent–FRR prototype
-- **Run command:** `RECOVERY_TRIALS=30 FRR_RECOVERY_TRIALS=30 UPDATE_TRIALS=30 OUTAGE_HOLD_SECONDS=15 bash scripts/run-experiment.sh experiment`
-- **Run status:** completed, exit code 0
-
 ## Result
 
 - Conventional and DA semantic checks passed for all seven live routes.

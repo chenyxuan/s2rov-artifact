@@ -1059,7 +1059,7 @@
     "total_degree_min": 1
   },
   "runner": {
-    "path": "experiments/analysis-scripts/run_partial_policy_replay.py",
+    "path": "experiments/analysis_scripts/run_partial_policy_replay.py",
     "sha256": "ff4982ccbe832bf70c53b682a9f9ac6283a6d9c4adfb9e7be9dc559664129314"
   },
   "runtime": {
@@ -1088,7 +1088,7 @@
       },
       "placements_independent": true,
       "placements_nested_within_each_rollout": true,
-      "reference_classifier": "implementation/daroa_codec/scripts/utils/daroa.py",
+      "reference_classifier": "implementation/s2rov_codec/scripts/utils/s2rov.py",
       "reference_classifier_sha256": "eb11dd64f5cc3175557462367796541a45d971459f5a16f46a655e1aee614377",
       "reference_state_counts": {
         "aggregate_only": {
@@ -1264,7 +1264,7 @@
         "total_degree_max": 6584,
         "total_degree_min": 1
       },
-      "reference_classifier": "implementation/daroa_codec/scripts/utils/daroa.py",
+      "reference_classifier": "implementation/s2rov_codec/scripts/utils/s2rov.py",
       "reference_classifier_sha256": "eb11dd64f5cc3175557462367796541a45d971459f5a16f46a655e1aee614377",
       "reference_state_counts": {
         "aggregate_only": {
@@ -1383,7 +1383,7 @@
       ],
       "invalid_monotone_in_downstream_and_scope": true,
       "master_seed": 20260829,
-      "reference_classifier": "implementation/daroa_codec/scripts/utils/daroa.py",
+      "reference_classifier": "implementation/s2rov_codec/scripts/utils/s2rov.py",
       "reference_classifier_sha256": "eb11dd64f5cc3175557462367796541a45d971459f5a16f46a655e1aee614377",
       "reference_state_counts": {
         "aggregate_only": {

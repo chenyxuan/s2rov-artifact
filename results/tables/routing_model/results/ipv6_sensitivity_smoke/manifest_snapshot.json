@@ -649,8 +649,8 @@
   },
   "interpretation": "IPv6 portability and sensitivity on the fixed family-neutral routing-model AS graph; not an IPv6-specific topology estimate",
   "manifest_sha256": "d6174f80cca4cfaa0025286db406468b32559c1a831c54b0abe0361284e9f0c9",
-  "daroa_codec_ipv6_interface": {
-    "class": "implementation.daroa_codec.scripts.utils.daroa.DAROA",
+  "s2rov_codec_ipv6_interface": {
+    "class": "implementation.s2rov_codec.scripts.utils.s2rov.S2ROV",
     "delegated_state": "Delegated",
     "ip_version": 6,
     "round_trip": true,
@@ -1131,9 +1131,9 @@
       "physical_lines": 1309,
       "sha256": "c100743e879dd21552902bc71ba6b1041c2c398ce4fef9584370ddd964e00855"
     },
-    "daroa_codec_oracle": {
+    "s2rov_codec_oracle": {
       "bytes": 18009,
-      "path": "implementation/daroa_codec/scripts/utils/daroa.py",
+      "path": "implementation/s2rov_codec/scripts/utils/s2rov.py",
       "physical_lines": 467,
       "sha256": "fb0e251573979653a54ea79b1b2c3398bf30c4c99aed2a66c8edda458c544395"
     },

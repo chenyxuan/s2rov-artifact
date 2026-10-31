@@ -118,7 +118,7 @@ validate(D, p, a):
 ## 5. Worked Policy
 
 ```text
-D = DA-ROA(
+D = S2-ROV(
       base = 10.0.0.0/16,
       max_length = 24,
       holder = AS64501,
@@ -232,11 +232,11 @@ transport \(\mathsf{Delegated}\) provenance.  A standards proposal would need
 a defined signed object profile, canonical overlap rules, transport encoding,
 router behavior, and downgrade semantics.
 
-The 14-byte header and variable-length Stripe encoding in DAROA-encoding are a
+The 14-byte header and variable-length Stripe encoding in S2-ROV-encoding are a
 reference format for round-trip and structural tests, not an allocated RPKI
 profile or a wire-compatibility claim.
 
-## 10. DAROA encoding Requirements
+## 10. S2-ROV encoding Requirements
 
 - serialize one unique Stripe per prefix;
 - preserve explicit-set and open-mode fields together;

@@ -1,4 +1,4 @@
-# DAROA encoding: Reference Encoding and Parser Validation
+# S2-ROV encoding: Reference Encoding and Parser Validation
 
 **Version:** 2.3
 **Re-audited:** 2026-08-30

@@ -4,9 +4,9 @@ set -euo pipefail
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 E2E_DIR=$(cd "${SCRIPT_DIR}/.." && pwd)
 CONFIG_DIR="${E2E_DIR}/config"
-AGENT="${E2E_DIR}/src/daroa_agent.py"
-NETWORK="daroa-e2e"
-VOLUME="daroa-e2e-krill-data"
+AGENT="${E2E_DIR}/src/s2rov_agent.py"
+NETWORK="s2rov-e2e"
+VOLUME="s2rov-e2e-krill-data"
 FRR_IMAGE="quay.io/frrouting/frr:10.6.1"
 RECOVERY_TRIALS=${RECOVERY_TRIALS:-30}
 FRR_RECOVERY_TRIALS=${FRR_RECOVERY_TRIALS:-30}
@@ -14,7 +14,7 @@ UPDATE_TRIALS=${UPDATE_TRIALS:-30}
 OUTAGE_HOLD_SECONDS=${OUTAGE_HOLD_SECONDS:-15}
 SCALE_TRIALS=${SCALE_TRIALS:-10}
 SCALE_LEVELS=${SCALE_LEVELS:-"0 64 256 1024"}
-CONTAINER_PREFIX="daroa-e2e-"
+CONTAINER_PREFIX="s2rov-e2e-"
 KRILL="${CONTAINER_PREFIX}krill"
 ROUTINATOR="${CONTAINER_PREFIX}routinator"
 COLLECTOR="${CONTAINER_PREFIX}collector"
@@ -238,10 +238,10 @@ start_lab() {
         -e "KRILL_CLI_TOKEN=${token}" \
         -v "${VOLUME}:<home>/data" \
         -v "${CONFIG_DIR}/krill/nginx.conf:/etc/nginx/sites-enabled/testbed:ro" \
-        -v "${CONFIG_DIR}/krill/krill.conf.template:/opt/daroa/krill.conf.template:ro" \
-        -v "${SCRIPT_DIR}/krill-entrypoint.sh:/opt/daroa/krill-entrypoint.sh:ro" \
+        -v "${CONFIG_DIR}/krill/krill.conf.template:/opt/s2rov/krill.conf.template:ro" \
+        -v "${SCRIPT_DIR}/krill-entrypoint.sh:/opt/s2rov/krill-entrypoint.sh:ro" \
         stripe-testbed:latest \
-        bash /opt/daroa/krill-entrypoint.sh >/dev/null
+        bash /opt/s2rov/krill-entrypoint.sh >/dev/null
     wait_krill
 
     docker run -d \
@@ -249,9 +249,9 @@ start_lab() {
         --hostname routinator \
         --network "${NETWORK}" \
         --ip 172.31.0.3 \
-        -v "${SCRIPT_DIR}/routinator-entrypoint.sh:/opt/daroa/routinator-entrypoint.sh:ro" \
+        -v "${SCRIPT_DIR}/routinator-entrypoint.sh:/opt/s2rov/routinator-entrypoint.sh:ro" \
         stripe-routinator:latest \
-        bash /opt/daroa/routinator-entrypoint.sh >/dev/null
+        bash /opt/s2rov/routinator-entrypoint.sh >/dev/null
     wait_routinator
 
     run_frr collector 172.31.0.10 collector.conf
@@ -479,7 +479,7 @@ run_scale_experiment() {
         cd "${E2E_DIR}"
         find \
             scripts/run-experiment.sh \
-            src/daroa_agent.py \
+            src/s2rov_agent.py \
             src/summarize.py \
             config/cases.json \
             config/frr \

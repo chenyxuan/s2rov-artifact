@@ -18,8 +18,8 @@ import sys
 import time
 from typing import Any, Iterable, Iterator
 
-from experiments.semantic_gate.frozen_v3.daroa import (
-    DAROA,
+from experiments.semantic_gate.frozen_v3.s2rov import (
+    S2ROV,
     Stripe,
     ValidationState,
 )
@@ -133,12 +133,12 @@ def oracle_policy(vector: dict[str, Any]) -> OraclePolicy:
 def reference_policy(
     vector: dict[str, Any],
     order: Iterable[int] | None = None,
-) -> DAROA:
+) -> S2ROV:
     policy = vector["policy"]
     rules = list(policy["rules"])
     if order is not None:
         rules = [rules[index] for index in order]
-    return DAROA(
+    return S2ROV(
         policy["base_prefix"],
         policy["max_length"],
         policy["holder_asn"],
@@ -672,8 +672,8 @@ def _constructor_spec(vector: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def _fixed_multi_asn_policy() -> DAROA:
-    return DAROA(
+def _fixed_multi_asn_policy() -> S2ROV:
+    return S2ROV(
         "10.0.0.0/8",
         24,
         15169,
@@ -703,11 +703,11 @@ def generated_invalid_objects(seed: int, count: int) -> Iterator[dict[str, Any]]
         if family == "unsupported-version":
             changed = bytearray(payload)
             changed[10] = 2
-            yield _wire_case(case_id, family, bytes(changed), "unsupported DA-ROA version")
+            yield _wire_case(case_id, family, bytes(changed), "unsupported S2-ROV version")
         elif family == "nonzero-header-flags":
             changed = bytearray(payload)
             changed[13] = 1
-            yield _wire_case(case_id, family, bytes(changed), "reserved DA-ROA flags")
+            yield _wire_case(case_id, family, bytes(changed), "reserved S2-ROV flags")
         elif family == "noncanonical-base":
             changed = bytearray(payload)
             changed[3] |= 1
@@ -835,10 +835,10 @@ def generated_invalid_objects(seed: int, count: int) -> Iterator[dict[str, Any]]
 def evaluate_invalid_object(case: dict[str, Any]) -> dict[str, Any]:
     try:
         if case["input_kind"] == "wire":
-            DAROA.deserialize(bytes.fromhex(case["payload_hex"]))
+            S2ROV.deserialize(bytes.fromhex(case["payload_hex"]))
         elif case["input_kind"] == "constructor":
             spec = case["spec"]
-            DAROA(
+            S2ROV(
                 spec["base_prefix"],
                 spec["max_length"],
                 spec["holder_asn"],
@@ -947,7 +947,7 @@ def evaluate_vector(vector: dict[str, Any]) -> dict[str, Any]:
     expected = classify(pure, vector["route_prefix"], vector["origin_asn"]).value
     reference = reference_policy(vector)
     encoded = reference.serialize()
-    decoded = DAROA.deserialize(encoded)
+    decoded = S2ROV.deserialize(encoded)
     reference_state = OPEN_SCOPE_MAP[
         reference.validate_route(vector["route_prefix"], vector["origin_asn"])
     ]
@@ -1037,7 +1037,7 @@ def evaluate_vector(vector: dict[str, Any]) -> dict[str, Any]:
 
 
 def mutation_payloads() -> list[tuple[str, bytes]]:
-    policy = DAROA(
+    policy = S2ROV(
         "10.0.0.0/16",
         25,
         15169,
@@ -1090,7 +1090,7 @@ def mutation_payloads() -> list[tuple[str, bytes]]:
     mutations.append(("noncanonical-stripe-order", payload[:14] + base + child))
     mutations.append(("trailing-byte", payload + b"\x00"))
 
-    multi_policy = DAROA(
+    multi_policy = S2ROV(
         "10.0.0.0/16",
         25,
         15169,
@@ -1123,7 +1123,7 @@ def run_mutation_census() -> dict[str, Any]:
     accepted = 0
     for name, payload in mutation_payloads():
         try:
-            DAROA.deserialize(payload)
+            S2ROV.deserialize(payload)
         except Exception as exc:  # Expected rejection is part of this census.
             rows.append(
                 {
@@ -1149,11 +1149,11 @@ def run_mutation_census() -> dict[str, Any]:
     constructors = (
         (
             "missing-base-rule",
-            lambda: DAROA("10.0.0.0/16", 24, 15169, []),
+            lambda: S2ROV("10.0.0.0/16", 24, 15169, []),
         ),
         (
             "missing-holder-at-base",
-            lambda: DAROA(
+            lambda: S2ROV(
                 "10.0.0.0/16",
                 24,
                 15169,
@@ -1162,7 +1162,7 @@ def run_mutation_census() -> dict[str, Any]:
         ),
         (
             "duplicate-prefix-constructor",
-            lambda: DAROA(
+            lambda: S2ROV(
                 "10.0.0.0/16",
                 24,
                 15169,
@@ -1174,7 +1174,7 @@ def run_mutation_census() -> dict[str, Any]:
         ),
         (
             "outside-rule",
-            lambda: DAROA(
+            lambda: S2ROV(
                 "10.0.0.0/16",
                 24,
                 15169,
@@ -1186,7 +1186,7 @@ def run_mutation_census() -> dict[str, Any]:
         ),
         (
             "overlong-rule",
-            lambda: DAROA(
+            lambda: S2ROV(
                 "10.0.0.0/16",
                 23,
                 15169,
@@ -1198,7 +1198,7 @@ def run_mutation_census() -> dict[str, Any]:
         ),
         (
             "boolean-max-length",
-            lambda: DAROA(
+            lambda: S2ROV(
                 "0.0.0.0/0",
                 True,
                 15169,
@@ -1278,7 +1278,7 @@ def run_mutation_census() -> dict[str, Any]:
 
 def envelope(
     object_id: str,
-    policy: DAROA,
+    policy: S2ROV,
     *,
     serial: int = 1,
     revoked: bool = False,
@@ -1297,8 +1297,8 @@ def envelope(
     )
 
 
-def one_rule_policy(base: str, max_length: int, holder: int, is_open: bool) -> DAROA:
-    return DAROA(base, max_length, holder, [Stripe(base, {holder}, is_open)])
+def one_rule_policy(base: str, max_length: int, holder: int, is_open: bool) -> S2ROV:
+    return S2ROV(base, max_length, holder, [Stripe(base, {holder}, is_open)])
 
 
 def run_composition_census() -> dict[str, Any]:
@@ -1593,15 +1593,15 @@ def execution_source_paths() -> tuple[Path, ...]:
         REPOSITORY_ROOT / "experiments" / "semantic_gate" / "compare_runs.py",
         REPOSITORY_ROOT / "experiments" / "semantic_gate" / "EXPERIMENT_CONTRACT.md",
         REPOSITORY_ROOT / "experiments" / "semantic_gate" / "frozen_v3" / "__init__.py",
-        REPOSITORY_ROOT / "experiments" / "semantic_gate" / "frozen_v3" / "daroa.py",
+        REPOSITORY_ROOT / "experiments" / "semantic_gate" / "frozen_v3" / "s2rov.py",
         REPOSITORY_ROOT / "experiments" / "semantic_gate" / "frozen_v3" / "as_set.py",
         REPOSITORY_ROOT / "experiments" / "semantic_gate" / "frozen_v3" / "snapshot.py",
         REPOSITORY_ROOT / "experiments" / "semantic_gate" / "frozen_v3" / "flatten.py",
         REPOSITORY_ROOT / "experiments" / "semantic_gate" / "frozen_v3" / "DESIGN.md",
         REPOSITORY_ROOT
         / "."
-        / "experiment_redesign"
-        / "EXPERIMENT_REDESIGN.md",
+        
+        
     }
     loaded_paths: set[Path] = set()
     repository_root = REPOSITORY_ROOT.resolve()
@@ -1734,7 +1734,7 @@ for relative, expected in SOURCE_HASHES.items():
             f"source mismatch: {{relative}} {{actual}} != {{expected}}; "
             "restore the bundled source first"
         )
-output = Path(sys.argv[1] if len(sys.argv) > 1 else "runs/e1a-v3-reproduction")
+output = Path(sys.argv[1] if len(sys.argv) > 1 else "experiments/semantic_gate/runs/e1a-v3-reproduction")
 if not output.is_absolute():
     output = root / output
 subprocess.run(
@@ -1949,17 +1949,6 @@ def _main_v1_obsolete() -> int:
     write_json(output / "summary.json", summary)
     report = f"""# E1a Semantic Differential Result
 
-## Material Passport
-
-- Origin skills: `ts-paper-experiment`, `academic-research-suite/experiment-agent`
-- Origin mode: run
-- Experiment ID: E1a
-- Status: {'PASS' if passed else 'FAIL'}
-- Command seed: {args.seed}
-- Generated vectors: {generated_seen:,}
-- Bounded exhaustive vectors: {bounded_seen:,}
-- Verification status: {'VERIFIED BY COMPLETE LOCAL RERUN' if passed else 'FAILED; SEE REPRODUCERS'}
-
 ## Hard endpoints
 
 | Endpoint | Count | Criterion |
@@ -1989,7 +1978,7 @@ claims.
         "set -euo pipefail\n"
         "cd \"$(git rev-parse --show-toplevel)\"\n"
         "python3 -m experiments.semantic_gate.run_e1a "
-        "--output-dir runs/e1a-reproduction "
+        "--output-dir experiments/semantic_gate/runs/e1a-reproduction "
         f"--seed {args.seed} --generated-vectors {args.generated_vectors}\n"
     )
     reproducer_path = output / "reproducer.sh"
@@ -2344,17 +2333,6 @@ def main() -> int:
     write_json(output / "summary.json", summary)
 
     report = f"""# E1a V3 Semantic Differential Result
-
-## Material Passport
-
-- Origin skills: `ts-paper-experiment`, `academic-research-suite/experiment-agent`
-- Origin mode: run
-- Contract: `e1a-v3-audit-repair`
-- Status: {'PASS' if passed else 'FAIL'}
-- Verification status: UNVERIFIED LOCAL RUN; a separate complete-run comparison is required
-- Legal seed / generated vectors: {args.seed} / {args.generated_vectors:,}
-- Invalid seed / generated objects: {args.invalid_seed} / {args.invalid_objects:,}
-- Bounded / deterministic-boundary vectors: {BOUNDED_VECTOR_COUNT:,} / {BOUNDARY_VECTOR_COUNT:,}
 
 ## Hard endpoints
 

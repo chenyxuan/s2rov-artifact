@@ -1,11 +1,3 @@
-## Material Passport
-
-- Origin Skill: academic-research-suite / experiment-agent
-- Origin Mode: run + validate
-- Origin Date: 2026-08-23
-- Verification Status: ANALYZED (independent rerun required for verification)
-- Version Label: attack_reachability-sibling-endpoint-v1
-
 ## Attack reachability Sibling Endpoint Result
 
 - Manifest: `af0041cf390d22266a65033ada7ad97fc93a713b61cb0575d9e82d67acae7d26`

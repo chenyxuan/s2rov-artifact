@@ -45,8 +45,8 @@ from bgpy.shared.enums import Relationships
 from bgpy.simulation_engine import Announcement, BGP, ROV, SimulationEngine
 from bgpy.simulation_framework import Scenario, ScenarioConfig
 
-from implementation.daroa_codec.scripts.utils.daroa import (
-    DAROA,
+from implementation.s2rov_codec.scripts.utils.s2rov import (
+    S2ROV,
     Stripe,
     ValidationState,
     is_eligible_delegated_origin,
@@ -62,8 +62,8 @@ PAIR_TABLE_PATH = INPUT_DIR / "holder_delegate_pairs.csv"
 ROV_JSON_PATH = INPUT_DIR / "rov_ases.json"
 ROV_TEXT_PATH = INPUT_DIR / "rov_ases.txt"
 POLICY_PATH = REPOSITORY_ROOT / "experiments" / "routing_model" / "s2rov" / "policy.py"
-DAROA_CODEC_ORACLE_PATH = (
-    REPOSITORY_ROOT / "implementation" / "daroa_codec" / "scripts" / "utils" / "daroa.py"
+S2ROV_CODEC_ORACLE_PATH = (
+    REPOSITORY_ROOT / "implementation" / "s2rov_codec" / "scripts" / "utils" / "s2rov.py"
 )
 VENDOR_PATH = REPOSITORY_ROOT / "experiments" / "routing_model" / "vendor" / "bgpy"
 
@@ -108,7 +108,7 @@ ATTACKER_RULE = (
     "high-degree attackers (top one percent of eligible ASes by total "
     "degree). Exclude all selected holders/delegates, sample without "
     "replacement from ASN-sorted pools using random.Random(20260804), and "
-    "require the DAROA-encoding public-origin eligibility gate."
+    "require the S2-ROV-encoding public-origin eligibility gate."
 )
 
 
@@ -427,9 +427,9 @@ def build_trial_plan(pairs: Sequence[PairSpec]) -> tuple[TrialSpec, ...]:
     return tuple(trials)
 
 
-def make_open_policy(pair: PairSpec) -> DAROA:
+def make_open_policy(pair: PairSpec) -> S2ROV:
     leaf = ip_network(pair.leaf_prefix, strict=True)
-    return DAROA(
+    return S2ROV(
         base_prefix=pair.root_prefix,
         max_length=leaf.prefixlen,
         holder_asn=pair.holder_asn,
@@ -437,9 +437,9 @@ def make_open_policy(pair: PairSpec) -> DAROA:
     )
 
 
-def make_closed_child_policy(pair: PairSpec) -> DAROA:
+def make_closed_child_policy(pair: PairSpec) -> S2ROV:
     leaf = ip_network(pair.leaf_prefix, strict=True)
-    return DAROA(
+    return S2ROV(
         base_prefix=pair.root_prefix,
         max_length=leaf.prefixlen,
         holder_asn=pair.holder_asn,
@@ -498,9 +498,9 @@ def build_scenario(
     engine: SimulationEngine,
 ) -> FixedDeploymentScenario:
     if not da_asns.issubset(rov_asns):
-        raise RuntimeError("DA-aware set is not a subset of the fixed ROV set")
+        raise RuntimeError("S2-ROV-aware set is not a subset of the fixed ROV set")
     if spec.lane in BASELINE_LANES and da_asns:
-        raise RuntimeError("fixed baseline lane cannot contain DA-aware ASes")
+        raise RuntimeError("fixed baseline lane cannot contain S2-ROV-aware ASes")
     if spec.lane not in BASELINE_LANES | STAGED_LANES:
         raise RuntimeError(f"unknown trial lane {spec.lane!r}")
 
@@ -551,7 +551,7 @@ def verify_policy_assignment(
         as_obj.asn for as_obj in engine.as_graph if type(as_obj.policy) is ROV
     }
     if actual_da != set(da_asns):
-        raise RuntimeError("engine DA-aware assignment differs from requested subset")
+        raise RuntimeError("engine S2-ROV-aware assignment differs from requested subset")
     if actual_da | actual_rov != set(rov_asns):
         raise RuntimeError("engine ROV+DA assignment differs from fixed 589-AS set")
     if actual_da.difference(rov_asns):
@@ -930,7 +930,7 @@ def collect_hashes() -> dict[str, Any]:
         "rov_ases_json": ROV_JSON_PATH,
         "rov_ases_text": ROV_TEXT_PATH,
         "s2rov_policy": POLICY_PATH,
-        "daroa_codec_oracle": DAROA_CODEC_ORACLE_PATH,
+        "s2rov_codec_oracle": S2ROV_CODEC_ORACLE_PATH,
         "campaign_runner": Path(__file__).resolve(),
     }
     file_hashes = {name: sha256_file(path) for name, path in paths.items()}

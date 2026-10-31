@@ -15,10 +15,10 @@ import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-DAROA_CODEC_SCRIPTS = ROOT / "implementation" / "daroa_codec" / "scripts"
-sys.path.insert(0, str(DAROA_CODEC_SCRIPTS))
+S2ROV_CODEC_SCRIPTS = ROOT / "implementation" / "s2rov_codec" / "scripts"
+sys.path.insert(0, str(S2ROV_CODEC_SCRIPTS))
 
-from utils.daroa import DAROA, Stripe, ValidationState
+from utils.s2rov import S2ROV, Stripe, ValidationState
 
 
 HERE_DIR = Path(__file__).resolve().parents[1]
@@ -26,7 +26,7 @@ TABLE_DIR = HERE_DIR / "outputs" / "tables"
 TABLE_DIR.mkdir(parents=True, exist_ok=True)
 
 
-def build_policy(num_customers: int) -> DAROA:
+def build_policy(num_customers: int) -> S2ROV:
     stripes = [
         Stripe("10.0.0.0/8", {64501}, is_open=True),
     ]
@@ -40,11 +40,11 @@ def build_policy(num_customers: int) -> DAROA:
                 is_open=False,
             )
         )
-    return DAROA("10.0.0.0/8", 24, 64501, stripes)
+    return S2ROV("10.0.0.0/8", 24, 64501, stripes)
 
 
 def policy_cases() -> list[dict[str, str]]:
-    policy = DAROA(
+    policy = S2ROV(
         "10.0.0.0/16",
         24,
         64501,
@@ -53,7 +53,7 @@ def policy_cases() -> list[dict[str, str]]:
             Stripe("10.0.1.0/24", {64502}, is_open=False),
         ],
     )
-    decoded = DAROA.deserialize(policy.serialize())
+    decoded = S2ROV.deserialize(policy.serialize())
     cases = [
         ("holder aggregate", "10.0.0.0/16", 64501, ValidationState.EXPLICIT),
         ("wrong aggregate origin", "10.0.0.0/16", 64502, ValidationState.INVALID),
@@ -97,7 +97,7 @@ def benchmark() -> list[dict[str, str]]:
 
     for customers in (1, 16, 256, 4096):
         policy = build_policy(customers)
-        decoded = DAROA.deserialize(policy.serialize())
+        decoded = S2ROV.deserialize(policy.serialize())
         queries = []
         for i in range(query_count):
             customer = i % customers
@@ -150,8 +150,8 @@ def write_csv(path: Path, rows: list[dict[str, str]]) -> None:
 def main() -> None:
     cases = policy_cases()
     perf = benchmark()
-    write_csv(TABLE_DIR / "daroa_policy_cases.csv", cases)
-    write_csv(TABLE_DIR / "daroa_reference_benchmark.csv", perf)
+    write_csv(TABLE_DIR / "s2rov_policy_cases.csv", cases)
+    write_csv(TABLE_DIR / "s2rov_reference_benchmark.csv", perf)
 
     print(f"Policy cases passed: {len(cases)}/{len(cases)}")
     for row in perf:

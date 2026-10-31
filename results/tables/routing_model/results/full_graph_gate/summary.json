@@ -319,7 +319,7 @@
       "s2rov_policy": "081a1365e9a5ca84d2196b71ed494df4c40ee08f66f97e946a4c0aa87025c5e3",
       "holder_delegate_pairs": "7f131ad3c2f9f16ed246af7942762640943d2d980e4ba0587e707a6f224b6d53",
       "origin_divergence_candidates": "5977082573192645ef5487e3de2572097405a5571a3146b23a3df58af940bc67",
-      "daroa_codec_oracle": "7685f8e5583ef2da851085fe119e365255c590d59d853bd90c2068417cd494dc",
+      "s2rov_codec_oracle": "7685f8e5583ef2da851085fe119e365255c590d59d853bd90c2068417cd494dc",
       "rov_ases_json": "eebe35d9e78463f0426871affef78d9bb5f20ab91e7928c373791cd2652f64cf",
       "rov_ases_text": "be4bb53be5001819e2d75ae849ce4d03198fdd1ad19c990c5f6ff13b3c011433"
     }
@@ -1673,7 +1673,7 @@
   },
   "schema_version": 1,
   "selection": {
-    "attacker_rule": "Alternate five edge attackers (total degree exactly one) and five high-degree attackers (top one percent of eligible ASes by total degree). Exclude all selected holders/delegates, sample without replacement from ASN-sorted pools using random.Random(20260804), and require the DAROA-encoding public-origin eligibility gate.",
+    "attacker_rule": "Alternate five edge attackers (total degree exactly one) and five high-degree attackers (top one percent of eligible ASes by total degree). Exclude all selected holders/delegates, sample without replacement from ASN-sorted pools using random.Random(20260804), and require the S2-ROV-encoding public-origin eligibility gate.",
     "interpretation_warning": "Selected pairs are empirical origin-divergence candidates; they are not asserted to be real delegations.",
     "pair_rule": "Retain IPv4 candidate rows whose holder and delegate are public-AS eligible and present in the fixed graph. Collapse to unique holder-delegate pairs, choosing each pair's lowest source_row. Sort pairs by holder_degree+delegate_degree (then maximum endpoint degree, holder ASN, delegate ASN), and take the midpoint item from each of ten equal-rank bins. This stratifies topology degree; it does not infer or claim real delegation.",
     "pairs": [

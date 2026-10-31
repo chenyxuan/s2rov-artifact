@@ -1,7 +1,7 @@
 """Independent pure oracle for policy-snapshot composition and lifecycle.
 
 This module intentionally shares no policy or snapshot data structures with
-the DAROA-encoding implementation.  It models the frozen E1a contract directly from
+the S2-ROV-encoding implementation.  It models the frozen E1a contract directly from
 primitive fields so the implementation can be checked by a genuinely separate
 decision path.  It is not a signed-object, repository, RP, RTR, or router model.
 """

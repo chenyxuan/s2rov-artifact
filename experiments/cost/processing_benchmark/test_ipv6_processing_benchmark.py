@@ -15,7 +15,7 @@ BENCHMARK_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(BENCHMARK_DIR))
 
 import run_ipv6_processing_benchmark as benchmark  # noqa: E402
-from utils.daroa import DAROA, Stripe, ValidationState  # noqa: E402
+from utils.s2rov import S2ROV, Stripe, ValidationState  # noqa: E402
 
 
 class IPv6WorkloadTests(unittest.TestCase):
@@ -63,7 +63,7 @@ class IPv6WorkloadTests(unittest.TestCase):
             self.assertEqual(sorted(policies), [1, 3])
             for size in (1, 3):
                 payload = Path(policies[size]["serialized_path"]).read_bytes()
-                policy = DAROA.deserialize(payload)
+                policy = S2ROV.deserialize(payload)
                 self.assertEqual(policy.ip_version, 6)
                 self.assertEqual(policy.base_prefix, "::/0")
                 self.assertEqual(policy.max_length, 128)
@@ -91,7 +91,7 @@ class IPv6WorkloadTests(unittest.TestCase):
                 "is_open": False,
             },
         ]
-        policy = DAROA(
+        policy = S2ROV(
             "::/0",
             128,
             24482,
@@ -136,7 +136,7 @@ class IPv6WorkloadTests(unittest.TestCase):
                 "is_open": False,
             },
         ]
-        policy = DAROA(
+        policy = S2ROV(
             "::/0",
             128,
             24482,

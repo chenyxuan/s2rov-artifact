@@ -67,13 +67,11 @@
     "scenario_set": "opaque fixed 589-AS scenario set reused unchanged from frozen routing-model"
   },
   "ledger_sha256": "351b643fde0e1e848bc84f276bb8c686c0ff4bb30ad440ad32e4979fb6a5baeb",
-  "ledger_type": "Spark-to-Paper manuscript evidence ledger",
+  "ledger_type": "manuscript evidence ledger",
   "passport_reconciliation": {
-    "frozen_v1_executor_workflow_label": "academic-research-suite/experiment-agent",
     "frozen_v1_was_modified": false,
     "integrity_reason": "The frozen label is part of the manifest canonical hash; every raw row binds that manifest hash, and the scientific digest includes it. Relabeling v1 would invalidate the existing audit chain.",
-    "overarching_origin_pipeline": "Spark-to-Paper",
-    "resolution": "This self-hashed overlay records Spark-to-Paper provenance while retaining the immutable v1 campaign and raw evidence."
+    "resolution": "This self-hashed overlay records the experiment pipeline provenance while retaining the immutable v1 campaign and raw evidence."
   },
   "primary_100_percent_results": {
     "sibling_destination_attacker_delivery": {

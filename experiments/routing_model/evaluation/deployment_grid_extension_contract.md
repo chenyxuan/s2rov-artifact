@@ -1,15 +1,5 @@
 # Routing model deployment-grid extension contract
 
-## Material Passport
-
-- **Origin skill:** experiment-agent
-- **Origin modes:** plan + run + validate
-- **Version label:** routing_model-deployment-grid-extension-v1
-- **Verification status:** PLANNED; the manifest must be frozen before full
-  propagation starts.
-- **Simulator:** the same pinned BGPy runtime and full-graph propagation model
-  as the accepted routing-model paper campaign.
-
 ## 1. Purpose and boundary
 
 This extension fills the regular 10-percentage-point grid omitted by the

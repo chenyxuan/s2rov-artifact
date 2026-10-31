@@ -465,15 +465,7 @@ def results_markdown(
     def pp(value: Any) -> float:
         return 100 * float(value)
 
-    return f"""## Material Passport
-
-- Origin Skill: academic-research-suite / experiment-agent
-- Origin Mode: run + validate
-- Origin Date: {utc_now()[:10]}
-- Verification Status: ANALYZED (independent rerun required for verification)
-- Version Label: {VERSION_LABEL}
-
-## Attack reachability Sibling Endpoint Result
+    return f"""## Attack reachability Sibling Endpoint Result
 
 - Manifest: `{manifest["manifest_sha256"]}`
 - Independent unit: `holder_asn` (n=200; design population 691)
@@ -632,7 +624,6 @@ def analyze(
         "created_at_utc": utc_now(),
         "status": "ANALYZED",
         "material_passport": {
-            "origin_skill": "academic-research-suite/experiment-agent",
             "origin_mode": "validate",
             "origin_date": utc_now()[:10],
             "verification_status": "ANALYZED",

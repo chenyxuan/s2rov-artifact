@@ -1,23 +1,5 @@
 # BGPy evaluation for S2-ROV Internet-scale experiments
 
-## Material Passport
-
-- **Mode:** experiment `run` + limited reproducibility `validate`
-- **Verification status:** **VERIFIED (smoke scope)** for installation, official
-  Scenario tests, CAIDA graph construction, multi-origin propagation, ROV
-  filtering, and deterministic replay on a fixed topology
-- **Evaluated source:** official BGPy repository and documentation only
-- **Repository:** <https://github.com/jfuruness/bgpy_pkg>
-- **Pinned source commit:**
-  `c3b1be48148e8c246a60b9dec6513b688a4736a5`
-- **Pinned distribution:** `bgpy-pkg==13.0.10`
-- **Environment:** Ubuntu/aarch64, CPython 3.12.3, 32 logical CPUs, 62 GiB RAM
-- **Not evaluated:** long campaign throughput, withdrawal/convergence dynamics,
-  or the final S2-ROV adapter (none has yet been written)
-- **Upstream tree modified:** no tracked upstream file (`git status --porcelain`
-  is empty); the local build/test commands created ignored `.venv`, `build`,
-  `bgpy_pkg.egg-info`, and pytest artifacts inside the clone
-
 ## Bottom line
 
 **BGPy is a strong fit for the next S2-ROV experiment and should remain the
@@ -265,7 +247,7 @@ Use three policy classes in one graph:
 
 1. `BGP` for ASes without ROV;
 2. stock `ROV` for measured ROV ASes that have not upgraded; and
-3. project-owned `S2ROV` for the selected DA-aware subset.
+3. project-owned `S2ROV` for the selected S2-ROV-aware subset.
 
 `ScenarioConfig.hardcoded_base_asn_cls_dict` can map all 589 measured ROV ASes
 to stock `ROV`. `override_adopting_asns` then names the subset upgraded to
@@ -282,7 +264,7 @@ set; otherwise endpoints can silently acquire the DA policy.
 
 A static reachability/exposure experiment needs:
 
-- an immutable DA policy index backed by the existing DAROA-encoding reference
+- an immutable DA policy index backed by the existing S2-ROV-encoding reference
   validator;
 - `S2ROV._valid_ann`, accepting `Explicit`, `Delegated`, and `NotFound` under
   the chosen enforcement profile and rejecting `Invalid`;

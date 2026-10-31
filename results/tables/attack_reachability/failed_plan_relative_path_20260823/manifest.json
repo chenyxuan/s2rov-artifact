@@ -3,8 +3,8 @@
     "bundle_sha256": "36d1c004e77c4008e7bcf10ac77e41db54f163704b2f276a50a43867cb32dfab",
     "files": {
       "dependency_lock": "63a6b65d21459a5ef298b99286939a2095fd3d91c5d9299a956f50160662b665",
-      "daroa_codec_as_set": "4366122a6f825dca19cf9c2f99bb08a1ae8185c29baa7fd18d1444c7c9d314fc",
-      "daroa_codec_daroa_oracle": "7685f8e5583ef2da851085fe119e365255c590d59d853bd90c2068417cd494dc",
+      "s2rov_codec_as_set": "4366122a6f825dca19cf9c2f99bb08a1ae8185c29baa7fd18d1444c7c9d314fc",
+      "s2rov_codec_s2rov_oracle": "7685f8e5583ef2da851085fe119e365255c590d59d853bd90c2068417cd494dc",
       "routing_model_s2rov_policy": "081a1365e9a5ca84d2196b71ed494df4c40ee08f66f97e946a4c0aa87025c5e3",
       "routing_model_full_graph_gate": "bedde6268d37e55c0ab01652a8512ffb62434f28908cccf856ae57e197f61444",
       "routing_model_paper_campaign": "9500cd43d7ee6a409c9d0dc83e41fc44dd85311c5b0dfd69f89ac1405d98ed50",
@@ -142,7 +142,6 @@
   "material_passport": {
     "origin_date": "2026-08-23",
     "origin_mode": "run+validate",
-    "origin_skill": "academic-research-suite/experiment-agent",
     "verification_status": "UNVERIFIED",
     "version_label": "attack_reachability-sibling-endpoint-v1"
   },

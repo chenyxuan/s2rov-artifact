@@ -9,7 +9,7 @@ from pathlib import Path
 HERE_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(HERE_DIR / "scripts"))
 
-from utils.daroa import DAROA, Stripe, ValidationState  # noqa: E402
+from utils.s2rov import S2ROV, Stripe, ValidationState  # noqa: E402
 from utils.snapshot import (  # noqa: E402
     PolicyEnvelope,
     PolicySnapshot,
@@ -21,8 +21,8 @@ from utils.snapshot import (  # noqa: E402
 NOW = 2_000_000_000
 
 
-def policy(base: str, max_length: int, holder: int, base_marker: bool) -> DAROA:
-    return DAROA(
+def policy(base: str, max_length: int, holder: int, base_marker: bool) -> S2ROV:
+    return S2ROV(
         base,
         max_length,
         holder,
@@ -32,7 +32,7 @@ def policy(base: str, max_length: int, holder: int, base_marker: bool) -> DAROA:
 
 def envelope(
     object_id: str,
-    value: DAROA,
+    value: S2ROV,
     *,
     issuer: str = "ta.example",
     serial: int = 1,

@@ -80,8 +80,8 @@ ARTIFACT_PATHS = {
     / "experiments/routing_model/data/inputs/origin_divergence_candidates.csv",
     "paper_campaign_runner": REPOSITORY_ROOT
     / "experiments/routing_model/campaign/paper_campaign.py",
-    "daroa_codec_oracle": REPOSITORY_ROOT
-    / "implementation/daroa_codec/scripts/utils/daroa.py",
+    "s2rov_codec_oracle": REPOSITORY_ROOT
+    / "implementation/s2rov_codec/scripts/utils/s2rov.py",
     "rov_ases_json": REPOSITORY_ROOT
     / "experiments/routing_model/data/inputs/rov_ases.json",
     "rov_ases_text": REPOSITORY_ROOT

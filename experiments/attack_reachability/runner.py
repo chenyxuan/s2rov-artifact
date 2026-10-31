@@ -30,7 +30,7 @@ from roa_checker import ROA
 
 from bgpy.simulation_engine import BGP, ROV, SimulationEngine
 from bgpy.simulation_framework import ScenarioConfig
-from implementation.daroa_codec.scripts.utils.daroa import ValidationState
+from implementation.s2rov_codec.scripts.utils.s2rov import ValidationState
 from experiments.routing_model.campaign.full_graph_gate import (
     S2ROV,
     FixedDeploymentScenario,
@@ -419,11 +419,11 @@ def artifact_hashes() -> dict[str, Any]:
         "routing_model_full_graph_gate": (ROUTING_MODEL_ROOT / "campaign" / "full_graph_gate.py"),
         "routing_model_paper_campaign": (ROUTING_MODEL_ROOT / "campaign" / "paper_campaign.py"),
         "routing_model_s2rov_policy": ROUTING_MODEL_ROOT / "s2rov" / "policy.py",
-        "daroa_codec_daroa_oracle": (
-            REPOSITORY_ROOT / "implementation" / "daroa_codec" / "scripts" / "utils" / "daroa.py"
+        "s2rov_codec_s2rov_oracle": (
+            REPOSITORY_ROOT / "implementation" / "s2rov_codec" / "scripts" / "utils" / "s2rov.py"
         ),
-        "daroa_codec_as_set": (
-            REPOSITORY_ROOT / "implementation" / "daroa_codec" / "scripts" / "utils" / "as_set.py"
+        "s2rov_codec_as_set": (
+            REPOSITORY_ROOT / "implementation" / "s2rov_codec" / "scripts" / "utils" / "as_set.py"
         ),
         "dependency_lock": DEPENDENCY_LOCK_PATH,
         "third_party_lock": THIRD_PARTY_LOCK_PATH,
@@ -453,7 +453,6 @@ def build_manifest() -> dict[str, Any]:
         "created_at_utc": created,
         "status": "planned_not_executed",
         "material_passport": {
-            "origin_skill": "academic-research-suite/experiment-agent",
             "origin_mode": "run+validate",
             "origin_date": created[:10],
             "verification_status": "UNVERIFIED",
@@ -747,7 +746,7 @@ def build_sibling_scenario(
     if lane not in {B1_SIBLING, A1_SIBLING}:
         raise AttackReachabilityContractError(f"unknown lane {lane}")
     if lane == B1_SIBLING and da_asns:
-        raise AttackReachabilityContractError("conventional lane contains DA-aware ASes")
+        raise AttackReachabilityContractError("conventional lane contains S2-ROV-aware ASes")
     if not da_asns.issubset(rov_asns):
         raise AttackReachabilityContractError("DA set is not a subset of the fixed ROV set")
     root = ip_network(unit.root_prefix, strict=True)

@@ -15,6 +15,18 @@ the shipped results can be rebuilt from source.
 | `experiments/candidates/.../outputs/tables/allocation_tree_pairs.csv` | 262 MB | Intermediate pair table | allocation-tree pipeline |
 | `experiments/routing_model/results/**/raw_scenarios.jsonl` | 45–118 MB | Per-scenario routing dumps | `experiments/routing_model/campaign/` (fixed seeds in the contracts) |
 | `implementation/prototype/e2e/outputs/*/raw/**` | — | Per-trial containers, ROA files, ping logs | `implementation/prototype/e2e/` runners |
+| `experiments/routing_model/vendor/` | — | Upstream simulator checkouts | `experiments/routing_model/scripts/fetch_simulators.sh` |
+| `implementation/prototype/e2e/dockerfiles/` | — | Container images and build context | rebuilt by the `e2e` runners |
+| `implementation/prototype/e2e/Makefile` | — | Run driver for the containerised harness | the commands in `e2e/README.md` |
+| `*/outputs/*.pdf`, `*/figures/*.pdf` | — | Rendered figures | `experiments/analysis_scripts/` |
+
+## Where the full result tables are
+
+Experiments write in place, so a document may name an output as
+`<experiment>/results/...`. Everything that was archived is also collected
+here under `results/tables/<experiment>/`, keeping the path it had when the
+run wrote it. If a path in a document is not present next to the code, look
+there; if it is in neither place, it is one of the run artefacts above.
 
 ## Scope rules
 

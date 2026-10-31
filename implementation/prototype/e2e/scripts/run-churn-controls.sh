@@ -452,7 +452,7 @@ capture_control_environment() {
         sha256sum \
             scripts/run-churn-experiment.sh \
             scripts/run-churn-controls.sh \
-            src/daroa_agent.py \
+            src/s2rov_agent.py \
             src/summarize_churn.py \
             src/summarize_churn_controls.py \
             config/krill/krill.conf.template \

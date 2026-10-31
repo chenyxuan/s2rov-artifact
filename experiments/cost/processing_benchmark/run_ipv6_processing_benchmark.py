@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reproducible single-core IPv6 replay for the DAROA-encoding classifier.
+"""Reproducible single-core IPv6 replay for the S2-ROV-encoding classifier.
 
 The source is the mixed-family RRC00 prefix-origin CSV used by the IPv4
 benchmark.  This companion filters it to canonical, scalar-origin IPv6 pairs
@@ -36,10 +36,10 @@ from typing import Any, Sequence
 SCRIPT = Path(__file__).resolve()
 BENCHMARK_DIR = SCRIPT.parent
 REPO_ROOT = SCRIPT.parents[2]
-DAROA_CODEC_SCRIPTS = REPO_ROOT / "implementation" / "daroa_codec" / "scripts"
+S2ROV_CODEC_SCRIPTS = REPO_ROOT / "implementation" / "s2rov_codec" / "scripts"
 LEGACY_BENCHMARK = BENCHMARK_DIR / "run_processing_benchmark.py"
 sys.path.insert(0, str(BENCHMARK_DIR))
-sys.path.insert(0, str(DAROA_CODEC_SCRIPTS))
+sys.path.insert(0, str(S2ROV_CODEC_SCRIPTS))
 
 # Reuse only family-neutral, non-reporting mechanics from the audited IPv4
 # driver.  IPv6 preparation, policy construction, labels, reports, and output
@@ -58,7 +58,7 @@ from run_processing_benchmark import (  # noqa: E402
     sha256_file,
     utc_now,
 )
-from utils.daroa import DAROA, Stripe, ValidationState  # noqa: E402
+from utils.s2rov import S2ROV, Stripe, ValidationState  # noqa: E402
 
 
 SCHEMA_VERSION = 1
@@ -264,7 +264,7 @@ def create_ipv6_policies(
                 }
             )
 
-        policy = DAROA(
+        policy = S2ROV(
             "::/0",
             128,
             holder,
@@ -278,7 +278,7 @@ def create_ipv6_policies(
             ],
         )
         payload = policy.serialize()
-        roundtrip = DAROA.deserialize(payload)
+        roundtrip = S2ROV.deserialize(payload)
         if roundtrip.serialize() != payload:
             raise AssertionError(f"IPv6 policy round trip failed for size {size}")
         if roundtrip.ip_version != 6:
@@ -374,10 +374,10 @@ def create_ipv6_policies(
 def load_ipv6_policy_and_check(
     policy_path: Path,
     spots_path: Path,
-) -> tuple[DAROA, dict[str, Any]]:
+) -> tuple[S2ROV, dict[str, Any]]:
     payload = policy_path.read_bytes()
     parse_started = time.perf_counter_ns()
-    policy = DAROA.deserialize(payload)
+    policy = S2ROV.deserialize(payload)
     policy_parse_ns = time.perf_counter_ns() - parse_started
     roundtrip_identical = policy.serialize() == payload
     document = json.loads(spots_path.read_text(encoding="utf-8"))
@@ -407,7 +407,7 @@ def load_ipv6_policy_and_check(
     return policy, check
 
 
-def warm_policy(policy: DAROA, workload: Path, count: int) -> int:
+def warm_policy(policy: S2ROV, workload: Path, count: int) -> int:
     warmed = 0
     for prefix, origin in iter_workload(workload):
         policy.validate_route(prefix, origin)
@@ -820,7 +820,7 @@ Generated: {utc_now()}
 
 ## Scope
 
-This run measures the Python `DAROA.validate_route` reference classifier on
+This run measures the Python `S2ROV.validate_route` reference classifier on
 {manifest['ipv6_rows']:,} valid scalar-origin IPv6 prefix-origin pairs derived from
 {manifest['source_ipv6_rows']:,} IPv6 rows encountered in the mixed RRC00 CSV.
 Preprocessing excluded {manifest['source_ipv6_ambiguous_markers_excluded']:,} rows
@@ -989,8 +989,8 @@ def run_orchestrator(args: argparse.Namespace) -> int:
         "platform": platform.platform(),
         "script": str(SCRIPT),
         "script_sha256": sha256_file(SCRIPT),
-        "classifier": str(DAROA_CODEC_SCRIPTS / "utils" / "daroa.py"),
-        "classifier_sha256": sha256_file(DAROA_CODEC_SCRIPTS / "utils" / "daroa.py"),
+        "classifier": str(S2ROV_CODEC_SCRIPTS / "utils" / "s2rov.py"),
+        "classifier_sha256": sha256_file(S2ROV_CODEC_SCRIPTS / "utils" / "s2rov.py"),
         "legacy_helper": str(LEGACY_BENCHMARK),
         "legacy_helper_sha256": sha256_file(LEGACY_BENCHMARK),
         "source_git_commit": subprocess.run(

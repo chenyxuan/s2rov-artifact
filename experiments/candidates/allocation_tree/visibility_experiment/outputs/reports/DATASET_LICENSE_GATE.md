@@ -32,7 +32,7 @@ and
   use).  RIPE RIS and RIPE NCC will be acknowledged.  Separate commercial-use
   conditions are not applicable to this manuscript analysis.
 - User confirmation required: yes -- this is a new external download and the
-  Spark-to-Paper experiment gate requires explicit pre-run approval.
+  experiment gate requires explicit pre-run approval.
 - Estimated runtime: roughly 2--10 minutes to download and 10--25 minutes for
   streaming MRT extraction plus the exact-route join, depending on network and
   storage throughput.

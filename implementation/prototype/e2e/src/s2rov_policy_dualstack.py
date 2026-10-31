@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Dual-stack OpenScope-marker model for the IPv6 handoff lane.
 
-The accepted IPv4 fixture is source-hash-bound to ``daroa_agent.py``.  This
+The accepted IPv4 fixture is source-hash-bound to ``s2rov_agent.py``.  This
 module applies the same classification rules to both IPv4 and IPv6 prefixes.
 """
 
@@ -12,7 +12,7 @@ from collections import defaultdict
 from dataclasses import dataclass
 from typing import Any, Iterable
 
-from daroa_agent import eligible_delegated_origin, parse_asn
+from s2rov_agent import eligible_delegated_origin, parse_asn
 
 
 IpNetwork = ipaddress.IPv4Network | ipaddress.IPv6Network

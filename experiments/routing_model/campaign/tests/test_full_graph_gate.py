@@ -6,7 +6,7 @@ import pytest
 
 from bgpy.as_graphs import ASGraph, ASGraphInfo, CustomerProviderLink, PeerLink
 from bgpy.simulation_engine import SimulationEngine
-from implementation.daroa_codec.scripts.utils.daroa import ValidationState
+from implementation.s2rov_codec.scripts.utils.s2rov import ValidationState
 
 from experiments.routing_model.campaign.full_graph_gate import (
     A1_OPEN_COMPETITION,
