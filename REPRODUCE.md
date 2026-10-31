@@ -8,13 +8,13 @@ Paths are relative to the bundle root. The paper itself is not bundled.
 
 | File | Manuscript item |
 |---|---|
-| `table1-registry-paths.csv` | Table I, registry paths and origin divergence |
-| `fig2-conflict-rates.csv` | Fig. 2, conflicts during partial ROA issuance |
-| `fig3-prioritization.csv` | Fig. 3, aggregate-prefix prioritization |
-| `fig4-processing-cost.json` | Fig. 4, classification throughput and update latency |
-| `fig5-deployment-outcomes.csv` | Fig. 5, reachability and origin exposure |
-| `section5c-ipv6-sensitivity.json` | Sec. V-C, IPv6 candidate sensitivity |
-| `section5d-attack-reachability.json` | Sec. V-D, attack reachability |
+| `results/table1-registry-paths.csv` | Table I, registry paths and origin divergence |
+| `results/fig2-conflict-rates.csv` | Fig. 2, conflicts during partial ROA issuance |
+| `results/fig3-prioritization.csv` | Fig. 3, aggregate-prefix prioritization |
+| `results/fig4-processing-cost.json` | Fig. 4, classification throughput and update latency |
+| `results/fig5-deployment-outcomes.csv` | Fig. 5, reachability and origin exposure |
+| `results/section5c-ipv6-sensitivity.json` | Sec. V-C, IPv6 candidate sensitivity |
+| `results/section5d-attack-reachability.json` | Sec. V-D, attack reachability |
 
 `results/README.md` names the pipeline file each one came from, and
 `results/numbers.json` is the ledger of every number quoted in the paper.
@@ -28,7 +28,7 @@ Paths are relative to the bundle root. The paper itself is not bundled.
 | Fig. 4 | `experiments/cost/processing_benchmark/` |
 | Fig. 5 | `experiments/routing_model/campaign/` |
 | Sec. V-C | `experiments/routing_model/campaign/ipv6_sensitivity.py` |
-| Sec. V-D | `experiments/attack_reachability/runner.py`, then `analyze.py` |
+| Sec. V-D | `experiments/attack_reachability/runner.py`, then `analyze.py` under the same directory |
 
 Run the analysis scripts from `experiments/analysis_scripts/`; they resolve
 their inputs relative to that directory, matching the layout here.
