@@ -1,3 +1,0 @@
-{
-"bgpTableVersion":31,"bgpLocalRouterId":"172.30.0.11","defaultLocPrf":100,"localAS":65001,"receivedRoutes": {"192.0.2.0/24":{"addrPrefix":"192.0.2.0","prefixLen":24,"network":"192.0.2.0/24","nextHop":"172.30.0.28","metric":0,"weight":0,"path":"64496","origin":"IGP","valid":true,"best":true}}
-,"totalPrefixCounter":1,"filteredPrefixCounter":0,"totalPathsCount":0}

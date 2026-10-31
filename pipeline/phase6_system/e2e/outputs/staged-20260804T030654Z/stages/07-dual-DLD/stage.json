@@ -1,7 +1,0 @@
-{
-  "label": "dual-DLD",
-  "publication": "dual",
-  "pattern": "DLD",
-  "cases_file": "<repo>/phase6_system/e2e/config/staged/cases.json",
-  "elapsed_ms": 3286
-}

@@ -1,7 +1,0 @@
-{
-  "label": "dual-SSS",
-  "publication": "dual",
-  "pattern": "SSS",
-  "cases_file": "<repo>/phase6_system/e2e/config/staged/cases.json",
-  "elapsed_ms": 2956
-}

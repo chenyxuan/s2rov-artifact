@@ -1,9 +1,0 @@
-{
- "vrfId": 0,
- "vrfName": "default",
- "tableVersion": 340,
- "routerId": "172.30.61.10",
- "defaultLocPrf": 100,
- "localAS": 65000,
- "routes": { "2001:db8:10::/48": [{"valid":true,"bestpath":true,"selectionReason":"First path received","pathFrom":"external","prefix":"2001:db8:10::","prefixLen":48,"network":"2001:db8:10::/48","version":340,"metric":0,"locPrf":300,"weight":0,"peerId":"fd30:61::11","path":"8075","origin":"IGP","nexthops":[{"ip":"fd30:61::11","hostname":"origin-a","afi":"ipv6","scope":"global","linkLocalOnly":false,"length":32},{"ip":"fe80::2c3d:78ff:fed8:13fb","hostname":"origin-a","afi":"ipv6","scope":"link-local","used":true}]}]
- } , "totalRoutes": 1, "totalPaths": 1 } 

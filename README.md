@@ -7,46 +7,44 @@ Origins Are Known* (IEEE MSN 2026).
 The paper itself is not bundled; it is published by the conference.
 
 ```text
-00-reproduce/        one plainly named file per table, figure, measured section
-figure-source-data/  the plotted data behind Figures 1-5
-pipeline/            the experiment code, kept at the paths the scripts expect
-results.facts.json   every number quoted in the paper, with its provenance
-REPRODUCE.md         how to read the numbers and how to re-run an experiment
+implementation/   the DAROA codec, the four-state classifier, the prototype
+experiments/      one directory per experiment, named for what it does
+results/          the reported tables and the ledger of quoted numbers
+figure-data/      the plotted data behind the figures
 ```
 
 ## What the paper promises, and where it is
 
 | Promised material | In this bundle |
 |---|---|
-| **implementation** | `pipeline/phase4_encoding/` — DAROA codec and four-state classifier; `pipeline/phase6_system/` — Krill / Routinator / FRR prototype |
-| **experiment and analysis scripts** | `pipeline/phase1_empirical/` … `pipeline/phase10_semantic_gate/`; figure and replay scripts in `pipeline/analysis-scripts/` |
-| **configurations** | the `*.json` contracts and manifests inside each phase |
-| **result tables** | `00-reproduce/` for the reported items, `pipeline/*/results/` and `pipeline/*/outputs/` for the full tables |
-| **figure source data** | `figure-source-data/` |
+| **implementation** | `implementation/daroa-codec/` — encoding, merging, four-state classifier; `implementation/prototype/` — Krill / Routinator / FRR prototype |
+| **experiment and analysis scripts** | `experiments/*/` and `experiments/analysis-scripts/` |
+| **configurations** | the `*.json` contracts and manifests inside each experiment directory |
+| **result tables** | `results/` for the reported items, `results/tables/` for the full tables |
+| **figure source data** | `figure-data/` |
 
-## The pipeline directories
-
-The names are the identifiers the scripts import (`from
-phase4_encoding.scripts.utils.daroa import …`), so they are kept as-is.
+## Experiments
 
 | Directory | What it does | Reported as |
 |---|---|---|
-| `phase1_empirical/` | Registry and RIS analysis; candidate selection | Table I |
-| `phase2_formal/`, `phase3_semantics/` | Formal statements and classifier semantics | Sections II–III |
-| `phase4_encoding/` | DAROA encoding, merge, four-state classifier | Sections III–IV |
-| `phase5_evaluation/` | Classification throughput and update latency | Fig. 4 |
-| `phase6_system/` | Krill / Routinator / FRR end-to-end prototype | Section IV |
-| `phase7_simulation/` | BGPy routing model: delivery and exposure | Fig. 5, Sec. V-C |
-| `phase8_sibling_sensitivity/` | Attacker reachability for a marked region | Sec. V-D |
-| `phase9_selected_unit_reanalysis/` | Selected-unit bootstrap reanalysis | Sec. V |
-| `phase10_semantic_gate/` | Semantic gate on exported results | Correctness checks |
+| `experiments/candidates/` | Registry and RIS analysis; candidate selection | Table I |
+| `experiments/formal/`, `experiments/semantics/` | Formal statements and classifier semantics | Sections II–III |
+| `experiments/cost/` | Classification throughput and update latency | Fig. 4 |
+| `experiments/routing-model/` | BGPy model: delivery and origin exposure | Fig. 5, Sec. V-C |
+| `experiments/attack-reachability/` | Attacker reachability for a marked region | Sec. V-D |
+| `experiments/reanalysis/` | Selected-unit bootstrap reanalysis | Sec. V |
+| `experiments/semantic-gate/` | Semantic gate on exported results | correctness checks |
+| `experiments/analysis-scripts/` | Figure and replay scripts used for the manuscript | Figs. 2–5 |
+
+Each directory keeps its own `README.md` and, where the campaign was run under
+a frozen contract, an `EXPERIMENT_CONTRACT.md`.
 
 ## Requirements
 
 - Python 3.12.
-- `pipeline/phase7_simulation/requirements-bgpy.txt` for the routing model, in
+- `experiments/routing-model/requirements-bgpy.txt` for the routing model, in
   its own environment.
-- Nothing at all to read `00-reproduce/` or `figure-source-data/`.
+- Nothing at all to read `results/` or `figure-data/`.
 
 ## Verifying the bundle
 

@@ -1,3 +1,0 @@
-{
-"bgpTableVersion":1,"bgpLocalRouterId":"172.30.60.10","defaultLocPrf":100,"localAS":65000,"receivedRoutes": {"10.0.10.0/24":{"addrPrefix":"10.0.10.0","prefixLen":24,"network":"10.0.10.0/24","nextHop":"172.30.60.12","weight":0,"path":"18403 65000 8075","origin":"IGP","valid":true,"best":true}}
-,"totalPrefixCounter":1,"filteredPrefixCounter":0,"totalPathsCount":0}

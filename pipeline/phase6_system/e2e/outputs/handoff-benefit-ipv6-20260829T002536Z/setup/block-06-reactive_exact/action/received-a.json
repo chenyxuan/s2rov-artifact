@@ -1,3 +1,0 @@
-{
-"bgpTableVersion":45,"bgpLocalRouterId":"172.30.61.10","defaultLocPrf":100,"localAS":65000,"receivedRoutes": {"2001:db8:10::/48":{"addrPrefix":"2001:db8:10::","prefixLen":48,"network":"2001:db8:10::/48","nextHopGlobal":"fd30:61::11","metric":0,"weight":0,"path":"8075","origin":"IGP","valid":true,"best":true}}
-,"totalPrefixCounter":1,"filteredPrefixCounter":0,"totalPathsCount":0}
