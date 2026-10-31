@@ -72,6 +72,3 @@ the MIT License (`LICENSE`).
 Third-party inputs keep their own terms: RIPE NCC (RIPE Database, RIS/RRC00) and
 CAIDA data are not redistributed beyond the small derived tables needed to read
 the figures, and Krill, Routinator, FRR and BGPy are not vendored.
-
-Correspondence: Yuxuan Chen (chenyuxuan@cnic.cn) and Yanbiao Li
-(lybmath@cnic.cn).
