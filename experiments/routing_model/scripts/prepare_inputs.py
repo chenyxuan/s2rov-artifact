@@ -574,7 +574,7 @@ def prepare_inputs(
 
 
 def _default_paths() -> tuple[Path, Path, Path, Path]:
-    repository_root = Path(__file__).resolve().parents[2]
+    repository_root = Path(__file__).resolve().parents[3]
     return (
         repository_root
         / "experiments/candidates/allocation_tree/outputs/tables/"

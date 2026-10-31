@@ -63,7 +63,7 @@ from experiments.routing_model.campaign.full_graph_gate import (
 )
 
 
-REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
+REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
 RUNNER_PATH = Path(__file__).resolve()
 SOURCE_CANDIDATES_PATH = (
     REPOSITORY_ROOT

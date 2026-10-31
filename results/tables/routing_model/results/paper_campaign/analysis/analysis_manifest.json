@@ -2,7 +2,7 @@
   "bootstrap": {
     "inference_target": "finite frozen eligible-holder frame, conditional on topology, ROV set, sampled within-holder scenario, attacker assignments, and five frozen random deployment orders",
     "interval": "pointwise rescaled-bootstrap percentile 95%",
-    "method": "stratified paired holder rescaled bootstrap for SRSWOR with finite-population correction",
+    "method": "stratified paired holder rescaled bootstrap for sampling without replacement with finite-population correction",
     "replicate_weight_totals": "each stratum sums to N_h after applying design weight N_h/n_h",
     "replicates": 10000,
     "rescaled_count_formula": "c_hi=1+a_h*(m_hi-1), a_h=sqrt(n_h*(1-n_h/N_h)/(n_h-1)), m_h~Multinomial(n_h;1/n_h,...,1/n_h)",

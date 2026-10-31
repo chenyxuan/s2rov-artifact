@@ -139,7 +139,7 @@
     "bootstrap_seed": 20260804,
     "order_paths": "five descriptive within-unit deployment blocks retained in source data and averaged before inference; not plotted individually",
     "paired_intervals_plotted_on_absolute_axis": false,
-    "panel_a": "pointwise stratified paired SRSWOR-rescaled bootstrap percentile 95% CI for the finite 691-unit candidate frame",
+    "panel_a": "pointwise stratified paired sampling without replacement-rescaled bootstrap percentile 95% CI for the finite 691-unit candidate frame",
     "panel_b": "pointwise ordinary stratified paired bootstrap 95% stability interval over 200 selected synthetic units; no finite-population correction",
     "simultaneous_bands": false
   }

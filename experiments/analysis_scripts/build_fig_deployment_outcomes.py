@@ -36,9 +36,9 @@ from figure_typography import BODY_FONT_FAMILY, configure_body_font
 
 
 SCRIPT = Path(__file__).resolve()
-PROJECT = SCRIPT.parent.parent
-REPO = PROJECT.parent
-FIGURES = PROJECT / "figures"
+PROJECT = SCRIPT.parents[2]
+REPO = PROJECT
+FIGURES = PROJECT / "figure-data"
 SOURCE_DATA = FIGURES / "source_data"
 
 ROUTING_MODEL_ROOT = REPO / "experiments/routing_model/results/paper_campaign"
@@ -1427,7 +1427,7 @@ delivery from {summary['competition_aggregate_delivery_pct']:.1f}% to
   200 units and five frozen random orders; it neither resamples the units nor
   replaces the frozen routing-model results.
 - Panel (a) is competitor-independent. It retains the frozen routing-model
-  stratified paired SRSWOR-rescaled bootstrap analysis for the finite frame of
+  stratified paired sampling without replacement-rescaled bootstrap analysis for the finite frame of
   691 candidate root-origin units. Five frozen random deployment orders are
   averaged within unit before inference.
 - Panel (b) depends on a competitor assigned only after the 200-unit sample was
@@ -1602,7 +1602,7 @@ def write_output_manifest(
         },
         "statistics": {
             "panel_a": (
-                "pointwise stratified paired SRSWOR-rescaled bootstrap percentile 95% CI "
+                "pointwise stratified paired sampling without replacement-rescaled bootstrap percentile 95% CI "
                 "for the finite 691-unit candidate frame"
             ),
             "panel_b": (

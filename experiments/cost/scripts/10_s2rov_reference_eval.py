@@ -14,7 +14,7 @@ import sys
 import time
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[3]
 S2ROV_CODEC_SCRIPTS = ROOT / "implementation" / "s2rov_codec" / "scripts"
 sys.path.insert(0, str(S2ROV_CODEC_SCRIPTS))
 

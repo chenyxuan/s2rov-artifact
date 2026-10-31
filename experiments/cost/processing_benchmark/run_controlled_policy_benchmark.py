@@ -31,7 +31,7 @@ from typing import Any, Iterable, Sequence
 
 SCRIPT = Path(__file__).resolve()
 BENCHMARK_DIR = SCRIPT.parent
-REPO_ROOT = SCRIPT.parents[2]
+REPO_ROOT = SCRIPT.parents[3]
 S2ROV_CODEC_SCRIPTS = REPO_ROOT / "implementation" / "s2rov_codec" / "scripts"
 if str(S2ROV_CODEC_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(S2ROV_CODEC_SCRIPTS))

@@ -60,7 +60,7 @@
     }
   },
   "estimand": {
-    "bootstrap": "10000-replicate within-stratum paired SRSWOR-rescaled percentile bootstrap with finite-population correction",
+    "bootstrap": "10000-replicate within-stratum paired sampling without replacement-rescaled percentile bootstrap with finite-population correction",
     "bootstrap_seed": 20260823,
     "design": "design-weighted paired open-DA-minus-conventional endpoint contrast",
     "sample_unit": "candidate-bearing root-origin ASN (historical field holder_asn), not a verified resource holder",

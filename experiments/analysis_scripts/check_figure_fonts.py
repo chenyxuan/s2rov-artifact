@@ -9,8 +9,8 @@ import subprocess
 from pathlib import Path
 
 
-PAPER = Path(__file__).resolve().parents[1]
-FIGURES = PAPER / "figures"
+PAPER = Path(__file__).resolve().parents[2]
+FIGURES = PAPER / "figure-data"
 ACTIVE_STEMS = (
     "fig_motivation_overview",
     "fig_partial_policy_legend",

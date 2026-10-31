@@ -4021,7 +4021,7 @@
   ],
   "selected_units_canonical_sha256": "28d64eb6c3df995f17f7fd01c51e94e27102e460c2c376f77082e6c02efe4b1c",
   "statistics": {
-    "bootstrap_method": "within-stratum paired SRSWOR-rescaled percentile bootstrap with FPC",
+    "bootstrap_method": "within-stratum paired sampling without replacement-rescaled percentile bootstrap with FPC",
     "bootstrap_replicates": 10000,
     "bootstrap_seed": 20260823,
     "estimand": "design-weighted holder-paired change in sibling-prefix attacker route/destination delivery",

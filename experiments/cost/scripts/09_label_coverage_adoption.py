@@ -15,7 +15,7 @@ import random
 import csv
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[3]
 HERE_DIR = Path(__file__).resolve().parents[1]
 TABLE_DIR = HERE_DIR / "outputs/tables"
 TABLE_DIR.mkdir(parents=True, exist_ok=True)

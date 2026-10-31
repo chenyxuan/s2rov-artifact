@@ -35,7 +35,7 @@ from typing import Any, Sequence
 
 SCRIPT = Path(__file__).resolve()
 BENCHMARK_DIR = SCRIPT.parent
-REPO_ROOT = SCRIPT.parents[2]
+REPO_ROOT = SCRIPT.parents[3]
 S2ROV_CODEC_SCRIPTS = REPO_ROOT / "implementation" / "s2rov_codec" / "scripts"
 LEGACY_BENCHMARK = BENCHMARK_DIR / "run_processing_benchmark.py"
 sys.path.insert(0, str(BENCHMARK_DIR))

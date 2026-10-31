@@ -46,7 +46,7 @@ mutually exclusive partitions for:
 
 Every `all` count must equal `rov + non_rov`. The analysis computes holder-paired
 open-minus-conventional deltas, applies the frozen routing-model design weights, and
-uses 10,000 within-stratum paired SRSWOR-rescaled bootstrap replicates with
+uses 10,000 within-stratum paired sampling without replacement-rescaled bootstrap replicates with
 finite-population correction and seed `20260823`. Intervals are pointwise 95%
 percentile intervals.
 

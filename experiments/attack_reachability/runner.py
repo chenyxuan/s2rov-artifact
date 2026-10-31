@@ -88,7 +88,7 @@ DESTINATION_OUTCOMES = {
 }
 PARTITION_OUTCOMES = {**ROUTE_OUTCOMES, **DESTINATION_OUTCOMES}
 
-REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
+REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
 ATTACK_REACHABILITY_ROOT = Path(__file__).resolve().parent
 DEFAULT_OUTPUT_DIR = ATTACK_REACHABILITY_ROOT / "results"
 ROUTING_MODEL_ROOT = REPOSITORY_ROOT / "experiments" / "routing_model"
@@ -526,7 +526,7 @@ def build_manifest() -> dict[str, Any]:
             "bootstrap_replicates": BOOTSTRAP_REPLICATES,
             "bootstrap_seed": BOOTSTRAP_SEED,
             "bootstrap_method": (
-                "within-stratum paired SRSWOR-rescaled percentile bootstrap with FPC"
+                "within-stratum paired sampling without replacement-rescaled percentile bootstrap with FPC"
             ),
             "interval_type": "pointwise_95_percent",
         },

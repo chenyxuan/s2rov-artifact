@@ -1144,7 +1144,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             "independent_unit": "holder/root-origin unit",
             "D1_Delta_R_interval": (
                 "pointwise stratified paired rescaled percentile interval for "
-                "the finite frozen eligible-holder frame, with SRSWOR FPC"
+                "the finite frozen eligible-holder frame, with sampling without replacement FPC"
             ),
             "A1_Delta_E_rov_interval": (
                 "descriptive ordinary stratified paired selected-unit stability "

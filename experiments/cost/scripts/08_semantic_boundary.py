@@ -21,7 +21,7 @@ from pathlib import Path
 import pandas as pd
 
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[3]
 HERE_DIR = Path(__file__).resolve().parents[1]
 S2ROV_CODEC_SCRIPTS = ROOT / "implementation" / "s2rov_codec" / "scripts"
 sys.path.insert(0, str(S2ROV_CODEC_SCRIPTS))

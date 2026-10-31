@@ -23,7 +23,7 @@ from typing import Any, Mapping, Sequence
 import numpy as np
 
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[3]
 MANIFEST_PATH = ROOT / "experiments/routing_model/results/paper_campaign/manifest.json"
 RAW_PATH = ROOT / "experiments/routing_model/results/paper_campaign/raw_scenarios.jsonl"
 ANALYSIS_MANIFEST_PATH = (

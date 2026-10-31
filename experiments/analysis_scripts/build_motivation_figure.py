@@ -7,8 +7,8 @@ import argparse
 from pathlib import Path
 import subprocess
 
-PAPER = Path(__file__).resolve().parents[1]
-DEFAULT_SOURCE = PAPER / "figures" / "fig_motivation_overview.svg"
+PAPER = Path(__file__).resolve().parents[2]
+DEFAULT_SOURCE = PAPER / "figure-data" / "fig_motivation_overview.svg"
 
 
 def export(source: Path) -> None:
@@ -17,7 +17,7 @@ def export(source: Path) -> None:
     try:
         import cairosvg
     except ModuleNotFoundError:
-        figure_python = PAPER.parent / ".venv" / "bin" / "python"
+        figure_python = PAPER / ".venv" / "bin" / "python"
         if not figure_python.is_file():
             raise RuntimeError(
                 "CairoSVG is required to export Figure 1; install it in "

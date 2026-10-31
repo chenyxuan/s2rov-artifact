@@ -13,7 +13,7 @@ from typing import Any, Iterable
 import numpy as np
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 OUT = Path(__file__).resolve().parent / "results"
 ROUTING_MODEL_CONTRASTS = (
     ROOT

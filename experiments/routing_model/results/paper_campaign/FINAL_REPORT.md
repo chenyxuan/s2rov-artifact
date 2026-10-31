@@ -28,7 +28,7 @@ inside the open scope; BGP path competition decides which one is selected.
 The independent unit is `holder_asn`. Values are design-weighted percentages
 or percentage-point differences over the finite frame of 691 eligible
 holders. Intervals are pointwise 95% intervals from 10,000 stratified paired
-SRSWOR-rescaled bootstrap replicates. The five frozen random deployment orders
+sampling without replacement-rescaled bootstrap replicates. The five frozen random deployment orders
 are averaged within holder before inference.
 
 `Delta_R = D1 delegate delivery - B1 delegate delivery`; positive values are a

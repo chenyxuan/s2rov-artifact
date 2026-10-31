@@ -24,7 +24,7 @@ from experiments.routing_model.campaign.analyze_deployment_grid_extension import
 )
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 
 
 def _partition(denominator: int, outcome: str, count: int) -> dict[str, Any]:

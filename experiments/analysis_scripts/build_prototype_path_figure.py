@@ -25,9 +25,9 @@ from matplotlib.patches import FancyArrowPatch, FancyBboxPatch
 
 
 SCRIPT = Path(__file__).resolve()
-PAPER = SCRIPT.parents[1]
-REPO = PAPER.parent
-FIGURES = PAPER / "figures"
+PAPER = SCRIPT.parents[2]
+REPO = PAPER
+FIGURES = PAPER / "figure-data"
 STEM = FIGURES / "fig_prototype_path"
 OUTPUTS = {fmt: STEM.with_suffix(f".{fmt}") for fmt in ("svg", "pdf", "png", "tiff")}
 MANIFEST = FIGURES / "fig_prototype_path.manifest.json"

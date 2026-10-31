@@ -1319,7 +1319,7 @@ def _bootstrap_weight_matrix(
     replicates: int,
     seed: int,
 ) -> np.ndarray:
-    """Build paired SRSWOR-rescaled replicate weights within each stratum.
+    """Build paired sampling without replacement-rescaled replicate weights within each stratum.
 
     Let ``m_hi`` be the ordinary multinomial count from drawing ``n_h``
     sampled holders with replacement inside stratum ``h``.  We transform that
@@ -1330,7 +1330,7 @@ def _bootstrap_weight_matrix(
 
     Thus every replicate still has ``sum_i c_hi = n_h`` and, for a stratum
     mean, its conditional replicate variance is exactly the usual unbiased
-    SRSWOR variance estimate ``(1 - n_h/N_h) s_h^2 / n_h``.  Multiplication by
+    sampling without replacement variance estimate ``(1 - n_h/N_h) s_h^2 / n_h``.  Multiplication by
     the frozen ``N_h/n_h`` design weight then keeps every stratum's replicate
     weight total equal to ``N_h``.  The same returned matrix is used for every
     analysis cell, preserving the complete paired holder vector.
@@ -1608,7 +1608,7 @@ def analyze_campaign(
         },
         "bootstrap": {
             "method": (
-                "stratified paired holder rescaled bootstrap for SRSWOR with "
+                "stratified paired holder rescaled bootstrap for sampling without replacement with "
                 "finite-population correction"
             ),
             "rescaled_count_formula": (

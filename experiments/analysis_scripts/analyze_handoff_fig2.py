@@ -40,9 +40,9 @@ import numpy as np
 
 
 SCRIPT = Path(__file__).resolve()
-PROJECT = SCRIPT.parent.parent
-REPO = PROJECT.parent
-FIGURES = PROJECT / "figures"
+PROJECT = SCRIPT.parents[2]
+REPO = PROJECT
+FIGURES = PROJECT / "figure-data"
 SOURCE_DATA = FIGURES / "source_data"
 TRIAL_CSV = SOURCE_DATA / "handoff_latency_trials.csv"
 STAGE_CSV = SOURCE_DATA / "handoff_latency_stages.csv"
@@ -97,7 +97,7 @@ class RunSpec:
 
     @property
     def directory(self) -> Path:
-        return REPO / "implementation" / "prototype" / "e2e" / "outputs" / self.run_id
+        return REPO / "implementation" / "prototype" / "e2e" / "results" / self.run_id
 
 
 # Pins prevent silently changed runs from being presented as accepted evidence.

@@ -11,19 +11,19 @@ from pathlib import Path
 
 
 SCRIPT = Path(__file__).resolve()
-PAPER_DIR = SCRIPT.parents[1]
-REPO_ROOT = PAPER_DIR.parent
+PAPER_DIR = SCRIPT.parents[2]
+REPO_ROOT = PAPER_DIR
 DEFAULT_RUN = (
     REPO_ROOT
     / "experiments" / "cost"
     / "processing_benchmark"
-    / "outputs"
+    / "results"
     / "controlled-processing-20260830T-marker-final-v1"
 )
-DEFAULT_OUTPUT = PAPER_DIR / "outputs" / "tables" / "processing_cost_dual_stack.csv"
-DEFAULT_TEX = PAPER_DIR / "outputs" / "tables" / "processing_cost_dual_stack.tex"
+DEFAULT_OUTPUT = PAPER_DIR / "results" / "tables" / "processing_cost_dual_stack.csv"
+DEFAULT_TEX = PAPER_DIR / "results" / "tables" / "processing_cost_dual_stack.tex"
 DEFAULT_MANIFEST = (
-    PAPER_DIR / "outputs" / "tables" / "processing_cost_dual_stack.manifest.json"
+    PAPER_DIR / "results" / "tables" / "processing_cost_dual_stack.manifest.json"
 )
 
 

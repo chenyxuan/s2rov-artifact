@@ -60,7 +60,7 @@
   },
   "inference": {
     "A1_Delta_E_rov_interval": "descriptive ordinary stratified paired selected-unit stability interval, without FPC",
-    "D1_Delta_R_interval": "pointwise stratified paired rescaled percentile interval for the finite frozen eligible-holder frame, with SRSWOR FPC",
+    "D1_Delta_R_interval": "pointwise stratified paired rescaled percentile interval for the finite frozen eligible-holder frame, with sampling without replacement FPC",
     "independent_unit": "holder/root-origin unit",
     "ordinary_bootstrap_stratum_order": [
       "S1",

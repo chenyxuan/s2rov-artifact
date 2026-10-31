@@ -50,7 +50,7 @@ EXPECTED_SOURCE_RAW_SHA256 = (
     "fb9ec8fa80d41b5a98b4bc956d82ebfec0514eaab27fd183f86683dfed6925b7"
 )
 
-REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
+REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
 DEFAULT_RESULT_DIR = (
     REPOSITORY_ROOT
     / "experiments" / "routing_model"

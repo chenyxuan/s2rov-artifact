@@ -24,25 +24,25 @@ from figure_typography import BODY_FONT_FAMILY, configure_body_font
 
 
 SCRIPT = Path(__file__).resolve()
-PAPER = SCRIPT.parents[1]
-REPO = PAPER.parent
-FIGURES = PAPER / "figures"
+PAPER = SCRIPT.parents[2]
+REPO = PAPER
+FIGURES = PAPER / "figure-data"
 
 RUN_DIR = (
     REPO
     / "experiments" / "cost"
     / "processing_benchmark"
-    / "outputs"
+    / "results"
     / "controlled-processing-20260830T-marker-final-v1"
 )
 SUMMARY = RUN_DIR / "summary.json"
 INDEPENDENT_AUDIT = RUN_DIR / "independent_audit.json"
-SOURCE_CSV = PAPER / "outputs" / "tables" / "processing_cost_dual_stack.csv"
+SOURCE_CSV = PAPER / "results" / "tables" / "processing_cost_dual_stack.csv"
 UPDATE_RUN = (
     REPO
     / "experiments" / "cost"
     / "processing_benchmark"
-    / "outputs"
+    / "results"
     / "policy-update-20260830T-marker-final-v1"
 )
 UPDATE_SUMMARY = UPDATE_RUN / "summary.json"
@@ -54,7 +54,7 @@ OUTAGE_DIR = (
     REPO
     / "implementation" / "prototype"
     / "e2e"
-    / "outputs"
+    / "results"
     / "run-20260823T024129Z"
     / "failures"
     / "routinator-outage"

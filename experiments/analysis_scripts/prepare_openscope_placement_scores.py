@@ -21,18 +21,18 @@ from frozendict import frozendict
 
 
 REPO = Path(__file__).resolve().parents[2]
-MANUSCRIPT = Path(__file__).resolve().parents[1]
+MANUSCRIPT = Path(__file__).resolve().parents[2]
 DEFAULT_CANDIDATES = (
     REPO
     / "experiments" / "candidates"
     / "allocation_tree"
     / "visibility_experiment"
-    / "outputs"
+    / "results"
     / "visibility_candidates.csv"
 )
 DEFAULT_OUTPUT = (
     MANUSCRIPT
-    / "figures"
+    / "figure-data"
     / "source_data"
     / "openscope_placement_as_scores.json"
 )

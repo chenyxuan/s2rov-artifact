@@ -52,7 +52,7 @@ EXPECTED_SMOKE_UNITS = 1
 EXPECTED_SMOKE_ORDERS = 1
 EXPECTED_SMOKE_TRIALS = 4
 
-REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
+REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
 RUNNER_PATH = Path(__file__).resolve()
 CONTRACT_PATH = (
     REPOSITORY_ROOT

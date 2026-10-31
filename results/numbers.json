@@ -1411,7 +1411,7 @@
       "delegate_bootstrap_unit": "candidate-bearing root-origin sample unit, resampled within four sampling strata after within-unit random-order averaging",
       "delegate_bootstrap_replicates": 10000,
       "delegate_bootstrap_seed": 20260804,
-      "delegate_interval_type": "pointwise stratified paired rescaled bootstrap for the 691-unit finite frame with SRSWOR finite-population correction",
+      "delegate_interval_type": "pointwise stratified paired rescaled bootstrap for the 691-unit finite frame with sampling without replacement finite-population correction",
       "competition_target": "200 selected synthetic units after fixed 161:177:179:174 stratum-share standardization; unselected units have no post-sample competitor outcome",
       "competition_bootstrap_replicates": 10000,
       "competition_bootstrap_seed": 20260804,
@@ -1563,7 +1563,7 @@
         "intended_only_delivery_change": {
           "estimand": "Delta_R",
           "metric": "destination delivery change relative to the announcement-matched aggregate-only reference",
-          "interval_type": "pointwise stratified paired rescaled percentile interval for the finite frozen eligible-holder frame with SRSWOR finite-population correction",
+          "interval_type": "pointwise stratified paired rescaled percentile interval for the finite frozen eligible-holder frame with sampling without replacement finite-population correction",
           "cells": [
             {"fixed_set_coverage_percent": 0, "upgraded_as_count": 0, "point_estimate_pp": 0.0, "interval95_pp": [0.0, 0.0], "fixed_order_min_max_pp": [0.0, 0.0], "source": "frozen_routing_model"},
             {"fixed_set_coverage_percent": 10, "upgraded_as_count": 58, "point_estimate_pp": 2.3563214917829867, "interval95_pp": [1.642710973266316, 3.1530762716962686], "fixed_order_min_max_pp": [0.8987498541916156, 5.858268475041391], "source": "frozen_routing_model"},

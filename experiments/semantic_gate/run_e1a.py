@@ -51,7 +51,7 @@ from experiments.semantic_gate.snapshot_oracle import (
 )
 
 
-REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
+REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_SEED = 20260826
 DEFAULT_GENERATED = 100_000
 DEFAULT_INVALID_SEED = 120260826

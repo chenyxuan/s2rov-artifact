@@ -164,7 +164,7 @@ a_h=\sqrt{\frac{n_h(1-n_h/N_h)}{n_h-1}}.
 The rescaled counts sum to $n_h$ in every replicate.  After multiplication
 by the frozen design weight $N_h/n_h$, each stratum therefore retains total
 weight $N_h$, while the replicate variance of a stratum mean equals the
-usual SRSWOR estimate $(1-n_h/N_h)s_h^2/n_h$.  One common replicate-weight
+usual sampling without replacement estimate $(1-n_h/N_h)s_h^2/n_h$.  One common replicate-weight
 matrix is applied to all analysis cells, so a resampled holder carries its
 complete repeated-condition vector.  Never resample individual ASes or
 unpaired raw lane means.  These intervals quantify sampling uncertainty for

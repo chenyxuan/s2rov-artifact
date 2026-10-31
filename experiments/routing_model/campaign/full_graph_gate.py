@@ -54,7 +54,7 @@ from implementation.s2rov_codec.scripts.utils.s2rov import (
 from experiments.routing_model.s2rov.policy import S2ROV
 
 
-REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
+REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
 INPUT_DIR = REPOSITORY_ROOT / "experiments" / "routing_model" / "data" / "inputs"
 TOPOLOGY_PATH = INPUT_DIR / "as-rel-fixed.txt"
 CANDIDATES_PATH = INPUT_DIR / "origin_divergence_candidates.csv"

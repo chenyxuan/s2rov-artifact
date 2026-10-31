@@ -8,7 +8,7 @@ import matplotlib.ticker as mticker
 from pathlib import Path
 import numpy as np
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 HERE_DIR = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = HERE_DIR / "outputs"
 TABLE_DIR = OUTPUT_DIR / "tables"

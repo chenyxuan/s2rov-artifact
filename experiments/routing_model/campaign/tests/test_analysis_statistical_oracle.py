@@ -106,7 +106,7 @@ def test_stratified_paired_bootstrap_matches_fixed_nondegenerate_oracle() -> Non
         )
     np.testing.assert_allclose(bootstrap_weights.sum(axis=1), 28.0, rtol=0, atol=1e-12)
 
-    # Independent variance oracle.  For a stratified SRSWOR mean, the
+    # Independent variance oracle.  For a stratified sampling without replacement mean, the
     # estimated design variance is
     #   sum_h (N_h/N)^2 (1 - n_h/N_h) s_h^2/n_h.
     # The transformed-count bootstrap matches that target instead of the

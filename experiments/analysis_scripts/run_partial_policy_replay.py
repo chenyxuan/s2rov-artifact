@@ -50,7 +50,7 @@ configure_body_font()
 
 
 REPO = Path(__file__).resolve().parents[2]
-MANUSCRIPT = Path(__file__).resolve().parents[1]
+MANUSCRIPT = Path(__file__).resolve().parents[2]
 REFERENCE_SCRIPTS = REPO / "implementation" / "s2rov_codec" / "scripts"
 if str(REFERENCE_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(REFERENCE_SCRIPTS))
@@ -68,11 +68,11 @@ DEFAULT_INPUT = (
     / "experiments" / "candidates"
     / "allocation_tree"
     / "visibility_experiment"
-    / "outputs"
+    / "results"
     / "visibility_candidates.csv"
 )
-DEFAULT_SOURCE_DIR = MANUSCRIPT / "figures" / "source_data"
-DEFAULT_FIGURE_DIR = MANUSCRIPT / "figures"
+DEFAULT_SOURCE_DIR = MANUSCRIPT / "figure-data" / "source_data"
+DEFAULT_FIGURE_DIR = MANUSCRIPT / "figure-data"
 DEFAULT_PLACEMENT_SCORES = (
     DEFAULT_SOURCE_DIR / "openscope_placement_as_scores.json"
 )

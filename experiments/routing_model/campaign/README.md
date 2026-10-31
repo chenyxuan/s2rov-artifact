@@ -196,11 +196,11 @@ For random deployment, the five frozen orders are averaged within each holder
 and cell before aggregation.  The independent sample size is therefore
 **n = 200 holders**, never the number of ASes or seeds.  The default intervals
 are 10,000-replicate stratified paired rescaled-bootstrap percentile
-intervals for the finite, stratified SRSWOR holder design.  For multinomial
+intervals for the finite, stratified sampling without replacement holder design.  For multinomial
 count `m_hi` in stratum `h`, the replicate count is
 `c_hi = 1 + a_h * (m_hi - 1)`, where
 `a_h = sqrt(n_h * (1 - n_h/N_h) / (n_h - 1))`.  This preserves every
-stratum's total design weight `N_h` and gives the usual SRSWOR
+stratum's total design weight `N_h` and gives the usual sampling without replacement
 finite-population variance for a stratum mean.  The same replicate-weight
 matrix is used for every cell, retaining all within-holder pairing.  Cell
 outputs include raw treatment/reference means, paired point estimates,

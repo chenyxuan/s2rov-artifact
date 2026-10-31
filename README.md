@@ -65,6 +65,23 @@ values frozen inside the experiment contracts no longer match; verify the
 bundle through `MANIFEST.json` instead.
 
 
+## Labels in the code
+
+Runs and frozen artefacts keep the labels they were given at the time, because
+the result files refer to them. A few recur:
+
+| Label | Means |
+|---|---|
+| `frozen_v3` | the third frozen snapshot of the classifier, kept for its gate |
+| `E1a` | the experiment label for the semantic gate |
+| `B4-exact` | the wildcard baseline the gate compares against |
+| `q2-aggregate-audit/v1` | schema tag on the audit records |
+| `marker-final-v1` | the processing-cost run reported in the paper; siblings under the same directory are earlier attempts kept for audit |
+
+A directory named `outputs/<label>/` is one run of that experiment. Where a
+document cites a file that is not present, it is either a run output or one of
+the excluded inputs in `EXCLUDED-RAW-DATA.md`.
+
 ## License and data terms
 
 Code, scripts, configurations and derived figure source data are released under
