@@ -1,6 +1,6 @@
-# Reproducing the paper
+# Reproducing the results
 
-Three levels, from cheapest to heaviest.
+Paths are relative to the bundle root. The paper itself is not bundled.
 
 ## 1. Read the numbers (no setup)
 
@@ -16,75 +16,50 @@ Three levels, from cheapest to heaviest.
 | `section5c-ipv6-sensitivity.json` | Sec. V-C, IPv6 candidate sensitivity |
 | `section5d-attack-reachability.json` | Sec. V-D, attack reachability |
 
-Each file is a copy of the pipeline output named in `00-reproduce/README.md`,
-which also records the original path. Column names follow the plotting code.
+`00-reproduce/README.md` records the original path each file was copied from,
+and `results.facts.json` lists every number quoted in the paper together with
+its provenance.
 
-## 2. Rebuild the paper (works from this bundle alone)
+The same plotted data also sits in `figure-source-data/`, next to the figure
+manifests, if you want to redraw a panel.
 
-The manuscript sources travel with the bundle, and the figure scripts keep their
-original relative layout, so the build finds its inputs where it expects them:
+## 2. Re-run one experiment
 
-```bash
-cd manuscript
-make refresh     # assemble main.tex and compile the PDF  -> 8 pages
-```
-
-`make refresh` was verified inside this bundle.
-
-`make check` is the manuscript's internal quality gate. It recomputes SHA-256
-inputs against the values frozen when the experiments were run, so it does not
-apply here: this bundle rewrites absolute paths for publication, which changes
-those digests by design. Use `MANIFEST.json` (or
-`python3 tools/prepare_artifact.py --check`) to verify the bundle itself.
-
-Redrawing the figures needs only what is in `00-reproduce/`: those files are the
-plotted data. Regenerating them *from scratch* is the next level, because
-`make figures` re-derives every curve from the per-scenario routing dumps.
-
-Individual entry points:
-
-| Item | Script |
+| Item | Entry point |
 |---|---|
-| Fig. 2, Fig. 3 | `scripts/run_partial_policy_replay.py` |
-| Fig. 4 | `phase5_evaluation/processing_benchmark/` |
-| Fig. 5 | `phase7_simulation/campaign/` |
-| Sec. V-C | `phase7_simulation/campaign/ipv6_sensitivity.py` |
-| Sec. V-D | `phase8_sibling_sensitivity/runner.py` then `analyze.py` |
-| Table I | `phase1_empirical/allocation_tree/visibility_experiment/` |
+| Table I | `pipeline/phase1_empirical/allocation_tree/visibility_experiment/` |
+| Figs. 2, 3 | `pipeline/analysis-scripts/run_partial_policy_replay.py` |
+| Fig. 4 | `pipeline/phase5_evaluation/processing_benchmark/` |
+| Fig. 5 | `pipeline/phase7_simulation/campaign/` |
+| Sec. V-C | `pipeline/phase7_simulation/campaign/ipv6_sensitivity.py` |
+| Sec. V-D | `pipeline/phase8_sibling_sensitivity/runner.py`, then `analyze.py` |
 
-Pinned outputs: the paper uses specific timestamped run directories, for
-example `phase5_evaluation/processing_benchmark/outputs/
-controlled-processing-20260830T-marker-final-v1/` and
-`phase7_simulation/results/deployment_grid_extension/`. Read those, not a later
-run, when comparing against manuscript values.
+Run the analysis scripts from `pipeline/analysis-scripts/`: they resolve their
+inputs as `../phase1_empirical/...` and `../phase4_encoding/...`, which is
+exactly where those directories sit.
 
-## 3. Full rebuild (needs the raw inputs)
+Each phase directory carries its own `README.md` and, where the campaign is
+hash-bound, an `EXPERIMENT_CONTRACT.md`.
 
-`make figures` inside `manuscript/` reads the per-scenario routing dumps, which
-are far too large to ship. The heavy raw inputs are not shipped (`EXCLUDED-RAW-DATA.md` lists them with
-their sizes). To rebuild from scratch:
+Pinned outputs: the paper reads specific timestamped run directories, for
+example `pipeline/phase5_evaluation/processing_benchmark/outputs/
+controlled-processing-20260830T-marker-final-v1/`. Compare against those, not
+against a later run.
 
-1. Fetch the public inputs: the RIPE Database dump and the RIS/RRC00 RIB and
-   bview files for 24 June 2026, plus the CAIDA AS-relationship snapshot named
-   in the contracts.
-2. Run `phase1_empirical/` to regenerate the candidate set used by Table I.
-3. Run each phase in numeric order; every phase directory has a `README.md`
-   and, where the campaign is hash-bound, an `EXPERIMENT_CONTRACT.md`.
+## 3. Rebuild from raw inputs
+
+The per-scenario routing dumps and registry snapshots are far too large to
+ship. `EXCLUDED-RAW-DATA.md` lists each input with its size and the entry point
+that regenerates it. In short:
+
+1. Fetch the RIPE Database dump and the RIS/RRC00 RIB and bview files for
+   24 June 2026, plus the CAIDA AS-relationship snapshot named in the contracts.
+2. Run `pipeline/phase1_empirical/` to regenerate the candidate set for Table I.
+3. Run the phases in numeric order.
 4. The routing model needs its own environment:
+
    ```bash
-   cd phase7_simulation
+   cd pipeline/phase7_simulation
    python3 -m venv .venv && . .venv/bin/activate
    pip install -r requirements-bgpy.txt
    ```
-
-Determinism: fixed seeds and frozen selections are recorded in each phase's
-manifest. Do not edit `EXPERIMENT_CONTRACT.md` files or recorded SHA-256 values;
-they refer to the original full-size inputs.
-
-## Verifying the bundle itself
-
-```bash
-python3 tools/prepare_artifact.py --check    # from the repository root
-```
-
-Recomputes SHA-256 for every file in `MANIFEST.json`.
