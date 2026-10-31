@@ -207,10 +207,10 @@ def main() -> int:
     )
     for label, stats in (
         (
-            "Routinator restart to DA policy recovery in FRR",
+            "Routinator restart to S2-ROV policy recovery in FRR",
             summary["recovery_timing"],
         ),
-        ("FRR restart to DA policy recovery", summary["frr_recovery_timing"]),
+        ("FRR restart to S2-ROV policy recovery", summary["frr_recovery_timing"]),
         (
             "Closed override removal to Delegated in FRR",
             summary["override_remove_timing"],

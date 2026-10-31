@@ -76,7 +76,7 @@ def main():
     print(f"  isp_explicit_cust:   std=({std_roa3[0]}, AS{std_roa3[1]}, ℓ={std_roa3[2]})  "
           f"vrps={len(vrps3)}")
 
-    # Projection must never turn a non-explicit DA outcome into legacy Valid.
+    # Projection must never turn a non-explicit S2-ROV outcome into legacy Valid.
     for policy in (pi, isp_marked, isp_cust):
         assert flattening_validation(policy)
     assert std_roa2[2] == 24
@@ -85,7 +85,7 @@ def main():
     assert isp_marked.validate_route("10.0.1.0/24", 64501) == ValidationState.EXPLICIT
     assert ("10.0.0.0/16", 64501, 24) in vrps2
 
-    print("\n  ✅ Every projected VRP maps to an Explicit DA outcome")
+    print("\n  ✅ Every projected VRP maps to an Explicit S2-ROV outcome")
 
     # Write CSV
     keys = ["test", "std_prefix", "std_asn", "std_maxlen", "flattened_vrp_count", "expected_vrps"]

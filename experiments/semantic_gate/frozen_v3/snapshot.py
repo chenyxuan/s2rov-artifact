@@ -27,7 +27,7 @@ class SnapshotError(ValueError):
 
 @dataclass(frozen=True)
 class PolicyEnvelope:
-    """Lifecycle metadata around one pure DA policy.
+    """Lifecycle metadata around one pure S2-ROV policy.
 
     ``revoked`` is an auditable tombstone: the envelope remains in the
     canonical snapshot but cannot enter the active-policy index.

@@ -40,7 +40,7 @@ validation and S2-ROV-aware enforcement against live FRR BGP routes.
 | Launch script | `launch.md` | Docker setup for Krill testbed + Routinator |
 | ROA management | `krillc-roas-update-guide.md` | Complete reference for `krillc roas update` — how to add/remove ROAs via CLI or delta files |
 | Routinator deployment | `dockerfiles/stripe-roa-system.zip` | Routinator package with TALs, config, and docs |
-| Reproducible E2E testbed | `e2e/` | Krill, Routinator, RTR, FRR, DA evaluation, assertions, and raw results |
+| Reproducible E2E testbed | `e2e/` | Krill, Routinator, RTR, FRR, S2-ROV evaluation, assertions, and raw results |
 
 ---
 

@@ -9,7 +9,7 @@
 2. Preserve explicit origins and an optional OpenScope marker in one record.
 3. Reject malformed and ambiguous inputs.
 4. Preserve all four validation states across serialize–parse round trips.
-5. Verify that the conservative conventional projection contains only DA
+5. Verify that the conservative conventional projection contains only S2-ROV
    `Explicit` outcomes.
 6. Exercise policy construction over the strict allocation-tree candidate
    corpus without treating those candidates as real authorizations.
@@ -34,7 +34,7 @@ developer diagnostics and are not manuscript system evidence.
 
 ## 3. Removed Claims
 
-The earlier plan compared a custom DA payload with an assumed “68 bytes per
+The earlier plan compared a custom S2-ROV payload with an assumed “68 bytes per
 VRP,” a simplified h-ROA estimate, and a nonfunctional MaxLength baseline.
 Those quantities were not representation-equivalent and are retired.
 

@@ -21,7 +21,7 @@ The 100-trial plan contains announcement-matched reference lanes:
 - `B1_competition`: delegate-plus-attacker announcements with aggregate-only ROV;
 - `B2_exact_competition`: the same competition with an exact delegate ROA;
 - `D1_open_delegate_only`: holder aggregate plus one child origin at 0%, 5%, and
-  100% DA upgrade within the fixed ROV set; and
+  100% S2-ROV upgrade within the fixed ROV set; and
 - `A1_open_competition`: the same child is announced by both delegate
   and eligible unlisted attacker at the same three stages.
 
@@ -76,7 +76,7 @@ Mean paired effects over the ten mechanically selected pairs are shown below
 in percentage points.  These are gate-scale observations, not population
 estimates or evidence that any selected pair is a real delegation.
 
-| DA upgrade in the 589 ROV ASes | D1 child delegate gain vs B1 | D1 destination delegate gain vs B1 | A1 child attacker increase vs B1 competition | A1 destination attacker increase vs B1 competition |
+| S2-ROV upgrade in the 589 ROV ASes | D1 child delegate gain vs B1 | D1 destination delegate gain vs B1 | A1 child attacker increase vs B1 competition | A1 destination attacker increase vs B1 competition |
 |---:|---:|---:|---:|---:|
 | 0% | 0.00 | 0.00 | 0.00 | 0.00 |
 | 5% (29 ASes) | 22.98 | 4.15 | 25.32 | 25.81 |

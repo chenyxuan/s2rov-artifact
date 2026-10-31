@@ -476,7 +476,7 @@ def check_policy_boundaries(pair: PairSpec) -> dict[str, bool]:
         == ValidationState.INVALID,
     }
     if not all(checks.values()):
-        raise RuntimeError(f"DA boundary check failed for pair {pair.pair_index}")
+        raise RuntimeError(f"S2-ROV boundary check failed for pair {pair.pair_index}")
     return checks
 
 
@@ -553,7 +553,7 @@ def verify_policy_assignment(
     if actual_da != set(da_asns):
         raise RuntimeError("engine S2-ROV-aware assignment differs from requested subset")
     if actual_da | actual_rov != set(rov_asns):
-        raise RuntimeError("engine ROV+DA assignment differs from fixed 589-AS set")
+        raise RuntimeError("engine ROV+S2-ROV assignment differs from fixed 589-AS set")
     if actual_da.difference(rov_asns):
         raise RuntimeError("an AS outside the fixed ROV set was upgraded")
     return {

@@ -248,7 +248,7 @@ def make_report(summary: dict[str, Any], run_name: str) -> str:
     ]
     for label, item, state in (
         ("Exact child ROA", exact, "Valid / accept"),
-        ("Open DA policy", da, "Delegated / accept"),
+        ("Open S2-ROV policy", da, "Delegated / accept"),
     ):
         lines.append(
             f"| {label} | {item['trials']} | "
@@ -265,7 +265,7 @@ def make_report(summary: dict[str, Any], run_name: str) -> str:
             "",
             "One signed update is one atomic Krill authorization transaction. "
             "Each exact transition changes two entries (remove old, add new); "
-            "the open-policy setup publication is excluded from DA handoff counts.",
+            "the open-policy setup publication is excluded from S2-ROV handoff counts.",
             "",
             "### Exact-update path",
             "",
@@ -292,7 +292,7 @@ def make_report(summary: dict[str, Any], run_name: str) -> str:
             "",
             "Both lanes use the same `/24`, origin ASes, FRR topology, "
             "break-before-make BGP commands, polling path, and final-state stop "
-            "condition. The recorded order sandwiches the DA block between two "
+            "condition. The recorded order sandwiches the S2-ROV block between two "
             "exact-ROA blocks; no timing observation is discarded.",
             "",
             "## Boundary",

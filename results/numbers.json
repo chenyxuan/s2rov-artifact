@@ -1277,7 +1277,7 @@
       "independent_audit_sha256": "de1fe82d21c418357bcbe0ae871b523a9fa9a18b78d857d4a97d5cfde74f01e6",
       "matched_bgponly_control": true,
       "matched_prepublished_exact_control": true,
-      "da_state_source": "DA agent decision installed as an FRR route-map action; not FRR's native rpkiValidationState",
+      "da_state_source": "S2-ROV agent decision installed as an FRR route-map action; not FRR's native rpkiValidationState",
       "endpoint_origins_precompiled_in_open_action_map": true,
       "claim_boundary": "the open arm precompiled both endpoint origins into route actions before handoff; this archived run is permanently pilot_only and must not support an operational-benefit claim",
       "manuscript_formatted_values": {
@@ -1404,7 +1404,7 @@
       "primary_deployment_orders": "random seeds 1-5, averaged within sample unit at intermediate levels",
       "primary_competition_attacker_class": "uniform",
       "competition_scope": "the routing model evaluates one same-prefix eligible unlisted origin; attack-reachability separately evaluates one deterministic same-length sibling; strictly more-specific routes exceed the configured maxLength and are rejected by both enforcing policies; broader maxLength not evaluated",
-      "campaign_max_length": "DA object and exact-child ROA use selected leaf length; aggregate-only ROA uses root length",
+      "campaign_max_length": "S2-ROV object and exact-child ROA use selected leaf length; aggregate-only ROA uses root length",
       "primary_open_arms": ["D1_open_delegate_only", "A1_open_competition_uniform"],
       "sensitivity_deployment_orders": ["degree", "customer_cone"],
       "sensitivity_attacker_classes": ["edge", "high_degree"],

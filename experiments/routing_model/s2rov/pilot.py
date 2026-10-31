@@ -82,7 +82,7 @@ def build_pilot_graph() -> ASGraph:
     """Build a deterministic 11-AS Gao--Rexford test topology.
 
     AS10 and AS20 are peers.  The intended delegate and attacker are reached
-    through separate two-hop provider branches, making partial DA deployment
+    through separate two-hop provider branches, making partial S2-ROV deployment
     and equal-prefix competition visible without Internet-scale inputs.
     """
 

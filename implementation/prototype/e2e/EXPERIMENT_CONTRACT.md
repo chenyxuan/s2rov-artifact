@@ -14,10 +14,10 @@ tests how exact and open policies respond to reactive origin churn.
   compilation, FRR policy installation, the expected customer-route local
   preference, and a complete enforcement check.
 - Thirty Routinator restart trials. The clock stops after validated policy is
-  available again and the workflow has restored and verified DA enforcement in
+  available again and the workflow has restored and verified S2-ROV enforcement in
   FRR.
 - Thirty FRR collector restart trials. The clock stops after all seven BGP
-  routes return and the workflow has restored and verified DA enforcement.
+  routes return and the workflow has restored and verified S2-ROV enforcement.
 - One 15-second Routinator outage test checks whether the last installed FRR
   policy remains in force while the relying party is unavailable.
 - One policy-scale run adds 0, 64, 256, or 1,024 noncovering closed /26
@@ -27,8 +27,8 @@ tests how exact and open policies respond to reactive origin churn.
   and installation, and the complete seven-route FRR check.
 - Thirty exact-ROA and thirty open-policy origin transitions alternate the same
   `/24` between AS8075 and AS18403.  The exact lane performs one atomic signed
-  authorization replacement per transition; the DA lane leaves one validated
-  open policy unchanged.  The order is 15 exact, 30 DA, and 15 exact trials.
+  authorization replacement per transition; the S2-ROV lane leaves one validated
+  open policy unchanged.  The order is 15 exact, 30 S2-ROV, and 15 exact trials.
 - One three-hop staged-deployment matrix covers legacy (`L`), shadow (`S`),
   and enforcing (`D`) nodes: `LLL`, `SSS`, all one- and two-node enforcing
   combinations, and `DDD`, followed by rollback and signed-policy withdrawal.
@@ -40,7 +40,7 @@ tests how exact and open policies respond to reactive origin churn.
   reproduce the seven specified RFC 6811 outcomes.  Its `/24` controls are
   length-admissible, so their Invalid state isolates the unnamed-origin
   conflict rather than a `maxLength` violation.
-- The DA lane must reproduce all seven four-state outcomes and their configured
+- The S2-ROV lane must reproduce all seven four-state outcomes and their configured
   FRR actions.
 - Every timing trial is retained. A trial succeeds only if the changed child
   reaches its target semantic state, the other six routes retain their expected
@@ -55,7 +55,7 @@ tests how exact and open policies respond to reactive origin churn.
 - Every churn transition withdraws the old route before announcing the new
   origin.  The exact lane must capture `Invalid` plus FRR rejection before the
   Krill update, then finish `Valid` and accepted at local preference 300.  The
-  DA lane must perform zero handoff-time signed updates, preserve a single open
+  S2-ROV lane must perform zero handoff-time signed updates, preserve a single open
   policy digest, and finish `Delegated` and accepted at local preference 200.
   Both lanes use the same topology, BGP commands, and final-state stop rule.
 - The staged-deployment lane retains conventional exact fallback VRPs during
@@ -88,4 +88,4 @@ churn protocol.  For staged deployment, report the complete capability matrix,
 all 60 observations, median and nearest-rank p95 separately for rollback and
 upgrade, and retain every per-hop raw capture.  Interpret `DDD`-only delegated
 reachability as a deployment constraint; do not present shadow or mixed paths
-as providing end-to-end DA enforcement.
+as providing end-to-end S2-ROV enforcement.

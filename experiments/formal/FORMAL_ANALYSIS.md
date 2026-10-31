@@ -170,7 +170,7 @@ Classifier-semantics must define at least four states:
 - \(\mathsf{Delegated}\): an open policy covers a proper descendant but does
   not name its origin;
 - \(\mathsf{Invalid}\): policy covers the route and no permitted branch holds;
-- \(\mathsf{NotFound}\): no DA policy covers the route.
+- \(\mathsf{NotFound}\): no S2-ROV policy covers the route.
 
 The security target is not “open policy blocks every hijack.”  Theorem 2 shows
 that this is impossible without additional evidence.  The correct target is

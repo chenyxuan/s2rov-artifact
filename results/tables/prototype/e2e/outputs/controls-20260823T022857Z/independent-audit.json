@@ -621,7 +621,7 @@
   "interpretation_cautions": [
     "Trial-level descriptive n is 40 per arm, but inferential n is 10 complete randomized rounds.",
     "A confidence interval spanning zero is not evidence of equivalence without a prespecified equivalence margin.",
-    "DA is an agent-generated FRR policy decision; FRR's native rpkiValidationState is diagnostic and is not the DA state.",
+    "S2-ROV is an agent-generated FRR policy decision; FRR's native rpkiValidationState is diagnostic and is not the S2-ROV state.",
     "Unavailability begins at confirmed old-route absence, not at the withdrawal request."
   ],
   "passed": true,

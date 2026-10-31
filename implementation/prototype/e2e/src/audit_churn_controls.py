@@ -1054,8 +1054,8 @@ def audit_run(
                 "equivalence without a prespecified equivalence margin."
             ),
             (
-                "DA is an agent-generated FRR policy decision; FRR's native "
-                "rpkiValidationState is diagnostic and is not the DA state."
+                "S2-ROV is an agent-generated FRR policy decision; FRR's native "
+                "rpkiValidationState is diagnostic and is not the S2-ROV state."
             ),
             (
                 "Unavailability begins at confirmed old-route absence, not at "

@@ -1,10 +1,10 @@
 ## Result
 
-- Conventional and DA semantic checks passed for all seven live routes.
+- Conventional and S2-ROV semantic checks passed for all seven live routes.
 - Thirty closed-Stripe removals reached `Delegated` in FRR; thirty
   restorations returned to `Explicit`.
 - Thirty Routinator restarts and thirty FRR restarts restored and verified the
-  complete DA enforcement matrix.
+  complete S2-ROV enforcement matrix.
 - The installed FRR policy remained enforced during the 15-second Routinator
   outage.
 

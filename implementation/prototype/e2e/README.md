@@ -19,7 +19,7 @@ Krill → RRDP → Routinator → RFC 8210 RTR → FRR RPKI module
 S2-ROV-aware lane
 Krill → signed experimental OpenScope ROA → RRDP → Routinator
                                                         ↓ validated JSON API
-validated DA policy + FRR Adj-RIB-In → four-state decisions → FRR route maps
+validated S2-ROV policy + FRR Adj-RIB-In → four-state decisions → FRR route maps
 ```
 
 The conventional lane is fully standard after the Krill signing operation:
@@ -31,14 +31,14 @@ named by a matching VRP.
 The S2-ROV-aware lane is a research profile. The modified Krill build signs an
 `inclusive` prefix field in a CMS-protected ROA object, and the modified
 Routinator validates the certificate chain, manifest, CRL, and object before
-exporting the field in its JSON output. The DA evaluation process interprets
+exporting the field in its JSON output. The S2-ROV evaluation process interprets
 `inclusive` only as an OpenScope marker. It checks all covering entries for an
 explicit origin match before applying the unique proper-ancestor marker.
 OpenScope markers must be pairwise prefix-disjoint; ordinary unmarked entries
 may overlap them. The process evaluates live FRR routes and installs
 per-neighbor policies:
 
-| DA state | FRR action |
+| S2-ROV state | FRR action |
 |---|---|
 | `Explicit` | accept, local preference 300, community `65000:10` |
 | `Delegated` | accept, local preference 200, community `65000:20` |
@@ -109,7 +109,7 @@ points to the newest run. A passing run contains:
 - Routinator payload and status JSON for both lanes;
 - FRR BGP summary, Loc-RIB, per-peer Adj-RIB-In, per-prefix details, RTR cache,
   and prefix-table JSON;
-- generated DA decisions and exact FRR policy commands;
+- generated S2-ROV decisions and exact FRR policy commands;
 - publication, full-path update, and component-recovery timing;
 - an explicit relying-party-outage policy-retention check.
 
@@ -125,15 +125,15 @@ debugging; paper results use the defaults.
 
 1. all seven baseline states match RFC 6811;
 2. baseline FRR accepts/denies the correct paths with the expected preference;
-3. all seven controlled routes are observed before DA policy;
-4. all seven DA states match the four-state model;
+3. all seven controlled routes are observed before S2-ROV policy;
+4. all seven S2-ROV states match the four-state model;
 5. S2-ROV-aware FRR enforcement and preferences match the decisions;
 6. removing the unmarked exact `/24` changes its listed origin from `Explicit` to
    `Delegated` in the live FRR RIB;
 7. restoring the unmarked exact `/24` changes it back to `Explicit`.
 8. the installed policy remains enforced during the controlled relying-party
    outage;
-9. Routinator and FRR restart trials recover the complete DA policy and pass
+9. Routinator and FRR restart trials recover the complete S2-ROV policy and pass
    the enforcement checks.
 
 The paper's fixed-code run is `run-20260823T024129Z`: 124 enforcement
@@ -187,16 +187,16 @@ and final-state assertion in both lanes:
 - the exact-ROA lane first observes the new route as `Invalid`, then performs
   one atomic signed Krill transaction that removes the old origin and adds the
   new origin; and
-- the DA lane retains one previously signed open policy, performs no signed
+- the S2-ROV lane retains one previously signed open policy, performs no signed
   authorization update during handoff, and accepts the new route as
   `Delegated` rather than `Explicit`.
 
 The default retains 30 observations per lane.  Their execution order is 15
-exact, 30 DA, and 15 exact transitions so the control spans both sides of the
-DA block.  Setup publication is excluded from transition timing and update
+exact, 30 S2-ROV, and 15 exact transitions so the control spans both sides of the
+S2-ROV block.  Setup publication is excluded from transition timing and update
 counts.  The system path is real Krill signing, RRDP publication, Routinator
 validation, live eBGP input, and FRR enforcement; Python only compiles already
-validated DA decisions, checks captures, and summarizes them.
+validated S2-ROV decisions, checks captures, and summarizes them.
 
 Routinator uses its two-second testbed refresh.  The churn collector uses
 one-second RTR polling/retry; the harness queries FRR route state every 50 ms
@@ -217,7 +217,7 @@ to the newest run.  The accepted 30+30 run is
 `churn-20260804T030715Z`; all 60 trials passed.  It measured 30 versus zero
 handoff-time signed transactions, median Invalid exposure of 3,021.660 versus
 0 ms, and median unavailability of 3,265.471 versus 621.276 ms for exact ROAs
-and the open DA policy, respectively.
+and the open S2-ROV policy, respectively.
 
 ```bash
 make churn-smoke   # two retained transitions per lane for debugging only
@@ -249,7 +249,7 @@ summaries or `REPORT.md`.  Outputs are immutable under
 ## Staged-deployment experiment
 
 `make staged` starts an independent three-hop transit topology and tests a
-mixed deployment of legacy (`L`), shadow (`S`), and DA-enforcing (`D`) nodes.
+mixed deployment of legacy (`L`), shadow (`S`), and S2-ROV enforcing (`D`) nodes.
 The publisher retains two conventional exact VRPs for standards-only RTR
 clients while adding the signed open policy.  A dedicated legacy-safe
 Routinator validates all three objects and exposes the experimental policy in

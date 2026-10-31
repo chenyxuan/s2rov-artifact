@@ -16,7 +16,7 @@ from summarize_churn import load_rows, sample_stats
 ARMS = ("exact", "da", "bgp_only", "prepublished_exact")
 LABELS = {
     "exact": "Reactive exact ROA",
-    "da": "Open DA policy",
+    "da": "Open S2-ROV policy",
     "bgp_only": "BGP-only",
     "prepublished_exact": "Prepublished exact ROAs",
 }

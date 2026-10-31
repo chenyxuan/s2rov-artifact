@@ -521,7 +521,7 @@ def policy_commands(
         lines.append(f"route-map {route_map} deny 9990")
 
     # Bind each current peer once. A peer removed since the previous compile
-    # is returned to the conventional RPKI map before its stale DA map is
+    # is returned to the conventional RPKI map before its stale S2-ROV map is
     # deleted below.
     lines.extend(
         [

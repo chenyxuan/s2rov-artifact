@@ -86,7 +86,7 @@ Eligibility is a syntax and deployment filter.  It is **not** a
 “not-hijack” oracle and does not prove authorization.
 
 \[
-\mathsf{DA}(D,p,a)=
+\mathsf{S2-ROV}(D,p,a)=
 \begin{cases}
 \mathsf{NotFound}, & p\not\sqsubseteq\rho,\\
 \mathsf{Invalid}, & |p|>m,\\
@@ -194,11 +194,11 @@ it may emit:
 Open intent emits no VRP.
 
 Under the structural invariants, every route Valid under this projection is
-\(\mathsf{Explicit}\) under the original DA policy.  The projection is
+\(\mathsf{Explicit}\) under the original S2-ROV policy.  The projection is
 deliberately incomplete: open descendants remain Invalid or NotFound on a
 legacy router.  Using \(m\) rather than \(|\rho|\) for the base projection
 would make holder-origin descendants Valid on a legacy router even when a
-more-specific DA Stripe excludes the holder, violating this property.
+more-specific S2-ROV Stripe excludes the holder, violating this property.
 
 ## 8. Security Boundary
 

@@ -35,8 +35,8 @@ Overall result: **PASS**
 | baseline krill to frr | 5890.080 |
 | da krill to routinator | 2873.797 |
 | da evaluate and frr enforce | 612.835 |
-| Routinator restart to DA policy recovery in FRR (n=30, median/p95) | 11676.243 / 11729.229 |
-| FRR restart to DA policy recovery (n=30, median/p95) | 7695.101 / 7761.632 |
+| Routinator restart to S2-ROV policy recovery in FRR (n=30, median/p95) | 11676.243 / 11729.229 |
+| FRR restart to S2-ROV policy recovery (n=30, median/p95) | 7695.101 / 7761.632 |
 | Closed override removal to Delegated in FRR (n=30, median/p95) | 2433.879 / 3567.822 |
 | Closed override restoration to Explicit in FRR (n=30, median/p95) | 3539.439 / 3848.264 |
 | Routinator outage policy hold (15 s) | PASS |

@@ -7,9 +7,9 @@ Overall result: **PASS**
 | Lane | Trials | Signed updates | Invalid exposure, median / p95 (ms) | Unavailable, median / p95 (ms) | Completion, median / p95 (ms) | Final state / action |
 |---|---:|---:|---:|---:|---:|---|
 | Exact child ROA | 30 | 30 | 3021.660 / 3372.742 | 3265.471 / 3624.048 | 3585.577 / 3859.481 | Valid / accept |
-| Open DA policy | 30 | 0 | 0.000 / 0.000 | 621.276 / 660.527 | 864.321 / 1016.273 | Delegated / accept |
+| Open S2-ROV policy | 30 | 0 | 0.000 / 0.000 | 621.276 / 660.527 | 864.321 / 1016.273 | Delegated / accept |
 
-One signed update is one atomic Krill authorization transaction. Each exact transition changes two entries (remove old, add new); the open-policy setup publication is excluded from DA handoff counts.
+One signed update is one atomic Krill authorization transaction. Each exact transition changes two entries (remove old, add new); the open-policy setup publication is excluded from S2-ROV handoff counts.
 
 ### Exact-update path
 
@@ -35,7 +35,7 @@ One signed update is one atomic Krill authorization transaction. Each exact tran
 
 ## Fairness and order
 
-Both lanes use the same `/24`, origin ASes, FRR topology, break-before-make BGP commands, polling path, and final-state stop condition. The recorded order sandwiches the DA block between two exact-ROA blocks; no timing observation is discarded.
+Both lanes use the same `/24`, origin ASes, FRR topology, break-before-make BGP commands, polling path, and final-state stop condition. The recorded order sandwiches the S2-ROV block between two exact-ROA blocks; no timing observation is discarded.
 
 ## Boundary
 

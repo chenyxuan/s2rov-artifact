@@ -1,6 +1,6 @@
 """S2-ROV policy adapter for the pinned BGPy engine.
 
-The routing engine remains unmodified.  This adapter delegates all DA policy
+The routing engine remains unmodified.  This adapter delegates all S2-ROV policy
 semantics to the executable S2-ROV-encoding oracle and changes only BGPy's inbound
 route-admission decision.
 """
@@ -47,15 +47,15 @@ class S2ROV(ROV):
         ann: Announcement,
         recv_rel: Relationships,
     ) -> bool:
-        """Apply the DA state/action composition before ordinary BGP checks."""
+        """Apply the S2-ROV state/action composition before ordinary BGP checks."""
 
         state = self.validation_state(ann.prefix, ann.origin)
         if state in (ValidationState.EXPLICIT, ValidationState.DELEGATED):
-            # Authorized by the DA object, but still enforce loop prevention.
+            # Authorized by the S2-ROV object, but still enforce loop prevention.
             return BGP._valid_ann(self, ann, recv_rel)
         if state == ValidationState.INVALID:
             return False
         if state == ValidationState.NOT_FOUND:
             # Unrelated routes retain native ROV semantics.
             return ROV._valid_ann(self, ann, recv_rel)
-        raise AssertionError(f"unhandled DA validation state: {state}")
+        raise AssertionError(f"unhandled S2-ROV validation state: {state}")

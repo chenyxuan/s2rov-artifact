@@ -7,7 +7,7 @@ Overall result: **PASS**
 | Arm | Trials | Signed updates | Invalid median / p95 (ms) | Unavailable median / p95 (ms) | Completion median / p95 (ms) | Final state / action |
 |---|---:|---:|---:|---:|---:|---|
 | Reactive exact ROA | 40 | 40 | 3210.706 / 3427.367 | 3440.550 / 3654.334 | 3668.491 / 3896.766 | Valid / accept |
-| Open DA policy | 40 | 0 | 0.000 / 0.000 | 616.142 / 645.290 | 843.229 / 899.814 | Delegated / accept |
+| Open S2-ROV policy | 40 | 0 | 0.000 / 0.000 | 616.142 / 645.290 | 843.229 / 899.814 | Delegated / accept |
 | BGP-only | 40 | 0 | 0.000 / 0.000 | 624.587 / 648.030 | 854.211 / 998.312 | BGPOnly / accept |
 | Prepublished exact ROAs | 40 | 0 | 0.000 / 0.000 | 622.596 / 652.129 | 855.567 / 887.448 | Valid / accept |
 

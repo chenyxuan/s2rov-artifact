@@ -672,7 +672,7 @@ run_experiment() {
         --output "${output}/da/enforcement.json" \
         --fail-on-mismatch
 
-    log "holding installed DA policy during a ${OUTAGE_HOLD_SECONDS}s relying-party outage"
+    log "holding installed S2-ROV policy during a ${OUTAGE_HOLD_SECONDS}s relying-party outage"
     mkdir -p "${output}/failures/routinator-outage"
     docker exec "${COLLECTOR}" \
         vtysh -c "show bgp ipv4 unicast json" \
@@ -702,7 +702,7 @@ run_experiment() {
         "${output}/failures/routinator-outage/recovered" \
         Explicit 300
 
-    log "restarting Routinator ${RECOVERY_TRIALS} times and verifying DA policy recovery in FRR"
+    log "restarting Routinator ${RECOVERY_TRIALS} times and verifying S2-ROV policy recovery in FRR"
     for trial in $(seq 1 "${RECOVERY_TRIALS}"); do
         trial_dir=$(printf '%s/failures/routinator-restart/trial-%02d' \
             "${output}" "${trial}")
@@ -770,7 +770,7 @@ run_experiment() {
     cp "${last_trial_dir}/restore/decisions.json" \
         "${output}/updates/restored-decisions.json"
 
-    log "restarting FRR ${FRR_RECOVERY_TRIALS} times and restoring live DA enforcement"
+    log "restarting FRR ${FRR_RECOVERY_TRIALS} times and restoring live S2-ROV enforcement"
     for trial in $(seq 1 "${FRR_RECOVERY_TRIALS}"); do
         trial_dir=$(printf '%s/failures/frr-restart/trial-%02d' \
             "${output}" "${trial}")

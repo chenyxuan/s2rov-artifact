@@ -578,7 +578,7 @@ setup_da_lane() {
     mkdir -p "${directory}"
     log "installing one open policy; per-handoff policy updates stop here"
     if [ "${POLICY_MODE}" != "exact" ]; then
-        echo "DA setup requires an exact-policy predecessor" >&2
+        echo "S2-ROV setup requires an exact-policy predecessor" >&2
         return 1
     fi
     docker exec "${KRILL}" krillc roas update -c testbed \
@@ -815,7 +815,7 @@ run_da_trial() {
     local digest
     digest=$(policy_digest "${directory}/final-routinator.json")
     if [ "${digest}" != "${DA_POLICY_DIGEST}" ]; then
-        echo "open policy changed during DA churn trial ${trial}" >&2
+        echo "open policy changed during S2-ROV churn trial ${trial}" >&2
         return 1
     fi
     write_case "${new_origin}" Delegated "${directory}/final-case.json"
@@ -844,7 +844,7 @@ run_da_trial() {
         0.000 "${unavailable_ms}" "${end_to_end_ms}" Delegated 200 0 "${digest}" \
         0.000 0.000 0.000
     CURRENT_ORIGIN=${new_origin}
-    log "DA trial ${trial}/${CHURN_TRIALS}: AS${old_origin}->AS${new_origin}, ${end_to_end_ms} ms"
+    log "S2-ROV trial ${trial}/${CHURN_TRIALS}: AS${old_origin}->AS${new_origin}, ${end_to_end_ms} ms"
 }
 
 write_protocol() {

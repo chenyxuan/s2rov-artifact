@@ -230,8 +230,8 @@ Elapsed time was 29.16 s with customer/provider cone storage disabled.
 | Gao--Rexford | **Native / strong** | Engine propagates customer routes upward, then peers, then customers; selection is relationship local preference, AS-path length, then lowest-neighbor-ASN tie break (`gao_rexford.py`). |
 | Multi-source competition | **Native / verified** | Two exact-prefix origins were seeded and selected across the same 12-AS graph. Multiple prefixes and subprefix/aggregate fallback are also native. |
 | Conventional ROV | **Native / verified** | Built-in `ROV` rejects `roa-checker` Invalid and accepts Valid/Unknown; official subprefix fixture verified filtering. |
-| Custom policy | **Strong extension point** | Policies are swappable classes. Overriding `_valid_ann` is sufficient for static admission; overriding route comparison is needed for DA-state local-preference ordering. |
-| Per-AS incremental deployment | **Native / strong** | `override_adopting_asns`, `hardcoded_asn_cls_dict`, and `hardcoded_base_asn_cls_dict` permit exact AS sets. A DA subset can override a fixed measured-ROV baseline. |
+| Custom policy | **Strong extension point** | Policies are swappable classes. Overriding `_valid_ann` is sufficient for static admission; overriding route comparison is needed for S2-ROV state local-preference ordering. |
+| Per-AS incremental deployment | **Native / strong** | `override_adopting_asns`, `hardcoded_asn_cls_dict`, and `hardcoded_base_asn_cls_dict` permit exact AS sets. A S2-ROV subset can override a fixed measured-ROV baseline. |
 | Deployment strategies | **Native with project code** | Built-in random percentage adoption is stratified across AS categories. For random/degree/customer-cone deployment among the 589 measured ROV ASes, precompute exact sets and pass `override_adopting_asns`; do not use the global percentage sampler. |
 | Reproducibility | **Good when explicitly pinned** | Supports `python_hash_seed`, fixed overrides, YAML fixtures, ground-truth tests, and deterministic tie breaking. Defaults are not sufficient: topology date is rolling, multiprocessing seeds depend on chunk/CPU count, and random AS sampling must be fixed. |
 | Output granularity | **Strong engine, coarse default export** | Every AS exposes a per-prefix Loc-RIB and analyzer output is per-AS control/data-plane outcome. The default simulation CSV stores only aggregated means and `yerr`; raw trial/AS observations require a custom analyzer/writer. |
@@ -258,19 +258,19 @@ CAIDA graph or upstream code.
 The stock Scenario automatically treats victims as adopters and attackers as
 non-adopters. For a deployment experiment, subclass Scenario and override these
 endpoint defaults so capability is controlled only by the explicit deployment
-set; otherwise endpoints can silently acquire the DA policy.
+set; otherwise endpoints can silently acquire the S2-ROV policy.
 
 ### Four-state implementation cost
 
 A static reachability/exposure experiment needs:
 
-- an immutable DA policy index backed by the existing S2-ROV-encoding reference
+- an immutable S2-ROV policy index backed by the existing S2-ROV-encoding reference
   validator;
 - `S2ROV._valid_ann`, accepting `Explicit`, `Delegated`, and `NotFound` under
   the chosen enforcement profile and rejecting `Invalid`;
 - paired legitimate-delegate and eligible-unlisted-origin scenarios;
 - a custom analyzer/writer that records per trial, per AS, selected prefix,
-  selected origin, path, DA state, and deployment membership; and
+  selected origin, path, S2-ROV state, and deployment membership; and
 - small-topology ground-truth tests for all four states, exact-prefix
   competition, aggregate fallback, closed override, and partial deployment.
 
@@ -282,13 +282,13 @@ Faithfully implementing the prototype's state preference
 the Boolean admission hook. BGPy's stock selector first compares relationship,
 then AS-path length. The adapter must either extend the announcement with a
 state/preference field or override `_get_best_ann_by_gao_rexford` to compare the
-DA action before the stock path rules. If withdrawals/BGPFull and upstream-style
+S2-ROV action before the stock path rules. If withdrawals/BGPFull and upstream-style
 system tests are also required, estimate **400--700 lines and 3--5 engineering
 days**.
 
 For the first paper experiment, the full dynamic implementation is unnecessary:
 the primary paired legitimate/unauthorized routes are both `Delegated`, so
-stock Gao--Rexford can break their competition after DA admission. Nevertheless,
+stock Gao--Rexford can break their competition after S2-ROV admission. Nevertheless,
 the four-state classifier must still be exported per AS, and an Exact-ROA
 baseline must use stock ROV so the attacker is actually filtered.
 

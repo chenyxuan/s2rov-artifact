@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Semantic boundary checks for open and closed DA policies.
+"""Semantic boundary checks for open and closed S2-ROV policies.
 
 The source corpus has cause/relationship labels, not attack ground truth.
 It checks the reference implementation's intended boundary:

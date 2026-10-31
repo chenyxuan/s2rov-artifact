@@ -39,8 +39,8 @@ The inspected local pins are:
 | Requirement | BGPy | InternetSim | Consequence for S2-ROV |
 |---|---|---|---|
 | Conventional ROV | Native covering-ROA checker and `ROV` policy | Static invalid-pair set | BGPy preserves the correct baseline without reimplementing RFC 6811 logic. |
-| Custom DA validation | Override a policy validity hook and call the S2-ROV-encoding oracle | Change Cython `nogil` validation plus policy storage | BGPy keeps DA semantics outside the engine. |
-| Mixed deployment | Scenario-level adopting and hard-coded AS policy classes | Per-AS ROV set exists; a separate DA set and actions must be added | Both are possible, but BGPy is already structured for comparisons. |
+| Custom S2-ROV validation | Override a policy validity hook and call the S2-ROV-encoding oracle | Change Cython `nogil` validation plus policy storage | BGPy keeps S2-ROV semantics outside the engine. |
+| Mixed deployment | Scenario-level adopting and hard-coded AS policy classes | Per-AS ROV set exists; a separate S2-ROV set and actions must be added | Both are possible, but BGPy is already structured for comparisons. |
 | Equal-prefix competition | Native announcements and deterministic Gao--Rexford selection | Native route-table competition | Both can represent the primary attack, subject to validation changes. |
 | Aggregate plus child prefix | Native multi-prefix local RIB | Native multi-prefix route table | Both can propagate the routes. |
 | Destination outcome after longest-prefix match | Native longest-prefix selection plus next-hop traceback in `ASGraphAnalyzer` | Printed longest-prefix lookup only; no Internet-wide tracer | BGPy directly supports the required reachability boundary. |
@@ -93,30 +93,30 @@ Every AS is assigned exactly one routing policy in a run:
 - `BGP`: no ROV filtering;
 - `ROV`: conventional ROV, rejecting `Invalid` and accepting `Valid` and
   `NotFound`; or
-- `S2ROV`: conventional ROV plus the signed DA policy.
+- `S2ROV`: conventional ROV plus the signed S2-ROV policy.
 
 For a route `(p, a)`, `S2ROV` must apply the following composition:
 
-1. Evaluate the S2-ROV-encoding DA policy.
+1. Evaluate the S2-ROV-encoding S2-ROV policy.
 2. If the result is `Explicit` or `Delegated`, admit the route subject to
    ordinary BGP loop/export checks.
 3. If the result is `Invalid`, reject it.
 4. If the result is `NotFound`, fall back to conventional ROV.
 
-This fallback is necessary because one DA object does not replace validation
+This fallback is necessary because one S2-ROV object does not replace validation
 for unrelated prefixes.
 
 The primary policy-action profile mirrors the prototype:
 
 `Explicit > Delegated > NotFound`, with `Invalid` rejected.  Within the same
-DA state, apply ordinary Gao--Rexford relationship preference, AS-path length,
+S2-ROV state, apply ordinary Gao--Rexford relationship preference, AS-path length,
 and deterministic neighbor-AS tie breaking.  Because both the intended
 unlisted delegate and an arbitrary eligible attacker are `Delegated`, this
 preference must never distinguish those two routes.
 
 Run an action-policy sensitivity in which all admitted states use ordinary
 Gao--Rexford preference without the state ranking.  State ranking is a local
-enforcement choice, whereas scope containment is a DA semantic invariant.
+enforcement choice, whereas scope containment is a S2-ROV semantic invariant.
 
 ### 4.2 Legacy-safe projection and deployment
 
@@ -135,7 +135,7 @@ set and let `S` be the subset upgraded to S2-ROV:
 - ASes in `V - S` run conventional `ROV`; and
 - all other ASes run `BGP`.
 
-A shadow node that observes DA policy but still enforces conventional ROV is
+A shadow node that observes S2-ROV policy but still enforces conventional ROV is
 route-outcome-equivalent to a legacy ROV node in this steady-state model.  The
 simulation therefore needs no separate shadow class.  prototype remains the
 source for transition and rollback behavior.
@@ -162,7 +162,7 @@ For the counterfactual-candidate sample:
 1. retain candidate-selection rows with one root origin and one leaf origin;
 2. require both origins to occur in the selected topology;
 3. require `p` to be a proper descendant of `rho`;
-4. set the DA maximum length to `|p|`;
+4. set the S2-ROV maximum length to `|p|`;
 5. construct the open policy `(rho, |p|, H, {(rho, {H}, open)})`; and
 6. sample `A` from eligible public ASes in the graph, excluding `H` and `D`.
 
@@ -188,13 +188,13 @@ otherwise.
 | B0 | No ROV anywhere | `D -> p` | Unfiltered propagation ceiling | child admitted |
 | B1 | Measured ROV, aggregate-only projection | `D -> p` | Conventional policy-gap baseline | child is conventional `Invalid` at ROV ASes |
 | B2 | Measured ROV plus exact child ROA | `D -> p` | Strong origin-specific reference | child is conventional `Valid` |
-| D1 | Open DA policy, staged upgrade | `D -> p` | Primary reachability-benefit lane | `Delegated` |
-| A1 | Evaluate aggregate-only ROV, exact-child ROV, and open DA under the same staged deployment | `D -> p` and `A -> p` | Primary equal-prefix security-cost lane | under DA, both origins are `Delegated`; under the exact child ROA, only `D` is `Valid`; under aggregate-only ROV, both are `Invalid` |
-| A2 | Open DA policy | `A -> p` only | Makes the open-scope boundary visible without competition | `Delegated`, never `Explicit` |
-| C1 | Open DA policy | `A -> rho` | Exact aggregate containment | `Invalid` |
+| D1 | Open S2-ROV policy, staged upgrade | `D -> p` | Primary reachability-benefit lane | `Delegated` |
+| A1 | Evaluate aggregate-only ROV, exact-child ROV, and open S2-ROV under the same staged deployment | `D -> p` and `A -> p` | Primary equal-prefix security-cost lane | under S2-ROV, both origins are `Delegated`; under the exact child ROA, only `D` is `Valid`; under aggregate-only ROV, both are `Invalid` |
+| A2 | Open S2-ROV policy | `A -> p` only | Makes the open-scope boundary visible without competition | `Delegated`, never `Explicit` |
+| C1 | Open S2-ROV policy | `A -> rho` | Exact aggregate containment | `Invalid` |
 | C2 | Open base plus closed child `(p,{D},closed)` | `A -> p` | Longest-prefix closed override | `Invalid` |
-| C3 | Open DA policy with max length `|p|` | `A -> p'`, where `p'` is below `p` and `|p'|>|p|` | Length containment | `Invalid` |
-| C4 | Route outside all DA/ROA objects | unrelated route | `NotFound` fallback regression | conventional `NotFound` action |
+| C3 | Open S2-ROV policy with max length `|p|` | `A -> p'`, where `p'` is below `p` and `|p'|>|p|` | Length containment | `Invalid` |
+| C4 | Route outside all S2-ROV/ROA objects | unrelated route | `NotFound` fallback regression | conventional `NotFound` action |
 
 The paper-facing core is D1 plus A1.  B0--B2 are references; A2 and C1--C4
 are security-boundary controls and should not be inflated into independent
@@ -270,9 +270,9 @@ For the same experimental unit and deployment set, compute:
 - reachability benefit:
   `Delta_R = delegate_delivery(D1) - delegate_delivery(B1)`;
 - incremental exposure relative to the conventional aggregate-only baseline:
-  `Delta_E_rov = attacker_delivery(A1 under DA) - attacker_delivery(A1 under B1)`; and
+  `Delta_E_rov = attacker_delivery(A1 under S2-ROV) - attacker_delivery(A1 under B1)`; and
 - residual exposure relative to exact origin authorization:
-  `Delta_E_exact = attacker_delivery(A1 under DA) - attacker_delivery(A1 under B2)`.
+  `Delta_E_exact = attacker_delivery(A1 under S2-ROV) - attacker_delivery(A1 under B2)`.
 
 Also report `delegate_delivery(D1) / delegate_delivery(B2)` when the exact-ROA
 denominator is nonzero.  Raw fractions remain primary; a ratio must not replace
@@ -291,12 +291,12 @@ The run must fail closed if any invariant fails.
    Stripe is open.
 3. A closed longest-prefix Stripe rejects every origin outside its explicit
    set.
-4. A route longer than the DA maximum length is `Invalid`.
+4. A route longer than the S2-ROV maximum length is `Invalid`.
 5. An intended unlisted public delegate and an arbitrary eligible public
    attacker under the same open scope receive the same `Delegated` state.
 6. Every route that is `Valid` under the conservative projection is
-   `Explicit` under the DA policy.
-7. With `S` empty, the DA deployment condition is bit-for-bit equivalent to
+   `Explicit` under the S2-ROV policy.
+7. With `S` empty, the S2-ROV deployment condition is bit-for-bit equivalent to
    the measured conventional-ROV baseline.
 8. With `S = V`, every member of the 589-AS measured ROV set runs `S2ROV`; an
    AS outside `V` is not silently upgraded.
@@ -323,7 +323,7 @@ a production run.
 | AS relationships | `<home>/AMBER/data/simulation/topo/as-rel-fixed.txt` | 477,782 links, 77,429 linked ASNs; SHA-256 `fff3684dc18a3411e87f8f7cd06b9cb211322d8f7c4f169781ee664fe78b6d69` |
 | Measured ROV set | `<home>/AMBER/data/simulation/deploy/hlavacek_rov.json` | one deployment containing 589 ASes, all present in the topology; SHA-256 `027c2ace3bce39a308e7d09eddcbc30f619b051af7977e9b5ff4a322cc0bbe1f` |
 | Counterfactual holder/child rows | `experiments/candidates/allocation_tree/outputs/tables/allocation_tree_origin_divergence.csv` | 8,830 rows; SHA-256 `b046e31aec24b3c9e48e99f17185be211f0229a898ee00c28e72d10097079b27` |
-| DA semantic oracle | `implementation/s2rov_codec/scripts/utils/s2rov.py` | SHA-256 `7685f8e5583ef2da851085fe119e365255c590d59d853bd90c2068417cd494dc` |
+| S2-ROV semantic oracle | `implementation/s2rov_codec/scripts/utils/s2rov.py` | SHA-256 `7685f8e5583ef2da851085fe119e365255c590d59d853bd90c2068417cd494dc` |
 | Staged control vectors | `implementation/prototype/e2e/config/staged/cases.json` | SHA-256 `ed0f88dd3d25397be25abd9dbcb121be9487ad76c3072f2b23a327c18e8b3fbb` |
 
 The relationship file has three fields (`asn1|asn2|relationship`), whereas the

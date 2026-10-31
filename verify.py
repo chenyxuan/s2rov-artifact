@@ -17,6 +17,7 @@ HERE = Path(__file__).resolve().parent
 
 def main() -> int:
     manifest = json.loads((HERE / "MANIFEST.json").read_text(encoding="utf-8"))
+    listed = {rec["bundle_path"] for rec in manifest["files"]}
     bad = []
     for rec in manifest["files"]:
         path = HERE / rec["bundle_path"]
@@ -24,6 +25,17 @@ def main() -> int:
             bad.append(("missing", rec["bundle_path"]))
         elif hashlib.sha256(path.read_bytes()).hexdigest() != rec["sha256"]:
             bad.append(("modified", rec["bundle_path"]))
+
+    # The manifest cannot hash itself, so everything else must be listed.
+    for path in sorted(HERE.rglob("*")):
+        if not path.is_file():
+            continue
+        relative = path.relative_to(HERE).as_posix()
+        if relative == "MANIFEST.json" or relative in listed:
+            continue
+        if "__pycache__" in relative or relative.endswith(".pyc"):
+            continue
+        bad.append(("unlisted", relative))
 
     for kind, name in bad:
         print(f"{kind}: {name}")

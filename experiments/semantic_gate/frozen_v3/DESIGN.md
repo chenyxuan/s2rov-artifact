@@ -94,7 +94,7 @@ Open intent itself emits no VRP.  Every projected Valid route must be
 `Explicit` under S2-ROV.  The projection is incomplete by design: it does not
 transport `Delegated` provenance.
 
-Using the DA policy's descendant `max_length` for the base VRP is unsafe for
+Using the S2-ROV policy's descendant `max_length` for the base VRP is unsafe for
 this property because a legacy router could accept a holder-origin descendant
 that a more-specific Stripe excludes.
 

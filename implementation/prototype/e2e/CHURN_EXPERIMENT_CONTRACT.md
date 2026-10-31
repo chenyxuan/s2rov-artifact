@@ -5,7 +5,7 @@
 When a legitimate `/24` moves between two eligible public origin ASes after
 the routing change is observed, a conventional exact-origin ROA requires a
 new signed authorization before reject-Invalid enforcement restores the
-route.  A previously signed open DA policy requires no authorization update
+route.  A previously signed open S2-ROV policy requires no authorization update
 and retains the new route as `Delegated`, while never calling it `Explicit`.
 
 ## Prototype path
@@ -19,9 +19,9 @@ origin A/B -> eBGP -> FRR Adj-RIB-In -> policy -> FRR Loc-RIB
 ```
 
 The conventional lane uses Routinator's RFC 8210 RTR output and FRR's native
-`match rpki` enforcement.  The DA lane uses Routinator's validated JSON output
-and the existing DA policy compiler to install per-neighbor FRR route maps.
-Python is not a system under test; it only compiles already validated DA
+`match rpki` enforcement.  The S2-ROV lane uses Routinator's validated JSON output
+and the existing S2-ROV policy compiler to install per-neighbor FRR route maps.
+Python is not a system under test; it only compiles already validated S2-ROV
 states, checks captured FRR JSON, and summarizes observations.
 
 Routinator runs with its testbed `--refresh 2` setting.  The churn-specific
@@ -49,15 +49,15 @@ recorded transition is break-before-make:
    that neighbor's live FRR Adj-RIB-In;
 3. in the exact lane, verify that Routinator evaluates the new origin as
    `Invalid` and FRR rejects it, then atomically replace the exact ROA in
-   Krill; in the DA lane, leave the signed open policy unchanged;
+   Krill; in the S2-ROV lane, leave the signed open policy unchanged;
 4. stop only when the expected origin, semantic state, local preference, and
    action are present in the live FRR Loc-RIB.
 
 The topology, prefix, origins, BGP commands, polling code, and stop condition
 are identical across lanes.  Setup publication is excluded from transition
 timings and per-transition update counts.  By default all 30 trials per lane
-are retained.  Execution is sandwiched as 15 exact, 30 DA, and 15 exact trials
-so the conventional control spans both sides of the DA block; block and global
+are retained.  Execution is sandwiched as 15 exact, 30 S2-ROV, and 15 exact trials
+so the conventional control spans both sides of the S2-ROV block; block and global
 order are recorded for an order-effect audit.
 
 ## Outcomes and acceptance criteria
@@ -72,9 +72,9 @@ Each raw trial records:
 
 Every exact transition must issue one atomic signed update transaction (remove
 old and add new), show `Invalid` before that update, and finish `Valid` and
-accepted at local preference 300.  Every DA transition must issue zero signed
+accepted at local preference 300.  Every S2-ROV transition must issue zero signed
 updates, finish `Delegated` and accepted at local preference 200, and keep the
-same open-policy digest throughout the DA block.  The workflow stops on the
+same open-policy digest throughout the S2-ROV block.  The workflow stops on the
 first failed trial and does not silently retry it.
 
 ## Interpretation boundary

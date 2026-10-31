@@ -14,7 +14,7 @@ def derive_standard_roa(s2rov: S2ROV) -> Tuple[str, int, int]:
     Returns (prefix, origin_asn, max_length) per DESIGN.md §4.1.
 
     The conservative projection protects only the exact aggregate.  Using the
-    DA policy's descendant max_length here could make holder-origin
+    S2-ROV policy's descendant max_length here could make holder-origin
     descendants Valid on a legacy router even where a more-specific Stripe
     excludes the holder.
     """

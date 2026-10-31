@@ -114,7 +114,7 @@ R: 10.0.0.0/8 => 65500
   (`0x02`)，将 `exclusive` 编码到 bit 2 (`0x04`)；bit 0 仍是标准
   announce/withdraw 标志。
 - 这不是 RFC 8210 兼容扩展。实测 stock FRR 10.6.1 在收到该 PDU 后断开
-  RTR 连接，因此 DA provenance 通过 `e2e/` 中的本地 API 传给 FRR，绝不
+  RTR 连接，因此 S2-ROV provenance 通过 `e2e/` 中的本地 API 传给 FRR，绝不
   映射成普通 Valid VRP。
 
 ### 4. IPv6 前缀

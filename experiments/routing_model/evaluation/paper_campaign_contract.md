@@ -87,14 +87,14 @@ replicates.
 ## 5. Announcement-matched scenario matrix
 
 Every unit has two fixed delegate-only references, three pairs of fixed
-competition references, and staged DA lanes:
+competition references, and staged S2-ROV lanes:
 
 - `B1_delegate_only`: aggregate-only ROV with the delegate child route;
 - `B2_exact_delegate_only`: exact child ROA with the same announcements;
 - `B1_competition`: aggregate-only ROV with delegate and one fixed attacker;
 - `B2_exact_competition`: exact delegate ROA with the same competition;
-- `D1_open_delegate_only`: open DA policy across deployment cells; and
-- `A1_open_competition`: open DA policy across deployment cells for each
+- `D1_open_delegate_only`: open S2-ROV policy across deployment cells; and
+- `A1_open_competition`: open S2-ROV policy across deployment cells for each
   attacker class.
 
 For one lane, the unique staged deployment cells are two shared endpoints
@@ -183,7 +183,7 @@ tested, use holder-level curve AUC contrasts and Holm correction.
 Use persistent process workers.  Each worker builds one private AS graph and
 engine because the BGPy engine contains weak references and is not picklable;
 it then runs trials serially with `S2ROV.configure()` before every setup.
-Threads are prohibited because the DA oracle is held in a class variable.
+Threads are prohibited because the S2-ROV oracle is held in a class variable.
 
 Start with 16 workers and eight-trial atomic chunks.  Use append-only or
 atomic-shard checkpoints and merge once; never rewrite all prior rows after

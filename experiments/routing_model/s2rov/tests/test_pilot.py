@@ -66,11 +66,11 @@ def test_s2rov_policy_composes_four_states_with_native_rov() -> None:
         assert receiver._valid_ann(
             ann(CHILD, DELEGATE_ASN), Relationships.CUSTOMERS
         )
-        # Invalid is rejected by the DA object itself.
+        # Invalid is rejected by the S2-ROV object itself.
         assert not receiver._valid_ann(
             ann(AGGREGATE, ATTACKER_ASN), Relationships.CUSTOMERS
         )
-        # The route is DA-NotFound, then rejected by the unrelated native ROA.
+        # The route is S2-ROV NotFound, then rejected by the unrelated native ROA.
         assert s2rov.validate_route(UNRELATED, ATTACKER_ASN) == ValidationState.NOT_FOUND
         assert not receiver._valid_ann(
             ann(UNRELATED, ATTACKER_ASN), Relationships.CUSTOMERS

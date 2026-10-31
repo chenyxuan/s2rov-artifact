@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compile per-router DA policy for the staged-deployment prototype.
+"""Compile per-router S2-ROV policy for the staged-deployment prototype.
 
 The compiler consumes only Routinator's validated HTTP output and routes
 actually present in a router's pre-policy Adj-RIB-In.  It emits one inbound

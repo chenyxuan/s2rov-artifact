@@ -748,7 +748,7 @@ def build_sibling_scenario(
     if lane == B1_SIBLING and da_asns:
         raise AttackReachabilityContractError("conventional lane contains S2-ROV-aware ASes")
     if not da_asns.issubset(rov_asns):
-        raise AttackReachabilityContractError("DA set is not a subset of the fixed ROV set")
+        raise AttackReachabilityContractError("S2-ROV set is not a subset of the fixed ROV set")
     root = ip_network(unit.root_prefix, strict=True)
     announcements = (
         origin_announcement(unit.root_prefix, unit.holder_asn),
@@ -1055,7 +1055,7 @@ def validate_result_row(
         row.get("leaf_da_state") != ValidationState.DELEGATED.value
         or row.get("sibling_da_state") != ValidationState.DELEGATED.value
     ):
-        raise AttackReachabilityContractError(f"{trial.scenario_id}: DA boundary state mismatch")
+        raise AttackReachabilityContractError(f"{trial.scenario_id}: S2-ROV boundary state mismatch")
     outcomes = row.get("outcomes")
     if not isinstance(outcomes, Mapping):
         raise AttackReachabilityContractError(f"{trial.scenario_id}: no outcome object")

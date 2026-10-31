@@ -21,7 +21,7 @@ PYTHONPATH="$PWD/experiments/routing_model/vendor/bgpy:$PWD" \
   --output experiments/routing_model/results/pilot/pilot.json
 ```
 
-The pilot runs an 11-AS Gao--Rexford graph at 0%, 50%, and 100% DA upgrade
+The pilot runs an 11-AS Gao--Rexford graph at 0%, 50%, and 100% S2-ROV upgrade
 within a fixed four-AS ROV set.  It includes a delegate-only lane and a paired
 delegate/attacker equal-prefix lane.  Every run reports the exact child-route
 selection partition and a per-hop longest-prefix destination partition,

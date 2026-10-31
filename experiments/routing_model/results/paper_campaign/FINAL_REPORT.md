@@ -85,7 +85,7 @@ BGPy 13.0.10 was selected over InternetSim after both were pinned and audited.
 BGPy supplies native covering-ROA validation, per-AS policy classes, mixed
 deployment, multi-origin propagation, longest-prefix destination analysis,
 and a reproducible policy extension point. InternetSim's available ROV model
-is a static invalid-pair set, its required DA semantics and Internet-wide
+is a static invalid-pair set, its required S2-ROV semantics and Internet-wide
 destination tracer would need new engine work, and its official example built
 but crashed at the first propagation batch in the evaluated environment.
 InternetSim remains a vendored secondary candidate; it was not used to produce

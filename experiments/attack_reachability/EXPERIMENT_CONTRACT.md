@@ -5,7 +5,7 @@ Version: `attack_reachability-sibling-endpoint-v1`
 ## Question and claim boundary
 
 This campaign asks how changing the fixed measured ROV set from conventional
-ROV to the open DA policy changes conditional AS-level route exposure for a
+ROV to the open S2-ROV policy changes conditional AS-level route exposure for a
 deterministic same-length sibling of the original routing-model leaf. It does not
 estimate traffic, sibling-prefix utilization, delegation legitimacy, attack
 prevalence, or generalization to another topology or ROV snapshot.
@@ -24,8 +24,8 @@ prevalence, or generalization to another topology or ROV snapshot.
   `sibling@uniform-attacker`.
 - Conventional authorization: one aggregate-only ROA for `root@holder` with
   `maxLength == root.prefixlen`.
-- Physical cells per holder: conventional ROV at 0% DA, open-policy machinery
-  at 0% DA, and open DA policy at 100% of the fixed ROV set. Thus the complete
+- Physical cells per holder: conventional ROV at 0% S2-ROV, open-policy machinery
+  at 0% S2-ROV, and open S2-ROV policy at 100% of the fixed ROV set. Thus the complete
   design is 200 x 3 = 600 physical trials; no random deployment orders are
   needed at endpoints.
 - The open-0% cell is an incremental-equivalence control and must exactly match
