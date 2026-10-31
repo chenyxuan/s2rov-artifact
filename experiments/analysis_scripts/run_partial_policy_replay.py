@@ -65,7 +65,7 @@ from utils.s2rov import (  # noqa: E402
 
 DEFAULT_INPUT = (
     REPO
-    / "results" / "tables" / "candidates"
+    / "experiments" / "candidates"
     / "allocation_tree"
     / "visibility_experiment"
     / "outputs"

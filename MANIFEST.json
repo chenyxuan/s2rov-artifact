@@ -5439,7 +5439,7 @@
   {
    "bundle_path": "experiments/analysis_scripts/analyze_handoff_fig2.py",
    "bytes": 45363,
-   "sha256": "df68f7db2b20eff38312c367a4a9cb3282bdd7233e0223a4998f7aac83ef58dd",
+   "sha256": "9085ea6096e15581e8631efe78e5ea204ec4dd1f0951c210e9a2541452f792e2",
    "source_path": "experiments/analysis_scripts/analyze_handoff_fig2.py"
   },
   {
@@ -5457,13 +5457,13 @@
   {
    "bundle_path": "experiments/analysis_scripts/build_processing_cost_figure.py",
    "bytes": 30937,
-   "sha256": "bb406c8985259596892ba810a96f305b25f94d84629ef57d104fa2e4714d426b",
+   "sha256": "610c6b027ed8b6a038ebaa6b9b0dc58f560b34b9161fc27ee6230c0c8c1b75b9",
    "source_path": "experiments/analysis_scripts/build_processing_cost_figure.py"
   },
   {
    "bundle_path": "experiments/analysis_scripts/build_processing_cost_table.py",
    "bytes": 4760,
-   "sha256": "84a4fd1040d7dfc3888a71e411736138f810779ada0fd5951387e47c9e57c9f9",
+   "sha256": "e1e8d9f0814f41b70ba583cd57b128c7971835f4a1396f883e50cddead260acd",
    "source_path": "experiments/analysis_scripts/build_processing_cost_table.py"
   },
   {
@@ -5492,14 +5492,14 @@
   },
   {
    "bundle_path": "experiments/analysis_scripts/prepare_openscope_placement_scores.py",
-   "bytes": 5460,
-   "sha256": "7a43b312299a0618cb5ce1d575bec560c82dd305c0b611540afe2ec27a004782",
+   "bytes": 5456,
+   "sha256": "6fefaf068c3f5a17d99edfedc3530fcfe06794fe212375438c9f0a94a5552643",
    "source_path": "experiments/analysis_scripts/prepare_openscope_placement_scores.py"
   },
   {
    "bundle_path": "experiments/analysis_scripts/run_partial_policy_replay.py",
-   "bytes": 138742,
-   "sha256": "c6899a2f9fce08aa6e948a5590bcc93511ccb079300662fc37bf216c2984c5b9",
+   "bytes": 138735,
+   "sha256": "634815dd486e882af75ffc80aac5fc8f35239e61ef72ee86a7a0bf65be991240",
    "source_path": "experiments/analysis_scripts/run_partial_policy_replay.py"
   },
   {
@@ -5738,8 +5738,8 @@
   },
   {
    "bundle_path": "REPRODUCE.md",
-   "bytes": 2847,
-   "sha256": "21405696d549571e5dc01045c8ebcd4e98860bf541faab9b3d3c74c3a068580e",
+   "bytes": 3509,
+   "sha256": "1baa3a361b35a562436f3836fdaf7b8849b386730e4aae6e418b5c67388a6980",
    "source_path": "tools/artifact_REPRODUCE.md"
   },
   {
@@ -5788,5 +5788,5 @@
  "generated_by": "tools/prepare_artifact.py",
  "size_cap_bytes": 2097152,
  "source_path": "where the file came from, under the naming used here rather than the authors' internal directory names",
- "total_bytes": 28679385
+ "total_bytes": 28680036
 }

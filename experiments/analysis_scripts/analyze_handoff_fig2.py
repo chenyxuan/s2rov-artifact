@@ -97,7 +97,7 @@ class RunSpec:
 
     @property
     def directory(self) -> Path:
-        return REPO / "implementation" / "prototype" / "e2e" / "results" / self.run_id
+        return REPO / "implementation" / "prototype" / "e2e" / "outputs" / self.run_id
 
 
 # Pins prevent silently changed runs from being presented as accepted evidence.

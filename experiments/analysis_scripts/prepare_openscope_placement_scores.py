@@ -27,12 +27,12 @@ DEFAULT_CANDIDATES = (
     / "experiments" / "candidates"
     / "allocation_tree"
     / "visibility_experiment"
-    / "results"
+    / "outputs"
     / "visibility_candidates.csv"
 )
 DEFAULT_OUTPUT = (
     MANUSCRIPT
-    / "figure-data"
+    / "figures"
     / "source_data"
     / "openscope_placement_as_scores.json"
 )

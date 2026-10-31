@@ -19,6 +19,20 @@ Paths are relative to the bundle root. The paper itself is not bundled.
 `results/README.md` names the pipeline file each one came from, and
 `results/numbers.json` is the ledger of every number quoted in the paper.
 
+## What reproduces end to end
+
+The bundle carries the code and the archived intermediate tables. Two results
+re-run from what is here; the rest need an input that is too large to ship,
+and the exclusion table names the command that rebuilds it.
+
+| Result | Re-runs from this bundle | Else |
+|---|---|---|
+| Figs. 2, 3 | yes — `run_partial_policy_replay.py`, from the archived candidate table | |
+| Table I | the archived table is here to check against | recomputing it needs the RIPE and RIS dumps |
+| Fig. 4 | | needs `processing_cost_dual_stack.csv` |
+| Fig. 5 | | needs the 18 MB campaign manifest |
+| Sec. V | | needs the 83 MB `holder_contrasts.jsonl` |
+
 ## 2. Re-run one experiment
 
 | Item | Entry point |

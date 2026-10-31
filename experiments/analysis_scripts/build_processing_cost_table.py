@@ -17,7 +17,7 @@ DEFAULT_RUN = (
     REPO_ROOT
     / "experiments" / "cost"
     / "processing_benchmark"
-    / "results"
+    / "outputs"
     / "controlled-processing-20260830T-marker-final-v1"
 )
 DEFAULT_OUTPUT = PAPER_DIR / "results" / "tables" / "processing_cost_dual_stack.csv"

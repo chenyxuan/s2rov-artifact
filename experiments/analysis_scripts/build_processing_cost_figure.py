@@ -32,7 +32,7 @@ RUN_DIR = (
     REPO
     / "experiments" / "cost"
     / "processing_benchmark"
-    / "results"
+    / "outputs"
     / "controlled-processing-20260830T-marker-final-v1"
 )
 SUMMARY = RUN_DIR / "summary.json"
@@ -42,7 +42,7 @@ UPDATE_RUN = (
     REPO
     / "experiments" / "cost"
     / "processing_benchmark"
-    / "results"
+    / "outputs"
     / "policy-update-20260830T-marker-final-v1"
 )
 UPDATE_SUMMARY = UPDATE_RUN / "summary.json"
@@ -54,7 +54,7 @@ OUTAGE_DIR = (
     REPO
     / "implementation" / "prototype"
     / "e2e"
-    / "results"
+    / "outputs"
     / "run-20260823T024129Z"
     / "failures"
     / "routinator-outage"
