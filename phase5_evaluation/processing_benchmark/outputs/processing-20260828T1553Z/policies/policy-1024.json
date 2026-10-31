@@ -7,7 +7,7 @@
   "roundtrip_identical": true,
   "schema_version": 1,
   "serialized_bytes": 10217,
-  "serialized_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/processing-20260828T1553Z/policies/policy-1024.bin",
+  "serialized_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/processing-20260828T1553Z/policies/policy-1024.bin",
   "serialized_sha256": "fb1a6d99b9ed32d1850a2e7bed546dd7f6b2c07022ebbb73e813c759bd450739",
   "stripes": [
     {

@@ -16,7 +16,7 @@
 # limitations under the License.
 
 save_pwd=$(pwd)
-cd /home/cnic/stripe-roa-v3/phase7_simulation/.deps-internetsim/
+cd <repo>/phase7_simulation/.deps-internetsim/
 
 printf "Removing file \"lib/libbson2.a\""
 (rm -f "lib/libbson2.a" && printf "\n") || printf " ... not removed\n"
@@ -1413,8 +1413,8 @@ printf "Removing directory \"include\""
 printf "Removing directory \"bin\""
 (rmdir "bin" 2>/dev/null && printf "\n") || printf " ... not removed (probably not empty)\n"
 cd ..
-printf "Removing top-level installation directory: \"/home/cnic/stripe-roa-v3/phase7_simulation/.deps-internetsim/\""
-(rmdir "/home/cnic/stripe-roa-v3/phase7_simulation/.deps-internetsim/" 2>/dev/null && printf "\n") || printf " ... not removed (probably not empty)\n"
+printf "Removing top-level installation directory: \"<repo>/phase7_simulation/.deps-internetsim/\""
+(rmdir "<repo>/phase7_simulation/.deps-internetsim/" 2>/dev/null && printf "\n") || printf " ... not removed (probably not empty)\n"
 
 # Return to the directory from which the program was called
 cd ${save_pwd}

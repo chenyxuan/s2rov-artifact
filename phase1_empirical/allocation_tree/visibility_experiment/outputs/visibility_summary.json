@@ -31,8 +31,8 @@
   "generated_at_utc": "2026-08-28T09:11:25.168396+00:00",
   "inputs": {
     "paths": {
-      "mrt": "/home/cnic/stripe-roa-v3/phase1_empirical/allocation_tree/visibility_experiment/input/data/bview.20260624.0000.gz",
-      "ripe": "/home/cnic/stripe-roa-v3/phase1_empirical/allocation_tree/data/ripe.db.gz"
+      "mrt": "<repo>/phase1_empirical/allocation_tree/visibility_experiment/input/data/bview.20260624.0000.gz",
+      "ripe": "<repo>/phase1_empirical/allocation_tree/data/ripe.db.gz"
     },
     "sha256": {
       "mrt": "ad2fe1094df70c2d0f2ddb39cf5ab22b10add9073ee1cf6213c6d132ddfb04b9",
@@ -55,15 +55,15 @@
   },
   "outputs": {
     "audit_metrics": {
-      "path": "/home/cnic/stripe-roa-v3/phase1_empirical/allocation_tree/visibility_experiment/outputs/visibility_audit_metrics.csv",
+      "path": "<repo>/phase1_empirical/allocation_tree/visibility_experiment/outputs/visibility_audit_metrics.csv",
       "sha256": "9aa4e1235f45a7202e509c29b09afa46aadc492abbd4d7692cf5db100ccd22de"
     },
     "compact_table": {
-      "path": "/home/cnic/stripe-roa-v3/phase1_empirical/allocation_tree/visibility_experiment/outputs/visibility_by_afi.csv",
+      "path": "<repo>/phase1_empirical/allocation_tree/visibility_experiment/outputs/visibility_by_afi.csv",
       "sha256": "4a21e4736d386d52fa5804c17f3566ab5d468b54a4b9903ac5c2c913480b7576"
     },
     "potential_conflicts": {
-      "path": "/home/cnic/stripe-roa-v3/phase1_empirical/allocation_tree/visibility_experiment/outputs/visibility_candidates.csv",
+      "path": "<repo>/phase1_empirical/allocation_tree/visibility_experiment/outputs/visibility_candidates.csv",
       "sha256": "0846c5f5775e92092b445b64851918ca6f6b3e45651598d9006d3f3aeb483918"
     }
   },

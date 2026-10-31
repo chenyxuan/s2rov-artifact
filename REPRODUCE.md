@@ -27,10 +27,15 @@ original relative layout, so the build finds its inputs where it expects them:
 ```bash
 cd manuscript
 make refresh     # assemble main.tex and compile the PDF  -> 8 pages
-make check       # page limit, fonts, classifier boundaries, unit tests
 ```
 
-`make refresh` and `make check` were verified inside this bundle.
+`make refresh` was verified inside this bundle.
+
+`make check` is the manuscript's internal quality gate. It recomputes SHA-256
+inputs against the values frozen when the experiments were run, so it does not
+apply here: this bundle rewrites absolute paths for publication, which changes
+those digests by design. Use `MANIFEST.json` (or
+`python3 tools/prepare_artifact.py --check`) to verify the bundle itself.
 
 Redrawing the figures needs only what is in `00-reproduce/`: those files are the
 plotted data. Regenerating them *from scratch* is the next level, because

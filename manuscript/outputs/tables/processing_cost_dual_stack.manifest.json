@@ -1,14 +1,14 @@
 {
-  "accepted_run": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-marker-final-v1",
+  "accepted_run": "<repo>/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-marker-final-v1",
   "builder": {
-    "path": "/home/cnic/stripe-roa-v3/MSN-2026-0830/scripts/build_processing_cost_table.py",
+    "path": "<repo>/MSN-2026-0830/scripts/build_processing_cost_table.py",
     "sha256": "9ed590c562c99dd81ee1fc955a2bbeea64973c7b940dde0fc3ce23741234d0be"
   },
   "display_rounding": "one decimal place",
   "display_statistic": "arithmetic mean across fresh worker processes",
   "independent_audit": {
     "all_checks_pass": true,
-    "path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-marker-final-v1/independent_audit.json",
+    "path": "<repo>/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-marker-final-v1/independent_audit.json",
     "sha256": "586c3a0f4efc4ea75c374f7f5c2ad258c66434e5888c5313f765a85f8a3c3a6f"
   },
   "rows": [
@@ -165,7 +165,7 @@
   ],
   "schema_version": "processing-cost-table-v2",
   "source_summary": {
-    "path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-marker-final-v1/summary.json",
+    "path": "<repo>/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-marker-final-v1/summary.json",
     "sha256": "ebb77c5bf194de663b81aea82fc2a06abe5a8f878c571080accfc3ad146f0a6a"
   }
 }

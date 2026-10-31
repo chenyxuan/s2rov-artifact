@@ -131,7 +131,7 @@ Key fixes applied to the source-derived Docker images:
 | `rrdp-root-certs` | Created `/etc/pki/CA/root.pem` from `root.crt` |
 | `extra-tals-dir` | Enabled in `/root/.routinator.conf` |
 | Server cert SAN | Generated server cert with `DNS:testbed` + `IP:172.17.0.2` |
-| rsync cert path | Copied TA cert to `/home/cnic/data/rsync_cer/ta.cer` |
+| rsync cert path | Copied TA cert to `<home>/data/rsync_cer/ta.cer` |
 | nginx HTTPS:443 | Proxy to Krill HTTPS:3000 with self-signed SAN cert |
 | Routinator `--no-ui` | Skipped `routinator-ui` optional dependency to avoid GitHub fetch |
 

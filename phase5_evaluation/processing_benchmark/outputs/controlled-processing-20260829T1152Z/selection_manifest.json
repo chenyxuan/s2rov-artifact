@@ -13,7 +13,7 @@
       "query_file": {
         "content_sha256": "0dfbed39b09686f2e048c624c84f0b4776a03713b0d4cd3b6e799f96ff3aad1e",
         "file_sha256": "75971e5d3dcfe1aa30c2e4843e839a4904c1af2f186f48968d5e87937accdfce",
-        "path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/queries/ipv4-queries.json",
+        "path": "<repo>/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/queries/ipv4-queries.json",
         "query_count": 8192
       },
       "rows_scanned": 1135467,
@@ -1046,7 +1046,7 @@
       ],
       "selected_children_sha256": "4eb1ef8f5dbc9155dd0789edec7eec7bd6f7533abfe0e4fb86b59232161ce266",
       "unique_observed_prefixes": 15084,
-      "workload_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/processing-ipv4-dualstack-20260828/input/rrc00_20260624_ipv4_prefix_origins.csv",
+      "workload_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/processing-ipv4-dualstack-20260828/input/rrc00_20260624_ipv4_prefix_origins.csv",
       "workload_sha256": "cb623f332f10788c1b403fd78a48b3ae47f69b3190825c6ab200cc172c1fe963"
     },
     "6": {
@@ -1061,7 +1061,7 @@
       "query_file": {
         "content_sha256": "db9bf0485b9d00ca7573d4d67565200f960763062e73d46c4dcd3aa013efbeee",
         "file_sha256": "2c0ca14eaa9841f18aa51981f45650221295cf87c265f578c24ea858c5d8506c",
-        "path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/queries/ipv6-queries.json",
+        "path": "<repo>/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/queries/ipv6-queries.json",
         "query_count": 8192
       },
       "rows_scanned": 257550,
@@ -2094,7 +2094,7 @@
       ],
       "selected_children_sha256": "d05d08a7888d3ddb71b65d3e4f5f51c767ff148bfdb6f2d9ed071c416bfcfda1",
       "unique_observed_prefixes": 17474,
-      "workload_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/processing-ipv6-dualstack-20260829/input/rrc00_20260624_ipv6_prefix_origins.csv",
+      "workload_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/processing-ipv6-dualstack-20260829/input/rrc00_20260624_ipv6_prefix_origins.csv",
       "workload_sha256": "9890d18dcc552f39d0b73ad9328231d7b855afa5da5e4b82335f4bf20e4de37e"
     }
   },

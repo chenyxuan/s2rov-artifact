@@ -79,37 +79,37 @@
     "extension_checkpoint": {
       "bytes": 711,
       "exists": true,
-      "path": "/home/cnic/stripe-roa-v3/phase7_simulation/results/deployment_grid_extension/checkpoint.json",
+      "path": "<repo>/phase7_simulation/results/deployment_grid_extension/checkpoint.json",
       "sha256": "f1bbc3717592a4b941421d784a5d61e9d0997b44c0b88fa6b256c72e522ace01"
     },
     "extension_failures": {
       "bytes": null,
       "exists": false,
-      "path": "/home/cnic/stripe-roa-v3/phase7_simulation/results/deployment_grid_extension/failures.jsonl",
+      "path": "<repo>/phase7_simulation/results/deployment_grid_extension/failures.jsonl",
       "sha256": null
     },
     "extension_manifest": {
       "bytes": 7109810,
       "exists": true,
-      "path": "/home/cnic/stripe-roa-v3/phase7_simulation/results/deployment_grid_extension/manifest.json",
+      "path": "<repo>/phase7_simulation/results/deployment_grid_extension/manifest.json",
       "sha256": "f5a20c7a2592b6cac6231fba4d2635806644432da9c6ee207ae97d470a049999"
     },
     "extension_raw": {
       "bytes": 46681317,
       "exists": true,
-      "path": "/home/cnic/stripe-roa-v3/phase7_simulation/results/deployment_grid_extension/raw_scenarios.jsonl",
+      "path": "<repo>/phase7_simulation/results/deployment_grid_extension/raw_scenarios.jsonl",
       "sha256": "d1ad91a251a06899179e353d0771bca53b2cbd7ffff95dad8dc0d12531878716"
     },
     "source_manifest": {
       "bytes": 18509023,
       "exists": true,
-      "path": "/home/cnic/stripe-roa-v3/phase7_simulation/results/paper_campaign/manifest.json",
+      "path": "<repo>/phase7_simulation/results/paper_campaign/manifest.json",
       "sha256": "a674b87afd90716521f19673c4ddbd1153c1b911ec5021a99e0eabe579bcbeae"
     },
     "source_raw": {
       "bytes": 123730741,
       "exists": true,
-      "path": "/home/cnic/stripe-roa-v3/phase7_simulation/results/paper_campaign/raw_scenarios.jsonl",
+      "path": "<repo>/phase7_simulation/results/paper_campaign/raw_scenarios.jsonl",
       "sha256": "fb9ec8fa80d41b5a98b4bc956d82ebfec0514eaab27fd183f86683dfed6925b7"
     }
   },

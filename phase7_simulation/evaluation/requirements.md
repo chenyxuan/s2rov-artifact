@@ -337,8 +337,8 @@ a production run.
 
 | Phase 7 input | Source | Current source audit |
 |---|---|---|
-| AS relationships | `/home/cnic/AMBER/data/simulation/topo/as-rel-fixed.txt` | 477,782 links, 77,429 linked ASNs; SHA-256 `fff3684dc18a3411e87f8f7cd06b9cb211322d8f7c4f169781ee664fe78b6d69` |
-| Measured ROV set | `/home/cnic/AMBER/data/simulation/deploy/hlavacek_rov.json` | one deployment containing 589 ASes, all present in the topology; SHA-256 `027c2ace3bce39a308e7d09eddcbc30f619b051af7977e9b5ff4a322cc0bbe1f` |
+| AS relationships | `<home>/AMBER/data/simulation/topo/as-rel-fixed.txt` | 477,782 links, 77,429 linked ASNs; SHA-256 `fff3684dc18a3411e87f8f7cd06b9cb211322d8f7c4f169781ee664fe78b6d69` |
+| Measured ROV set | `<home>/AMBER/data/simulation/deploy/hlavacek_rov.json` | one deployment containing 589 ASes, all present in the topology; SHA-256 `027c2ace3bce39a308e7d09eddcbc30f619b051af7977e9b5ff4a322cc0bbe1f` |
 | Counterfactual holder/child rows | `phase1_empirical/allocation_tree/outputs/tables/allocation_tree_origin_divergence.csv` | 8,830 rows; SHA-256 `b046e31aec24b3c9e48e99f17185be211f0229a898ee00c28e72d10097079b27` |
 | DA semantic oracle | `phase4_encoding/scripts/utils/daroa.py` | SHA-256 `7685f8e5583ef2da851085fe119e365255c590d59d853bd90c2068417cd494dc` |
 | Staged control vectors | `phase6_system/e2e/config/staged/cases.json` | SHA-256 `ed0f88dd3d25397be25abd9dbcb121be9487ad76c3072f2b23a327c18e8b3fbb` |

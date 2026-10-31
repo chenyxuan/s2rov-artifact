@@ -73,7 +73,7 @@
   "inputs": {
     "analyzer": {
       "file_sha256": "14b0d03b819934b92cd09bb2eaefc217bce8473c087f1af9350c53f5dd2f2e69",
-      "path": "/home/cnic/stripe-roa-v3/phase7_simulation/campaign/analyze_deployment_grid_extension.py"
+      "path": "<repo>/phase7_simulation/campaign/analyze_deployment_grid_extension.py"
     },
     "extension_manifest": {
       "file_sha256": "f5a20c7a2592b6cac6231fba4d2635806644432da9c6ee207ae97d470a049999",

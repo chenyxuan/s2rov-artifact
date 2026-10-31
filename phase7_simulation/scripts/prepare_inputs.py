@@ -579,8 +579,8 @@ def _default_paths() -> tuple[Path, Path, Path, Path]:
         repository_root
         / "phase1_empirical/allocation_tree/outputs/tables/"
         "allocation_tree_origin_divergence.csv",
-        Path("/home/cnic/AMBER/data/simulation/topo/as-rel-fixed.txt"),
-        Path("/home/cnic/AMBER/data/simulation/deploy/hlavacek_rov.json"),
+        Path("<home>/AMBER/data/simulation/topo/as-rel-fixed.txt"),
+        Path("<home>/AMBER/data/simulation/deploy/hlavacek_rov.json"),
         repository_root / "phase7_simulation/data/inputs",
     )
 

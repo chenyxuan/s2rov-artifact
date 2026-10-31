@@ -7177,9 +7177,9 @@
   "roundtrip_identical": true,
   "schema_version": "controlled-policy-processing-v1",
   "serialized_bytes": 10252,
-  "serialized_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/policies/ipv4-subprefixes-1023.bin",
+  "serialized_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/policies/ipv4-subprefixes-1023.bin",
   "serialized_sha256": "b1b6c159ebf85ed0235b17ee36d9a1df229f6bb5e0f67656e3c6a5c526634086",
-  "spec_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/policies/ipv4-subprefixes-1023.json",
+  "spec_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/policies/ipv4-subprefixes-1023.json",
   "subprefix_entries": 1023,
   "total_policy_entries": 1024
 }

@@ -242,7 +242,7 @@ start_lab() {
         --network "${NETWORK}" \
         --ip 172.30.50.2 \
         -e "KRILL_CLI_TOKEN=${token}" \
-        -v "${VOLUME}:/home/cnic/data" \
+        -v "${VOLUME}:<home>/data" \
         -v "${CONFIG_DIR}/krill/nginx.conf:/etc/nginx/sites-enabled/testbed:ro" \
         -v "${CONFIG_DIR}/krill/krill.conf.template:/opt/daroa/krill.conf.template:ro" \
         -v "${SCRIPT_DIR}/krill-entrypoint.sh:/opt/daroa/krill-entrypoint.sh:ro" \

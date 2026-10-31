@@ -7,7 +7,7 @@
   "roundtrip_identical": true,
   "schema_version": 1,
   "serialized_bytes": 40967,
-  "serialized_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/processing-ipv4-dualstack-20260828/policies/policy-4097.bin",
+  "serialized_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/processing-ipv4-dualstack-20260828/policies/policy-4097.bin",
   "serialized_sha256": "bb56c2b5cc61df50ebdc5ab5ddf73163f2c1d4328781f20a769a4d19c89f8347",
   "stripes": [
     {

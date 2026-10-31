@@ -30,7 +30,7 @@ docker run -itd --name testbed --hostname testbed -p 3000:3000 stripe-testbed /b
 docker run -itd --name routinator -p 3323:3323 -p 3333:3333 stripe-routinator /bin/bash
 
 # testbed容器中命令，启动krill服务
-1. sh /home/cnic/bin/entrypoint.sh
+1. sh <home>/bin/entrypoint.sh
 2. ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1 -d '/'
 
 # testbed: 生成 SAN 服务器证书（修复 CaUsedAsEndEntity / NotValidForName）
@@ -46,9 +46,9 @@ docker run -itd --name routinator -p 3323:3323 -p 3333:3333 stripe-routinator /b
 
 # routinator容器中命令，配置域名，下载TAL，启动routinator
 1. echo '172.17.0.2 testbed' >> /etc/hosts （172.17.0.2替换为testbed容器中第二步输出的ip）
-2. rm /home/cnic/tals/*
-3. wget -P /home/cnic/tals/ https://testbed/ta/ta.tal --no-check-certificate
-4. routinator --extra-tals-dir="/home/cnic/tals/" --logfile="/home/cnic/routinator.log"  server --rtr 0.0.0.0:3323 --http 0.0.0.0:3333 &
+2. rm <home>/tals/*
+3. wget -P <home>/tals/ https://testbed/ta/ta.tal --no-check-certificate
+4. routinator --extra-tals-dir="<home>/tals/" --logfile="<home>/routinator.log"  server --rtr 0.0.0.0:3323 --http 0.0.0.0:3333 &
 
 # 验证
 5. routinator vrps                                  # 检查 VRP: AS64501,10.0.0.0/16,16,16,ta

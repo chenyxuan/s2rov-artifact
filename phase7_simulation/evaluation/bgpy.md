@@ -208,7 +208,7 @@ The official tests downloaded their default monthly CAIDA serial-2 graph to
 BGPy's platform cache, which is outside `phase7_simulation`:
 
 ```text
-/home/cnic/.cache/bgpy/2026-08-04/
+<home>/.cache/bgpy/2026-08-04/
   CAIDAASGraphCollector_2026.07.25.txt
 ```
 

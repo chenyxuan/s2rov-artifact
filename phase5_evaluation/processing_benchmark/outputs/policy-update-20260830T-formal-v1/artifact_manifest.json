@@ -236,6 +236,6 @@
     "summary.csv": "afe0a52215c1a9f066fc86a5227c2da1fd5361117afe296ee76e56e828639caa",
     "summary.json": "2b9175830cfd4fd22cc150f53f8a6032f53262e430cff45394996f7313f49d6f"
   },
-  "run_dir": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1",
+  "run_dir": "<repo>/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1",
   "schema_version": "same-size-policy-update-v1"
 }

@@ -1808,9 +1808,9 @@
   "roundtrip_identical": true,
   "schema_version": "controlled-policy-processing-v1",
   "serialized_bytes": 3212,
-  "serialized_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/policies/ipv6-subprefixes-256.bin",
+  "serialized_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/policies/ipv6-subprefixes-256.bin",
   "serialized_sha256": "33cfa2c6f94c2efcaa5dc3399ce2a356917d104ab7a70358c29d575f42035030",
-  "spec_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/policies/ipv6-subprefixes-256.json",
+  "spec_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z/policies/ipv6-subprefixes-256.json",
   "subprefix_entries": 256,
   "total_policy_entries": 257
 }

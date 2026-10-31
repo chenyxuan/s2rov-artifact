@@ -1,6 +1,6 @@
 {
   "artifact_hash_mismatches": [],
-  "auditor": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/audit_policy_update_benchmark.py",
+  "auditor": "<repo>/phase5_evaluation/processing_benchmark/audit_policy_update_benchmark.py",
   "auditor_sha256": "44a7418a2246d12b15912b01518c3421d31dcf31658b0442c06b47696f21a380",
   "checks": {
     "accepted_source_metadata_hashes_match": true,
@@ -334,7 +334,7 @@
       "update_ms_q3": 450.8355415
     }
   ],
-  "run_dir": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1",
+  "run_dir": "<repo>/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1",
   "schema_version": "same-size-policy-update-independent-audit-v1",
   "source_hash_mismatches": [],
   "summary_cell_checks": [

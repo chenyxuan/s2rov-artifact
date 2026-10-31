@@ -48,7 +48,7 @@ __rmdir() {
     fi
 }
 
-__prefix=${DESTDIR:-}/home/cnic/stripe-roa-v3/phase7_simulation/.deps-internetsim
+__prefix=${DESTDIR:-}<repo>/phase7_simulation/.deps-internetsim
 
 __rmfile "lib/libbson2.a"
 __rmfile "lib/cmake/bson-2.3.3/bson_static-targets.cmake"

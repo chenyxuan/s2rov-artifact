@@ -401,7 +401,7 @@
     },
     "zero_percent_equals_rov": true
   },
-  "command": "/home/cnic/stripe-roa-v3/phase7_simulation/vendor/bgpy/.venv/bin/python -m __main__ --output-dir phase7_simulation/results/full_graph_gate",
+  "command": "<repo>/phase7_simulation/vendor/bgpy/.venv/bin/python -m __main__ --output-dir phase7_simulation/results/full_graph_gate",
   "completed_trials": 100,
   "deployment": {
     "percentages": [
@@ -1829,7 +1829,7 @@
     "engine_setup_reset_between_trials": true,
     "graph_build_count": 1,
     "input_clique_metadata_available": false,
-    "relationship_input": "/home/cnic/stripe-roa-v3/phase7_simulation/data/inputs/as-rel-fixed.txt"
+    "relationship_input": "<repo>/phase7_simulation/data/inputs/as-rel-fixed.txt"
   },
   "total_wall_seconds": 1107.0154853574932
 }

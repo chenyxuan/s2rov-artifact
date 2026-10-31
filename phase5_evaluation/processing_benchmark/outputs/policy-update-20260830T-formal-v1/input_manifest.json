@@ -1,15 +1,15 @@
 {
   "accepted_source_metadata": {
     "run_config.json": {
-      "path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/run_config.json",
+      "path": "<repo>/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/run_config.json",
       "sha256": "80f66a02b539066337157148c6f14190c943c262957ee4ac4ea56a1c3aa0c009"
     },
     "selection_manifest.json": {
-      "path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/selection_manifest.json",
+      "path": "<repo>/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/selection_manifest.json",
       "sha256": "dfa68a265d9f6846ee876ed48e3c345230b3e6387dcd1e2012647741f9534cb9"
     }
   },
-  "accepted_source_run": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2",
+  "accepted_source_run": "<repo>/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2",
   "created_utc": "2026-08-30T09:00:27.494747Z",
   "families": {
     "4": {
@@ -19,9 +19,9 @@
           "base_prefix": "38.0.0.0/8",
           "closed_serialized_bytes": 22,
           "closed_sha256": "6b638c9fbf15218bc2612b9c340830e88c5c75242bf4071128532924424d93a9",
-          "frozen_closed_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/closed/ipv4-rules-1.bin",
+          "frozen_closed_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/closed/ipv4-rules-1.bin",
           "frozen_closed_sha256": "6b638c9fbf15218bc2612b9c340830e88c5c75242bf4071128532924424d93a9",
-          "frozen_open_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/open/ipv4-rules-1.bin",
+          "frozen_open_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/open/ipv4-rules-1.bin",
           "frozen_open_sha256": "e4138143ed48baa05412cca8338fc16f91e2e20408daea1d97ca8561ec959181",
           "holder_asn": 174,
           "ip_version": 4,
@@ -51,7 +51,7 @@
               }
             }
           ],
-          "source_open_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/policies/ipv4-subprefixes-0.bin",
+          "source_open_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/policies/ipv4-subprefixes-0.bin",
           "source_open_sha256": "e4138143ed48baa05412cca8338fc16f91e2e20408daea1d97ca8561ec959181",
           "total_policy_entries": 1
         },
@@ -59,9 +59,9 @@
           "base_prefix": "38.0.0.0/8",
           "closed_serialized_bytes": 10252,
           "closed_sha256": "68ea071c7c160f98fc8a3759835da64cb7e6c6d0ee0c26fda889bce88b6fdbef",
-          "frozen_closed_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/closed/ipv4-rules-1024.bin",
+          "frozen_closed_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/closed/ipv4-rules-1024.bin",
           "frozen_closed_sha256": "68ea071c7c160f98fc8a3759835da64cb7e6c6d0ee0c26fda889bce88b6fdbef",
-          "frozen_open_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/open/ipv4-rules-1024.bin",
+          "frozen_open_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/open/ipv4-rules-1024.bin",
           "frozen_open_sha256": "b1b6c159ebf85ed0235b17ee36d9a1df229f6bb5e0f67656e3c6a5c526634086",
           "holder_asn": 174,
           "ip_version": 4,
@@ -91,7 +91,7 @@
               }
             }
           ],
-          "source_open_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/policies/ipv4-subprefixes-1023.bin",
+          "source_open_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/policies/ipv4-subprefixes-1023.bin",
           "source_open_sha256": "b1b6c159ebf85ed0235b17ee36d9a1df229f6bb5e0f67656e3c6a5c526634086",
           "total_policy_entries": 1024
         },
@@ -99,9 +99,9 @@
           "base_prefix": "38.0.0.0/8",
           "closed_serialized_bytes": 2572,
           "closed_sha256": "ae1052106f7fe42a4c0fb4e1422690435613eb441159d555a34c5e3cc295f849",
-          "frozen_closed_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/closed/ipv4-rules-256.bin",
+          "frozen_closed_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/closed/ipv4-rules-256.bin",
           "frozen_closed_sha256": "ae1052106f7fe42a4c0fb4e1422690435613eb441159d555a34c5e3cc295f849",
-          "frozen_open_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/open/ipv4-rules-256.bin",
+          "frozen_open_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/open/ipv4-rules-256.bin",
           "frozen_open_sha256": "f06fcbf3847349caea5ef6bfd6a1ea35eabe7eccf549768751b20777e03292c0",
           "holder_asn": 174,
           "ip_version": 4,
@@ -131,7 +131,7 @@
               }
             }
           ],
-          "source_open_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/policies/ipv4-subprefixes-255.bin",
+          "source_open_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/policies/ipv4-subprefixes-255.bin",
           "source_open_sha256": "f06fcbf3847349caea5ef6bfd6a1ea35eabe7eccf549768751b20777e03292c0",
           "total_policy_entries": 256
         },
@@ -139,9 +139,9 @@
           "base_prefix": "38.0.0.0/8",
           "closed_serialized_bytes": 40972,
           "closed_sha256": "0b31cd7c8130723c072cc2ae7aae9d26ca5b0de1d5637eb72bfacd9629581c10",
-          "frozen_closed_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/closed/ipv4-rules-4096.bin",
+          "frozen_closed_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/closed/ipv4-rules-4096.bin",
           "frozen_closed_sha256": "0b31cd7c8130723c072cc2ae7aae9d26ca5b0de1d5637eb72bfacd9629581c10",
-          "frozen_open_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/open/ipv4-rules-4096.bin",
+          "frozen_open_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/open/ipv4-rules-4096.bin",
           "frozen_open_sha256": "7437f100b2cd689c5ea266426bca5e4653d757cf49195ec54af016d087030cf9",
           "holder_asn": 174,
           "ip_version": 4,
@@ -171,7 +171,7 @@
               }
             }
           ],
-          "source_open_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/policies/ipv4-subprefixes-4095.bin",
+          "source_open_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/policies/ipv4-subprefixes-4095.bin",
           "source_open_sha256": "7437f100b2cd689c5ea266426bca5e4653d757cf49195ec54af016d087030cf9",
           "total_policy_entries": 4096
         },
@@ -179,9 +179,9 @@
           "base_prefix": "38.0.0.0/8",
           "closed_serialized_bytes": 652,
           "closed_sha256": "e52417577b6dfeda085e5ccbb516a3102a3abe7d615e57dc096782af08d58013",
-          "frozen_closed_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/closed/ipv4-rules-64.bin",
+          "frozen_closed_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/closed/ipv4-rules-64.bin",
           "frozen_closed_sha256": "e52417577b6dfeda085e5ccbb516a3102a3abe7d615e57dc096782af08d58013",
-          "frozen_open_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/open/ipv4-rules-64.bin",
+          "frozen_open_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/open/ipv4-rules-64.bin",
           "frozen_open_sha256": "1e2963d11daa4b19ca087d5ba6e25e05641eea04eb1be786ee5ef910a73d20d6",
           "holder_asn": 174,
           "ip_version": 4,
@@ -211,18 +211,18 @@
               }
             }
           ],
-          "source_open_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/policies/ipv4-subprefixes-63.bin",
+          "source_open_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/policies/ipv4-subprefixes-63.bin",
           "source_open_sha256": "1e2963d11daa4b19ca087d5ba6e25e05641eea04eb1be786ee5ef910a73d20d6",
           "total_policy_entries": 64
         }
       },
       "query": {
-        "frozen_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/queries/ipv4-queries.json",
+        "frozen_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/queries/ipv4-queries.json",
         "frozen_sha256": "a3300edb1538285603cd04b68696f160db0645f7dfff022dd415f50f88c748b3",
         "probe_index": 0,
         "probe_origin": 25668,
         "probe_prefix": "38.123.248.0/22",
-        "source_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/queries/ipv4-queries.json",
+        "source_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/queries/ipv4-queries.json",
         "source_sha256": "a3300edb1538285603cd04b68696f160db0645f7dfff022dd415f50f88c748b3"
       }
     },
@@ -233,9 +233,9 @@
           "base_prefix": "2409:8000::/20",
           "closed_serialized_bytes": 40,
           "closed_sha256": "5200ded0ddb4b17ed34e64a9221725dec648efc96a3599775c51632f4423842d",
-          "frozen_closed_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/closed/ipv6-rules-1.bin",
+          "frozen_closed_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/closed/ipv6-rules-1.bin",
           "frozen_closed_sha256": "5200ded0ddb4b17ed34e64a9221725dec648efc96a3599775c51632f4423842d",
-          "frozen_open_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/open/ipv6-rules-1.bin",
+          "frozen_open_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/open/ipv6-rules-1.bin",
           "frozen_open_sha256": "66ccba47bd08c504f7c3473788f5077efd21462cb91f145736e0be94b61c5959",
           "holder_asn": 9808,
           "ip_version": 6,
@@ -265,7 +265,7 @@
               }
             }
           ],
-          "source_open_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/policies/ipv6-subprefixes-0.bin",
+          "source_open_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/policies/ipv6-subprefixes-0.bin",
           "source_open_sha256": "66ccba47bd08c504f7c3473788f5077efd21462cb91f145736e0be94b61c5959",
           "total_policy_entries": 1
         },
@@ -273,9 +273,9 @@
           "base_prefix": "2409:8000::/20",
           "closed_serialized_bytes": 12734,
           "closed_sha256": "0fb025aad0ce267d8b34f0a7eeed9fa5749be4b67100e67fd473cfd1ea0fec83",
-          "frozen_closed_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/closed/ipv6-rules-1024.bin",
+          "frozen_closed_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/closed/ipv6-rules-1024.bin",
           "frozen_closed_sha256": "0fb025aad0ce267d8b34f0a7eeed9fa5749be4b67100e67fd473cfd1ea0fec83",
-          "frozen_open_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/open/ipv6-rules-1024.bin",
+          "frozen_open_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/open/ipv6-rules-1024.bin",
           "frozen_open_sha256": "65026f0578b49367ab0e404860bdcef74af66fdf4ca101977b14756a03c61d38",
           "holder_asn": 9808,
           "ip_version": 6,
@@ -305,7 +305,7 @@
               }
             }
           ],
-          "source_open_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/policies/ipv6-subprefixes-1023.bin",
+          "source_open_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/policies/ipv6-subprefixes-1023.bin",
           "source_open_sha256": "65026f0578b49367ab0e404860bdcef74af66fdf4ca101977b14756a03c61d38",
           "total_policy_entries": 1024
         },
@@ -313,9 +313,9 @@
           "base_prefix": "2409:8000::/20",
           "closed_serialized_bytes": 3200,
           "closed_sha256": "f9c1aba4693b62030a29208a0802edd75745a003da1868428762fc6a9ca669c5",
-          "frozen_closed_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/closed/ipv6-rules-256.bin",
+          "frozen_closed_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/closed/ipv6-rules-256.bin",
           "frozen_closed_sha256": "f9c1aba4693b62030a29208a0802edd75745a003da1868428762fc6a9ca669c5",
-          "frozen_open_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/open/ipv6-rules-256.bin",
+          "frozen_open_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/open/ipv6-rules-256.bin",
           "frozen_open_sha256": "2835a847a2ea9386d746232ff77356dbe3d4372e837dfdb707d77bc86315a836",
           "holder_asn": 9808,
           "ip_version": 6,
@@ -345,7 +345,7 @@
               }
             }
           ],
-          "source_open_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/policies/ipv6-subprefixes-255.bin",
+          "source_open_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/policies/ipv6-subprefixes-255.bin",
           "source_open_sha256": "2835a847a2ea9386d746232ff77356dbe3d4372e837dfdb707d77bc86315a836",
           "total_policy_entries": 256
         },
@@ -353,9 +353,9 @@
           "base_prefix": "2409:8000::/20",
           "closed_serialized_bytes": 50892,
           "closed_sha256": "f9e4f44ee8e65384259d374ebaabae7d94a69f69ff232d92012b91f776e4ca5f",
-          "frozen_closed_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/closed/ipv6-rules-4096.bin",
+          "frozen_closed_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/closed/ipv6-rules-4096.bin",
           "frozen_closed_sha256": "f9e4f44ee8e65384259d374ebaabae7d94a69f69ff232d92012b91f776e4ca5f",
-          "frozen_open_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/open/ipv6-rules-4096.bin",
+          "frozen_open_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/open/ipv6-rules-4096.bin",
           "frozen_open_sha256": "4c28cc195fcd39adf27b3617c04ac093f423d5aa802a723b1cf18e55a39adc6c",
           "holder_asn": 9808,
           "ip_version": 6,
@@ -385,7 +385,7 @@
               }
             }
           ],
-          "source_open_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/policies/ipv6-subprefixes-4095.bin",
+          "source_open_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/policies/ipv6-subprefixes-4095.bin",
           "source_open_sha256": "4c28cc195fcd39adf27b3617c04ac093f423d5aa802a723b1cf18e55a39adc6c",
           "total_policy_entries": 4096
         },
@@ -393,9 +393,9 @@
           "base_prefix": "2409:8000::/20",
           "closed_serialized_bytes": 822,
           "closed_sha256": "33e10446eb3e2ec9d932445b35fff128af06531d770a80f4d808ee2a1de59b37",
-          "frozen_closed_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/closed/ipv6-rules-64.bin",
+          "frozen_closed_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/closed/ipv6-rules-64.bin",
           "frozen_closed_sha256": "33e10446eb3e2ec9d932445b35fff128af06531d770a80f4d808ee2a1de59b37",
-          "frozen_open_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/open/ipv6-rules-64.bin",
+          "frozen_open_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/open/ipv6-rules-64.bin",
           "frozen_open_sha256": "1eb4a865300675e6d6ac8be2d404d0b2e72321385538df183c2d526f808f8577",
           "holder_asn": 9808,
           "ip_version": 6,
@@ -425,18 +425,18 @@
               }
             }
           ],
-          "source_open_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/policies/ipv6-subprefixes-63.bin",
+          "source_open_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/policies/ipv6-subprefixes-63.bin",
           "source_open_sha256": "1eb4a865300675e6d6ac8be2d404d0b2e72321385538df183c2d526f808f8577",
           "total_policy_entries": 64
         }
       },
       "query": {
-        "frozen_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/queries/ipv6-queries.json",
+        "frozen_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1/inputs/queries/ipv6-queries.json",
         "frozen_sha256": "a5f77daffd3972f402274b23a57f8063bf36c54649ca70a8442e61bb7555f543",
         "probe_index": 0,
         "probe_origin": 24547,
         "probe_prefix": "2409:8f04:1d00::/40",
-        "source_path": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/queries/ipv6-queries.json",
+        "source_path": "<repo>/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2/queries/ipv6-queries.json",
         "source_sha256": "a5f77daffd3972f402274b23a57f8063bf36c54649ca70a8442e61bb7555f543"
       }
     }

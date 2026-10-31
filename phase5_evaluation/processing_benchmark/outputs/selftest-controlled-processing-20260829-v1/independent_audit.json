@@ -1,5 +1,5 @@
 {
-  "auditor": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/audit_controlled_policy_benchmark.py",
+  "auditor": "<repo>/phase5_evaluation/processing_benchmark/audit_controlled_policy_benchmark.py",
   "auditor_sha256": "b5ca64ae5fe74481c5774600a96a241fbd718b09eb4926bedb4eef4a856014dd",
   "checks": {
     "all_checks_pass": true,
@@ -85,7 +85,7 @@
       "subprefix_entries": 2
     }
   ],
-  "run_dir": "/home/cnic/stripe-roa-v3/phase5_evaluation/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1",
+  "run_dir": "<repo>/phase5_evaluation/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1",
   "schema_version": "controlled-policy-processing-independent-audit-v1",
   "summary_cell_checks": [
     {

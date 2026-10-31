@@ -187,7 +187,7 @@ start_lab() {
         --ip "${KRILL_IPV4}" \
         "${krill_ipv6_args[@]}" \
         -e "KRILL_CLI_TOKEN=${token}" \
-        -v "${VOLUME}:/home/cnic/data" \
+        -v "${VOLUME}:<home>/data" \
         -v "${NGINX_CONFIG}:/etc/nginx/sites-enabled/testbed:ro" \
         -v "${CONFIG_DIR}/krill/krill.conf.template:/opt/daroa/krill.conf.template:ro" \
         -v "${SCRIPT_DIR}/krill-entrypoint.sh:/opt/daroa/krill-entrypoint.sh:ro" \
