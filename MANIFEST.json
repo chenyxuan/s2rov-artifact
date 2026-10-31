@@ -4634,8 +4634,8 @@
   },
   {
    "bundle_path": "verify.py",
-   "bytes": 1457,
-   "sha256": "9504c339a8a583750cb67053ca18d4d5f01ce79e601ce73400c0dd3265f7ff0d",
+   "bytes": 1519,
+   "sha256": "f590f4476666589d76474f7fd0af0e72a4aee83d0e7c5fd7ad7a76eab421ea17",
    "source_path": "tools/artifact_verify.py"
   },
   {
@@ -4666,5 +4666,5 @@
  "generated_by": "tools/prepare_artifact.py",
  "size_cap_bytes": 2097152,
  "source_path": "where the file came from, under the naming used here rather than the authors' internal directory names",
- "total_bytes": 13764260
+ "total_bytes": 13764322
 }

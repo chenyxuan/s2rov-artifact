@@ -33,7 +33,9 @@ def main() -> int:
         relative = path.relative_to(HERE).as_posix()
         if relative == "MANIFEST.json" or relative in listed:
             continue
-        if "__pycache__" in relative or relative.endswith(".pyc"):
+        if relative.startswith(".git/") or "__pycache__" in relative:
+            continue
+        if relative.endswith(".pyc"):
             continue
         bad.append(("unlisted", relative))
 
