@@ -579,8 +579,8 @@ def _default_paths() -> tuple[Path, Path, Path, Path]:
         repository_root
         / "experiments/candidates/allocation_tree/outputs/tables/"
         "allocation_tree_origin_divergence.csv",
-        Path("<home>/AMBER/data/simulation/topo/as-rel-fixed.txt"),
-        Path("<home>/AMBER/data/simulation/deploy/hlavacek_rov.json"),
+        None,
+        None,
         repository_root / "experiments/routing_model/data/inputs",
     )
 
@@ -589,8 +589,18 @@ def build_argument_parser() -> argparse.ArgumentParser:
     default_candidates, default_topology, default_rov, default_output = _default_paths()
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--candidate-csv", type=Path, default=default_candidates)
-    parser.add_argument("--topology-file", type=Path, default=default_topology)
-    parser.add_argument("--rov-json", type=Path, default=default_rov)
+    parser.add_argument(
+        "--topology-file",
+        type=Path,
+        required=True,
+        help="AS-relationship graph, one link per line.",
+    )
+    parser.add_argument(
+        "--rov-json",
+        type=Path,
+        required=True,
+        help="Measured ROV deployment set (Hlavacek et al.), JSON.",
+    )
     parser.add_argument("--output-dir", type=Path, default=default_output)
     return parser
 

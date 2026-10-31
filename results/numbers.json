@@ -1362,7 +1362,7 @@
       "topology_sha256": "fff3684dc18a3411e87f8f7cd06b9cb211322d8f7c4f169781ee664fe78b6d69",
       "rov_set_label": "hlavacek_589",
       "rov_set_label_interpretation": "historical local filename only; not verified source attribution",
-      "rov_set_derivation": "exact local list is reproducible from AMBER commit 92d7f443d367d5b8bc3e79428c3ac3fef1e066ca categories 3/6/7 and its retained topology membership file; the upstream category-table vintage is unreconstructed",
+      "rov_set_derivation": "the exact list is reproducible from the categories 3/6/7 of the published deployment data and its retained topology membership file; the upstream category-table vintage is unreconstructed",
       "topology_upstream_provenance": "unreconstructed; manuscript treats the hash-bound graph as an opaque fixed model input",
       "manuscript_scenario_set_description": "frozen 589-AS conventional-ROV scenario set of unreconstructed upstream provenance",
       "rov_set_sha256": "be4bb53be5001819e2d75ae849ce4d03198fdd1ad19c990c5f6ff13b3c011433",

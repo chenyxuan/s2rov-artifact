@@ -4736,8 +4736,8 @@
   },
   {
    "bundle_path": "experiments/routing_model/campaign/full_graph_gate.py",
-   "bytes": 41722,
-   "sha256": "5859f3b1dc966e4d807185739135aaeb94b89e83ebf1e3950fb06752bf0e51ab",
+   "bytes": 41709,
+   "sha256": "ba854534038251a1f0792f38464f12952e595c96db34c563823887bbdc14f470",
    "source_path": "experiments/routing_model/campaign/full_graph_gate.py"
   },
   {
@@ -4880,8 +4880,8 @@
   },
   {
    "bundle_path": "experiments/routing_model/evaluation/requirements.md",
-   "bytes": 21118,
-   "sha256": "5225a2c68e13c6d80ef4e156a6144309d24a0e90ad57c0467e885de09b55f499",
+   "bytes": 21127,
+   "sha256": "0703cc250e3fc3cb823d72bb3dd38471bccbc4dafdfa5c16980c509633af4ef0",
    "source_path": "experiments/routing_model/evaluation/requirements.md"
   },
   {
@@ -5150,8 +5150,8 @@
   },
   {
    "bundle_path": "experiments/routing_model/scripts/prepare_inputs.py",
-   "bytes": 23029,
-   "sha256": "a5fabe8d34ebe214e0a61b3c530f969f40b8212895b39a39f4fa14dccaf24e59",
+   "bytes": 23090,
+   "sha256": "f255c7335f781e31556e116095cde801971da874a62fa0b24d98e07e1bc105e4",
    "source_path": "experiments/routing_model/scripts/prepare_inputs.py"
   },
   {
@@ -5534,8 +5534,8 @@
   },
   {
    "bundle_path": "results/numbers.json",
-   "bytes": 111351,
-   "sha256": "b674b42c0536eee34580ae400b9b0c673f654d184541df6dd15f5596b171235b",
+   "bytes": 111332,
+   "sha256": "8781b65369a96e830cfc86bc7eeec8fe6a6a84c2823c191f5a463fed0903c000",
    "source_path": "results.facts.json"
   },
   {
@@ -5738,8 +5738,8 @@
   },
   {
    "bundle_path": "REPRODUCE.md",
-   "bytes": 2829,
-   "sha256": "b546c376ffd0d2222a8bf3d46dcadd4e6fc78cce155f0b91005ef251fdd3be8c",
+   "bytes": 2847,
+   "sha256": "21405696d549571e5dc01045c8ebcd4e98860bf541faab9b3d3c74c3a068580e",
    "source_path": "tools/artifact_REPRODUCE.md"
   },
   {
@@ -5788,5 +5788,5 @@
  "generated_by": "tools/prepare_artifact.py",
  "size_cap_bytes": 2097152,
  "source_path": "where the file came from, under the naming used here rather than the authors' internal directory names",
- "total_bytes": 28679329
+ "total_bytes": 28679385
 }

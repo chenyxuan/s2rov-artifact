@@ -45,9 +45,9 @@ that regenerates it. In short:
    `experiments/routing_model/evaluation/bgpy.md`).
 2. Run `experiments/candidates/` to regenerate the candidate set for Table I,
    then `experiments/routing_model/scripts/prepare_inputs.py` to compile the
-   topology and ROV set the routing model reads. Its defaults name a file
-   path from the authors' machine; pass `--topology-file` and `--rov-json`
-   to point it at your own copies.
+   topology and ROV set the routing model reads. Both are required arguments:
+   pass `--topology-file` (AS-relationship graph) and `--rov-json` (the
+   measured ROV deployment set of Hlavacek et al.).
 3. Run the experiments in the order their inputs require: candidates, then
    cost and routing model, then reanalysis and the semantic gate.
 4. The routing model needs its own environment:

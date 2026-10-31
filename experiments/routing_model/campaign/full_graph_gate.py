@@ -291,7 +291,7 @@ def build_fixed_graph(path: Path = TOPOLOGY_PATH) -> ASGraph:
     graph_info = ASGraphInfo(
         customer_provider_links=frozenset(cp_links),
         peer_links=frozenset(peer_links),
-        # The pinned AMBER-format copy has no CAIDA header metadata.  BGPy's
+        # The pinned copy has no CAIDA header metadata.  BGPy's
         # propagation ranks are derived from provider/customer edges and do
         # not require this category label.
         input_clique_asns=frozenset(),

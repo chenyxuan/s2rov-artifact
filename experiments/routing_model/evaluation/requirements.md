@@ -77,12 +77,12 @@ resource gate in Section 11, not merely because its core is compiled.
 | candidate-selection allocation-tree candidates | Supplies observed holder/child prefix lengths and topological origin placements for counterfactual sampling. | A candidate is not evidence of contractual delegation or route legitimacy. |
 | processing-cost semantic cases | Supplies regression vectors for `Explicit`, `Delegated`, `Invalid`, and `NotFound`. | They are not Internet-scale propagation evidence. |
 | prototype Krill--Routinator--FRR prototype | Anchors actions and staged-deployment interpretation. | The simulator must not replace the signed-system experiment. |
-| AMBER topology and Hlavacek ROV list | Supplies an AS graph and a measured ROV deployment set only. | AMBER's exemption/classifier result is not a S2-ROV result. |
+| Topology and Hlavacek ROV list | Supplies an AS graph and a measured ROV deployment set only. | The exemption/classifier result of that earlier evaluation is not a result of this work. |
 
-The AMBER mixed scenario file and existing AMBER output are deliberately
-excluded from the primary experiment.  AMBER's low attack cost depends on a
-classifier with high precision; S2-ROV's open Stripe admits every eligible
-unlisted origin in scope and has no equivalent classifier.
+The mixed-policy scenario file and output of that earlier evaluation are
+deliberately excluded from the primary experiment.  Its low attack cost
+depends on a classifier with high precision; the open Stripe admits every
+eligible unlisted origin in scope and has no equivalent classifier.
 
 ## 4. Simulator semantic contract
 
@@ -260,8 +260,8 @@ the child traffic to the delegate, the simulator cannot claim that the
 delegated service remains reachable.
 
 Do not use "an AS has any route" as the primary reachability metric.  That
-quantity hides aggregate fallback and was a central ambiguity in the AMBER
-hand-written simulator.
+quantity hides aggregate fallback and was a central ambiguity in the
+earlier hand-written simulator.
 
 ### 8.3 Primary paired effects
 
@@ -315,13 +315,13 @@ The run must fail closed if any invariant fails.
 ## 10. Input mapping and provenance
 
 Use copied or normalized immutable inputs under routing-model and record both source
-and derived hashes.  Do not read an unversioned AMBER output directory during
+and derived hashes.  Do not read an unversioned output directory of an earlier run during
 a production run.
 
 | routing-model input | Source | Current source audit |
 |---|---|---|
-| AS relationships | `<home>/AMBER/data/simulation/topo/as-rel-fixed.txt` | 477,782 links, 77,429 linked ASNs; SHA-256 `fff3684dc18a3411e87f8f7cd06b9cb211322d8f7c4f169781ee664fe78b6d69` |
-| Measured ROV set | `<home>/AMBER/data/simulation/deploy/hlavacek_rov.json` | one deployment containing 589 ASes, all present in the topology; SHA-256 `027c2ace3bce39a308e7d09eddcbc30f619b051af7977e9b5ff4a322cc0bbe1f` |
+| AS relationships | the topology you pass as `--topology-file` | 477,782 links, 77,429 linked ASNs; SHA-256 `fff3684dc18a3411e87f8f7cd06b9cb211322d8f7c4f169781ee664fe78b6d69` |
+| Measured ROV set | the ROV list you pass as `--rov-json` | one deployment containing 589 ASes, all present in the topology; SHA-256 `027c2ace3bce39a308e7d09eddcbc30f619b051af7977e9b5ff4a322cc0bbe1f` |
 | Counterfactual holder/child rows | `experiments/candidates/allocation_tree/outputs/tables/allocation_tree_origin_divergence.csv` | 8,830 rows; SHA-256 `b046e31aec24b3c9e48e99f17185be211f0229a898ee00c28e72d10097079b27` |
 | S2-ROV semantic oracle | `implementation/s2rov_codec/scripts/utils/s2rov.py` | SHA-256 `7685f8e5583ef2da851085fe119e365255c590d59d853bd90c2068417cd494dc` |
 | Staged control vectors | `implementation/prototype/e2e/config/staged/cases.json` | SHA-256 `ed0f88dd3d25397be25abd9dbcb121be9487ad76c3072f2b23a327c18e8b3fbb` |
@@ -330,7 +330,7 @@ The relationship file has three fields (`asn1|asn2|relationship`), whereas the
 stock BGPy CAIDA parser expects a source field as well.  Implement a small
 Routing-model constructor that creates BGPy `CustomerProviderLink` and `PeerLink`
 objects directly; do not rewrite the vendor parser or infer missing metadata.
-The AMBER `as-ppdc.txt` file is not required because BGPy can compute degree
+The provider-degree file is not required because BGPy can compute degree
 and customer-cone metadata from the graph.  It may be used only as a
 cross-check.
 
