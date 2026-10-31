@@ -18,10 +18,10 @@ the shipped results can be rebuilt from source.
 | `experiments/candidates/allocation_tree/visibility_experiment/outputs/visibility_candidates.csv` | 12 MB | Candidate table the figure replay reads | `experiments/candidates/allocation_tree/visibility_experiment/scripts/` |
 | `experiments/candidates/allocation_tree/visibility_experiment/input/derived/rrc00_20260624_origins_fast.csv` | 88 MB | Derived origin table for the benchmark | `experiments/candidates/allocation_tree/visibility_experiment/scripts/` |
 | `experiments/cost/outputs/tables/processing_cost_dual_stack.csv` | 4 MB | Dual-stack cost table | `experiments/cost/processing_benchmark/` |
-| `experiments/routing_model/data/inputs/` | 2 MB | Topology, ROV set, and their hashes | `experiments/routing_model/scripts/prepare_inputs.py` |
+| `experiments/routing_model/data/inputs/` | 2 MB | Compiled inputs, regenerable rather than archived (an exception to the size rule below) | `experiments/routing_model/scripts/prepare_inputs.py` |
 | `experiments/routing_model/vendor/` | — | Upstream simulator checkouts | `experiments/routing_model/scripts/fetch_simulators.sh` |
 | `implementation/prototype/e2e/dockerfiles/` | — | Container images and build context | rebuilt by the runners in `implementation/prototype/e2e/` |
-| `implementation/prototype/e2e/Makefile` | — | Run driver for the containerised harness | the commands in `implementation/prototype/e2e/README.md` |
+| `implementation/prototype/e2e/Makefile` | — | Thin wrapper over the scripts | run `implementation/prototype/e2e/scripts/*.sh` directly |
 | `*/outputs/*.pdf`, `*/figures/*.pdf` | — | Rendered figures | `experiments/analysis_scripts/` |
 
 ## Where the full result tables are

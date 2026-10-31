@@ -48,10 +48,11 @@ batches, performs 8,192 warm-up queries per fresh worker, and runs three
 repetitions per condition. Conditions are shuffled reproducibly within each
 repetition and pinned to one CPU where supported.
 
-Each immutable run directory contains per-worker JSON, raw CSVs, transparent
-policy specifications and payloads, checksums, a recomputation audit, a run
-report, and a compact LaTeX table suggestion. The script refuses to overwrite
-an existing run directory.
+Each immutable run directory holds a run report next to the aggregate
+summary, manifest and audit; the per-worker JSON, raw CSVs and policy
+payloads that sit beside them in a local run are excluded here, as the
+exclusion table notes. The script refuses to overwrite an existing run
+directory.
 
 ## Same-size policy update benchmark
 

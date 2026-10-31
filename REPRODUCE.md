@@ -40,13 +40,20 @@ ship. `EXCLUDED-RAW-DATA.md` lists each input with its size and the entry point
 that regenerates it. In short:
 
 1. Fetch the RIPE Database dump and the RIS/RRC00 RIB and bview files for
-   24 June 2026, plus the CAIDA AS-relationship snapshot named in the contracts.
+   24 June 2026, plus the CAIDA AS-relationship snapshot of 1 July 2026
+   (`CAIDAASGraphCollector_2026.07.25.txt`, the name recorded in
+   `experiments/routing_model/evaluation/bgpy.md`).
 2. Run `experiments/candidates/` to regenerate the candidate set for Table I.
-3. Run the experiments in the order listed in `README.md`.
+3. Run the experiments in the order their inputs require: candidates, then
+   cost and routing model, then reanalysis and the semantic gate.
 4. The routing model needs its own environment:
 
    ```bash
    cd experiments/routing_model
    python3 -m venv .venv && . .venv/bin/activate
-   pip install -r requirements-bgpy.txt
+   pip install -r requirements-bgpy.lock.txt
    ```
+
+   The lock file, not `requirements-bgpy.txt`, is what the runner accepts;
+   it verifies every pin.
+

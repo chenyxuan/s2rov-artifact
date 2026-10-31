@@ -78,9 +78,11 @@ the result files refer to them. A few recur:
 | `q2-aggregate-audit/v1` | schema tag on the audit records |
 | `marker-final-v1` | the processing-cost run reported in the paper; siblings under the same directory are earlier attempts kept for audit |
 
-A directory named `outputs/<label>/` is one run of that experiment. Where a
-document cites a file that is not present, it is either a run output or one of
-the excluded inputs in `EXCLUDED-RAW-DATA.md`.
+A directory under `outputs/` is one run of that experiment, named with its run
+id. The documents were written against the full working tree, so where one
+names a file that is absent here, it is a run output that was not shipped or
+an input listed in `EXCLUDED-RAW-DATA.md`; those two are the complete set, and
+`MANIFEST.json` settles any doubt about what the bundle contains.
 
 ## License and data terms
 

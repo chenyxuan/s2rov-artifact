@@ -11,8 +11,9 @@ The selected simulator is **BGPy 13.0.10**.  InternetSim was also downloaded,
 built, and evaluated, but its public artifact did not complete its official
 example on this host and its ROV model lacks covering-ROA and `maxLength`
 semantics.  Detailed evidence is in `evaluation/bgpy.md` and
-`evaluation/internetsim.md`; exact upstream pins are in
-`third_party.lock.json`.
+`evaluation/internetsim.md`; the pinned versions are in
+`requirements-bgpy.lock.txt`, and the simulator trees themselves are
+fetched by `scripts/fetch_simulators.sh`.
 
 ## Layout
 

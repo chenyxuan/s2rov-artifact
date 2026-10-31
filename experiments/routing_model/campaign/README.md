@@ -169,8 +169,9 @@ $PYTHON -m experiments.routing_model.campaign.paper_campaign run \
 ```
 
 The frozen 36,800-trial production campaign completed without retry or
-unresolved failure.  Its checkpoint, final report, verified analysis manifest,
-and compact cell summaries are retained under `results/paper_campaign/`; the
+unresolved failure.  Its final report is retained under `results/paper_campaign/` and its
+analysis manifest and cell summaries under
+`results/tables/routing_model/results/paper_campaign/`; the
 append-only raw rows remain a local reproducibility artifact identified by the
 hashes in those records.
 

@@ -13,4 +13,4 @@ They are not bundled; `EXCLUDED-RAW-DATA.md` names each one and the entry point
 that fetches it. The derived candidate table is archived under
 `results/tables/candidates/`.
 
-Entry point: `allocation_tree/run_analysis.py`.
+Entry point: the numbered scripts in `allocation_tree/scripts/`, in order.

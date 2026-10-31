@@ -3,8 +3,8 @@
 This package preserves the historical E1a V3 gate. It compares an independent
 oracle with the versioned implementation snapshot in `frozen_v3/`,
 its canonical encoder/decoder, faithful conventional/exact/wildcard baselines,
-and an independent pure snapshot lifecycle oracle. V1 and V2 are retained as
-diagnostic audit history; V3 is the accepted contract.
+and an independent pure snapshot lifecycle oracle. V3 is the accepted contract; V1 and V2 were diagnostic
+audit history and are not part of this bundle.
 
 V3 models the archived longest-prefix rule profile and is not a conformance
 claim for the current conventional-ROV-first OpenScope profile. Current profile

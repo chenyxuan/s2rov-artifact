@@ -12,7 +12,7 @@ export PYTHONPATH="$PWD/experiments/routing_model/vendor/bgpy:$PWD"
 export ATTACK_REACHABILITY_PYTHON="$PWD/experiments/routing_model/.venv-bgpy/bin/python"
 
 "$ATTACK_REACHABILITY_PYTHON" -m pytest -q experiments/attack_reachability/tests
-"$ATTACK_REACHABILITY_PYTHON" -m ruff check attack_reachability
+"$ATTACK_REACHABILITY_PYTHON" -m ruff check experiments/attack_reachability
 
 "$ATTACK_REACHABILITY_PYTHON" -m experiments.attack_reachability.runner plan \
   --output-dir experiments/attack_reachability/results

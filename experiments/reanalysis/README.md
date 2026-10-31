@@ -16,11 +16,12 @@ python experiments/reanalysis/reanalyze.py
 
 The script verifies 200 unique units, 50 units per frozen stratum, stable unit
 metadata across cells, constant replicate weights, and numerical identity with
-the frozen routing-model/8 point estimates. It writes:
-
-- `results/competition_cells.csv` (48 current-manuscript routing-model cells),
-- `results/sibling_cells.csv` (two current-manuscript attack-reachability endpoints), and
-- `results/summary.json` (input/code hashes, audits, and headline values).
+the frozen routing-model/8 point estimates. It writes `results/competition_cells.csv` (48 routing-model cells),
+`results/sibling_cells.csv` (two attack-reachability endpoints) and
+`results/summary.json` (input/code hashes, audits, and headline values).
+Those are run outputs and are not bundled; the archived copy of the summary
+is `results/tables/reanalysis/results/summary.json`. The four inputs it reads
+live under `results/tables/` for the same reason.
 
 See `EXPERIMENT_CONTRACT.md` for the estimand and claim boundary.
 

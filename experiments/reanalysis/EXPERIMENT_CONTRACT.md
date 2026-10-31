@@ -12,10 +12,14 @@ all-AS full-upgrade route and destination endpoints.
 
 ## Inputs
 
-- `experiments/routing_model/results/paper_campaign/analysis/holder_contrasts.jsonl`
-- `experiments/routing_model/results/paper_campaign/analysis/raw_cell_summary.csv`
-- `experiments/attack_reachability/results/analysis/holder_contrasts.jsonl`
-- `experiments/attack_reachability/results/analysis/summary.json`
+Four tables, none of them shipped: they are run artefacts. The archived copies
+are under `results/tables/`, keeping the path each had when written:
+
+- `results/tables/routing_model/results/paper_campaign/analysis/raw_cell_summary.csv`
+- `results/tables/attack_reachability/results/analysis/summary.json`
+
+`holder_contrasts.jsonl` is per-trial and excluded by size, as
+`EXCLUDED-RAW-DATA.md` records.
 
 The output records the SHA-256 digest of each input. Frozen routing-model and attack-reachability
 artifacts are read-only.
