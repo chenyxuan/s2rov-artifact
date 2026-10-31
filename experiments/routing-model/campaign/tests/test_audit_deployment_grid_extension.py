@@ -255,7 +255,7 @@ def _make_fixture(tmp_path: Path) -> tuple[FixturePaths, audit.AuditContract]:
             "fixed_rov_count": 4,
             "order_sha256": order["order_sha256"],
             "deployment_set_sha256": _set_sha256(selected),
-            "policy_assignment_counts": {"bgp": 6, "rov": 4 - count, "darov": count},
+            "policy_assignment_counts": {"bgp": 6, "rov": 4 - count, "s2rov": count},
             "outcomes": _outcomes(10, 4),
             "partition_checks": flags,
             "attempt": 1,

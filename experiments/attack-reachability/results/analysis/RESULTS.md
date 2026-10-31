@@ -14,7 +14,7 @@
 - Fixed measured ROV set: 589 ASes
 - Physical trials: 600; retries: 0
 
-At 100% of the fixed measured ROV set, open DA-ROV increased design-weighted
+At 100% of the fixed measured ROV set, open S2-ROV increased design-weighted
 sibling-prefix attacker route selection by 46.45
 percentage points (pointwise 95% interval
 [43.23, 49.69])

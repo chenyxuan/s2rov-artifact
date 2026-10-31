@@ -691,7 +691,7 @@ def run_extension_trial(
         raise GridExtensionError("extension competition lane is not uniform")
     pair = paper._unit_pair(unit, trial.attacker_class)
     da_asns = _resolve_da_asns(trial, rov_asns, orders)
-    paper.DAROV.configure(paper.make_open_policy(pair))
+    paper.S2ROV.configure(paper.make_open_policy(pair))
     spec = paper.PaperExecutionSpec(
         pair=pair,
         lane=trial.lane,
@@ -989,7 +989,7 @@ def validate_success_result_row(
     expected_assignments = {
         "bgp": validation.topology_asns - len(validation.fixed_rov_asns),
         "rov": len(validation.fixed_rov_asns) - count,
-        "darov": count,
+        "s2rov": count,
     }
     _require_exact(
         row,

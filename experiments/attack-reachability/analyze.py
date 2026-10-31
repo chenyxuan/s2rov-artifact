@@ -481,7 +481,7 @@ def results_markdown(
 - Fixed measured ROV set: {manifest["topology"]["fixed_rov_count"]} ASes
 - Physical trials: {EXPECTED_TRIALS}; retries: 0
 
-At 100% of the fixed measured ROV set, open DA-ROV increased design-weighted
+At 100% of the fixed measured ROV set, open S2-ROV increased design-weighted
 sibling-prefix attacker route selection by {pp(route["paired_delta_design_weighted_mean"]):.2f}
 percentage points (pointwise 95% interval
 [{pp(route["pointwise_ci95_lower"]):.2f}, {pp(route["pointwise_ci95_upper"]):.2f}])

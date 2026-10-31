@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Evaluate the DA-ROV reference encoder and provenance-aware validator.
+"""Evaluate the S2-ROV reference encoder and provenance-aware validator.
 
 The experiment checks policy outcomes across a serialization round trip and
 measures indexed validation cost as the number of explicit Stripes grows. The

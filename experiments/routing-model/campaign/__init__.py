@@ -1,1 +1,1 @@
-"""Internet-scale DA-ROV experiments built on the pinned BGPy engine."""
+"""Internet-scale S2-ROV experiments built on the pinned BGPy engine."""

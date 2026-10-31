@@ -1,9 +1,9 @@
 # Full-graph BGPy resource gate
 
 This directory implements the pre-campaign Internet-scale gate requested for
-the DA-ROV reachability/exposure study.  It uses the pinned BGPy 13.0.10 clone,
+the S2-ROV reachability/exposure study.  It uses the pinned BGPy 13.0.10 clone,
 the prepared fixed relationship graph, the measured 589-AS ROV baseline, and
-the project-owned Phase-4-backed `DAROV` policy.  It does not modify either
+the project-owned Phase-4-backed `S2ROV` policy.  It does not modify either
 vendored simulator.
 
 ## Scope and interpretation

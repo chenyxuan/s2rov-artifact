@@ -177,7 +177,7 @@ def main() -> int:
             "",
             "## Route decisions",
             "",
-            "| Case | Prefix | Origin | RFC 6811 baseline | DA-ROV |",
+            "| Case | Prefix | Origin | RFC 6811 baseline | S2-ROV |",
             "|---|---|---:|---|---|",
         ]
     )

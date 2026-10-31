@@ -64,6 +64,10 @@ machine-specific paths. That rewriting changes file digests, so the SHA-256
 values frozen inside the experiment contracts no longer match; verify the
 bundle through `MANIFEST.json` instead.
 
+The scheme was developed under the internal codename DA-ROV before the paper
+settled on S²-ROV. The codename is rewritten throughout the bundle, so every
+class, module and result key here uses the published name.
+
 ## License and data terms
 
 Code, scripts, configurations and derived figure source data are released under

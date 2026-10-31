@@ -13,7 +13,7 @@
 ## 1. Research question and estimand
 
 The campaign estimates how upgrading the fixed measured set of 589 ROV ASes
-to DA-ROV changes two paired outcomes on one fixed AS-relationship graph:
+to S2-ROV changes two paired outcomes on one fixed AS-relationship graph:
 
 1. delivery to a hypothetical intended child origin; and
 2. delivery to an eligible but unlisted origin announcing the same child
@@ -124,7 +124,7 @@ are not repeated as 36,800 population trials.
 Phase 6 installs different local actions for `Explicit`, `Delegated`, and
 `NotFound`, whereas the Phase 7 adapter models admission followed by ordinary
 Gao--Rexford selection.  This does not create an unmodeled treatment in the
-declared matrix: B1/B2 do not run DA-ROV; D1 has only one child origin; both
+declared matrix: B1/B2 do not run S2-ROV; D1 has only one child origin; both
 competing A1 child origins are `Delegated`; and the `Explicit` holder
 aggregate is a different prefix.  The primary outcomes are therefore
 invariant to action ordering.  Phase 7 must not claim an Internet-scale effect
@@ -192,7 +192,7 @@ tested, use holder-level curve AUC contrasts and Holm correction.
 
 Use persistent process workers.  Each worker builds one private AS graph and
 engine because the BGPy engine contains weak references and is not picklable;
-it then runs trials serially with `DAROV.configure()` before every setup.
+it then runs trials serially with `S2ROV.configure()` before every setup.
 Threads are prohibited because the DA oracle is held in a class variable.
 
 Start with 16 workers and eight-trial atomic chunks.  Use append-only or

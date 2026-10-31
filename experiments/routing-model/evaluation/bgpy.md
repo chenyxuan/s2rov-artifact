@@ -1,4 +1,4 @@
-# BGPy evaluation for DA-ROV Internet-scale experiments
+# BGPy evaluation for S2-ROV Internet-scale experiments
 
 ## Material Passport
 
@@ -13,21 +13,21 @@
 - **Pinned distribution:** `bgpy-pkg==13.0.10`
 - **Environment:** Ubuntu/aarch64, CPython 3.12.3, 32 logical CPUs, 62 GiB RAM
 - **Not evaluated:** long campaign throughput, withdrawal/convergence dynamics,
-  or the final DA-ROV adapter (none has yet been written)
+  or the final S2-ROV adapter (none has yet been written)
 - **Upstream tree modified:** no tracked upstream file (`git status --porcelain`
   is empty); the local build/test commands created ignored `.venv`, `build`,
   `bgpy_pkg.egg-info`, and pytest artifacts inside the clone
 
 ## Bottom line
 
-**BGPy is a strong fit for the next DA-ROV experiment and should remain the
+**BGPy is a strong fit for the next S2-ROV experiment and should remain the
 leading candidate for the steady-state reachability/exposure study.** It has
 native CAIDA AS-relationship ingestion, explicit Gao--Rexford propagation,
 exact-prefix multi-origin competition, built-in ROV, per-AS policy assignment,
 fixed or randomized incremental adoption, per-AS Loc-RIB access, control/data
 plane analyzers, multiprocessing, and a system-test framework.
 
-DA-ROV should be added as a project-owned adapter outside `vendor/bgpy`; the
+S2-ROV should be added as a project-owned adapter outside `vendor/bgpy`; the
 upstream clone need not be patched. A minimal static adapter is modest. A
 faithful implementation of all four states plus the prototype's
 `Explicit > Delegated > NotFound` local-preference ordering is a medium-sized
@@ -257,7 +257,7 @@ Elapsed time was 29.16 s with customer/provider cone storage disabled.
 | Parallel execution | **Native** | Trials are split across processes and each process constructs its own engine. Fix `parse_cpus`, seed, topology, and scenario ordering for repeatability. |
 | Dynamics | **Limited for this study** | `BGPFull` models RIBs-in/out and withdrawals, but BGPy is primarily a round-based steady-state simulator, not a packet-level or wall-clock BGP convergence emulator. This is acceptable for the proposed reachability/exposure experiment. |
 
-## Mapping DA-ROV onto BGPy
+## Mapping S2-ROV onto BGPy
 
 ### Recommended policy layout
 
@@ -265,11 +265,11 @@ Use three policy classes in one graph:
 
 1. `BGP` for ASes without ROV;
 2. stock `ROV` for measured ROV ASes that have not upgraded; and
-3. project-owned `DAROV` for the selected DA-aware subset.
+3. project-owned `S2ROV` for the selected DA-aware subset.
 
 `ScenarioConfig.hardcoded_base_asn_cls_dict` can map all 589 measured ROV ASes
 to stock `ROV`. `override_adopting_asns` then names the subset upgraded to
-`DAROV`; the scenario's lookup order gives adopters precedence over the base
+`S2ROV`; the scenario's lookup order gives adopters precedence over the base
 mapping. This directly represents incremental deployment without modifying the
 CAIDA graph or upstream code.
 
@@ -284,7 +284,7 @@ A static reachability/exposure experiment needs:
 
 - an immutable DA policy index backed by the existing phase-4 reference
   validator;
-- `DAROV._valid_ann`, accepting `Explicit`, `Delegated`, and `NotFound` under
+- `S2ROV._valid_ann`, accepting `Explicit`, `Delegated`, and `NotFound` under
   the chosen enforcement profile and rejecting `Invalid`;
 - paired legitimate-delegate and eligible-unlisted-origin scenarios;
 - a custom analyzer/writer that records per trial, per AS, selected prefix,

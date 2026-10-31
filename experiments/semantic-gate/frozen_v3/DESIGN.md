@@ -91,7 +91,7 @@ For compatibility experiments, the reference code may project:
 - `(q, a, |q|)` for each explicitly named origin in each Stripe.
 
 Open intent itself emits no VRP.  Every projected Valid route must be
-`Explicit` under DA-ROV.  The projection is incomplete by design: it does not
+`Explicit` under S2-ROV.  The projection is incomplete by design: it does not
 transport `Delegated` provenance.
 
 Using the DA policy's descendant `max_length` for the base VRP is unsafe for

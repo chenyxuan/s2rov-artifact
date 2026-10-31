@@ -34,7 +34,7 @@ from phase7_simulation.campaign.ipv6_sensitivity import (
     load_topology_degrees,
     plan_campaign,
 )
-from phase7_simulation.darov.pilot import ROV_ASNS, build_pilot_graph
+from phase7_simulation.s2rov.pilot import ROV_ASNS, build_pilot_graph
 
 
 def _planned_units() -> tuple[tuple[IPv6Unit, ...], dict[str, object]]:
@@ -158,7 +158,7 @@ def test_ipv6_open_scope_matches_controls_on_small_bgpy_graph() -> None:
     assert d0["outcomes"] == b1_intended["outcomes"]
     assert d100["outcomes"] == b2_intended["outcomes"]
     assert a0["outcomes"] == b1_competition["outcomes"]
-    assert d100["policy_assignment_counts"]["darov"] == len(ROV_ASNS)
+    assert d100["policy_assignment_counts"]["s2rov"] == len(ROV_ASNS)
 
 
 def test_in_memory_manifest_is_bound_to_ipv6_inputs() -> None:

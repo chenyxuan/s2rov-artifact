@@ -12,7 +12,7 @@ DA-aware local-API enforcement. Native four-state RTR remains deferred.
 
 | Level | Capability | Evidence | Status |
 |---|---|---|:---:|
-| L0 | DA-ROV encoder and four-state reference validator | Phase 4/5 Python tests | Done |
+| L0 | S2-ROV encoder and four-state reference validator | Phase 4/5 Python tests | Done |
 | L1 | Krill publishes a conventional ROA; Routinator reproduces RFC 6811 conflict | Historical 2026-07-06 commands and notes | Previously demonstrated |
 | L2 | Routinator exports VRPs over RTR to FRR; FRR classifies real BGP updates | `e2e/outputs/latest/baseline/` | Done |
 | L3 | Live FRR routes are evaluated and enforced through the DA local API | `e2e/outputs/latest/da/` | Done |
@@ -66,7 +66,7 @@ Minimum acceptance criteria:
 
 ### Completed beyond shadow mode
 
-The **DA-ROV local-API process** first audits live FRR input and then installs
+The **S2-ROV local-API process** first audits live FRR input and then installs
 observable route maps:
 
 ```text
@@ -76,7 +76,7 @@ validated DA policy + FRR Adj-RIB-In → Explicit/Delegated/Invalid/NotFound
 ```
 
 The passing run shows the delegated route is Invalid in stock FRR but
-`Delegated` under DA-ROV, while the competing aggregate and private origin are
+`Delegated` under S2-ROV, while the competing aggregate and private origin are
 rejected. It also includes the required public-AS negative control, which is
 `Delegated` because open policy cannot authenticate an unknown relationship.
 
@@ -129,7 +129,7 @@ reproduce the RFC 6811 conflict. After L2 and L3 pass, it may additionally
 claim:
 
 > A containerized Krill–Routinator–FRR testbed reproduces the conventional
-> router decision, while a non-enforcing DA-ROV sidecar reclassifies the
+> router decision, while a non-enforcing S2-ROV sidecar reclassifies the
 > intended delegated route without accepting the aggregate hijack.
 
 It must not claim native DA-aware RTR or router enforcement unless L4 is

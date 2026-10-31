@@ -58,11 +58,11 @@ three relationship-oriented labels.  This is a property of the supplied
 corpus and rule, not an estimate that 65.6% of all RPKI-Invalid routes are
 legitimate or “uncorrectable.”
 
-## 4. Use in the DA-ROV Paper
+## 4. Use in the S2-ROV Paper
 
 The corpus provides context that delegation, transit, and leasing are
 operationally relevant to Invalid-route diagnosis.  It does not supply the
-holder authorization needed by DA-ROV.  Accordingly, the manuscript cites the
+holder authorization needed by S2-ROV.  Accordingly, the manuscript cites the
 NDSS 2026 study as related empirical work but does not present this
 reclassification as our main contribution or use its 65.6% value as
 authorization ground truth.

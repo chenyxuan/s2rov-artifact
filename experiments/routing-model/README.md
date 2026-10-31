@@ -1,6 +1,6 @@
 # Phase 7: Internet-scale reachability and exposure
 
-Phase 7 evaluates the steady-state routing consequence of DA-ROV on a fixed
+Phase 7 evaluates the steady-state routing consequence of S2-ROV on a fixed
 AS-level topology.  It measures two sides of the same open policy:
 
 1. delivery to an intended, unlisted child origin; and
@@ -19,7 +19,7 @@ semantics.  Detailed evidence is in `evaluation/bgpy.md` and
 - `vendor/`: local, ignored upstream checkouts of BGPy and InternetSim;
 - `data/inputs/`: immutable topology, measured-ROV set, mechanically filtered
   origin-divergence candidates, and hashes;
-- `darov/`: the project-owned BGPy policy adapter and deterministic 11-AS
+- `s2rov/`: the project-owned BGPy policy adapter and deterministic 11-AS
   semantic pilot;
 - `campaign/`: the fixed full-graph resource gate and its tests;
 - `evaluation/`: simulator reports and the experiment contract; and
@@ -47,12 +47,12 @@ python3 -m unittest discover -s phase7_simulation/tests -v
 export PYTHONPATH="$PWD/phase7_simulation/vendor/bgpy:$PWD"
 PYTHON=phase7_simulation/.venv-bgpy/bin/python
 
-$PYTHON -m pytest -q phase7_simulation/darov/tests
-$PYTHON -m phase7_simulation.darov.pilot \
+$PYTHON -m pytest -q phase7_simulation/s2rov/tests
+$PYTHON -m phase7_simulation.s2rov.pilot \
   --output phase7_simulation/results/pilot/pilot.json
 
 $PYTHON -m pytest -q phase7_simulation/campaign/tests
-$PYTHON -m ruff check phase7_simulation/darov \
+$PYTHON -m ruff check phase7_simulation/s2rov \
   phase7_simulation/campaign phase7_simulation/scripts phase7_simulation/tests
 ```
 

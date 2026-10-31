@@ -7,7 +7,7 @@
 
 The input CSVs and cause-evidence columns are from the artifact accompanying
 Li, Wan, and Chung (NDSS 2026).  This phase does not relabel their collection
-as a new DA-ROV dataset.  It summarizes the supplied occurrence rows and tests
+as a new S2-ROV dataset.  It summarizes the supplied occurrence rows and tests
 how much of the corpus carries relationship-oriented evidence.
 
 Allowed claims:

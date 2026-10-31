@@ -16,7 +16,7 @@ Overall result: **PASS**
 
 ## Route decisions
 
-| Case | Prefix | Origin | RFC 6811 baseline | DA-ROV |
+| Case | Prefix | Origin | RFC 6811 baseline | S2-ROV |
 |---|---|---:|---|---|
 | holder_aggregate | `10.0.0.0/16` | AS64501 | Valid | Explicit |
 | listed_customer | `10.0.1.0/24` | AS8075 | Invalid | Explicit |

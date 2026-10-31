@@ -2,7 +2,7 @@
 
 **Version:** 2.0
 **Re-audited:** 2026-07-29
-**Status:** aligned with the four-state DA-ROV manuscript
+**Status:** aligned with the four-state S2-ROV manuscript
 
 ## 1. ROV Preliminaries
 

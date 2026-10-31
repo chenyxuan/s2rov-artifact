@@ -138,7 +138,7 @@ For compatibility experiments, the reference code may project:
 - `(q, a, |q|)` for each explicitly named origin in a non-base Stripe.
 
 An OpenScope marker itself emits no ROA entry.  Every projected Valid route must be
-`Explicit` under DA-ROV.  Every non-base named origin is projected at its exact
+`Explicit` under S2-ROV.  Every non-base named origin is projected at its exact
 record prefix.  The projection does not transport `OpenScope` provenance.
 
 ## 6. Merging

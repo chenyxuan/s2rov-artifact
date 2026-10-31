@@ -123,7 +123,7 @@ def test_scientific_digest_ignores_order_and_resource_metadata(
         "leaf_prefix": units[0].leaf_prefix,
         "sibling_prefix": units[0].sibling_prefix,
         "policy_max_length": 24,
-        "policy_assignment_counts": {"bgp": 1, "rov": 1, "darov": 0},
+        "policy_assignment_counts": {"bgp": 1, "rov": 1, "s2rov": 0},
         "outcomes": {},
         "partition_checks": {},
         "elapsed_seconds": 1,

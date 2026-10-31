@@ -196,8 +196,8 @@ def test_reused_engine_zero_percent_is_exact_rov_and_partitions_complete() -> No
     assert result_fingerprint(competition_baseline) == result_fingerprint(
         competition_zero
     )
-    assert baseline["policy_assignment_counts"] == {"bgp": 7, "rov": 4, "darov": 0}
-    assert mixed["policy_assignment_counts"] == {"bgp": 7, "rov": 0, "darov": 4}
+    assert baseline["policy_assignment_counts"] == {"bgp": 7, "rov": 4, "s2rov": 0}
+    assert mixed["policy_assignment_counts"] == {"bgp": 7, "rov": 0, "s2rov": 4}
     for row in (
         baseline,
         staged_zero,

@@ -1,4 +1,4 @@
-# Phase 6: DA-ROV System Prototype
+# Phase 6: S2-ROV System Prototype
 
 **Date:** 2026-07-29
 **Status:** Conventional Krill–Routinator–RTR–FRR baseline and DA-aware
@@ -84,7 +84,7 @@ The passing 2026-07-29 run is under `e2e/outputs/latest/`.
 ```
 Phase 1 ──→ Phase 2 ──→ Phase 3 ──→ Phase 4 ──→ Phase 5
   │           │           │           │           │
-  Empirical   Formal      DA-ROV      DA-ROA      Evaluation
+  Empirical   Formal      S2-ROV      DA-ROA      Evaluation
   evidence    proof       semantics   encoding    (synthetic)
                                                      │
 Phase 6 ←─────────────────────────────────────────────┘
@@ -115,7 +115,7 @@ Phase 6 ←───────────────────────
 
 ### 5.3 Semantic Conflict Reproduced
 
-The last test case (`10.0.1.0/24 → AS64502`) reproduces the exact scenario DA-ROV is designed to fix:
+The last test case (`10.0.1.0/24 → AS64502`) reproduces the exact scenario S2-ROV is designed to fix:
 
 1. AS64501 holds `10.0.0.0/16` and issues ROA `{10.0.0.0/16, AS64501}`
 2. AS64502 is a legitimate customer delegated `10.0.1.0/24`

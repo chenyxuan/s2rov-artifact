@@ -1113,9 +1113,9 @@
       "physical_lines": 477782,
       "sha256": "fff3684dc18a3411e87f8f7cd06b9cb211322d8f7c4f169781ee664fe78b6d69"
     },
-    "darov_adapter": {
+    "s2rov_adapter": {
       "bytes": 2243,
-      "path": "phase7_simulation/darov/policy.py",
+      "path": "phase7_simulation/s2rov/policy.py",
       "physical_lines": 61,
       "sha256": "081a1365e9a5ca84d2196b71ed494df4c40ee08f66f97e946a4c0aa87025c5e3"
     },

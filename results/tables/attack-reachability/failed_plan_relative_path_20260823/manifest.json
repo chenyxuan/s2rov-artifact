@@ -5,7 +5,7 @@
       "dependency_lock": "63a6b65d21459a5ef298b99286939a2095fd3d91c5d9299a956f50160662b665",
       "phase4_as_set": "4366122a6f825dca19cf9c2f99bb08a1ae8185c29baa7fd18d1444c7c9d314fc",
       "phase4_daroa_oracle": "7685f8e5583ef2da851085fe119e365255c590d59d853bd90c2068417cd494dc",
-      "phase7_darov_policy": "081a1365e9a5ca84d2196b71ed494df4c40ee08f66f97e946a4c0aa87025c5e3",
+      "phase7_s2rov_policy": "081a1365e9a5ca84d2196b71ed494df4c40ee08f66f97e946a4c0aa87025c5e3",
       "phase7_full_graph_gate": "bedde6268d37e55c0ab01652a8512ffb62434f28908cccf856ae57e197f61444",
       "phase7_paper_campaign": "9500cd43d7ee6a409c9d0dc83e41fc44dd85311c5b0dfd69f89ac1405d98ed50",
       "phase7_parent_manifest": "a674b87afd90716521f19673c4ddbd1153c1b911ec5021a99e0eabe579bcbeae",
@@ -115,7 +115,7 @@
     ],
     "physical_trials": 600,
     "physical_trials_per_holder": 3,
-    "research_question": "How does upgrading the fixed measured ROV set from conventional ROV to open DA-ROV change route exposure for a deterministic same-length sibling prefix?",
+    "research_question": "How does upgrading the fixed measured ROV set from conventional ROV to open S2-ROV change route exposure for a deterministic same-length sibling prefix?",
     "sample_holders": 200,
     "sibling_derivation": "the other child of leaf_prefix.supernet(prefixlen_diff=1), at the same prefix length"
   },

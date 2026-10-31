@@ -4,7 +4,7 @@
     "files": {
       "as_rel_fixed": "fff3684dc18a3411e87f8f7cd06b9cb211322d8f7c4f169781ee664fe78b6d69",
       "campaign_runner": "bedde6268d37e55c0ab01652a8512ffb62434f28908cccf856ae57e197f61444",
-      "darov_policy": "081a1365e9a5ca84d2196b71ed494df4c40ee08f66f97e946a4c0aa87025c5e3",
+      "s2rov_policy": "081a1365e9a5ca84d2196b71ed494df4c40ee08f66f97e946a4c0aa87025c5e3",
       "dependency_lock": "63a6b65d21459a5ef298b99286939a2095fd3d91c5d9299a956f50160662b665",
       "deployment_grid_extension_contract": "e1573e9e9c9196b769087db43fe4d2e801fc9700fd3419887e3753757887829c",
       "deployment_grid_extension_runner": "8f5d5567427c4db214d77f375807179608d114a03c39cde6eea55b00db6942fb",

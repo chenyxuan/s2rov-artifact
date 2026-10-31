@@ -9,9 +9,9 @@ external validity for real business delegations or Internet traffic.
 
 ## Executive result
 
-The 36,800-trial campaign does not support a one-sided claim that open DA-ROV
+The 36,800-trial campaign does not support a one-sided claim that open S2-ROV
 both restores delegated reachability and preserves origin-specific security.
-Under random incremental deployment, open DA-ROV progressively restores
+Under random incremental deployment, open S2-ROV progressively restores
 delivery to the hypothetical delegate, but from 5% deployment onward it also
 produces a statistically clear increase in delivery to an eligible, unlisted
 attacker. The supported result is therefore a **reachability--exposure

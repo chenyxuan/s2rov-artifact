@@ -4,7 +4,7 @@
 
 - **Mode:** experiment planning and implementation-readiness audit
 - **Research question:** How much intended delegated-destination delivery does
-  DA-ROV restore as measured ROV networks upgrade, and how much additional
+  S2-ROV restore as measured ROV networks upgrade, and how much additional
   traffic attraction does the same open scope permit for an unlisted eligible
   origin?
 - **Local evidence inspected:** Phases 1--6, the AMBER topology and measured
@@ -15,7 +15,7 @@
   claimed by this document.
 - **Scope:** this document specifies and selects the simulator.  It does not
   modify the manuscript and does not treat AMBER's classifier output as a
-  DA-ROV result.
+  S2-ROV result.
 
 ## 1. Decision
 
@@ -39,7 +39,7 @@ The decision is semantic, not stylistic:
    query, but it does not provide a bulk destination-outcome tracer, paired
    trial framework, confidence-interval pipeline, or regression suite.
 
-Do not patch either vendored tree for the primary implementation.  Put DA-ROV
+Do not patch either vendored tree for the primary implementation.  Put S2-ROV
 policy, scenario, analyzer, input-adapter, and runner code under Phase 7 and
 import the pinned BGPy package.
 
@@ -53,7 +53,7 @@ The inspected local pins are:
   `a96b15716f579658b9d745c8abe1805dd869e375`, MIT license.  The public
   repository currently consists of one initial commit.
 
-| Requirement | BGPy | InternetSim | Consequence for DA-ROV |
+| Requirement | BGPy | InternetSim | Consequence for S2-ROV |
 |---|---|---|---|
 | Conventional ROV | Native covering-ROA checker and `ROV` policy | Static invalid-pair set | BGPy preserves the correct baseline without reimplementing RFC 6811 logic. |
 | Custom DA validation | Override a policy validity hook and call the Phase 4 oracle | Change Cython `nogil` validation plus policy storage | BGPy keeps DA semantics outside the engine. |
@@ -84,21 +84,21 @@ These are engineering estimates, not completed-line counts.
 InternetSim should be reconsidered only if a BGPy pilot fails the explicit
 resource gate in Section 11, not merely because its core is compiled.
 
-## 3. Existing DA-ROV assets and their Phase 7 role
+## 3. Existing S2-ROV assets and their Phase 7 role
 
 | Asset | Phase 7 role | What it must not be used to claim |
 |---|---|---|
 | `phase2_formal/FORMAL_ANALYSIS.md` | Supplies exact aggregate protection, proper-descendant scope, precedence, and provenance requirements. | It does not identify legitimate delegates. |
-| `phase3_semantics/DA-ROV_SEMANTICS.md` | Normative four-state semantics and security boundary. | `Delegated` is not ordinary RPKI `Valid`. |
+| `phase3_semantics/S2-ROV_SEMANTICS.md` | Normative four-state semantics and security boundary. | `Delegated` is not ordinary RPKI `Valid`. |
 | `phase4_encoding/scripts/utils/daroa.py` | Executable oracle for policy state in simulation and unit tests. | Its interpreter timing is not router performance. |
 | Phase 1 allocation-tree candidates | Supplies observed holder/child prefix lengths and topological origin placements for counterfactual sampling. | A candidate is not evidence of contractual delegation or route legitimacy. |
 | Phase 5 semantic cases | Supplies regression vectors for `Explicit`, `Delegated`, `Invalid`, and `NotFound`. | They are not Internet-scale propagation evidence. |
 | Phase 6 Krill--Routinator--FRR prototype | Anchors actions and staged-deployment interpretation. | The simulator must not replace the signed-system experiment. |
-| AMBER topology and Hlavacek ROV list | Supplies an AS graph and a measured ROV deployment set only. | AMBER's exemption/classifier result is not a DA-ROV result. |
+| AMBER topology and Hlavacek ROV list | Supplies an AS graph and a measured ROV deployment set only. | AMBER's exemption/classifier result is not a S2-ROV result. |
 
 The AMBER mixed scenario file and existing AMBER output are deliberately
 excluded from the primary experiment.  AMBER's low attack cost depends on a
-classifier with high precision; DA-ROV's open Stripe admits every eligible
+classifier with high precision; S2-ROV's open Stripe admits every eligible
 unlisted origin in scope and has no equivalent classifier.
 
 ## 4. Simulator semantic contract
@@ -110,9 +110,9 @@ Every AS is assigned exactly one routing policy in a run:
 - `BGP`: no ROV filtering;
 - `ROV`: conventional ROV, rejecting `Invalid` and accepting `Valid` and
   `NotFound`; or
-- `DAROV`: conventional ROV plus the signed DA policy.
+- `S2ROV`: conventional ROV plus the signed DA policy.
 
-For a route `(p, a)`, `DAROV` must apply the following composition:
+For a route `(p, a)`, `S2ROV` must apply the following composition:
 
 1. Evaluate the Phase 4 DA policy.
 2. If the result is `Explicit` or `Delegated`, admit the route subject to
@@ -146,9 +146,9 @@ Open intent itself emits no VRP.  Thus, a legacy ROV AS rejects an unlisted
 child route while a DA-aware AS may classify it as `Delegated`.
 
 For the measured deployment experiment, let `V` be the 589-AS Hlavacek ROV
-set and let `S` be the subset upgraded to DA-ROV:
+set and let `S` be the subset upgraded to S2-ROV:
 
-- ASes in `S` run `DAROV`;
+- ASes in `S` run `S2ROV`;
 - ASes in `V - S` run conventional `ROV`; and
 - all other ASes run `BGP`.
 
@@ -315,7 +315,7 @@ The run must fail closed if any invariant fails.
    `Explicit` under the DA policy.
 7. With `S` empty, the DA deployment condition is bit-for-bit equivalent to
    the measured conventional-ROV baseline.
-8. With `S = V`, every member of the 589-AS measured ROV set runs `DAROV`; an
+8. With `S = V`, every member of the 589-AS measured ROV set runs `S2ROV`; an
    AS outside `V` is not silently upgraded.
 9. Shadow and legacy configurations have identical steady-state route
    outcomes.
@@ -325,7 +325,7 @@ The run must fail closed if any invariant fails.
     `disconnected`/`forwarding_loop` reason.
 12. Outcome counts form a complete, non-overlapping partition of the tracked
     denominator.
-13. An attacker route is never relabeled as benign because DA-ROV admitted it.
+13. An attacker route is never relabeled as benign because S2-ROV admitted it.
 14. Every output records simulator commit, input hashes, Python/runtime
     version, seed, deployment order, and scenario identifier.
 
@@ -373,7 +373,7 @@ execution cost, not scientific results.  Select the final trial count after
 this measured pilot.
 
 InternetSim may run an equivalent topology-load and unmodified BGP smoke test
-for performance context.  It must not be used to report DA-ROV outcomes until
+for performance context.  It must not be used to report S2-ROV outcomes until
 it passes the same semantic and destination-outcome gates.
 
 ### Gate D: paper-facing run
@@ -387,7 +387,7 @@ attacker units.  Retain per-unit outcomes rather than only aggregate means.
 The experiment can support the following claim if the results warrant it:
 
 > Under a measured ROV deployment and a Gao--Rexford AS-level model, upgrading
-> selected ROV ASes to DA-ROV changes the paired frontier between delivery to a
+> selected ROV ASes to S2-ROV changes the paired frontier between delivery to a
 > hypothetical intended delegate and attraction to an unlisted eligible
 > origin.
 

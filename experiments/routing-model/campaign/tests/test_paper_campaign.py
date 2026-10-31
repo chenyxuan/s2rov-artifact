@@ -1,4 +1,4 @@
-"""Unit tests for the paper-scale DA-ROV campaign contract."""
+"""Unit tests for the paper-scale S2-ROV campaign contract."""
 
 from __future__ import annotations
 

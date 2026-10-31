@@ -1,4 +1,4 @@
-# InternetSim evaluation for DA-ROV Internet-scale experiments
+# InternetSim evaluation for S2-ROV Internet-scale experiments
 
 ## Material Passport
 
@@ -170,7 +170,7 @@ dispatch. No official example or test completed successfully.
 
 ## Capability assessment
 
-| DA-ROV requirement | InternetSim assessment | Evidence and limitation |
+| S2-ROV requirement | InternetSim assessment | Evidence and limitation |
 |---|---|---|
 | Internet-scale AS topology | **Strong design, load verified** | Bundles a 2024-05-01 relationship snapshot; 76,802 ASes and 495,579 links loaded after the signed-char compatibility build. README gives no CAIDA provenance URL, license note, or checksum. |
 | Gao--Rexford routing | **Native** | Default local preferences are customer 100, peer 80, provider 60; export suppresses peer/provider-learned routes toward peers/providers; selection then uses shortest AS path, origin type, and lower first-hop ASN. |
@@ -178,8 +178,8 @@ dispatch. No official example or test completed successfully.
 | Conventional ROV | **Present but semantically weak** | A per-AS ROV set filters an exact `(origin ASN, prefix)` pair found in an externally supplied `Invalid-Set`. It does not compute RFC-style Valid/Invalid/NotFound from ROAs, prefix coverage, or `maxLength`. |
 | Partial deployment | **Representable** | ROV ASes can be loaded from a set and enabled incrementally. There is no deployment sampler, strategy implementation, repeated-trial harness, or confidence-interval output. |
 | Custom routing policy | **Rich DSL** | Per-neighbor import/export filters can match exact/covered prefix, AS path, AS-SET, and community, with accept/deny/local-pref/community/prepend actions. Runtime policy changes trigger incremental refresh. |
-| DA-ROV custom state | **Requires invasive extension** | `Extension.ROV` returns only Boolean acceptance. Implementing Explicit/Delegated/NotFound/Invalid and state-aware route ranking requires edits to Cython/C++ announcement and selection code, plus rebuilds of multiple extensions. |
-| Aggregate/subprefix behavior | **Routing data structure supports prefixes** | The trie stores CIDR prefixes, but the public artifact has no built-in DA-ROV aggregate-fallback or four-state analyzer. These would need project code and ground-truth tests. |
+| S2-ROV custom state | **Requires invasive extension** | `Extension.ROV` returns only Boolean acceptance. Implementing Explicit/Delegated/NotFound/Invalid and state-aware route ranking requires edits to Cython/C++ announcement and selection code, plus rebuilds of multiple extensions. |
+| Aggregate/subprefix behavior | **Routing data structure supports prefixes** | The trie stores CIDR prefixes, but the public artifact has no built-in S2-ROV aggregate-fallback or four-state analyzer. These would need project code and ground-truth tests. |
 | Structured metrics | **Weak** | Primary interface prints selected routes. No standard per-AS CSV/JSON campaign output, reachability metric, exposure metric, or uncertainty calculation is supplied. |
 | Reproducibility | **Poor public artifact** | One commit, no release/tag, no tests/CI, no dependency pins, no supported platform declaration, no example oracle, and two independent runtime portability failures. Multithread scheduling is not covered by determinism tests. |
 | Maintenance | **Low confidence** | Last source push was about 13 months before this evaluation; no later commits or release maintenance are visible. |
@@ -192,7 +192,7 @@ dispatch. No official example or test completed successfully.
 | Security simulation model | Boolean exact-pair invalid filter | Native ROV/ROA semantics and security scenarios |
 | Partial deployment | Manual ROV set only | Explicit per-AS policy classes and adopting-AS sets |
 | Multi-origin experiments | DSL can express them; no analyzer | Verified exact-prefix and subprefix scenarios plus analyzers |
-| DA-ROV extension surface | Cython/C++ changes across core types | Project-owned Python policy/analyzer outside vendor tree |
+| S2-ROV extension surface | Cython/C++ changes across core types | Project-owned Python policy/analyzer outside vendor tree |
 | Global graph | Bundled snapshot | Native CAIDA collector; graph construction verified |
 | Incremental routing updates | Architectural strength | Primarily steady-state/round-based |
 | Artifact maturity | One untested commit | PyPI release, documentation, tests, scenario framework |
@@ -201,7 +201,7 @@ InternetSim's potential advantages are high-throughput full-table simulation,
 multi-threading, disk offload, and rapid incremental recomputation after policy
 changes. Those strengths may matter for future convergence or very large
 full-table studies, but they do not compensate for the current artifact's runtime
-failures and the effort needed to add DA-ROV semantics and measurements.
+failures and the effort needed to add S2-ROV semantics and measurements.
 
 For the paper's immediate paired reachability/exposure study, **BGPy is the lower-
 risk and more scientifically defensible choice**. Keep InternetSim vendored only as

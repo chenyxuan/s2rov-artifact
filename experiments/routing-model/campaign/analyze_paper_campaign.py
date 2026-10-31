@@ -910,18 +910,18 @@ def validate_execution_contract(
         if not isinstance(assignments, Mapping) or set(assignments) != {
             "bgp",
             "rov",
-            "darov",
+            "s2rov",
         }:
             raise CampaignAnalysisError(
                 f"{scenario_id}: invalid policy_assignment_counts"
             )
         bgp = int(assignments["bgp"])
         rov = int(assignments["rov"])
-        darov = int(assignments["darov"])
+        s2rov = int(assignments["s2rov"])
         if (
-            bgp + rov + darov != topology_asns
-            or rov + darov != fixed_rov_count
-            or darov != expected_count
+            bgp + rov + s2rov != topology_asns
+            or rov + s2rov != fixed_rov_count
+            or s2rov != expected_count
         ):
             raise CampaignAnalysisError(
                 f"{scenario_id}: policy assignments violate topology/deployment"

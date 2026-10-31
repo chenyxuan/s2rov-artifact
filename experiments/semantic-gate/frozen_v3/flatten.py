@@ -57,7 +57,7 @@ def flatten_to_vrps(daroa: DAROA) -> List[Tuple[str, int, int]]:
 def flattening_validation(daroa: DAROA) -> bool:
     """Validate that flattening is safe:
     Every route Valid under RFC 6811 with flattened VRPs
-    is also Valid under DA-ROV with the original DA-ROA.
+    is also Valid under S2-ROV with the original DA-ROA.
     """
     for prefix, origin_as, max_length in flatten_to_vrps(daroa):
         if max_length != int(prefix.split("/")[1]):

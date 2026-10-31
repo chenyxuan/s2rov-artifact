@@ -23,7 +23,7 @@ _IPV6_HEADER_TAG = b"IPv6"
 
 
 class ValidationState(str, Enum):
-    """DA-ROV result with authorization provenance kept explicit."""
+    """S2-ROV result with authorization provenance kept explicit."""
 
     EXPLICIT = "Explicit"
     DELEGATED = "Delegated"

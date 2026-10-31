@@ -32,7 +32,7 @@ from bgpy.simulation_engine import BGP, ROV, SimulationEngine
 from bgpy.simulation_framework import ScenarioConfig
 from phase4_encoding.scripts.utils.daroa import ValidationState
 from phase7_simulation.campaign.full_graph_gate import (
-    DAROV,
+    S2ROV,
     FixedDeploymentScenario,
     PairSpec,
     PeakRSSMonitor,
@@ -418,7 +418,7 @@ def artifact_hashes() -> dict[str, Any]:
         "phase7_rov_json": ROV_JSON_PATH,
         "phase7_full_graph_gate": (PHASE7_ROOT / "campaign" / "full_graph_gate.py"),
         "phase7_paper_campaign": (PHASE7_ROOT / "campaign" / "paper_campaign.py"),
-        "phase7_darov_policy": PHASE7_ROOT / "darov" / "policy.py",
+        "phase7_s2rov_policy": PHASE7_ROOT / "s2rov" / "policy.py",
         "phase4_daroa_oracle": (
             REPOSITORY_ROOT / "phase4_encoding" / "scripts" / "utils" / "daroa.py"
         ),
@@ -484,7 +484,7 @@ def build_manifest() -> dict[str, Any]:
         "design": {
             "research_question": (
                 "How does upgrading the fixed measured ROV set from conventional "
-                "ROV to open DA-ROV change route exposure for a deterministic "
+                "ROV to open S2-ROV change route exposure for a deterministic "
                 "same-length sibling prefix?"
             ),
             "independent_unit": "holder_asn",
@@ -757,7 +757,7 @@ def build_sibling_scenario(
         origin_announcement(unit.sibling_prefix, unit.uniform_attacker_asn),
     )
     policy_map: dict[int, type[BGP]] = {asn: ROV for asn in rov_asns}
-    policy_map.update({asn: DAROV for asn in da_asns})
+    policy_map.update({asn: S2ROV for asn in da_asns})
     config = ScenarioConfig(
         ScenarioCls=FixedDeploymentScenario,
         BasePolicyCls=BGP,
@@ -916,7 +916,7 @@ def run_trial(
     da_asns = rov_asns if trial.deployment_percent_target == 100 else frozenset()
     pair = unit_pair(unit)
     policy = make_open_policy(pair)
-    DAROV.configure(policy)
+    S2ROV.configure(policy)
     started = perf_counter()
     rss_before = current_rss_bytes()
     with PeakRSSMonitor() as memory, trial_alarm(SINGLE_TRIAL_LIMIT_SECONDS):
@@ -1048,7 +1048,7 @@ def validate_result_row(
     expected_assignments = {
         "bgp": int(manifest["topology"]["asns"]) - EXPECTED_ROV_ASNS,
         "rov": EXPECTED_ROV_ASNS - expected_deployment,
-        "darov": expected_deployment,
+        "s2rov": expected_deployment,
     }
     if row.get("policy_assignment_counts") != expected_assignments:
         raise Phase8ContractError(f"{trial.scenario_id}: policy assignments mismatch")

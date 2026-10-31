@@ -1,4 +1,4 @@
-"""Deterministic small-graph DA-ROV pilot using BGPy 13.0.10."""
+"""Deterministic small-graph S2-ROV pilot using BGPy 13.0.10."""
 
 from __future__ import annotations
 
@@ -27,7 +27,7 @@ from bgpy.simulation_framework import Scenario, ScenarioConfig
 
 from phase4_encoding.scripts.utils.daroa import DAROA, Stripe
 
-from .policy import DAROV
+from .policy import S2ROV
 
 
 AGGREGATE = "10.0.0.0/16"
@@ -146,7 +146,7 @@ def run_trial(
     da_aware_asns: Iterable[int],
     include_attacker: bool,
     announcement_order: Sequence[str] | None = None,
-    enable_darov: bool = True,
+    enable_s2rov: bool = True,
     daroa: DAROA | None = None,
 ) -> dict[str, object]:
     """Run one deterministic BGPy trial and return its outcome partitions."""
@@ -155,17 +155,17 @@ def run_trial(
     da_set = frozenset(da_aware_asns)
     if not da_set.issubset(ROV_ASNS):
         raise ValueError("DA-aware ASes must be a subset of the pilot ROV set")
-    if da_set and not enable_darov:
+    if da_set and not enable_s2rov:
         raise ValueError("conventional ROV baseline cannot contain DA-aware ASes")
 
     policy = daroa or make_open_policy()
-    DAROV.configure(policy)
+    S2ROV.configure(policy)
     graph = build_pilot_graph()
     engine = SimulationEngine(graph)
 
     policy_by_asn: dict[int, type[BGP]] = {}
     for asn in ROV_ASNS:
-        policy_by_asn[asn] = DAROV if enable_darov and asn in da_set else ROV
+        policy_by_asn[asn] = S2ROV if enable_s2rov and asn in da_set else ROV
 
     announcements = build_announcements(
         include_attacker=include_attacker,
@@ -322,7 +322,7 @@ def run_pilot() -> dict[str, object]:
     deployment_sets = {
         "rov_0pct": frozenset(),
         "mixed_50pct": MIXED_DA_ASNS,
-        "darov_100pct": FULL_DA_ASNS,
+        "s2rov_100pct": FULL_DA_ASNS,
     }
     runs: dict[str, object] = {}
     for lane, include_attacker in (
@@ -421,7 +421,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         [
             sys.executable,
             "-m",
-            "phase7_simulation.darov.pilot",
+            "phase7_simulation.s2rov.pilot",
             *(argv or sys.argv[1:]),
         ]
     )

@@ -67,7 +67,7 @@ ARTIFACT_PATHS = {
     / "phase7_simulation/data/inputs/as-rel-fixed.txt",
     "campaign_runner": REPOSITORY_ROOT
     / "phase7_simulation/campaign/full_graph_gate.py",
-    "darov_policy": REPOSITORY_ROOT / "phase7_simulation/darov/policy.py",
+    "s2rov_policy": REPOSITORY_ROOT / "phase7_simulation/s2rov/policy.py",
     "dependency_lock": REPOSITORY_ROOT
     / "phase7_simulation/requirements-bgpy.lock.txt",
     "deployment_grid_extension_contract": REPOSITORY_ROOT
@@ -870,7 +870,7 @@ def _audit_row(
     assignments_ok = row.get("policy_assignment_counts") == {
         "bgp": contract.topology_asns - contract.fixed_rov_count,
         "rov": contract.fixed_rov_count - count,
-        "darov": count,
+        "s2rov": count,
     }
     checks.test(
         "policy_assignments_exact",

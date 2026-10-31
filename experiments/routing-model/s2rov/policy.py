@@ -1,4 +1,4 @@
-"""DA-ROV policy adapter for the pinned BGPy engine.
+"""S2-ROV policy adapter for the pinned BGPy engine.
 
 The routing engine remains unmodified.  This adapter delegates all DA policy
 semantics to the executable Phase 4 oracle and changes only BGPy's inbound
@@ -15,15 +15,15 @@ from bgpy.simulation_engine import Announcement, BGP, ROV
 from phase4_encoding.scripts.utils.daroa import DAROA, ValidationState
 
 
-class DAROV(ROV):
-    """BGPy policy that composes DA-ROV with conventional ROV.
+class S2ROV(ROV):
+    """BGPy policy that composes S2-ROV with conventional ROV.
 
     ``Explicit`` and ``Delegated`` are admitted, ``Invalid`` is rejected, and
     ``NotFound`` falls back to BGPy's native conventional ROV check.  The
     configured :class:`DAROA` is immutable during one simulation run.
     """
 
-    name = "DA-ROV Phase 7"
+    name = "S2-ROV Phase 7"
     _daroa: ClassVar[DAROA | None] = None
 
     @classmethod
@@ -39,7 +39,7 @@ class DAROV(ROV):
         """Return the Phase 4 oracle state for a route."""
 
         if cls._daroa is None:
-            raise RuntimeError("DAROV.configure() must be called before simulation")
+            raise RuntimeError("S2ROV.configure() must be called before simulation")
         return cls._daroa.validate_route(prefix, origin_asn)
 
     def _valid_ann(

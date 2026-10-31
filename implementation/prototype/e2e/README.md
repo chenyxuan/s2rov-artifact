@@ -54,7 +54,7 @@ ordinary VRP.
 
 The BGP collector receives seven controlled routes:
 
-| Case | Route | Expected baseline | Expected DA-ROV |
+| Case | Route | Expected baseline | Expected S2-ROV |
 |---|---|---|---|
 | Holder | `10.0.0.0/16 → AS64501` | Valid | Explicit |
 | Listed customer | `10.0.1.0/24 → AS8075` | Invalid | Explicit |

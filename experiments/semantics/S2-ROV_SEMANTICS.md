@@ -1,4 +1,4 @@
-# Phase 3: DA-ROV Four-State Semantics
+# Phase 3: S2-ROV Four-State Semantics
 
 **Version:** 4.0
 **Re-audited:** 2026-07-29
@@ -6,7 +6,7 @@
 
 ## 1. Design Contract
 
-DA-ROV separates two forms of evidence:
+S2-ROV separates two forms of evidence:
 
 - an **explicit** origin named in signed holder policy; and
 - a **delegated choice** admitted by signed open policy but not authenticated
@@ -16,7 +16,7 @@ The four design requirements inherited from Phase 2 are exact aggregate
 protection, proper-descendant scoping, longest-prefix override, and result
 provenance.
 
-DA-ROV does not infer delegation from BGP observations, WHOIS status, or
+S2-ROV does not infer delegation from BGP observations, WHOIS status, or
 business-relationship datasets.
 
 ## 2. Policy Object
@@ -207,7 +207,7 @@ transfers origin selection for proper descendants and therefore admits every
 eligible public origin not blocked by a more-specific Stripe.  AS0/private
 filters remove nonsensical inputs but do not restore origin authentication.
 
-DA-ROV's security claim is thus:
+S2-ROV's security claim is thus:
 
 - aggregate and closed-scope containment are deterministic;
 - open-policy provenance is never hidden; and

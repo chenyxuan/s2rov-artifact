@@ -459,9 +459,9 @@ def validate_deployment(
     if not isinstance(assignments, Mapping):
         raise DiagnosticError(f"{scenario_id}: missing policy assignments")
     require_equal(
-        set(assignments), {"bgp", "rov", "darov"}, f"{scenario_id}/policy keys"
+        set(assignments), {"bgp", "rov", "s2rov"}, f"{scenario_id}/policy keys"
     )
-    require_equal(assignments.get("darov"), expected_count, f"{scenario_id}/DA-ROV")
+    require_equal(assignments.get("s2rov"), expected_count, f"{scenario_id}/S2-ROV")
     require_equal(
         assignments.get("rov"), 589 - expected_count, f"{scenario_id}/ROV"
     )

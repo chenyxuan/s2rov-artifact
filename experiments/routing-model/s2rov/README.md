@@ -1,4 +1,4 @@
-# DA-ROV BGPy pilot
+# S2-ROV BGPy pilot
 
 This directory contains the project-owned Phase 7 policy adapter, deterministic
 small AS graph, outcome analyzer, command-line runner, and regression tests.
@@ -10,14 +10,14 @@ From the repository root, run the tests with:
 ```bash
 PYTHONPATH="$PWD/phase7_simulation/vendor/bgpy:$PWD" \
   phase7_simulation/.venv-bgpy/bin/python -m pytest -q \
-  phase7_simulation/darov/tests
+  phase7_simulation/s2rov/tests
 ```
 
 Run the pilot and write its machine-readable result with:
 
 ```bash
 PYTHONPATH="$PWD/phase7_simulation/vendor/bgpy:$PWD" \
-  phase7_simulation/.venv-bgpy/bin/python -m phase7_simulation.darov.pilot \
+  phase7_simulation/.venv-bgpy/bin/python -m phase7_simulation.s2rov.pilot \
   --output phase7_simulation/results/pilot/pilot.json
 ```
 

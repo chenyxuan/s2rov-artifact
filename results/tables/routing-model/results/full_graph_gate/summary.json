@@ -316,7 +316,7 @@
     "files": {
       "as_rel_fixed": "fff3684dc18a3411e87f8f7cd06b9cb211322d8f7c4f169781ee664fe78b6d69",
       "campaign_runner": "bedde6268d37e55c0ab01652a8512ffb62434f28908cccf856ae57e197f61444",
-      "darov_policy": "081a1365e9a5ca84d2196b71ed494df4c40ee08f66f97e946a4c0aa87025c5e3",
+      "s2rov_policy": "081a1365e9a5ca84d2196b71ed494df4c40ee08f66f97e946a4c0aa87025c5e3",
       "holder_delegate_pairs": "7f131ad3c2f9f16ed246af7942762640943d2d980e4ba0587e707a6f224b6d53",
       "origin_divergence_candidates": "5977082573192645ef5487e3de2572097405a5571a3146b23a3df58af940bc67",
       "phase4_oracle": "7685f8e5583ef2da851085fe119e365255c590d59d853bd90c2068417cd494dc",

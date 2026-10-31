@@ -113,4 +113,4 @@ python phase1_empirical/allocation_tree/scripts/05_bgp_conflicts.py
 
 The result supports only an expressiveness motivation: origin-divergent
 descendants exist at observable allocation-tree endpoints.  It does not supply
-authorization evidence for DA-ROV on behalf of a holder.
+authorization evidence for S2-ROV on behalf of a holder.

@@ -210,7 +210,7 @@ def _fixture() -> tuple[list[dict[str, Any]], dict[str, Any], AnalysisDesign]:
                 "policy_assignment_counts": {
                     "bgp": topology_asns - len(fixed_rov),
                     "rov": len(fixed_rov) - deployment_count,
-                    "darov": deployment_count,
+                    "s2rov": deployment_count,
                 },
                 "outcomes": deepcopy(outcomes),
             }
@@ -534,7 +534,7 @@ def test_execution_contract_rejects_set_hash_and_policy_count_drift() -> None:
         validate_execution_contract([bad_hash], manifest, design=design)
 
     bad_assignments = deepcopy(target)
-    bad_assignments["policy_assignment_counts"]["darov"] += 1
+    bad_assignments["policy_assignment_counts"]["s2rov"] += 1
     with pytest.raises(CampaignAnalysisError, match="policy assignments"):
         validate_execution_contract([bad_assignments], manifest, design=design)
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""DA-ROV shadow validator and FRR policy compiler.
+"""S2-ROV shadow validator and FRR policy compiler.
 
 Routinator remains the cryptographic relying party.  This program consumes
 only Routinator's validated JSON payload set, preserves authorization

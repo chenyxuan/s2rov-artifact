@@ -14,7 +14,7 @@ from .as_set import AsSetType, decode, encode, validate_as_set
 
 
 class ValidationState(str, Enum):
-    """DA-ROV result with authorization provenance kept explicit."""
+    """S2-ROV result with authorization provenance kept explicit."""
 
     EXPLICIT = "Explicit"
     DELEGATED = "Delegated"

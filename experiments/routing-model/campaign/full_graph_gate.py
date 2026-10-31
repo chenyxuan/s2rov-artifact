@@ -51,7 +51,7 @@ from phase4_encoding.scripts.utils.daroa import (
     ValidationState,
     is_eligible_delegated_origin,
 )
-from phase7_simulation.darov.policy import DAROV
+from phase7_simulation.s2rov.policy import S2ROV
 
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
@@ -61,7 +61,7 @@ CANDIDATES_PATH = INPUT_DIR / "origin_divergence_candidates.csv"
 PAIR_TABLE_PATH = INPUT_DIR / "holder_delegate_pairs.csv"
 ROV_JSON_PATH = INPUT_DIR / "rov_ases.json"
 ROV_TEXT_PATH = INPUT_DIR / "rov_ases.txt"
-POLICY_PATH = REPOSITORY_ROOT / "phase7_simulation" / "darov" / "policy.py"
+POLICY_PATH = REPOSITORY_ROOT / "phase7_simulation" / "s2rov" / "policy.py"
 PHASE4_ORACLE_PATH = (
     REPOSITORY_ROOT / "phase4_encoding" / "scripts" / "utils" / "daroa.py"
 )
@@ -524,7 +524,7 @@ def build_scenario(
         roas.append(ROA(leaf, pair.delegate_asn, max_length=leaf.prefixlen))
 
     policy_map: dict[int, type[BGP]] = {asn: ROV for asn in rov_asns}
-    policy_map.update({asn: DAROV for asn in da_asns})
+    policy_map.update({asn: S2ROV for asn in da_asns})
     config = ScenarioConfig(
         ScenarioCls=FixedDeploymentScenario,
         BasePolicyCls=BGP,
@@ -545,7 +545,7 @@ def verify_policy_assignment(
     da_asns: frozenset[int],
 ) -> dict[str, int]:
     actual_da = {
-        as_obj.asn for as_obj in engine.as_graph if type(as_obj.policy) is DAROV
+        as_obj.asn for as_obj in engine.as_graph if type(as_obj.policy) is S2ROV
     }
     actual_rov = {
         as_obj.asn for as_obj in engine.as_graph if type(as_obj.policy) is ROV
@@ -559,7 +559,7 @@ def verify_policy_assignment(
     return {
         "bgp": len(engine.as_graph) - len(actual_da) - len(actual_rov),
         "rov": len(actual_rov),
-        "darov": len(actual_da),
+        "s2rov": len(actual_da),
     }
 
 
@@ -694,7 +694,7 @@ def run_trial(
     da_asns: frozenset[int],
 ) -> dict[str, Any]:
     pair = spec.pair
-    DAROV.configure(make_open_policy(pair))
+    S2ROV.configure(make_open_policy(pair))
     started = perf_counter()
     rss_before = current_rss_bytes()
     with PeakRSSMonitor() as memory, trial_alarm(SINGLE_TRIAL_LIMIT_SECONDS):
@@ -929,7 +929,7 @@ def collect_hashes() -> dict[str, Any]:
         "holder_delegate_pairs": PAIR_TABLE_PATH,
         "rov_ases_json": ROV_JSON_PATH,
         "rov_ases_text": ROV_TEXT_PATH,
-        "darov_policy": POLICY_PATH,
+        "s2rov_policy": POLICY_PATH,
         "phase4_oracle": PHASE4_ORACLE_PATH,
         "campaign_runner": Path(__file__).resolve(),
     }

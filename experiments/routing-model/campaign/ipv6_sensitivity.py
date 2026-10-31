@@ -700,7 +700,7 @@ def build_manifest_document() -> dict[str, Any]:
                 / "campaign"
                 / "full_graph_gate.py"
             ),
-            "darov_adapter": file_record(POLICY_PATH),
+            "s2rov_adapter": file_record(POLICY_PATH),
             "ipv6_runner": file_record(RUNNER_PATH),
         },
         "unused_frozen_input_note": {
@@ -1233,8 +1233,8 @@ def run_smoke(output_dir: Path) -> dict[str, Any]:
         rov_asns=rov_asns,
         da_asns=rov_asns,
     )
-    if result["policy_assignment_counts"]["darov"] != len(rov_asns):
-        raise IPv6CampaignError("smoke did not assign all fixed ROV ASes to DAROV")
+    if result["policy_assignment_counts"]["s2rov"] != len(rov_asns):
+        raise IPv6CampaignError("smoke did not assign all fixed ROV ASes to S2ROV")
     smoke = {
         "schema_version": SCHEMA_VERSION,
         "status": "success",

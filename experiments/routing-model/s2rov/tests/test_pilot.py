@@ -1,4 +1,4 @@
-"""Regression tests for the project-owned BGPy DA-ROV pilot."""
+"""Regression tests for the project-owned BGPy S2-ROV pilot."""
 
 from ipaddress import ip_network
 from types import SimpleNamespace
@@ -10,8 +10,8 @@ from bgpy.simulation_engine import Announcement, Policy
 
 from phase4_encoding.scripts.utils.daroa import ValidationState
 
-from phase7_simulation.darov.policy import DAROV
-from phase7_simulation.darov.pilot import (
+from phase7_simulation.s2rov.policy import S2ROV
+from phase7_simulation.s2rov.pilot import (
     AGGREGATE,
     ANNOUNCEMENT_KEYS,
     ATTACKER_ASN,
@@ -45,12 +45,12 @@ def test_phase4_oracle_exercises_all_four_states() -> None:
     assert policy.validate_route(UNRELATED, ATTACKER_ASN) == ValidationState.NOT_FOUND
 
 
-def test_darov_policy_composes_four_states_with_native_rov() -> None:
+def test_s2rov_policy_composes_four_states_with_native_rov() -> None:
     """Exercise the project adapter, including NotFound-to-ROV fallback."""
 
     daroa = make_open_policy()
-    DAROV.configure(daroa)
-    receiver = DAROV(as_=SimpleNamespace(asn=400))
+    S2ROV.configure(daroa)
+    receiver = S2ROV(as_=SimpleNamespace(asn=400))
     unrelated_roa = ROA(ip_network(UNRELATED), 999, max_length=24)
     Policy.roa_checker.clear()
     Policy.roa_checker.insert(unrelated_roa.prefix, unrelated_roa)
@@ -83,12 +83,12 @@ def test_zero_percent_da_is_route_outcome_equivalent_to_rov() -> None:
     staged_zero = run_trial(
         da_aware_asns=frozenset(),
         include_attacker=True,
-        enable_darov=True,
+        enable_s2rov=True,
     )
     conventional = run_trial(
         da_aware_asns=frozenset(),
         include_attacker=True,
-        enable_darov=False,
+        enable_s2rov=False,
     )
 
     assert _stable_outcomes(staged_zero) == _stable_outcomes(conventional)
@@ -151,5 +151,5 @@ def test_mixed_deployment_has_complete_nontrivial_partitions() -> None:
     assert control_counts["child_selected_attacker"] > 0
     assert control_counts["child_absent"] > 0
     assert destination_counts["holder_fallback"] > 0
-    assert all(assignments[str(asn)] == "DA-ROV Phase 7" for asn in MIXED_DA_ASNS)
+    assert all(assignments[str(asn)] == "S2-ROV Phase 7" for asn in MIXED_DA_ASNS)
     assert all(assignments[str(asn)] == "ROV" for asn in ROV_ASNS - MIXED_DA_ASNS)

@@ -182,7 +182,7 @@ def _valid_row(manifest: dict) -> tuple[dict, runner.SiblingTrial, runner.Siblin
         "policy_assignment_counts": {
             "bgp": 76840,
             "rov": 589 - deployment_count,
-            "darov": deployment_count,
+            "s2rov": deployment_count,
         },
         "outcomes": outcomes,
         "partition_checks": checks,

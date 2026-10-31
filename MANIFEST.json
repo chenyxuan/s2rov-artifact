@@ -16,7 +16,7 @@
   {
    "bundle_path": "implementation/daroa-codec/DESIGN.md",
    "bytes": 8084,
-   "sha256": "9b32c278519888849223eef55fbddc0f1d94928b8dd2be4bca36873d87eca667",
+   "sha256": "d0a88e7f99f53783a6695ad98a7063a4096de7d9476a284901f60c2332e02341",
    "source_path": "phase4_encoding/DESIGN.md"
   },
   {
@@ -118,7 +118,7 @@
   {
    "bundle_path": "implementation/daroa-codec/scripts/utils/daroa.py",
    "bytes": 20416,
-   "sha256": "eb11dd64f5cc3175557462367796541a45d971459f5a16f46a655e1aee614377",
+   "sha256": "f7a6b2b85d2f0319c12de42fc0e0b71ada07325fecb5cf14a4c2c7c4652b109f",
    "source_path": "phase4_encoding/scripts/utils/daroa.py"
   },
   {
@@ -154,13 +154,13 @@
   {
    "bundle_path": "implementation/prototype/MSN_SYSTEM_GAP_ASSESSMENT.md",
    "bytes": 6312,
-   "sha256": "57e3cdd04ec8cfac8ba649b0c79c685541925ed0b6eae7084e2e8629c70ec431",
+   "sha256": "3abe7e8d95ed7c2af6f4e8ab0e8f1780b1b024bc4a50120176ca00987dbe55ae",
    "source_path": "phase6_system/MSN_SYSTEM_GAP_ASSESSMENT.md"
   },
   {
    "bundle_path": "implementation/prototype/SYSTEM.md",
    "bytes": 6800,
-   "sha256": "690e29c003b96ca0c38a5571d9d1209549a028760d1718591dede75d61072ff3",
+   "sha256": "2828b493e850924fb218ea285216eca3c20096802913f265ef7c25a7d368071e",
    "source_path": "phase6_system/SYSTEM.md"
   },
   {
@@ -178,7 +178,7 @@
   {
    "bundle_path": "implementation/prototype/e2e/README.md",
    "bytes": 14589,
-   "sha256": "86601f810743664c1bf534255731e7405624f725f09390d2e575763ee7aaa006",
+   "sha256": "be9ee5f23174aa97c93d4912df6c1ff604e0b75a845e85dcb3883fe36a97f8cf",
    "source_path": "phase6_system/e2e/README.md"
   },
   {
@@ -2338,7 +2338,7 @@
   {
    "bundle_path": "implementation/prototype/e2e/outputs/run-20260729T011350Z/REPORT.md",
    "bytes": 1737,
-   "sha256": "dc903acff4faf4b7c99d37f12030583bad330954641d8b4e0e08df64a678d1ed",
+   "sha256": "603a47e5ba44a4331aa4eaff36472d99b766d395497e5d5abbc9987ee4c9eacf",
    "source_path": "phase6_system/e2e/outputs/run-20260729T011350Z/REPORT.md"
   },
   {
@@ -2392,7 +2392,7 @@
   {
    "bundle_path": "implementation/prototype/e2e/outputs/run-20260729T023705Z/REPORT.md",
    "bytes": 1956,
-   "sha256": "59c94256b1dd58e3afb6ee4e5fc4d6601025a85b4464a5004b4552dc3cbdbec6",
+   "sha256": "0b62eb7f9c2eb64b0f0681ad9128a133b097438c9a66c9206be7de616b713b84",
    "source_path": "phase6_system/e2e/outputs/run-20260729T023705Z/REPORT.md"
   },
   {
@@ -2428,7 +2428,7 @@
   {
    "bundle_path": "implementation/prototype/e2e/outputs/run-20260729T023834Z/REPORT.md",
    "bytes": 1961,
-   "sha256": "8952d04c3d5d98438e761eb241482f71c60298fd9fe9b4c068edb98b9ad44729",
+   "sha256": "a88f7372d7cc408477a863ce2ab1f11963f9555a9a88b44f3673e7e6b6ce7e7e",
    "source_path": "phase6_system/e2e/outputs/run-20260729T023834Z/REPORT.md"
   },
   {
@@ -2470,7 +2470,7 @@
   {
    "bundle_path": "implementation/prototype/e2e/outputs/run-20260804T003206Z/REPORT.md",
    "bytes": 1961,
-   "sha256": "0d212843e992c77d7c4b47ed6844d812ba6e7314e2fa9cdb6a056d9925de0bce",
+   "sha256": "ee99a75fe87f21c7dab69156328bce3a0e0c5d03b76f7b95b5e98787a084177e",
    "source_path": "phase6_system/e2e/outputs/run-20260804T003206Z/REPORT.md"
   },
   {
@@ -2506,7 +2506,7 @@
   {
    "bundle_path": "implementation/prototype/e2e/outputs/run-20260823T024129Z/REPORT.md",
    "bytes": 1961,
-   "sha256": "5ce56dea749964864b558b7048ec6d6c4e06e11ee3b181462c3fa9544a27bb2c",
+   "sha256": "353a97a87b3ac24efad1d700b34278ba3ba5dfdbb86b86e351075c3df366f4e6",
    "source_path": "phase6_system/e2e/outputs/run-20260823T024129Z/REPORT.md"
   },
   {
@@ -2752,7 +2752,7 @@
   {
    "bundle_path": "implementation/prototype/e2e/src/daroa_agent.py",
    "bytes": 24502,
-   "sha256": "278e70753753f92db30075b5ee77471c756df1df83bd085f661f815c64917c81",
+   "sha256": "fbcd3d3b1313e433fc085627d7eb718191b2f00a54d3350859204d87047f3c72",
    "source_path": "phase6_system/e2e/src/daroa_agent.py"
   },
   {
@@ -2770,7 +2770,7 @@
   {
    "bundle_path": "implementation/prototype/e2e/src/summarize.py",
    "bytes": 8624,
-   "sha256": "d887ad43eae722045226ffbca769ac85d2fba020b63eea820850e216cddb265e",
+   "sha256": "9b92fef1a871eba813375294179a6e6d2723ecae217b45d492a8e4b8f0a02afd",
    "source_path": "phase6_system/e2e/src/summarize.py"
   },
   {
@@ -2896,7 +2896,7 @@
   {
    "bundle_path": "experiments/candidates/allocation_tree/RESULTS.md",
    "bytes": 4300,
-   "sha256": "a87e43182511393e6a91bf6b762a93b4c979204f9ac72eda502e34ce2f62ba0d",
+   "sha256": "fd9168a5a1c152b5b8c722c1c103412107838efb906b48bfeb78131db1ab738c",
    "source_path": "phase1_empirical/allocation_tree/RESULTS.md"
   },
   {
@@ -3070,13 +3070,13 @@
   {
    "bundle_path": "experiments/candidates/ndss26_analysis/ANALYSIS_PLAN.md",
    "bytes": 2897,
-   "sha256": "8bd187f5cdea35acaaf3a02df3b57c59de70590e1c10adde9a456ddec8bd5b2b",
+   "sha256": "ef7c534e8c94d33f2f0fbcb3734f5f8a56d2dda53c7c5e898b6da9bed8b7b1b1",
    "source_path": "phase1_empirical/ndss26_analysis/ANALYSIS_PLAN.md"
   },
   {
    "bundle_path": "experiments/candidates/ndss26_analysis/RESULTS.md",
    "bytes": 3476,
-   "sha256": "a0c36fc27db4337dbcf92506b47c4cc6e321af25c4e79ac05855fd466e0d9540",
+   "sha256": "0f505f0fa45f0fbd6e6f0b24eaf3493ce9a4b46aad9e7eb3eab1c976095547a2",
    "source_path": "phase1_empirical/ndss26_analysis/RESULTS.md"
   },
   {
@@ -3106,13 +3106,13 @@
   {
    "bundle_path": "experiments/formal/FORMAL_ANALYSIS.md",
    "bytes": 7024,
-   "sha256": "85dc345dfb80a983a959a400943050ab8171c32dc5cf15f43865da06fb5028c7",
+   "sha256": "42c9dd37b4293137f041e15f63fc3f8cd04035dbd5d04c9edac50d79b38a8c45",
    "source_path": "phase2_formal/FORMAL_ANALYSIS.md"
   },
   {
-   "bundle_path": "experiments/semantics/DA-ROV_SEMANTICS.md",
+   "bundle_path": "experiments/semantics/S2-ROV_SEMANTICS.md",
    "bytes": 8831,
-   "sha256": "5b2f0013c31c4b885634268dfa6a6663ddf87d76612769e2a49ff5a96de5d4cd",
+   "sha256": "0cff63875304bb96c8d0c900737e314864388b94f23e818cefeffbf16a507012",
    "source_path": "phase3_semantics/DA-ROV_SEMANTICS.md"
   },
   {
@@ -3664,7 +3664,7 @@
   {
    "bundle_path": "experiments/cost/scripts/10_daroa_reference_eval.py",
    "bytes": 5515,
-   "sha256": "55644888ef49a66ee4fe11261d4c154cdfe8d010942722255775beff2a3367db",
+   "sha256": "a408c0d3e2fffa468d479302b1026830de8601bf55a3368879c3acd8f73a7f67",
    "source_path": "phase5_evaluation/scripts/10_daroa_reference_eval.py"
   },
   {
@@ -3694,19 +3694,19 @@
   {
    "bundle_path": "experiments/routing-model/README.md",
    "bytes": 3128,
-   "sha256": "dca190e0ed627b0b0fa6ceaea5fdc1b16908099f7b942162c62206bdee49bc66",
+   "sha256": "1a77de25cee7a6fd8ffadb5b526a99199e6155d8b780517473f40b40e4bcf504",
    "source_path": "phase7_simulation/README.md"
   },
   {
    "bundle_path": "experiments/routing-model/campaign/README.md",
    "bytes": 13317,
-   "sha256": "0b447efc60a0e05c880dfba4fc6c82d52a59137716f8900b8b1703983befe14a",
+   "sha256": "639fd4d4954cb4370ccf6c366ec4cb35fa00c45071c21d39638cda3438e528e5",
    "source_path": "phase7_simulation/campaign/README.md"
   },
   {
    "bundle_path": "experiments/routing-model/campaign/__init__.py",
    "bytes": 73,
-   "sha256": "08c8f58c030774ae793992240b7abfbae3b398f307c3d849c0ddffed68e14e19",
+   "sha256": "38271f70427ca212287b7b6e9729742c06a66530db155504a4049dd468b853e5",
    "source_path": "phase7_simulation/campaign/__init__.py"
   },
   {
@@ -3718,13 +3718,13 @@
   {
    "bundle_path": "experiments/routing-model/campaign/analyze_paper_campaign.py",
    "bytes": 68669,
-   "sha256": "c0ca2612fd1fb1dbc267257069b72826d4ec6fb36b15a7fbdc3aec43806f01fe",
+   "sha256": "5b9fe9927a680e21be9056c5ff007e0aaefc72588a7896bc90c5e32e5c2ad675",
    "source_path": "phase7_simulation/campaign/analyze_paper_campaign.py"
   },
   {
    "bundle_path": "experiments/routing-model/campaign/audit_deployment_grid_extension.py",
    "bytes": 48340,
-   "sha256": "0b67e0a4f4c4e0d34c68521542de49602cc23556e591005708d00c1256b4f12a",
+   "sha256": "7dd519374c7dd2b82688321138356d8378d8215aa48456fce146bcdf4cbc49a7",
    "source_path": "phase7_simulation/campaign/audit_deployment_grid_extension.py"
   },
   {
@@ -3736,25 +3736,25 @@
   {
    "bundle_path": "experiments/routing-model/campaign/deployment_grid_extension.py",
    "bytes": 61126,
-   "sha256": "8f5d5567427c4db214d77f375807179608d114a03c39cde6eea55b00db6942fb",
+   "sha256": "689d988145327cceb76360e210515176c6bee3da0ef147c57eae3711eed9fc83",
    "source_path": "phase7_simulation/campaign/deployment_grid_extension.py"
   },
   {
    "bundle_path": "experiments/routing-model/campaign/full_graph_gate.py",
    "bytes": 41597,
-   "sha256": "bedde6268d37e55c0ab01652a8512ffb62434f28908cccf856ae57e197f61444",
+   "sha256": "00d4420f2e2f4900345fa06f23a9524a1c57b9f2fb01ed4064fa5cf5f2335c79",
    "source_path": "phase7_simulation/campaign/full_graph_gate.py"
   },
   {
    "bundle_path": "experiments/routing-model/campaign/ipv6_sensitivity.py",
    "bytes": 48036,
-   "sha256": "c100743e879dd21552902bc71ba6b1041c2c398ce4fef9584370ddd964e00855",
+   "sha256": "37bd65b60907f9d9aab2a4a873524a069439adf89a338b7593d49c765cf0096c",
    "source_path": "phase7_simulation/campaign/ipv6_sensitivity.py"
   },
   {
    "bundle_path": "experiments/routing-model/campaign/paper_campaign.py",
    "bytes": 91957,
-   "sha256": "9500cd43d7ee6a409c9d0dc83e41fc44dd85311c5b0dfd69f89ac1405d98ed50",
+   "sha256": "9fe8aac397eedb8982513c8bffbaab353160c8324ee6faf0204d2c342f08ffcf",
    "source_path": "phase7_simulation/campaign/paper_campaign.py"
   },
   {
@@ -3772,13 +3772,13 @@
   {
    "bundle_path": "experiments/routing-model/campaign/tests/test_analyze_paper_campaign.py",
    "bytes": 20280,
-   "sha256": "c386eec4e7ae5c3221a87659393e68562f73e14854e2942478fb5d0b7c4d5ee7",
+   "sha256": "3d5bb28738e563aa8536b120d26f89dfa93e7860dbc4c9bc45a571825f03e23f",
    "source_path": "phase7_simulation/campaign/tests/test_analyze_paper_campaign.py"
   },
   {
    "bundle_path": "experiments/routing-model/campaign/tests/test_audit_deployment_grid_extension.py",
    "bytes": 13969,
-   "sha256": "53fb95b3fabd604748e03b6f6cb7d884bc440cbf59ae10b24f300002375946fd",
+   "sha256": "6b27b04368b438fce41e03912d7a0401603029b32ced8b0c49c5aead85928629",
    "source_path": "phase7_simulation/campaign/tests/test_audit_deployment_grid_extension.py"
   },
   {
@@ -3796,19 +3796,19 @@
   {
    "bundle_path": "experiments/routing-model/campaign/tests/test_full_graph_gate.py",
    "bytes": 6485,
-   "sha256": "20c138d4796e1f2dab0e5e4a77f0e058fa67176b69e9ac58949673c718bb54b3",
+   "sha256": "68e102f0e856b7bdd5d547e3b3f0ff518c70012935ee31c4f8848cd8cdc1ead4",
    "source_path": "phase7_simulation/campaign/tests/test_full_graph_gate.py"
   },
   {
    "bundle_path": "experiments/routing-model/campaign/tests/test_ipv6_sensitivity.py",
    "bytes": 6115,
-   "sha256": "08b6ad2a4835e91ba20dddd7c00242625eaeef15ed919435d573d456673a6921",
+   "sha256": "f84670fb748bce5e964d38f300eb7b49d05b6489d82d4d6f68b71baba7d4eb37",
    "source_path": "phase7_simulation/campaign/tests/test_ipv6_sensitivity.py"
   },
   {
    "bundle_path": "experiments/routing-model/campaign/tests/test_paper_campaign.py",
    "bytes": 16595,
-   "sha256": "2deda8e4601795f228dd34eb030641d525818c145fe5891257eaa673f5072086",
+   "sha256": "957ee6c57b80523a195582ce6855bc6971a99bcb0bc212ec601ff250de2493a9",
    "source_path": "phase7_simulation/campaign/tests/test_paper_campaign.py"
   },
   {
@@ -3824,39 +3824,39 @@
    "source_path": "phase7_simulation/campaign/validate_benchmark.py"
   },
   {
-   "bundle_path": "experiments/routing-model/darov/README.md",
+   "bundle_path": "experiments/routing-model/s2rov/README.md",
    "bytes": 1193,
-   "sha256": "7bd317464d49fb7780245361fd0e292341fdbc12a399aba819c201b20e0c7fc1",
+   "sha256": "6955ad47beca4d5fa03817592f64022f1d5a557efa55a01c804e4bc697a1b54e",
    "source_path": "phase7_simulation/darov/README.md"
   },
   {
-   "bundle_path": "experiments/routing-model/darov/__init__.py",
+   "bundle_path": "experiments/routing-model/s2rov/__init__.py",
    "bytes": 120,
-   "sha256": "47dcfad1fb389f7f4343b140d7a3578b0b0aa1d4b73ca2229a28bbc6c824bdfd",
+   "sha256": "849db3d21687a9ca3fc8c658e7883fcf1d5dfcb262ad66aa1b608b4e276849ed",
    "source_path": "phase7_simulation/darov/__init__.py"
   },
   {
-   "bundle_path": "experiments/routing-model/darov/pilot.py",
+   "bundle_path": "experiments/routing-model/s2rov/pilot.py",
    "bytes": 14758,
-   "sha256": "80daa8779d857750f9051d4e1e19b5c0efabffb6aacd2e1f675013c18710f060",
+   "sha256": "5e435fc233d369259014a1c7af4a69579b919638bcf468ff45d795b04859f44f",
    "source_path": "phase7_simulation/darov/pilot.py"
   },
   {
-   "bundle_path": "experiments/routing-model/darov/policy.py",
+   "bundle_path": "experiments/routing-model/s2rov/policy.py",
    "bytes": 2243,
-   "sha256": "081a1365e9a5ca84d2196b71ed494df4c40ee08f66f97e946a4c0aa87025c5e3",
+   "sha256": "747e68237dce9903e92ffa31bf81b6f3c2a51174699751b2b0d9f4cff46bfd8f",
    "source_path": "phase7_simulation/darov/policy.py"
   },
   {
-   "bundle_path": "experiments/routing-model/darov/tests/test_pilot.py",
+   "bundle_path": "experiments/routing-model/s2rov/tests/test_pilot.py",
    "bytes": 5530,
-   "sha256": "ec31889fdba4471caeecc94ee3041f44f7933500b58d07977a35104539d46ae5",
+   "sha256": "68b999b1865ac526ccbcd4e97106a1e9d830f916bdb8eb9d00ca6275714a420c",
    "source_path": "phase7_simulation/darov/tests/test_pilot.py"
   },
   {
    "bundle_path": "experiments/routing-model/evaluation/bgpy.md",
    "bytes": 17867,
-   "sha256": "7788d902f40bdcae0883c7ff87d25938e8960182f6c6cf7e7aedb7ef95f7e321",
+   "sha256": "a432d8baa90df2668220221da4fc470e7529da77ba38b4fcf0157fddd52342ee",
    "source_path": "phase7_simulation/evaluation/bgpy.md"
   },
   {
@@ -3868,25 +3868,25 @@
   {
    "bundle_path": "experiments/routing-model/evaluation/internetsim.md",
    "bytes": 12540,
-   "sha256": "5ca6ece717a321f5f224ab0beb0ed3b8ec35b0af901a0a90c9b56463eff16640",
+   "sha256": "bb4d5c9be96548035e5af2429604484908065bbe387460bd6430f1127b234ff6",
    "source_path": "phase7_simulation/evaluation/internetsim.md"
   },
   {
    "bundle_path": "experiments/routing-model/evaluation/legacy_joint_diagnostic.py",
    "bytes": 44261,
-   "sha256": "886429796712ea4588df6d7859a5a5eea0a994c7b073509c3eb4273cfeca473e",
+   "sha256": "ade77b3a643116ff2d3a1778545fa64bd07938b484b4037737719864cda8da78",
    "source_path": "phase7_simulation/evaluation/legacy_joint_diagnostic.py"
   },
   {
    "bundle_path": "experiments/routing-model/evaluation/paper_campaign_contract.md",
    "bytes": 11017,
-   "sha256": "72521f48c73b5011befa432a8d701c957d525f6aa879ccb40ce85b1c8b542196",
+   "sha256": "e4b74b1465985b02fee57b456c99361e4ac5562781f4779768eacd3ce54fbcdf",
    "source_path": "phase7_simulation/evaluation/paper_campaign_contract.md"
   },
   {
    "bundle_path": "experiments/routing-model/evaluation/requirements.md",
    "bytes": 21712,
-   "sha256": "123e6889800ee7ead94d24e9a29c6e5c94be862210e63dacb1cdff580765f3d3",
+   "sha256": "5aae85c37d6dfc57475e4a4d8487954c8477908e0029e0f29af4917df441ba51",
    "source_path": "phase7_simulation/evaluation/requirements.md"
   },
   {
@@ -3964,13 +3964,13 @@
   {
    "bundle_path": "results/tables/routing-model/results/deployment_grid_extension_smoke/manifest.json",
    "bytes": 37857,
-   "sha256": "96513f1a9ff5df4bb82081543531073c3df27fd7ebb8b9c9c110dec0af241e71",
+   "sha256": "c0809cad25d64664dc14cc1472b1d9f546889f095370aceb46715e570095f338",
    "source_path": "phase7_simulation/results/deployment_grid_extension_smoke/manifest.json"
   },
   {
    "bundle_path": "results/tables/routing-model/results/full_graph_gate/summary.json",
    "bytes": 68736,
-   "sha256": "5541de843d424ffa1cd6b6ed6d7852ef00148a74abb05992c77b1dd61d348314",
+   "sha256": "d3afa94db876bd5883e9d94569f2461290ac533b5e9431354ffb2a76366f3a43",
    "source_path": "phase7_simulation/results/full_graph_gate/summary.json"
   },
   {
@@ -3988,19 +3988,19 @@
   {
    "bundle_path": "results/tables/routing-model/results/ipv6_sensitivity/manifest.json",
    "bytes": 110746,
-   "sha256": "e25208d0f3e66e8c4a59c31fb457967bfe551da792cc3ed01a2afd1708ea2762",
+   "sha256": "5e386aa23fa2a98a456029d8a7e6ff648e01c7e8aee375afcc4c327b43877472",
    "source_path": "phase7_simulation/results/ipv6_sensitivity/manifest.json"
   },
   {
    "bundle_path": "results/tables/routing-model/results/ipv6_sensitivity_smoke/manifest_snapshot.json",
    "bytes": 110746,
-   "sha256": "a372b9263460b0609669b6365fdfe30a6ab459f2bf8d654f6083812751616f95",
+   "sha256": "5f223a1a79c01969671f4701aa647e35e2243fab6afbf050125c78be956bc75f",
    "source_path": "phase7_simulation/results/ipv6_sensitivity_smoke/manifest_snapshot.json"
   },
   {
    "bundle_path": "experiments/routing-model/results/paper_campaign/FINAL_REPORT.md",
    "bytes": 10106,
-   "sha256": "5b38692feb9b3c8176cd7de8ad868a689f780799abecb4782ae03e1320a2c6ca",
+   "sha256": "6d5e6d503c7ad012645c4bacec380379eda3692755696898635884c7ddbbc0b5",
    "source_path": "phase7_simulation/results/paper_campaign/FINAL_REPORT.md"
   },
   {
@@ -4078,19 +4078,19 @@
   {
    "bundle_path": "experiments/attack-reachability/__init__.py",
    "bytes": 97,
-   "sha256": "e172b37c68fe7725b39ef40980465879cbb16fe841f87e5200828e60645b2826",
+   "sha256": "2f2fd68c734378fb7472a9b260babe61d8bda7086dea4bfce9f8f3e6393ad8f9",
    "source_path": "phase8_sibling_sensitivity/__init__.py"
   },
   {
    "bundle_path": "experiments/attack-reachability/analyze.py",
    "bytes": 29269,
-   "sha256": "4eb56d0536f6b76dd89acf45ff0bc268c0962ea929acbe2c11c02a04eb54a4d2",
+   "sha256": "570cc32fb88721df6c718cfb135fc109c8bd75fe5fa06b6829532822b1b2d16b",
    "source_path": "phase8_sibling_sensitivity/analyze.py"
   },
   {
    "bundle_path": "results/tables/attack-reachability/failed_plan_relative_path_20260823/manifest.json",
    "bytes": 244625,
-   "sha256": "5de7f0b8577ba437344b584cdf0f3c04dae2a0b481ba59da149e818106b80ce8",
+   "sha256": "36e91e629fece442ff91cc8ec5223798728b16e1d96c64e66f35753994a864b8",
    "source_path": "phase8_sibling_sensitivity/failed_plan_relative_path_20260823/manifest.json"
   },
   {
@@ -4102,7 +4102,7 @@
   {
    "bundle_path": "experiments/attack-reachability/results/analysis/RESULTS.md",
    "bytes": 1176,
-   "sha256": "6973a3a6007f3436c820ffbb5e15cb06743bad5cd63da542712de3fba4a8c2d7",
+   "sha256": "b087401942126d4f9a97a88817672f10ba1df8c280baf7c6b8d4e0ba621a724a",
    "source_path": "phase8_sibling_sensitivity/results/analysis/RESULTS.md"
   },
   {
@@ -4138,7 +4138,7 @@
   {
    "bundle_path": "experiments/attack-reachability/results/analysis_recheck/RESULTS.md",
    "bytes": 1176,
-   "sha256": "6973a3a6007f3436c820ffbb5e15cb06743bad5cd63da542712de3fba4a8c2d7",
+   "sha256": "b087401942126d4f9a97a88817672f10ba1df8c280baf7c6b8d4e0ba621a724a",
    "source_path": "phase8_sibling_sensitivity/results/analysis_recheck/RESULTS.md"
   },
   {
@@ -4168,25 +4168,25 @@
   {
    "bundle_path": "results/tables/attack-reachability/results/manifest.json",
    "bytes": 244738,
-   "sha256": "9e6cd9431e9bc460d71efd852c155a7990e9248852133be71e939559448b48f4",
+   "sha256": "69257b117f1db9fa0e1a38d75b0774df0b81675541207e076d5ecc7d9fc28171",
    "source_path": "phase8_sibling_sensitivity/results/manifest.json"
   },
   {
    "bundle_path": "experiments/attack-reachability/runner.py",
    "bytes": 74057,
-   "sha256": "26413a8b2cd5728f185c4174d0a055b37864767575217cc027d0ae8f9c96a855",
+   "sha256": "cbb8e6df9e0d9afa58adfcd47c00ed32309d89a351f08d894c46b26868e29eab",
    "source_path": "phase8_sibling_sensitivity/runner.py"
   },
   {
    "bundle_path": "experiments/attack-reachability/tests/test_analyze.py",
    "bytes": 8716,
-   "sha256": "581bd7892688c9b37ccfc16e4dde057844d2677dd2f74b8407d46fe5acbab3ef",
+   "sha256": "da465d74ac55218d0920970445d6ad608aa3ecc113e12865aa902e4783d9bc0a",
    "source_path": "phase8_sibling_sensitivity/tests/test_analyze.py"
   },
   {
    "bundle_path": "experiments/attack-reachability/tests/test_runner.py",
    "bytes": 11636,
-   "sha256": "03602a5194fdab4f20cc838b3a9f57a67bf6fa9ab9675396de69d0d56d2d702f",
+   "sha256": "27ddedb4bbbe755ec6845f8bf012bc0cf6e4c6aa7fbf79083af138ddbac225e5",
    "source_path": "phase8_sibling_sensitivity/tests/test_runner.py"
   },
   {
@@ -4240,7 +4240,7 @@
   {
    "bundle_path": "experiments/semantic-gate/frozen_v3/DESIGN.md",
    "bytes": 5507,
-   "sha256": "62ee7aa489c703bbc0891710a2aae669410900253382a37fe672003d17500916",
+   "sha256": "c62e93d15d16cba2946f2c4d5ea2ecbde7dbf951dae2dc5a58a06f33e4ec0eec",
    "source_path": "phase10_semantic_gate/frozen_v3/DESIGN.md"
   },
   {
@@ -4258,13 +4258,13 @@
   {
    "bundle_path": "experiments/semantic-gate/frozen_v3/daroa.py",
    "bytes": 15316,
-   "sha256": "4aa40fb8736de32d28041ba3b87260e96cbc91ea2e8ed20d8550d17706dff7e8",
+   "sha256": "9d44cb18f05eb1e3c02c9666aa1792beddb662123d37973db8bb3d5cd07110c2",
    "source_path": "phase10_semantic_gate/frozen_v3/daroa.py"
   },
   {
    "bundle_path": "experiments/semantic-gate/frozen_v3/flatten.py",
    "bytes": 2418,
-   "sha256": "c7c09779f6b25361a2764ffae127e58cfe436d5c89e787fedf43a6756a7240c0",
+   "sha256": "df46ada29029d4a15ea2ce4dfce70bd24ba086bc9f836afec8b5b9b6d1a56228",
    "source_path": "phase10_semantic_gate/frozen_v3/flatten.py"
   },
   {
@@ -4570,5 +4570,6 @@
  ],
  "generated_by": "tools/prepare_artifact.py",
  "size_cap_bytes": 2097152,
+ "source_path": "path in the authors' working repository, kept verbatim for traceability; it still uses the development codename for S\u00b2-ROV",
  "total_bytes": 13676974
 }

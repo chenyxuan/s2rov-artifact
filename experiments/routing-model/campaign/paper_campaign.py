@@ -1,4 +1,4 @@
-"""Paper-scale, checkpointable BGPy campaign for DA-ROV.
+"""Paper-scale, checkpointable BGPy campaign for S2-ROV.
 
 This module keeps simulator code outside ``vendor``.  The manifest is the
 frozen experimental contract: 200 unique-holder units, three within-unit
@@ -50,7 +50,7 @@ from phase7_simulation.campaign.full_graph_gate import (
     TOPOLOGY_PATH,
     VENDOR_PATH,
     CandidateRow,
-    DAROV,
+    S2ROV,
     PairSpec,
     PeakRSSMonitor,
     _trace_destination,
@@ -1502,7 +1502,7 @@ def validate_success_result_row(
     expected_assignments = {
         "bgp": context.topology_asns - len(context.fixed_rov_asns),
         "rov": len(context.fixed_rov_asns) - expected_count,
-        "darov": expected_count,
+        "s2rov": expected_count,
     }
     if assignments != expected_assignments:
         raise CampaignContractError(
@@ -1698,7 +1698,7 @@ def run_paper_trial(
 ) -> dict[str, Any]:
     pair = _unit_pair(unit, trial.attacker_class)
     da_asns = _resolve_da_asns(trial, rov_asns, orders)
-    DAROV.configure(make_open_policy(pair))
+    S2ROV.configure(make_open_policy(pair))
     spec = PaperExecutionSpec(
         pair=pair,
         lane=trial.lane,
