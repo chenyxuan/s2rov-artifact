@@ -4622,8 +4622,8 @@
   },
   {
    "bundle_path": "EXCLUDED-RAW-DATA.md",
-   "bytes": 3915,
-   "sha256": "e86c0cc8170b4f12f178a0343d32ab2eddcb39e4c9cac04a8a2cce5e0a2431fa",
+   "bytes": 4027,
+   "sha256": "d41b9e2be57504296ef61e7b9bc3314465780f9a6e56d38163b15affcb4ca926",
    "source_path": "tools/artifact_EXCLUDED.md"
   },
   {
@@ -4666,5 +4666,5 @@
  "generated_by": "tools/prepare_artifact.py",
  "size_cap_bytes": 2097152,
  "source_path": "where the file came from, under the naming used here rather than the authors' internal directory names",
- "total_bytes": 13763170
+ "total_bytes": 13763282
 }
