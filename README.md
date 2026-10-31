@@ -11,6 +11,7 @@ implementation/   the DAROA codec, the four-state classifier, the prototype
 experiments/      one directory per experiment, named for what it does
 results/          the reported tables and the ledger of quoted numbers
 figure-data/      the plotted data behind the figures
+verify.py         checks this tree against MANIFEST.json
 ```
 
 ## What the paper promises, and where it is
@@ -49,10 +50,11 @@ a frozen contract, an `EXPERIMENT_CONTRACT.md`.
 ## Verifying the bundle
 
 ```bash
-python3 tools/prepare_artifact.py --check
+python3 verify.py
 ```
 
-Recomputes SHA-256 for every file in `MANIFEST.json`.
+Recomputes SHA-256 for every bundled file against `MANIFEST.json` and exits
+non-zero on any missing or modified file.
 
 ## Notes on paths
 
