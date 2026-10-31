@@ -1,0 +1,59 @@
+{
+  "bootstrap": {
+    "inference_target": "finite frozen eligible-holder frame, conditional on topology, ROV set, sampled within-holder scenario, attacker assignments, and five frozen random deployment orders",
+    "interval": "pointwise rescaled-bootstrap percentile 95%",
+    "method": "stratified paired holder rescaled bootstrap for SRSWOR with finite-population correction",
+    "replicate_weight_totals": "each stratum sums to N_h after applying design weight N_h/n_h",
+    "replicates": 10000,
+    "rescaled_count_formula": "c_hi=1+a_h*(m_hi-1), a_h=sqrt(n_h*(1-n_h/N_h)/(n_h-1)), m_h~Multinomial(n_h;1/n_h,...,1/n_h)",
+    "seed": 20260804
+  },
+  "checks": {
+    "attacker_assignment_matches_selected_unit": true,
+    "child_route_mechanism_summarized_separately": true,
+    "deployment_order_prefix_sets_valid": true,
+    "expected_scenario_ids_exact": true,
+    "four_stratum_holder_design": true,
+    "manifest_self_hash_and_scenario_digest_valid": true,
+    "partitions_complete": true,
+    "physical_cell_grid_complete": true,
+    "policy_assignment_counts_valid": true,
+    "population_denominators_fixed_across_scenarios": true,
+    "population_partitions_additive": true,
+    "random_orders_averaged_within_holder_first": true,
+    "result_metadata_matches_trial_plan": true,
+    "scenario_identity_matches_selected_unit": true,
+    "scenario_ids_unique": true,
+    "selected_roots_and_attacker_assignments_valid": true,
+    "srswor_finite_population_rescaling": true,
+    "summary_cell_grid_complete": true,
+    "zero_upgrade_announcement_matched": true
+  },
+  "contract_version": "phase7-paper-campaign-v1",
+  "expected_scenario_rows": 36800,
+  "expected_scenarios_per_holder": 184,
+  "expected_summary_cells": 1152,
+  "holder_contrast_rows": 230400,
+  "independent_unit": "holder_asn",
+  "inputs": {
+    "manifest": "phase7_simulation/results/paper_campaign/manifest.json",
+    "manifest_sha256": "a674b87afd90716521f19673c4ddbd1153c1b911ec5021a99e0eabe579bcbeae",
+    "result_shards": [
+      {
+        "path": "phase7_simulation/results/paper_campaign/raw_scenarios.jsonl",
+        "sha256": "fb9ec8fa80d41b5a98b4bc956d82ebfec0514eaab27fd183f86683dfed6925b7"
+      }
+    ]
+  },
+  "metric_levels": {
+    "primary": "destination",
+    "secondary_mechanism": "child"
+  },
+  "n_ases_as_independent_units": 0,
+  "n_independent_holders": 200,
+  "n_random_orders_as_independent_units": 0,
+  "scenario_rows": 36800,
+  "schema_version": 1,
+  "status": "VERIFIED",
+  "summary_cells": 1152
+}

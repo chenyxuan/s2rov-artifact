@@ -1,0 +1,4 @@
+test,std_prefix,std_asn,std_maxlen,flattened_vrp_count,expected_vrps
+enterprise_pi,203.0.113.0/24,64500,24,1,1
+isp_openscope_marker,10.0.0.0/16,64501,24,1,1
+isp_explicit_customers,10.0.0.0/16,64501,24,3,3

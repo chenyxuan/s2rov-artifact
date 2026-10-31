@@ -1,0 +1,202 @@
+{
+  "derivation": {
+    "asrank_order": "descending customer-cone AS count",
+    "degree": "number of unique AS neighbors",
+    "implementation": "BGPy 13.0.10",
+    "implementation_commit": "c3b1be48148e8c246a60b9dec6513b688a4736a5"
+  },
+  "schema": "openscope-placement-as-scores-v1",
+  "scores": [
+    {
+      "asn": 174,
+      "customer_cone_asns": 70111,
+      "total_degree": 6584
+    },
+    {
+      "asn": 680,
+      "customer_cone_asns": 67,
+      "total_degree": 383
+    },
+    {
+      "asn": 2686,
+      "customer_cone_asns": 295,
+      "total_degree": 348
+    },
+    {
+      "asn": 3216,
+      "customer_cone_asns": 42085,
+      "total_degree": 2007
+    },
+    {
+      "asn": 3257,
+      "customer_cone_asns": 68289,
+      "total_degree": 1844
+    },
+    {
+      "asn": 7257,
+      "customer_cone_asns": 0,
+      "total_degree": 1
+    },
+    {
+      "asn": 8851,
+      "customer_cone_asns": 4,
+      "total_degree": 611
+    },
+    {
+      "asn": 9009,
+      "customer_cone_asns": 10206,
+      "total_degree": 658
+    },
+    {
+      "asn": 9125,
+      "customer_cone_asns": 39820,
+      "total_degree": 127
+    },
+    {
+      "asn": 12332,
+      "customer_cone_asns": 10,
+      "total_degree": 11
+    },
+    {
+      "asn": 12389,
+      "customer_cone_asns": 43393,
+      "total_degree": 1599
+    },
+    {
+      "asn": 13237,
+      "customer_cone_asns": 352,
+      "total_degree": 2465
+    },
+    {
+      "asn": 14537,
+      "customer_cone_asns": 14,
+      "total_degree": 3999
+    },
+    {
+      "asn": 15897,
+      "customer_cone_asns": 0,
+      "total_degree": 1
+    },
+    {
+      "asn": 20773,
+      "customer_cone_asns": 6,
+      "total_degree": 140
+    },
+    {
+      "asn": 21769,
+      "customer_cone_asns": 1,
+      "total_degree": 3
+    },
+    {
+      "asn": 29608,
+      "customer_cone_asns": 27,
+      "total_degree": 60
+    },
+    {
+      "asn": 29670,
+      "customer_cone_asns": 16,
+      "total_degree": 80
+    },
+    {
+      "asn": 31133,
+      "customer_cone_asns": 41998,
+      "total_degree": 1093
+    },
+    {
+      "asn": 31400,
+      "customer_cone_asns": 0,
+      "total_degree": 1
+    },
+    {
+      "asn": 31500,
+      "customer_cone_asns": 40235,
+      "total_degree": 1285
+    },
+    {
+      "asn": 34011,
+      "customer_cone_asns": 0,
+      "total_degree": 1
+    },
+    {
+      "asn": 35154,
+      "customer_cone_asns": 0,
+      "total_degree": 1
+    },
+    {
+      "asn": 35625,
+      "customer_cone_asns": 61823,
+      "total_degree": 858
+    },
+    {
+      "asn": 44103,
+      "customer_cone_asns": 11,
+      "total_degree": 64
+    },
+    {
+      "asn": 44539,
+      "customer_cone_asns": 23,
+      "total_degree": 47
+    },
+    {
+      "asn": 49063,
+      "customer_cone_asns": 256,
+      "total_degree": 429
+    },
+    {
+      "asn": 49531,
+      "customer_cone_asns": 9,
+      "total_degree": 392
+    },
+    {
+      "asn": 57037,
+      "customer_cone_asns": 0,
+      "total_degree": 2
+    },
+    {
+      "asn": 57344,
+      "customer_cone_asns": 198,
+      "total_degree": 913
+    },
+    {
+      "asn": 58015,
+      "customer_cone_asns": 5,
+      "total_degree": 45
+    },
+    {
+      "asn": 60539,
+      "customer_cone_asns": 6476,
+      "total_degree": 63
+    },
+    {
+      "asn": 62240,
+      "customer_cone_asns": 36,
+      "total_degree": 713
+    },
+    {
+      "asn": 199087,
+      "customer_cone_asns": 1,
+      "total_degree": 2
+    },
+    {
+      "asn": 202069,
+      "customer_cone_asns": 0,
+      "total_degree": 2
+    },
+    {
+      "asn": 211507,
+      "customer_cone_asns": 0,
+      "total_degree": 5
+    },
+    {
+      "asn": 213518,
+      "customer_cone_asns": 0,
+      "total_degree": 1
+    }
+  ],
+  "source": {
+    "dataset": "CAIDA AS Relationships serial-2",
+    "snapshot": "2026-07-01",
+    "uncompressed_sha256": "aabd0b2154d9dec5b4c0b63d1d9f88cbfbf381bbc4d2246fe0471dd4aacf2181",
+    "url": "https://publicdata.caida.org/datasets/as-relationships/serial-2/20260701.as-rel2.txt.bz2"
+  }
+}

@@ -1,0 +1,105 @@
+metric,value
+bgp.counts.accepted_records,1393017
+bgp.counts.ambiguous_prefixes,253
+bgp.counts.ambiguous_terminal_segment_records,253
+bgp.counts.duplicate_prefix_origin_pairs_collapsed,0
+bgp.counts.moas_prefixes,7241
+bgp.counts.records_seen,1393270
+bgp.counts.unique_prefix_origin_pairs,1393017
+bgp.counts.unique_prefixes,1384474
+bgp.provided,True
+bgp.source_kind,origin_csv
+containment.IPv4.eligible_cidr_roots,62792
+containment.IPv4.eligible_non_cidr_roots,3505
+containment.IPv4.endpoints_matched_to_nearest_root,3417197
+containment.IPv4.endpoints_nearest_root_non_cidr_excluded,453842
+containment.IPv4.hops_matched_to_nearest_root,15244
+containment.IPv4.hops_nearest_root_non_cidr_excluded,2022
+containment.IPv6.eligible_cidr_roots,22637
+containment.IPv6.endpoints_matched_to_nearest_root,844614
+containment.IPv6.hops_matched_to_nearest_root,21197
+range_resolution.conflicting_ranges,0
+range_resolution.eligible_variants_excluded_by_same_range_conflict,0
+range_resolution.families.IPv4.clean_endpoint_ranges,3901347
+range_resolution.families.IPv4.clean_hop_ranges,17266
+range_resolution.families.IPv4.clean_root_ranges,66297
+range_resolution.families.IPv4.non_cidr_endpoint_ranges_excluded,30308
+range_resolution.families.IPv4.non_cidr_hop_ranges_retained,405
+range_resolution.families.IPv4.non_cidr_root_ranges_excluded,3505
+range_resolution.families.IPv6.clean_endpoint_ranges,844614
+range_resolution.families.IPv6.clean_hop_ranges,21197
+range_resolution.families.IPv6.clean_root_ranges,22637
+range_resolution.families.IPv6.non_cidr_endpoint_ranges_excluded,0
+range_resolution.families.IPv6.non_cidr_hop_ranges_retained,0
+range_resolution.families.IPv6.non_cidr_root_ranges_excluded,0
+range_resolution.hop_conflict_barriers,0
+range_resolution.raw_objects_on_conflicting_ranges,0
+range_resolution.root_conflict_barriers,0
+registry_ingest.counts.IPv4.endpoint_objects_seen,3901347
+registry_ingest.counts.IPv4.hop_objects_seen,17266
+registry_ingest.counts.IPv4.ip_objects_seen,4127673
+registry_ingest.counts.IPv4.org_handle_case_normalizations,10683
+registry_ingest.counts.IPv4.root_objects_seen,66297
+registry_ingest.counts.IPv6.endpoint_objects_seen,844614
+registry_ingest.counts.IPv6.hop_objects_seen,21197
+registry_ingest.counts.IPv6.ip_objects_seen,964638
+registry_ingest.counts.IPv6.org_handle_case_normalizations,2623
+registry_ingest.counts.IPv6.root_objects_seen,22637
+registry_ingest.counts.IPv6.status_comment_suffixes_normalized,14
+registry_ingest.counts.duplicate_object_occurrences_collapsed,0
+registry_ingest.counts.eligible_objects_seen,4873358
+registry_ingest.counts.ip_objects_seen,5092311
+registry_ingest.counts.org_handle_case_normalizations,13306
+registry_ingest.counts.range_fingerprint_variants,5092311
+registry_ingest.counts.status_comment_suffixes_normalized,14
+registry_ingest.status_counts.IPv4.AGGREGATED-BY-LIR,868
+registry_ingest.status_counts.IPv4.ALLOCATED PA,66297
+registry_ingest.status_counts.IPv4.ALLOCATED UNSPECIFIED,4949
+registry_ingest.status_counts.IPv4.ALLOCATED-ASSIGNED PA,2215
+registry_ingest.status_counts.IPv4.ASSIGNED ANYCAST,50
+registry_ingest.status_counts.IPv4.ASSIGNED PA,3901347
+registry_ingest.status_counts.IPv4.ASSIGNED PI,19463
+registry_ingest.status_counts.IPv4.LEGACY,104569
+registry_ingest.status_counts.IPv4.LIR-PARTITIONED PA,10649
+registry_ingest.status_counts.IPv4.SUB-ALLOCATED PA,17266
+registry_ingest.status_counts.IPv6.AGGREGATED-BY-LIR,72076
+registry_ingest.status_counts.IPv6.ALLOCATED-BY-LIR,21197
+registry_ingest.status_counts.IPv6.ALLOCATED-BY-RIR,22637
+registry_ingest.status_counts.IPv6.ASSIGNED,844614
+registry_ingest.status_counts.IPv6.ASSIGNED ANYCAST,68
+registry_ingest.status_counts.IPv6.ASSIGNED PI,4046
+results.IPv4.direct_paths,3365826
+results.IPv4.disjoint_origin_direct_paths,6790
+results.IPv4.disjoint_origin_registry_indirect_paths,504
+results.IPv4.exact_routed_direct_paths,21922
+results.IPv4.exact_routed_registry_indirect_paths,622
+results.IPv4.matched_endpoints,3417197
+results.IPv4.org_confirmed_abc_conflicts,82
+results.IPv4.org_confirmed_abc_paths,3353
+results.IPv4.origin_ambiguous_direct_paths,50
+results.IPv4.origin_ambiguous_registry_indirect_paths,18
+results.IPv4.overlapping_origin_direct_paths,15132
+results.IPv4.overlapping_origin_registry_indirect_paths,118
+results.IPv4.potential_conflict_rate_pct,81.02893890675242
+results.IPv4.potential_conflict_root_prefixes,83
+results.IPv4.potential_conflicts,504
+results.IPv4.registry_indirect_paths,51371
+results.IPv4.unrouted_direct_paths,3343854
+results.IPv4.unrouted_registry_indirect_paths,50731
+results.IPv6.direct_paths,722434
+results.IPv6.disjoint_origin_direct_paths,318
+results.IPv6.disjoint_origin_registry_indirect_paths,83
+results.IPv6.exact_routed_direct_paths,1251
+results.IPv6.exact_routed_registry_indirect_paths,140
+results.IPv6.matched_endpoints,844614
+results.IPv6.org_confirmed_abc_paths,2143
+results.IPv6.origin_ambiguous_direct_paths,12
+results.IPv6.origin_ambiguous_registry_indirect_paths,2
+results.IPv6.overlapping_origin_direct_paths,933
+results.IPv6.overlapping_origin_registry_indirect_paths,57
+results.IPv6.potential_conflict_rate_pct,59.285714285714285
+results.IPv6.potential_conflict_root_prefixes,14
+results.IPv6.potential_conflicts,83
+results.IPv6.registry_indirect_paths,122180
+results.IPv6.unrouted_direct_paths,721171
+results.IPv6.unrouted_registry_indirect_paths,122038

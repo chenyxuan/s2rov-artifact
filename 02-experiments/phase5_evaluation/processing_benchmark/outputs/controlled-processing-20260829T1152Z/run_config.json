@@ -1,0 +1,29 @@
+{
+  "batch_size": 4096,
+  "classifier": "<repo>/phase4_encoding/scripts/utils/daroa.py",
+  "classifier_sha256": "fb0e251573979653a54ea79b1b2c3398bf30c4c99aed2a66c8edda458c544395",
+  "classify_repetitions": 5,
+  "cpu": 31,
+  "created_utc": "2026-08-29T11:52:20.415572Z",
+  "ipv4_workload": "<repo>/phase5_evaluation/processing_benchmark/outputs/processing-ipv4-dualstack-20260828/input/rrc00_20260624_ipv4_prefix_origins.csv",
+  "ipv6_workload": "<repo>/phase5_evaluation/processing_benchmark/outputs/processing-ipv6-dualstack-20260829/input/rrc00_20260624_ipv6_prefix_origins.csv",
+  "load_repetitions": 20,
+  "platform": "Linux-6.8.0-90-generic-aarch64-with-glibc2.39",
+  "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+  "query_count": 8192,
+  "query_loops": 16,
+  "run_id": "controlled-processing-20260829T1152Z",
+  "schema_version": "controlled-policy-processing-v1",
+  "script": "<repo>/phase5_evaluation/processing_benchmark/run_controlled_policy_benchmark.py",
+  "script_sha256": "b3f83e091e5d3213ed25d64c572335fd0bfc104f2bb520d1b105a4fe2f561167",
+  "seed": 20260829,
+  "source_git_commit": "4ffaaedf25b70760f9adf11825bb2c15463f15d5",
+  "source_worktree_dirty": true,
+  "subprefix_counts": [
+    0,
+    64,
+    256
+  ],
+  "timed_calls_per_classify_worker": 131072,
+  "warmup": 8192
+}

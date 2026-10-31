@@ -1,0 +1,5 @@
+num_customers,num_stripes,add_stripe_ns,remove_stripe_ns,full_reencode_ns,add_vs_reencode,remove_vs_reencode
+10,11,10845,9537,318113,0.0x,0.0x
+50,51,40317,40869,1325837,0.0x,0.0x
+100,101,79354,82591,2593762,0.0x,0.0x
+200,201,156715,163481,5054876,0.0x,0.0x

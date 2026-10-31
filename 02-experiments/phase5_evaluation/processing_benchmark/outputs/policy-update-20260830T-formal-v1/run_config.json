@@ -1,0 +1,50 @@
+{
+  "accepted_source_run": "<repo>/phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-rules-v2",
+  "auditor": "<repo>/phase5_evaluation/processing_benchmark/audit_policy_update_benchmark.py",
+  "auditor_sha256": "44a7418a2246d12b15912b01518c3421d31dcf31658b0442c06b47696f21a380",
+  "classifier": "<repo>/phase4_encoding/scripts/utils/daroa.py",
+  "classifier_sha256": "fb0e251573979653a54ea79b1b2c3398bf30c4c99aed2a66c8edda458c544395",
+  "cpu": 31,
+  "created_utc": "2026-08-30T09:00:32.041663Z",
+  "excluded_scope": [
+    "file_reading",
+    "closed_policy_deserialization",
+    "closed_probe_precheck",
+    "garbage_collection",
+    "policy_distribution",
+    "router_installation"
+  ],
+  "expected_cells": 10,
+  "expected_worker_records": 200,
+  "input_manifest_sha256": "54d45c7dcc605e32f936518b9f6d35fa19bc1f000347e90741a5da24e6c3ee96",
+  "ip_versions": [
+    4,
+    6
+  ],
+  "platform": "Linux-6.8.0-90-generic-aarch64-with-glibc2.39",
+  "probe_query_index": 0,
+  "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+  "repetitions_per_cell": 20,
+  "rule_counts": [
+    1,
+    64,
+    256,
+    1024,
+    4096
+  ],
+  "run_id": "policy-update-20260830T-formal-v1",
+  "schedule_model": "one seeded shuffle of all AF-size-repetition conditions",
+  "schedule_sha256": "773e0ee7de23031a4c2dbd1d6749600ad17914346d1cbd213da3a235bc99511f",
+  "schema_version": "same-size-policy-update-v1",
+  "script": "<repo>/phase5_evaluation/processing_benchmark/run_policy_update_benchmark.py",
+  "script_sha256": "c98b0c4d28e0602e6555c04207feedecb10ef97debee850c2f2a73a59f6e918e",
+  "seed": 20260830,
+  "source_git_commit": "4ffaaedf25b70760f9adf11825bb2c15463f15d5",
+  "source_worktree_dirty": true,
+  "timed_scope": [
+    "DAROA.deserialize(open_payload)",
+    "active_policy_pointer_replacement",
+    "first_validate_route"
+  ],
+  "worker_process_model": "one fresh subprocess per observation"
+}

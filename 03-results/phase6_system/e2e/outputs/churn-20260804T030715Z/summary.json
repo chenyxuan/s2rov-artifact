@@ -1,0 +1,261 @@
+{
+  "checks": {
+    "all_trial_assertions_pass": true,
+    "all_trials_retained": true,
+    "da_finishes_delegated_and_accepted": true,
+    "da_has_no_invalid_state": true,
+    "da_policy_unchanged_during_churn": true,
+    "exact_exposes_invalid_new_route": true,
+    "exact_finishes_valid_and_accepted": true,
+    "exact_updates_each_transition": true,
+    "lane_counts_match": true
+  },
+  "execution_blocks": {
+    "da-2": {
+      "block": 2,
+      "end_to_end_completion": {
+        "max_ms": 1020.124,
+        "median_ms": 864.321,
+        "min_ms": 828.536,
+        "n": 30,
+        "p95_ms": 1016.273
+      },
+      "lane": "da",
+      "trials": 30,
+      "unavailability": {
+        "max_ms": 690.566,
+        "median_ms": 621.276,
+        "min_ms": 596.658,
+        "n": 30,
+        "p95_ms": 660.527
+      }
+    },
+    "exact-1": {
+      "block": 1,
+      "end_to_end_completion": {
+        "max_ms": 3887.17,
+        "median_ms": 3529.169,
+        "min_ms": 1647.146,
+        "n": 15,
+        "p95_ms": 3887.17
+      },
+      "lane": "exact",
+      "trials": 15,
+      "unavailability": {
+        "max_ms": 3655.269,
+        "median_ms": 3268.517,
+        "min_ms": 1417.182,
+        "n": 15,
+        "p95_ms": 3655.269
+      }
+    },
+    "exact-3": {
+      "block": 3,
+      "end_to_end_completion": {
+        "max_ms": 3778.222,
+        "median_ms": 3643.335,
+        "min_ms": 1766.256,
+        "n": 15,
+        "p95_ms": 3778.222
+      },
+      "lane": "exact",
+      "trials": 15,
+      "unavailability": {
+        "max_ms": 3545.91,
+        "median_ms": 3262.425,
+        "min_ms": 1544.358,
+        "n": 15,
+        "p95_ms": 3545.91
+      }
+    }
+  },
+  "expected_trials_per_lane": 30,
+  "lanes": {
+    "da": {
+      "authorization_entry_changes_total": 0,
+      "authorization_to_completion": {
+        "max_ms": 0.0,
+        "median_ms": 0.0,
+        "min_ms": 0.0,
+        "n": 30,
+        "p95_ms": 0.0
+      },
+      "bgp_observation": {
+        "max_ms": 271.069,
+        "median_ms": 225.611,
+        "min_ms": 199.054,
+        "n": 30,
+        "p95_ms": 244.022
+      },
+      "end_to_end_completion": {
+        "max_ms": 1020.124,
+        "median_ms": 864.321,
+        "min_ms": 828.536,
+        "n": 30,
+        "p95_ms": 1016.273
+      },
+      "final_action_counts": {
+        "accept": 30
+      },
+      "final_state_counts": {
+        "Delegated": 30
+      },
+      "invalid_exposure": {
+        "max_ms": 0.0,
+        "median_ms": 0.0,
+        "min_ms": 0.0,
+        "n": 30,
+        "p95_ms": 0.0
+      },
+      "policy_digests": [
+        "9001687bb54c2b0b400de54c55592662d95af1901524b678fbc8af1027f49e96"
+      ],
+      "routinator_to_rtr": {
+        "max_ms": 0.0,
+        "median_ms": 0.0,
+        "min_ms": 0.0,
+        "n": 30,
+        "p95_ms": 0.0
+      },
+      "rtr_to_enforcement": {
+        "max_ms": 0.0,
+        "median_ms": 0.0,
+        "min_ms": 0.0,
+        "n": 30,
+        "p95_ms": 0.0
+      },
+      "signed_request_to_routinator": {
+        "max_ms": 0.0,
+        "median_ms": 0.0,
+        "min_ms": 0.0,
+        "n": 30,
+        "p95_ms": 0.0
+      },
+      "signed_update_transactions_total": 0,
+      "trials": 30,
+      "unavailability": {
+        "max_ms": 690.566,
+        "median_ms": 621.276,
+        "min_ms": 596.658,
+        "n": 30,
+        "p95_ms": 660.527
+      }
+    },
+    "exact": {
+      "authorization_entry_changes_total": 60,
+      "authorization_to_completion": {
+        "max_ms": 3048.653,
+        "median_ms": 2660.737,
+        "min_ms": 846.867,
+        "n": 30,
+        "p95_ms": 3012.841
+      },
+      "bgp_observation": {
+        "max_ms": 238.646,
+        "median_ms": 226.798,
+        "min_ms": 205.006,
+        "n": 30,
+        "p95_ms": 238.131
+      },
+      "end_to_end_completion": {
+        "max_ms": 3887.17,
+        "median_ms": 3585.577,
+        "min_ms": 1647.146,
+        "n": 30,
+        "p95_ms": 3859.481
+      },
+      "final_action_counts": {
+        "accept": 30
+      },
+      "final_state_counts": {
+        "Valid": 30
+      },
+      "invalid_exposure": {
+        "max_ms": 3416.227,
+        "median_ms": 3021.66,
+        "min_ms": 1194.794,
+        "n": 30,
+        "p95_ms": 3372.742
+      },
+      "policy_digests": [
+        "198c5dfeef5b2f1c667a37824c58072f8ef96857fd6de2d9f226884647d6f58f",
+        "29cf902804073c7ab255e9859fa2a0687021907d4611140a8b52fcd485434180"
+      ],
+      "routinator_to_rtr": {
+        "max_ms": 160.484,
+        "median_ms": 123.46,
+        "min_ms": 111.152,
+        "n": 30,
+        "p95_ms": 149.499
+      },
+      "rtr_to_enforcement": {
+        "max_ms": 408.323,
+        "median_ms": 387.172,
+        "min_ms": 365.995,
+        "n": 30,
+        "p95_ms": 399.676
+      },
+      "signed_request_to_routinator": {
+        "max_ms": 2552.675,
+        "median_ms": 2142.186,
+        "min_ms": 342.871,
+        "n": 30,
+        "p95_ms": 2507.182
+      },
+      "signed_update_transactions_total": 30,
+      "trials": 30,
+      "unavailability": {
+        "max_ms": 3655.269,
+        "median_ms": 3265.471,
+        "min_ms": 1417.182,
+        "n": 30,
+        "p95_ms": 3624.048
+      }
+    }
+  },
+  "passed": true,
+  "protocol": {
+    "da_transition": {
+      "authorization_entry_changes": 0,
+      "signed_update_transactions": 0
+    },
+    "design": "reactive break-before-make origin handoff",
+    "exact_transition": {
+      "authorization_entry_changes": 2,
+      "signed_update_transactions": 1
+    },
+    "execution_blocks": [
+      {
+        "block": 1,
+        "lane": "exact",
+        "trials": 15
+      },
+      {
+        "block": 2,
+        "lane": "da",
+        "trials": 30
+      },
+      {
+        "block": 3,
+        "lane": "exact",
+        "trials": 15
+      }
+    ],
+    "origins": [
+      8075,
+      18403
+    ],
+    "prefix": "10.0.10.0/24",
+    "setup_authorization_entry_changes": 5,
+    "setup_excluded_from_transition_metrics": true,
+    "setup_signed_update_transactions": 3,
+    "system_path": [
+      "Krill signing",
+      "RRDP",
+      "Routinator validation",
+      "FRR enforcement"
+    ],
+    "trials_per_lane": 30
+  },
+  "total_trials": 60
+}

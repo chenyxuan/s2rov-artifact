@@ -1,0 +1,74 @@
+{
+  "all_checks_pass": true,
+  "all_oracle_spot_checks_pass": true,
+  "all_policy_roundtrips_identical": true,
+  "all_route_counts_match": true,
+  "all_worker_records_present": true,
+  "checksums_by_policy_size": {
+    "1": [
+      "eac0741a493a5626018d67f66907dcdf082399b0ddab98b30c7eb3262b41c259"
+    ],
+    "1024": [
+      "f79d29353e7e094033990cbca1be7bef927e1fb07e09aa2a3dd709250bc26736"
+    ],
+    "256": [
+      "d7980c979dcdb50d5bf3100195307b18993b53d536a358522fba95dd2cba16a3"
+    ],
+    "4097": [
+      "25dce2e1635f03d2705ada8fb0711d79a19cf3c2c2ab122263e37f44045155fb"
+    ],
+    "64": [
+      "9c1817551d1fc5a540613d8f43aa61a8f3d333fcacdf8f37bc384e8dcb00ad95"
+    ]
+  },
+  "expected_worker_records": 30,
+  "one_checksum_per_policy_size": true,
+  "one_state_count_vector_per_policy_size": true,
+  "raw_batch_samples_csv_sha256": "17454ca8c1f69ff3fd550b224679e7b2cd85c4c70268633aca3c4a7d4484f84f",
+  "raw_runs_csv_sha256": "d6c1528dd92ab52cda9eb122e21c2a39ac67e5066094ada0b759fddfea4ff176",
+  "raw_worker_records": 30,
+  "schema_version": 1,
+  "state_counts_by_policy_size": {
+    "1": [
+      {
+        "Delegated": 1135129,
+        "Explicit": 112,
+        "Invalid": 226,
+        "NotFound": 0
+      }
+    ],
+    "1024": [
+      {
+        "Delegated": 1134064,
+        "Explicit": 1154,
+        "Invalid": 249,
+        "NotFound": 0
+      }
+    ],
+    "256": [
+      {
+        "Delegated": 1134838,
+        "Explicit": 374,
+        "Invalid": 255,
+        "NotFound": 0
+      }
+    ],
+    "4097": [
+      {
+        "Delegated": 1131023,
+        "Explicit": 4208,
+        "Invalid": 236,
+        "NotFound": 0
+      }
+    ],
+    "64": [
+      {
+        "Delegated": 1135057,
+        "Explicit": 184,
+        "Invalid": 226,
+        "NotFound": 0
+      }
+    ]
+  },
+  "summary_csv_sha256": "be534e0fed8e6a048102300f904bfe8d65ea9aa3685c887a30389cc03b4eda68"
+}

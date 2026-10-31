@@ -1,0 +1,142 @@
+{
+  "claim_boundary": "Descriptive latency of one single-core Python reference-engine policy replacement and first classification. It excludes file acquisition and distribution, relying-party refresh, RTR, router installation, and forwarding.",
+  "created_utc": "2026-08-30T13:56:35.865152Z",
+  "gates": {
+    "all_closed_probes_invalid": true,
+    "all_exclusions_confirmed": true,
+    "all_gates_pass": true,
+    "all_pointer_replacements_confirmed": true,
+    "all_roundtrips_identical": true,
+    "all_updated_probes_open_scope": true,
+    "all_worker_pids_unique": true,
+    "all_workers_are_child_processes": true,
+    "all_workers_on_cpu": true,
+    "exact_cell_matrix": true,
+    "expected_worker_records": 200,
+    "raw_worker_records": 200,
+    "twenty_fresh_workers_per_cell": true
+  },
+  "rows": [
+    {
+      "closed_serialized_bytes": 22,
+      "ip_version": 4,
+      "label": "IPv4",
+      "open_serialized_bytes": 22,
+      "repetitions": 20,
+      "rules": 1,
+      "update_ms_mean": 0.331044,
+      "update_ms_median": 0.323446,
+      "update_ms_q1": 0.31898925,
+      "update_ms_q3": 0.34943875
+    },
+    {
+      "closed_serialized_bytes": 652,
+      "ip_version": 4,
+      "label": "IPv4",
+      "open_serialized_bytes": 652,
+      "repetitions": 20,
+      "rules": 64,
+      "update_ms_mean": 4.6171939,
+      "update_ms_median": 4.6158115,
+      "update_ms_q1": 4.5564142499999996,
+      "update_ms_q3": 4.6831695
+    },
+    {
+      "closed_serialized_bytes": 2572,
+      "ip_version": 4,
+      "label": "IPv4",
+      "open_serialized_bytes": 2572,
+      "repetitions": 20,
+      "rules": 256,
+      "update_ms_mean": 17.3457573,
+      "update_ms_median": 17.228561,
+      "update_ms_q1": 16.941139749999998,
+      "update_ms_q3": 17.474452
+    },
+    {
+      "closed_serialized_bytes": 10252,
+      "ip_version": 4,
+      "label": "IPv4",
+      "open_serialized_bytes": 10252,
+      "repetitions": 20,
+      "rules": 1024,
+      "update_ms_mean": 68.10254575,
+      "update_ms_median": 67.97713300000001,
+      "update_ms_q1": 67.70271025,
+      "update_ms_q3": 68.5634195
+    },
+    {
+      "closed_serialized_bytes": 40972,
+      "ip_version": 4,
+      "label": "IPv4",
+      "open_serialized_bytes": 40972,
+      "repetitions": 20,
+      "rules": 4096,
+      "update_ms_mean": 273.04924855,
+      "update_ms_median": 273.876531,
+      "update_ms_q1": 266.71359025,
+      "update_ms_q3": 275.71704775
+    },
+    {
+      "closed_serialized_bytes": 40,
+      "ip_version": 6,
+      "label": "IPv6",
+      "open_serialized_bytes": 40,
+      "repetitions": 20,
+      "rules": 1,
+      "update_ms_mean": 0.46656555,
+      "update_ms_median": 0.4755775,
+      "update_ms_q1": 0.44931200000000004,
+      "update_ms_q3": 0.484607
+    },
+    {
+      "closed_serialized_bytes": 822,
+      "ip_version": 6,
+      "label": "IPv6",
+      "open_serialized_bytes": 822,
+      "repetitions": 20,
+      "rules": 64,
+      "update_ms_mean": 7.62994275,
+      "update_ms_median": 7.665411,
+      "update_ms_q1": 7.56340825,
+      "update_ms_q3": 7.784776750000001
+    },
+    {
+      "closed_serialized_bytes": 3200,
+      "ip_version": 6,
+      "label": "IPv6",
+      "open_serialized_bytes": 3200,
+      "repetitions": 20,
+      "rules": 256,
+      "update_ms_mean": 28.89234075,
+      "update_ms_median": 28.9435405,
+      "update_ms_q1": 28.465035999999998,
+      "update_ms_q3": 29.3891405
+    },
+    {
+      "closed_serialized_bytes": 12734,
+      "ip_version": 6,
+      "label": "IPv6",
+      "open_serialized_bytes": 12734,
+      "repetitions": 20,
+      "rules": 1024,
+      "update_ms_mean": 113.67727585,
+      "update_ms_median": 113.478812,
+      "update_ms_q1": 112.652895,
+      "update_ms_q3": 115.21987125
+    },
+    {
+      "closed_serialized_bytes": 50892,
+      "ip_version": 6,
+      "label": "IPv6",
+      "open_serialized_bytes": 50892,
+      "repetitions": 20,
+      "rules": 4096,
+      "update_ms_mean": 459.01222900000005,
+      "update_ms_median": 454.81374400000004,
+      "update_ms_q1": 452.37305225,
+      "update_ms_q3": 462.7527295
+    }
+  ],
+  "schema_version": "same-size-policy-update-v1"
+}

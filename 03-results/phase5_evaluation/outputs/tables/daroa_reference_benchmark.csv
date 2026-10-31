@@ -1,0 +1,5 @@
+explicit_customers,stripes,wire_bytes,queries_per_repetition,repetitions,median_ns_per_query,min_ns_per_query,max_ns_per_query,checksum
+1,2,32,20000,5,26504,26465,26522,100000
+16,17,182,20000,5,27107,27040,28471,100000
+256,257,2582,20000,5,26991,26929,27022,100000
+4096,4097,40982,20000,5,27367,27339,28904,100000

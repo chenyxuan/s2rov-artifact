@@ -1,0 +1,29 @@
+{
+  "address_family": "ipv4",
+  "checks": {
+    "address_family_matches": true,
+    "all_route_checks_pass": true,
+    "durations_are_finite_and_positive": true,
+    "exact_80_sample_matrix": true,
+    "one_enforcement_snapshot_per_sample": true,
+    "one_route_check_per_transition": true,
+    "payload_levels_are_complete": true,
+    "raw_medians_match_summary": true,
+    "summary_counts_match_raw": true,
+    "summary_passed": true
+  },
+  "counts": {
+    "enforcement_snapshots": 80,
+    "payload_levels": 4,
+    "route_outcome_checks": 80,
+    "samples": 80
+  },
+  "passed": true,
+  "run": "policy-scale-ipv4-20260830T081349Z",
+  "schema_version": "dual-stack-policy-scale-audit-v1",
+  "sha256": {
+    "policy-scale-payloads.csv": "a65e20841378598090c8b2f734773e0804b15a8a51bce9341a2bc84498812aa8",
+    "policy-scale-samples.csv": "f86d40f071651a9cb8f9173b49441244e844cba2bd58d71c4c18841f1012e871",
+    "summary.json": "29f71350bd7c7632fceefdc19502bca895a2b866cce7a194024062d97aea991e"
+  }
+}

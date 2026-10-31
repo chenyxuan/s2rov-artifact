@@ -1,0 +1,81 @@
+{
+  "address_family": "IPv6",
+  "all_checks_pass": true,
+  "all_oracle_spot_checks_pass": true,
+  "all_policies_use_ipv6_root": true,
+  "all_policy_roundtrips_identical": true,
+  "all_route_counts_match": true,
+  "all_worker_records_present": true,
+  "all_workers_ipv6": true,
+  "all_workers_on_fixed_cpu": true,
+  "checksums_by_policy_size": {
+    "1": [
+      "d8e72eb6ea40280fb49eb6774397fe6c2461d2f8532b4c932da8d3b618a3d85b"
+    ],
+    "1024": [
+      "0ab237b8ab024b62d706658d20992e277830adf8c8ca3edf04068a9bdb7a5120"
+    ],
+    "256": [
+      "9ac8249541561be1d4a37cc832530b60d313a0e946e07a498d02a7e4ed1c0257"
+    ],
+    "4097": [
+      "e047e841c54d77138460d06f5a7add17c4acbe599cbbffd2ae99989921018628"
+    ],
+    "64": [
+      "2226eb447e4002ab8769c80170ace890e80016e8c22ed0e1b6a23cefda4b4943"
+    ]
+  },
+  "condition_matrix_exact": true,
+  "expected_worker_records": 30,
+  "fresh_worker_per_condition": true,
+  "one_checksum_per_policy_size": true,
+  "one_state_count_vector_per_policy_size": true,
+  "one_workload_checksum": true,
+  "raw_batch_samples_csv_sha256": "48a1888f05ceca9e976594520d391f85641fdfb1e71df64be3b527306ff4cb4a",
+  "raw_runs_csv_sha256": "8604da72e014237f9bcd1018bfadbb446a86f4dc588cdfee40f5b8d9cb9bb432",
+  "raw_worker_records": 30,
+  "schema_version": 1,
+  "state_counts_by_policy_size": {
+    "1": [
+      {
+        "Delegated": 256561,
+        "Explicit": 591,
+        "Invalid": 398,
+        "NotFound": 0
+      }
+    ],
+    "1024": [
+      {
+        "Delegated": 229227,
+        "Explicit": 1136,
+        "Invalid": 27187,
+        "NotFound": 0
+      }
+    ],
+    "256": [
+      {
+        "Delegated": 229227,
+        "Explicit": 402,
+        "Invalid": 27921,
+        "NotFound": 0
+      }
+    ],
+    "4097": [
+      {
+        "Delegated": 229227,
+        "Explicit": 4199,
+        "Invalid": 24124,
+        "NotFound": 0
+      }
+    ],
+    "64": [
+      {
+        "Delegated": 229227,
+        "Explicit": 161,
+        "Invalid": 28162,
+        "NotFound": 0
+      }
+    ]
+  },
+  "summary_csv_sha256": "b67108a430047ddabdf3f95ca20b79ff174d468f810ace1278f4dd320a2a8613"
+}

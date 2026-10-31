@@ -1,0 +1,7 @@
+metric,value
+excluded_non_asn_holder_or_origin_rows,8314
+relationship_labeled_rows_tested,10000
+observed_origin_delegated_pct,99.99
+observed_origin_ineligible_pct,0.01
+arbitrary_public_origin_delegated_open_pct,100.00
+arbitrary_public_origin_invalid_closed_pct,100.00

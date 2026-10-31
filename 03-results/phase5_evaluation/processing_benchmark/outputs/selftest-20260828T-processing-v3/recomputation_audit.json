@@ -1,0 +1,41 @@
+{
+  "all_checks_pass": true,
+  "all_oracle_spot_checks_pass": true,
+  "all_policy_roundtrips_identical": true,
+  "all_route_counts_match": true,
+  "all_worker_records_present": true,
+  "checksums_by_policy_size": {
+    "1": [
+      "b7a19af5218226ebb2e25f8021e66efa91c495652cd5e8f92d605c9860043707"
+    ],
+    "64": [
+      "27a41315985deba9f8fcb86d19a32dbc38eccd8109007b3ccbf856cf7236367f"
+    ]
+  },
+  "expected_worker_records": 4,
+  "one_checksum_per_policy_size": true,
+  "one_state_count_vector_per_policy_size": true,
+  "raw_batch_samples_csv_sha256": "14d0c737559b8659fd0f4607d3eca8cd012b36fa063e5d4efca7c022c821abf4",
+  "raw_runs_csv_sha256": "8bd930945e8d322d44a91c2c199c525d5e8ecb4dbebe78ab6c8d1cadad752174",
+  "raw_worker_records": 4,
+  "schema_version": 1,
+  "state_counts_by_policy_size": {
+    "1": [
+      {
+        "Delegated": 8175,
+        "Explicit": 1,
+        "Invalid": 16,
+        "NotFound": 0
+      }
+    ],
+    "64": [
+      {
+        "Delegated": 8103,
+        "Explicit": 73,
+        "Invalid": 16,
+        "NotFound": 0
+      }
+    ]
+  },
+  "summary_csv_sha256": "5e3c5149f350ec517f34a328ff086e311e31c4c8c2505d187d8cdce4610752ec"
+}

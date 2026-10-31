@@ -1,0 +1,158 @@
+{
+  "analysis_artifacts_sha256": {
+    "EXPERIMENT_CONTRACT.md": "acf565552a21a342b20c3806cf15a582bdca491c72c44dd7f3d2559a79ec3b03",
+    "reanalyze.py": "40e78d20f6f11b1cacc808df05dff6a18aa90c31be1c3115245975461a1a39fb"
+  },
+  "audits": {
+    "phase7": {
+      "holders": 200,
+      "replicate_weight_total": 691.0,
+      "replicate_weight_total_constant": true,
+      "strata": {
+        "S1": 50,
+        "S2": 50,
+        "S3": 50,
+        "S4": 50
+      }
+    },
+    "phase7_max_point_error_vs_frozen": 1.1102230246251565e-16,
+    "phase8": {
+      "holders": 200,
+      "replicate_weight_total": 690.9999999999999,
+      "replicate_weight_total_constant": true,
+      "strata": {
+        "S1": 50,
+        "S2": 50,
+        "S3": 50,
+        "S4": 50
+      }
+    },
+    "phase8_max_point_error_vs_frozen": 0.0
+  },
+  "contract": {
+    "finite_population_correction": false,
+    "interval_interpretation": "descriptive ordinary stratified paired bootstrap stability over selected units; not 691-frame confidence",
+    "selected_units": 200,
+    "standardization": "fixed Phase-7 stratum frame shares",
+    "strata": {
+      "S1": 50,
+      "S2": 50,
+      "S3": 50,
+      "S4": 50
+    }
+  },
+  "headlines": {
+    "full_edge_open_minus_aggregate": {
+      "attacker_class": "edge",
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 20260804,
+      "deployment_percent_target": 100,
+      "deployment_strategy": "random",
+      "estimand": "Delta_E_rov",
+      "finite_population_correction": false,
+      "interval_type": "ordinary_stratified_paired_percentile_selected_unit_stability",
+      "metric_level": "destination",
+      "population": "all",
+      "raw_reference_stratum_standardized_mean": 0.25894609802558677,
+      "raw_treatment_stratum_standardized_mean": 0.3247739548106432,
+      "resampling_interval95_lower": 0.024272513875229593,
+      "resampling_interval95_upper": 0.1081927133880123,
+      "selected_units": 200,
+      "stratum_standardized_selected_unit_mean": 0.06582785678505639
+    },
+    "full_high_degree_open_minus_aggregate": {
+      "attacker_class": "high_degree",
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 20260804,
+      "deployment_percent_target": 100,
+      "deployment_strategy": "random",
+      "estimand": "Delta_E_rov",
+      "finite_population_correction": false,
+      "interval_type": "ordinary_stratified_paired_percentile_selected_unit_stability",
+      "metric_level": "destination",
+      "population": "all",
+      "raw_reference_stratum_standardized_mean": 0.5284444115825901,
+      "raw_treatment_stratum_standardized_mean": 0.6846242406960047,
+      "resampling_interval95_lower": 0.12502798335075246,
+      "resampling_interval95_upper": 0.1868175001517192,
+      "selected_units": 200,
+      "stratum_standardized_selected_unit_mean": 0.15617982911341458
+    },
+    "full_sibling_destination": {
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 20260823,
+      "deployment_percent_target": 100,
+      "estimand": "Delta_E_sibling",
+      "finite_population_correction": false,
+      "interval_type": "ordinary_stratified_paired_percentile_selected_unit_stability",
+      "metric_level": "destination",
+      "population": "all",
+      "raw_reference_stratum_standardized_mean": 0.6798056225881107,
+      "raw_treatment_stratum_standardized_mean": 0.9823789424077957,
+      "resampling_interval95_lower": 0.2521275965737455,
+      "resampling_interval95_upper": 0.35377615553833835,
+      "selected_units": 200,
+      "stratum_standardized_selected_unit_mean": 0.30257331981968494
+    },
+    "full_sibling_route": {
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 20260823,
+      "deployment_percent_target": 100,
+      "estimand": "Delta_E_sibling",
+      "finite_population_correction": false,
+      "interval_type": "ordinary_stratified_paired_percentile_selected_unit_stability",
+      "metric_level": "route",
+      "population": "all",
+      "raw_reference_stratum_standardized_mean": 0.5174780376267029,
+      "raw_treatment_stratum_standardized_mean": 0.9820092166411959,
+      "resampling_interval95_lower": 0.42664574917324466,
+      "resampling_interval95_upper": 0.5024950641210185,
+      "selected_units": 200,
+      "stratum_standardized_selected_unit_mean": 0.464531179014493
+    },
+    "full_uniform_open_minus_aggregate": {
+      "attacker_class": "uniform",
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 20260804,
+      "deployment_percent_target": 100,
+      "deployment_strategy": "random",
+      "estimand": "Delta_E_rov",
+      "finite_population_correction": false,
+      "interval_type": "ordinary_stratified_paired_percentile_selected_unit_stability",
+      "metric_level": "destination",
+      "population": "all",
+      "raw_reference_stratum_standardized_mean": 0.3235482713550432,
+      "raw_treatment_stratum_standardized_mean": 0.4123372065859169,
+      "resampling_interval95_lower": 0.04461928915447847,
+      "resampling_interval95_upper": 0.13424339827015605,
+      "selected_units": 200,
+      "stratum_standardized_selected_unit_mean": 0.08878893523087368
+    },
+    "full_uniform_open_minus_exact": {
+      "attacker_class": "uniform",
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 20260804,
+      "deployment_percent_target": 100,
+      "deployment_strategy": "random",
+      "estimand": "Delta_E_exact",
+      "finite_population_correction": false,
+      "interval_type": "ordinary_stratified_paired_percentile_selected_unit_stability",
+      "metric_level": "destination",
+      "population": "all",
+      "raw_reference_stratum_standardized_mean": 0.11656181128842953,
+      "raw_treatment_stratum_standardized_mean": 0.4123372065859169,
+      "resampling_interval95_lower": 0.26265635724836306,
+      "resampling_interval95_upper": 0.3302842690541818,
+      "selected_units": 200,
+      "stratum_standardized_selected_unit_mean": 0.29577539529748736
+    }
+  },
+  "inputs_sha256": {
+    "phase7_simulation/results/paper_campaign/analysis/holder_contrasts.jsonl": "407194fa21a41a7c748caf114ed81183915a538b2d6ebebdbd3805b95edc2413",
+    "phase7_simulation/results/paper_campaign/analysis/raw_cell_summary.csv": "4de8618bd35fe21a4731033cab8a51d766eeb1d03d7aed5cc782fcef6ae86969",
+    "phase8_sibling_sensitivity/results/analysis/holder_contrasts.jsonl": "561c26179f7c79560b7da387c4c4ca95db7de8817adc3cd091c4404bf01fd254",
+    "phase8_sibling_sensitivity/results/analysis/summary.json": "610cd1cb7c82e73b4c7f9c4aa0cbbab39237fbd32c5b132d02c19fd8fd652801"
+  },
+  "schema_version": "phase9-selected-unit-reanalysis-v1",
+  "status": "complete"
+}

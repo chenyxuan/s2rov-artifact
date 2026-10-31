@@ -1,0 +1,15 @@
+metric,value,unit
+candidate_pairs,8830,pairs
+candidate_roots,1647,roots
+root_origin_asns,731,ASNs
+leaf_origin_asns,2719,ASNs
+fanout_mean,5.361262902247,leaves/root
+fanout_median,2,leaves/root
+fanout_p90_nearest_rank,11,leaves/root
+fanout_p95_nearest_rank,19,leaves/root
+fanout_maximum,207,leaves/root
+single_leaf_roots,742,roots
+root_status_ALLOCATED_PA,8830,pairs
+leaf_status_ASSIGNED_PA,7113,pairs
+leaf_status_LIR-PARTITIONED_PA,86,pairs
+leaf_status_SUB-ALLOCATED_PA,1631,pairs

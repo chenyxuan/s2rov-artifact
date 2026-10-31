@@ -1,0 +1,423 @@
+{
+  "checks": {
+    "all_trial_assertions_pass": true,
+    "all_trials_retained": true,
+    "controls_issue_no_handoff_updates": true,
+    "exact_exposes_invalid_new_route": true,
+    "exact_updates_each_transition": true,
+    "final_states_and_actions_match": true,
+    "lane_counts_match": true,
+    "nonreactive_arms_have_no_invalid_interval": true,
+    "randomized_complete_block_schedule": true,
+    "static_policy_digests_unchanged": true,
+    "trial_blocks_match_schedule": true
+  },
+  "execution_blocks": {
+    "1": {
+      "end_to_end_completion": {
+        "max_ms": 845.042,
+        "median_ms": 845.042,
+        "min_ms": 845.042,
+        "n": 1,
+        "p95_ms": 845.042
+      },
+      "lane": "bgp_only",
+      "trials": 1,
+      "unavailability": {
+        "max_ms": 615.993,
+        "median_ms": 615.993,
+        "min_ms": 615.993,
+        "n": 1,
+        "p95_ms": 615.993
+      }
+    },
+    "2": {
+      "end_to_end_completion": {
+        "max_ms": 864.275,
+        "median_ms": 864.275,
+        "min_ms": 864.275,
+        "n": 1,
+        "p95_ms": 864.275
+      },
+      "lane": "da",
+      "trials": 1,
+      "unavailability": {
+        "max_ms": 606.481,
+        "median_ms": 606.481,
+        "min_ms": 606.481,
+        "n": 1,
+        "p95_ms": 606.481
+      }
+    },
+    "3": {
+      "end_to_end_completion": {
+        "max_ms": 2281.268,
+        "median_ms": 2281.268,
+        "min_ms": 2281.268,
+        "n": 1,
+        "p95_ms": 2281.268
+      },
+      "lane": "exact",
+      "trials": 1,
+      "unavailability": {
+        "max_ms": 2055.708,
+        "median_ms": 2055.708,
+        "min_ms": 2055.708,
+        "n": 1,
+        "p95_ms": 2055.708
+      }
+    },
+    "4": {
+      "end_to_end_completion": {
+        "max_ms": 846.354,
+        "median_ms": 846.354,
+        "min_ms": 846.354,
+        "n": 1,
+        "p95_ms": 846.354
+      },
+      "lane": "prepublished_exact",
+      "trials": 1,
+      "unavailability": {
+        "max_ms": 625.815,
+        "median_ms": 625.815,
+        "min_ms": 625.815,
+        "n": 1,
+        "p95_ms": 625.815
+      }
+    }
+  },
+  "expected_trials_per_lane": 1,
+  "lanes": {
+    "bgp_only": {
+      "authorization_entry_changes_total": 0,
+      "authorization_to_completion": {
+        "max_ms": 0.0,
+        "median_ms": 0.0,
+        "min_ms": 0.0,
+        "n": 1,
+        "p95_ms": 0.0
+      },
+      "bgp_observation": {
+        "max_ms": 219.703,
+        "median_ms": 219.703,
+        "min_ms": 219.703,
+        "n": 1,
+        "p95_ms": 219.703
+      },
+      "end_to_end_completion": {
+        "max_ms": 845.042,
+        "median_ms": 845.042,
+        "min_ms": 845.042,
+        "n": 1,
+        "p95_ms": 845.042
+      },
+      "final_action_counts": {
+        "accept": 1
+      },
+      "final_state_counts": {
+        "BGPOnly": 1
+      },
+      "invalid_exposure": {
+        "max_ms": 0.0,
+        "median_ms": 0.0,
+        "min_ms": 0.0,
+        "n": 1,
+        "p95_ms": 0.0
+      },
+      "policy_digests": [
+        "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      ],
+      "routinator_to_rtr": {
+        "max_ms": 0.0,
+        "median_ms": 0.0,
+        "min_ms": 0.0,
+        "n": 1,
+        "p95_ms": 0.0
+      },
+      "rtr_to_enforcement": {
+        "max_ms": 0.0,
+        "median_ms": 0.0,
+        "min_ms": 0.0,
+        "n": 1,
+        "p95_ms": 0.0
+      },
+      "signed_request_to_routinator": {
+        "max_ms": 0.0,
+        "median_ms": 0.0,
+        "min_ms": 0.0,
+        "n": 1,
+        "p95_ms": 0.0
+      },
+      "signed_update_transactions_total": 0,
+      "trials": 1,
+      "unavailability": {
+        "max_ms": 615.993,
+        "median_ms": 615.993,
+        "min_ms": 615.993,
+        "n": 1,
+        "p95_ms": 615.993
+      }
+    },
+    "da": {
+      "authorization_entry_changes_total": 0,
+      "authorization_to_completion": {
+        "max_ms": 0.0,
+        "median_ms": 0.0,
+        "min_ms": 0.0,
+        "n": 1,
+        "p95_ms": 0.0
+      },
+      "bgp_observation": {
+        "max_ms": 216.113,
+        "median_ms": 216.113,
+        "min_ms": 216.113,
+        "n": 1,
+        "p95_ms": 216.113
+      },
+      "end_to_end_completion": {
+        "max_ms": 864.275,
+        "median_ms": 864.275,
+        "min_ms": 864.275,
+        "n": 1,
+        "p95_ms": 864.275
+      },
+      "final_action_counts": {
+        "accept": 1
+      },
+      "final_state_counts": {
+        "Delegated": 1
+      },
+      "invalid_exposure": {
+        "max_ms": 0.0,
+        "median_ms": 0.0,
+        "min_ms": 0.0,
+        "n": 1,
+        "p95_ms": 0.0
+      },
+      "policy_digests": [
+        "9001687bb54c2b0b400de54c55592662d95af1901524b678fbc8af1027f49e96"
+      ],
+      "routinator_to_rtr": {
+        "max_ms": 0.0,
+        "median_ms": 0.0,
+        "min_ms": 0.0,
+        "n": 1,
+        "p95_ms": 0.0
+      },
+      "rtr_to_enforcement": {
+        "max_ms": 0.0,
+        "median_ms": 0.0,
+        "min_ms": 0.0,
+        "n": 1,
+        "p95_ms": 0.0
+      },
+      "signed_request_to_routinator": {
+        "max_ms": 0.0,
+        "median_ms": 0.0,
+        "min_ms": 0.0,
+        "n": 1,
+        "p95_ms": 0.0
+      },
+      "signed_update_transactions_total": 0,
+      "trials": 1,
+      "unavailability": {
+        "max_ms": 606.481,
+        "median_ms": 606.481,
+        "min_ms": 606.481,
+        "n": 1,
+        "p95_ms": 606.481
+      }
+    },
+    "exact": {
+      "authorization_entry_changes_total": 2,
+      "authorization_to_completion": {
+        "max_ms": 1464.934,
+        "median_ms": 1464.934,
+        "min_ms": 1464.934,
+        "n": 1,
+        "p95_ms": 1464.934
+      },
+      "bgp_observation": {
+        "max_ms": 221.075,
+        "median_ms": 221.075,
+        "min_ms": 221.075,
+        "n": 1,
+        "p95_ms": 221.075
+      },
+      "end_to_end_completion": {
+        "max_ms": 2281.268,
+        "median_ms": 2281.268,
+        "min_ms": 2281.268,
+        "n": 1,
+        "p95_ms": 2281.268
+      },
+      "final_action_counts": {
+        "accept": 1
+      },
+      "final_state_counts": {
+        "Valid": 1
+      },
+      "invalid_exposure": {
+        "max_ms": 1823.597,
+        "median_ms": 1823.597,
+        "min_ms": 1823.597,
+        "n": 1,
+        "p95_ms": 1823.597
+      },
+      "policy_digests": [
+        "29cf902804073c7ab255e9859fa2a0687021907d4611140a8b52fcd485434180"
+      ],
+      "routinator_to_rtr": {
+        "max_ms": 121.61,
+        "median_ms": 121.61,
+        "min_ms": 121.61,
+        "n": 1,
+        "p95_ms": 121.61
+      },
+      "rtr_to_enforcement": {
+        "max_ms": 388.818,
+        "median_ms": 388.818,
+        "min_ms": 388.818,
+        "n": 1,
+        "p95_ms": 388.818
+      },
+      "signed_request_to_routinator": {
+        "max_ms": 954.506,
+        "median_ms": 954.506,
+        "min_ms": 954.506,
+        "n": 1,
+        "p95_ms": 954.506
+      },
+      "signed_update_transactions_total": 1,
+      "trials": 1,
+      "unavailability": {
+        "max_ms": 2055.708,
+        "median_ms": 2055.708,
+        "min_ms": 2055.708,
+        "n": 1,
+        "p95_ms": 2055.708
+      }
+    },
+    "prepublished_exact": {
+      "authorization_entry_changes_total": 0,
+      "authorization_to_completion": {
+        "max_ms": 0.0,
+        "median_ms": 0.0,
+        "min_ms": 0.0,
+        "n": 1,
+        "p95_ms": 0.0
+      },
+      "bgp_observation": {
+        "max_ms": 224.311,
+        "median_ms": 224.311,
+        "min_ms": 224.311,
+        "n": 1,
+        "p95_ms": 224.311
+      },
+      "end_to_end_completion": {
+        "max_ms": 846.354,
+        "median_ms": 846.354,
+        "min_ms": 846.354,
+        "n": 1,
+        "p95_ms": 846.354
+      },
+      "final_action_counts": {
+        "accept": 1
+      },
+      "final_state_counts": {
+        "Valid": 1
+      },
+      "invalid_exposure": {
+        "max_ms": 0.0,
+        "median_ms": 0.0,
+        "min_ms": 0.0,
+        "n": 1,
+        "p95_ms": 0.0
+      },
+      "policy_digests": [
+        "72257e235844dcd19c0e0df3c15adfd922293a21f1ef6d3cba1e526411a2cb04"
+      ],
+      "routinator_to_rtr": {
+        "max_ms": 0.0,
+        "median_ms": 0.0,
+        "min_ms": 0.0,
+        "n": 1,
+        "p95_ms": 0.0
+      },
+      "rtr_to_enforcement": {
+        "max_ms": 0.0,
+        "median_ms": 0.0,
+        "min_ms": 0.0,
+        "n": 1,
+        "p95_ms": 0.0
+      },
+      "signed_request_to_routinator": {
+        "max_ms": 0.0,
+        "median_ms": 0.0,
+        "min_ms": 0.0,
+        "n": 1,
+        "p95_ms": 0.0
+      },
+      "signed_update_transactions_total": 0,
+      "trials": 1,
+      "unavailability": {
+        "max_ms": 625.815,
+        "median_ms": 625.815,
+        "min_ms": 625.815,
+        "n": 1,
+        "p95_ms": 625.815
+      }
+    }
+  },
+  "passed": true,
+  "protocol": {
+    "arms": [
+      "exact",
+      "da",
+      "bgp_only",
+      "prepublished_exact"
+    ],
+    "block_order_file": "block-order.csv",
+    "design": "reactive break-before-make origin handoff with matched controls",
+    "environment_file": "environment.txt",
+    "git_status_file": "git-status.txt",
+    "handoff_updates": {
+      "bgp_only": 0,
+      "da": 0,
+      "exact": 1,
+      "prepublished_exact": 0
+    },
+    "origins": [
+      8075,
+      18403
+    ],
+    "prefix": "10.0.10.0/24",
+    "random_seed": 20260823,
+    "randomization_unit": "three-trial block within each complete four-arm round",
+    "randomized_complete_block_rounds": 1,
+    "repository_keepalive": "10.255.255.0/24 => AS64501 (unrelated to the measured prefix)",
+    "setup_authorization_entry_changes": 7,
+    "setup_excluded_from_transition_metrics": true,
+    "setup_file": "setup.csv",
+    "setup_signed_update_transactions": 4,
+    "source_hash_file": "source.sha256",
+    "system_path": [
+      "Krill signing",
+      "RRDP",
+      "Routinator validation",
+      "FRR enforcement"
+    ],
+    "timing": {
+      "event_field": "monotonic_ns",
+      "frr_rtr_poll_retry_interval_s": 1,
+      "frr_state_query_interval_s": 0.05,
+      "routinator_rtr_query_interval_s": 0.1,
+      "source": "Python time.monotonic_ns() served by one persistent helper process"
+    },
+    "trials_per_block": 1,
+    "trials_per_lane": 1
+  },
+  "randomized_complete_block_rounds": 1,
+  "total_trials": 4,
+  "trials_per_block": 1
+}

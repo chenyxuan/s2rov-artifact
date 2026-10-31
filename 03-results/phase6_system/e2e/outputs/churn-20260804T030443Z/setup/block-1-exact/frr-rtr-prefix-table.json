@@ -1,0 +1,12 @@
+{
+  "prefixes":[
+    {
+      "prefix":"10.0.10.0",
+      "prefixLenMin":24,
+      "prefixLenMax":24,
+      "asn":8075
+    }
+  ],
+  "ipv4PrefixCount":1,
+  "ipv6PrefixCount":0
+}

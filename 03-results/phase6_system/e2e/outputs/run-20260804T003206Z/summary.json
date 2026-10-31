@@ -1,0 +1,69 @@
+{
+  "baseline_state_counts": {
+    "Invalid": 5,
+    "NotFound": 1,
+    "Valid": 1
+  },
+  "checks": {
+    "all_bgp_cases_observed": true,
+    "baseline_frr_enforcement": true,
+    "baseline_semantics": true,
+    "closed_override_removal_to_delegated": true,
+    "closed_override_restored_to_explicit": true,
+    "da_frr_enforcement": true,
+    "da_semantics": true,
+    "routinator_outage_policy_retained": true
+  },
+  "da_state_counts": {
+    "Delegated": 2,
+    "Explicit": 2,
+    "Invalid": 2,
+    "NotFound": 1
+  },
+  "frr_recovery_timing": {
+    "max_ms": 8945.18,
+    "median_ms": 7686.553,
+    "min_ms": 7611.321,
+    "n": 30,
+    "p95_ms": 8930.835
+  },
+  "override_remove_timing": {
+    "max_ms": 3760.247,
+    "median_ms": 2462.513,
+    "min_ms": 1331.077,
+    "n": 30,
+    "p95_ms": 3641.764
+  },
+  "override_restore_timing": {
+    "max_ms": 3813.925,
+    "median_ms": 3163.546,
+    "min_ms": 1439.914,
+    "n": 30,
+    "p95_ms": 3739.235
+  },
+  "passed": true,
+  "recovery_timing": {
+    "max_ms": 11749.081,
+    "median_ms": 11671.742,
+    "min_ms": 11610.384,
+    "n": 30,
+    "p95_ms": 11726.115
+  },
+  "routinator_outage": {
+    "hold_seconds": 15,
+    "policy_retained": true
+  },
+  "run": "run-20260804T003206Z",
+  "security_boundary": {
+    "aggregate_attacker": "Invalid",
+    "interpretation": "Open policy preserves self-protection at the exact aggregate and excludes non-public origins, but it cannot authenticate or distinguish an arbitrary eligible public subprefix origin.",
+    "private_origin": "Invalid",
+    "public_subprefix_attacker": "Delegated"
+  },
+  "timings_ms": {
+    "baseline_krill_to_frr": 5945.872,
+    "baseline_krill_to_routinator": 5849.673,
+    "da_evaluate_and_frr_enforce": 632.767,
+    "da_krill_to_routinator": 2729.136
+  }
+}

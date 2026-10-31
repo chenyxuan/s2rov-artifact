@@ -1,0 +1,5 @@
+lane,trials,signed_update_transactions,authorization_entry_changes,invalid_median_ms,invalid_p95_ms,unavailable_median_ms,unavailable_p95_ms,completion_median_ms,completion_p95_ms,final_state,final_action
+exact,30,30,60,3256.059,3393.854,3491.693,3620.664,3719.542,3841.385,Valid,accept
+da,30,0,0,0.0,0.0,619.852,667.395,850.269,913.851,Delegated,accept
+bgp_only,30,0,0,0.0,0.0,625.822,670.198,856.865,907.452,BGPOnly,accept
+prepublished_exact,30,0,0,0.0,0.0,625.791,677.006,860.357,916.363,Valid,accept

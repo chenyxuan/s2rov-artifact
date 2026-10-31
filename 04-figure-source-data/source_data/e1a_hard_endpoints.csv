@@ -1,0 +1,9 @@
+endpoint,checks,failures,result
+Semantic agreement,106218,0,agree
+Canonical order,306967,0,invariant
+Legacy projection,264532,0,safe
+Malformed trials,100000,0,targeted rejection
+Fixed mutations,58,0,rejected
+Snapshot oracle,16,0,agree
+Baseline oracle,20,0,pass
+Unsafe negative control,1,0,detected

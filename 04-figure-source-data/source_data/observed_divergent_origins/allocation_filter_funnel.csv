@@ -1,0 +1,6 @@
+stage_order,stage,count,removed_from_previous,retained_from_previous_pct,retained_from_raw_pct
+1,Raw root--leaf pairs,3950990,0,100.000000,100.000000
+2,Exclude 0/0 pseudo-root,3929262,21728,99.450062,99.450062
+3,Canonical CIDR endpoints,3441429,487833,87.584615,87.102954
+4,Exact routes at both endpoints,24663,3416766,0.716650,0.624223
+5,Disjoint complete origin sets,8830,15833,35.802619,0.223488

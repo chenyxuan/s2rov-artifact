@@ -1,0 +1,66 @@
+[
+  {
+    "name": "holder_aggregate",
+    "peer": "172.30.0.21",
+    "prefix": "10.0.0.0/16",
+    "origin": 64501,
+    "expected_baseline": "Valid",
+    "expected_da": "Explicit"
+  },
+  {
+    "name": "explicit_child",
+    "peer": "172.30.0.22",
+    "prefix": "10.0.1.0/24",
+    "origin": 8075,
+    "expected_baseline": "Valid",
+    "expected_da": "Explicit"
+  },
+  {
+    "name": "delegated_child",
+    "peer": "172.30.0.23",
+    "prefix": "10.0.2.0/24",
+    "origin": 18403,
+    "expected_baseline": "Invalid",
+    "expected_da": "Delegated"
+  },
+  {
+    "name": "open_scope_control",
+    "peer": "172.30.0.24",
+    "prefix": "10.0.3.0/24",
+    "origin": 15169,
+    "expected_baseline": "Invalid",
+    "expected_da": "Delegated"
+  },
+  {
+    "name": "aggregate_attacker",
+    "peer": "172.30.0.25",
+    "prefix": "10.0.0.0/16",
+    "origin": 13335,
+    "expected_baseline": "Invalid",
+    "expected_da": "Invalid"
+  },
+  {
+    "name": "closed_child_attacker",
+    "peer": "172.30.0.26",
+    "prefix": "10.0.1.0/24",
+    "origin": 16509,
+    "expected_baseline": "Invalid",
+    "expected_da": "Invalid"
+  },
+  {
+    "name": "ineligible_child",
+    "peer": "172.30.0.27",
+    "prefix": "10.0.4.0/24",
+    "origin": 64513,
+    "expected_baseline": "Invalid",
+    "expected_da": "Invalid"
+  },
+  {
+    "name": "outside_policy",
+    "peer": "172.30.0.28",
+    "prefix": "192.0.2.0/24",
+    "origin": 64496,
+    "expected_baseline": "NotFound",
+    "expected_da": "NotFound"
+  }
+]

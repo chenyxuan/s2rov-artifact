@@ -1,0 +1,31 @@
+run_id,address_family,arm,arm_label,stage,stage_label,n_handoffs,mean_ms,median_ms,p95_nearest_rank_ms,endpoint_total_mean_ms
+handoff-benefit-20260828T143741Z,IPv4,reactive_exact,Reactive exact,input_capture_ms,Input capture,40,419.059882,418.273058,435.065343,2451.070718
+handoff-benefit-20260828T143741Z,IPv4,reactive_exact,Reactive exact,online_roa_update_ms,ROA update,40,1381.036584,1372.456430,1575.460656,2451.070718
+handoff-benefit-20260828T143741Z,IPv4,reactive_exact,Reactive exact,compile_ms,Compile,40,169.827121,169.570380,175.667631,2451.070718
+handoff-benefit-20260828T143741Z,IPv4,reactive_exact,Reactive exact,action_install_ms,Install,40,383.670303,381.054139,411.992159,2451.070718
+handoff-benefit-20260828T143741Z,IPv4,reactive_exact,Reactive exact,probe_confirmation_ms,Probe,40,97.476828,96.441820,104.578734,2451.070718
+handoff-benefit-20260828T143741Z,IPv4,open_dynamic,Preinstalled scope,input_capture_ms,Input capture,40,422.221111,422.118244,439.317201,1075.820482
+handoff-benefit-20260828T143741Z,IPv4,open_dynamic,Preinstalled scope,online_roa_update_ms,ROA update,40,0.000000,0.000000,0.000000,1075.820482
+handoff-benefit-20260828T143741Z,IPv4,open_dynamic,Preinstalled scope,compile_ms,Compile,40,170.579641,169.457877,176.374668,1075.820482
+handoff-benefit-20260828T143741Z,IPv4,open_dynamic,Preinstalled scope,action_install_ms,Install,40,385.838846,382.216226,413.872788,1075.820482
+handoff-benefit-20260828T143741Z,IPv4,open_dynamic,Preinstalled scope,probe_confirmation_ms,Probe,40,97.180884,96.781725,104.469275,1075.820482
+handoff-benefit-20260828T143741Z,IPv4,prepublished_exact,Prepublished exact,input_capture_ms,Input capture,40,421.380571,421.222346,448.638223,1070.330920
+handoff-benefit-20260828T143741Z,IPv4,prepublished_exact,Prepublished exact,online_roa_update_ms,ROA update,40,0.000000,0.000000,0.000000,1070.330920
+handoff-benefit-20260828T143741Z,IPv4,prepublished_exact,Prepublished exact,compile_ms,Compile,40,170.531755,169.328657,176.188977,1070.330920
+handoff-benefit-20260828T143741Z,IPv4,prepublished_exact,Prepublished exact,action_install_ms,Install,40,382.431090,379.111711,409.977191,1070.330920
+handoff-benefit-20260828T143741Z,IPv4,prepublished_exact,Prepublished exact,probe_confirmation_ms,Probe,40,95.987503,96.095356,100.571150,1070.330920
+handoff-benefit-ipv6-20260829T002536Z,IPv6,reactive_exact,Reactive exact,input_capture_ms,Input capture,40,417.062006,417.188191,442.527878,2450.594132
+handoff-benefit-ipv6-20260829T002536Z,IPv6,reactive_exact,Reactive exact,online_roa_update_ms,ROA update,40,1378.021598,1363.523316,1526.506954,2450.594132
+handoff-benefit-ipv6-20260829T002536Z,IPv6,reactive_exact,Reactive exact,compile_ms,Compile,40,175.886963,174.529536,184.470030,2450.594132
+handoff-benefit-ipv6-20260829T002536Z,IPv6,reactive_exact,Reactive exact,action_install_ms,Install,40,382.878694,378.905489,416.496811,2450.594132
+handoff-benefit-ipv6-20260829T002536Z,IPv6,reactive_exact,Reactive exact,probe_confirmation_ms,Probe,40,96.744871,95.773292,105.144061,2450.594132
+handoff-benefit-ipv6-20260829T002536Z,IPv6,open_dynamic,Preinstalled scope,input_capture_ms,Input capture,40,421.368672,418.643719,446.859843,1073.822797
+handoff-benefit-ipv6-20260829T002536Z,IPv6,open_dynamic,Preinstalled scope,online_roa_update_ms,ROA update,40,0.000000,0.000000,0.000000,1073.822797
+handoff-benefit-ipv6-20260829T002536Z,IPv6,open_dynamic,Preinstalled scope,compile_ms,Compile,40,175.395526,173.423316,182.662019,1073.822797
+handoff-benefit-ipv6-20260829T002536Z,IPv6,open_dynamic,Preinstalled scope,action_install_ms,Install,40,379.684150,376.256260,397.665396,1073.822797
+handoff-benefit-ipv6-20260829T002536Z,IPv6,open_dynamic,Preinstalled scope,probe_confirmation_ms,Probe,40,97.374449,96.029097,102.525193,1073.822797
+handoff-benefit-ipv6-20260829T002536Z,IPv6,prepublished_exact,Prepublished exact,input_capture_ms,Input capture,40,419.445266,417.368381,445.529521,1069.108462
+handoff-benefit-ipv6-20260829T002536Z,IPv6,prepublished_exact,Prepublished exact,online_roa_update_ms,ROA update,40,0.000000,0.000000,0.000000,1069.108462
+handoff-benefit-ipv6-20260829T002536Z,IPv6,prepublished_exact,Prepublished exact,compile_ms,Compile,40,175.839678,174.158815,185.921262,1069.108462
+handoff-benefit-ipv6-20260829T002536Z,IPv6,prepublished_exact,Prepublished exact,action_install_ms,Install,40,378.845598,378.359443,393.790950,1069.108462
+handoff-benefit-ipv6-20260829T002536Z,IPv6,prepublished_exact,Prepublished exact,probe_confirmation_ms,Probe,40,94.977920,95.291250,102.398573,1069.108462

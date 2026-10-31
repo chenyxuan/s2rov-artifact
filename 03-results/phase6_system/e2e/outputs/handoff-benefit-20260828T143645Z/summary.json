@@ -1,0 +1,653 @@
+{
+  "all_trial_records": [
+    {
+      "block": 1,
+      "block_trial": 1,
+      "completion": "true",
+      "completion_success": true,
+      "deadline_miss": false,
+      "direction": "AS8075-to-AS18403",
+      "failure_category": "",
+      "final_action": "accept",
+      "final_lp": 300,
+      "final_origin": 18403,
+      "final_state": "Explicit",
+      "final_state_raw": "Explicit",
+      "from_origin": 8075,
+      "global_order": 1,
+      "lane": "reactive_exact",
+      "observed_to_action_ms": 2168.796,
+      "observed_to_probe_ms": 2264.753,
+      "passed": true,
+      "policy_digest": "29cf902804073c7ab255e9859fa2a0687021907d4611140a8b52fcd485434180",
+      "roa_entry_changes": 2,
+      "round": 1,
+      "signed_update_transactions": 1,
+      "status": "complete",
+      "switch_to_action_ms": 3447.163,
+      "switch_to_probe_ms": 3543.12,
+      "to_origin": 18403,
+      "trial": 1
+    },
+    {
+      "block": 1,
+      "block_trial": 2,
+      "completion": "true",
+      "completion_success": true,
+      "deadline_miss": false,
+      "direction": "AS18403-to-AS8075",
+      "failure_category": "",
+      "final_action": "accept",
+      "final_lp": 300,
+      "final_origin": 8075,
+      "final_state": "Explicit",
+      "final_state_raw": "Explicit",
+      "from_origin": 18403,
+      "global_order": 2,
+      "lane": "reactive_exact",
+      "observed_to_action_ms": 2324.658,
+      "observed_to_probe_ms": 2418.428,
+      "passed": true,
+      "policy_digest": "198c5dfeef5b2f1c667a37824c58072f8ef96857fd6de2d9f226884647d6f58f",
+      "roa_entry_changes": 2,
+      "round": 1,
+      "signed_update_transactions": 1,
+      "status": "complete",
+      "switch_to_action_ms": 3460.316,
+      "switch_to_probe_ms": 3554.086,
+      "to_origin": 8075,
+      "trial": 2
+    },
+    {
+      "block": 2,
+      "block_trial": 1,
+      "completion": "true",
+      "completion_success": true,
+      "deadline_miss": false,
+      "direction": "AS8075-to-AS18403",
+      "failure_category": "",
+      "final_action": "accept",
+      "final_lp": 300,
+      "final_origin": 18403,
+      "final_state": "Explicit",
+      "final_state_raw": "Explicit",
+      "from_origin": 8075,
+      "global_order": 3,
+      "lane": "prepublished_exact",
+      "observed_to_action_ms": 929.117,
+      "observed_to_probe_ms": 1026.265,
+      "passed": true,
+      "policy_digest": "72257e235844dcd19c0e0df3c15adfd922293a21f1ef6d3cba1e526411a2cb04",
+      "roa_entry_changes": 0,
+      "round": 1,
+      "signed_update_transactions": 0,
+      "status": "complete",
+      "switch_to_action_ms": 2197.002,
+      "switch_to_probe_ms": 2294.151,
+      "to_origin": 18403,
+      "trial": 1
+    },
+    {
+      "block": 2,
+      "block_trial": 2,
+      "completion": "true",
+      "completion_success": true,
+      "deadline_miss": false,
+      "direction": "AS18403-to-AS8075",
+      "failure_category": "",
+      "final_action": "accept",
+      "final_lp": 300,
+      "final_origin": 8075,
+      "final_state": "Explicit",
+      "final_state_raw": "Explicit",
+      "from_origin": 18403,
+      "global_order": 4,
+      "lane": "prepublished_exact",
+      "observed_to_action_ms": 937.888,
+      "observed_to_probe_ms": 1033.144,
+      "passed": true,
+      "policy_digest": "72257e235844dcd19c0e0df3c15adfd922293a21f1ef6d3cba1e526411a2cb04",
+      "roa_entry_changes": 0,
+      "round": 1,
+      "signed_update_transactions": 0,
+      "status": "complete",
+      "switch_to_action_ms": 2057.809,
+      "switch_to_probe_ms": 2153.065,
+      "to_origin": 8075,
+      "trial": 2
+    },
+    {
+      "block": 3,
+      "block_trial": 1,
+      "completion": "true",
+      "completion_success": true,
+      "deadline_miss": false,
+      "direction": "AS8075-to-AS18403",
+      "failure_category": "",
+      "final_action": "accept",
+      "final_lp": 200,
+      "final_origin": 18403,
+      "final_state": "OpenScope",
+      "final_state_raw": "Delegated",
+      "from_origin": 8075,
+      "global_order": 5,
+      "lane": "open_dynamic",
+      "observed_to_action_ms": 970.781,
+      "observed_to_probe_ms": 1072.037,
+      "passed": true,
+      "policy_digest": "9001687bb54c2b0b400de54c55592662d95af1901524b678fbc8af1027f49e96",
+      "roa_entry_changes": 0,
+      "round": 1,
+      "signed_update_transactions": 0,
+      "status": "complete",
+      "switch_to_action_ms": 2092.871,
+      "switch_to_probe_ms": 2194.127,
+      "to_origin": 18403,
+      "trial": 1
+    },
+    {
+      "block": 3,
+      "block_trial": 2,
+      "completion": "true",
+      "completion_success": true,
+      "deadline_miss": false,
+      "direction": "AS18403-to-AS8075",
+      "failure_category": "",
+      "final_action": "accept",
+      "final_lp": 200,
+      "final_origin": 8075,
+      "final_state": "OpenScope",
+      "final_state_raw": "Delegated",
+      "from_origin": 18403,
+      "global_order": 6,
+      "lane": "open_dynamic",
+      "observed_to_action_ms": 995.318,
+      "observed_to_probe_ms": 1087.969,
+      "passed": true,
+      "policy_digest": "9001687bb54c2b0b400de54c55592662d95af1901524b678fbc8af1027f49e96",
+      "roa_entry_changes": 0,
+      "round": 1,
+      "signed_update_transactions": 0,
+      "status": "complete",
+      "switch_to_action_ms": 2142.251,
+      "switch_to_probe_ms": 2234.903,
+      "to_origin": 8075,
+      "trial": 2
+    }
+  ],
+  "checks": {
+    "all_randomized_rounds_present": true,
+    "all_rounds_are_complete": true,
+    "all_rows_retained": true,
+    "all_trials_passed": true,
+    "lane_counts_match_protocol": true,
+    "no_deadline_miss": true,
+    "no_duplicate_lane_trial_keys": true,
+    "nonreactive_arms_issue_no_handoff_roa_update": true,
+    "only_expected_lanes": true,
+    "reactive_exact_updates_each_handoff": true
+  },
+  "design": {
+    "arms": [
+      "reactive_exact",
+      "open_dynamic",
+      "prepublished_exact"
+    ],
+    "duplicate_lane_trial_keys": [],
+    "randomized_complete_rounds_expected": 1,
+    "randomized_complete_rounds_observed": 1,
+    "total_trial_rows": 6,
+    "trial_n_per_arm_expected": 2,
+    "trials_per_arm_per_round": 2,
+    "unexpected_lanes": []
+  },
+  "failed_trials": [],
+  "inference": {
+    "bootstrap_replicates": 100000,
+    "bootstrap_rng": "Python random.Random (MT19937)",
+    "bootstrap_seed": 20260828,
+    "ci_method": "cluster percentile bootstrap; nearest-rank bounds",
+    "contrasts": {
+      "open_dynamic_minus_prepublished_exact": {
+        "arm_a": "open_dynamic",
+        "arm_b": "prepublished_exact",
+        "estimand": "mean across complete-round differences of within-arm trial means (arm_a - arm_b)",
+        "metrics": {
+          "observed_to_action_ms": {
+            "ci95_nearest_rank_ms": [
+              49.547,
+              49.547
+            ],
+            "estimate_ms": 49.547,
+            "excluded_rounds_missing_metric": [],
+            "included_rounds": [
+              1
+            ],
+            "inferential_n_complete_rounds": 1,
+            "round_differences_ms": [
+              49.547
+            ]
+          },
+          "observed_to_probe_ms": {
+            "ci95_nearest_rank_ms": [
+              50.298,
+              50.298
+            ],
+            "estimate_ms": 50.298,
+            "excluded_rounds_missing_metric": [],
+            "included_rounds": [
+              1
+            ],
+            "inferential_n_complete_rounds": 1,
+            "round_differences_ms": [
+              50.2985
+            ]
+          }
+        }
+      },
+      "reactive_exact_minus_open_dynamic": {
+        "arm_a": "reactive_exact",
+        "arm_b": "open_dynamic",
+        "estimand": "mean across complete-round differences of within-arm trial means (arm_a - arm_b)",
+        "metrics": {
+          "observed_to_action_ms": {
+            "ci95_nearest_rank_ms": [
+              1263.677,
+              1263.677
+            ],
+            "estimate_ms": 1263.677,
+            "excluded_rounds_missing_metric": [],
+            "included_rounds": [
+              1
+            ],
+            "inferential_n_complete_rounds": 1,
+            "round_differences_ms": [
+              1263.6775
+            ]
+          },
+          "observed_to_probe_ms": {
+            "ci95_nearest_rank_ms": [
+              1261.587,
+              1261.587
+            ],
+            "estimate_ms": 1261.587,
+            "excluded_rounds_missing_metric": [],
+            "included_rounds": [
+              1
+            ],
+            "inferential_n_complete_rounds": 1,
+            "round_differences_ms": [
+              1261.5875
+            ]
+          }
+        }
+      },
+      "reactive_exact_minus_prepublished_exact": {
+        "arm_a": "reactive_exact",
+        "arm_b": "prepublished_exact",
+        "estimand": "mean across complete-round differences of within-arm trial means (arm_a - arm_b)",
+        "metrics": {
+          "observed_to_action_ms": {
+            "ci95_nearest_rank_ms": [
+              1313.224,
+              1313.224
+            ],
+            "estimate_ms": 1313.224,
+            "excluded_rounds_missing_metric": [],
+            "included_rounds": [
+              1
+            ],
+            "inferential_n_complete_rounds": 1,
+            "round_differences_ms": [
+              1313.2245
+            ]
+          },
+          "observed_to_probe_ms": {
+            "ci95_nearest_rank_ms": [
+              1311.886,
+              1311.886
+            ],
+            "estimate_ms": 1311.886,
+            "excluded_rounds_missing_metric": [],
+            "included_rounds": [
+              1
+            ],
+            "inferential_n_complete_rounds": 1,
+            "round_differences_ms": [
+              1311.886
+            ]
+          }
+        }
+      }
+    },
+    "unit": "complete randomized round"
+  },
+  "missingness_policy": "All scheduled trials remain in trial-level counts. A metric contrast excludes a complete design round only when either arm has a missing value for that metric; no value is imputed.",
+  "passed": true,
+  "protocol": {
+    "action_map": {
+      "Explicit": {
+        "community": "65000:10",
+        "local_preference": 300
+      },
+      "OpenScope": {
+        "community": "65000:20",
+        "local_preference": 200
+      }
+    },
+    "analysis_role": "primary_matched_handoff",
+    "arms": [
+      "reactive_exact",
+      "open_dynamic",
+      "prepublished_exact"
+    ],
+    "compiler_contract": "all arms compile only routes captured from live Adj-RIB-In after observation",
+    "deadline_ms": 15000,
+    "design": "randomized complete-block unknown-origin handoff",
+    "handoff_updates": {
+      "open_dynamic": 0,
+      "prepublished_exact": 0,
+      "reactive_exact": 1
+    },
+    "inference_unit": "complete-round arm mean",
+    "open_scope_contract": "the signed policy and pretrial action map name neither endpoint origin",
+    "origins": [
+      8075,
+      18403
+    ],
+    "prefix": "10.0.10.0/24",
+    "primary_endpoint": "first successful data-plane probe after new-route Adj-RIB-In observation",
+    "probe_destination": "10.0.10.1",
+    "random_seed": 20260828,
+    "randomization_unit": "one arm block within each complete round",
+    "randomized_complete_block_rounds": 1,
+    "schema_version": "1.0",
+    "secondary_endpoint": "configured usable routing action after new-route Adj-RIB-In observation",
+    "setup_excluded_from_endpoints": true,
+    "setup_roa_entry_changes": 8,
+    "setup_signed_update_transactions": 4,
+    "system_path": [
+      "Krill signing",
+      "RRDP",
+      "Routinator validation",
+      "route-derived classifier",
+      "FRR action",
+      "ICMP probe"
+    ],
+    "timing": {
+      "event_field": "monotonic_ns",
+      "router_poll_interval_s": 0.05,
+      "source": "one persistent Python time.monotonic_ns helper"
+    },
+    "trials_per_block": 2,
+    "trials_per_lane": 2
+  },
+  "round_arm_means": {
+    "1": {
+      "open_dynamic": {
+        "metrics": {
+          "observed_to_action_ms": {
+            "mean_ms": 983.0495,
+            "n_observed": 2
+          },
+          "observed_to_probe_ms": {
+            "mean_ms": 1080.003,
+            "n_observed": 2
+          },
+          "switch_to_action_ms": {
+            "mean_ms": 2117.561,
+            "n_observed": 2
+          },
+          "switch_to_probe_ms": {
+            "mean_ms": 2214.515,
+            "n_observed": 2
+          }
+        },
+        "n_failed": 0,
+        "n_passed": 2,
+        "n_scheduled": 2
+      },
+      "prepublished_exact": {
+        "metrics": {
+          "observed_to_action_ms": {
+            "mean_ms": 933.5025,
+            "n_observed": 2
+          },
+          "observed_to_probe_ms": {
+            "mean_ms": 1029.7045,
+            "n_observed": 2
+          },
+          "switch_to_action_ms": {
+            "mean_ms": 2127.4055,
+            "n_observed": 2
+          },
+          "switch_to_probe_ms": {
+            "mean_ms": 2223.608,
+            "n_observed": 2
+          }
+        },
+        "n_failed": 0,
+        "n_passed": 2,
+        "n_scheduled": 2
+      },
+      "reactive_exact": {
+        "metrics": {
+          "observed_to_action_ms": {
+            "mean_ms": 2246.727,
+            "n_observed": 2
+          },
+          "observed_to_probe_ms": {
+            "mean_ms": 2341.5905,
+            "n_observed": 2
+          },
+          "switch_to_action_ms": {
+            "mean_ms": 3453.7395,
+            "n_observed": 2
+          },
+          "switch_to_probe_ms": {
+            "mean_ms": 3548.603,
+            "n_observed": 2
+          }
+        },
+        "n_failed": 0,
+        "n_passed": 2,
+        "n_scheduled": 2
+      }
+    }
+  },
+  "schema_version": 1,
+  "trial_level": {
+    "open_dynamic": {
+      "completion_counts": {
+        "true": 2
+      },
+      "failure_category_counts": {
+        "none": 2
+      },
+      "label": "Dynamic OpenScope",
+      "metrics": {
+        "observed_to_action_ms": {
+          "max_ms": 995.318,
+          "mean_ms": 983.049,
+          "median_ms": 983.049,
+          "min_ms": 970.781,
+          "n_missing": 0,
+          "n_observed": 2,
+          "n_total": 2,
+          "p95_nearest_rank_ms": 995.318,
+          "quantile_method": "nearest-rank p95"
+        },
+        "observed_to_probe_ms": {
+          "max_ms": 1087.969,
+          "mean_ms": 1080.003,
+          "median_ms": 1080.003,
+          "min_ms": 1072.037,
+          "n_missing": 0,
+          "n_observed": 2,
+          "n_total": 2,
+          "p95_nearest_rank_ms": 1087.969,
+          "quantile_method": "nearest-rank p95"
+        },
+        "switch_to_action_ms": {
+          "max_ms": 2142.251,
+          "mean_ms": 2117.561,
+          "median_ms": 2117.561,
+          "min_ms": 2092.871,
+          "n_missing": 0,
+          "n_observed": 2,
+          "n_total": 2,
+          "p95_nearest_rank_ms": 2142.251,
+          "quantile_method": "nearest-rank p95"
+        },
+        "switch_to_probe_ms": {
+          "max_ms": 2234.903,
+          "mean_ms": 2214.515,
+          "median_ms": 2214.515,
+          "min_ms": 2194.127,
+          "n_missing": 0,
+          "n_observed": 2,
+          "n_total": 2,
+          "p95_nearest_rank_ms": 2234.903,
+          "quantile_method": "nearest-rank p95"
+        }
+      },
+      "n_deadline_miss": 0,
+      "n_failed": 0,
+      "n_passed": 2,
+      "n_trials": 2,
+      "roa_entry_changes_total": 0,
+      "signed_update_transactions_total": 0,
+      "status_counts": {
+        "complete": 2
+      }
+    },
+    "prepublished_exact": {
+      "completion_counts": {
+        "true": 2
+      },
+      "failure_category_counts": {
+        "none": 2
+      },
+      "label": "Prepublished exact ROAs",
+      "metrics": {
+        "observed_to_action_ms": {
+          "max_ms": 937.888,
+          "mean_ms": 933.503,
+          "median_ms": 933.503,
+          "min_ms": 929.117,
+          "n_missing": 0,
+          "n_observed": 2,
+          "n_total": 2,
+          "p95_nearest_rank_ms": 937.888,
+          "quantile_method": "nearest-rank p95"
+        },
+        "observed_to_probe_ms": {
+          "max_ms": 1033.144,
+          "mean_ms": 1029.705,
+          "median_ms": 1029.705,
+          "min_ms": 1026.265,
+          "n_missing": 0,
+          "n_observed": 2,
+          "n_total": 2,
+          "p95_nearest_rank_ms": 1033.144,
+          "quantile_method": "nearest-rank p95"
+        },
+        "switch_to_action_ms": {
+          "max_ms": 2197.002,
+          "mean_ms": 2127.405,
+          "median_ms": 2127.405,
+          "min_ms": 2057.809,
+          "n_missing": 0,
+          "n_observed": 2,
+          "n_total": 2,
+          "p95_nearest_rank_ms": 2197.002,
+          "quantile_method": "nearest-rank p95"
+        },
+        "switch_to_probe_ms": {
+          "max_ms": 2294.151,
+          "mean_ms": 2223.608,
+          "median_ms": 2223.608,
+          "min_ms": 2153.065,
+          "n_missing": 0,
+          "n_observed": 2,
+          "n_total": 2,
+          "p95_nearest_rank_ms": 2294.151,
+          "quantile_method": "nearest-rank p95"
+        }
+      },
+      "n_deadline_miss": 0,
+      "n_failed": 0,
+      "n_passed": 2,
+      "n_trials": 2,
+      "roa_entry_changes_total": 0,
+      "signed_update_transactions_total": 0,
+      "status_counts": {
+        "complete": 2
+      }
+    },
+    "reactive_exact": {
+      "completion_counts": {
+        "true": 2
+      },
+      "failure_category_counts": {
+        "none": 2
+      },
+      "label": "Reactive exact ROA",
+      "metrics": {
+        "observed_to_action_ms": {
+          "max_ms": 2324.658,
+          "mean_ms": 2246.727,
+          "median_ms": 2246.727,
+          "min_ms": 2168.796,
+          "n_missing": 0,
+          "n_observed": 2,
+          "n_total": 2,
+          "p95_nearest_rank_ms": 2324.658,
+          "quantile_method": "nearest-rank p95"
+        },
+        "observed_to_probe_ms": {
+          "max_ms": 2418.428,
+          "mean_ms": 2341.591,
+          "median_ms": 2341.591,
+          "min_ms": 2264.753,
+          "n_missing": 0,
+          "n_observed": 2,
+          "n_total": 2,
+          "p95_nearest_rank_ms": 2418.428,
+          "quantile_method": "nearest-rank p95"
+        },
+        "switch_to_action_ms": {
+          "max_ms": 3460.316,
+          "mean_ms": 3453.739,
+          "median_ms": 3453.739,
+          "min_ms": 3447.163,
+          "n_missing": 0,
+          "n_observed": 2,
+          "n_total": 2,
+          "p95_nearest_rank_ms": 3460.316,
+          "quantile_method": "nearest-rank p95"
+        },
+        "switch_to_probe_ms": {
+          "max_ms": 3554.086,
+          "mean_ms": 3548.603,
+          "median_ms": 3548.603,
+          "min_ms": 3543.12,
+          "n_missing": 0,
+          "n_observed": 2,
+          "n_total": 2,
+          "p95_nearest_rank_ms": 3554.086,
+          "quantile_method": "nearest-rank p95"
+        }
+      },
+      "n_deadline_miss": 0,
+      "n_failed": 0,
+      "n_passed": 2,
+      "n_trials": 2,
+      "roa_entry_changes_total": 4,
+      "signed_update_transactions_total": 2,
+      "status_counts": {
+        "complete": 2
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+lane,trials,passed,failed,deadline_miss,signed_update_transactions,roa_entry_changes,observed_to_action_median_ms,observed_to_action_p95_ms,observed_to_probe_median_ms,observed_to_probe_p95_ms
+reactive_exact,40,40,0,0,40,80,2342.606,2489.894,2441.911,2581.848
+open_dynamic,40,40,0,0,0,0,974.233,1022.983,1070.611,1119.831
+prepublished_exact,40,40,0,0,0,0,975.039,1011.764,1067.513,1104.77

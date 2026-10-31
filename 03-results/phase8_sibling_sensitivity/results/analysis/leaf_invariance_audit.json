@@ -1,0 +1,11 @@
+{
+  "interpretation": "Adding a disjoint sibling announcement did not alter the matched original-leaf route or destination partitions.",
+  "mismatch_count": 0,
+  "mismatches_shown": [],
+  "mismatches_shown_limit": 20,
+  "partition_comparisons": 3600,
+  "phase7_raw_results": "phase7_simulation/results/paper_campaign/raw_scenarios.jsonl",
+  "phase7_raw_results_sha256": "fb9ec8fa80d41b5a98b4bc956d82ebfec0514eaab27fd183f86683dfed6925b7",
+  "phase8_rows_compared": 600,
+  "status": "passed"
+}

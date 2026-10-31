@@ -1,0 +1,124 @@
+{
+  "assertion_count": 213,
+  "expected_transition_cycles": 30,
+  "passed": true,
+  "stage_count": 12,
+  "stages": [
+    {
+      "elapsed_ms": 2562,
+      "label": "conventional-LLL",
+      "passed": true,
+      "pattern": "LLL",
+      "publication": "conventional",
+      "sink_outcome": "covering_aggregate"
+    },
+    {
+      "elapsed_ms": 2462,
+      "label": "dual-LLL",
+      "passed": true,
+      "pattern": "LLL",
+      "publication": "dual",
+      "sink_outcome": "covering_aggregate"
+    },
+    {
+      "elapsed_ms": 2956,
+      "label": "dual-SSS",
+      "passed": true,
+      "pattern": "SSS",
+      "publication": "dual",
+      "sink_outcome": "covering_aggregate"
+    },
+    {
+      "elapsed_ms": 2980,
+      "label": "dual-DLL",
+      "passed": true,
+      "pattern": "DLL",
+      "publication": "dual",
+      "sink_outcome": "covering_aggregate"
+    },
+    {
+      "elapsed_ms": 2717,
+      "label": "dual-LDL",
+      "passed": true,
+      "pattern": "LDL",
+      "publication": "dual",
+      "sink_outcome": "covering_aggregate"
+    },
+    {
+      "elapsed_ms": 2754,
+      "label": "dual-LLD",
+      "passed": true,
+      "pattern": "LLD",
+      "publication": "dual",
+      "sink_outcome": "covering_aggregate"
+    },
+    {
+      "elapsed_ms": 3310,
+      "label": "dual-DDL",
+      "passed": true,
+      "pattern": "DDL",
+      "publication": "dual",
+      "sink_outcome": "covering_aggregate"
+    },
+    {
+      "elapsed_ms": 3308,
+      "label": "dual-DLD",
+      "passed": true,
+      "pattern": "DLD",
+      "publication": "dual",
+      "sink_outcome": "covering_aggregate"
+    },
+    {
+      "elapsed_ms": 3018,
+      "label": "dual-LDD",
+      "passed": true,
+      "pattern": "LDD",
+      "publication": "dual",
+      "sink_outcome": "covering_aggregate"
+    },
+    {
+      "elapsed_ms": 3628,
+      "label": "dual-DDD",
+      "passed": true,
+      "pattern": "DDD",
+      "publication": "dual",
+      "sink_outcome": "correct_delegate"
+    },
+    {
+      "elapsed_ms": 2705,
+      "label": "rollback-LLL",
+      "passed": true,
+      "pattern": "LLL",
+      "publication": "dual",
+      "sink_outcome": "covering_aggregate"
+    },
+    {
+      "elapsed_ms": 2633,
+      "label": "withdraw-LLL",
+      "passed": true,
+      "pattern": "LLL",
+      "publication": "conventional",
+      "sink_outcome": "covering_aggregate"
+    }
+  ],
+  "transition_cycles": 30,
+  "transition_matrix_complete": true,
+  "transition_observations": 60,
+  "transition_observations_passed": 60,
+  "transition_timing_ms": {
+    "rollback": {
+      "count": 30,
+      "maximum": 8256,
+      "median": 8125.0,
+      "minimum": 7944,
+      "p95": 8255
+    },
+    "upgrade": {
+      "count": 30,
+      "maximum": 9421,
+      "median": 9197.5,
+      "minimum": 9020,
+      "p95": 9378
+    }
+  }
+}

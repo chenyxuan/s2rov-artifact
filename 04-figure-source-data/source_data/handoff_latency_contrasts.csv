@@ -1,0 +1,5 @@
+run_id,address_family,contrast,contrast_label,estimate_ms,ci95_lower_ms,ci95_upper_ms,n_complete_rounds,bootstrap_replicates,bootstrap_seed
+handoff-benefit-20260828T143741Z,IPv4,reactive_exact_minus_open_dynamic,Reactive exact minus preinstalled scope,1375.250236,1343.303055,1417.390146,10,100000,20260828
+handoff-benefit-20260828T143741Z,IPv4,open_dynamic_minus_prepublished_exact,Preinstalled scope minus prepublished exact,5.489562,-0.901569,12.978104,10,100000,20260828
+handoff-benefit-ipv6-20260829T002536Z,IPv6,reactive_exact_minus_open_dynamic,Reactive exact minus preinstalled scope,1376.771335,1334.177775,1438.862275,10,100000,20260828
+handoff-benefit-ipv6-20260829T002536Z,IPv6,open_dynamic_minus_prepublished_exact,Preinstalled scope minus prepublished exact,4.714335,-3.621787,13.422111,10,100000,20260828

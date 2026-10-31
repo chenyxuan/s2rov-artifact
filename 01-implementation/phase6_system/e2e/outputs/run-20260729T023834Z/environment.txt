@@ -1,0 +1,4 @@
+Krill 0.14.4
+Routinator 0.13.2
+bgpd version 10.6.1_git
+Docker 29.1.3

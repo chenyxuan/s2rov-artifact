@@ -1,0 +1,146 @@
+{
+  "backend": "python-matplotlib",
+  "claim_boundary": {
+    "allowed": [
+      "conditional absolute intended-only delivery under all three policies",
+      "all-589 equality with exact-child only in the intended-only lane",
+      "conditional absolute competition delivery to an eligible unlisted origin under all three policies",
+      "paired changes versus the announcement-matched aggregate-only outcome in prose"
+    ],
+    "forbidden": [
+      "same-scenario joint frontier",
+      "Exact-match ROV equivalence under competition",
+      "Internet-wide or traffic-weighted deployment benefit",
+      "typical-unit effect",
+      "placement-strategy superiority"
+    ]
+  },
+  "data_integrity": {
+    "exclusion_rule": "none",
+    "finite_candidate_frame_units_for_panel_a": 691,
+    "grid_extension_raw_rows": 14000,
+    "order_source_csv_rows": 110,
+    "order_trajectory_rows_per_panel": 55,
+    "panel_a_curve_rows": 11,
+    "panel_a_reference_rows": 1,
+    "panel_b_curve_rows": 11,
+    "panel_b_reference_rows": 1,
+    "phase7_raw_rows_before_after": [
+      36800,
+      36800
+    ],
+    "random_orders_as_independent_units": 0,
+    "selected_synthetic_units": 200,
+    "source_csv_rows": 24
+  },
+  "figure_contract": {
+    "archetype": "quantitative_grid",
+    "caption_required": [
+      "The x-axis is labeled S\u00b2-ROV upgraded share (%); its denominator is the fixed 589-AS set documented outside the plot.",
+      "The panels use different announcement sets and are not a same-scenario joint frontier.",
+      "Each S\u00b2-ROV curve is the within-unit average of five fixed orders; Aggregate-only ROV and Exact-match ROV are absolute horizontal references.",
+      "Paired contrast intervals are reported in prose rather than relabeled as absolute-outcome intervals."
+    ],
+    "core_conclusion": "S\u00b2-ROV raises intended delivery in an intended-only lane, while a separate competition lane shows increased eligible-unlisted-origin exposure.",
+    "cross_panel_warning": "different announcement sets; not a joint frontier",
+    "deployment_denominator_asns": 589,
+    "deployment_grid_percent": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100
+    ],
+    "endpoint_value_annotations": false,
+    "fixed_order_paths": [
+      "random_01",
+      "random_02",
+      "random_03",
+      "random_04",
+      "random_05"
+    ],
+    "individual_order_paths_plotted": false,
+    "interval_bands_plotted": false,
+    "latex_composition": "subfig package; panel labels are not embedded in graphics",
+    "outcome_encoding": "absolute destination percentages for S\u00b2-ROV, Aggregate-only ROV, and Exact-match ROV; no change-score axis",
+    "panel_a_announcement_set": "intended_only",
+    "panel_b_announcement_set": "competition_uniform_unlisted_origin",
+    "primary_deployment_strategy": "random_five_order_average",
+    "shared_panel_style": {
+      "axes_fraction": {
+        "bottom": 0.27,
+        "height": 0.62,
+        "left": 0.145,
+        "width": 0.7949999999999999
+      },
+      "axis_label_pt": 8.4,
+      "canvas_inches": [
+        3.5,
+        1.75
+      ],
+      "legend_pt": 6.96,
+      "tick_label_pt": 7.56
+    },
+    "tick_label_contract": "fixed integer x/y tick labels without decimal points or percent signs; percentage units appear only in axis titles",
+    "x_axis_label": "S\u00b2-ROV upgraded share (%)"
+  },
+  "generator": {
+    "path": "MSN-2026-0830/scripts/build_fig_deployment_outcomes.py",
+    "sha256": "2d3f9e9470751a7a1bc2b9bb98be59aa71604879efc879c50711681cebe29853"
+  },
+  "input_sha256": {
+    "phase7_simulation/results/deployment_grid_extension/analysis/analysis_manifest.json": "51e9488e7d3b1e607581128ee5e89f692bab1ddd64b6902919e92ccaf6591a39",
+    "phase7_simulation/results/deployment_grid_extension/analysis/cell_summary.csv": "cd9c3c2966e19c43dc991de1980bf4d80a0f75b4656f84b14bb9e5b7e75042fc",
+    "phase7_simulation/results/deployment_grid_extension/analysis/cell_summary.json": "4e1cf522e822c69fc478ed824d1086f9a837c6f1fb4ab0b79d7b4b26cb7bc0b7",
+    "phase7_simulation/results/deployment_grid_extension/analysis/order_level_unit_contrasts.jsonl": "4bd56f2e20ada3fb764bbabefc89f3a4e5a9e93ca8a890e6cb2a09271dbeb981",
+    "phase7_simulation/results/deployment_grid_extension/analysis/order_trajectories.csv": "267c83c962a051ef480f9b6965deb62ec377db54d8b39d2e3418dab923865bbc",
+    "phase7_simulation/results/deployment_grid_extension/analysis/order_trajectories.json": "09aaf1e49c5327d95d22bc49e1f1eee432a660f2f6a3463df468198555d933f7",
+    "phase7_simulation/results/deployment_grid_extension/analysis/unit_contrasts.jsonl": "e2b7807e64892c90b681217724ca603715705635aa21794411b0c4e2c7e41c7e",
+    "phase7_simulation/results/deployment_grid_extension/independent_audit.json": "c5201a212681c150e9574e0c5885eabb607ff990647ab475787c0f0bcd185713",
+    "phase7_simulation/results/deployment_grid_extension/manifest.json": "f5a20c7a2592b6cac6231fba4d2635806644432da9c6ee207ae97d470a049999",
+    "phase7_simulation/results/deployment_grid_extension/raw_scenarios.jsonl": "d1ad91a251a06899179e353d0771bca53b2cbd7ffff95dad8dc0d12531878716",
+    "phase7_simulation/results/paper_campaign/analysis/analysis_manifest.json": "27298f787bfb8856b23d5c21138526dd9adbb3259a57e64067268eb2fc4c2a73",
+    "phase7_simulation/results/paper_campaign/analysis/holder_contrasts.jsonl": "407194fa21a41a7c748caf114ed81183915a538b2d6ebebdbd3805b95edc2413",
+    "phase7_simulation/results/paper_campaign/analysis/outcome_partition_audit.json": "c32643e44ec67d7df5b9ed3f21c1531a7d31246d91d7986b2e3d33e4187df3e2",
+    "phase7_simulation/results/paper_campaign/analysis/raw_cell_summary.csv": "4de8618bd35fe21a4731033cab8a51d766eeb1d03d7aed5cc782fcef6ae86969",
+    "phase7_simulation/results/paper_campaign/manifest.json": "a674b87afd90716521f19673c4ddbd1153c1b911ec5021a99e0eabe579bcbeae",
+    "phase7_simulation/results/paper_campaign/raw_scenarios.jsonl": "fb9ec8fa80d41b5a98b4bc956d82ebfec0514eaab27fd183f86683dfed6925b7",
+    "phase9_selected_unit_reanalysis/EXPERIMENT_CONTRACT.md": "acf565552a21a342b20c3806cf15a582bdca491c72c44dd7f3d2559a79ec3b03",
+    "phase9_selected_unit_reanalysis/reanalyze.py": "40e78d20f6f11b1cacc808df05dff6a18aa90c31be1c3115245975461a1a39fb",
+    "phase9_selected_unit_reanalysis/results/competition_cells.csv": "176547af20b4b661ddbbdf647fc62233602838eaa086ed20237854f7007a170d",
+    "phase9_selected_unit_reanalysis/results/summary.json": "64448d3464f26202436bec12016bceb266d65d40ebd1118115a3c92f75ba716f"
+  },
+  "output_sha256": {
+    "MSN-2026-0830/figures/fig_deployment_outcomes_a.pdf": "50f44ca966717e15ae4b38212a5a9d75e56ac9caff4ec5d9f5c62d33c32fe3ec",
+    "MSN-2026-0830/figures/fig_deployment_outcomes_a.png": "5ce9e5a5b9928f3b646cb2bf0c1e574b9c8e0ddcd4f0f50c08ec8db21dcbd63f",
+    "MSN-2026-0830/figures/fig_deployment_outcomes_a.svg": "4136ddd00257d13f4d22f6c81f3564b369235e04f74cc4c63a263cbe9fe1d066",
+    "MSN-2026-0830/figures/fig_deployment_outcomes_a.tiff": "74f3f18279a3b5b0fbe351d01da58b8eafbf8721b2757c35646a7311245343fc",
+    "MSN-2026-0830/figures/fig_deployment_outcomes_b.pdf": "80d728c7a874bd9697be841e2e5445f6964e6d6a6bbf8483ef18333ec4e38a42",
+    "MSN-2026-0830/figures/fig_deployment_outcomes_b.png": "f009fe996b808162aa0eed6821051e288fbf3844304e9baa8318a3bc2e84abab",
+    "MSN-2026-0830/figures/fig_deployment_outcomes_b.svg": "4ebf80f1a021b182a5e1978d4256eee94551246515f19cfe9df022026c562406",
+    "MSN-2026-0830/figures/fig_deployment_outcomes_b.tiff": "d7c2d1903ac77b3d1b99b4c74e1ead3971e74fbb52dcfc1182be719c8bb8b308"
+  },
+  "report_sha256": {
+    "MSN-2026-0830/figures/FIG_DEPLOYMENT_OUTCOMES_PROVENANCE.md": "0e280c9066ca7c2e78aa463acfa3caf9015093ccc0a8f8d75d571e4933d46894"
+  },
+  "schema_version": "s2-rov-fig-deployment-outcomes-v6-absolute",
+  "source_data_sha256": {
+    "MSN-2026-0830/figures/source_data/fig_deployment_outcomes.csv": "7a209d91e0333f630d45ceb799fbde9d94cfc6c2fc4dd4b4b1154ede05611f76",
+    "MSN-2026-0830/figures/source_data/fig_deployment_outcomes_orders.csv": "44a472033b1fd158c3e093a262e11f4c7ceda268ed06734cf6aba1ae5848063a"
+  },
+  "statistics": {
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20260804,
+    "order_paths": "five descriptive within-unit deployment blocks retained in source data and averaged before inference; not plotted individually",
+    "paired_intervals_plotted_on_absolute_axis": false,
+    "panel_a": "pointwise stratified paired SRSWOR-rescaled bootstrap percentile 95% CI for the finite 691-unit candidate frame",
+    "panel_b": "pointwise ordinary stratified paired bootstrap 95% stability interval over 200 selected synthetic units; no finite-population correction",
+    "simultaneous_bands": false
+  }
+}

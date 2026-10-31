@@ -1,0 +1,17 @@
+Krill 0.14.4
+Routinator 0.13.2
+bgpd version 10.6.1_git
+Docker 29.1.3
+Linux 6.8.0-90-generic aarch64 GNU/Linux
+Architecture:                         aarch64
+CPU(s):                               32
+On-line CPU(s) list:                  0-31
+Model name:                           Kunpeng-920
+Thread(s) per core:                   1
+Core(s) per socket:                   1
+Socket(s):                            32
+MemTotal:       65705444 kB
+Git commit a1e20160cc0b421b863edb685c483659311ea5a8
+Image sha256:a11f032e40185a24a61a56962e76fbd1f776be3ecec86c9f18fd5bc557d8cc23 ["stripe-testbed@sha256:a11f032e40185a24a61a56962e76fbd1f776be3ecec86c9f18fd5bc557d8cc23"]
+Image sha256:df48b510fd4c6879b8e03bc16dc50943006f72cc6957169e6337b76678d52c48 ["stripe-routinator@sha256:df48b510fd4c6879b8e03bc16dc50943006f72cc6957169e6337b76678d52c48"]
+Image sha256:813497af103e972600f6161012b3bf2a2a1c5ea10d09cd1eacd74f1dc510a57b ["quay.io/frrouting/frr@sha256:813497af103e972600f6161012b3bf2a2a1c5ea10d09cd1eacd74f1dc510a57b"]

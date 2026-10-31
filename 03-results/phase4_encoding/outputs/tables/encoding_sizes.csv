@@ -1,0 +1,6 @@
+test,num_stripes,wire_bytes,header_bytes,stripe_bytes,roundtrip_ok
+enterprise_pi,1,24,14,10,True
+isp_openscope_marker,1,23,14,9,True
+isp_explicit_customers,4,53,14,39,True
+isp_list_as_set,2,49,14,35,True
+unmarked_empty_child,2,30,14,16,True

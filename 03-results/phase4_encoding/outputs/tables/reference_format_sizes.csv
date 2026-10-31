@@ -1,0 +1,6 @@
+scenario,open_base,explicit_customer_prefixes,stripes,reference_payload_bytes,conservative_projected_vrps,roundtrip_ok
+enterprise_unmarked,False,0,1,24,1,True
+isp_marker_no_explicit_children,True,0,1,23,1,True
+isp_marker_10_explicit,True,10,11,123,11,True
+isp_marker_100_explicit,True,100,101,1023,101,True
+isp_marker_255_explicit,True,255,256,2573,256,True

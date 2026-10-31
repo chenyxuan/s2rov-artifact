@@ -1,0 +1,65 @@
+{
+  "agent_benchmark": {
+    "checksum": 1260000,
+    "max_ns_per_query": 27344,
+    "median_ns_per_query": 27328,
+    "min_ns_per_query": 27291,
+    "queries_per_sample": 140000,
+    "samples": 7
+  },
+  "baseline_state_counts": {
+    "Invalid": 5,
+    "NotFound": 1,
+    "Valid": 1
+  },
+  "checks": {
+    "all_bgp_cases_observed": true,
+    "baseline_frr_enforcement": true,
+    "baseline_semantics": true,
+    "closed_override_removal_to_delegated": true,
+    "closed_override_restored_to_explicit": true,
+    "da_frr_enforcement": true,
+    "da_semantics": true
+  },
+  "da_state_counts": {
+    "Delegated": 2,
+    "Explicit": 2,
+    "Invalid": 2,
+    "NotFound": 1
+  },
+  "override_remove_timing": {
+    "max_ms": 2616.006,
+    "median_ms": 2450.479,
+    "min_ms": 1355.895,
+    "n": 30,
+    "p95_ms": 2552.213
+  },
+  "override_restore_timing": {
+    "max_ms": 2597.052,
+    "median_ms": 1548.983,
+    "min_ms": 1398.56,
+    "n": 30,
+    "p95_ms": 2574.578
+  },
+  "passed": true,
+  "recovery_timing": {
+    "max_ms": 10784.679,
+    "median_ms": 10758.143,
+    "min_ms": 10709.651,
+    "n": 5,
+    "p95_ms": 10784.679
+  },
+  "run": "run-20260729T011350Z",
+  "security_boundary": {
+    "aggregate_attacker": "Invalid",
+    "interpretation": "Open policy preserves self-protection at the exact aggregate and excludes non-public origins, but it cannot authenticate or distinguish an arbitrary eligible public subprefix origin.",
+    "private_origin": "Invalid",
+    "public_subprefix_attacker": "Delegated"
+  },
+  "timings_ms": {
+    "baseline_krill_to_frr": 7134.427,
+    "baseline_krill_to_routinator": 7035.063,
+    "da_evaluate_and_frr_enforce": 3512.286,
+    "da_krill_to_routinator": 2649.876
+  }
+}

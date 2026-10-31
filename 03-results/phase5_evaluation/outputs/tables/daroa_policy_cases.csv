@@ -1,0 +1,9 @@
+case,prefix,origin_asn,expected,before_roundtrip,after_roundtrip,pass
+holder aggregate,10.0.0.0/16,64501,Explicit,Explicit,Explicit,True
+wrong aggregate origin,10.0.0.0/16,64502,Invalid,Invalid,Invalid,True
+listed customer,10.0.1.0/24,64502,Explicit,Explicit,Explicit,True
+wrong listed customer,10.0.1.0/24,15169,Invalid,Invalid,Invalid,True
+open delegated range,10.0.2.0/24,18403,Delegated,Delegated,Delegated,True
+public origin in open range,10.0.2.0/24,15169,Delegated,Delegated,Delegated,True
+private origin in open range,10.0.2.0/24,64513,Invalid,Invalid,Invalid,True
+outside object,192.0.2.0/24,64501,NotFound,NotFound,NotFound,True

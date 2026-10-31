@@ -1,0 +1,16 @@
+[
+  {
+    "name": "origin_a",
+    "peer": "172.30.50.11",
+    "prefix": "10.0.10.0/24",
+    "origin": 8075,
+    "expected_da": "Delegated"
+  },
+  {
+    "name": "origin_b",
+    "peer": "172.30.50.12",
+    "prefix": "10.0.10.0/24",
+    "origin": 18403,
+    "expected_da": "Delegated"
+  }
+]

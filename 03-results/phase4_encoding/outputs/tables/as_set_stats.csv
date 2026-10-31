@@ -1,0 +1,9 @@
+test_name,set_size,encoding,byte_size,raw_4byte_asn,compression_ratio
+empty_explicit_set,0,empty,0,0,0.0x
+single_as,1,list,5,4,0.8x
+single_large_as,1,list,5,4,0.8x
+two_ases,2,list,9,8,0.9x
+three_ases_sparse,3,list,13,12,0.9x
+ten_ases,10,list,41,40,1.0x
+fifty_ases,50,list,201,200,1.0x
+max_list_255,255,list,1021,1020,1.0x

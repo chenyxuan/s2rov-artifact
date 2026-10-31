@@ -1,0 +1,392 @@
+{
+  "artifact_hash_mismatches": [],
+  "auditor": "<repo>/phase5_evaluation/processing_benchmark/audit_policy_update_benchmark.py",
+  "auditor_sha256": "44a7418a2246d12b15912b01518c3421d31dcf31658b0442c06b47696f21a380",
+  "checks": {
+    "accepted_source_metadata_hashes_match": true,
+    "all_checks_pass": true,
+    "all_input_policy_checks_pass": true,
+    "all_summary_statistics_recomputed": true,
+    "all_worker_pids_fresh": true,
+    "all_workers_pinned_to_cpu_31": true,
+    "artifact_input_output_hashes_match": true,
+    "auditor_hash_matches_config": true,
+    "classifier_hash_matches_config": true,
+    "exact_2_by_5_matrix": true,
+    "exactly_200_raw_records": true,
+    "formal_cpu": true,
+    "formal_ip_versions": true,
+    "formal_repetitions": true,
+    "formal_rule_counts": true,
+    "formal_worker_count": true,
+    "input_manifest_hash_matches_config": true,
+    "no_missing_raw_records": true,
+    "no_raw_parse_errors": true,
+    "one_orchestrator_parent_pid": true,
+    "raw_input_hashes_match": true,
+    "raw_pointer_replacements_confirmed": true,
+    "raw_policy_roundtrips_identical": true,
+    "raw_schedule_identity_roundtrip": true,
+    "raw_states_match_protocol": true,
+    "raw_timing_exclusions_confirmed": true,
+    "raw_timings_are_positive_and_consistent": true,
+    "runner_hash_matches_config": true,
+    "schedule_has_200_conditions": true,
+    "schedule_hash_matches_config": true,
+    "schedule_is_randomized": true,
+    "schedule_reproduces_from_seed": true,
+    "schema_versions_match": true,
+    "summary_csv_matches_json": true,
+    "summary_has_exact_ten_cells": true,
+    "twenty_observations_per_cell": true
+  },
+  "claim_boundary": "The audit verifies the frozen inputs, process matrix, state transition, timing arithmetic, and descriptive summaries. It does not validate Internet-scale convergence or infer a causal IPv4/IPv6 difference.",
+  "input_policy_checks": [
+    {
+      "all_children_closed": true,
+      "entry_counts_ok": true,
+      "hashes_ok": true,
+      "ip_version": 4,
+      "pass": true,
+      "probe_identity_ok": true,
+      "query_hash_ok": true,
+      "roundtrips_ok": true,
+      "rules": 1,
+      "semantic_delta_ok": true,
+      "serialized_sizes_ok": true,
+      "states_ok": true
+    },
+    {
+      "all_children_closed": true,
+      "entry_counts_ok": true,
+      "hashes_ok": true,
+      "ip_version": 4,
+      "pass": true,
+      "probe_identity_ok": true,
+      "query_hash_ok": true,
+      "roundtrips_ok": true,
+      "rules": 64,
+      "semantic_delta_ok": true,
+      "serialized_sizes_ok": true,
+      "states_ok": true
+    },
+    {
+      "all_children_closed": true,
+      "entry_counts_ok": true,
+      "hashes_ok": true,
+      "ip_version": 4,
+      "pass": true,
+      "probe_identity_ok": true,
+      "query_hash_ok": true,
+      "roundtrips_ok": true,
+      "rules": 256,
+      "semantic_delta_ok": true,
+      "serialized_sizes_ok": true,
+      "states_ok": true
+    },
+    {
+      "all_children_closed": true,
+      "entry_counts_ok": true,
+      "hashes_ok": true,
+      "ip_version": 4,
+      "pass": true,
+      "probe_identity_ok": true,
+      "query_hash_ok": true,
+      "roundtrips_ok": true,
+      "rules": 1024,
+      "semantic_delta_ok": true,
+      "serialized_sizes_ok": true,
+      "states_ok": true
+    },
+    {
+      "all_children_closed": true,
+      "entry_counts_ok": true,
+      "hashes_ok": true,
+      "ip_version": 4,
+      "pass": true,
+      "probe_identity_ok": true,
+      "query_hash_ok": true,
+      "roundtrips_ok": true,
+      "rules": 4096,
+      "semantic_delta_ok": true,
+      "serialized_sizes_ok": true,
+      "states_ok": true
+    },
+    {
+      "all_children_closed": true,
+      "entry_counts_ok": true,
+      "hashes_ok": true,
+      "ip_version": 6,
+      "pass": true,
+      "probe_identity_ok": true,
+      "query_hash_ok": true,
+      "roundtrips_ok": true,
+      "rules": 1,
+      "semantic_delta_ok": true,
+      "serialized_sizes_ok": true,
+      "states_ok": true
+    },
+    {
+      "all_children_closed": true,
+      "entry_counts_ok": true,
+      "hashes_ok": true,
+      "ip_version": 6,
+      "pass": true,
+      "probe_identity_ok": true,
+      "query_hash_ok": true,
+      "roundtrips_ok": true,
+      "rules": 64,
+      "semantic_delta_ok": true,
+      "serialized_sizes_ok": true,
+      "states_ok": true
+    },
+    {
+      "all_children_closed": true,
+      "entry_counts_ok": true,
+      "hashes_ok": true,
+      "ip_version": 6,
+      "pass": true,
+      "probe_identity_ok": true,
+      "query_hash_ok": true,
+      "roundtrips_ok": true,
+      "rules": 256,
+      "semantic_delta_ok": true,
+      "serialized_sizes_ok": true,
+      "states_ok": true
+    },
+    {
+      "all_children_closed": true,
+      "entry_counts_ok": true,
+      "hashes_ok": true,
+      "ip_version": 6,
+      "pass": true,
+      "probe_identity_ok": true,
+      "query_hash_ok": true,
+      "roundtrips_ok": true,
+      "rules": 1024,
+      "semantic_delta_ok": true,
+      "serialized_sizes_ok": true,
+      "states_ok": true
+    },
+    {
+      "all_children_closed": true,
+      "entry_counts_ok": true,
+      "hashes_ok": true,
+      "ip_version": 6,
+      "pass": true,
+      "probe_identity_ok": true,
+      "query_hash_ok": true,
+      "roundtrips_ok": true,
+      "rules": 4096,
+      "semantic_delta_ok": true,
+      "serialized_sizes_ok": true,
+      "states_ok": true
+    }
+  ],
+  "matrix": {
+    "cell_counts": {
+      "ipv4-rules-1": 20,
+      "ipv4-rules-1024": 20,
+      "ipv4-rules-256": 20,
+      "ipv4-rules-4096": 20,
+      "ipv4-rules-64": 20,
+      "ipv6-rules-1": 20,
+      "ipv6-rules-1024": 20,
+      "ipv6-rules-256": 20,
+      "ipv6-rules-4096": 20,
+      "ipv6-rules-64": 20
+    },
+    "ip_versions": [
+      4,
+      6
+    ],
+    "raw_records": 200,
+    "repetitions_per_cell": 20,
+    "rule_counts": [
+      1,
+      64,
+      256,
+      1024,
+      4096
+    ]
+  },
+  "missing_raw_records": [],
+  "raw_parse_errors": [],
+  "recomputed_rows": [
+    {
+      "closed_serialized_bytes": 22,
+      "ip_version": 4,
+      "label": "IPv4",
+      "open_serialized_bytes": 22,
+      "repetitions": 20,
+      "rules": 1,
+      "update_ms_mean": 0.32595585,
+      "update_ms_median": 0.322782,
+      "update_ms_q1": 0.31697200000000003,
+      "update_ms_q3": 0.337917
+    },
+    {
+      "closed_serialized_bytes": 652,
+      "ip_version": 4,
+      "label": "IPv4",
+      "open_serialized_bytes": 652,
+      "repetitions": 20,
+      "rules": 64,
+      "update_ms_mean": 4.5929905,
+      "update_ms_median": 4.621005,
+      "update_ms_q1": 4.5428275000000005,
+      "update_ms_q3": 4.632885
+    },
+    {
+      "closed_serialized_bytes": 2572,
+      "ip_version": 4,
+      "label": "IPv4",
+      "open_serialized_bytes": 2572,
+      "repetitions": 20,
+      "rules": 256,
+      "update_ms_mean": 17.2225668,
+      "update_ms_median": 17.1240335,
+      "update_ms_q1": 17.049421249999998,
+      "update_ms_q3": 17.288936749999998
+    },
+    {
+      "closed_serialized_bytes": 10252,
+      "ip_version": 4,
+      "label": "IPv4",
+      "open_serialized_bytes": 10252,
+      "repetitions": 20,
+      "rules": 1024,
+      "update_ms_mean": 67.34693469999999,
+      "update_ms_median": 67.5253445,
+      "update_ms_q1": 66.77259075,
+      "update_ms_q3": 67.76027524999999
+    },
+    {
+      "closed_serialized_bytes": 40972,
+      "ip_version": 4,
+      "label": "IPv4",
+      "open_serialized_bytes": 40972,
+      "repetitions": 20,
+      "rules": 4096,
+      "update_ms_mean": 272.59082535,
+      "update_ms_median": 269.0575515,
+      "update_ms_q1": 266.74265549999996,
+      "update_ms_q3": 273.05269050000004
+    },
+    {
+      "closed_serialized_bytes": 40,
+      "ip_version": 6,
+      "label": "IPv6",
+      "open_serialized_bytes": 40,
+      "repetitions": 20,
+      "rules": 1,
+      "update_ms_mean": 0.46373999999999993,
+      "update_ms_median": 0.46350199999999997,
+      "update_ms_q1": 0.45123450000000004,
+      "update_ms_q3": 0.47099949999999996
+    },
+    {
+      "closed_serialized_bytes": 822,
+      "ip_version": 6,
+      "label": "IPv6",
+      "open_serialized_bytes": 822,
+      "repetitions": 20,
+      "rules": 64,
+      "update_ms_mean": 7.638224800000001,
+      "update_ms_median": 7.600097,
+      "update_ms_q1": 7.55892675,
+      "update_ms_q3": 7.6303695
+    },
+    {
+      "closed_serialized_bytes": 3200,
+      "ip_version": 6,
+      "label": "IPv6",
+      "open_serialized_bytes": 3200,
+      "repetitions": 20,
+      "rules": 256,
+      "update_ms_mean": 28.758932199999997,
+      "update_ms_median": 28.810898,
+      "update_ms_q1": 28.355987250000002,
+      "update_ms_q3": 29.15633425
+    },
+    {
+      "closed_serialized_bytes": 12734,
+      "ip_version": 6,
+      "label": "IPv6",
+      "open_serialized_bytes": 12734,
+      "repetitions": 20,
+      "rules": 1024,
+      "update_ms_mean": 112.41730475,
+      "update_ms_median": 111.86295150000001,
+      "update_ms_q1": 111.20851625,
+      "update_ms_q3": 113.5831915
+    },
+    {
+      "closed_serialized_bytes": 50892,
+      "ip_version": 6,
+      "label": "IPv6",
+      "open_serialized_bytes": 50892,
+      "repetitions": 20,
+      "rules": 4096,
+      "update_ms_mean": 447.7788211,
+      "update_ms_median": 447.266941,
+      "update_ms_q1": 440.99939374999997,
+      "update_ms_q3": 450.8355415
+    }
+  ],
+  "run_dir": "<repo>/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-formal-v1",
+  "schema_version": "same-size-policy-update-independent-audit-v1",
+  "source_hash_mismatches": [],
+  "summary_cell_checks": [
+    {
+      "ip_version": 4,
+      "matches": true,
+      "rules": 1
+    },
+    {
+      "ip_version": 4,
+      "matches": true,
+      "rules": 64
+    },
+    {
+      "ip_version": 4,
+      "matches": true,
+      "rules": 256
+    },
+    {
+      "ip_version": 4,
+      "matches": true,
+      "rules": 1024
+    },
+    {
+      "ip_version": 4,
+      "matches": true,
+      "rules": 4096
+    },
+    {
+      "ip_version": 6,
+      "matches": true,
+      "rules": 1
+    },
+    {
+      "ip_version": 6,
+      "matches": true,
+      "rules": 64
+    },
+    {
+      "ip_version": 6,
+      "matches": true,
+      "rules": 256
+    },
+    {
+      "ip_version": 6,
+      "matches": true,
+      "rules": 1024
+    },
+    {
+      "ip_version": 6,
+      "matches": true,
+      "rules": 4096
+    }
+  ]
+}

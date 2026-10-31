@@ -1,0 +1,72 @@
+{
+  "checks": {
+    "all_route_enforcement_checks_passed": true,
+    "background_removed_after_run": true,
+    "both_transitions_at_every_level": true,
+    "equal_trial_counts": true,
+    "one_enforcement_snapshot_per_transition": true
+  },
+  "enforcement_snapshots": 4,
+  "levels": [
+    0,
+    4
+  ],
+  "passed": true,
+  "payload": [
+    {
+      "background_stripes": 0,
+      "json_bytes": 362,
+      "setup_ms": 2.723,
+      "total_validated_entries": 2
+    },
+    {
+      "background_stripes": 4,
+      "json_bytes": 859,
+      "setup_ms": 896.731,
+      "total_validated_entries": 6
+    }
+  ],
+  "route_outcome_checks": 28,
+  "run": "scale-20260804T020941Z",
+  "scope": "Signed-policy scale sensitivity in the controlled prototype; seven live BGP routes are checked after every transition.",
+  "timing": [
+    {
+      "background_stripes": 0,
+      "max_ms": 3558.293,
+      "median_ms": 3558.293,
+      "min_ms": 3558.293,
+      "n": 1,
+      "p95_ms": 3558.293,
+      "transition": "remove"
+    },
+    {
+      "background_stripes": 0,
+      "max_ms": 3763.993,
+      "median_ms": 3763.993,
+      "min_ms": 3763.993,
+      "n": 1,
+      "p95_ms": 3763.993,
+      "transition": "restore"
+    },
+    {
+      "background_stripes": 4,
+      "max_ms": 3545.151,
+      "median_ms": 3545.151,
+      "min_ms": 3545.151,
+      "n": 1,
+      "p95_ms": 3545.151,
+      "transition": "remove"
+    },
+    {
+      "background_stripes": 4,
+      "max_ms": 3583.149,
+      "median_ms": 3583.149,
+      "min_ms": 3583.149,
+      "n": 1,
+      "p95_ms": 3583.149,
+      "transition": "restore"
+    }
+  ],
+  "transition_samples": 4,
+  "trials_per_transition": 1
+}

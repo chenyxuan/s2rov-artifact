@@ -1,0 +1,3 @@
+lane,trials,signed_update_transactions,authorization_entry_changes,invalid_median_ms,invalid_p95_ms,unavailable_median_ms,unavailable_p95_ms,completion_median_ms,completion_p95_ms,final_state,final_action
+exact,2,2,4,76218.76,98110.865,76453.036,98339.43,76685.56,98580.233,Valid,accept
+da,2,0,0,0.0,0.0,719.894,751.191,962.032,980.78,Delegated,accept

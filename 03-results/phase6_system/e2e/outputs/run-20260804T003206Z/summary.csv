@@ -1,0 +1,8 @@
+case,prefix,origin,baseline,da
+holder_aggregate,10.0.0.0/16,64501,Valid,Explicit
+listed_customer,10.0.1.0/24,8075,Invalid,Explicit
+open_delegate,10.0.2.0/24,18403,Invalid,Delegated
+public_subprefix_attacker,10.0.3.0/24,15169,Invalid,Delegated
+aggregate_attacker,10.0.0.0/16,13335,Invalid,Invalid
+private_origin,10.0.4.0/24,64513,Invalid,Invalid
+unrelated,192.0.2.0/24,64496,NotFound,NotFound

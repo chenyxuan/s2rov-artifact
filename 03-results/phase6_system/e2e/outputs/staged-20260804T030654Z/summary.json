@@ -1,0 +1,105 @@
+{
+  "assertion_count": 213,
+  "passed": true,
+  "stage_count": 12,
+  "stages": [
+    {
+      "elapsed_ms": 2460,
+      "label": "conventional-LLL",
+      "passed": true,
+      "pattern": "LLL",
+      "publication": "conventional",
+      "sink_outcome": "covering_aggregate"
+    },
+    {
+      "elapsed_ms": 2544,
+      "label": "dual-LLL",
+      "passed": true,
+      "pattern": "LLL",
+      "publication": "dual",
+      "sink_outcome": "covering_aggregate"
+    },
+    {
+      "elapsed_ms": 3015,
+      "label": "dual-SSS",
+      "passed": true,
+      "pattern": "SSS",
+      "publication": "dual",
+      "sink_outcome": "covering_aggregate"
+    },
+    {
+      "elapsed_ms": 2892,
+      "label": "dual-DLL",
+      "passed": true,
+      "pattern": "DLL",
+      "publication": "dual",
+      "sink_outcome": "covering_aggregate"
+    },
+    {
+      "elapsed_ms": 2706,
+      "label": "dual-LDL",
+      "passed": true,
+      "pattern": "LDL",
+      "publication": "dual",
+      "sink_outcome": "covering_aggregate"
+    },
+    {
+      "elapsed_ms": 2754,
+      "label": "dual-LLD",
+      "passed": true,
+      "pattern": "LLD",
+      "publication": "dual",
+      "sink_outcome": "covering_aggregate"
+    },
+    {
+      "elapsed_ms": 3387,
+      "label": "dual-DDL",
+      "passed": true,
+      "pattern": "DDL",
+      "publication": "dual",
+      "sink_outcome": "covering_aggregate"
+    },
+    {
+      "elapsed_ms": 3286,
+      "label": "dual-DLD",
+      "passed": true,
+      "pattern": "DLD",
+      "publication": "dual",
+      "sink_outcome": "covering_aggregate"
+    },
+    {
+      "elapsed_ms": 2944,
+      "label": "dual-LDD",
+      "passed": true,
+      "pattern": "LDD",
+      "publication": "dual",
+      "sink_outcome": "covering_aggregate"
+    },
+    {
+      "elapsed_ms": 3662,
+      "label": "dual-DDD",
+      "passed": true,
+      "pattern": "DDD",
+      "publication": "dual",
+      "sink_outcome": "correct_delegate"
+    },
+    {
+      "elapsed_ms": 2533,
+      "label": "rollback-LLL",
+      "passed": true,
+      "pattern": "LLL",
+      "publication": "dual",
+      "sink_outcome": "covering_aggregate"
+    },
+    {
+      "elapsed_ms": 2540,
+      "label": "withdraw-LLL",
+      "passed": true,
+      "pattern": "LLL",
+      "publication": "conventional",
+      "sink_outcome": "covering_aggregate"
+    }
+  ],
+  "transition_trials": 2,
+  "transition_trials_passed": 2
+}

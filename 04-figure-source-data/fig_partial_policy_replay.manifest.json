@@ -1,0 +1,1434 @@
+{
+  "design": {
+    "avoided_definition": "C(q,0) minus C(q,s)",
+    "configuration_decision_definition": "one endpoint decision atomically covers one candidate path and its complete observed endpoint-origin set; one root-scope decision covers every candidate path grouped below the selected root",
+    "deployment_denominator": "all 587 endpoint-prefix bundles",
+    "deployment_efficiency_definition": "avoided candidate rows per deployed OpenScope root",
+    "deployment_unit": "one retained endpoint-prefix bundle containing its complete observed origin set",
+    "endpoint_routes_announced_from_start": true,
+    "exact_target_percent": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100
+    ],
+    "figure_2_display": "arithmetic-mean curves only; no interval or range glyphs",
+    "figure_2_statistic": "mean over randomized deployment replays",
+    "figure_conflict_rate_definition": "100 * mean number of conflicting routes / 589",
+    "figure_conflict_rate_denominator": 589,
+    "figure_conflict_rate_scope": "the same fixed denominator is used for both Figure 2 panels and Figure 3",
+    "invalid_definition": "reference classifier returns Invalid for an announced endpoint route in the constructed deployment snapshot",
+    "master_seed": 20260829,
+    "multi_origin_rule": "exact selection covers the complete observed endpoint-origin set",
+    "nested_endpoint_orders": true,
+    "nested_root_orders": true,
+    "observed_definition": "Invalid routes when sampled root ROAs, downstream ROAs, and S\u00b2-ROV policies are installed independently",
+    "observed_root_policy": "independently active with the same marginal issuance rate as downstream exact ROAs",
+    "outcome_unit": "one observed endpoint (prefix, origin) route",
+    "placement_display_strategies": [
+      "most-routes-first",
+      "asrank-first",
+      "degree-first",
+      "random"
+    ],
+    "placement_roa_issuance_percent": 50,
+    "placement_root_scores": {
+      "asrank-first": "aggregate-origin ASN customer-cone order from CAIDA ASRank",
+      "degree-first": "aggregate-origin ASN total degree in the same CAIDA graph",
+      "most-routes-first": "eligible observed route-origin pairs below the root",
+      "random": "uniform seeded root permutation"
+    },
+    "placement_scope_target_percent": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100
+    ],
+    "placement_score_tie_break": "independent fixed-seed random order within equal score groups; nested within each rollout",
+    "placement_statistic": "mean over 1,000 paired downstream-ROA replays",
+    "pooled_root_identity": "(IP version, canonical root prefix)",
+    "potential_definition": "Invalid routes when every root ROA is active and the sampled downstream ROAs and S\u00b2-ROV policies are installed",
+    "potential_root_policy": "present for every retained root",
+    "primary_count_denominator": "all 589 observed endpoint route-origin pairs",
+    "primary_scope_target_percent": [
+      0,
+      20,
+      40,
+      60,
+      80,
+      100
+    ],
+    "remaining_definition": "candidate lacks exact coverage and its root lacks OpenScope",
+    "rollout_orders": 1000,
+    "root_orders": [
+      "random",
+      "fanout-first",
+      "fanout-last"
+    ],
+    "scope_length_rule": "each selected root uses the longest retained endpoint length below that root",
+    "scope_selection_count_rule": "floor(97 * target / 100)",
+    "scope_target_percent": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100
+    ],
+    "secondary_grid_interval": "2.5th to 97.5th rollout-order percentiles",
+    "secondary_route_state_interval": "5th to 95th rollout-order percentiles",
+    "secondary_route_state_statistic": "random-order median",
+    "secondary_selection_count_rule": "floor(population * target / 100)"
+  },
+  "figure_contract": {
+    "archetype": "Figure 2 uses one standalone shared legend above two vertically stacked panels; Figure 3 is one single-panel placement comparison",
+    "core_conclusion": "OpenScope lowers both potential conflicts and mid-rollout conflicts realized when upstream ROAs are active before matching downstream ROAs, while selecting roots with more eligible observed routes accelerates the reduction.",
+    "hero_evidence": "randomized replay means for Figure 2 conflicts at six S\u00b2-ROV policy levels and Figure 3 prioritization means at fixed 50% issuance",
+    "layout": {
+      "figure_2": {
+        "legend_basename": "fig_partial_policy_legend",
+        "legend_canvas_inches": [
+          3.5,
+          0.34
+        ],
+        "legend_right_fraction": 0.94,
+        "observed_y_ticks": [
+          0,
+          5,
+          10,
+          15,
+          20,
+          25
+        ],
+        "panel_axes_fraction": {
+          "bottom": 0.27,
+          "height": 0.62,
+          "left": 0.145,
+          "width": 0.7949999999999999
+        },
+        "panel_canvas_inches": [
+          3.5,
+          1.75
+        ],
+        "panel_legends": 0,
+        "potential_y_ticks": [
+          0,
+          25,
+          50,
+          75,
+          100
+        ],
+        "y_label": "Conflicting routes (%)"
+      },
+      "figure_3": {
+        "displayed_strategies": [
+          "most-routes-first",
+          "asrank-first",
+          "degree-first",
+          "random"
+        ],
+        "panel_basename": "fig_openscope_placement",
+        "panel_canvas_inches": [
+          3.5,
+          1.75
+        ],
+        "y_label": "Conflicting routes (%)",
+        "y_ticks": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50
+        ]
+      }
+    },
+    "panel_map": {
+      "heatmap_IPv4": "random-order median over IPv4 candidate paths",
+      "heatmap_IPv6": "random-order median over IPv6 candidate paths",
+      "observed_conflicts": "independent root and downstream issuance share one rate",
+      "openscope_placement": "fixed 50% downstream ROA issuance; Route count, ASRank, AS degree, and Random root placement",
+      "potential_conflicts": "all root ROAs active; downstream ROA issuance varies",
+      "strategy_IPv4": "q=50% placement sensitivity for IPv4",
+      "strategy_IPv6": "q=50% placement sensitivity for IPv6"
+    },
+    "reviewer_risk": "Observed denotes conflicts realized on the RRC00-derived routes inside the constructed joint rollout, not a historical Internet time series or an adoption estimate.",
+    "robustness": "full q by s grid, family sensitivity, and four root-placement orders at fixed downstream issuance",
+    "shared_panel_style": {
+      "axes_fraction": {
+        "bottom": 0.27,
+        "height": 0.62,
+        "left": 0.145,
+        "width": 0.7949999999999999
+      },
+      "axis_label_pt": 8.4,
+      "canvas_inches": [
+        3.5,
+        1.75
+      ],
+      "legend_pt": 6.96,
+      "tick_label_pt": 7.56
+    }
+  },
+  "findings": {
+    "configuration_decisions": {
+      "audit_anchors": {
+        "IPv4": {
+          "configuration_decisions": 41,
+          "exact_paths_covered_percent": 8.1,
+          "fanout_first_paths_covered_percent_median": 87.7,
+          "fanout_last_paths_covered_percent_median": 11.7,
+          "random_scope_paths_covered_percent_median": 50.2,
+          "random_scope_paths_covered_percent_p05": 33.9,
+          "random_scope_paths_covered_percent_p95": 65.5
+        },
+        "IPv6": {
+          "configuration_decisions": 7,
+          "exact_paths_covered_percent": 8.4,
+          "fanout_first_paths_covered_percent_median": 91.6,
+          "fanout_last_paths_covered_percent_median": 8.4,
+          "random_scope_paths_covered_percent_median": 50.0,
+          "random_scope_paths_covered_percent_p05": 14.5,
+          "random_scope_paths_covered_percent_p95": 85.5
+        }
+      },
+      "full_coverage": {
+        "IPv4": {
+          "endpoint_path_decisions": 504,
+          "exact_prefix_origin_entries": 506,
+          "root_scope_decisions": 83
+        },
+        "IPv6": {
+          "endpoint_path_decisions": 83,
+          "exact_prefix_origin_entries": 83,
+          "root_scope_decisions": 14
+        }
+      }
+    },
+    "deployment_order": {
+      "IPv4": {
+        "at_exact_target_percent": 0,
+        "at_scope_target_percent": 50,
+        "fanout_first": {
+          "avoided_count_median": 442.0,
+          "avoided_per_scope_root_median": 10.8,
+          "avoided_percent_median": 87.7,
+          "exact_selected": 0,
+          "remaining_count_median": 62.0,
+          "remaining_count_p025": 62.0,
+          "remaining_count_p05": 62.0,
+          "remaining_count_p95": 62.0,
+          "remaining_count_p975": 62.0,
+          "remaining_percent_median": 12.3,
+          "remaining_percent_p05": 12.3,
+          "remaining_percent_p95": 12.3,
+          "scope_roots_selected": 41
+        },
+        "fanout_last": {
+          "avoided_count_median": 59.0,
+          "avoided_per_scope_root_median": 1.4,
+          "avoided_percent_median": 11.7,
+          "exact_selected": 0,
+          "remaining_count_median": 445.0,
+          "remaining_count_p025": 445.0,
+          "remaining_count_p05": 445.0,
+          "remaining_count_p95": 445.0,
+          "remaining_count_p975": 445.0,
+          "remaining_percent_median": 88.3,
+          "remaining_percent_p05": 88.3,
+          "remaining_percent_p95": 88.3,
+          "scope_roots_selected": 41
+        },
+        "maximum_fanout_first_minus_last_avoided_count_median": 383.0
+      },
+      "IPv6": {
+        "at_exact_target_percent": 0,
+        "at_scope_target_percent": 50,
+        "fanout_first": {
+          "avoided_count_median": 76.0,
+          "avoided_per_scope_root_median": 10.9,
+          "avoided_percent_median": 91.6,
+          "exact_selected": 0,
+          "remaining_count_median": 7.0,
+          "remaining_count_p025": 7.0,
+          "remaining_count_p05": 7.0,
+          "remaining_count_p95": 7.0,
+          "remaining_count_p975": 7.0,
+          "remaining_percent_median": 8.4,
+          "remaining_percent_p05": 8.4,
+          "remaining_percent_p95": 8.4,
+          "scope_roots_selected": 7
+        },
+        "fanout_last": {
+          "avoided_count_median": 7.0,
+          "avoided_per_scope_root_median": 1.0,
+          "avoided_percent_median": 8.4,
+          "exact_selected": 0,
+          "remaining_count_median": 76.0,
+          "remaining_count_p025": 76.0,
+          "remaining_count_p05": 76.0,
+          "remaining_count_p95": 76.0,
+          "remaining_count_p975": 76.0,
+          "remaining_percent_median": 91.6,
+          "remaining_percent_p05": 91.6,
+          "remaining_percent_p95": 91.6,
+          "scope_roots_selected": 7
+        },
+        "maximum_fanout_first_minus_last_avoided_count_median": 69.0
+      }
+    },
+    "family_q50_s10_secondary": {
+      "IPv4": {
+        "fanout-first": {
+          "avoided_count_median": 123.0,
+          "avoided_per_scope_root_median": 15.4,
+          "avoided_percent_median": 24.4,
+          "exact_selected": 252,
+          "remaining_count_median": 129.0,
+          "remaining_count_p025": 119.0,
+          "remaining_count_p05": 120.0,
+          "remaining_count_p95": 138.0,
+          "remaining_count_p975": 140.0,
+          "remaining_percent_median": 25.6,
+          "remaining_percent_p05": 23.8,
+          "remaining_percent_p95": 27.4,
+          "scope_roots_selected": 8
+        },
+        "fanout-last": {
+          "avoided_count_median": 4.0,
+          "avoided_per_scope_root_median": 0.5,
+          "avoided_percent_median": 0.8,
+          "exact_selected": 252,
+          "remaining_count_median": 248.0,
+          "remaining_count_p025": 245.0,
+          "remaining_count_p05": 246.0,
+          "remaining_count_p95": 250.0,
+          "remaining_count_p975": 251.0,
+          "remaining_percent_median": 49.2,
+          "remaining_percent_p05": 48.8,
+          "remaining_percent_p95": 49.6,
+          "scope_roots_selected": 8
+        },
+        "random": {
+          "avoided_count_median": 19.0,
+          "avoided_per_scope_root_median": 2.4,
+          "avoided_percent_median": 3.8,
+          "exact_selected": 252,
+          "remaining_count_median": 233.0,
+          "remaining_count_p025": 193.0,
+          "remaining_count_p05": 201.9,
+          "remaining_count_p95": 244.0,
+          "remaining_count_p975": 245.0,
+          "remaining_percent_median": 46.2,
+          "remaining_percent_p05": 40.1,
+          "remaining_percent_p95": 48.4,
+          "scope_roots_selected": 8
+        }
+      },
+      "IPv6": {
+        "fanout-first": {
+          "avoided_count_median": 17.0,
+          "avoided_per_scope_root_median": 17.0,
+          "avoided_percent_median": 20.5,
+          "exact_selected": 41,
+          "remaining_count_median": 25.0,
+          "remaining_count_p025": 21.0,
+          "remaining_count_p05": 22.0,
+          "remaining_count_p95": 29.0,
+          "remaining_count_p975": 30.0,
+          "remaining_percent_median": 30.1,
+          "remaining_percent_p05": 26.5,
+          "remaining_percent_p95": 34.9,
+          "scope_roots_selected": 1
+        },
+        "fanout-last": {
+          "avoided_count_median": 1.0,
+          "avoided_per_scope_root_median": 1.0,
+          "avoided_percent_median": 1.2,
+          "exact_selected": 41,
+          "remaining_count_median": 41.0,
+          "remaining_count_p025": 41.0,
+          "remaining_count_p05": 41.0,
+          "remaining_count_p95": 42.0,
+          "remaining_count_p975": 42.0,
+          "remaining_percent_median": 49.4,
+          "remaining_percent_p05": 49.4,
+          "remaining_percent_p95": 50.6,
+          "scope_roots_selected": 1
+        },
+        "random": {
+          "avoided_count_median": 1.0,
+          "avoided_per_scope_root_median": 1.0,
+          "avoided_percent_median": 1.2,
+          "exact_selected": 41,
+          "remaining_count_median": 41.0,
+          "remaining_count_p025": 25.0,
+          "remaining_count_p05": 27.0,
+          "remaining_count_p95": 42.0,
+          "remaining_count_p975": 42.0,
+          "remaining_percent_median": 49.4,
+          "remaining_percent_p05": 32.5,
+          "remaining_percent_p95": 50.6,
+          "scope_roots_selected": 1
+        }
+      }
+    },
+    "figure_2_q50_by_scope": {
+      "s0": {
+        "observed_conflicts_mean": 145.9,
+        "observed_conflicts_p05": 102.0,
+        "observed_conflicts_p95": 191.0,
+        "observed_conflicts_percent_mean": 24.77521222410866,
+        "observed_conflicts_percent_mean_display": "24.8%",
+        "observed_conflicts_percent_p05": 17.308998302207133,
+        "observed_conflicts_percent_p05_display": "17.3%",
+        "observed_conflicts_percent_p95": 32.43633276740237,
+        "observed_conflicts_percent_p95_display": "32.4%",
+        "potential_conflicts_mean": 295.0,
+        "potential_conflicts_p05": 294.0,
+        "potential_conflicts_p95": 296.0,
+        "potential_conflicts_percent_mean": 50.083531409168074,
+        "potential_conflicts_percent_mean_display": "50.1%",
+        "potential_conflicts_percent_p05": 49.9151103565365,
+        "potential_conflicts_percent_p05_display": "49.9%",
+        "potential_conflicts_percent_p95": 50.254668930390494,
+        "potential_conflicts_percent_p95_display": "50.3%",
+        "scope_selected_roots": 0
+      },
+      "s100": {
+        "observed_conflicts_mean": 0.2,
+        "observed_conflicts_p05": 0.0,
+        "observed_conflicts_p95": 1.0,
+        "observed_conflicts_percent_mean": 0.03870967741935484,
+        "observed_conflicts_percent_mean_display": "<0.1%",
+        "observed_conflicts_percent_p05": 0.0,
+        "observed_conflicts_percent_p05_display": "0.0%",
+        "observed_conflicts_percent_p95": 0.1697792869269949,
+        "observed_conflicts_percent_p95_display": "0.2%",
+        "potential_conflicts_mean": 0.5,
+        "potential_conflicts_p05": 0.0,
+        "potential_conflicts_p95": 1.0,
+        "potential_conflicts_percent_mean": 0.08641765704584041,
+        "potential_conflicts_percent_mean_display": "0.1%",
+        "potential_conflicts_percent_p05": 0.0,
+        "potential_conflicts_percent_p05_display": "0.0%",
+        "potential_conflicts_percent_p95": 0.1697792869269949,
+        "potential_conflicts_percent_p95_display": "0.2%",
+        "scope_selected_roots": 97
+      },
+      "s20": {
+        "observed_conflicts_mean": 117.5,
+        "observed_conflicts_p05": 76.0,
+        "observed_conflicts_p95": 163.0,
+        "observed_conflicts_percent_mean": 19.943293718166387,
+        "observed_conflicts_percent_mean_display": "19.9%",
+        "observed_conflicts_percent_p05": 12.903225806451612,
+        "observed_conflicts_percent_p05_display": "12.9%",
+        "observed_conflicts_percent_p95": 27.67402376910017,
+        "observed_conflicts_percent_p95_display": "27.7%",
+        "potential_conflicts_mean": 237.9,
+        "potential_conflicts_p05": 201.0,
+        "potential_conflicts_p95": 268.0,
+        "potential_conflicts_percent_mean": 40.392020373514434,
+        "potential_conflicts_percent_mean_display": "40.4%",
+        "potential_conflicts_percent_p05": 34.125636672325975,
+        "potential_conflicts_percent_p05_display": "34.1%",
+        "potential_conflicts_percent_p95": 45.50084889643463,
+        "potential_conflicts_percent_p95_display": "45.5%",
+        "scope_selected_roots": 19
+      },
+      "s40": {
+        "observed_conflicts_mean": 89.7,
+        "observed_conflicts_p05": 51.0,
+        "observed_conflicts_p95": 133.0,
+        "observed_conflicts_percent_mean": 15.230220713073006,
+        "observed_conflicts_percent_mean_display": "15.2%",
+        "observed_conflicts_percent_p05": 8.65874363327674,
+        "observed_conflicts_percent_p05_display": "8.7%",
+        "observed_conflicts_percent_p95": 22.589134125636665,
+        "observed_conflicts_percent_p95_display": "22.6%",
+        "potential_conflicts_mean": 180.8,
+        "potential_conflicts_p05": 138.0,
+        "potential_conflicts_p95": 220.0,
+        "potential_conflicts_percent_mean": 30.691680814940575,
+        "potential_conflicts_percent_mean_display": "30.7%",
+        "potential_conflicts_percent_p05": 23.429541595925297,
+        "potential_conflicts_percent_p05_display": "23.4%",
+        "potential_conflicts_percent_p95": 37.35144312393888,
+        "potential_conflicts_percent_p95_display": "37.4%",
+        "scope_selected_roots": 38
+      },
+      "s60": {
+        "observed_conflicts_mean": 59.6,
+        "observed_conflicts_p05": 27.0,
+        "observed_conflicts_p95": 101.0,
+        "observed_conflicts_percent_mean": 10.116808149405774,
+        "observed_conflicts_percent_mean_display": "10.1%",
+        "observed_conflicts_percent_p05": 4.584040747028863,
+        "observed_conflicts_percent_p05_display": "4.6%",
+        "observed_conflicts_percent_p95": 17.156196943972827,
+        "observed_conflicts_percent_p95_display": "17.2%",
+        "potential_conflicts_mean": 119.9,
+        "potential_conflicts_p05": 78.0,
+        "potential_conflicts_p95": 163.0,
+        "potential_conflicts_percent_mean": 20.36010186757216,
+        "potential_conflicts_percent_mean_display": "20.4%",
+        "potential_conflicts_percent_p05": 13.242784380305602,
+        "potential_conflicts_percent_p05_display": "13.2%",
+        "potential_conflicts_percent_p95": 27.68251273344651,
+        "potential_conflicts_percent_p95_display": "27.7%",
+        "scope_selected_roots": 58
+      },
+      "s80": {
+        "observed_conflicts_mean": 30.5,
+        "observed_conflicts_p05": 9.0,
+        "observed_conflicts_p95": 61.0,
+        "observed_conflicts_percent_mean": 5.182682512733446,
+        "observed_conflicts_percent_mean_display": "5.2%",
+        "observed_conflicts_percent_p05": 1.5280135823429541,
+        "observed_conflicts_percent_p05_display": "1.5%",
+        "observed_conflicts_percent_p95": 10.356536502546689,
+        "observed_conflicts_percent_p95_display": "10.4%",
+        "potential_conflicts_mean": 61.7,
+        "potential_conflicts_p05": 32.0,
+        "potential_conflicts_p95": 97.0,
+        "potential_conflicts_percent_mean": 10.471986417657044,
+        "potential_conflicts_percent_mean_display": "10.5%",
+        "potential_conflicts_percent_p05": 5.432937181663837,
+        "potential_conflicts_percent_p05_display": "5.4%",
+        "potential_conflicts_percent_p95": 16.477079796264846,
+        "potential_conflicts_percent_p95_display": "16.5%",
+        "scope_selected_roots": 77
+      }
+    },
+    "openscope_placement": {
+      "anchors": {
+        "s0": {
+          "asrank_first": 295.0,
+          "conflicting_routes_percent": {
+            "asrank_first": 50.1,
+            "degree_first": 50.1,
+            "most_routes_first": 50.1,
+            "random": 50.1
+          },
+          "degree_first": 295.0,
+          "most_routes_first": 295.0,
+          "random": 295.0,
+          "scope_selected_roots": 0
+        },
+        "s100": {
+          "asrank_first": 0.5,
+          "conflicting_routes_percent": {
+            "asrank_first": 0.1,
+            "degree_first": 0.1,
+            "most_routes_first": 0.1,
+            "random": 0.1
+          },
+          "degree_first": 0.5,
+          "most_routes_first": 0.5,
+          "random": 0.5,
+          "scope_selected_roots": 97
+        },
+        "s20": {
+          "asrank_first": 218.6,
+          "conflicting_routes_percent": {
+            "asrank_first": 37.1,
+            "degree_first": 40.7,
+            "most_routes_first": 17.2,
+            "random": 40.4
+          },
+          "degree_first": 239.9,
+          "most_routes_first": 101.4,
+          "random": 237.9,
+          "scope_selected_roots": 19
+        },
+        "s40": {
+          "asrank_first": 165.7,
+          "conflicting_routes_percent": {
+            "asrank_first": 28.1,
+            "degree_first": 27.4,
+            "most_routes_first": 8.4,
+            "random": 30.7
+          },
+          "degree_first": 161.3,
+          "most_routes_first": 49.2,
+          "random": 180.8,
+          "scope_selected_roots": 38
+        },
+        "s50": {
+          "asrank_first": 147.9,
+          "conflicting_routes_percent": {
+            "asrank_first": 25.1,
+            "degree_first": 24.4,
+            "most_routes_first": 5.8,
+            "random": 25.6
+          },
+          "degree_first": 144.0,
+          "most_routes_first": 34.2,
+          "random": 150.8,
+          "scope_selected_roots": 48
+        },
+        "s60": {
+          "asrank_first": 130.1,
+          "conflicting_routes_percent": {
+            "asrank_first": 22.1,
+            "degree_first": 15.1,
+            "most_routes_first": 4.1,
+            "random": 20.4
+          },
+          "degree_first": 89.0,
+          "most_routes_first": 24.1,
+          "random": 119.9,
+          "scope_selected_roots": 58
+        },
+        "s80": {
+          "asrank_first": 45.0,
+          "conflicting_routes_percent": {
+            "asrank_first": 7.6,
+            "degree_first": 7.4,
+            "most_routes_first": 1.8,
+            "random": 10.5
+          },
+          "degree_first": 43.5,
+          "most_routes_first": 10.6,
+          "random": 61.7,
+          "scope_selected_roots": 77
+        }
+      },
+      "roa_issuance_percent": 50,
+      "s20_most_routes_first_reduction_vs_random_percent": 57.4
+    },
+    "pooled_q50_by_scope": {
+      "s0": {
+        "avoided_count_median": 0.0,
+        "avoided_per_scope_root_median": null,
+        "avoided_percent_median": 0.0,
+        "exact_selected": 293,
+        "remaining_count_median": 294.0,
+        "remaining_count_p025": 294.0,
+        "remaining_count_p05": 294.0,
+        "remaining_count_p95": 294.0,
+        "remaining_count_p975": 294.0,
+        "remaining_percent_median": 50.1,
+        "remaining_percent_p05": 50.1,
+        "remaining_percent_p95": 50.1,
+        "scope_roots_selected": 0
+      },
+      "s100": {
+        "avoided_count_median": 294.0,
+        "avoided_per_scope_root_median": 3.0,
+        "avoided_percent_median": 50.1,
+        "exact_selected": 293,
+        "remaining_count_median": 0.0,
+        "remaining_count_p025": 0.0,
+        "remaining_count_p05": 0.0,
+        "remaining_count_p95": 0.0,
+        "remaining_count_p975": 0.0,
+        "remaining_percent_median": 0.0,
+        "remaining_percent_p05": 0.0,
+        "remaining_percent_p95": 0.0,
+        "scope_roots_selected": 97
+      },
+      "s20": {
+        "avoided_count_median": 55.0,
+        "avoided_per_scope_root_median": 2.9,
+        "avoided_percent_median": 9.4,
+        "exact_selected": 293,
+        "remaining_count_median": 239.0,
+        "remaining_count_p025": 193.0,
+        "remaining_count_p05": 200.0,
+        "remaining_count_p95": 265.0,
+        "remaining_count_p975": 268.0,
+        "remaining_percent_median": 40.7,
+        "remaining_percent_p05": 34.1,
+        "remaining_percent_p95": 45.1,
+        "scope_roots_selected": 19
+      },
+      "s40": {
+        "avoided_count_median": 115.0,
+        "avoided_per_scope_root_median": 3.0,
+        "avoided_percent_median": 19.6,
+        "exact_selected": 293,
+        "remaining_count_median": 179.0,
+        "remaining_count_p025": 128.0,
+        "remaining_count_p05": 136.0,
+        "remaining_count_p95": 220.0,
+        "remaining_count_p975": 225.0,
+        "remaining_percent_median": 30.5,
+        "remaining_percent_p05": 23.2,
+        "remaining_percent_p95": 37.5,
+        "scope_roots_selected": 38
+      },
+      "s60": {
+        "avoided_count_median": 178.0,
+        "avoided_per_scope_root_median": 3.1,
+        "avoided_percent_median": 30.3,
+        "exact_selected": 293,
+        "remaining_count_median": 116.0,
+        "remaining_count_p025": 70.0,
+        "remaining_count_p05": 77.0,
+        "remaining_count_p95": 160.0,
+        "remaining_count_p975": 165.0,
+        "remaining_percent_median": 19.8,
+        "remaining_percent_p05": 13.1,
+        "remaining_percent_p95": 27.3,
+        "scope_roots_selected": 58
+      },
+      "s80": {
+        "avoided_count_median": 237.0,
+        "avoided_per_scope_root_median": 3.1,
+        "avoided_percent_median": 40.4,
+        "exact_selected": 293,
+        "remaining_count_median": 57.0,
+        "remaining_count_p025": 28.0,
+        "remaining_count_p05": 30.0,
+        "remaining_count_p95": 97.0,
+        "remaining_count_p975": 108.0,
+        "remaining_percent_median": 9.7,
+        "remaining_percent_p05": 5.1,
+        "remaining_percent_p95": 16.5,
+        "scope_roots_selected": 77
+      }
+    },
+    "route_state_q50_by_scope": {
+      "s0": {
+        "downstream_prefixes_selected": 293,
+        "explicit_count_median": 294.0,
+        "explicit_count_p05": 293.0,
+        "explicit_count_p95": 295.0,
+        "invalid_count_median": 295.0,
+        "invalid_count_p05": 294.0,
+        "invalid_count_p95": 296.0,
+        "not_found_count_median": 0.0,
+        "not_found_count_p05": 0.0,
+        "not_found_count_p95": 0.0,
+        "open_scope_count_median": 0.0,
+        "open_scope_count_p05": 0.0,
+        "open_scope_count_p95": 0.0,
+        "scope_roots_selected": 0
+      },
+      "s100": {
+        "downstream_prefixes_selected": 293,
+        "explicit_count_median": 294.0,
+        "explicit_count_p05": 293.0,
+        "explicit_count_p95": 295.0,
+        "invalid_count_median": 1.0,
+        "invalid_count_p05": 0.0,
+        "invalid_count_p95": 1.0,
+        "not_found_count_median": 0.0,
+        "not_found_count_p05": 0.0,
+        "not_found_count_p95": 0.0,
+        "open_scope_count_median": 294.0,
+        "open_scope_count_p05": 293.0,
+        "open_scope_count_p95": 296.0,
+        "scope_roots_selected": 97
+      },
+      "s20": {
+        "downstream_prefixes_selected": 293,
+        "explicit_count_median": 294.0,
+        "explicit_count_p05": 293.0,
+        "explicit_count_p95": 295.0,
+        "invalid_count_median": 240.0,
+        "invalid_count_p05": 201.0,
+        "invalid_count_p95": 265.0,
+        "not_found_count_median": 0.0,
+        "not_found_count_p05": 0.0,
+        "not_found_count_p95": 0.0,
+        "open_scope_count_median": 55.0,
+        "open_scope_count_p05": 29.0,
+        "open_scope_count_p95": 94.0,
+        "scope_roots_selected": 19
+      },
+      "s40": {
+        "downstream_prefixes_selected": 293,
+        "explicit_count_median": 294.0,
+        "explicit_count_p05": 293.0,
+        "explicit_count_p95": 295.0,
+        "invalid_count_median": 180.0,
+        "invalid_count_p05": 137.0,
+        "invalid_count_p95": 221.0,
+        "not_found_count_median": 0.0,
+        "not_found_count_p05": 0.0,
+        "not_found_count_p95": 0.0,
+        "open_scope_count_median": 115.0,
+        "open_scope_count_p05": 75.0,
+        "open_scope_count_p95": 158.0,
+        "scope_roots_selected": 38
+      },
+      "s60": {
+        "downstream_prefixes_selected": 293,
+        "explicit_count_median": 294.0,
+        "explicit_count_p05": 293.0,
+        "explicit_count_p95": 295.0,
+        "invalid_count_median": 117.0,
+        "invalid_count_p05": 78.0,
+        "invalid_count_p95": 160.0,
+        "not_found_count_median": 0.0,
+        "not_found_count_p05": 0.0,
+        "not_found_count_p95": 0.0,
+        "open_scope_count_median": 178.5,
+        "open_scope_count_p05": 135.0,
+        "open_scope_count_p95": 217.0,
+        "scope_roots_selected": 58
+      },
+      "s80": {
+        "downstream_prefixes_selected": 293,
+        "explicit_count_median": 294.0,
+        "explicit_count_p05": 293.0,
+        "explicit_count_p95": 295.0,
+        "invalid_count_median": 58.0,
+        "invalid_count_p05": 31.0,
+        "invalid_count_p95": 98.0,
+        "not_found_count_median": 0.0,
+        "not_found_count_p05": 0.0,
+        "not_found_count_p95": 0.0,
+        "open_scope_count_median": 237.0,
+        "open_scope_count_p05": 196.9,
+        "open_scope_count_p95": 264.0,
+        "scope_roots_selected": 77
+      }
+    }
+  },
+  "gates": {
+    "aggregate_first_all_endpoint_routes_invalid": true,
+    "avoided_identity_verified": true,
+    "complete_decision_budget_grid": true,
+    "complete_deployment_curve_grid": true,
+    "complete_factorial_grid": true,
+    "complete_openscope_placement_grid": true,
+    "complete_pooled_primary_grid": true,
+    "complete_route_state_grid": true,
+    "deployment_oracle_verified": true,
+    "deployment_placements_independent": true,
+    "deployment_reference_states_verified": true,
+    "deployment_replay_count": 1000,
+    "endpoint_prefixes_unique": true,
+    "endpoints_are_proper_subprefixes": true,
+    "figure_text_excludes_forbidden_tokens": true,
+    "fixed_conflict_rate_denominator_verified": true,
+    "full_downstream_coverage_invalid_zero": true,
+    "full_scope_retains_one_ineligible_route": true,
+    "input_hash_pinned": true,
+    "observed_series_zero_at_endpoints": true,
+    "origin_sets_disjoint": true,
+    "paper_candidate_counts_match": true,
+    "paper_root_counts_match": true,
+    "placement_oracle_verified": true,
+    "placement_reference_states_verified": true,
+    "placement_score_asn_coverage_complete": true,
+    "placement_score_input_hash_pinned": true,
+    "prefixes_canonical": true,
+    "reference_classifier_state_table_verified": true,
+    "remaining_monotone_in_exact_and_scope": true,
+    "retained_endpoints_non_nested": true,
+    "retained_roots_non_nested": true,
+    "root_origin_sets_consistent": true,
+    "route_origin_tuples_unique": true,
+    "route_state_oracle_verified": true,
+    "route_state_partition_verified": true,
+    "scope_max_lengths_cover_retained_endpoints": true,
+    "scope_zero_baseline_verified": true,
+    "structural_full_exact_remaining_zero": true,
+    "structural_full_scope_remaining_zero": true
+  },
+  "input": {
+    "aggregate_origin_entries": 97,
+    "all_endpoints_proper_subprefixes": true,
+    "all_origin_sets_disjoint": true,
+    "all_paths_registry_indirect": true,
+    "all_prefixes_canonical": true,
+    "duplicate_root_endpoint_rows": 0,
+    "eligible_route_origin_count": 588,
+    "endpoint_prefix_origin_entries": {
+      "IPv4": 506,
+      "IPv6": 83
+    },
+    "endpoint_prefixes_unique": true,
+    "family_counts": {
+      "IPv4": 504,
+      "IPv6": 83
+    },
+    "ineligible_route_origin_count": 1,
+    "multi_origin_endpoint_rows": 2,
+    "path": "phase1_empirical/allocation_tree/visibility_experiment/outputs/visibility_candidates.csv",
+    "retained_endpoints_non_nested": true,
+    "retained_roots_non_nested": true,
+    "root_counts": {
+      "IPv4": 83,
+      "IPv6": 14
+    },
+    "root_origin_sets_consistent": true,
+    "root_origin_sets_singleton": true,
+    "root_scope_max_length_range": {
+      "IPv4": [
+        21,
+        24
+      ],
+      "IPv6": [
+        33,
+        48
+      ]
+    },
+    "route_origin_count": 589,
+    "route_origin_counts": {
+      "IPv4": 506,
+      "IPv6": 83
+    },
+    "route_origin_tuples_unique": true,
+    "rows": 587,
+    "scope_max_lengths_cover_retained_endpoints": true,
+    "sha256": "0846c5f5775e92092b445b64851918ca6f6b3e45651598d9006d3f3aeb483918"
+  },
+  "outputs": {
+    "MSN-2026-0830/figures/fig_openscope_placement.pdf": {
+      "bytes": 13368,
+      "sha256": "6deea7f6849d9df3788c10262e75e4dd7274b861715319373f7ed70ced8fb822"
+    },
+    "MSN-2026-0830/figures/fig_openscope_placement.png": {
+      "bytes": 96489,
+      "sha256": "32b3e4cce6799e2d055f855b070e5a01914645f9298ca1c5028427dd13d37ddb"
+    },
+    "MSN-2026-0830/figures/fig_openscope_placement.svg": {
+      "bytes": 19989,
+      "sha256": "a0b1056bae93230db2c807887656a21133df71373619e961bb34742f9633336f"
+    },
+    "MSN-2026-0830/figures/fig_openscope_placement.tiff": {
+      "bytes": 8820206,
+      "sha256": "ff85751d17e200a70b677d08e9e12261d682ffdbb8aa2e9d011426eafad68ba2"
+    },
+    "MSN-2026-0830/figures/fig_partial_policy_ipv4.pdf": {
+      "bytes": 13151,
+      "sha256": "54bba8d80c39ca2fe13cc67442a25694e5a2b1708a3ade5f905d877e478cf875"
+    },
+    "MSN-2026-0830/figures/fig_partial_policy_ipv4.svg": {
+      "bytes": 39976,
+      "sha256": "052d741f46ac650275536420a6e2c94b82a01c539a24a7b84cee4e2c9d18c8db"
+    },
+    "MSN-2026-0830/figures/fig_partial_policy_ipv4.tiff": {
+      "bytes": 15523406,
+      "sha256": "a7bb9ada35de67f1cf25f5c38af9e4296e72e436019e0dc8d42aa094d2bde4d4"
+    },
+    "MSN-2026-0830/figures/fig_partial_policy_ipv6.pdf": {
+      "bytes": 13063,
+      "sha256": "5c83f115751989d90a2c38ea0f7e0d37ae2921544832546db5df0e9168c2c9ba"
+    },
+    "MSN-2026-0830/figures/fig_partial_policy_ipv6.svg": {
+      "bytes": 39949,
+      "sha256": "aaa59d1f7753a7599050ac1e358b4aa8f94be9f6fea6597875ad1634e867df82"
+    },
+    "MSN-2026-0830/figures/fig_partial_policy_ipv6.tiff": {
+      "bytes": 15523406,
+      "sha256": "cf29a30fd716fb790a5a8501f522772b9b589deda115f61c9c782af5a21d1728"
+    },
+    "MSN-2026-0830/figures/fig_partial_policy_legend.pdf": {
+      "bytes": 9680,
+      "sha256": "2bf975a9133045aacdee1686431470032fb16c3ca71a35d64ee14377d2d6a743"
+    },
+    "MSN-2026-0830/figures/fig_partial_policy_legend.png": {
+      "bytes": 19898,
+      "sha256": "22913d357c966188cea180eea0e06753c3a44c3a853c73a3e132f0e8d0b92944"
+    },
+    "MSN-2026-0830/figures/fig_partial_policy_legend.svg": {
+      "bytes": 6278,
+      "sha256": "34e9c788b930f2975ad108893eda2fb6ff6a17a2a6c806636d9d5920d067e7ad"
+    },
+    "MSN-2026-0830/figures/fig_partial_policy_legend.tiff": {
+      "bytes": 1713806,
+      "sha256": "97a38ba6675121b98a8c6802ca236bd38c57ca6310bd5a8bcf1addec5c7343a4"
+    },
+    "MSN-2026-0830/figures/fig_partial_policy_observed.pdf": {
+      "bytes": 11320,
+      "sha256": "1765731092d409e4b43cdc04f0e561a4fe7be5c074eac21430b64aaf75754ca1"
+    },
+    "MSN-2026-0830/figures/fig_partial_policy_observed.png": {
+      "bytes": 94418,
+      "sha256": "aca2b80a019a5de5541a983011825107126efe59b50e30ba6b9e988100d56eda"
+    },
+    "MSN-2026-0830/figures/fig_partial_policy_observed.svg": {
+      "bytes": 21942,
+      "sha256": "39397e00cf95bc21826231795a7e85eebaad74ffadf82ace4c9d8c0118c3b43f"
+    },
+    "MSN-2026-0830/figures/fig_partial_policy_observed.tiff": {
+      "bytes": 8820206,
+      "sha256": "c7633c25d52735666b6d430f982b9df633d61a7ac37ff9e21ac31ec5e8952f16"
+    },
+    "MSN-2026-0830/figures/fig_partial_policy_potential.pdf": {
+      "bytes": 11300,
+      "sha256": "96ed6a07c1b15e616044c8242015aa55ad4b155667c980083ee2d0da000233f4"
+    },
+    "MSN-2026-0830/figures/fig_partial_policy_potential.png": {
+      "bytes": 85544,
+      "sha256": "8e7fc2f501f06cfef5b45e195e7b63ee7e39a73c7145660862852a273cb91833"
+    },
+    "MSN-2026-0830/figures/fig_partial_policy_potential.svg": {
+      "bytes": 21389,
+      "sha256": "1ffc76c1b83468c1649a9e9e36fd03e23d4f4bdfa49aa1f06db026c7650e2d4b"
+    },
+    "MSN-2026-0830/figures/fig_partial_policy_potential.tiff": {
+      "bytes": 8820206,
+      "sha256": "5b827414bc30df21954d3469837f1b74ca4a735ce4a7a08452b2689e640dcfee"
+    },
+    "MSN-2026-0830/figures/fig_partial_policy_strategy_ipv4.pdf": {
+      "bytes": 10545,
+      "sha256": "dc8d0ba2b3afde0ded3be0029f13a903f6f93a59c4bad8ea1cacfb46d5d286fc"
+    },
+    "MSN-2026-0830/figures/fig_partial_policy_strategy_ipv4.svg": {
+      "bytes": 12554,
+      "sha256": "5d4e77fbbee56c90298275d83572b430b352b247de03bc22a7e63511c324d495"
+    },
+    "MSN-2026-0830/figures/fig_partial_policy_strategy_ipv4.tiff": {
+      "bytes": 9677006,
+      "sha256": "311f2c3c3211a1fa450b13802fee3610976a4187f574254bfe26c4c934740694"
+    },
+    "MSN-2026-0830/figures/fig_partial_policy_strategy_ipv6.pdf": {
+      "bytes": 10476,
+      "sha256": "94eefe6728a2b296ee0131e83ee10ab9aa49caab610c3235f46c9f230933a781"
+    },
+    "MSN-2026-0830/figures/fig_partial_policy_strategy_ipv6.svg": {
+      "bytes": 12556,
+      "sha256": "fbf682b6854b7e95405754af8eda4f29c20df56f24b3b5f1227ba3fc51f2654f"
+    },
+    "MSN-2026-0830/figures/fig_partial_policy_strategy_ipv6.tiff": {
+      "bytes": 9677006,
+      "sha256": "50a9af923872064852369986c1be2325278025f0b41ba6c4f2844449da2b317a"
+    },
+    "MSN-2026-0830/figures/source_data/fig_openscope_placement.csv": {
+      "bytes": 8301,
+      "sha256": "a015a2ecf2be02a9d3acc592e420ab0a62c3d48c3639b7f8f0377496cba9f745"
+    },
+    "MSN-2026-0830/figures/source_data/fig_partial_policy_conflicts.csv": {
+      "bytes": 20563,
+      "sha256": "3668a4a70894af0535e29d5005ec785a0065f68eb1578323d5efeb6fb20c9737"
+    },
+    "MSN-2026-0830/figures/source_data/fig_partial_policy_decision_budget.csv": {
+      "bytes": 94988,
+      "sha256": "5333969fbbe3df14e9cf96a3b51ada4bb5f01113948ff6928f0d0e1c932ef5a7"
+    },
+    "MSN-2026-0830/figures/source_data/fig_partial_policy_deployment_curves.csv": {
+      "bytes": 20714,
+      "sha256": "36676fb33ca3754c8095c662e8377e4b86817c19d8569883c86a004c5c277b21"
+    },
+    "MSN-2026-0830/figures/source_data/fig_partial_policy_grid.csv": {
+      "bytes": 313999,
+      "sha256": "28dbb520de5488483f02f4dbb62066a495db0abb49fc92b268eff7b5d64760dc"
+    },
+    "MSN-2026-0830/figures/source_data/fig_partial_policy_pooled.csv": {
+      "bytes": 29749,
+      "sha256": "c6df211d0f9a08875770633b80f1b013ef94a199dc19afbddd72360bec0e9135"
+    }
+  },
+  "placement_score_input": {
+    "asn_count": 37,
+    "customer_cone_max": 70111,
+    "customer_cone_min": 0,
+    "derivation": {
+      "asrank_order": "descending customer-cone AS count",
+      "degree": "number of unique AS neighbors",
+      "implementation": "BGPy 13.0.10",
+      "implementation_commit": "c3b1be48148e8c246a60b9dec6513b688a4736a5"
+    },
+    "path": "MSN-2026-0830/figures/source_data/openscope_placement_as_scores.json",
+    "schema": "openscope-placement-as-scores-v1",
+    "sha256": "b6d87f20bed4ea347f417bca072a05048eea84439e86f4773cc8bc44017a8257",
+    "source": {
+      "dataset": "CAIDA AS Relationships serial-2",
+      "snapshot": "2026-07-01",
+      "uncompressed_sha256": "aabd0b2154d9dec5b4c0b63d1d9f88cbfbf381bbc4d2246fe0471dd4aacf2181",
+      "url": "https://publicdata.caida.org/datasets/as-relationships/serial-2/20260701.as-rel2.txt.bz2"
+    },
+    "total_degree_max": 6584,
+    "total_degree_min": 1
+  },
+  "runner": {
+    "path": "MSN-2026-0830/scripts/run_partial_policy_replay.py",
+    "sha256": "ff4982ccbe832bf70c53b682a9f9ac6283a6d9c4adfb9e7be9dc559664129314"
+  },
+  "runtime": {
+    "matplotlib": "3.10.9",
+    "numpy": "2.4.5",
+    "python": "3.12.3"
+  },
+  "schema": "partial-policy-replay-v8",
+  "selection": {
+    "deployment_primary": {
+      "conflict_rate_denominator": 589,
+      "endpoint_prefix_count": 587,
+      "independent_oracle_verified": true,
+      "ineligible_routes": [
+        {
+          "family": "IPv4",
+          "origin": 65989,
+          "prefix": "46.221.6.0/24"
+        }
+      ],
+      "master_seed": 20260829,
+      "placement_units": {
+        "downstream_roa": 587,
+        "openscope": 97,
+        "root_roa": 97
+      },
+      "placements_independent": true,
+      "placements_nested_within_each_rollout": true,
+      "reference_classifier": "phase4_encoding/scripts/utils/daroa.py",
+      "reference_classifier_sha256": "eb11dd64f5cc3175557462367796541a45d971459f5a16f46a655e1aee614377",
+      "reference_state_counts": {
+        "aggregate_only": {
+          "explicit": 0,
+          "invalid": 589,
+          "not_found": 0,
+          "open_scope": 0
+        },
+        "exact": {
+          "explicit": 589,
+          "invalid": 0,
+          "not_found": 0,
+          "open_scope": 0
+        },
+        "exact_with_marked_root": {
+          "explicit": 589,
+          "invalid": 0,
+          "not_found": 0,
+          "open_scope": 0
+        },
+        "marked_root": {
+          "explicit": 0,
+          "invalid": 1,
+          "not_found": 0,
+          "open_scope": 588
+        },
+        "unmarked_root": {
+          "explicit": 0,
+          "invalid": 589,
+          "not_found": 0,
+          "open_scope": 0
+        }
+      },
+      "reference_state_replay_verified": true,
+      "rollout_count": 1000,
+      "root_count": 97,
+      "root_route_checks": 291,
+      "route_origin_count": 589,
+      "route_origin_counts": {
+        "IPv4": 506,
+        "IPv6": 83
+      },
+      "selection_sha256": "cd9a10a98e5039eece92e5d9ad08ea5b2623d0b44ebbe5ac2d4f24309c152e51",
+      "state_table_sha256": "20e45d17f58bbeacbea365caff035a6541716fa7ca5833b85c57923be81f6a27"
+    },
+    "family_specific_secondary": {
+      "IPv4": {
+        "candidate_count": 504,
+        "fanout_max": 64,
+        "fanout_median": 3.0,
+        "fanout_min": 1,
+        "largest_roots": [
+          {
+            "candidate_rows": 64,
+            "root_prefix": "212.134.0.0/15"
+          },
+          {
+            "candidate_rows": 51,
+            "root_prefix": "109.176.0.0/16"
+          },
+          {
+            "candidate_rows": 43,
+            "root_prefix": "212.212.0.0/16"
+          },
+          {
+            "candidate_rows": 29,
+            "root_prefix": "77.37.0.0/17"
+          },
+          {
+            "candidate_rows": 20,
+            "root_prefix": "82.152.0.0/15"
+          }
+        ],
+        "root_count": 83,
+        "selection_sha256": "be57ea8f87d8fb3c479d84e69249673e435e3cd1c7b1280dc2d04b0bf0c2a1fe"
+      },
+      "IPv6": {
+        "candidate_count": 83,
+        "fanout_max": 33,
+        "fanout_median": 1.5,
+        "fanout_min": 1,
+        "largest_roots": [
+          {
+            "candidate_rows": 33,
+            "root_prefix": "2a0e:fd40::/29"
+          },
+          {
+            "candidate_rows": 22,
+            "root_prefix": "2a03:db80::/32"
+          },
+          {
+            "candidate_rows": 8,
+            "root_prefix": "2a06:40::/29"
+          },
+          {
+            "candidate_rows": 5,
+            "root_prefix": "2a14:c380::/29"
+          },
+          {
+            "candidate_rows": 4,
+            "root_prefix": "2a01:8740::/32"
+          }
+        ],
+        "root_count": 14,
+        "selection_sha256": "d75e772ed2a286c2eee7727abac8767ced91187227eb679d37a4e4246da0008f"
+      }
+    },
+    "openscope_placement": {
+      "conflict_rate_denominator": 589,
+      "downstream_selected_prefix_count": 293,
+      "endpoint_prefix_count": 587,
+      "independent_oracle_verified": true,
+      "ineligible_routes": [
+        {
+          "family": "IPv4",
+          "origin": 65989,
+          "prefix": "46.221.6.0/24"
+        }
+      ],
+      "largest_roots": [
+        {
+          "eligible_observed_routes": 64,
+          "family": "IPv4",
+          "root_prefix": "212.134.0.0/15"
+        },
+        {
+          "eligible_observed_routes": 51,
+          "family": "IPv4",
+          "root_prefix": "109.176.0.0/16"
+        },
+        {
+          "eligible_observed_routes": 43,
+          "family": "IPv4",
+          "root_prefix": "212.212.0.0/16"
+        },
+        {
+          "eligible_observed_routes": 33,
+          "family": "IPv6",
+          "root_prefix": "2a0e:fd40::/29"
+        },
+        {
+          "eligible_observed_routes": 29,
+          "family": "IPv4",
+          "root_prefix": "77.37.0.0/17"
+        }
+      ],
+      "master_seed": 20260829,
+      "orders_nested_within_strategy": true,
+      "placement_score_coverage": {
+        "covered_asns": 37,
+        "roots": 97,
+        "unique_aggregate_origin_asns": 37
+      },
+      "placement_score_input": {
+        "asn_count": 37,
+        "customer_cone_max": 70111,
+        "customer_cone_min": 0,
+        "derivation": {
+          "asrank_order": "descending customer-cone AS count",
+          "degree": "number of unique AS neighbors",
+          "implementation": "BGPy 13.0.10",
+          "implementation_commit": "c3b1be48148e8c246a60b9dec6513b688a4736a5"
+        },
+        "path": "MSN-2026-0830/figures/source_data/openscope_placement_as_scores.json",
+        "schema": "openscope-placement-as-scores-v1",
+        "sha256": "b6d87f20bed4ea347f417bca072a05048eea84439e86f4773cc8bc44017a8257",
+        "source": {
+          "dataset": "CAIDA AS Relationships serial-2",
+          "snapshot": "2026-07-01",
+          "uncompressed_sha256": "aabd0b2154d9dec5b4c0b63d1d9f88cbfbf381bbc4d2246fe0471dd4aacf2181",
+          "url": "https://publicdata.caida.org/datasets/as-relationships/serial-2/20260701.as-rel2.txt.bz2"
+        },
+        "total_degree_max": 6584,
+        "total_degree_min": 1
+      },
+      "reference_classifier": "phase4_encoding/scripts/utils/daroa.py",
+      "reference_classifier_sha256": "eb11dd64f5cc3175557462367796541a45d971459f5a16f46a655e1aee614377",
+      "reference_state_counts": {
+        "aggregate_only": {
+          "explicit": 0,
+          "invalid": 589,
+          "not_found": 0,
+          "open_scope": 0
+        },
+        "exact": {
+          "explicit": 589,
+          "invalid": 0,
+          "not_found": 0,
+          "open_scope": 0
+        },
+        "exact_with_marked_root": {
+          "explicit": 589,
+          "invalid": 0,
+          "not_found": 0,
+          "open_scope": 0
+        },
+        "marked_root": {
+          "explicit": 0,
+          "invalid": 1,
+          "not_found": 0,
+          "open_scope": 588
+        },
+        "unmarked_root": {
+          "explicit": 0,
+          "invalid": 589,
+          "not_found": 0,
+          "open_scope": 0
+        }
+      },
+      "reference_state_replay_verified": true,
+      "roa_issuance_percent": 50,
+      "rollout_count": 1000,
+      "root_count": 97,
+      "root_route_checks": 291,
+      "root_route_load_max": 64,
+      "root_route_load_median": 2.0,
+      "root_route_load_min": 1,
+      "root_route_load_sum": 588,
+      "root_scores": {
+        "asrank-first": "aggregate-origin ASN customer-cone order from CAIDA ASRank",
+        "degree-first": "aggregate-origin ASN total degree in the same CAIDA graph",
+        "most-routes-first": "eligible observed route-origin pairs below the root",
+        "random": "uniform seeded root permutation"
+      },
+      "route_origin_count": 589,
+      "route_origin_counts": {
+        "IPv4": 506,
+        "IPv6": 83
+      },
+      "score_tie_break": "independent fixed-seed random order within equal score groups; nested within each rollout",
+      "selection_sha256": "55f0d283d39a4ba0dba55658680c81ba681dedfe1c635ebce7f5be66c0f108b7",
+      "state_table_sha256": "20e45d17f58bbeacbea365caff035a6541716fa7ca5833b85c57923be81f6a27",
+      "strategies": [
+        "most-routes-first",
+        "asrank-first",
+        "degree-first",
+        "random"
+      ]
+    },
+    "pooled_structural_secondary": {
+      "candidate_count": 587,
+      "family_counts": {
+        "IPv4": 504,
+        "IPv6": 83
+      },
+      "fanout_max": 64,
+      "fanout_median": 2.0,
+      "fanout_min": 1,
+      "largest_roots": [
+        {
+          "candidate_rows": 64,
+          "family": "IPv4",
+          "root_prefix": "212.134.0.0/15"
+        },
+        {
+          "candidate_rows": 51,
+          "family": "IPv4",
+          "root_prefix": "109.176.0.0/16"
+        },
+        {
+          "candidate_rows": 43,
+          "family": "IPv4",
+          "root_prefix": "212.212.0.0/16"
+        },
+        {
+          "candidate_rows": 33,
+          "family": "IPv6",
+          "root_prefix": "2a0e:fd40::/29"
+        },
+        {
+          "candidate_rows": 29,
+          "family": "IPv4",
+          "root_prefix": "77.37.0.0/17"
+        }
+      ],
+      "root_count": 97,
+      "root_counts": {
+        "IPv4": 83,
+        "IPv6": 14
+      },
+      "selection_sha256": "5e6704aacd9746bd04a5416b8dd893f0e15543df6c51fd0033e334e1166398e5"
+    },
+    "route_state_secondary": {
+      "endpoint_prefix_count": 587,
+      "independent_oracle_verified": true,
+      "ineligible_routes": [
+        {
+          "family": "IPv4",
+          "origin": 65989,
+          "prefix": "46.221.6.0/24"
+        }
+      ],
+      "invalid_monotone_in_downstream_and_scope": true,
+      "master_seed": 20260829,
+      "reference_classifier": "phase4_encoding/scripts/utils/daroa.py",
+      "reference_classifier_sha256": "eb11dd64f5cc3175557462367796541a45d971459f5a16f46a655e1aee614377",
+      "reference_state_counts": {
+        "aggregate_only": {
+          "explicit": 0,
+          "invalid": 589,
+          "not_found": 0,
+          "open_scope": 0
+        },
+        "exact": {
+          "explicit": 589,
+          "invalid": 0,
+          "not_found": 0,
+          "open_scope": 0
+        },
+        "exact_with_marked_root": {
+          "explicit": 589,
+          "invalid": 0,
+          "not_found": 0,
+          "open_scope": 0
+        },
+        "marked_root": {
+          "explicit": 0,
+          "invalid": 1,
+          "not_found": 0,
+          "open_scope": 588
+        },
+        "unmarked_root": {
+          "explicit": 0,
+          "invalid": 589,
+          "not_found": 0,
+          "open_scope": 0
+        }
+      },
+      "rollout_count": 1000,
+      "root_count": 97,
+      "root_route_checks": 291,
+      "route_origin_count": 589,
+      "route_origin_counts": {
+        "IPv4": 506,
+        "IPv6": 83
+      },
+      "selection_sha256": "5e6704aacd9746bd04a5416b8dd893f0e15543df6c51fd0033e334e1166398e5",
+      "state_partition_verified": true,
+      "state_table_sha256": "20e45d17f58bbeacbea365caff035a6541716fa7ca5833b85c57923be81f6a27"
+    }
+  },
+  "status": "VERIFIED"
+}
