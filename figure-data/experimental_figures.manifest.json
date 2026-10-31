@@ -13,9 +13,9 @@
     "fig_processing_cost": "active two-panel system-cost evidence: version-specific classification bars with a Throughput (routes/s) axis and 0/10000/20000/30000 ticks plus one grouped IPv4/IPv6 same-size policy-update panel at the same five total-record counts; the accepted run's load measurements remain historical and non-plotted; cross-version differences are descriptive, and the artifacts do not measure relying-party, RTR, router-installation, forwarding, or line-rate throughput"
   },
   "component_manifest_sha256": {
-    "MSN-2026-0830/figures/fig_partial_policy_replay.manifest.json": "da0e6d07cb103ecad03f932f5882a9b7a67420763de3703f42f4fe14dc3ef687",
-    "MSN-2026-0830/figures/fig_processing_cost.manifest.json": "d4dfd7248df7580c316741e902949761c151fd9a160818df0a4aa70ccc1741cd",
-    "MSN-2026-0830/figures/fig_deployment_outcomes.manifest.json": "f5311f23f6b0b77c1e24f70b2c55314a81153d947ce32cac565f53bae636f0ee"
+    "figure-data/fig_partial_policy_replay.manifest.json": "da0e6d07cb103ecad03f932f5882a9b7a67420763de3703f42f4fe14dc3ef687",
+    "figure-data/fig_processing_cost.manifest.json": "d4dfd7248df7580c316741e902949761c151fd9a160818df0a4aa70ccc1741cd",
+    "figure-data/fig_deployment_outcomes.manifest.json": "f5311f23f6b0b77c1e24f70b2c55314a81153d947ce32cac565f53bae636f0ee"
   },
   "data_integrity": {
     "active_axis_frames_four_sided": true,
@@ -156,10 +156,10 @@
     "processing_cost_test_sha256": "9fcdea4809c90fd6d68e9a610748d0de5aefb7e0d91da412d3eaf671c1f8e5c2"
   },
   "generator_sha256": {
-    "MSN-2026-0830/scripts/run_partial_policy_replay.py": "ff4982ccbe832bf70c53b682a9f9ac6283a6d9c4adfb9e7be9dc559664129314",
-    "MSN-2026-0830/scripts/prepare_openscope_placement_scores.py": "9bd5db17b49ea9411c6d44690205d33e9e0102006df3c4556a12d6842b4d9bdf",
-    "MSN-2026-0830/scripts/build_processing_cost_figure.py": "521f3ebde0e8cb4f41e7524daf2fbc3f22b0e790dfbd7278aef7218d12704e25",
-    "MSN-2026-0830/scripts/build_fig_deployment_outcomes.py": "2d3f9e9470751a7a1bc2b9bb98be59aa71604879efc879c50711681cebe29853"
+    "experiments/analysis-scripts/run_partial_policy_replay.py": "ff4982ccbe832bf70c53b682a9f9ac6283a6d9c4adfb9e7be9dc559664129314",
+    "experiments/analysis-scripts/prepare_openscope_placement_scores.py": "9bd5db17b49ea9411c6d44690205d33e9e0102006df3c4556a12d6842b4d9bdf",
+    "experiments/analysis-scripts/build_processing_cost_figure.py": "521f3ebde0e8cb4f41e7524daf2fbc3f22b0e790dfbd7278aef7218d12704e25",
+    "experiments/analysis-scripts/build_fig_deployment_outcomes.py": "2d3f9e9470751a7a1bc2b9bb98be59aa71604879efc879c50711681cebe29853"
   },
   "historical_claim_boundaries": {
     "fig_e1a_validation": "inactive frozen semantic-conformance artifact; the checks remain a setup gate",
@@ -183,7 +183,7 @@
     }
   },
   "historical_generator_sha256": {
-    "MSN-2026-0830/scripts/analyze_handoff_fig2.py": "d136de733bfb97c5db6e192615c60e0ea082b4578a76059be8b8c31fef75d937"
+    "experiments/analysis-scripts/analyze_handoff_fig2.py": "d136de733bfb97c5db6e192615c60e0ea082b4578a76059be8b8c31fef75d937"
   },
   "historical_inactive": [
     "fig_e1a_validation",
@@ -279,7 +279,7 @@
   },
   "input_sha256": {
     "phase1_empirical/allocation_tree/visibility_experiment/outputs/visibility_candidates.csv": "0846c5f5775e92092b445b64851918ca6f6b3e45651598d9006d3f3aeb483918",
-    "MSN-2026-0830/figures/source_data/openscope_placement_as_scores.json": "b6d87f20bed4ea347f417bca072a05048eea84439e86f4773cc8bc44017a8257",
+    "figure-data/source_data/openscope_placement_as_scores.json": "b6d87f20bed4ea347f417bca072a05048eea84439e86f4773cc8bc44017a8257",
     "phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-marker-final-v1/artifact_manifest.json": "f193d682dacecc43f0f4c193e172ff294e544cf35707e096b660bdf0af9c9357",
     "phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-marker-final-v1/independent_audit.json": "40d583d46e7678a442161153dafbc9176da57eacca07a9d2e19feb7de0523ab8",
     "phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-marker-final-v1/input_manifest.json": "8681d009b22b66541df46083ebd8519bdab6d3c74c45cbf130dd71cf10c646a7",
@@ -321,16 +321,16 @@
     "fig_deployment_outcomes_b.tiff": "d7c2d1903ac77b3d1b99b4c74e1ead3971e74fbb52dcfc1182be719c8bb8b308"
   },
   "historical_provenance_sha256": {
-    "MSN-2026-0830/figures/HANDOFF_FIG2_REANALYSIS_PROVENANCE.md": "263f19f6d82fd509fad0a3c779e10e79676a0974af36ee30a42d19264e9990dc"
+    "figure-data/HANDOFF_FIG2_REANALYSIS_PROVENANCE.md": "263f19f6d82fd509fad0a3c779e10e79676a0974af36ee30a42d19264e9990dc"
   },
   "provenance_sha256": {
-    "MSN-2026-0830/figures/FIG_DEPLOYMENT_OUTCOMES_PROVENANCE.md": "0e280c9066ca7c2e78aa463acfa3caf9015093ccc0a8f8d75d571e4933d46894",
-    "MSN-2026-0830/figures/FIG_PARTIAL_POLICY_REPLAY_PROVENANCE.md": "3ec6f0f092749a57fbf5f0083afa5d293ecd386e2faf1c661a05655016e713d3",
-    "MSN-2026-0830/figures/FIG_PROCESSING_COST_PROVENANCE.md": "2f5aa0f567d0028525a304e57373edf72cb317b71eeddd0f8d6676ccde49efb9"
+    "figure-data/FIG_DEPLOYMENT_OUTCOMES_PROVENANCE.md": "0e280c9066ca7c2e78aa463acfa3caf9015093ccc0a8f8d75d571e4933d46894",
+    "figure-data/FIG_PARTIAL_POLICY_REPLAY_PROVENANCE.md": "3ec6f0f092749a57fbf5f0083afa5d293ecd386e2faf1c661a05655016e713d3",
+    "figure-data/FIG_PROCESSING_COST_PROVENANCE.md": "2f5aa0f567d0028525a304e57373edf72cb317b71eeddd0f8d6676ccde49efb9"
   },
   "documentation_sha256": {
-    "MSN-2026-0830/figures/FIGURE_CONTRACT_EXPERIMENTS.md": "ae6333c95681443f7797f33e4458416220d9ed3c87d87c2d5ad98184bb35de8b",
-    "MSN-2026-0830/figures/FIGURE_QA_EXPERIMENTS.md": "dc8bbcaec3cc966a63c2ff7b283b25d6573e3bdd960934c247050246c4ce46b6"
+    "figure-data/FIGURE_CONTRACT_EXPERIMENTS.md": "ae6333c95681443f7797f33e4458416220d9ed3c87d87c2d5ad98184bb35de8b",
+    "figure-data/FIGURE_QA_EXPERIMENTS.md": "dc8bbcaec3cc966a63c2ff7b283b25d6573e3bdd960934c247050246c4ce46b6"
   },
   "schema_version": "experimental-figures-v28-fixed-conflict-rate",
   "source_data_sha256": {

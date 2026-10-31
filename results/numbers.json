@@ -33,7 +33,7 @@
         "percentage_coordinate_panels": 5,
         "percentage_x_axis_limits_percent": [0, 100],
         "test": {
-          "path": "MSN-2026-0830/scripts/tests/test_active_axis_style.py",
+          "path": "experiments/analysis-scripts/tests/test_active_axis_style.py",
           "sha256": "f6ac78f9a264eb18f544f39a5c7fe5e2fe695364324c77f32b73f70b2c744afc",
           "passed": 7
         }
@@ -146,22 +146,22 @@
           "s100": {"selected_roots": 97, "invalid_count_median": 1.0, "invalid_count_range_p05_p95": [0.0, 1.0]}
         },
         "artifacts": {
-          "runner": {"path": "MSN-2026-0830/scripts/run_partial_policy_replay.py", "sha256": "a88c01dc169af89f0cf6909d02732c993caf8a45b31ba4fd23c05b364567f98a"},
-          "tests": {"path": "MSN-2026-0830/scripts/tests/test_partial_policy_replay.py", "sha256": "b51b7f2458e7bea4020052b4c3cb8dd06ef898cf652fdb7b9e0e47e177424e25", "passed": 19},
-          "placement_score_generator": {"path": "MSN-2026-0830/scripts/prepare_openscope_placement_scores.py", "sha256": "9bd5db17b49ea9411c6d44690205d33e9e0102006df3c4556a12d6842b4d9bdf"},
-          "placement_score_input": {"path": "MSN-2026-0830/figures/source_data/openscope_placement_as_scores.json", "sha256": "b6d87f20bed4ea347f417bca072a05048eea84439e86f4773cc8bc44017a8257"},
-          "manifest": {"path": "MSN-2026-0830/figures/fig_partial_policy_replay.manifest.json", "sha256": "6b2ec75e50f6ddb8405eeea719aa338f83fb31d46a7245d712d0689d6414180a"},
-          "figure_provenance": {"path": "MSN-2026-0830/figures/FIG_PARTIAL_POLICY_REPLAY_PROVENANCE.md", "sha256": "fcec35678110e40cc40fc377f3cfb24ea499c9d8b94c44e0fb8bf0d4d514da1c"},
-          "full_grid": {"path": "MSN-2026-0830/figures/source_data/fig_partial_policy_grid.csv", "sha256": "28dbb520de5488483f02f4dbb62066a495db0abb49fc92b268eff7b5d64760dc", "rows": 726},
-          "pooled_grid": {"path": "MSN-2026-0830/figures/source_data/fig_partial_policy_pooled.csv", "sha256": "c6df211d0f9a08875770633b80f1b013ef94a199dc19afbddd72360bec0e9135", "rows": 66},
-          "route_state_grid": {"path": "MSN-2026-0830/figures/source_data/fig_partial_policy_conflicts.csv", "sha256": "3668a4a70894af0535e29d5005ec785a0065f68eb1578323d5efeb6fb20c9737", "rows": 66},
-          "deployment_curves": {"path": "MSN-2026-0830/figures/source_data/fig_partial_policy_deployment_curves.csv", "sha256": "36676fb33ca3754c8095c662e8377e4b86817c19d8569883c86a004c5c277b21", "rows": 66},
-          "placement_curves": {"path": "MSN-2026-0830/figures/source_data/fig_openscope_placement.csv", "sha256": "a015a2ecf2be02a9d3acc592e420ab0a62c3d48c3639b7f8f0377496cba9f745", "rows": 44},
-          "decision_budget": {"path": "MSN-2026-0830/figures/source_data/fig_partial_policy_decision_budget.csv", "sha256": "5333969fbbe3df14e9cf96a3b51ada4bb5f01113948ff6928f0d0e1c932ef5a7", "rows": 297},
-          "active_figure_legend": {"path": "MSN-2026-0830/figures/fig_partial_policy_legend.pdf", "sha256": "c75ea102e322bf548fd9a3760409895b152f2d776e42be120afbcd0e29ad5d39"},
-          "active_figure_potential": {"path": "MSN-2026-0830/figures/fig_partial_policy_potential.pdf", "sha256": "439a6ac3e45e5f896b1acfb5aebd776a78e61e0bdfba76cbe59220890c015076"},
-          "active_figure_observed": {"path": "MSN-2026-0830/figures/fig_partial_policy_observed.pdf", "sha256": "84545ac5fd98d2e9a4de4b984cbcbe2ca2e9bc70ff55465e26efe05d1919dfaf"},
-          "active_figure_placement": {"path": "MSN-2026-0830/figures/fig_openscope_placement.pdf", "sha256": "f1294e20e50141b7e08f68bd3c98c05eaf4be8cb663b70da7cd74fa4a8f86669"}
+          "runner": {"path": "experiments/analysis-scripts/run_partial_policy_replay.py", "sha256": "a88c01dc169af89f0cf6909d02732c993caf8a45b31ba4fd23c05b364567f98a"},
+          "tests": {"path": "experiments/analysis-scripts/tests/test_partial_policy_replay.py", "sha256": "b51b7f2458e7bea4020052b4c3cb8dd06ef898cf652fdb7b9e0e47e177424e25", "passed": 19},
+          "placement_score_generator": {"path": "experiments/analysis-scripts/prepare_openscope_placement_scores.py", "sha256": "9bd5db17b49ea9411c6d44690205d33e9e0102006df3c4556a12d6842b4d9bdf"},
+          "placement_score_input": {"path": "figure-data/source_data/openscope_placement_as_scores.json", "sha256": "b6d87f20bed4ea347f417bca072a05048eea84439e86f4773cc8bc44017a8257"},
+          "manifest": {"path": "figure-data/fig_partial_policy_replay.manifest.json", "sha256": "6b2ec75e50f6ddb8405eeea719aa338f83fb31d46a7245d712d0689d6414180a"},
+          "figure_provenance": {"path": "figure-data/FIG_PARTIAL_POLICY_REPLAY_PROVENANCE.md", "sha256": "fcec35678110e40cc40fc377f3cfb24ea499c9d8b94c44e0fb8bf0d4d514da1c"},
+          "full_grid": {"path": "figure-data/source_data/fig_partial_policy_grid.csv", "sha256": "28dbb520de5488483f02f4dbb62066a495db0abb49fc92b268eff7b5d64760dc", "rows": 726},
+          "pooled_grid": {"path": "figure-data/source_data/fig_partial_policy_pooled.csv", "sha256": "c6df211d0f9a08875770633b80f1b013ef94a199dc19afbddd72360bec0e9135", "rows": 66},
+          "route_state_grid": {"path": "figure-data/source_data/fig_partial_policy_conflicts.csv", "sha256": "3668a4a70894af0535e29d5005ec785a0065f68eb1578323d5efeb6fb20c9737", "rows": 66},
+          "deployment_curves": {"path": "figure-data/source_data/fig_partial_policy_deployment_curves.csv", "sha256": "36676fb33ca3754c8095c662e8377e4b86817c19d8569883c86a004c5c277b21", "rows": 66},
+          "placement_curves": {"path": "figure-data/source_data/fig_openscope_placement.csv", "sha256": "a015a2ecf2be02a9d3acc592e420ab0a62c3d48c3639b7f8f0377496cba9f745", "rows": 44},
+          "decision_budget": {"path": "figure-data/source_data/fig_partial_policy_decision_budget.csv", "sha256": "5333969fbbe3df14e9cf96a3b51ada4bb5f01113948ff6928f0d0e1c932ef5a7", "rows": 297},
+          "active_figure_legend": {"path": "figure-data/fig_partial_policy_legend.pdf", "sha256": "c75ea102e322bf548fd9a3760409895b152f2d776e42be120afbcd0e29ad5d39"},
+          "active_figure_potential": {"path": "figure-data/fig_partial_policy_potential.pdf", "sha256": "439a6ac3e45e5f896b1acfb5aebd776a78e61e0bdfba76cbe59220890c015076"},
+          "active_figure_observed": {"path": "figure-data/fig_partial_policy_observed.pdf", "sha256": "84545ac5fd98d2e9a4de4b984cbcbe2ca2e9bc70ff55465e26efe05d1919dfaf"},
+          "active_figure_placement": {"path": "figure-data/fig_openscope_placement.pdf", "sha256": "f1294e20e50141b7e08f68bd3c98c05eaf4be8cb663b70da7cd74fa4a8f86669"}
         },
         "claim_boundary": "seeded randomized deployment replay over one RRC00-derived frame; active panels display arithmetic means only, and observed denotes conflicts realized in the constructed rollout rather than measured issuer adoption or a historical Internet time series"
       },
@@ -290,30 +290,30 @@
             "reads_summary_outputs": false
           },
           "figure_generator": {
-            "path": "MSN-2026-0830/scripts/analyze_handoff_fig2.py",
+            "path": "experiments/analysis-scripts/analyze_handoff_fig2.py",
             "sha256": "d136de733bfb97c5db6e192615c60e0ea082b4578a76059be8b8c31fef75d937"
           },
           "figure_source_data": {
             "scope": "IPv4 and IPv6 accepted matched-handoff runs",
-            "trial_path": "MSN-2026-0830/figures/source_data/handoff_latency_trials.csv",
+            "trial_path": "figure-data/source_data/handoff_latency_trials.csv",
             "trial_sha256": "89d87933ea2bf06166b39238666052358eca6d691e7f1cbdd90e0cc01b23e535",
             "trial_rows": 240,
-            "stage_path": "MSN-2026-0830/figures/source_data/handoff_latency_stages.csv",
+            "stage_path": "figure-data/source_data/handoff_latency_stages.csv",
             "stage_sha256": "31f4e14439dc85ed687773fdfe8320da0b7ec004b299828624e049e8fe12b198",
             "stage_rows": 30,
-            "round_path": "MSN-2026-0830/figures/source_data/handoff_endpoint_rounds_recomputed.csv",
+            "round_path": "figure-data/source_data/handoff_endpoint_rounds_recomputed.csv",
             "round_sha256": "ebf5cb221c22d1cbc865be2cb762b67afc6bd9936f575e896d7632981dfa93f0",
             "round_arm_rows": 60,
-            "contrast_path": "MSN-2026-0830/figures/source_data/handoff_latency_contrasts.csv",
+            "contrast_path": "figure-data/source_data/handoff_latency_contrasts.csv",
             "contrast_sha256": "224882ba7116f3ee0781e192fcbe6a1fa80aad3f0b8e3c1694f4181fe8671c33",
             "contrast_rows": 4
           },
           "historical_figure_pdf": {
-            "path": "MSN-2026-0830/figures/fig_handoff_benefit.pdf",
+            "path": "figure-data/fig_handoff_benefit.pdf",
             "sha256": "ae9de9d398ab0ba6ace42b1d81ee40a6d81a165d80c6a094061940f8ad287495"
           },
           "figure_provenance_report": {
-            "path": "MSN-2026-0830/figures/HANDOFF_FIG2_REANALYSIS_PROVENANCE.md",
+            "path": "figure-data/HANDOFF_FIG2_REANALYSIS_PROVENANCE.md",
             "sha256": "81dd8f52a46cbbc307b7521bdb2b71a7af490cd01003b64af6b1e872e53c6d15"
           }
         },
@@ -404,7 +404,7 @@
           "raw_batch_samples_csv_sha256": "015be0a3d12c90eb634495ea94bc2944a8f58edb3da0bd07f6f409798d53a299",
           "recomputation_audit_sha256": "653ee0129e0d42f8dab5d3a2e1788d416750eb449b54a09c55ec7edefc0aeabc",
           "independent_audit_sha256": "98acd9baf331290796ffeef4dec6b7236f2bbb9d2f5b1fde1446b3c5efce1498",
-          "legacy_table_source": "MSN-2026-0830/outputs/tables/processing_cost_legacy.csv",
+          "legacy_table_source": "results/tables/processing_cost_legacy.csv",
           "legacy_table_source_sha256": "0548634ccc5e9e776188db9f9aef2ea82d76d05dc7a6a92d47967b4af0a61017"
         },
         "claim_boundary": "historical only; policy growth changed the selected-state mix, so this run no longer supplies the active processing-cost result"
@@ -486,7 +486,7 @@
           "manifest_entries": 2837,
           "independent_audit_sha256": "11f752c8bec49e7583646bda37210a5a74353b24c2d86a4942c6706b70442b4d",
           "historical_dual_stack_figure": {
-            "path": "MSN-2026-0830/figures/fig_handoff_benefit.pdf",
+            "path": "figure-data/fig_handoff_benefit.pdf",
             "sha256": "ae9de9d398ab0ba6ace42b1d81ee40a6d81a165d80c6a094061940f8ad287495",
             "generator_sha256": "d136de733bfb97c5db6e192615c60e0ea082b4578a76059be8b8c31fef75d937",
             "contrast_source_sha256": "224882ba7116f3ee0781e192fcbe6a1fa80aad3f0b8e3c1694f4181fe8671c33"
@@ -570,28 +570,28 @@
           "summary_sha256": "ebb77c5bf194de663b81aea82fc2a06abe5a8f878c571080accfc3ad146f0a6a",
           "independent_audit_sha256": "586c3a0f4efc4ea75c374f7f5c2ad258c66434e5888c5313f765a85f8a3c3a6f",
           "system_cost_generator": {
-            "path": "MSN-2026-0830/scripts/build_processing_cost_figure.py",
+            "path": "experiments/analysis-scripts/build_processing_cost_figure.py",
             "sha256": "35f808ddca2f3e03ba3ab89ed90bc88b5d47bf1e8015947095eaf10d5bfd1221"
           },
           "system_cost_tests": {
-            "path": "MSN-2026-0830/scripts/tests/test_build_processing_cost_figure.py",
+            "path": "experiments/analysis-scripts/tests/test_build_processing_cost_figure.py",
             "sha256": "a88bf78704630a60b51db28da10066a4f9996d563dc3029346873ee98ebbe5f1",
             "passed": 11
           },
           "system_cost_manifest": {
-            "path": "MSN-2026-0830/figures/fig_processing_cost.manifest.json",
+            "path": "figure-data/fig_processing_cost.manifest.json",
             "sha256": "05557cc36bde9efc589da37d8386e1064036913931d58c29536b65d7311cbe33"
           },
           "system_cost_provenance": {
-            "path": "MSN-2026-0830/figures/FIG_PROCESSING_COST_PROVENANCE.md",
+            "path": "figure-data/FIG_PROCESSING_COST_PROVENANCE.md",
             "sha256": "2f5aa0f567d0028525a304e57373edf72cb317b71eeddd0f8d6676ccde49efb9"
           },
           "active_classification_figure": {
-            "path": "MSN-2026-0830/figures/fig_processing_cost_classify.pdf",
+            "path": "figure-data/fig_processing_cost_classify.pdf",
             "sha256": "db2749b554c2ed62abdd9d6739461e69df944cbe06fec7b6188cbc4acdb6e77d"
           },
           "historical_nonplotted_load_figure": {
-            "path": "MSN-2026-0830/figures/fig_processing_cost_load.pdf",
+            "path": "figure-data/fig_processing_cost_load.pdf",
             "sha256": "7c47cb30a40efba5765fdc4e6b7af07dea9b0195deba0897103a4667a2924a2c"
           },
           "historical_run_directory": "phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z",
@@ -660,16 +660,16 @@
           "artifact_manifest_sha256": "f193d682dacecc43f0f4c193e172ff294e544cf35707e096b660bdf0af9c9357",
           "independent_audit_sha256": "40d583d46e7678a442161153dafbc9176da57eacca07a9d2e19feb7de0523ab8",
           "active_figure": {
-            "path": "MSN-2026-0830/figures/fig_processing_cost_update.pdf",
+            "path": "figure-data/fig_processing_cost_update.pdf",
             "sha256": "424859bf329b08363e419d5b7b33f96e7f65d03335af234c149269e065483a96"
           }
         },
         "historical_inactive_controls": {
           "ipv4_policy_scale_run": "phase6_system/e2e/outputs/policy-scale-ipv4-20260830T081349Z",
           "ipv6_policy_scale_run": "phase6_system/e2e/outputs/policy-scale-ipv6-20260830T081712Z",
-          "ipv4_panel": "MSN-2026-0830/figures/fig_update_latency_ipv4.pdf",
-          "ipv6_panel": "MSN-2026-0830/figures/fig_update_latency_ipv6.pdf",
-          "former_single_panel": "MSN-2026-0830/figures/fig_update_latency.pdf",
+          "ipv4_panel": "figure-data/fig_update_latency_ipv4.pdf",
+          "ipv6_panel": "figure-data/fig_update_latency_ipv6.pdf",
+          "former_single_panel": "figure-data/fig_update_latency.pdf",
           "former_ipv4_scale_run": "phase6_system/e2e/outputs/scale-20260823T025539Z",
           "outage_episode": "phase6_system/e2e/outputs/run-20260823T024129Z/failures/routinator-outage"
         },
@@ -786,9 +786,9 @@
         "historical_accepted_20260826": {
           "role": "original accepted E1a V3 evidence",
           "verification_status": "VERIFIED_EXACT_REPRODUCTION",
-          "production_output": "MSN-2026-0830-no-use/experiment_redesign/execution/e1a-v3-production-2",
-          "reproduction_output": "MSN-2026-0830-no-use/experiment_redesign/execution/e1a-v3-reproduction-2",
-          "comparison_output": "MSN-2026-0830-no-use/experiment_redesign/execution/E1A_V3_REPRODUCTION_COMPARISON_2.json",
+          "production_output": "experiment_redesign/execution/e1a-v3-production-2",
+          "reproduction_output": "experiment_redesign/execution/e1a-v3-reproduction-2",
+          "comparison_output": "experiment_redesign/execution/E1A_V3_REPRODUCTION_COMPARISON_2.json",
           "production_elapsed_seconds": 303.3122383058071,
           "reproduction_elapsed_seconds": 300.9328451603651,
           "production_peak_rss_kib": 424404,
@@ -806,9 +806,9 @@
         "reaudit_20260828": {
           "role": "fresh formal-worktree reaudit; does not replace historical acceptance",
           "verification_status": "VERIFIED_EXACT_REPRODUCTION",
-          "production_output": "MSN-2026-0830/experiment_redesign/execution/e1a-v3-reaudit-production-20260828",
-          "reproduction_output": "MSN-2026-0830/experiment_redesign/execution/e1a-v3-reaudit-reproduction-20260828",
-          "comparison_output": "MSN-2026-0830/experiment_redesign/execution/E1A_V3_REAUDIT_COMPARISON_20260828.json",
+          "production_output": "runs/e1a-v3-reaudit-production-20260828",
+          "reproduction_output": "runs/e1a-v3-reaudit-reproduction-20260828",
+          "comparison_output": "runs/E1A_V3_REAUDIT_COMPARISON_20260828.json",
           "production_elapsed_seconds": 304.42910804226995,
           "reproduction_elapsed_seconds": 299.39902037009597,
           "production_peak_rss_kib": 214808,
@@ -888,37 +888,37 @@
         "scenario_relationship": "intended-only and competition are different announcement sets with separately matched baselines; they are not a joint frontier",
         "artifacts": {
           "generator": {
-            "path": "MSN-2026-0830/scripts/build_fig_deployment_outcomes.py",
+            "path": "experiments/analysis-scripts/build_fig_deployment_outcomes.py",
             "sha256": "7b35280c2b40b8bf7c883fc3b92254ffd2aaa5c175949c43b29a4003e2477951"
           },
           "source_csv": {
-            "path": "MSN-2026-0830/figures/source_data/fig_deployment_outcomes.csv",
+            "path": "figure-data/source_data/fig_deployment_outcomes.csv",
             "rows": 24,
             "sha256": "7a209d91e0333f630d45ceb799fbde9d94cfc6c2fc4dd4b4b1154ede05611f76"
           },
           "fixed_order_source_csv": {
-            "path": "MSN-2026-0830/figures/source_data/fig_deployment_outcomes_orders.csv",
+            "path": "figure-data/source_data/fig_deployment_outcomes_orders.csv",
             "rows": 110,
             "sha256": "44a472033b1fd158c3e093a262e11f4c7ceda268ed06734cf6aba1ae5848063a"
           },
           "figure_panel_pdfs": [
             {
               "panel": "a",
-              "path": "MSN-2026-0830/figures/fig_deployment_outcomes_a.pdf",
+              "path": "figure-data/fig_deployment_outcomes_a.pdf",
               "sha256": "526bca6e3760f0f6bf78d599c30ca93fd2e56bd320d891056b1f2c658b270cb2"
             },
             {
               "panel": "b",
-              "path": "MSN-2026-0830/figures/fig_deployment_outcomes_b.pdf",
+              "path": "figure-data/fig_deployment_outcomes_b.pdf",
               "sha256": "ae7144be192826ffeaf12f08af4b55a1136e25b7564289e8d4610a36d96b50c2"
             }
           ],
           "provenance_report": {
-            "path": "MSN-2026-0830/figures/FIG_DEPLOYMENT_OUTCOMES_PROVENANCE.md",
+            "path": "figure-data/FIG_DEPLOYMENT_OUTCOMES_PROVENANCE.md",
             "sha256": "6a8f6df34105a14b02e597033a30f08bd9927910857d0d168cf46d09953a5358"
           },
           "component_manifest": {
-            "path": "MSN-2026-0830/figures/fig_deployment_outcomes.manifest.json",
+            "path": "figure-data/fig_deployment_outcomes.manifest.json",
             "sha256": "b45e2ac74eae36dd259b5b9a701a79905362dd87f8ed7cf8fb68f51081eea412"
           }
         },
@@ -937,7 +937,7 @@
         "result_sha256": "31e0ae3ec3d1dd123a6c27f7acb2b06444e75ccf2f640c00d3ede5ee008036a4",
         "exact_reaudit_20260828": {
           "status": "EXACT_MATCH",
-          "output": "MSN-2026-0830/experiment_redesign/execution/q3-legacy-diagnostic-reaudit-20260828.json",
+          "output": "runs/q3-legacy-diagnostic-reaudit-20260828.json",
           "wall_seconds": 49.03,
           "maximum_resident_set_kib": 219080,
           "python": "CPython 3.12.3",

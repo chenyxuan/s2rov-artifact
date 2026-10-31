@@ -16,7 +16,7 @@ From the repository root:
 ```bash
 python3 -m unittest discover -s phase10_semantic_gate/tests -v
 python3 -m phase10_semantic_gate.run_e1a \
-  --output-dir MSN-2026-0830/experiment_redesign/execution/e1a-v3-production \
+  --output-dir runs/e1a-v3-production \
   --seed 20260826 --generated-vectors 100000 \
   --invalid-seed 120260826 --invalid-objects 100000
 ```

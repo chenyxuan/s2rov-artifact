@@ -899,139 +899,139 @@
     "sha256": "0846c5f5775e92092b445b64851918ca6f6b3e45651598d9006d3f3aeb483918"
   },
   "outputs": {
-    "MSN-2026-0830/figures/fig_openscope_placement.pdf": {
+    "figure-data/fig_openscope_placement.pdf": {
       "bytes": 13368,
       "sha256": "6deea7f6849d9df3788c10262e75e4dd7274b861715319373f7ed70ced8fb822"
     },
-    "MSN-2026-0830/figures/fig_openscope_placement.png": {
+    "figure-data/fig_openscope_placement.png": {
       "bytes": 96489,
       "sha256": "32b3e4cce6799e2d055f855b070e5a01914645f9298ca1c5028427dd13d37ddb"
     },
-    "MSN-2026-0830/figures/fig_openscope_placement.svg": {
+    "figure-data/fig_openscope_placement.svg": {
       "bytes": 19989,
       "sha256": "a0b1056bae93230db2c807887656a21133df71373619e961bb34742f9633336f"
     },
-    "MSN-2026-0830/figures/fig_openscope_placement.tiff": {
+    "figure-data/fig_openscope_placement.tiff": {
       "bytes": 8820206,
       "sha256": "ff85751d17e200a70b677d08e9e12261d682ffdbb8aa2e9d011426eafad68ba2"
     },
-    "MSN-2026-0830/figures/fig_partial_policy_ipv4.pdf": {
+    "figure-data/fig_partial_policy_ipv4.pdf": {
       "bytes": 13151,
       "sha256": "54bba8d80c39ca2fe13cc67442a25694e5a2b1708a3ade5f905d877e478cf875"
     },
-    "MSN-2026-0830/figures/fig_partial_policy_ipv4.svg": {
+    "figure-data/fig_partial_policy_ipv4.svg": {
       "bytes": 39976,
       "sha256": "052d741f46ac650275536420a6e2c94b82a01c539a24a7b84cee4e2c9d18c8db"
     },
-    "MSN-2026-0830/figures/fig_partial_policy_ipv4.tiff": {
+    "figure-data/fig_partial_policy_ipv4.tiff": {
       "bytes": 15523406,
       "sha256": "a7bb9ada35de67f1cf25f5c38af9e4296e72e436019e0dc8d42aa094d2bde4d4"
     },
-    "MSN-2026-0830/figures/fig_partial_policy_ipv6.pdf": {
+    "figure-data/fig_partial_policy_ipv6.pdf": {
       "bytes": 13063,
       "sha256": "5c83f115751989d90a2c38ea0f7e0d37ae2921544832546db5df0e9168c2c9ba"
     },
-    "MSN-2026-0830/figures/fig_partial_policy_ipv6.svg": {
+    "figure-data/fig_partial_policy_ipv6.svg": {
       "bytes": 39949,
       "sha256": "aaa59d1f7753a7599050ac1e358b4aa8f94be9f6fea6597875ad1634e867df82"
     },
-    "MSN-2026-0830/figures/fig_partial_policy_ipv6.tiff": {
+    "figure-data/fig_partial_policy_ipv6.tiff": {
       "bytes": 15523406,
       "sha256": "cf29a30fd716fb790a5a8501f522772b9b589deda115f61c9c782af5a21d1728"
     },
-    "MSN-2026-0830/figures/fig_partial_policy_legend.pdf": {
+    "figure-data/fig_partial_policy_legend.pdf": {
       "bytes": 9680,
       "sha256": "2bf975a9133045aacdee1686431470032fb16c3ca71a35d64ee14377d2d6a743"
     },
-    "MSN-2026-0830/figures/fig_partial_policy_legend.png": {
+    "figure-data/fig_partial_policy_legend.png": {
       "bytes": 19898,
       "sha256": "22913d357c966188cea180eea0e06753c3a44c3a853c73a3e132f0e8d0b92944"
     },
-    "MSN-2026-0830/figures/fig_partial_policy_legend.svg": {
+    "figure-data/fig_partial_policy_legend.svg": {
       "bytes": 6278,
       "sha256": "34e9c788b930f2975ad108893eda2fb6ff6a17a2a6c806636d9d5920d067e7ad"
     },
-    "MSN-2026-0830/figures/fig_partial_policy_legend.tiff": {
+    "figure-data/fig_partial_policy_legend.tiff": {
       "bytes": 1713806,
       "sha256": "97a38ba6675121b98a8c6802ca236bd38c57ca6310bd5a8bcf1addec5c7343a4"
     },
-    "MSN-2026-0830/figures/fig_partial_policy_observed.pdf": {
+    "figure-data/fig_partial_policy_observed.pdf": {
       "bytes": 11320,
       "sha256": "1765731092d409e4b43cdc04f0e561a4fe7be5c074eac21430b64aaf75754ca1"
     },
-    "MSN-2026-0830/figures/fig_partial_policy_observed.png": {
+    "figure-data/fig_partial_policy_observed.png": {
       "bytes": 94418,
       "sha256": "aca2b80a019a5de5541a983011825107126efe59b50e30ba6b9e988100d56eda"
     },
-    "MSN-2026-0830/figures/fig_partial_policy_observed.svg": {
+    "figure-data/fig_partial_policy_observed.svg": {
       "bytes": 21942,
       "sha256": "39397e00cf95bc21826231795a7e85eebaad74ffadf82ace4c9d8c0118c3b43f"
     },
-    "MSN-2026-0830/figures/fig_partial_policy_observed.tiff": {
+    "figure-data/fig_partial_policy_observed.tiff": {
       "bytes": 8820206,
       "sha256": "c7633c25d52735666b6d430f982b9df633d61a7ac37ff9e21ac31ec5e8952f16"
     },
-    "MSN-2026-0830/figures/fig_partial_policy_potential.pdf": {
+    "figure-data/fig_partial_policy_potential.pdf": {
       "bytes": 11300,
       "sha256": "96ed6a07c1b15e616044c8242015aa55ad4b155667c980083ee2d0da000233f4"
     },
-    "MSN-2026-0830/figures/fig_partial_policy_potential.png": {
+    "figure-data/fig_partial_policy_potential.png": {
       "bytes": 85544,
       "sha256": "8e7fc2f501f06cfef5b45e195e7b63ee7e39a73c7145660862852a273cb91833"
     },
-    "MSN-2026-0830/figures/fig_partial_policy_potential.svg": {
+    "figure-data/fig_partial_policy_potential.svg": {
       "bytes": 21389,
       "sha256": "1ffc76c1b83468c1649a9e9e36fd03e23d4f4bdfa49aa1f06db026c7650e2d4b"
     },
-    "MSN-2026-0830/figures/fig_partial_policy_potential.tiff": {
+    "figure-data/fig_partial_policy_potential.tiff": {
       "bytes": 8820206,
       "sha256": "5b827414bc30df21954d3469837f1b74ca4a735ce4a7a08452b2689e640dcfee"
     },
-    "MSN-2026-0830/figures/fig_partial_policy_strategy_ipv4.pdf": {
+    "figure-data/fig_partial_policy_strategy_ipv4.pdf": {
       "bytes": 10545,
       "sha256": "dc8d0ba2b3afde0ded3be0029f13a903f6f93a59c4bad8ea1cacfb46d5d286fc"
     },
-    "MSN-2026-0830/figures/fig_partial_policy_strategy_ipv4.svg": {
+    "figure-data/fig_partial_policy_strategy_ipv4.svg": {
       "bytes": 12554,
       "sha256": "5d4e77fbbee56c90298275d83572b430b352b247de03bc22a7e63511c324d495"
     },
-    "MSN-2026-0830/figures/fig_partial_policy_strategy_ipv4.tiff": {
+    "figure-data/fig_partial_policy_strategy_ipv4.tiff": {
       "bytes": 9677006,
       "sha256": "311f2c3c3211a1fa450b13802fee3610976a4187f574254bfe26c4c934740694"
     },
-    "MSN-2026-0830/figures/fig_partial_policy_strategy_ipv6.pdf": {
+    "figure-data/fig_partial_policy_strategy_ipv6.pdf": {
       "bytes": 10476,
       "sha256": "94eefe6728a2b296ee0131e83ee10ab9aa49caab610c3235f46c9f230933a781"
     },
-    "MSN-2026-0830/figures/fig_partial_policy_strategy_ipv6.svg": {
+    "figure-data/fig_partial_policy_strategy_ipv6.svg": {
       "bytes": 12556,
       "sha256": "fbf682b6854b7e95405754af8eda4f29c20df56f24b3b5f1227ba3fc51f2654f"
     },
-    "MSN-2026-0830/figures/fig_partial_policy_strategy_ipv6.tiff": {
+    "figure-data/fig_partial_policy_strategy_ipv6.tiff": {
       "bytes": 9677006,
       "sha256": "50a9af923872064852369986c1be2325278025f0b41ba6c4f2844449da2b317a"
     },
-    "MSN-2026-0830/figures/source_data/fig_openscope_placement.csv": {
+    "figure-data/source_data/fig_openscope_placement.csv": {
       "bytes": 8301,
       "sha256": "a015a2ecf2be02a9d3acc592e420ab0a62c3d48c3639b7f8f0377496cba9f745"
     },
-    "MSN-2026-0830/figures/source_data/fig_partial_policy_conflicts.csv": {
+    "figure-data/source_data/fig_partial_policy_conflicts.csv": {
       "bytes": 20563,
       "sha256": "3668a4a70894af0535e29d5005ec785a0065f68eb1578323d5efeb6fb20c9737"
     },
-    "MSN-2026-0830/figures/source_data/fig_partial_policy_decision_budget.csv": {
+    "figure-data/source_data/fig_partial_policy_decision_budget.csv": {
       "bytes": 94988,
       "sha256": "5333969fbbe3df14e9cf96a3b51ada4bb5f01113948ff6928f0d0e1c932ef5a7"
     },
-    "MSN-2026-0830/figures/source_data/fig_partial_policy_deployment_curves.csv": {
+    "figure-data/source_data/fig_partial_policy_deployment_curves.csv": {
       "bytes": 20714,
       "sha256": "36676fb33ca3754c8095c662e8377e4b86817c19d8569883c86a004c5c277b21"
     },
-    "MSN-2026-0830/figures/source_data/fig_partial_policy_grid.csv": {
+    "figure-data/source_data/fig_partial_policy_grid.csv": {
       "bytes": 313999,
       "sha256": "28dbb520de5488483f02f4dbb62066a495db0abb49fc92b268eff7b5d64760dc"
     },
-    "MSN-2026-0830/figures/source_data/fig_partial_policy_pooled.csv": {
+    "figure-data/source_data/fig_partial_policy_pooled.csv": {
       "bytes": 29749,
       "sha256": "c6df211d0f9a08875770633b80f1b013ef94a199dc19afbddd72360bec0e9135"
     }
@@ -1046,7 +1046,7 @@
       "implementation": "BGPy 13.0.10",
       "implementation_commit": "c3b1be48148e8c246a60b9dec6513b688a4736a5"
     },
-    "path": "MSN-2026-0830/figures/source_data/openscope_placement_as_scores.json",
+    "path": "figure-data/source_data/openscope_placement_as_scores.json",
     "schema": "openscope-placement-as-scores-v1",
     "sha256": "b6d87f20bed4ea347f417bca072a05048eea84439e86f4773cc8bc44017a8257",
     "source": {
@@ -1059,7 +1059,7 @@
     "total_degree_min": 1
   },
   "runner": {
-    "path": "MSN-2026-0830/scripts/run_partial_policy_replay.py",
+    "path": "experiments/analysis-scripts/run_partial_policy_replay.py",
     "sha256": "ff4982ccbe832bf70c53b682a9f9ac6283a6d9c4adfb9e7be9dc559664129314"
   },
   "runtime": {
@@ -1252,7 +1252,7 @@
           "implementation": "BGPy 13.0.10",
           "implementation_commit": "c3b1be48148e8c246a60b9dec6513b688a4736a5"
         },
-        "path": "MSN-2026-0830/figures/source_data/openscope_placement_as_scores.json",
+        "path": "figure-data/source_data/openscope_placement_as_scores.json",
         "schema": "openscope-placement-as-scores-v1",
         "sha256": "b6d87f20bed4ea347f417bca072a05048eea84439e86f4773cc8bc44017a8257",
         "source": {

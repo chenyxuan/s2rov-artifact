@@ -7,7 +7,7 @@
 - Contract version: `e1a-v3-audit-repair`
 - Frozen date: 2026-08-26
 - Verification status: FROZEN BEFORE V3 PRODUCTION OUTCOMES
-- Parent design: `MSN-2026-0830/experiment_redesign/EXPERIMENT_REDESIGN.md`, E1a
+- Parent design: `EXPERIMENT_REDESIGN.md`, E1a
 
 Versions 1 and 2 are retained as auditable diagnostic runs, not accepted E1a
 results. Independent review found that V1 sampled only the current route when

@@ -1599,7 +1599,7 @@ def execution_source_paths() -> tuple[Path, ...]:
         REPOSITORY_ROOT / "phase10_semantic_gate" / "frozen_v3" / "flatten.py",
         REPOSITORY_ROOT / "phase10_semantic_gate" / "frozen_v3" / "DESIGN.md",
         REPOSITORY_ROOT
-        / "MSN-2026-0830"
+        / "."
         / "experiment_redesign"
         / "EXPERIMENT_REDESIGN.md",
     }
@@ -1734,7 +1734,7 @@ for relative, expected in SOURCE_HASHES.items():
             f"source mismatch: {{relative}} {{actual}} != {{expected}}; "
             "restore the bundled source first"
         )
-output = Path(sys.argv[1] if len(sys.argv) > 1 else "MSN-2026-0830/experiment_redesign/execution/e1a-v3-reproduction")
+output = Path(sys.argv[1] if len(sys.argv) > 1 else "runs/e1a-v3-reproduction")
 if not output.is_absolute():
     output = root / output
 subprocess.run(
@@ -1989,7 +1989,7 @@ claims.
         "set -euo pipefail\n"
         "cd \"$(git rev-parse --show-toplevel)\"\n"
         "python3 -m phase10_semantic_gate.run_e1a "
-        "--output-dir MSN-2026-0830/experiment_redesign/execution/e1a-reproduction "
+        "--output-dir runs/e1a-reproduction "
         f"--seed {args.seed} --generated-vectors {args.generated_vectors}\n"
     )
     reproducer_path = output / "reproducer.sh"

@@ -91,7 +91,7 @@
     "x_axis_label": "S\u00b2-ROV upgraded share (%)"
   },
   "generator": {
-    "path": "MSN-2026-0830/scripts/build_fig_deployment_outcomes.py",
+    "path": "experiments/analysis-scripts/build_fig_deployment_outcomes.py",
     "sha256": "2d3f9e9470751a7a1bc2b9bb98be59aa71604879efc879c50711681cebe29853"
   },
   "input_sha256": {
@@ -117,22 +117,22 @@
     "phase9_selected_unit_reanalysis/results/summary.json": "64448d3464f26202436bec12016bceb266d65d40ebd1118115a3c92f75ba716f"
   },
   "output_sha256": {
-    "MSN-2026-0830/figures/fig_deployment_outcomes_a.pdf": "50f44ca966717e15ae4b38212a5a9d75e56ac9caff4ec5d9f5c62d33c32fe3ec",
-    "MSN-2026-0830/figures/fig_deployment_outcomes_a.png": "5ce9e5a5b9928f3b646cb2bf0c1e574b9c8e0ddcd4f0f50c08ec8db21dcbd63f",
-    "MSN-2026-0830/figures/fig_deployment_outcomes_a.svg": "4136ddd00257d13f4d22f6c81f3564b369235e04f74cc4c63a263cbe9fe1d066",
-    "MSN-2026-0830/figures/fig_deployment_outcomes_a.tiff": "74f3f18279a3b5b0fbe351d01da58b8eafbf8721b2757c35646a7311245343fc",
-    "MSN-2026-0830/figures/fig_deployment_outcomes_b.pdf": "80d728c7a874bd9697be841e2e5445f6964e6d6a6bbf8483ef18333ec4e38a42",
-    "MSN-2026-0830/figures/fig_deployment_outcomes_b.png": "f009fe996b808162aa0eed6821051e288fbf3844304e9baa8318a3bc2e84abab",
-    "MSN-2026-0830/figures/fig_deployment_outcomes_b.svg": "4ebf80f1a021b182a5e1978d4256eee94551246515f19cfe9df022026c562406",
-    "MSN-2026-0830/figures/fig_deployment_outcomes_b.tiff": "d7c2d1903ac77b3d1b99b4c74e1ead3971e74fbb52dcfc1182be719c8bb8b308"
+    "figure-data/fig_deployment_outcomes_a.pdf": "50f44ca966717e15ae4b38212a5a9d75e56ac9caff4ec5d9f5c62d33c32fe3ec",
+    "figure-data/fig_deployment_outcomes_a.png": "5ce9e5a5b9928f3b646cb2bf0c1e574b9c8e0ddcd4f0f50c08ec8db21dcbd63f",
+    "figure-data/fig_deployment_outcomes_a.svg": "4136ddd00257d13f4d22f6c81f3564b369235e04f74cc4c63a263cbe9fe1d066",
+    "figure-data/fig_deployment_outcomes_a.tiff": "74f3f18279a3b5b0fbe351d01da58b8eafbf8721b2757c35646a7311245343fc",
+    "figure-data/fig_deployment_outcomes_b.pdf": "80d728c7a874bd9697be841e2e5445f6964e6d6a6bbf8483ef18333ec4e38a42",
+    "figure-data/fig_deployment_outcomes_b.png": "f009fe996b808162aa0eed6821051e288fbf3844304e9baa8318a3bc2e84abab",
+    "figure-data/fig_deployment_outcomes_b.svg": "4ebf80f1a021b182a5e1978d4256eee94551246515f19cfe9df022026c562406",
+    "figure-data/fig_deployment_outcomes_b.tiff": "d7c2d1903ac77b3d1b99b4c74e1ead3971e74fbb52dcfc1182be719c8bb8b308"
   },
   "report_sha256": {
-    "MSN-2026-0830/figures/FIG_DEPLOYMENT_OUTCOMES_PROVENANCE.md": "0e280c9066ca7c2e78aa463acfa3caf9015093ccc0a8f8d75d571e4933d46894"
+    "figure-data/FIG_DEPLOYMENT_OUTCOMES_PROVENANCE.md": "0e280c9066ca7c2e78aa463acfa3caf9015093ccc0a8f8d75d571e4933d46894"
   },
   "schema_version": "s2-rov-fig-deployment-outcomes-v6-absolute",
   "source_data_sha256": {
-    "MSN-2026-0830/figures/source_data/fig_deployment_outcomes.csv": "7a209d91e0333f630d45ceb799fbde9d94cfc6c2fc4dd4b4b1154ede05611f76",
-    "MSN-2026-0830/figures/source_data/fig_deployment_outcomes_orders.csv": "44a472033b1fd158c3e093a262e11f4c7ceda268ed06734cf6aba1ae5848063a"
+    "figure-data/source_data/fig_deployment_outcomes.csv": "7a209d91e0333f630d45ceb799fbde9d94cfc6c2fc4dd4b4b1154ede05611f76",
+    "figure-data/source_data/fig_deployment_outcomes_orders.csv": "44a472033b1fd158c3e093a262e11f4c7ceda268ed06734cf6aba1ae5848063a"
   },
   "statistics": {
     "bootstrap_replicates": 10000,
