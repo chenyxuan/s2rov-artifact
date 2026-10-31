@@ -1,0 +1,17 @@
+{
+  "completed_trials": 184,
+  "last_scenario_id": "unit0001__A1_open_competition__atk-high_degree__random__seed-05__pct-075",
+  "manifest_sha256": "1394b5aab7020cd0ae7a8cc9d8866ecc86eb06d1bb49e5e2ec85127bb1c3f277",
+  "minimum_mem_available_bytes": 57154412544,
+  "peak_aggregate_rss_bytes": 4168413184,
+  "planned_trials": 36800,
+  "remaining_trials": 36616,
+  "retry_failures_authorized": false,
+  "run_wall_seconds": 264.88525215536356,
+  "schema_version": 1,
+  "started_at_utc": "2026-08-04T15:45:10.153249Z",
+  "status": "in_progress",
+  "truncated_tail_repair": null,
+  "updated_at_utc": "2026-08-04T15:49:35.059233Z",
+  "workers": 8
+}

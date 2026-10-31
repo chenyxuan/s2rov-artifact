@@ -1,0 +1,14 @@
+{
+  "completed_trials": 0,
+  "experiment_id": "routing_model-deployment-grid-extension-v1",
+  "last_scenario_id": null,
+  "manifest_sha256": "7032b63f9b2c68b5d2dfb8ad7220e27fcfe506fa80bbd98ce2e1093c8e42b25b",
+  "mode": "formal",
+  "planned_trials": 14000,
+  "remaining_trials": 14000,
+  "schema_version": 1,
+  "started_at_utc": null,
+  "status": "planned",
+  "truncated_tail_repair": null,
+  "updated_at_utc": "2026-08-29T02:33:04.859148Z"
+}

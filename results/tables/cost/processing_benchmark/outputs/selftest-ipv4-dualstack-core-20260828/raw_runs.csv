@@ -1,0 +1,5 @@
+schedule_index,repetition,policy_size_stripes,mode,route_count,batch_size,timed_elapsed_ns,routes_per_second,preload_elapsed_ns_excluded_from_timing,peak_rss_kib,serialized_bytes,result_checksum_sha256,oracle_spot_check_count,oracle_spot_checks_pass
+0,1,64,parse_included,8192,512,322143131,25429.690133607102,0,22740,651,27a41315985deba9f8fcb86d19a32dbc38eccd8109007b3ccbf856cf7236367f,84,True
+1,1,1,parse_excluded,8192,512,298709616,27424.627669167505,25335589,22740,21,b7a19af5218226ebb2e25f8021e66efa91c495652cd5e8f92d605c9860043707,68,True
+2,1,1,parse_included,8192,512,322477273,25403.340594485864,0,22740,21,b7a19af5218226ebb2e25f8021e66efa91c495652cd5e8f92d605c9860043707,68,True
+3,1,64,parse_excluded,8192,512,297382314,27547.03159650577,26006743,22740,651,27a41315985deba9f8fcb86d19a32dbc38eccd8109007b3ccbf856cf7236367f,84,True

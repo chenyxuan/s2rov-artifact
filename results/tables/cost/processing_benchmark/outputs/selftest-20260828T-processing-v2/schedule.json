@@ -1,0 +1,30 @@
+[
+  {
+    "mode": "parse_included",
+    "policy_size_stripes": 64,
+    "raw_json": "<repo>/experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/raw/00-size-64-parse_included-rep-1.json",
+    "repetition": 1,
+    "schedule_index": 0
+  },
+  {
+    "mode": "parse_excluded",
+    "policy_size_stripes": 1,
+    "raw_json": "<repo>/experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/raw/01-size-1-parse_excluded-rep-1.json",
+    "repetition": 1,
+    "schedule_index": 1
+  },
+  {
+    "mode": "parse_included",
+    "policy_size_stripes": 1,
+    "raw_json": "<repo>/experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/raw/02-size-1-parse_included-rep-1.json",
+    "repetition": 1,
+    "schedule_index": 2
+  },
+  {
+    "mode": "parse_excluded",
+    "policy_size_stripes": 64,
+    "raw_json": "<repo>/experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/raw/03-size-64-parse_excluded-rep-1.json",
+    "repetition": 1,
+    "schedule_index": 3
+  }
+]

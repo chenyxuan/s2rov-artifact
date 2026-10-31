@@ -1,0 +1,11 @@
+{
+  "completed_trials": 210,
+  "manifest_sha256": "e75b5b4a844a27646efddd99fecc2dfc457342a6f7d44f16176a750a28303bee",
+  "planned_trials": 210,
+  "remaining_trials": 0,
+  "run_wall_seconds": 319.9754364602268,
+  "schema_version": 1,
+  "status": "complete",
+  "updated_at_utc": "2026-08-29T00:38:54.194710Z",
+  "workers": 8
+}

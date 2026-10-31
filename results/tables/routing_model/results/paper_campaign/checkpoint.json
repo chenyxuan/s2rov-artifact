@@ -1,0 +1,17 @@
+{
+  "completed_trials": 36800,
+  "last_scenario_id": "unit0200__A1_open_competition__atk-edge__random__seed-05__pct-075",
+  "manifest_sha256": "1394b5aab7020cd0ae7a8cc9d8866ecc86eb06d1bb49e5e2ec85127bb1c3f277",
+  "minimum_mem_available_bytes": 51169873920,
+  "peak_aggregate_rss_bytes": 8231460864,
+  "planned_trials": 36800,
+  "remaining_trials": 0,
+  "retry_failures_authorized": false,
+  "run_wall_seconds": 29721.977690398693,
+  "schema_version": 1,
+  "started_at_utc": "2026-08-04T15:53:28.565108Z",
+  "status": "complete",
+  "truncated_tail_repair": null,
+  "updated_at_utc": "2026-08-05T00:08:50.563948Z",
+  "workers": 16
+}

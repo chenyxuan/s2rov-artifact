@@ -1,0 +1,5 @@
+schedule_index,worker_pid,repetition,policy_size_stripes,mode,address_family,route_count,batch_size,timed_elapsed_ns,routes_per_second,preload_elapsed_ns_excluded_from_timing,peak_rss_kib,cpu_affinity,serialized_bytes,result_checksum_sha256,oracle_spot_check_count,oracle_spot_checks_pass
+0,4052219,1,64,parse_included,IPv6,8192,512,496582414,16496.758179599972,0,22940,0,834,02ec2b64e9afc5ce9d2985eeaaf7e5ba0f51cfac8bc6eee0205489b6c3864499,84,True
+1,4052221,1,1,parse_excluded,IPv6,8192,512,506015737,16189.219822623816,26741109,22940,0,37,4a79e17a6a456885b767cf4a6f9c8207a529f9e77bb989d222efe105eb732887,68,True
+2,4052231,1,1,parse_included,IPv6,8192,512,515080128,15904.321589358617,0,22940,0,37,4a79e17a6a456885b767cf4a6f9c8207a529f9e77bb989d222efe105eb732887,68,True
+3,4052239,1,64,parse_excluded,IPv6,8192,512,478230723,17129.80702831173,26837490,22940,0,834,02ec2b64e9afc5ce9d2985eeaaf7e5ba0f51cfac8bc6eee0205489b6c3864499,84,True

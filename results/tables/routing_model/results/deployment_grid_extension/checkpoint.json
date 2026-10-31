@@ -1,0 +1,19 @@
+{
+  "completed_trials": 14000,
+  "experiment_id": "routing_model-deployment-grid-extension-v1",
+  "last_scenario_id": "unit0200__D1_open_delegate_only__atk-none__random__seed-05__pct-090",
+  "manifest_sha256": "cb5947b3574b0b95d5d1c2f7272b7fa392811741c34af7044822e7e419691258",
+  "minimum_mem_available_bytes": 53185212416,
+  "mode": "formal",
+  "peak_aggregate_rss_bytes": 8046104576,
+  "planned_trials": 14000,
+  "remaining_trials": 0,
+  "retry_failures_authorized": false,
+  "run_wall_seconds": 11763.411100827157,
+  "schema_version": 1,
+  "started_at_utc": "2026-08-29T02:38:10.253039Z",
+  "status": "complete",
+  "truncated_tail_repair": null,
+  "updated_at_utc": "2026-08-29T05:54:13.671887Z",
+  "workers": 16
+}

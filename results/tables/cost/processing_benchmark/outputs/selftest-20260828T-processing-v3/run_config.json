@@ -1,0 +1,25 @@
+{
+  "batch_size": 512,
+  "classifier": "<repo>/implementation/s2rov_codec/scripts/utils/s2rov.py",
+  "classifier_sha256": "4aa40fb8736de32d28041ba3b87260e96cbc91ea2e8ed20d8550d17706dff7e8",
+  "cpu": 0,
+  "created_utc": "2026-08-28T15:52:33Z",
+  "input": "<repo>/experiments/candidates/allocation_tree/visibility_experiment/input/derived/rrc00_20260624_origins_fast.csv",
+  "limit": 8192,
+  "output": "<repo>/experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3",
+  "platform": "Linux-6.8.0-90-generic-aarch64-with-glibc2.39",
+  "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+  "repetitions": 1,
+  "run_id": "selftest-20260828T-processing-v3",
+  "schema_version": 1,
+  "script": "<repo>/experiments/cost/processing_benchmark/run_processing_benchmark.py",
+  "script_sha256": "53246ca76fccbe48ff3d4579e8cd12ffcb72a4f861b3b469cab2a9ae81ca19a1",
+  "seed": 20260828,
+  "sizes": [
+    1,
+    64
+  ],
+  "source_git_commit": "4ffaaedf25b70760f9adf11825bb2c15463f15d5",
+  "source_worktree_dirty": true,
+  "warmup_routes": 256
+}

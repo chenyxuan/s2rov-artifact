@@ -18,8 +18,9 @@ are under `results/tables/`, keeping the path each had when written:
 - `results/tables/routing_model/results/paper_campaign/analysis/raw_cell_summary.csv`
 - `results/tables/attack_reachability/results/analysis/summary.json`
 
-`holder_contrasts.jsonl` is per-trial and excluded by size, as
-`EXCLUDED-RAW-DATA.md` records.
+The routing-model `holder_contrasts.jsonl` is 83 MB of per-trial rows and is
+not shipped; `EXCLUDED-RAW-DATA.md` names the command that rebuilds it. The
+script accepts either the run output or its archived copy.
 
 The output records the SHA-256 digest of each input. Frozen routing-model and attack-reachability
 artifacts are read-only.

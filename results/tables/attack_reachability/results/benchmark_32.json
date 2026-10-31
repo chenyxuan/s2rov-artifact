@@ -1,0 +1,43 @@
+{
+  "approved_for_full_run": true,
+  "benchmark_report_sha256": "9bdb5dabb6bc4db1ea10b35d307bb960866419053895584a161cf02162671309",
+  "created_at_utc": "2026-08-23T04:42:20.321770Z",
+  "gate_checks": {
+    "aggregate_rss_at_most_24_gib": true,
+    "all_32_first_attempt_trials_succeeded": true,
+    "mem_available_at_least_16_gib": true,
+    "resource_monitor_healthy": true,
+    "single_trial_time_at_most_60_seconds": true,
+    "trial_peak_rss_at_most_1_5_gib": true,
+    "worker_graph_peak_rss_at_most_1_5_gib": true
+  },
+  "gates": {
+    "aggregate_rss_limit_bytes": 25769803776,
+    "complete_partition_required": true,
+    "default_workers": 16,
+    "graph_build_location": "worker initializer",
+    "graph_reused_within_worker": true,
+    "incremental_zero_equivalence": true,
+    "minimum_mem_available_bytes": 17179869184,
+    "multiprocessing_start_method": "spawn",
+    "parent_single_jsonl_writer": true,
+    "per_worker_peak_rss_limit_bytes": 1610612736,
+    "required_workers": 16,
+    "silent_retries": 0,
+    "single_trial_limit_seconds": 60.0
+  },
+  "manifest_sha256": "af0041cf390d22266a65033ada7ad97fc93a713b61cb0575d9e82d67acae7d26",
+  "max_trial_peak_rss_bytes": 517124096,
+  "max_trial_seconds": 20.183065608143806,
+  "max_worker_graph_build_peak_rss_bytes": 483532800,
+  "mean_trial_seconds": 14.820992686902173,
+  "minimum_mem_available_bytes": 54143463424,
+  "peak_aggregate_rss_bytes": 8144084992,
+  "run_wall_seconds": 57.07440970093012,
+  "scenario_ids_sha256": "d53101949515273ec2c7010ca720993c63568e77cee279a3e46161b5cdc75f1b",
+  "schema_version": 1,
+  "status": "passed",
+  "trials": 32,
+  "version_label": "attack_reachability-sibling-endpoint-v1",
+  "workers": 16
+}

@@ -1,0 +1,13 @@
+{
+ "vrfId": 0,
+ "vrfName": "default",
+ "tableVersion": 28,
+ "routerId": "172.31.0.10",
+ "defaultLocPrf": 100,
+ "localAS": 65000,
+ "routes": { "10.0.0.0/16": [{"rpkiValid":true,"valid":true,"bestpath":true,"selectionReason":"First path received","pathFrom":"external","prefix":"10.0.0.0","prefixLen":16,"network":"10.0.0.0/16","version":24,"metric":0,"locPrf":300,"weight":0,"peerId":"172.31.0.11","path":"64501","origin":"IGP","nexthops":[{"ip":"172.31.0.11","hostname":"holder","afi":"ipv4","used":true}]}]
+,"10.0.1.0/24": [{"rpkiInvalid":true,"valid":true,"bestpath":true,"selectionReason":"First path received","pathFrom":"external","prefix":"10.0.1.0","prefixLen":24,"network":"10.0.1.0/24","version":25,"metric":0,"locPrf":300,"weight":0,"peerId":"172.31.0.12","path":"8075","origin":"IGP","nexthops":[{"ip":"172.31.0.12","hostname":"customer","afi":"ipv4","used":true}]}]
+,"10.0.2.0/24": [{"rpkiInvalid":true,"valid":true,"bestpath":true,"selectionReason":"First path received","pathFrom":"external","prefix":"10.0.2.0","prefixLen":24,"network":"10.0.2.0/24","version":26,"metric":0,"locPrf":200,"weight":0,"peerId":"172.31.0.13","path":"18403","origin":"IGP","nexthops":[{"ip":"172.31.0.13","hostname":"delegate","afi":"ipv4","used":true}]}]
+,"10.0.3.0/24": [{"rpkiInvalid":true,"valid":true,"bestpath":true,"selectionReason":"First path received","pathFrom":"external","prefix":"10.0.3.0","prefixLen":24,"network":"10.0.3.0/24","version":27,"metric":0,"locPrf":200,"weight":0,"peerId":"172.31.0.14","path":"15169","origin":"IGP","nexthops":[{"ip":"172.31.0.14","hostname":"public-attacker","afi":"ipv4","used":true}]}]
+,"192.0.2.0/24": [{"rpkiNotFound":true,"valid":true,"bestpath":true,"selectionReason":"First path received","pathFrom":"external","prefix":"192.0.2.0","prefixLen":24,"network":"192.0.2.0/24","version":28,"metric":0,"locPrf":100,"weight":0,"peerId":"172.31.0.17","path":"64496","origin":"IGP","nexthops":[{"ip":"172.31.0.17","hostname":"unrelated","afi":"ipv4","used":true}]}]
+ } , "totalRoutes": 5, "totalPaths": 5 } 

@@ -1,0 +1,462 @@
+{
+  "base_prefix": "0.0.0.0/0",
+  "construction": "one open /0 base plus the first policy_size-1 unique non-/0 IPv4 prefixes in source order, each closed and naming its first observed origin",
+  "holder_asn": 1299,
+  "max_length": 32,
+  "policy_size_stripes": 64,
+  "roundtrip_identical": true,
+  "schema_version": 1,
+  "serialized_bytes": 651,
+  "serialized_path": "<repo>/experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/policies/policy-64.bin",
+  "serialized_sha256": "4554324df783620dec2edab9e2489b1bdaf6a6864a554710a4420da2c10bd33b",
+  "stripes": [
+    {
+      "is_open": true,
+      "origins": [
+        1299
+      ],
+      "prefix": "0.0.0.0/0"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        13335
+      ],
+      "prefix": "1.0.0.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.128.0/17"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.128.0/18"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.128.0/19"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.128.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.129.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.130.0/23"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.132.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.133.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.134.0/23"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.137.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.138.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.139.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.140.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.141.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.142.0/23"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.144.0/20"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        2519
+      ],
+      "prefix": "1.0.16.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.160.0/19"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.160.0/22"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.164.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.165.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.166.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.167.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.168.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.169.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.170.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.171.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.172.0/22"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.176.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.177.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.178.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.179.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.180.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.182.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.185.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.187.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.189.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.190.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.191.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.192.0/18"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.192.0/19"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.192.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.193.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.194.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.195.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.196.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23974
+      ],
+      "prefix": "1.0.197.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.198.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.199.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.200.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.202.0/23"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.204.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.205.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.206.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.207.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.208.0/23"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.210.0/23"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.212.0/23"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.214.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.215.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.216.0/24"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        23969
+      ],
+      "prefix": "1.0.217.0/24"
+    }
+  ]
+}

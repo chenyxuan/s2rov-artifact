@@ -1,0 +1,427 @@
+{
+  "checks": [
+    {
+      "expected": "Delegated",
+      "origin": 133612,
+      "prefix": "101.119.192.0/20"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 4811,
+      "prefix": "101.227.22.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 131591,
+      "prefix": "101.138.192.0/18"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 137687,
+      "prefix": "1.194.224.0/20"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 4812,
+      "prefix": "101.95.144.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 45271,
+      "prefix": "1.187.219.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 4538,
+      "prefix": "1.51.48.0/21"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 45528,
+      "prefix": "1.23.183.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 9808,
+      "prefix": "101.36.240.0/20"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 131644,
+      "prefix": "101.102.103.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 4775,
+      "prefix": "1.37.86.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 18403,
+      "prefix": "1.55.22.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 4809,
+      "prefix": "101.230.63.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 4811,
+      "prefix": "101.227.64.0/23"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 23724,
+      "prefix": "101.254.196.0/22"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 24158,
+      "prefix": "101.9.24.0/22"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 23724,
+      "prefix": "101.236.248.0/21"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 9583,
+      "prefix": "1.7.140.0/22"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 24378,
+      "prefix": "1.46.0.0/17"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 133612,
+      "prefix": "101.115.228.0/22"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 38407,
+      "prefix": "1.242.5.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 45528,
+      "prefix": "1.22.193.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 2519,
+      "prefix": "1.1.119.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 9605,
+      "prefix": "1.74.64.0/18"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 38390,
+      "prefix": "1.236.2.0/28"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 9676,
+      "prefix": "101.0.128.0/18"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 18403,
+      "prefix": "1.53.56.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 150436,
+      "prefix": "101.47.85.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 9583,
+      "prefix": "1.6.104.0/22"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 45528,
+      "prefix": "1.22.221.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 23969,
+      "prefix": "1.1.137.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 133612,
+      "prefix": "101.115.160.0/20"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 9313,
+      "prefix": "1.178.175.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 38099,
+      "prefix": "1.201.0.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 23969,
+      "prefix": "1.10.170.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 9318,
+      "prefix": "1.232.100.0/23"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 9583,
+      "prefix": "1.7.47.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 24158,
+      "prefix": "101.12.200.0/22"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 38661,
+      "prefix": "101.79.240.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 38511,
+      "prefix": "101.255.43.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 9957,
+      "prefix": "1.201.42.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 4811,
+      "prefix": "101.89.48.0/22"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 38266,
+      "prefix": "1.38.127.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 54994,
+      "prefix": "101.79.157.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 7224,
+      "prefix": "1.178.205.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 55592,
+      "prefix": "101.55.6.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 23969,
+      "prefix": "1.4.215.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 18403,
+      "prefix": "1.52.19.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 38511,
+      "prefix": "101.255.131.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 4812,
+      "prefix": "101.80.0.0/13"
+    },
+    {
+      "expected": "Explicit",
+      "origin": 23969,
+      "prefix": "1.0.191.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 23969,
+      "prefix": "101.109.96.0/19"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 4775,
+      "prefix": "1.37.91.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 38511,
+      "prefix": "101.255.19.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 701,
+      "prefix": "100.38.0.0/16"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 18403,
+      "prefix": "1.53.76.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 23969,
+      "prefix": "101.109.141.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 56300,
+      "prefix": "101.100.185.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 45528,
+      "prefix": "1.23.68.0/24"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 9723,
+      "prefix": "1.179.96.0/22"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 53813,
+      "prefix": "101.2.216.0/23"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 9365,
+      "prefix": "101.111.0.0/16"
+    },
+    {
+      "expected": "Explicit",
+      "origin": 23969,
+      "prefix": "1.0.202.0/23"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 59127,
+      "prefix": "101.203.0.0/19"
+    },
+    {
+      "expected": "Explicit",
+      "origin": 13335,
+      "prefix": "1.0.0.0/24"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 15169,
+      "prefix": "1.0.0.0/24"
+    },
+    {
+      "expected": "Explicit",
+      "origin": 23969,
+      "prefix": "1.0.132.0/24"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 15169,
+      "prefix": "1.0.132.0/24"
+    },
+    {
+      "expected": "Explicit",
+      "origin": 23969,
+      "prefix": "1.0.141.0/24"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 15169,
+      "prefix": "1.0.141.0/24"
+    },
+    {
+      "expected": "Explicit",
+      "origin": 23969,
+      "prefix": "1.0.165.0/24"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 15169,
+      "prefix": "1.0.165.0/24"
+    },
+    {
+      "expected": "Explicit",
+      "origin": 23969,
+      "prefix": "1.0.172.0/22"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 15169,
+      "prefix": "1.0.172.0/22"
+    },
+    {
+      "expected": "Explicit",
+      "origin": 23969,
+      "prefix": "1.0.185.0/24"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 15169,
+      "prefix": "1.0.185.0/24"
+    },
+    {
+      "expected": "Explicit",
+      "origin": 23969,
+      "prefix": "1.0.192.0/24"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 15169,
+      "prefix": "1.0.192.0/24"
+    },
+    {
+      "expected": "Explicit",
+      "origin": 23969,
+      "prefix": "1.0.199.0/24"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 15169,
+      "prefix": "1.0.199.0/24"
+    },
+    {
+      "expected": "Explicit",
+      "origin": 1299,
+      "prefix": "0.0.0.0/0"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 15169,
+      "prefix": "0.0.0.0/0"
+    },
+    {
+      "expected": "Delegated",
+      "origin": 15169,
+      "prefix": "203.0.113.0/24"
+    },
+    {
+      "expected": "Invalid",
+      "origin": 64513,
+      "prefix": "203.0.113.0/24"
+    }
+  ],
+  "oracle": "independent linear most-specific-stripe scan",
+  "policy_size_stripes": 64,
+  "schema_version": 1
+}

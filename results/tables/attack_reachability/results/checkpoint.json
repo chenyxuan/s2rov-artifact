@@ -1,0 +1,18 @@
+{
+  "completed_before_invocation": 32,
+  "completed_trials": 600,
+  "last_scenario_id": "unit0200__A1_open_sibling__pct-100",
+  "manifest_sha256": "af0041cf390d22266a65033ada7ad97fc93a713b61cb0575d9e82d67acae7d26",
+  "minimum_mem_available_bytes": 53952749568,
+  "new_trials_completed": 568,
+  "peak_aggregate_rss_bytes": 8217219072,
+  "planned_trials": 600,
+  "remaining_trials": 0,
+  "run_wall_seconds_this_invocation": 575.7655109278858,
+  "schema_version": 1,
+  "started_at_utc": "2026-08-23T04:42:40.212690Z",
+  "status": "complete",
+  "updated_at_utc": "2026-08-23T04:52:15.978234Z",
+  "version_label": "attack_reachability-sibling-endpoint-v1",
+  "workers": 16
+}

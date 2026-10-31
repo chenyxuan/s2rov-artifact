@@ -15,20 +15,25 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = Path(__file__).resolve().parent / "results"
-ROUTING_MODEL_CONTRASTS = (
-    ROOT
-    / "experiments/routing_model/results/paper_campaign/analysis/holder_contrasts.jsonl"
+def _input(relative: str) -> Path:
+    """Accept the run output in place or its archived copy."""
+    local = ROOT / relative
+    if local.exists():
+        return local
+    return ROOT / "results/tables" / relative.split("/", 1)[1]
+
+
+ROUTING_MODEL_CONTRASTS = _input(
+    "experiments/routing_model/results/paper_campaign/analysis/holder_contrasts.jsonl"
 )
-ROUTING_MODEL_CELLS = (
-    ROOT
-    / "experiments/routing_model/results/paper_campaign/analysis/raw_cell_summary.csv"
+ROUTING_MODEL_CELLS = _input(
+    "experiments/routing_model/results/paper_campaign/analysis/raw_cell_summary.csv"
 )
-ATTACK_REACHABILITY_CONTRASTS = (
-    ROOT
-    / "experiments/attack_reachability/results/analysis/holder_contrasts.jsonl"
+ATTACK_REACHABILITY_CONTRASTS = _input(
+    "experiments/attack_reachability/results/analysis/holder_contrasts.jsonl"
 )
-ATTACK_REACHABILITY_SUMMARY = (
-    ROOT / "experiments/attack_reachability/results/analysis/summary.json"
+ATTACK_REACHABILITY_SUMMARY = _input(
+    "experiments/attack_reachability/results/analysis/summary.json"
 )
 REPLICATES = 10_000
 ROUTING_MODEL_SEED = 20260804

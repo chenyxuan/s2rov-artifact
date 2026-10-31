@@ -1,0 +1,36 @@
+{
+  "address_family": "IPv6",
+  "batch_size": 4096,
+  "classifier": "<repo>/implementation/s2rov_codec/scripts/utils/s2rov.py",
+  "classifier_sha256": "fb0e251573979653a54ea79b1b2c3398bf30c4c99aed2a66c8edda458c544395",
+  "cpu": 31,
+  "created_utc": "2026-08-29T00:45:33Z",
+  "input": "<repo>/experiments/candidates/allocation_tree/visibility_experiment/input/derived/rrc00_20260624_origins_fast.csv",
+  "legacy_helper": "<repo>/experiments/cost/processing_benchmark/run_processing_benchmark.py",
+  "legacy_helper_sha256": "53246ca76fccbe48ff3d4579e8cd12ffcb72a4f861b3b469cab2a9ae81ca19a1",
+  "limit": null,
+  "output": "<repo>/experiments/cost/processing_benchmark/outputs/processing-ipv6-dualstack-20260829",
+  "platform": "Linux-6.8.0-90-generic-aarch64-with-glibc2.39",
+  "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+  "repetitions": 3,
+  "run_id": "processing-ipv6-dualstack-20260829",
+  "schema_version": 1,
+  "script": "<repo>/experiments/cost/processing_benchmark/run_ipv6_processing_benchmark.py",
+  "script_sha256": "86d593cbb87f4cd8127421611cef2c715d3a6d578d1f91cbf030b3fc404b390c",
+  "seed": 20260828,
+  "sizes": [
+    1,
+    64,
+    256,
+    1024,
+    4097
+  ],
+  "source_git_commit": "4ffaaedf25b70760f9adf11825bb2c15463f15d5",
+  "source_worktree_dirty": true,
+  "timing_modes": [
+    "parse_excluded",
+    "parse_included"
+  ],
+  "warmup_routes": 8192,
+  "worker_timeout_seconds": 1800
+}

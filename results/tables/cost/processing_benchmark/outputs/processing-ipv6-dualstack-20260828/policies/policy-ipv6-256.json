@@ -1,0 +1,1807 @@
+{
+  "address_family": "IPv6",
+  "base_prefix": "::/0",
+  "construction": "one open IPv6 /0 base plus the first policy_size-1 unique non-/0 IPv6 prefixes in source order, each closed and naming its first observed scalar origin",
+  "holder_asn": 174,
+  "max_length": 128,
+  "policy_size_stripes": 256,
+  "roundtrip_identical": true,
+  "schema_version": 1,
+  "serialized_bytes": 3302,
+  "serialized_path": "<repo>/experiments/cost/processing_benchmark/outputs/processing-ipv6-dualstack-20260828/policies/policy-ipv6-256.bin",
+  "serialized_sha256": "932cff4fc977c170a1d569fd6b0982d59c31279eea613b6ecf95732240069250",
+  "stripes": [
+    {
+      "is_open": true,
+      "origins": [
+        174
+      ],
+      "prefix": "::/0"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        174
+      ],
+      "prefix": "100::1/128"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        29632
+      ],
+      "prefix": "2000::/6"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        27661
+      ],
+      "prefix": "2001:1201:10::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        28498
+      ],
+      "prefix": "2001:1201::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        270172
+      ],
+      "prefix": "2001:1203:1000::/36"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        270172
+      ],
+      "prefix": "2001:1203::/36"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        270172
+      ],
+      "prefix": "2001:1203:a000::/36"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        270172
+      ],
+      "prefix": "2001:1203:a100::/40"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        270172
+      ],
+      "prefix": "2001:1203:a200::/40"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        270172
+      ],
+      "prefix": "2001:1203:a300::/40"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        270172
+      ],
+      "prefix": "2001:1203:a400::/40"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        270172
+      ],
+      "prefix": "2001:1203:a500::/40"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        270172
+      ],
+      "prefix": "2001:1203:a600::/40"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        270172
+      ],
+      "prefix": "2001:1203:a700::/40"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        28461
+      ],
+      "prefix": "2001:1204::/32"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        272385
+      ],
+      "prefix": "2001:1205::/32"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        28462
+      ],
+      "prefix": "2001:1206::/32"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        28459
+      ],
+      "prefix": "2001:1207:d000::/36"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        28459
+      ],
+      "prefix": "2001:1207:dfff::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        28459
+      ],
+      "prefix": "2001:1207:e000::/36"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        28459
+      ],
+      "prefix": "2001:1207:f000::/36"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        28459
+      ],
+      "prefix": "2001:1207:ffff::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        8151
+      ],
+      "prefix": "2001:1208::/32"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        2549
+      ],
+      "prefix": "2001:1210:1000::/36"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        2549
+      ],
+      "prefix": "2001:1210:3000::/36"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        2549
+      ],
+      "prefix": "2001:1210:5000::/36"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        2549
+      ],
+      "prefix": "2001:1210::/32"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        2549
+      ],
+      "prefix": "2001:1210::/36"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:101::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:5002::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:5004::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:5005::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6001::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6002::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6003::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6004::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6005::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6006::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6007::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6008::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6009::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:600a::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:600c::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:600d::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:600f::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6010::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6012::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6013::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6014::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6015::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6016::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6017::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6018::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6019::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:601a::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:601b::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:601c::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:601d::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:601e::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:601f::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6020::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6021::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6022::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6023::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6024::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6025::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6026::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6027::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6028::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:602a::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:602c::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:602d::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:602f::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6030::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6031::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6032::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6034::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6035::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6036::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6037::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6039::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:603b::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:603c::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:603d::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:603f::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6040::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6041::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6044::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6045::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6046::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6047::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:604b::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:604c::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:604d::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6050::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6051::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6054::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6055::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6056::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6058::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6059::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:605b::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:605d::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6061::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:6062::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:60b1::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:60b2::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:60b4::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:60b5::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:60b6::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:60b8::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:60b9::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:60bb::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:60bd::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:60be::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:60bf::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218:60c0::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        278
+      ],
+      "prefix": "2001:1218::/32"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        272403
+      ],
+      "prefix": "2001:1222::/32"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        273263
+      ],
+      "prefix": "2001:1223::/32"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        28467
+      ],
+      "prefix": "2001:1225::/32"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        273280
+      ],
+      "prefix": "2001:1226:1000::/40"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        273280
+      ],
+      "prefix": "2001:1226:1100::/40"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        273280
+      ],
+      "prefix": "2001:1226:1200::/40"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        273280
+      ],
+      "prefix": "2001:1226:f000::/40"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        273280
+      ],
+      "prefix": "2001:1226:f100::/40"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        273283
+      ],
+      "prefix": "2001:1227::/32"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        18592
+      ],
+      "prefix": "2001:1228::/32"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        273285
+      ],
+      "prefix": "2001:1229:100::/40"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        273285
+      ],
+      "prefix": "2001:1229:200::/40"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        273285
+      ],
+      "prefix": "2001:1229::/40"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        273286
+      ],
+      "prefix": "2001:122a::/32"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        273288
+      ],
+      "prefix": "2001:122b::/32"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        18592
+      ],
+      "prefix": "2001:122c::/32"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        32098
+      ],
+      "prefix": "2001:1238::/32"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:1000::/42"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:1::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2100::/42"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:213e::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2140::/42"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2175::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2180::/42"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:21c0::/42"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2200::/42"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2210::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2240::/42"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2280::/42"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:228e::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:22a3::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:22a5::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:22af::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:22be::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:22c0::/42"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2300::/42"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:231f::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2340::/42"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2380::/42"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:23c0::/42"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2400::/42"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2400::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2401::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2402::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2404::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2405::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2406::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2407::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2408::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:240a::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:240b::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:240c::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:240d::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:240e::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2410::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2413::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2414::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2415::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2416::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2417::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2418::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2419::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:241a::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:241b::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:241c::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:241d::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:241e::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:241f::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2420::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2421::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2423::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2425::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2426::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2427::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2428::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2429::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:242b::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:242c::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:242d::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:242e::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:242f::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2431::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2433::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2434::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2435::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2436::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2437::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2439::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:243b::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:243c::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:243d::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2440::/42"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2446::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2448::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2449::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:244a::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:244c::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:244d::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:244e::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2450::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2451::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2452::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2453::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2456::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2457::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:245a::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:245b::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:245c::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:245d::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:245e::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:245f::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2461::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2463::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2464::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2465::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2466::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2467::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2468::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2469::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:246a::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:246b::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:246c::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:246d::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:246e::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:246f::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2470::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2471::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2472::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2474::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2475::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2477::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2478::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2479::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:247a::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:247b::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:247e::/48"
+    },
+    {
+      "is_open": false,
+      "origins": [
+        11172
+      ],
+      "prefix": "2001:1248:2480::/42"
+    }
+  ]
+}
