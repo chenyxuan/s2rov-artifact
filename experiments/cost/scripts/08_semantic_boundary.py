@@ -22,20 +22,20 @@ import pandas as pd
 
 
 ROOT = Path(__file__).resolve().parents[2]
-PHASE_DIR = Path(__file__).resolve().parents[1]
-PHASE4_SCRIPTS = ROOT / "phase4_encoding" / "scripts"
-sys.path.insert(0, str(PHASE4_SCRIPTS))
+HERE_DIR = Path(__file__).resolve().parents[1]
+DAROA_CODEC_SCRIPTS = ROOT / "implementation" / "daroa_codec" / "scripts"
+sys.path.insert(0, str(DAROA_CODEC_SCRIPTS))
 
 from utils.daroa import DAROA, Stripe, ValidationState
 
 
-TABLE_DIR = PHASE_DIR / "outputs" / "tables"
+TABLE_DIR = HERE_DIR / "outputs" / "tables"
 TABLE_DIR.mkdir(parents=True, exist_ok=True)
-PHASE1_TABLE_DIR = (
-    ROOT / "phase1_empirical" / "ndss26_analysis" / "outputs" / "tables"
+CANDIDATES_TABLE_DIR = (
+    ROOT / "experiments" / "candidates" / "ndss26_analysis" / "outputs" / "tables"
 )
-PHASE1_PARQUET = PHASE1_TABLE_DIR / "data_processed.parquet"
-PHASE1_CSV = PHASE1_TABLE_DIR / "data_processed.csv.gz"
+CANDIDATES_PARQUET = CANDIDATES_TABLE_DIR / "data_processed.parquet"
+CANDIDATES_CSV = CANDIDATES_TABLE_DIR / "data_processed.csv.gz"
 RELATIONSHIP_COLUMNS = [
     "customer",
     "org_transit",
@@ -46,18 +46,18 @@ RELATIONSHIP_COLUMNS = [
 PUBLIC_CONTROL_ASN = 15169
 
 
-def load_phase1_dataframe() -> pd.DataFrame:
-    if PHASE1_CSV.exists():
-        return pd.read_csv(PHASE1_CSV)
-    if PHASE1_PARQUET.exists():
+def load_candidates_dataframe() -> pd.DataFrame:
+    if CANDIDATES_CSV.exists():
+        return pd.read_csv(CANDIDATES_CSV)
+    if CANDIDATES_PARQUET.exists():
         try:
-            return pd.read_parquet(PHASE1_PARQUET)
+            return pd.read_parquet(CANDIDATES_PARQUET)
         except ImportError as exc:
             raise RuntimeError(
-                "Only a Parquet cache is available; rerun the Phase 1 loader "
+                "Only a Parquet cache is available; rerun the candidate-selection loader "
                 "to create data_processed.csv.gz"
             ) from exc
-    raise FileNotFoundError(f"no processed Phase 1 table under {PHASE1_TABLE_DIR}")
+    raise FileNotFoundError(f"no processed candidate-selection table under {CANDIDATES_TABLE_DIR}")
 
 
 def constructed_policy(route_prefix: str, holder_asn: int, open_base: bool) -> DAROA:
@@ -74,7 +74,7 @@ def constructed_policy(route_prefix: str, holder_asn: int, open_base: bool) -> D
 
 
 def main() -> None:
-    frame = load_phase1_dataframe()
+    frame = load_candidates_dataframe()
     label_mask = frame[RELATIONSHIP_COLUMNS].gt(0).any(axis=1)
     differing = (
         label_mask

@@ -1,0 +1,115 @@
+{
+  "audit_version": "routing_model-outcome-partition-audit-v1",
+  "cells": {
+    "a1_open_uniform_competition_100": {
+      "design_weight_sum": 691,
+      "holders": 200,
+      "partition": {
+        "attacker": 0.4123372065859168,
+        "delegate": 0.580296192923225,
+        "disconnected": 0.007366299575621672,
+        "holder_fallback": 3.0091523649535874e-07,
+        "loop": 0
+      },
+      "partition_sum": 1,
+      "selector": {
+        "attacker_class": "uniform",
+        "deployment_percent_target": 100,
+        "deployment_strategy": "shared",
+        "lane": "A1_open_competition"
+      }
+    },
+    "b1_uniform_competition": {
+      "design_weight_sum": 691,
+      "holders": 200,
+      "partition": {
+        "attacker": 0.32354827135504316,
+        "delegate": 0.5937378713170195,
+        "disconnected": 0.010511889151648739,
+        "holder_fallback": 0.07220196817628863,
+        "loop": 0
+      },
+      "partition_sum": 1,
+      "selector": {
+        "attacker_class": "uniform",
+        "deployment_percent_target": 0,
+        "deployment_strategy": "reference",
+        "lane": "B1_competition"
+      }
+    },
+    "b2_exact_delegate_only": {
+      "design_weight_sum": 691,
+      "holders": 200,
+      "partition": {
+        "attacker": 0,
+        "delegate": 0.9923127330189,
+        "disconnected": 0.007686966065863542,
+        "holder_fallback": 3.0091523649535874e-07,
+        "loop": 0
+      },
+      "partition_sum": 1,
+      "selector": {
+        "attacker_class": null,
+        "deployment_percent_target": 0,
+        "deployment_strategy": "reference",
+        "lane": "B2_exact_delegate_only"
+      }
+    },
+    "b2_exact_uniform_competition": {
+      "design_weight_sum": 691,
+      "holders": 200,
+      "partition": {
+        "attacker": 0.11656181128842952,
+        "delegate": 0.8758678129082507,
+        "disconnected": 0.0075700748880833625,
+        "holder_fallback": 3.0091523649535874e-07,
+        "loop": 0
+      },
+      "partition_sum": 1,
+      "selector": {
+        "attacker_class": "uniform",
+        "deployment_percent_target": 0,
+        "deployment_strategy": "reference",
+        "lane": "B2_exact_competition"
+      }
+    },
+    "d1_open_delegate_only_100": {
+      "design_weight_sum": 691,
+      "holders": 200,
+      "partition": {
+        "attacker": 0,
+        "delegate": 0.9923127330189,
+        "disconnected": 0.007686966065863542,
+        "holder_fallback": 3.0091523649535874e-07,
+        "loop": 0
+      },
+      "partition_sum": 1,
+      "selector": {
+        "attacker_class": null,
+        "deployment_percent_target": 100,
+        "deployment_strategy": "shared",
+        "lane": "D1_open_delegate_only"
+      }
+    }
+  },
+  "contrasts_percentage_points": {
+    "a1_100_minus_b1_uniform_attacker_exposure": 8.878893523087367,
+    "a1_100_minus_b2_exact_uniform_attacker": 29.577539529748734
+  },
+  "inputs_sha256": {
+    "manifest_file": "a674b87afd90716521f19673c4ddbd1153c1b911ec5021a99e0eabe579bcbeae",
+    "manifest_frozen_canonical": "1394b5aab7020cd0ae7a8cc9d8866ecc86eb06d1bb49e5e2ec85127bb1c3f277",
+    "raw_scenarios": "fb9ec8fa80d41b5a98b4bc956d82ebfec0514eaab27fd183f86683dfed6925b7"
+  },
+  "validation": {
+    "all_rows_attempt_1_success": true,
+    "all_rows_destination_partition_sum_1": true,
+    "all_weighted_aggregate_partition_sum_1": true,
+    "design_weight_sum": 691,
+    "holders_unique": 200,
+    "raw_rows": 36800,
+    "scenario_ids_exactly_match_frozen_plan": true,
+    "selected_cell_rows": 1000,
+    "stored_fractions_match_recomputed_counts": true
+  }
+}

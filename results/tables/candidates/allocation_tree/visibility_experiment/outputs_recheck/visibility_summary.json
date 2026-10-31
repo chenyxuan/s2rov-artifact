@@ -31,8 +31,8 @@
   "generated_at_utc": "2026-08-28T09:25:59.083085+00:00",
   "inputs": {
     "paths": {
-      "bgp_csv": "phase1_empirical/allocation_tree/visibility_experiment/input/derived/rrc00_20260624_origins_fast.csv",
-      "ripe": "phase1_empirical/allocation_tree/data/ripe.db.gz"
+      "bgp_csv": "experiments/candidates/allocation_tree/visibility_experiment/input/derived/rrc00_20260624_origins_fast.csv",
+      "ripe": "experiments/candidates/allocation_tree/data/ripe.db.gz"
     },
     "sha256": {
       "bgp_csv": "cafac01fa95e4d5e7eef4da22d2fa26b32216c110fe3a3073312bc79762edb29",
@@ -55,15 +55,15 @@
   },
   "outputs": {
     "audit_metrics": {
-      "path": "phase1_empirical/allocation_tree/visibility_experiment/outputs_recheck/visibility_audit_metrics.csv",
+      "path": "experiments/candidates/allocation_tree/visibility_experiment/outputs_recheck/visibility_audit_metrics.csv",
       "sha256": "604cb83d9b518351772306ee1858c2e0032083adda21071f45aca2ee173c9599"
     },
     "compact_table": {
-      "path": "phase1_empirical/allocation_tree/visibility_experiment/outputs_recheck/visibility_by_afi.csv",
+      "path": "experiments/candidates/allocation_tree/visibility_experiment/outputs_recheck/visibility_by_afi.csv",
       "sha256": "4a21e4736d386d52fa5804c17f3566ab5d468b54a4b9903ac5c2c913480b7576"
     },
     "potential_conflicts": {
-      "path": "phase1_empirical/allocation_tree/visibility_experiment/outputs_recheck/visibility_candidates.csv",
+      "path": "experiments/candidates/allocation_tree/visibility_experiment/outputs_recheck/visibility_candidates.csv",
       "sha256": "0846c5f5775e92092b445b64851918ca6f6b3e45651598d9006d3f3aeb483918"
     }
   },

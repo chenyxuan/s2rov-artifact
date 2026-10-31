@@ -16,13 +16,13 @@ import csv
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-PHASE_DIR = Path(__file__).resolve().parents[1]
-TABLE_DIR = PHASE_DIR / "outputs/tables"
+HERE_DIR = Path(__file__).resolve().parents[1]
+TABLE_DIR = HERE_DIR / "outputs/tables"
 TABLE_DIR.mkdir(parents=True, exist_ok=True)
 
-PHASE1_TABLE_DIR = ROOT / "phase1_empirical/ndss26_analysis/outputs/tables"
-PHASE1_DATA = PHASE1_TABLE_DIR / "data_processed.parquet"
-PHASE1_CSV = PHASE1_TABLE_DIR / "data_processed.csv.gz"
+CANDIDATES_TABLE_DIR = ROOT / "experiments/candidates/ndss26_analysis/outputs/tables"
+CANDIDATES_DATA = CANDIDATES_TABLE_DIR / "data_processed.parquet"
+CANDIDATES_CSV = CANDIDATES_TABLE_DIR / "data_processed.csv.gz"
 RAW_DATA_DIR = ROOT / "data/roa-misconfiguration-data/datas"
 random.seed(42)
 np.random.seed(42)
@@ -32,15 +32,15 @@ N_TRIALS = 10
 SAMPLE_SIZE = None
 
 
-def load_phase1_dataframe() -> pd.DataFrame:
-    if PHASE1_CSV.exists():
-        return pd.read_csv(PHASE1_CSV)
-    if PHASE1_DATA.exists():
+def load_candidates_dataframe() -> pd.DataFrame:
+    if CANDIDATES_CSV.exists():
+        return pd.read_csv(CANDIDATES_CSV)
+    if CANDIDATES_DATA.exists():
         try:
-            return pd.read_parquet(PHASE1_DATA)
+            return pd.read_parquet(CANDIDATES_DATA)
         except ImportError as exc:
             raise RuntimeError(
-                "Only a Parquet cache is available; rerun the Phase 1 loader "
+                "Only a Parquet cache is available; rerun the candidate-selection loader "
                 "to create data_processed.csv.gz"
             ) from exc
 
@@ -48,16 +48,16 @@ def load_phase1_dataframe() -> pd.DataFrame:
     for f in sorted(RAW_DATA_DIR.glob("*.csv")):
         frames.append(pd.read_csv(f))
     if not frames:
-        raise FileNotFoundError(f"No Phase 1 data found under {PHASE1_TABLE_DIR} or {RAW_DATA_DIR}")
+        raise FileNotFoundError(f"No candidate-selection data found under {CANDIDATES_TABLE_DIR} or {RAW_DATA_DIR}")
     return pd.concat(frames, ignore_index=True)
 
 
 def main():
-    if not PHASE1_DATA.exists() and not PHASE1_CSV.exists() and not RAW_DATA_DIR.exists():
-        print("Phase 1 data not found"); return
+    if not CANDIDATES_DATA.exists() and not CANDIDATES_CSV.exists() and not RAW_DATA_DIR.exists():
+        print("candidate-selection data not found"); return
 
-    print("Loading Phase 1 data...")
-    df = load_phase1_dataframe()
+    print("Loading candidate-selection data...")
+    df = load_candidates_dataframe()
     if SAMPLE_SIZE and len(df) > SAMPLE_SIZE:
         df = df.sample(n=SAMPLE_SIZE, random_state=42)
     print(f"  {len(df):,} rows")

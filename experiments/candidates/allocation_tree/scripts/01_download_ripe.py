@@ -6,9 +6,9 @@ from pathlib import Path
 from urllib.request import urlretrieve
 
 RIPE_DB_URL = "https://ftp.ripe.net/ripe/dbase/ripe.db.gz"
-PHASE_DIR = Path(__file__).resolve().parents[1]
-DATA_DIR = PHASE_DIR / "data"
-OUTPUT_DIR = PHASE_DIR / "outputs" / "tables"
+HERE_DIR = Path(__file__).resolve().parents[1]
+DATA_DIR = HERE_DIR / "data"
+OUTPUT_DIR = HERE_DIR / "outputs" / "tables"
 
 DB_GZ = DATA_DIR / "ripe.db.gz"
 INETNUM_CSV = OUTPUT_DIR / "ripe_inetnum.csv"

@@ -1,4 +1,4 @@
-# Phase 6: S2-ROV System Prototype
+# Prototype: S2-ROV System Prototype
 
 **Date:** 2026-07-29
 **Status:** Conventional Krill–Routinator–RTR–FRR baseline and DA-aware
@@ -9,9 +9,9 @@ local-API enforcement complete
 
 ## 1. Overview
 
-This phase contains an RPKI testbed that previously reproduced the RFC 6811
+This directory contains an RPKI testbed that previously reproduced the RFC 6811
 semantic conflict through Krill publication and Routinator validation. Unlike
-the analytical evaluation in Phase 5, it targets operational feasibility.
+the analytical evaluation in processing-cost, it targets operational feasibility.
 The deterministic experiment in `e2e/` now demonstrates stock RTR-to-FRR
 validation and DA-aware enforcement against live FRR BGP routes.
 
@@ -47,7 +47,7 @@ validation and DA-aware enforcement against live FRR BGP routes.
 ## 2. Files
 
 ```
-phase6_system/
+implementation/prototype/
 ├── SYSTEM.md                      ← This file
 ├── launch.md                      ← Docker launch instructions
 ├── krillc-roas-update-guide.md    ← krillc ROA management manual
@@ -82,12 +82,12 @@ The passing 2026-07-29 run is under `e2e/outputs/latest/`.
 ## 4. Relationship to Research Phases
 
 ```
-Phase 1 ──→ Phase 2 ──→ Phase 3 ──→ Phase 4 ──→ Phase 5
+Candidate-selection ──→ formal-statement ──→ classifier-semantics ──→ DAROA-encoding ──→ processing-cost
   │           │           │           │           │
   Empirical   Formal      S2-ROV      DA-ROA      Evaluation
   evidence    proof       semantics   encoding    (synthetic)
                                                      │
-Phase 6 ←─────────────────────────────────────────────┘
+Prototype ←─────────────────────────────────────────────┘
   System prototype: real RPKI conflict reproduction
 ```
 

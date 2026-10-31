@@ -1,4 +1,4 @@
-# Phase-4 reference-classifier processing benchmark
+# DAROA encoding reference-classifier processing benchmark
 
 Generated: 2026-08-28T23:21:13Z
 
@@ -18,7 +18,7 @@ integer conversion. The classifier internally parses textual CIDRs in both modes
 Each policy contains one open `/0` base and the first `size-1` unique non-`/0`
 prefixes in source order as closed exact-origin Stripes. These are deterministic
 benchmark policies, not observed published authorizations. Policy size means total
-Stripe count. Serialized bytes refer only to the experimental Phase-4 binary format.
+Stripe count. Serialized bytes refer only to the experimental DAROA-encoding binary format.
 
 ## Configuration
 

@@ -1,11 +1,11 @@
-# Phase-4 processing benchmark
+# DAROA encoding processing benchmark
 
 The independent IPv6 companion is documented in
 [`README_IPV6.md`](README_IPV6.md); it does not modify this IPv4 driver or its
 existing outputs.
 
 This directory contains a reproducible, single-core microbenchmark for the
-existing Phase-4 Python `DAROA.validate_route` classifier. It uses the local
+existing DAROA-encoding Python `DAROA.validate_route` classifier. It uses the local
 RRC00 prefix-origin CSV as the route workload and deterministic benchmark
 policies with 1, 64, 256, 1,024, and 4,097 total Stripes.
 
@@ -25,7 +25,7 @@ parsing.
 ## Small self-test
 
 ```bash
-python3 phase5_evaluation/processing_benchmark/run_processing_benchmark.py run \
+python3 experiments/cost/processing_benchmark/run_processing_benchmark.py run \
   --run-id selftest-YYYYMMDDTHHMMSSZ \
   --sizes 1 64 \
   --repetitions 1 \
@@ -37,7 +37,7 @@ python3 phase5_evaluation/processing_benchmark/run_processing_benchmark.py run \
 ## Formal local run
 
 ```bash
-python3 phase5_evaluation/processing_benchmark/run_processing_benchmark.py run \
+python3 experiments/cost/processing_benchmark/run_processing_benchmark.py run \
   --run-id processing-YYYYMMDDTHHMMSSZ
 ```
 
@@ -75,15 +75,15 @@ seed.
 Formal run:
 
 ```bash
-python3 phase5_evaluation/processing_benchmark/run_policy_update_benchmark.py run \
+python3 experiments/cost/processing_benchmark/run_policy_update_benchmark.py run \
   --run-id policy-update-YYYYMMDDTHHMMSSZ
 ```
 
 Independent rerun of the raw audit:
 
 ```bash
-python3 phase5_evaluation/processing_benchmark/audit_policy_update_benchmark.py \
-  phase5_evaluation/processing_benchmark/outputs/policy-update-YYYYMMDDTHHMMSSZ
+python3 experiments/cost/processing_benchmark/audit_policy_update_benchmark.py \
+  experiments/cost/processing_benchmark/outputs/policy-update-YYYYMMDDTHHMMSSZ
 ```
 
 The run emits the frozen inputs and their hashes, derived unmarked payloads,

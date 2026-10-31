@@ -584,5 +584,5 @@
   "manifest_sha256": "af0041cf390d22266a65033ada7ad97fc93a713b61cb0575d9e82d67acae7d26",
   "n_holders": 200,
   "schema_version": 1,
-  "version_label": "phase8-sibling-endpoint-v1"
+  "version_label": "attack_reachability-sibling-endpoint-v1"
 }

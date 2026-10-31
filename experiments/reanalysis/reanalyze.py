@@ -15,24 +15,24 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = Path(__file__).resolve().parent / "results"
-PHASE7_CONTRASTS = (
+ROUTING_MODEL_CONTRASTS = (
     ROOT
-    / "phase7_simulation/results/paper_campaign/analysis/holder_contrasts.jsonl"
+    / "experiments/routing_model/results/paper_campaign/analysis/holder_contrasts.jsonl"
 )
-PHASE7_CELLS = (
+ROUTING_MODEL_CELLS = (
     ROOT
-    / "phase7_simulation/results/paper_campaign/analysis/raw_cell_summary.csv"
+    / "experiments/routing_model/results/paper_campaign/analysis/raw_cell_summary.csv"
 )
-PHASE8_CONTRASTS = (
+ATTACK_REACHABILITY_CONTRASTS = (
     ROOT
-    / "phase8_sibling_sensitivity/results/analysis/holder_contrasts.jsonl"
+    / "experiments/attack_reachability/results/analysis/holder_contrasts.jsonl"
 )
-PHASE8_SUMMARY = (
-    ROOT / "phase8_sibling_sensitivity/results/analysis/summary.json"
+ATTACK_REACHABILITY_SUMMARY = (
+    ROOT / "experiments/attack_reachability/results/analysis/summary.json"
 )
 REPLICATES = 10_000
-PHASE7_SEED = 20260804
-PHASE8_SEED = 20260823
+ROUTING_MODEL_SEED = 20260804
+ATTACK_REACHABILITY_SEED = 20260823
 EXPECTED_STRATA = {"S1": 50, "S2": 50, "S3": 50, "S4": 50}
 
 
@@ -162,9 +162,9 @@ def summarize_groups(
     return summaries, audit
 
 
-def phase7_groups() -> dict[tuple[Any, ...], list[dict[str, Any]]]:
+def routing_model_groups() -> dict[tuple[Any, ...], list[dict[str, Any]]]:
     groups: dict[tuple[Any, ...], list[dict[str, Any]]] = defaultdict(list)
-    for row in read_jsonl(PHASE7_CONTRASTS):
+    for row in read_jsonl(ROUTING_MODEL_CONTRASTS):
         if (
             row.get("estimand") not in {"Delta_E_rov", "Delta_E_exact"}
             or row.get("metric_level") != "destination"
@@ -185,9 +185,9 @@ def phase7_groups() -> dict[tuple[Any, ...], list[dict[str, Any]]]:
     return groups
 
 
-def phase8_groups() -> dict[tuple[Any, ...], list[dict[str, Any]]]:
+def attack_reachability_groups() -> dict[tuple[Any, ...], list[dict[str, Any]]]:
     groups: dict[tuple[Any, ...], list[dict[str, Any]]] = defaultdict(list)
-    for row in read_jsonl(PHASE8_CONTRASTS):
+    for row in read_jsonl(ATTACK_REACHABILITY_CONTRASTS):
         if (
             row.get("estimand") != "Delta_E_sibling"
             or row.get("population") != "all"
@@ -214,9 +214,9 @@ def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
         writer.writerows(rows)
 
 
-def frozen_phase7_points() -> dict[tuple[Any, ...], float]:
+def frozen_routing_model_points() -> dict[tuple[Any, ...], float]:
     result: dict[tuple[Any, ...], float] = {}
-    with PHASE7_CELLS.open(newline="", encoding="utf-8") as handle:
+    with ROUTING_MODEL_CELLS.open(newline="", encoding="utf-8") as handle:
         for row in csv.DictReader(handle):
             if (
                 row["estimand"] not in {"Delta_E_rov", "Delta_E_exact"}
@@ -250,8 +250,8 @@ def headline(
 
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
-    phase7, phase7_audit = summarize_groups(
-        phase7_groups(),
+    routing_model, routing_model_audit = summarize_groups(
+        routing_model_groups(),
         (
             "estimand",
             "metric_level",
@@ -260,9 +260,9 @@ def main() -> None:
             "deployment_strategy",
             "deployment_percent_target",
         ),
-        seed=PHASE7_SEED,
+        seed=ROUTING_MODEL_SEED,
     )
-    frozen_points = frozen_phase7_points()
+    frozen_points = frozen_routing_model_points()
     max_point_error = max(
         abs(
             row["stratum_standardized_selected_unit_mean"]
@@ -277,22 +277,22 @@ def main() -> None:
                 )
             ]
         )
-        for row in phase7
+        for row in routing_model
     )
     if max_point_error > 1e-12:
-        raise ValueError(f"Phase 7 point estimate mismatch: {max_point_error}")
+        raise ValueError(f"routing-model point estimate mismatch: {max_point_error}")
 
-    phase8, phase8_audit = summarize_groups(
-        phase8_groups(),
+    attack_reachability, attack_reachability_audit = summarize_groups(
+        attack_reachability_groups(),
         ("estimand", "metric_level", "population", "deployment_percent_target"),
-        seed=PHASE8_SEED,
+        seed=ATTACK_REACHABILITY_SEED,
     )
-    frozen_phase8 = json.loads(PHASE8_SUMMARY.read_text(encoding="utf-8"))
-    route = headline(phase8, metric_level="route")
-    destination = headline(phase8, metric_level="destination")
+    frozen_attack_reachability = json.loads(ATTACK_REACHABILITY_SUMMARY.read_text(encoding="utf-8"))
+    route = headline(attack_reachability, metric_level="route")
+    destination = headline(attack_reachability, metric_level="destination")
     frozen_cells = [
         cell
-        for cell in frozen_phase8["cells"]
+        for cell in frozen_attack_reachability["cells"]
         if cell["estimand"] == "Delta_E_sibling"
         and cell["population"] == "all"
         and int(cell["deployment_percent_target"]) == 100
@@ -311,42 +311,42 @@ def main() -> None:
             if cell["metric_level"] == "destination"
         )
     )
-    max_phase8_error = max(
+    max_attack_reachability_error = max(
         abs(route["stratum_standardized_selected_unit_mean"] - frozen_route),
         abs(destination["stratum_standardized_selected_unit_mean"] - frozen_destination),
     )
-    if max_phase8_error > 1e-12:
-        raise ValueError(f"Phase 8 point estimate mismatch: {max_phase8_error}")
+    if max_attack_reachability_error > 1e-12:
+        raise ValueError(f"attack-reachability point estimate mismatch: {max_attack_reachability_error}")
 
-    write_csv(OUT / "competition_cells.csv", phase7)
-    write_csv(OUT / "sibling_cells.csv", phase8)
+    write_csv(OUT / "competition_cells.csv", routing_model)
+    write_csv(OUT / "sibling_cells.csv", attack_reachability)
 
     full_exposure = headline(
-        phase7,
+        routing_model,
         estimand="Delta_E_rov",
         attacker_class="uniform",
         deployment_percent_target=100,
     )
     full_exact = headline(
-        phase7,
+        routing_model,
         estimand="Delta_E_exact",
         attacker_class="uniform",
         deployment_percent_target=100,
     )
     edge = headline(
-        phase7,
+        routing_model,
         estimand="Delta_E_rov",
         attacker_class="edge",
         deployment_percent_target=100,
     )
     high = headline(
-        phase7,
+        routing_model,
         estimand="Delta_E_rov",
         attacker_class="high_degree",
         deployment_percent_target=100,
     )
     summary = {
-        "schema_version": "phase9-selected-unit-reanalysis-v1",
+        "schema_version": "reanalysis-selected-unit-reanalysis-v1",
         "status": "complete",
         "analysis_artifacts_sha256": {
             "EXPERIMENT_CONTRACT.md": sha256(
@@ -357,16 +357,16 @@ def main() -> None:
         "inputs_sha256": {
             str(path.relative_to(ROOT)): sha256(path)
             for path in (
-                PHASE7_CONTRASTS,
-                PHASE7_CELLS,
-                PHASE8_CONTRASTS,
-                PHASE8_SUMMARY,
+                ROUTING_MODEL_CONTRASTS,
+                ROUTING_MODEL_CELLS,
+                ATTACK_REACHABILITY_CONTRASTS,
+                ATTACK_REACHABILITY_SUMMARY,
             )
         },
         "contract": {
             "selected_units": 200,
             "strata": EXPECTED_STRATA,
-            "standardization": "fixed Phase-7 stratum frame shares",
+            "standardization": "fixed routing-model stratum frame shares",
             "finite_population_correction": False,
             "interval_interpretation": (
                 "descriptive ordinary stratified paired bootstrap stability "
@@ -374,10 +374,10 @@ def main() -> None:
             ),
         },
         "audits": {
-            "phase7": phase7_audit,
-            "phase8": phase8_audit,
-            "phase7_max_point_error_vs_frozen": max_point_error,
-            "phase8_max_point_error_vs_frozen": max_phase8_error,
+            "routing_model": routing_model_audit,
+            "attack_reachability": attack_reachability_audit,
+            "routing_model_max_point_error_vs_frozen": max_point_error,
+            "attack_reachability_max_point_error_vs_frozen": max_attack_reachability_error,
         },
         "headlines": {
             "full_uniform_open_minus_aggregate": full_exposure,

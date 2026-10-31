@@ -4,8 +4,8 @@ IMC'24 Step 2: parse inetnum, build prefix tree (root = portable, leaf = non-por
 import ipaddress as ip, csv, bisect
 from pathlib import Path
 
-PHASE_DIR = Path(__file__).resolve().parents[1]
-TABLE_DIR = PHASE_DIR / "outputs" / "tables"
+HERE_DIR = Path(__file__).resolve().parents[1]
+TABLE_DIR = HERE_DIR / "outputs" / "tables"
 
 ROOT_ST = {"ALLOCATED PA","ALLOCATED PI","ALLOCATED UNSPECIFIED","ALLOCATED-BY-RIR","LEGACY"}
 LEAF_ST = {"ASSIGNED PA","ASSIGNED PI","ASSIGNED","ASSIGNED ANYCAST",

@@ -1,7 +1,7 @@
 {
   "derived_bytes": 169115,
   "derived_sha256": "14e5af0518705ea2731803e07d8ee2b3aee42349ac17f842e7000fb0e18ad15c",
-  "derived_workload": "<repo>/phase5_evaluation/processing_benchmark/outputs/selftest-20260828T-processing-v3/input/rrc00_20260624_ipv4_prefix_origins.csv",
+  "derived_workload": "<repo>/experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/input/rrc00_20260624_ipv4_prefix_origins.csv",
   "holder_asn": 1299,
   "ipv4_rows": 8192,
   "limit": 8192,
@@ -518,7 +518,7 @@
       "prefix": "1.0.217.0/24"
     }
   ],
-  "source": "<repo>/phase1_empirical/allocation_tree/visibility_experiment/input/derived/rrc00_20260624_origins_fast.csv",
+  "source": "<repo>/experiments/candidates/allocation_tree/visibility_experiment/input/derived/rrc00_20260624_origins_fast.csv",
   "source_ipv4_ambiguous_markers_excluded": 0,
   "source_ipv4_rows": 8192,
   "source_ipv6_rows_skipped": 1,

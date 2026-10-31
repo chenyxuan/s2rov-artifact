@@ -1,7 +1,7 @@
-# Phase 5 Evaluation Boundaries
+# Processing cost Evaluation Boundaries
 
-Phase 5 contains reference-semantic checks and scenario analyses.  It does not
-replace the signed prototype-system experiments under `phase6_system/`.
+The processing cost contains reference-semantic checks and scenario analyses.  It does not
+replace the signed prototype-system experiments under `implementation/prototype/`.
 
 ## Scripts
 

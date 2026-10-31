@@ -782,7 +782,7 @@ def _current_unbound_files(repo_root: Path, e2e_root: Path) -> list[dict[str, An
         e2e_root / "scripts" / "build-images.sh",
         e2e_root / "scripts" / "krill-entrypoint.sh",
         e2e_root / "scripts" / "routinator-entrypoint.sh",
-        repo_root / "phase6_system" / "dockerfiles" / "stripe-roa-system.zip",
+        repo_root / "implementation" / "prototype" / "dockerfiles" / "stripe-roa-system.zip",
     )
     records = []
     for path in candidates:

@@ -869,7 +869,7 @@
     },
     "ineligible_route_origin_count": 1,
     "multi_origin_endpoint_rows": 2,
-    "path": "phase1_empirical/allocation_tree/visibility_experiment/outputs/visibility_candidates.csv",
+    "path": "experiments/candidates/allocation_tree/visibility_experiment/outputs/visibility_candidates.csv",
     "retained_endpoints_non_nested": true,
     "retained_roots_non_nested": true,
     "root_counts": {
@@ -1088,7 +1088,7 @@
       },
       "placements_independent": true,
       "placements_nested_within_each_rollout": true,
-      "reference_classifier": "phase4_encoding/scripts/utils/daroa.py",
+      "reference_classifier": "implementation/daroa_codec/scripts/utils/daroa.py",
       "reference_classifier_sha256": "eb11dd64f5cc3175557462367796541a45d971459f5a16f46a655e1aee614377",
       "reference_state_counts": {
         "aggregate_only": {
@@ -1264,7 +1264,7 @@
         "total_degree_max": 6584,
         "total_degree_min": 1
       },
-      "reference_classifier": "phase4_encoding/scripts/utils/daroa.py",
+      "reference_classifier": "implementation/daroa_codec/scripts/utils/daroa.py",
       "reference_classifier_sha256": "eb11dd64f5cc3175557462367796541a45d971459f5a16f46a655e1aee614377",
       "reference_state_counts": {
         "aggregate_only": {
@@ -1383,7 +1383,7 @@
       ],
       "invalid_monotone_in_downstream_and_scope": true,
       "master_seed": 20260829,
-      "reference_classifier": "phase4_encoding/scripts/utils/daroa.py",
+      "reference_classifier": "implementation/daroa_codec/scripts/utils/daroa.py",
       "reference_classifier_sha256": "eb11dd64f5cc3175557462367796541a45d971459f5a16f46a655e1aee614377",
       "reference_state_counts": {
         "aggregate_only": {

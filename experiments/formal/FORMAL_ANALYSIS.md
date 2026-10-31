@@ -1,4 +1,4 @@
-# Phase 2: Formal Analysis of the ROV Policy Gap
+# Formal statements: Formal Analysis of the ROV Policy Gap
 
 **Version:** 2.0
 **Re-audited:** 2026-07-29
@@ -162,9 +162,9 @@ does not infer that policy for the holder.
 The NDSS 2026 artifact reanalysis is kept separate.  Its relationship/cause
 labels are prior-work evidence and are not used as authorization ground truth.
 
-## 7. Handoff to Phase 3
+## 7. Handoff to classifier-semantics
 
-Phase 3 must define at least four states:
+Classifier-semantics must define at least four states:
 
 - \(\mathsf{Explicit}\): the selected policy names the route origin;
 - \(\mathsf{Delegated}\): an open policy covers a proper descendant but does

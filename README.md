@@ -18,8 +18,8 @@ verify.py         checks this tree against MANIFEST.json
 
 | Promised material | In this bundle |
 |---|---|
-| **implementation** | `implementation/daroa-codec/` — encoding, merging, four-state classifier; `implementation/prototype/` — Krill / Routinator / FRR prototype |
-| **experiment and analysis scripts** | `experiments/*/` and `experiments/analysis-scripts/` |
+| **implementation** | `implementation/daroa_codec/` — encoding, merging, four-state classifier; `implementation/prototype/` — Krill / Routinator / FRR prototype |
+| **experiment and analysis scripts** | `experiments/*/` and `experiments/analysis_scripts/` |
 | **configurations** | the `*.json` contracts and manifests inside each experiment directory |
 | **result tables** | `results/` for the reported items, `results/tables/` for the full tables |
 | **figure source data** | `figure-data/` |
@@ -31,11 +31,11 @@ verify.py         checks this tree against MANIFEST.json
 | `experiments/candidates/` | Registry and RIS analysis; candidate selection | Table I |
 | `experiments/formal/`, `experiments/semantics/` | Formal statements and classifier semantics | Sections II–III |
 | `experiments/cost/` | Classification throughput and update latency | Fig. 4 |
-| `experiments/routing-model/` | BGPy model: delivery and origin exposure | Fig. 5, Sec. V-C |
-| `experiments/attack-reachability/` | Attacker reachability for a marked region | Sec. V-D |
+| `experiments/routing_model/` | BGPy model: delivery and origin exposure | Fig. 5, Sec. V-C |
+| `experiments/attack_reachability/` | Attacker reachability for a marked region | Sec. V-D |
 | `experiments/reanalysis/` | Selected-unit bootstrap reanalysis | Sec. V |
-| `experiments/semantic-gate/` | Semantic gate on exported results | correctness checks |
-| `experiments/analysis-scripts/` | Figure and replay scripts used for the manuscript | Figs. 2–5 |
+| `experiments/semantic_gate/` | Semantic gate on exported results | correctness checks |
+| `experiments/analysis_scripts/` | Figure and replay scripts used for the manuscript | Figs. 2–5 |
 
 Each directory keeps its own `README.md` and, where the campaign was run under
 a frozen contract, an `EXPERIMENT_CONTRACT.md`.
@@ -43,7 +43,7 @@ a frozen contract, an `EXPERIMENT_CONTRACT.md`.
 ## Requirements
 
 - Python 3.12.
-- `experiments/routing-model/requirements-bgpy.txt` for the routing model, in
+- `experiments/routing_model/requirements-bgpy.txt` for the routing model, in
   its own environment.
 - Nothing at all to read `results/` or `figure-data/`.
 
@@ -64,7 +64,7 @@ machine-specific paths. That rewriting changes file digests, so the SHA-256
 values frozen inside the experiment contracts no longer match; verify the
 bundle through `MANIFEST.json` instead.
 
-The scheme was developed under the internal codename DA-ROV before the paper
+The scheme was developed under the internal codename S2-ROV before the paper
 settled on S²-ROV. The codename is rewritten throughout the bundle, so every
 class, module and result key here uses the published name.
 

@@ -15,14 +15,14 @@ import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-PHASE4_SCRIPTS = ROOT / "phase4_encoding" / "scripts"
-sys.path.insert(0, str(PHASE4_SCRIPTS))
+DAROA_CODEC_SCRIPTS = ROOT / "implementation" / "daroa_codec" / "scripts"
+sys.path.insert(0, str(DAROA_CODEC_SCRIPTS))
 
 from utils.daroa import DAROA, Stripe, ValidationState
 
 
-PHASE_DIR = Path(__file__).resolve().parents[1]
-TABLE_DIR = PHASE_DIR / "outputs" / "tables"
+HERE_DIR = Path(__file__).resolve().parents[1]
+TABLE_DIR = HERE_DIR / "outputs" / "tables"
 TABLE_DIR.mkdir(parents=True, exist_ok=True)
 
 

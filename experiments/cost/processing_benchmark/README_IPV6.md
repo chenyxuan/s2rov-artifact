@@ -25,7 +25,7 @@ The classifier's internal textual IPv6 CIDR parsing is included in both scopes.
 
 ```bash
 python3 -m unittest \
-  phase5_evaluation/processing_benchmark/test_ipv6_processing_benchmark.py
+  experiments/cost/processing_benchmark/test_ipv6_processing_benchmark.py
 ```
 
 The tests cover mixed-family filtering, ambiguous-origin exclusion, IPv6
@@ -38,7 +38,7 @@ Use a new run identifier. The driver refuses to overwrite an existing directory
 and never retries a failed or timed-out worker.
 
 ```bash
-python3 phase5_evaluation/processing_benchmark/run_ipv6_processing_benchmark.py run \
+python3 experiments/cost/processing_benchmark/run_ipv6_processing_benchmark.py run \
   --run-id selftest-ipv6-YYYYMMDDTHHMMSSZ \
   --sizes 1 64 \
   --repetitions 1 \
@@ -52,7 +52,7 @@ This executes four fresh workers: two policy sizes times the two timing scopes.
 ## Formal local run
 
 ```bash
-python3 phase5_evaluation/processing_benchmark/run_ipv6_processing_benchmark.py run \
+python3 experiments/cost/processing_benchmark/run_ipv6_processing_benchmark.py run \
   --run-id processing-ipv6-YYYYMMDDTHHMMSSZ
 ```
 
@@ -75,4 +75,4 @@ automatically.
 
 The replay measures the single-process, single-core Python reference classifier.
 It does not measure FRR, RTR transfer, router installation, forwarding, or line
-rate. The IPv6 handoff experiment is a separate Phase 6 artifact.
+rate. The IPv6 handoff experiment is a separate prototype artifact.

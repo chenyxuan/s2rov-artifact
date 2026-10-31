@@ -1,0 +1,8 @@
+# Human-maintained direct requirements.  Production routing-model environments must
+# be installed from requirements-bgpy.lock.txt; the runner verifies every pin.
+# The BGP security simulator is distributed as bgpy-pkg but imported as bgpy.
+# Do not replace this with the unrelated PyPI package named "bgpy".
+bgpy-pkg==13.0.10
+# Direct dependency of the stratified paired-bootstrap analysis.
+numpy==2.5.1
+ruff==0.14.13

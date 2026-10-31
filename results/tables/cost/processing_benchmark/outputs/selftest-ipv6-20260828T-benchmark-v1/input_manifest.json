@@ -2,7 +2,7 @@
   "address_family": "IPv6",
   "derived_bytes": 207595,
   "derived_sha256": "110603ebad621d9caa655930d6756a5311a5f1110c87c5013bdab0dc73aa10f5",
-  "derived_workload": "<repo>/phase5_evaluation/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/input/rrc00_20260624_ipv6_prefix_origins.csv",
+  "derived_workload": "<repo>/experiments/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/input/rrc00_20260624_ipv6_prefix_origins.csv",
   "holder_asn": 174,
   "ipv6_rows": 8192,
   "limit": 8192,
@@ -519,7 +519,7 @@
       "prefix": "2001:1218:6022::/48"
     }
   ],
-  "source": "<repo>/phase1_empirical/allocation_tree/visibility_experiment/input/derived/rrc00_20260624_origins_fast.csv",
+  "source": "<repo>/experiments/candidates/allocation_tree/visibility_experiment/input/derived/rrc00_20260624_origins_fast.csv",
   "source_ipv4_rows_skipped": 628894,
   "source_ipv6_ambiguous_markers_excluded": 0,
   "source_ipv6_rows": 8192,

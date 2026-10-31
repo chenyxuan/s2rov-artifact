@@ -3,7 +3,7 @@
 完整的 Krill–Routinator–FRR 基线和 DA-aware FRR 执行已经迁移到：
 
 ```bash
-cd phase6_system/e2e
+cd implementation/prototype/e2e
 make test
 make experiment
 ```

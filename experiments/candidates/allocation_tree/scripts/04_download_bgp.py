@@ -5,9 +5,9 @@ from pathlib import Path
 from urllib.request import urlretrieve
 from collections import defaultdict
 
-PHASE_DIR = Path(__file__).resolve().parents[1]
-DATA_DIR = PHASE_DIR / "data"
-TABLE_DIR = PHASE_DIR / "outputs" / "tables"
+HERE_DIR = Path(__file__).resolve().parents[1]
+DATA_DIR = HERE_DIR / "data"
+TABLE_DIR = HERE_DIR / "outputs" / "tables"
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 RIB_URL = "http://archive.routeviews.org/bgpdata/2026.06/RIBS/rib.20260624.0000.bz2"

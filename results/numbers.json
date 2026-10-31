@@ -1,5 +1,5 @@
 {
-  "source": "phase1_empirical including the tested deployment-conflict and OpenScope-placement replays and pooled route-state audit, phase4_encoding, phase5_evaluation, phase6_system, phase7_simulation including the independently audited deployment-grid extension, phase8_sibling_sensitivity, phase9_selected_unit_reanalysis, and phase10_semantic_gate artifacts; the primary V.A evidence pools IPv4 and IPv6 endpoint routes, V.B uses the controlled dual-stack classification and same-size update replays, and legacy phases retain their separately stated archive and provenance limits",
+  "source": "candidates including the tested deployment-conflict and OpenScope-placement replays and pooled route-state audit, daroa_codec, cost, prototype, routing_model including the independently audited deployment-grid extension, attack_reachability, reanalysis, and semantic_gate artifacts; the primary V.A evidence pools IPv4 and IPv6 endpoint routes, V.B uses the controlled dual-stack classification and same-size update replays, and legacy phases retain their separately stated archive and provenance limits",
   "results_mode": "data_aware",
   "facts": {
     "redesigned_evaluation": {
@@ -43,7 +43,7 @@
         "status": "VERIFIED_RECOMPUTATION",
         "analysis_role": "primary_V_A_benefit_evidence",
         "input": {
-          "path": "phase1_empirical/allocation_tree/visibility_experiment/outputs/visibility_candidates.csv",
+          "path": "experiments/candidates/allocation_tree/visibility_experiment/outputs/visibility_candidates.csv",
           "sha256": "0846c5f5775e92092b445b64851918ca6f6b3e45651598d9006d3f3aeb483918",
           "candidate_paths": {"IPv4": 504, "IPv6": 83},
           "roots": {"IPv4": 83, "IPv6": 14},
@@ -166,7 +166,7 @@
         "claim_boundary": "seeded randomized deployment replay over one RRC00-derived frame; active panels display arithmetic means only, and observed denotes conflicts realized in the constructed rollout rather than measured issuer adoption or a historical Internet time series"
       },
       "matched_unknown_origin_handoff": {
-        "version_label": "phase6-matched-handoff-v1",
+        "version_label": "prototype-matched-handoff-v1",
         "status": "HISTORICAL_INACTIVE",
         "analysis_role": "removed_from_manuscript",
         "accepted_run_id": "handoff-benefit-20260828T143741Z",
@@ -253,38 +253,38 @@
           "setup_roa_entry_changes": 79
         },
         "artifacts": {
-          "run_directory": "phase6_system/e2e/outputs/handoff-benefit-20260828T143741Z",
+          "run_directory": "implementation/prototype/e2e/outputs/handoff-benefit-20260828T143741Z",
           "protocol": {
-            "path": "phase6_system/e2e/outputs/handoff-benefit-20260828T143741Z/protocol.json",
+            "path": "implementation/prototype/e2e/outputs/handoff-benefit-20260828T143741Z/protocol.json",
             "sha256": "47f4145b9336aaf57773625b62e320e7035089b18fa03d5ca54097b035c48d3f"
           },
           "trials": {
-            "path": "phase6_system/e2e/outputs/handoff-benefit-20260828T143741Z/trials.csv",
+            "path": "implementation/prototype/e2e/outputs/handoff-benefit-20260828T143741Z/trials.csv",
             "sha256": "eb7ea5a490c9755c2fc141491f67907cf9e40b0c39bbd7192fbf15ff3d61ef1c"
           },
           "events": {
-            "path": "phase6_system/e2e/outputs/handoff-benefit-20260828T143741Z/events.jsonl",
+            "path": "implementation/prototype/e2e/outputs/handoff-benefit-20260828T143741Z/events.jsonl",
             "sha256": "5ec7b8238a8d58f3d48376d15ff1670f9cd6e82c85ba44188f0d4082698fa6f7"
           },
           "summary": {
-            "path": "phase6_system/e2e/outputs/handoff-benefit-20260828T143741Z/summary.json",
+            "path": "implementation/prototype/e2e/outputs/handoff-benefit-20260828T143741Z/summary.json",
             "sha256": "2a9a7c6355cdeca3fed11bea865647f308c37c9a18443d7e858b96b0b14da45f"
           },
           "raw_hash_inventory": {
-            "path": "phase6_system/e2e/outputs/handoff-benefit-20260828T143741Z/raw.sha256",
+            "path": "implementation/prototype/e2e/outputs/handoff-benefit-20260828T143741Z/raw.sha256",
             "sha256": "0f80c464bbd69e2f27554660e4e0ca4420106384f768f5f94c08a6119b19f43b"
           },
           "source_hash_inventory": {
-            "path": "phase6_system/e2e/outputs/handoff-benefit-20260828T143741Z/source.sha256",
+            "path": "implementation/prototype/e2e/outputs/handoff-benefit-20260828T143741Z/source.sha256",
             "sha256": "2ba376a8d430e6d33d583c29fea0c2dc882f2269c50102ef0116e00f693539b6"
           },
           "artifact_manifest": {
-            "path": "phase6_system/e2e/outputs/handoff-benefit-20260828T143741Z/manifest.sha256",
+            "path": "implementation/prototype/e2e/outputs/handoff-benefit-20260828T143741Z/manifest.sha256",
             "sha256": "2388faf2fed40fa3bd4fbd9b7d1bbfa882643438fd8f5759a91f6b2ef9938b5c",
             "entries": 2837
           },
           "independent_audit": {
-            "path": "phase6_system/e2e/outputs/handoff-benefit-20260828T143741Z/independent-audit.json",
+            "path": "implementation/prototype/e2e/outputs/handoff-benefit-20260828T143741Z/independent-audit.json",
             "sha256": "b3471111394a7c7501bfe5396c456df2919c24136fc164c66ad5304f54587be3",
             "passed": true,
             "reads_summary_outputs": false
@@ -320,7 +320,7 @@
         "claim_boundary": "conditional workflow effect in the controlled Krill-RRDP-Routinator-classifier-FRR-probe stack; the experiment supports neither statistical equivalence between preinstalled scope and prepublished exact, nor Internet-wide reachability or deployment benefit"
       },
       "processing_benchmark_legacy": {
-        "version_label": "phase5-selected-policy-replay-v1",
+        "version_label": "cost-selected-policy-replay-v1",
         "status": "SUPERSEDED_FOR_ACTIVE_PROCESSING_RESULT",
         "accepted_run_id": "processing-20260828T1553Z",
         "workload": {
@@ -396,7 +396,7 @@
           "independent_raw_to_summary_cells_passed": 10
         },
         "artifacts": {
-          "run_directory": "phase5_evaluation/processing_benchmark/outputs/processing-20260828T1553Z",
+          "run_directory": "experiments/cost/processing_benchmark/outputs/processing-20260828T1553Z",
           "benchmark_script_sha256": "53246ca76fccbe48ff3d4579e8cd12ffcb72a4f861b3b469cab2a9ae81ca19a1",
           "classifier_sha256": "4aa40fb8736de32d28041ba3b87260e96cbc91ea2e8ed20d8550d17706dff7e8",
           "summary_csv_sha256": "73bcb39b890d5f5b03c325a7e84d4a030ae7c131b81305c3bff7e7754e04a204",
@@ -410,7 +410,7 @@
         "claim_boundary": "historical only; policy growth changed the selected-state mix, so this run no longer supplies the active processing-cost result"
       },
       "dual_stack_reference_core": {
-        "version_label": "phase4-dual-stack-reference-core-v3-marker-only",
+        "version_label": "daroa_codec-dual-stack-reference-core-v3-marker-only",
         "status": "VERIFIED_UNIT_AND_GOLDEN_BYTES",
         "tests_passed": 42,
         "tests_failed": 0,
@@ -430,12 +430,12 @@
           "IPv4": 33,
           "IPv6": 129
         },
-        "classifier_path": "phase4_encoding/scripts/utils/daroa.py",
+        "classifier_path": "implementation/daroa_codec/scripts/utils/daroa.py",
         "classifier_sha256": "eb11dd64f5cc3175557462367796541a45d971459f5a16f46a655e1aee614377",
         "claim_boundary": "reference classifier and experimental encoding only; not standardized transport or full relying-party interoperability"
       },
       "matched_unknown_origin_handoff_ipv6": {
-        "version_label": "phase6-matched-handoff-ipv6-v1",
+        "version_label": "prototype-matched-handoff-ipv6-v1",
         "status": "HISTORICAL_INACTIVE",
         "analysis_role": "removed_from_manuscript",
         "accepted_run_id": "handoff-benefit-ipv6-20260829T002536Z",
@@ -475,7 +475,7 @@
           "prepublished_exact": {"signed_update_transactions": 0, "roa_entry_changes": 0}
         },
         "artifacts": {
-          "run_directory": "phase6_system/e2e/outputs/handoff-benefit-ipv6-20260829T002536Z",
+          "run_directory": "implementation/prototype/e2e/outputs/handoff-benefit-ipv6-20260829T002536Z",
           "protocol_sha256": "645fe44ad48b31df6ae59ccba371a69abe5e824df1ced30f6319d63237396c10",
           "trials_sha256": "b6eb75721bcce3ceb0f5d4b5342ca5a29b82cf047e794d51ed7561b7dde84b10",
           "events_sha256": "e4db8f4cdd12e832af8ccc614da3cfb06788b0911e7d993f7f8266553fe70c1b",
@@ -492,10 +492,10 @@
             "contrast_source_sha256": "224882ba7116f3ee0781e192fcbe6a1fa80aad3f0b8e3c1694f4181fe8671c33"
           }
         },
-        "claim_boundary": "controlled IPv6 selected-fixture path using an independent dual-stack policy model over validated local output; not evidence that the Phase 4 version 2 bytes traverse Krill, Routinator, and FRR"
+        "claim_boundary": "controlled IPv6 selected-fixture path using an independent dual-stack policy model over validated local output; not evidence that the DAROA-encoding version 2 bytes traverse Krill, Routinator, and FRR"
       },
       "processing_benchmark_dual_stack": {
-        "version_label": "phase5-controlled-policy-processing-marker-final-v1",
+        "version_label": "cost-controlled-policy-processing-marker-final-v1",
         "status": "VERIFIED_RAW_TO_SUMMARY_RECOMPUTATION",
         "analysis_role": "V_B_system_cost_panel_a",
         "active_display_metric": "fixed_query_classification_throughput",
@@ -562,7 +562,7 @@
           "all_summary_cells_independently_recomputed": true
         },
         "artifacts": {
-          "run_directory": "phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260830T-marker-final-v1",
+          "run_directory": "experiments/cost/processing_benchmark/outputs/controlled-processing-20260830T-marker-final-v1",
           "runner_sha256": "c24545a6f854f0bb36a5ee325452f21dabe8b1a020ba46f53a322b9441fb4746",
           "independent_auditor_sha256": "360f63fee5988b3cd8e0eedf85840032a50733f66e18d2b3b1c33565703aea33",
           "run_config_sha256": "a5bb450af5cf112922efa91705d74e5ccff32d8a227150ffee2c9e749f6d3676",
@@ -594,7 +594,7 @@
             "path": "figure-data/fig_processing_cost_load.pdf",
             "sha256": "7c47cb30a40efba5765fdc4e6b7af07dea9b0195deba0897103a4667a2924a2c"
           },
-          "historical_run_directory": "phase5_evaluation/processing_benchmark/outputs/controlled-processing-20260829T1152Z",
+          "historical_run_directory": "experiments/cost/processing_benchmark/outputs/controlled-processing-20260829T1152Z",
           "source_git_commit": "4ffaaedf25b70760f9adf11825bb2c15463f15d5",
           "source_worktree_dirty": true
         },
@@ -648,7 +648,7 @@
           "all_summary_cells_independently_recomputed": true
         },
         "artifacts": {
-          "run_directory": "phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-marker-final-v1",
+          "run_directory": "experiments/cost/processing_benchmark/outputs/policy-update-20260830T-marker-final-v1",
           "runner_sha256": "1d42a413aef8095bccbed9a5e7dae087f6438182b65b5c2e22e6c74d7ea7a487",
           "auditor_sha256": "558b3f810f9e97180c27ba4115ee4d572141cf2b59c76480cbaf292141636de4",
           "classifier_sha256": "eb11dd64f5cc3175557462367796541a45d971459f5a16f46a655e1aee614377",
@@ -665,18 +665,18 @@
           }
         },
         "historical_inactive_controls": {
-          "ipv4_policy_scale_run": "phase6_system/e2e/outputs/policy-scale-ipv4-20260830T081349Z",
-          "ipv6_policy_scale_run": "phase6_system/e2e/outputs/policy-scale-ipv6-20260830T081712Z",
+          "ipv4_policy_scale_run": "implementation/prototype/e2e/outputs/policy-scale-ipv4-20260830T081349Z",
+          "ipv6_policy_scale_run": "implementation/prototype/e2e/outputs/policy-scale-ipv6-20260830T081712Z",
           "ipv4_panel": "figure-data/fig_update_latency_ipv4.pdf",
           "ipv6_panel": "figure-data/fig_update_latency_ipv6.pdf",
           "former_single_panel": "figure-data/fig_update_latency.pdf",
-          "former_ipv4_scale_run": "phase6_system/e2e/outputs/scale-20260823T025539Z",
-          "outage_episode": "phase6_system/e2e/outputs/run-20260823T024129Z/failures/routinator-outage"
+          "former_ipv4_scale_run": "implementation/prototype/e2e/outputs/scale-20260823T025539Z",
+          "outage_episode": "implementation/prototype/e2e/outputs/run-20260823T024129Z/failures/routinator-outage"
         },
         "claim_boundary": "descriptive latency of one single-core Python reference-engine policy replacement and first classification; not file acquisition, ROA publication, relying-party refresh, RTR, router installation, forwarding, Internet convergence, tail reliability, or a causal address-family effect"
       },
       "ipv6_routing_sensitivity": {
-        "version_label": "phase7-ipv6-candidate-sensitivity-v1",
+        "version_label": "routing_model-ipv6-candidate-sensitivity-v1",
         "status": "VERIFIED_DESCRIPTIVE",
         "candidate_funnel": {
           "table_candidates": 83,
@@ -710,7 +710,7 @@
           "unlisted_origin_exposure_change": 13.966343
         },
         "artifacts": {
-          "run_directory": "phase7_simulation/results/ipv6_sensitivity",
+          "run_directory": "experiments/routing_model/results/ipv6_sensitivity",
           "runner_sha256": "c100743e879dd21552902bc71ba6b1041c2c398ce4fef9584370ddd964e00855",
           "frozen_manifest_file_sha256": "e25208d0f3e66e8c4a59c31fb457967bfe551da792cc3ed01a2afd1708ea2762",
           "frozen_manifest_canonical_sha256": "e75b5b4a844a27646efddd99fecc2dfc457342a6f7d44f16176a750a28303bee",
@@ -846,7 +846,7 @@
       "deployment_outcomes_reanalysis": {
         "version_label": "fixed-model-split-lane-reanalysis-v4-absolute",
         "status": "VERIFIED_DETERMINISTIC_REBUILD",
-        "role": "active 11-point renderer using preserved Phase 7 anchors and the separately audited extension; complete cell evidence is recorded under facts.deployment_grid_extension",
+        "role": "active 11-point renderer using preserved routing-model anchors and the separately audited extension; complete cell evidence is recorded under facts.deployment_grid_extension",
         "physical_rows_verified": 36800,
         "fixed_root_origin_units": 200,
         "topology_ases": 77429,
@@ -925,7 +925,7 @@
         "claim_boundary": "conditional absolute destination-delivery outcomes in one fixed routing model; paired-change intervals remain contrast evidence rather than absolute-outcome bands; no same-announcement joint frontier or Internet-wide estimate"
       },
       "legacy_joint_diagnostic": {
-        "version_label": "phase7-legacy-w2-joint-diagnostic-v1",
+        "version_label": "routing_model-legacy-w2-joint-diagnostic-v1",
         "status": "inactive_audit_history_do_not_cite",
         "physical_rows_verified": 36800,
         "joint_rows": 6600,
@@ -953,10 +953,10 @@
         "claim_boundary": "single opaque topology and fixed 589-AS scenario over selected synthetic units; post-hoc point estimates, not a preregistered joint frontier or Internet estimate"
       },
       "legacy_evidence_mapping": {
-        "phase6_selected_fixture": "seven route cases checked in each of 124 snapshots, for 868 checks; signed-fixture-to-action smoke test, not E1b or E2 full-object evidence",
-        "phase6_handoff_controls_20260823": "pilot_only; 160 transitions whose old open arm precompiled both endpoint origins into route actions, so this run is not benefit evidence",
-        "phase6_staging_and_faults": "regression and sizing seeds only; no atomicity, full-RIB, concurrency, or declared stale-window evidence",
-        "phase7_phase8_simulation": "opaque fixed topology/scenario regression; the old headline delivery and exposure curves came from separate lanes and are not a joint E4 frontier"
+        "prototype_selected_fixture": "seven route cases checked in each of 124 snapshots, for 868 checks; signed-fixture-to-action smoke test, not E1b or E2 full-object evidence",
+        "prototype_handoff_controls_20260823": "pilot_only; 160 transitions whose old open arm precompiled both endpoint origins into route actions, so this run is not benefit evidence",
+        "prototype_staging_and_faults": "regression and sizing seeds only; no atomicity, full-RIB, concurrency, or declared stale-window evidence",
+        "routing_model_attack_reachability_simulation": "opaque fixed topology/scenario regression; the old headline delivery and exposure curves came from separate lanes and are not a joint E4 frontier"
       }
     },
     "workload": {
@@ -1181,7 +1181,7 @@
       "dynamic_policies_checked": 122,
       "dynamic_route_clauses_checked": 854,
       "independent_aggregate_audit": {
-        "path": "phase6_system/e2e/audits/run-20260823T024129Z/q2_aggregate_audit.json",
+        "path": "implementation/prototype/e2e/audits/run-20260823T024129Z/q2_aggregate_audit.json",
         "verification_status": "VERIFIED_OUTCOME_AGGREGATE",
         "provenance_status": "PARTIAL",
         "audit_sha256": "02abf4e0b1558085a897c0b0c38e2599afb3dbad502501949afc781fdb022e9f",
@@ -1403,7 +1403,7 @@
       "random_deployment_seeds": [1, 2, 3, 4, 5],
       "primary_deployment_orders": "random seeds 1-5, averaged within sample unit at intermediate levels",
       "primary_competition_attacker_class": "uniform",
-      "competition_scope": "Phase 7 evaluates one same-prefix eligible unlisted origin; Phase 8 separately evaluates one deterministic same-length sibling; strictly more-specific routes exceed the configured maxLength and are rejected by both enforcing policies; broader maxLength not evaluated",
+      "competition_scope": "the routing model evaluates one same-prefix eligible unlisted origin; attack-reachability separately evaluates one deterministic same-length sibling; strictly more-specific routes exceed the configured maxLength and are rejected by both enforcing policies; broader maxLength not evaluated",
       "campaign_max_length": "DA object and exact-child ROA use selected leaf length; aggregate-only ROA uses root length",
       "primary_open_arms": ["D1_open_delegate_only", "A1_open_competition_uniform"],
       "sensitivity_deployment_orders": ["degree", "customer_cone"],
@@ -1521,16 +1521,16 @@
       "open_unlisted_delivery_pct": [32.35, 32.35, 33.82, 34.88, 39.36, 40.35, 41.36, 41.23]
     },
     "deployment_grid_extension": {
-      "version_label": "phase7-deployment-grid-extension-analysis-v1",
+      "version_label": "routing_model-deployment-grid-extension-analysis-v1",
       "status": "VERIFIED_WITH_INDEPENDENT_READ_ONLY_AUDIT",
-      "purpose": "fill the seven missing decile cells for the two active routing-model panels while preserving the frozen Phase 7 campaign",
+      "purpose": "fill the seven missing decile cells for the two active routing-model panels while preserving the frozen routing-model campaign",
       "scope_label": "opaque fixed 589-AS scenario set",
       "scope_semantics": "coverage is the share of this one fixed set assigned the modeled upgraded policy; 0% means none of the 589 ASes and 100% means all 589 ASes, with no claim beyond this set",
       "historical_manifest_string": "fixed measured 589-AS ROV set",
       "historical_manifest_string_status": "immutable historical scenario label in the hash-bound formal manifest; it does not establish that the 589-AS set is measured, current, representative, or an estimate of Internet conditions",
-      "legacy_phase7_physical_scenarios_preserved": 36800,
-      "legacy_phase7_manifest_file_sha256": "a674b87afd90716521f19673c4ddbd1153c1b911ec5021a99e0eabe579bcbeae",
-      "legacy_phase7_raw_sha256": "fb9ec8fa80d41b5a98b4bc956d82ebfec0514eaab27fd183f86683dfed6925b7",
+      "legacy_routing_model_physical_scenarios_preserved": 36800,
+      "legacy_routing_model_manifest_file_sha256": "a674b87afd90716521f19673c4ddbd1153c1b911ec5021a99e0eabe579bcbeae",
+      "legacy_routing_model_raw_sha256": "fb9ec8fa80d41b5a98b4bc956d82ebfec0514eaab27fd183f86683dfed6925b7",
       "extension_physical_scenarios": 14000,
       "extension_first_attempt_successes": 14000,
       "extension_failed_scenarios": 0,
@@ -1565,17 +1565,17 @@
           "metric": "destination delivery change relative to the announcement-matched aggregate-only reference",
           "interval_type": "pointwise stratified paired rescaled percentile interval for the finite frozen eligible-holder frame with SRSWOR finite-population correction",
           "cells": [
-            {"fixed_set_coverage_percent": 0, "upgraded_as_count": 0, "point_estimate_pp": 0.0, "interval95_pp": [0.0, 0.0], "fixed_order_min_max_pp": [0.0, 0.0], "source": "frozen_phase7"},
-            {"fixed_set_coverage_percent": 10, "upgraded_as_count": 58, "point_estimate_pp": 2.3563214917829867, "interval95_pp": [1.642710973266316, 3.1530762716962686], "fixed_order_min_max_pp": [0.8987498541916156, 5.858268475041391], "source": "frozen_phase7"},
+            {"fixed_set_coverage_percent": 0, "upgraded_as_count": 0, "point_estimate_pp": 0.0, "interval95_pp": [0.0, 0.0], "fixed_order_min_max_pp": [0.0, 0.0], "source": "frozen_routing_model"},
+            {"fixed_set_coverage_percent": 10, "upgraded_as_count": 58, "point_estimate_pp": 2.3563214917829867, "interval95_pp": [1.642710973266316, 3.1530762716962686], "fixed_order_min_max_pp": [0.8987498541916156, 5.858268475041391], "source": "frozen_routing_model"},
             {"fixed_set_coverage_percent": 20, "upgraded_as_count": 117, "point_estimate_pp": 6.998228962441089, "interval95_pp": [5.330019579406011, 8.85736097654143], "fixed_order_min_max_pp": [5.458964086401998, 8.394972816607174], "source": "grid_extension"},
             {"fixed_set_coverage_percent": 30, "upgraded_as_count": 176, "point_estimate_pp": 8.280889353673137, "interval95_pp": [6.378356580221503, 10.308005451814742], "fixed_order_min_max_pp": [7.509239807930852, 9.412754010074007], "source": "grid_extension"},
             {"fixed_set_coverage_percent": 40, "upgraded_as_count": 235, "point_estimate_pp": 10.178675938942918, "interval95_pp": [7.865620668160654, 12.628380628613503], "fixed_order_min_max_pp": [8.846705835114637, 12.107734121539366], "source": "grid_extension"},
-            {"fixed_set_coverage_percent": 50, "upgraded_as_count": 294, "point_estimate_pp": 11.40388722302505, "interval95_pp": [8.907002970667047, 14.054665972973151], "fixed_order_min_max_pp": [9.792196310969842, 12.894417796209327], "source": "frozen_phase7"},
+            {"fixed_set_coverage_percent": 50, "upgraded_as_count": 294, "point_estimate_pp": 11.40388722302505, "interval95_pp": [8.907002970667047, 14.054665972973151], "fixed_order_min_max_pp": [9.792196310969842, 12.894417796209327], "source": "frozen_routing_model"},
             {"fixed_set_coverage_percent": 60, "upgraded_as_count": 353, "point_estimate_pp": 12.311947947869296, "interval95_pp": [9.624269884815101, 15.141432486315798], "fixed_order_min_max_pp": [11.306298871741687, 13.406761273794007], "source": "grid_extension"},
             {"fixed_set_coverage_percent": 70, "upgraded_as_count": 412, "point_estimate_pp": 12.979085878946961, "interval95_pp": [10.090339144944513, 16.019088911215775], "fixed_order_min_max_pp": [11.352351126438808, 14.565421934840488], "source": "grid_extension"},
             {"fixed_set_coverage_percent": 80, "upgraded_as_count": 471, "point_estimate_pp": 14.996342474359455, "interval95_pp": [11.700843565124705, 18.42310086301951], "fixed_order_min_max_pp": [13.673437103734583, 15.601518250069871], "source": "grid_extension"},
             {"fixed_set_coverage_percent": 90, "upgraded_as_count": 530, "point_estimate_pp": 16.26796572833384, "interval95_pp": [12.698634619311164, 19.998028588217682], "fixed_order_min_max_pp": [15.57268713138234, 17.087166303459487], "source": "grid_extension"},
-            {"fixed_set_coverage_percent": 100, "upgraded_as_count": 589, "point_estimate_pp": 17.093069662307133, "interval95_pp": [13.31303570782103, 21.029264624489258], "fixed_order_min_max_pp": [17.09306966230713, 17.09306966230713], "source": "frozen_phase7"}
+            {"fixed_set_coverage_percent": 100, "upgraded_as_count": 589, "point_estimate_pp": 17.093069662307133, "interval95_pp": [13.31303570782103, 21.029264624489258], "fixed_order_min_max_pp": [17.09306966230713, 17.09306966230713], "source": "frozen_routing_model"}
           ]
         },
         "competition_unlisted_origin_exposure_change": {
@@ -1583,45 +1583,45 @@
           "metric": "destination exposure change relative to the announcement-matched aggregate-only reference in the separate uniform-origin competition lane",
           "interval_type": "descriptive ordinary stratified paired selected-unit stability interval without finite-population correction",
           "cells": [
-            {"fixed_set_coverage_percent": 0, "upgraded_as_count": 0, "point_estimate_pp": 0.0, "interval95_pp": [0.0, 0.0], "fixed_order_min_max_pp": [0.0, 0.0], "source": "frozen_phase7"},
-            {"fixed_set_coverage_percent": 10, "upgraded_as_count": 58, "point_estimate_pp": 2.525407310733802, "interval95_pp": [1.6503084495185443, 3.4262152487057884], "fixed_order_min_max_pp": [0.4112880295414283, 7.785755080154755], "source": "frozen_phase7"},
+            {"fixed_set_coverage_percent": 0, "upgraded_as_count": 0, "point_estimate_pp": 0.0, "interval95_pp": [0.0, 0.0], "fixed_order_min_max_pp": [0.0, 0.0], "source": "frozen_routing_model"},
+            {"fixed_set_coverage_percent": 10, "upgraded_as_count": 58, "point_estimate_pp": 2.525407310733802, "interval95_pp": [1.6503084495185443, 3.4262152487057884], "fixed_order_min_max_pp": [0.4112880295414283, 7.785755080154755], "source": "frozen_routing_model"},
             {"fixed_set_coverage_percent": 20, "upgraded_as_count": 117, "point_estimate_pp": 7.010572348442874, "interval95_pp": [4.83288687629967, 9.236125640260246], "fixed_order_min_max_pp": [3.839776168406671, 8.83965511076774], "source": "grid_extension"},
             {"fixed_set_coverage_percent": 30, "upgraded_as_count": 176, "point_estimate_pp": 7.3316305966799655, "interval95_pp": [4.938731535742964, 9.69885534292478], "fixed_order_min_max_pp": [4.5487959007644365, 9.47615939229626], "source": "grid_extension"},
             {"fixed_set_coverage_percent": 40, "upgraded_as_count": 235, "point_estimate_pp": 7.809604709708474, "interval95_pp": [5.171666238687946, 10.527960571282156], "fixed_order_min_max_pp": [5.747145337704369, 9.978640999132788], "source": "grid_extension"},
-            {"fixed_set_coverage_percent": 50, "upgraded_as_count": 294, "point_estimate_pp": 7.9949088281970075, "interval95_pp": [5.084712741923002, 10.981411050792452], "fixed_order_min_max_pp": [5.595727070927162, 10.124274142452789], "source": "frozen_phase7"},
+            {"fixed_set_coverage_percent": 50, "upgraded_as_count": 294, "point_estimate_pp": 7.9949088281970075, "interval95_pp": [5.084712741923002, 10.981411050792452], "fixed_order_min_max_pp": [5.595727070927162, 10.124274142452789], "source": "frozen_routing_model"},
             {"fixed_set_coverage_percent": 60, "upgraded_as_count": 353, "point_estimate_pp": 8.517761574167224, "interval95_pp": [5.364454218727885, 11.792573726335608], "fixed_order_min_max_pp": [6.099053258987707, 10.301942161138465], "source": "grid_extension"},
             {"fixed_set_coverage_percent": 70, "upgraded_as_count": 412, "point_estimate_pp": 9.093835093478758, "interval95_pp": [5.587648200520343, 12.764602550314565], "fixed_order_min_max_pp": [6.7503884750286804, 10.557839805400175], "source": "grid_extension"},
             {"fixed_set_coverage_percent": 80, "upgraded_as_count": 471, "point_estimate_pp": 9.20301363805792, "interval95_pp": [5.124905699986873, 13.38291824176012], "fixed_order_min_max_pp": [8.539631891699523, 9.85486263789511], "source": "grid_extension"},
             {"fixed_set_coverage_percent": 90, "upgraded_as_count": 530, "point_estimate_pp": 8.914646200592827, "interval95_pp": [4.722946075858788, 13.262546572940852], "fixed_order_min_max_pp": [8.386792407867466, 9.434416505451177], "source": "grid_extension"},
-            {"fixed_set_coverage_percent": 100, "upgraded_as_count": 589, "point_estimate_pp": 8.878893523087369, "interval95_pp": [4.461928915447847, 13.424339827015604], "fixed_order_min_max_pp": [8.878893523087369, 8.878893523087369], "source": "frozen_phase7"}
+            {"fixed_set_coverage_percent": 100, "upgraded_as_count": 589, "point_estimate_pp": 8.878893523087369, "interval95_pp": [4.461928915447847, 13.424339827015604], "fixed_order_min_max_pp": [8.878893523087369, 8.878893523087369], "source": "frozen_routing_model"}
           ]
         }
       },
       "artifacts": {
         "formal_manifest": {
-          "path": "phase7_simulation/results/deployment_grid_extension/manifest.json",
+          "path": "experiments/routing_model/results/deployment_grid_extension/manifest.json",
           "file_sha256": "f5a20c7a2592b6cac6231fba4d2635806644432da9c6ee207ae97d470a049999",
           "internal_manifest_sha256": "cb5947b3574b0b95d5d1c2f7272b7fa392811741c34af7044822e7e419691258"
         },
         "formal_checkpoint": {
-          "path": "phase7_simulation/results/deployment_grid_extension/checkpoint.json",
+          "path": "experiments/routing_model/results/deployment_grid_extension/checkpoint.json",
           "file_sha256": "f1bbc3717592a4b941421d784a5d61e9d0997b44c0b88fa6b256c72e522ace01",
           "completed_scenarios": 14000,
           "failed_scenarios": 0,
           "retries_authorized": false
         },
         "formal_raw": {
-          "path": "phase7_simulation/results/deployment_grid_extension/raw_scenarios.jsonl",
+          "path": "experiments/routing_model/results/deployment_grid_extension/raw_scenarios.jsonl",
           "file_sha256": "d1ad91a251a06899179e353d0771bca53b2cbd7ffff95dad8dc0d12531878716"
         },
         "independent_audit": {
-          "path": "phase7_simulation/results/deployment_grid_extension/independent_audit.json",
+          "path": "experiments/routing_model/results/deployment_grid_extension/independent_audit.json",
           "file_sha256": "c5201a212681c150e9574e0c5885eabb607ff990647ab475787c0f0bcd185713",
           "canonical_core_sha256": "45f982e5a596d9f62894640d86d35abfd6bf9c28a9fe840903b61476d88d84bd",
           "passed": true
         },
         "analysis_manifest": {
-          "path": "phase7_simulation/results/deployment_grid_extension/analysis/analysis_manifest.json",
+          "path": "experiments/routing_model/results/deployment_grid_extension/analysis/analysis_manifest.json",
           "file_sha256": "51e9488e7d3b1e607581128ee5e89f692bab1ddd64b6902919e92ccaf6591a39",
           "status": "VERIFIED"
         },
@@ -1641,7 +1641,7 @@
       "claim_boundary": "conditional routing outcomes over one opaque fixed topology and one opaque fixed 589-AS scenario set; neither 100% nor any intermediate point describes the Internet, and the two panels remain separate announcement-set comparisons"
     },
     "selected_unit_reanalysis": {
-      "version_label": "phase9-selected-unit-reanalysis-v1",
+      "version_label": "reanalysis-selected-unit-reanalysis-v1",
       "status": "VERIFIED",
       "purpose": "replace invalid finite-frame interpretations for current manuscript competitor-dependent intervals while preserving frozen propagation outputs and point estimates",
       "selected_units": 200,
@@ -1654,8 +1654,8 @@
       "competition_cells_sha256": "176547af20b4b661ddbbdf647fc62233602838eaa086ed20237854f7007a170d",
       "sibling_cells_sha256": "b4eb30ec1a3ac796410e7e4ded8fb26904c3a25f5dab1eec88fe2f053b73f25f",
       "summary_sha256": "64448d3464f26202436bec12016bceb266d65d40ebd1118115a3c92f75ba716f",
-      "phase7_max_point_error_vs_frozen": 1.1102230246251565e-16,
-      "phase8_max_point_error_vs_frozen": 0.0,
+      "routing_model_max_point_error_vs_frozen": 1.1102230246251565e-16,
+      "attack_reachability_max_point_error_vs_frozen": 0.0,
       "superseded_fpc_intervals_pp": {
         "at_1_pct_exposure": [-0.23, 0.21],
         "at_5_pct_exposure": [0.98, 1.95],
@@ -1668,11 +1668,11 @@
       }
     },
     "sibling_sensitivity": {
-      "version_label": "phase8-sibling-endpoint-v1",
+      "version_label": "attack_reachability-sibling-endpoint-v1",
       "status": "VERIFIED",
       "design": "200 candidate-bearing root-origin sample units x conventional/open-0/open-100 endpoint cells; one deterministic same-length sibling and the frozen uniform competitor per unit",
       "sample_unit": "candidate-bearing root-origin ASN (historical artifact field holder_asn), not a verified resource holder",
-      "scenario_set": "opaque fixed 589-AS scenario set reused unchanged from Phase 7",
+      "scenario_set": "opaque fixed 589-AS scenario set reused unchanged from routing-model",
       "physical_trials_planned": 600,
       "physical_trials_completed": 600,
       "failed_trials": 0,
@@ -1683,7 +1683,7 @@
       "bootstrap_unit": "selected sample unit, paired within four frozen strata",
       "bootstrap_replicates": 10000,
       "bootstrap_seed": 20260823,
-      "reported_interval_source": "phase9-selected-unit-reanalysis-v1",
+      "reported_interval_source": "reanalysis-selected-unit-reanalysis-v1",
       "reported_interval_type": "ordinary stratified paired bootstrap stability interval without finite-population correction",
       "sibling_route_attacker_reference_pct": 51.74780376267029,
       "sibling_route_attacker_treatment_pct": 98.20092166411959,

@@ -39,16 +39,16 @@
   },
   "inputs": {
     "allocation_pairs": {
-      "path": "<repo>/phase1_empirical/allocation_tree/outputs/tables/allocation_tree_pairs.csv",
+      "path": "<repo>/experiments/candidates/allocation_tree/outputs/tables/allocation_tree_pairs.csv",
       "sha256": "4125be93823ef9b179be57fffda8075218e8443c34be823a2b3643c5fe1bf02a"
     },
     "bgp_origins": {
-      "path": "<repo>/phase1_empirical/allocation_tree/outputs/tables/bgp_origins.csv",
+      "path": "<repo>/experiments/candidates/allocation_tree/outputs/tables/bgp_origins.csv",
       "sha256": "854deee33792067f3dab5ca7d3636d0af04be0b16206ead7443bf1c22c67d7dc"
     }
   },
   "output": {
-    "path": "<repo>/phase1_empirical/allocation_tree/outputs/tables/allocation_tree_origin_divergence.csv",
+    "path": "<repo>/experiments/candidates/allocation_tree/outputs/tables/allocation_tree_origin_divergence.csv",
     "sha256": "b046e31aec24b3c9e48e99f17185be211f0229a898ee00c28e72d10097079b27"
   }
 }

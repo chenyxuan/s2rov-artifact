@@ -1,23 +1,23 @@
-# Phase 9 selected-unit reanalysis contract
+# Reanalysis selected-unit reanalysis contract
 
 ## Purpose
 
-Phase 7 assigned eligible-unlisted competitors only after drawing 200 of the
+Routing-model assigned eligible-unlisted competitors only after drawing 200 of the
 691 root-origin units. Consequently, competition outcomes for the 491
 unselected units were never defined. This reanalysis does not alter or rerun
 any propagation trial. It corrects the inferential target for the
 competitor-dependent interval-bearing results reported in the current
-manuscript: Phase 7 all-AS destination/random-deployment cells and the Phase 8
+manuscript: routing-model all-AS destination/random-deployment cells and the attack-reachability
 all-AS full-upgrade route and destination endpoints.
 
 ## Inputs
 
-- `phase7_simulation/results/paper_campaign/analysis/holder_contrasts.jsonl`
-- `phase7_simulation/results/paper_campaign/analysis/raw_cell_summary.csv`
-- `phase8_sibling_sensitivity/results/analysis/holder_contrasts.jsonl`
-- `phase8_sibling_sensitivity/results/analysis/summary.json`
+- `experiments/routing_model/results/paper_campaign/analysis/holder_contrasts.jsonl`
+- `experiments/routing_model/results/paper_campaign/analysis/raw_cell_summary.csv`
+- `experiments/attack_reachability/results/analysis/holder_contrasts.jsonl`
+- `experiments/attack_reachability/results/analysis/summary.json`
 
-The output records the SHA-256 digest of each input. Frozen Phase 7 and Phase 8
+The output records the SHA-256 digest of each input. Frozen routing-model and attack-reachability
 artifacts are read-only.
 
 ## Estimand and interval
@@ -33,16 +33,16 @@ artifacts are read-only.
   selected-unit distributions, not confidence intervals for the 691-unit
   frame, the Internet, traffic, or adversaries.
 - One paired replicate-weight matrix is shared by all cells from the same
-  phase. Deployment-order averages already present in the holder contrasts
+  campaign. Deployment-order averages already present in the holder contrasts
   remain within-unit repeated conditions.
 
-Seeds are 20260804 for Phase 7 and 20260823 for Phase 8. Percentile endpoints
+Seeds are 20260804 for routing-model and 20260823 for attack-reachability. Percentile endpoints
 use NumPy's linear method. All expected cells must contain exactly 200 unique
 units, 50 in each stratum. The script fails if recomputed point estimates do
 not match the frozen summaries to numerical precision.
 
 ## Outputs
 
-- `results/competition_cells.csv`: corrected Phase 7 selected-unit summaries.
-- `results/sibling_cells.csv`: corrected Phase 8 selected-unit summaries.
+- `results/competition_cells.csv`: corrected routing-model selected-unit summaries.
+- `results/sibling_cells.csv`: corrected attack-reachability selected-unit summaries.
 - `results/summary.json`: contract, input hashes, audits, and headline values.

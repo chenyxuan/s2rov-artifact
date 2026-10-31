@@ -1,4 +1,4 @@
-"""Phase 1: Full Analysis — Descriptive stats, classification, temporal, impact.
+"""candidate-selection: Full Analysis — Descriptive stats, classification, temporal, impact.
 Self-contained script — runs all tasks and produces figures + tables."""
 import pandas as pd
 import matplotlib
@@ -9,8 +9,8 @@ from pathlib import Path
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[3]
-PHASE_DIR = Path(__file__).resolve().parents[1]
-OUTPUT_DIR = PHASE_DIR / "outputs"
+HERE_DIR = Path(__file__).resolve().parents[1]
+OUTPUT_DIR = HERE_DIR / "outputs"
 TABLE_DIR = OUTPUT_DIR / "tables"
 FIG_DIR = OUTPUT_DIR / "figures"
 for d in [TABLE_DIR, FIG_DIR]:
@@ -247,7 +247,7 @@ fig.tight_layout(); fig.savefig(FIG_DIR / "f8_ml_overlap.png", dpi=150); plt.clo
 
 # ─── FINAL ───
 print("\n" + "="*50)
-print("PHASE 1 COMPLETE")
+print("candidate-selection COMPLETE")
 print(f"Relationship-labeled: {n_relationship:,} ({n_relationship/len(data)*100:.1f}%)")
 print(f"MaxLength-only: {n_ml:,} ({n_ml/len(data)*100:.1f}%)")
 print(f"Other:          {n_other:,} ({n_other/len(data)*100:.1f}%)")

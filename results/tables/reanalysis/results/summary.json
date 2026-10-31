@@ -4,7 +4,7 @@
     "reanalyze.py": "40e78d20f6f11b1cacc808df05dff6a18aa90c31be1c3115245975461a1a39fb"
   },
   "audits": {
-    "phase7": {
+    "routing_model": {
       "holders": 200,
       "replicate_weight_total": 691.0,
       "replicate_weight_total_constant": true,
@@ -15,8 +15,8 @@
         "S4": 50
       }
     },
-    "phase7_max_point_error_vs_frozen": 1.1102230246251565e-16,
-    "phase8": {
+    "routing_model_max_point_error_vs_frozen": 1.1102230246251565e-16,
+    "attack_reachability": {
       "holders": 200,
       "replicate_weight_total": 690.9999999999999,
       "replicate_weight_total_constant": true,
@@ -27,13 +27,13 @@
         "S4": 50
       }
     },
-    "phase8_max_point_error_vs_frozen": 0.0
+    "attack_reachability_max_point_error_vs_frozen": 0.0
   },
   "contract": {
     "finite_population_correction": false,
     "interval_interpretation": "descriptive ordinary stratified paired bootstrap stability over selected units; not 691-frame confidence",
     "selected_units": 200,
-    "standardization": "fixed Phase-7 stratum frame shares",
+    "standardization": "fixed routing-model stratum frame shares",
     "strata": {
       "S1": 50,
       "S2": 50,
@@ -148,11 +148,11 @@
     }
   },
   "inputs_sha256": {
-    "phase7_simulation/results/paper_campaign/analysis/holder_contrasts.jsonl": "407194fa21a41a7c748caf114ed81183915a538b2d6ebebdbd3805b95edc2413",
-    "phase7_simulation/results/paper_campaign/analysis/raw_cell_summary.csv": "4de8618bd35fe21a4731033cab8a51d766eeb1d03d7aed5cc782fcef6ae86969",
-    "phase8_sibling_sensitivity/results/analysis/holder_contrasts.jsonl": "561c26179f7c79560b7da387c4c4ca95db7de8817adc3cd091c4404bf01fd254",
-    "phase8_sibling_sensitivity/results/analysis/summary.json": "610cd1cb7c82e73b4c7f9c4aa0cbbab39237fbd32c5b132d02c19fd8fd652801"
+    "experiments/routing_model/results/paper_campaign/analysis/holder_contrasts.jsonl": "407194fa21a41a7c748caf114ed81183915a538b2d6ebebdbd3805b95edc2413",
+    "experiments/routing_model/results/paper_campaign/analysis/raw_cell_summary.csv": "4de8618bd35fe21a4731033cab8a51d766eeb1d03d7aed5cc782fcef6ae86969",
+    "experiments/attack_reachability/results/analysis/holder_contrasts.jsonl": "561c26179f7c79560b7da387c4c4ca95db7de8817adc3cd091c4404bf01fd254",
+    "experiments/attack_reachability/results/analysis/summary.json": "610cd1cb7c82e73b4c7f9c4aa0cbbab39237fbd32c5b132d02c19fd8fd652801"
   },
-  "schema_version": "phase9-selected-unit-reanalysis-v1",
+  "schema_version": "reanalysis-selected-unit-reanalysis-v1",
   "status": "complete"
 }

@@ -1,4 +1,4 @@
-# Phase 3: S2-ROV Four-State Semantics
+# Classifier semantics: S2-ROV Four-State Semantics
 
 **Version:** 4.0
 **Re-audited:** 2026-07-29
@@ -12,7 +12,7 @@ S2-ROV separates two forms of evidence:
 - a **delegated choice** admitted by signed open policy but not authenticated
   as a particular origin.
 
-The four design requirements inherited from Phase 2 are exact aggregate
+The four design requirements inherited from formal-statement are exact aggregate
 protection, proper-descendant scoping, longest-prefix override, and result
 provenance.
 
@@ -232,11 +232,11 @@ transport \(\mathsf{Delegated}\) provenance.  A standards proposal would need
 a defined signed object profile, canonical overlap rules, transport encoding,
 router behavior, and downgrade semantics.
 
-The 14-byte header and variable-length Stripe encoding in Phase 4 are a
+The 14-byte header and variable-length Stripe encoding in DAROA-encoding are a
 reference format for round-trip and structural tests, not an allocated RPKI
 profile or a wire-compatibility claim.
 
-## 10. Phase 4 Requirements
+## 10. DAROA encoding Requirements
 
 - serialize one unique Stripe per prefix;
 - preserve explicit-set and open-mode fields together;

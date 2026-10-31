@@ -35,9 +35,9 @@ from typing import Any, Sequence
 SCRIPT = Path(__file__).resolve()
 BENCHMARK_DIR = SCRIPT.parent
 REPO_ROOT = SCRIPT.parents[2]
-PHASE4_SCRIPTS = REPO_ROOT / "phase4_encoding" / "scripts"
-if str(PHASE4_SCRIPTS) not in sys.path:
-    sys.path.insert(0, str(PHASE4_SCRIPTS))
+DAROA_CODEC_SCRIPTS = REPO_ROOT / "implementation" / "daroa_codec" / "scripts"
+if str(DAROA_CODEC_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(DAROA_CODEC_SCRIPTS))
 
 from utils.daroa import DAROA, Stripe, ValidationState  # noqa: E402
 
@@ -639,8 +639,8 @@ def build_run_config(
         "script_sha256": sha256_file(SCRIPT),
         "auditor": str(AUDIT_SCRIPT.resolve()),
         "auditor_sha256": sha256_file(AUDIT_SCRIPT),
-        "classifier": str(PHASE4_SCRIPTS / "utils" / "daroa.py"),
-        "classifier_sha256": sha256_file(PHASE4_SCRIPTS / "utils" / "daroa.py"),
+        "classifier": str(DAROA_CODEC_SCRIPTS / "utils" / "daroa.py"),
+        "classifier_sha256": sha256_file(DAROA_CODEC_SCRIPTS / "utils" / "daroa.py"),
         "input_manifest_sha256": sha256_file(run_dir / "input_manifest.json"),
         "schedule_sha256": sha256_file(run_dir / "schedule.json"),
         "source_git_commit": git_commit,

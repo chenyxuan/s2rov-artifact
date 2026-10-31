@@ -847,7 +847,7 @@
       }
     }
   },
-  "run_dir": "<repo>/phase6_system/e2e/outputs/controls-20260823T022857Z",
+  "run_dir": "<repo>/implementation/prototype/e2e/outputs/controls-20260823T022857Z",
   "schema_version": 1,
   "source_hash_audit": {
     "entries": [
@@ -924,7 +924,7 @@
         "path": "config/churn/frr/origin-b.conf"
       }
     ],
-    "source_root": "<repo>/phase6_system/e2e"
+    "source_root": "<repo>/implementation/prototype/e2e"
   },
   "timing_provenance": {
     "bgp_observation_limitation": "announce_start is not emitted as an event; the audit reports post_absence_to_adj_rib_ms instead",

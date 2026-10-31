@@ -73,10 +73,10 @@ Primary MRT run:
 
 ```bash
 /usr/bin/time -v python \
-  phase1_empirical/allocation_tree/visibility_experiment/scripts/analyze_visibility.py \
-  --ripe phase1_empirical/allocation_tree/data/ripe.db.gz \
-  --mrt phase1_empirical/allocation_tree/visibility_experiment/input/data/bview.20260624.0000.gz \
-  --output phase1_empirical/allocation_tree/visibility_experiment/outputs \
+  experiments/candidates/allocation_tree/visibility_experiment/scripts/analyze_visibility.py \
+  --ripe experiments/candidates/allocation_tree/data/ripe.db.gz \
+  --mrt experiments/candidates/allocation_tree/visibility_experiment/input/data/bview.20260624.0000.gz \
+  --output experiments/candidates/allocation_tree/visibility_experiment/outputs \
   --progress-every 500000
 ```
 
@@ -89,10 +89,10 @@ Independent-origin rerun:
 
 ```bash
 /usr/bin/time -v python \
-  phase1_empirical/allocation_tree/visibility_experiment/scripts/analyze_visibility.py \
-  --ripe phase1_empirical/allocation_tree/data/ripe.db.gz \
-  --bgp-csv phase1_empirical/allocation_tree/visibility_experiment/input/derived/rrc00_20260624_origins_fast.csv \
-  --output phase1_empirical/allocation_tree/visibility_experiment/outputs_recheck \
+  experiments/candidates/allocation_tree/visibility_experiment/scripts/analyze_visibility.py \
+  --ripe experiments/candidates/allocation_tree/data/ripe.db.gz \
+  --bgp-csv experiments/candidates/allocation_tree/visibility_experiment/input/derived/rrc00_20260624_origins_fast.csv \
+  --output experiments/candidates/allocation_tree/visibility_experiment/outputs_recheck \
   --progress-every 500000
 ```
 
@@ -103,10 +103,10 @@ Depth-extension full run (2026-08-28, using the independent-origin CSV):
 
 ```bash
 /usr/bin/time -v python3 \
-  phase1_empirical/allocation_tree/visibility_experiment/scripts/analyze_visibility.py \
-  --ripe phase1_empirical/allocation_tree/data/ripe.db.gz \
-  --bgp-csv phase1_empirical/allocation_tree/visibility_experiment/input/derived/rrc00_20260624_origins_fast.csv \
-  --output phase1_empirical/allocation_tree/visibility_experiment/outputs_depth \
+  experiments/candidates/allocation_tree/visibility_experiment/scripts/analyze_visibility.py \
+  --ripe experiments/candidates/allocation_tree/data/ripe.db.gz \
+  --bgp-csv experiments/candidates/allocation_tree/visibility_experiment/input/derived/rrc00_20260624_origins_fast.csv \
+  --output experiments/candidates/allocation_tree/visibility_experiment/outputs_depth \
   --progress-every 500000
 ```
 

@@ -25,8 +25,8 @@ from collections import Counter
 from pathlib import Path
 
 
-PHASE_DIR = Path(__file__).resolve().parents[1]
-TABLE_DIR = PHASE_DIR / "outputs" / "tables"
+HERE_DIR = Path(__file__).resolve().parents[1]
+TABLE_DIR = HERE_DIR / "outputs" / "tables"
 PAIR_CSV = TABLE_DIR / "allocation_tree_pairs.csv"
 BGP_CSV = TABLE_DIR / "bgp_origins.csv"
 CANDIDATE_CSV = TABLE_DIR / "allocation_tree_origin_divergence.csv"

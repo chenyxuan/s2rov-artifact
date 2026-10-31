@@ -12,7 +12,7 @@ DA-aware local-API enforcement. Native four-state RTR remains deferred.
 
 | Level | Capability | Evidence | Status |
 |---|---|---|:---:|
-| L0 | S2-ROV encoder and four-state reference validator | Phase 4/5 Python tests | Done |
+| L0 | S2-ROV encoder and four-state reference validator | DAROA-encoding/5 Python tests | Done |
 | L1 | Krill publishes a conventional ROA; Routinator reproduces RFC 6811 conflict | Historical 2026-07-06 commands and notes | Previously demonstrated |
 | L2 | Routinator exports VRPs over RTR to FRR; FRR classifies real BGP updates | `e2e/outputs/latest/baseline/` | Done |
 | L3 | Live FRR routes are evaluated and enforced through the DA local API | `e2e/outputs/latest/da/` | Done |

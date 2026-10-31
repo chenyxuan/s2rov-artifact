@@ -1,0 +1,42 @@
+{
+  "candidate_directory": "experiments/attack_reachability/results/analysis_recheck",
+  "created_at_utc": "2026-08-23T04:52:51.849542Z",
+  "excluded_as_nondeterministic": [
+    "analysis_manifest.json timestamps",
+    "RESULTS.md material-passport date"
+  ],
+  "input_identity_checks": {
+    "manifest_file_sha256": true,
+    "routing_model_leaf_reference_sha256": true,
+    "raw_results_file_sha256": true,
+    "raw_results_scientific_sha256": true
+  },
+  "reference_directory": "experiments/attack_reachability/results/analysis",
+  "reproduction_audit_sha256": "b652c7fde64e62c21e3361abf36add98c65ceaaf88ab90999edfab42da61484f",
+  "schema_version": 1,
+  "scientific_file_checks": {
+    "holder_contrasts.jsonl": {
+      "candidate_sha256": "561c26179f7c79560b7da387c4c4ca95db7de8817adc3cd091c4404bf01fd254",
+      "exact_match": true,
+      "reference_sha256": "561c26179f7c79560b7da387c4c4ca95db7de8817adc3cd091c4404bf01fd254"
+    },
+    "leaf_invariance_audit.json": {
+      "candidate_sha256": "29e2ef6fc12a856f29b4f8c62c6df060d2fe45719569ce29b558ae3860e97c62",
+      "exact_match": true,
+      "reference_sha256": "29e2ef6fc12a856f29b4f8c62c6df060d2fe45719569ce29b558ae3860e97c62"
+    },
+    "summary.csv": {
+      "candidate_sha256": "b079ca0d5be4e16ef30f399312a2021146bfa99f6d461fad4b350e433313ef81",
+      "exact_match": true,
+      "reference_sha256": "b079ca0d5be4e16ef30f399312a2021146bfa99f6d461fad4b350e433313ef81"
+    },
+    "summary.json": {
+      "candidate_sha256": "610cd1cb7c82e73b4c7f9c4aa0cbbab39237fbd32c5b132d02c19fd8fd652801",
+      "exact_match": true,
+      "reference_sha256": "610cd1cb7c82e73b4c7f9c4aa0cbbab39237fbd32c5b132d02c19fd8fd652801"
+    }
+  },
+  "status": "VERIFIED",
+  "verification_scope": "independent analysis rerun with exact scientific-output hashes",
+  "version_label": "attack_reachability-sibling-endpoint-v1"
+}

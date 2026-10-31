@@ -1,12 +1,12 @@
-"""Phase 1: Data Loader — Load and preprocess ROA misconfiguration data."""
+"""candidate-selection: Data Loader — Load and preprocess ROA misconfiguration data."""
 import pandas as pd
 from pathlib import Path
 import sys
 
 ROOT = Path(__file__).resolve().parents[3]
-PHASE_DIR = Path(__file__).resolve().parents[1]
+HERE_DIR = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data/roa-misconfiguration-data/datas"
-OUTPUT_DIR = PHASE_DIR / "outputs/tables"
+OUTPUT_DIR = HERE_DIR / "outputs/tables"
 
 COLUMNS = [
     "prefix", "bgp_origin", "roa_origin", "org", "customer",

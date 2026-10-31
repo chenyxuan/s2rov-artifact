@@ -1,6 +1,6 @@
 {
   "artifact_hash_mismatches": [],
-  "auditor": "<repo>/phase5_evaluation/processing_benchmark/audit_policy_update_benchmark.py",
+  "auditor": "<repo>/experiments/cost/processing_benchmark/audit_policy_update_benchmark.py",
   "auditor_sha256": "558b3f810f9e97180c27ba4115ee4d572141cf2b59c76480cbaf292141636de4",
   "checks": {
     "accepted_source_metadata_hashes_match": true,
@@ -344,7 +344,7 @@
       "update_ms_q3": 462.7527295
     }
   ],
-  "run_dir": "<repo>/phase5_evaluation/processing_benchmark/outputs/policy-update-20260830T-marker-final-v1",
+  "run_dir": "<repo>/experiments/cost/processing_benchmark/outputs/policy-update-20260830T-marker-final-v1",
   "schema_version": "same-size-policy-update-independent-audit-v1",
   "source_hash_mismatches": [],
   "summary_cell_checks": [

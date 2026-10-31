@@ -14,7 +14,7 @@ Paths are relative to the bundle root. The paper itself is not bundled.
 | `fig4-processing-cost.json` | Fig. 4, classification throughput and update latency |
 | `fig5-deployment-outcomes.csv` | Fig. 5, reachability and origin exposure |
 | `section5c-ipv6-sensitivity.json` | Sec. V-C, IPv6 candidate sensitivity |
-| `section5d-attack-reachability.json` | Sec. V-D, attack reachability |
+| `section5d-attack_reachability.json` | Sec. V-D, attack reachability |
 
 `results/README.md` names the pipeline file each one came from, and
 `results/numbers.json` is the ledger of every number quoted in the paper.
@@ -24,13 +24,13 @@ Paths are relative to the bundle root. The paper itself is not bundled.
 | Item | Entry point |
 |---|---|
 | Table I | `experiments/candidates/` |
-| Figs. 2, 3 | `experiments/analysis-scripts/run_partial_policy_replay.py` |
+| Figs. 2, 3 | `experiments/analysis_scripts/run_partial_policy_replay.py` |
 | Fig. 4 | `experiments/cost/processing_benchmark/` |
-| Fig. 5 | `experiments/routing-model/campaign/` |
-| Sec. V-C | `experiments/routing-model/campaign/ipv6_sensitivity.py` |
-| Sec. V-D | `experiments/attack-reachability/runner.py`, then `analyze.py` |
+| Fig. 5 | `experiments/routing_model/campaign/` |
+| Sec. V-C | `experiments/routing_model/campaign/ipv6_sensitivity.py` |
+| Sec. V-D | `experiments/attack_reachability/runner.py`, then `analyze.py` |
 
-Run the analysis scripts from `experiments/analysis-scripts/`; they resolve
+Run the analysis scripts from `experiments/analysis_scripts/`; they resolve
 their inputs relative to that directory, matching the layout here.
 
 ## 3. Rebuild from raw inputs
@@ -46,7 +46,7 @@ that regenerates it. In short:
 4. The routing model needs its own environment:
 
    ```bash
-   cd experiments/routing-model
+   cd experiments/routing_model
    python3 -m venv .venv && . .venv/bin/activate
    pip install -r requirements-bgpy.txt
    ```

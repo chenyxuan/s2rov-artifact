@@ -18,9 +18,9 @@ from typing import Any, Sequence
 
 SCRIPT = Path(__file__).resolve()
 REPO_ROOT = SCRIPT.parents[2]
-PHASE4_SCRIPTS = REPO_ROOT / "phase4_encoding" / "scripts"
-if str(PHASE4_SCRIPTS) not in sys.path:
-    sys.path.insert(0, str(PHASE4_SCRIPTS))
+DAROA_CODEC_SCRIPTS = REPO_ROOT / "implementation" / "daroa_codec" / "scripts"
+if str(DAROA_CODEC_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(DAROA_CODEC_SCRIPTS))
 
 from utils.daroa import DAROA, ValidationState  # noqa: E402
 

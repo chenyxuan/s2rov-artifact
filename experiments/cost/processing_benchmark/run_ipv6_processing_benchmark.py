@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reproducible single-core IPv6 replay for the Phase-4 classifier.
+"""Reproducible single-core IPv6 replay for the DAROA-encoding classifier.
 
 The source is the mixed-family RRC00 prefix-origin CSV used by the IPv4
 benchmark.  This companion filters it to canonical, scalar-origin IPv6 pairs
@@ -36,10 +36,10 @@ from typing import Any, Sequence
 SCRIPT = Path(__file__).resolve()
 BENCHMARK_DIR = SCRIPT.parent
 REPO_ROOT = SCRIPT.parents[2]
-PHASE4_SCRIPTS = REPO_ROOT / "phase4_encoding" / "scripts"
+DAROA_CODEC_SCRIPTS = REPO_ROOT / "implementation" / "daroa_codec" / "scripts"
 LEGACY_BENCHMARK = BENCHMARK_DIR / "run_processing_benchmark.py"
 sys.path.insert(0, str(BENCHMARK_DIR))
-sys.path.insert(0, str(PHASE4_SCRIPTS))
+sys.path.insert(0, str(DAROA_CODEC_SCRIPTS))
 
 # Reuse only family-neutral, non-reporting mechanics from the audited IPv4
 # driver.  IPv6 preparation, policy construction, labels, reports, and output
@@ -65,7 +65,7 @@ SCHEMA_VERSION = 1
 ADDRESS_FAMILY = "IPv6"
 DEFAULT_INPUT = (
     REPO_ROOT
-    / "phase1_empirical"
+    / "experiments" / "candidates"
     / "allocation_tree"
     / "visibility_experiment"
     / "input"
@@ -989,8 +989,8 @@ def run_orchestrator(args: argparse.Namespace) -> int:
         "platform": platform.platform(),
         "script": str(SCRIPT),
         "script_sha256": sha256_file(SCRIPT),
-        "classifier": str(PHASE4_SCRIPTS / "utils" / "daroa.py"),
-        "classifier_sha256": sha256_file(PHASE4_SCRIPTS / "utils" / "daroa.py"),
+        "classifier": str(DAROA_CODEC_SCRIPTS / "utils" / "daroa.py"),
+        "classifier_sha256": sha256_file(DAROA_CODEC_SCRIPTS / "utils" / "daroa.py"),
         "legacy_helper": str(LEGACY_BENCHMARK),
         "legacy_helper_sha256": sha256_file(LEGACY_BENCHMARK),
         "source_git_commit": subprocess.run(

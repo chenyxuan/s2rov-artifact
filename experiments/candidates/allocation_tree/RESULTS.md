@@ -97,7 +97,7 @@ The summary records the exact method and these hashes:
 Run from the repository root:
 
 ```bash
-python phase1_empirical/allocation_tree/scripts/05_bgp_conflicts.py
+python experiments/candidates/allocation_tree/scripts/05_bgp_conflicts.py
 ```
 
 ## 5. Limitations

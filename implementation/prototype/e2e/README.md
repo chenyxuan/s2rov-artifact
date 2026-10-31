@@ -1,6 +1,6 @@
 # Krill–Routinator–FRR End-to-End Testbed
 
-This directory contains the reproducible Phase 6 prototype experiments.  The
+This directory contains the reproducible prototype prototype experiments.  The
 main experiment starts a fresh, isolated RPKI repository and an eight-node BGP
 topology without changing the older `testbed` and `routinator` containers.
 Supplemental workflows use their own Docker networks, volumes, and container
@@ -76,7 +76,7 @@ The current host does not provide Docker Compose, so the orchestrator uses
 explicit, fixed-name `docker run` commands.
 
 ```bash
-cd phase6_system/e2e
+cd implementation/prototype/e2e
 make test
 make experiment
 make scale

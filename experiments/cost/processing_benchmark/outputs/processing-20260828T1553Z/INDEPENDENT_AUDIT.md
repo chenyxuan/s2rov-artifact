@@ -44,7 +44,7 @@ parsing excluded and 41.98--43.17 microseconds with CSV parsing included.
   `cb623f332f10788c1b403fd78a48b3ae47f69b3190825c6ab200cc172c1fe963`
 - Benchmark script SHA-256:
   `53246ca76fccbe48ff3d4579e8cd12ffcb72a4f861b3b469cab2a9ae81ca19a1`
-- Phase-4 classifier SHA-256:
+- DAROA-encoding classifier SHA-256:
   `4aa40fb8736de32d28041ba3b87260e96cbc91ea2e8ed20d8550d17706dff7e8`
 - Raw-run CSV SHA-256:
   `f8a4bd012d0dc522b4f29e95cfee21a7131e26193724b02a7cf4dcdce60d45fc`
@@ -60,7 +60,7 @@ classifier, source input, and derived workload used by the run.
 ## Claim boundary
 
 The policies are deterministic transparent benchmark rules, not a sample of
-published ROAs. Serialized size is the custom Phase-4 reference payload, not a
+published ROAs. Serialized size is the custom DAROA-encoding reference payload, not a
 CMS or RTR size. `parse_excluded` removes CSV decoding and ASN conversion but
 does not bypass the classifier's internal CIDR parsing. The result therefore
 supports only single-process, single-core Python processing-cost claims. It is

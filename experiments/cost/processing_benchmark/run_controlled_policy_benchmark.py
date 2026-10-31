@@ -32,9 +32,9 @@ from typing import Any, Iterable, Sequence
 SCRIPT = Path(__file__).resolve()
 BENCHMARK_DIR = SCRIPT.parent
 REPO_ROOT = SCRIPT.parents[2]
-PHASE4_SCRIPTS = REPO_ROOT / "phase4_encoding" / "scripts"
-if str(PHASE4_SCRIPTS) not in sys.path:
-    sys.path.insert(0, str(PHASE4_SCRIPTS))
+DAROA_CODEC_SCRIPTS = REPO_ROOT / "implementation" / "daroa_codec" / "scripts"
+if str(DAROA_CODEC_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(DAROA_CODEC_SCRIPTS))
 
 from utils.daroa import (  # noqa: E402
     DAROA,
@@ -909,8 +909,8 @@ def run_orchestrator(args: argparse.Namespace) -> int:
         "ipv6_workload": str(workload_paths[6]),
         "script": str(SCRIPT),
         "script_sha256": sha256_file(SCRIPT),
-        "classifier": str(PHASE4_SCRIPTS / "utils" / "daroa.py"),
-        "classifier_sha256": sha256_file(PHASE4_SCRIPTS / "utils" / "daroa.py"),
+        "classifier": str(DAROA_CODEC_SCRIPTS / "utils" / "daroa.py"),
+        "classifier_sha256": sha256_file(DAROA_CODEC_SCRIPTS / "utils" / "daroa.py"),
         "source_git_commit": git_commit,
         "source_worktree_dirty": git_dirty,
         "python": sys.version,

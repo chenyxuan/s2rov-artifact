@@ -1,0 +1,105 @@
+{
+  "checks": {
+    "all_equals_rov_plus_non_rov": true,
+    "all_outcome_partitions_complete": true,
+    "all_rows_first_attempt_success": true,
+    "claim_boundary_explicit": true,
+    "exact_600_scenario_grid": true,
+    "four_stratum_design_weights": true,
+    "holder_is_independent_unit": true,
+    "manifest_and_artifact_hashes_valid": true,
+    "original_leaf_exactly_invariant_to_sibling_announcement": true,
+    "paired_rescaled_bootstrap_with_fpc": true,
+    "zero_upgrade_announcement_matched": true
+  },
+  "claim_boundary": {
+    "not_supported": [
+      "traffic-weighted impact",
+      "sibling address utilization",
+      "delegation legitimacy",
+      "attack prevalence",
+      "generalization beyond the frozen topology and measured ROV set"
+    ],
+    "supported": "conditional AS-level route exposure on frozen inputs"
+  },
+  "created_at_utc": "2026-08-23T04:52:41.921878Z",
+  "fallacy_scan": {
+    "coverage": "11/11",
+    "items": [
+      {
+        "fallacy": "Simpson's paradox",
+        "status": "checked_no_directional_claim_across_strata"
+      },
+      {
+        "fallacy": "Ecological fallacy",
+        "status": "guarded_AS_route_outcomes_not_users_or_traffic"
+      },
+      {
+        "fallacy": "Berkson's paradox",
+        "status": "guarded_estimand_conditional_on_filtered_691_holder_frame"
+      },
+      {
+        "fallacy": "Collider bias",
+        "status": "checked_no_post_treatment_covariate_adjustment"
+      },
+      {
+        "fallacy": "Base-rate neglect",
+        "status": "guarded_no_attack_prevalence_or_legitimacy_inference"
+      },
+      {
+        "fallacy": "Regression to the mean",
+        "status": "not_applicable_matched_counterfactual_not_pre_post_extremes"
+      },
+      {
+        "fallacy": "Survivorship bias",
+        "status": "checked_all_600_planned_trials_required"
+      },
+      {
+        "fallacy": "Look-elsewhere effect",
+        "status": "guarded_primary_sibling_destination_estimand_frozen"
+      },
+      {
+        "fallacy": "Garden of forking paths",
+        "status": "guarded_manifest_frozen_before_outcomes"
+      },
+      {
+        "fallacy": "Correlation versus causation",
+        "status": "guarded_causal_statement_limited_to_simulated_policy_contrast"
+      },
+      {
+        "fallacy": "Reverse causality",
+        "status": "not_applicable_controlled_simulation_assignment"
+      }
+    ]
+  },
+  "inputs": {
+    "manifest": "experiments/attack_reachability/results/manifest.json",
+    "manifest_file_sha256": "9e6cd9431e9bc460d71efd852c155a7990e9248852133be71e939559448b48f4",
+    "routing_model_leaf_reference_sha256": "fb9ec8fa80d41b5a98b4bc956d82ebfec0514eaab27fd183f86683dfed6925b7",
+    "raw_results": "experiments/attack_reachability/results/raw_scenarios.jsonl",
+    "raw_results_file_sha256": "52b112e380124d25aee1cc8d30e0a175af24acb0b3ab9ed3d2674fac68a035ba",
+    "raw_results_scientific_sha256": "5ff15da60061d899b45bc09dcb14aeea0e793cab36682902338b52e2384c4cd5"
+  },
+  "material_passport": {
+    "origin_date": "2026-08-23",
+    "origin_mode": "validate",
+    "origin_skill": "academic-research-suite/experiment-agent",
+    "verification_status": "ANALYZED",
+    "version_label": "attack_reachability-sibling-endpoint-v1"
+  },
+  "outputs": {
+    "RESULTS.md": "6973a3a6007f3436c820ffbb5e15cb06743bad5cd63da542712de3fba4a8c2d7",
+    "holder_contrasts.jsonl": "561c26179f7c79560b7da387c4c4ca95db7de8817adc3cd091c4404bf01fd254",
+    "leaf_invariance_audit.json": "29e2ef6fc12a856f29b4f8c62c6df060d2fe45719569ce29b558ae3860e97c62",
+    "summary.csv": "b079ca0d5be4e16ef30f399312a2021146bfa99f6d461fad4b350e433313ef81",
+    "summary.json": "610cd1cb7c82e73b4c7f9c4aa0cbbab39237fbd32c5b132d02c19fd8fd652801"
+  },
+  "reproducibility": {
+    "classification": "deterministic_scientific_outputs",
+    "timing_and_rss_excluded_from_scientific_digest": true,
+    "verdict": "PENDING_INDEPENDENT_RERUN"
+  },
+  "schema_version": 1,
+  "status": "ANALYZED",
+  "version_label": "attack_reachability-sibling-endpoint-v1"
+}

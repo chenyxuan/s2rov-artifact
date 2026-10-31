@@ -462,7 +462,7 @@
       }
     }
   },
-  "run_dir": "<repo>/phase6_system/e2e/outputs/handoff-benefit-ipv6-20260828T232235Z",
+  "run_dir": "<repo>/implementation/prototype/e2e/outputs/handoff-benefit-ipv6-20260828T232235Z",
   "schema_version": 1,
   "source_hash_audit": {
     "entries": [
@@ -557,7 +557,7 @@
         "path": "config/benefit-v6/nginx.conf"
       }
     ],
-    "source_root": "<repo>/phase6_system/e2e"
+    "source_root": "<repo>/implementation/prototype/e2e"
   },
   "timing_provenance": {
     "comparison_tolerance_ms": 0.001,

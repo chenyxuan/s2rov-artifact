@@ -6,7 +6,7 @@
 ## 1. Scope and Attribution
 
 The input CSVs and cause-evidence columns are from the artifact accompanying
-Li, Wan, and Chung (NDSS 2026).  This phase does not relabel their collection
+Li, Wan, and Chung (NDSS 2026).  This directory does not relabel their collection
 as a new S2-ROV dataset.  It summarizes the supplied occurrence rows and tests
 how much of the corpus carries relationship-oriented evidence.
 
@@ -69,8 +69,8 @@ than “legitimate,” “genuine hijack,” “semantic false positive,” or
 
 ## 6. Relationship to the Paper
 
-This phase supports related-work context.  The paper's independent empirical
+This directory supports related-work context.  The paper's independent empirical
 evidence comes from the allocation-tree counterfactual, which does not import
-these source labels.  No figure or percentage from this phase should be added
+these source labels.  No figure or percentage from this directory should be added
 to the manuscript unless its secondary provenance and non-authorization
 interpretation are explicit.

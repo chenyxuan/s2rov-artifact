@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reproducible single-core processing benchmark for the Phase-4 classifier.
+"""Reproducible single-core processing benchmark for the DAROA-encoding classifier.
 
 This benchmark intentionally measures the Python reference classifier.  It is
 not an FRR, RTR, data-plane, or line-rate benchmark.  The two timing scopes are:
@@ -8,7 +8,7 @@ not an FRR, RTR, data-plane, or line-rate benchmark.  The two timing scopes are:
   tuples; the timer covers ``DAROA.validate_route`` plus state capture.
 * parse_included: the timer additionally covers CSV row decoding and integer
   conversion.  ``validate_route`` parses the textual CIDR in both modes because
-  that is the public Phase-4 API.
+  that is the public DAROA-encoding API.
 
 The orchestrator launches one fresh worker process per condition so peak RSS is
 condition-local rather than a monotonically increasing process-wide value.
@@ -39,8 +39,8 @@ from typing import Any, Iterable, Iterator, Sequence
 
 SCRIPT = Path(__file__).resolve()
 REPO_ROOT = SCRIPT.parents[2]
-PHASE4_SCRIPTS = REPO_ROOT / "phase4_encoding" / "scripts"
-sys.path.insert(0, str(PHASE4_SCRIPTS))
+DAROA_CODEC_SCRIPTS = REPO_ROOT / "implementation" / "daroa_codec" / "scripts"
+sys.path.insert(0, str(DAROA_CODEC_SCRIPTS))
 
 from utils.daroa import DAROA, Stripe, ValidationState  # noqa: E402
 
@@ -48,7 +48,7 @@ from utils.daroa import DAROA, Stripe, ValidationState  # noqa: E402
 SCHEMA_VERSION = 1
 DEFAULT_INPUT = (
     REPO_ROOT
-    / "phase1_empirical"
+    / "experiments" / "candidates"
     / "allocation_tree"
     / "visibility_experiment"
     / "input"
@@ -873,7 +873,7 @@ def write_run_report(
 ) -> None:
     config = json.loads((run_dir / "run_config.json").read_text(encoding="utf-8"))
     manifest = json.loads((run_dir / "input_manifest.json").read_text(encoding="utf-8"))
-    report = f"""# Phase-4 reference-classifier processing benchmark
+    report = f"""# DAROA-encoding reference-classifier processing benchmark
 
 Generated: {utc_now()}
 
@@ -894,7 +894,7 @@ Each policy contains one `/0` entry carrying an OpenScope marker and the first
 `size-1` unique non-`/0` prefixes in source order as unmarked exact-origin records.
 These are deterministic benchmark policies, not observed published authorizations.
 Policy size means total record count. Serialized bytes refer only to the
-experimental Phase-4 binary format.
+experimental DAROA-encoding binary format.
 
 ## Configuration
 
@@ -1025,8 +1025,8 @@ def run_orchestrator(args: argparse.Namespace) -> int:
         "platform": platform.platform(),
         "script": str(SCRIPT),
         "script_sha256": sha256_file(SCRIPT),
-        "classifier": str(PHASE4_SCRIPTS / "utils" / "daroa.py"),
-        "classifier_sha256": sha256_file(PHASE4_SCRIPTS / "utils" / "daroa.py"),
+        "classifier": str(DAROA_CODEC_SCRIPTS / "utils" / "daroa.py"),
+        "classifier_sha256": sha256_file(DAROA_CODEC_SCRIPTS / "utils" / "daroa.py"),
         "source_git_commit": subprocess.run(
             ["git", "rev-parse", "HEAD"],
             cwd=REPO_ROOT,

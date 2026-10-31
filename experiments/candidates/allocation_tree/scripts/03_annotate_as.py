@@ -9,8 +9,8 @@ import csv
 from pathlib import Path
 from collections import defaultdict
 
-PHASE_DIR = Path(__file__).resolve().parents[1]
-TABLE_DIR = PHASE_DIR / "outputs" / "tables"
+HERE_DIR = Path(__file__).resolve().parents[1]
+TABLE_DIR = HERE_DIR / "outputs" / "tables"
 
 # ─── Load org→AS mapping from aut-num ───
 print("Loading org→associated aut-num mapping...")
