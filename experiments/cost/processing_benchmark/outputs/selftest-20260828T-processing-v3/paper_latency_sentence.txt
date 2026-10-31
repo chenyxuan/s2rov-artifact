@@ -1,1 +1,0 @@
-Across the tested rule counts, the p95 amortized per-route processing time ranged from 37.86 to 39.45 $\mu$s with CSV parsing excluded and from 40.14 to 56.79 $\mu$s when CSV decoding and ASN conversion were included.

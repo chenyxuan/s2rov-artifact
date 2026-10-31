@@ -4,13 +4,13 @@
   "LICENSE": 1,
   "README.md": 1,
   "REPRODUCE.md": 1,
-  "experiments": 155,
+  "experiments": 147,
   "figure-data": 24,
   "implementation": 410,
-  "results": 463,
+  "results": 376,
   "verify.py": 1
  },
- "file_count": 1057,
+ "file_count": 962,
  "files": [
   {
    "bundle_path": "implementation/s2rov_codec/ANALYSIS_PLAN.md",
@@ -3392,8 +3392,8 @@
   },
   {
    "bundle_path": "experiments/cost/README.md",
-   "bytes": 975,
-   "sha256": "4d3afe2ebfa87d6b2315b025a853635d6c902543fa4b009d362b5bdfe165e5c2",
+   "bytes": 1259,
+   "sha256": "8d1d7d6321f2efce55f48c915d7357047e35dc5b30c36cc89e9b0e31b585dc5e",
    "source_path": "experiments/cost/README.md"
   },
   {
@@ -4597,570 +4597,6 @@
    "source_path": "experiments/cost/processing_benchmark/outputs/processing-ipv6-dualstack-20260829/summary.csv"
   },
   {
-   "bundle_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/RUN_REPORT.md",
-   "bytes": 3717,
-   "sha256": "005e94c33c2996b85472d0e6e1f53eb153d0df6c1af98c81ef00ba6dd0d0e74e",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/RUN_REPORT.md"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/input/rrc00_20260624_ipv4_prefix_origins.csv",
-   "bytes": 169115,
-   "sha256": "14e5af0518705ea2731803e07d8ee2b3aee42349ac17f842e7000fb0e18ad15c",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/input/rrc00_20260624_ipv4_prefix_origins.csv"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/input_manifest.json",
-   "bytes": 9285,
-   "sha256": "20bd3b86e9d3dd13117018aa74f1f56fa3f8852ea60ee9c4077e20f7f3e5d9d0",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/input_manifest.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/policies/oracle-spots-1.json",
-   "bytes": 6875,
-   "sha256": "f8792df862ec3ab7b470a4c3a9ea0f92aa0a8e682385ce294da968fc5bf5f79f",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/policies/oracle-spots-1.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/policies/oracle-spots-64.json",
-   "bytes": 8414,
-   "sha256": "01542723bb7ddcdcc728b852c6810b38c5515e2d017995678dece0c4bd28c08f",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/policies/oracle-spots-64.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/policies/policy-1.bin",
-   "bytes": 21,
-   "sha256": "fee8cfabb31917cd7970ad9bc7c1c5b53e97ed64ad287efdaa5c4fc6c5d904ff",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/policies/policy-1.bin"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/policies/policy-1.json",
-   "bytes": 691,
-   "sha256": "a1c899645b4bbbb0dbe1ef65b1503141036411dc5c9416b67ba2981d070e0d23",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/policies/policy-1.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/policies/policy-64.bin",
-   "bytes": 651,
-   "sha256": "4554324df783620dec2edab9e2489b1bdaf6a6864a554710a4420da2c10bd33b",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/policies/policy-64.bin"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/policies/policy-64.json",
-   "bytes": 7620,
-   "sha256": "fc0710e2a70846e62483491033052acad5af479d104f83291aeb1639538df615",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/policies/policy-64.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/raw_batch_samples.csv",
-   "bytes": 4482,
-   "sha256": "7d7f66d8a50d767b9afbb6248440ac150d64226811f17b0159542b112db569e6",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/raw_batch_samples.csv"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/raw_runs.csv",
-   "bytes": 839,
-   "sha256": "0b3e812f2dacab5e8e95b6dc953d9575ec3c82e12da9cdc0302bb52ef2deeafd",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/raw_runs.csv"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/recomputation_audit.json",
-   "bytes": 1161,
-   "sha256": "0e2e46956defbbab241e162150a87dadec2fd5107759a2e8b5b69480ff4819bd",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/recomputation_audit.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/run_config.json",
-   "bytes": 1060,
-   "sha256": "957b5dffa435e5fb7f710d8eba909b2675236be97a68f3d589d54d70a45384a2",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/run_config.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/schedule.json",
-   "bytes": 1043,
-   "sha256": "32fb31b0e825debcc4d5f88f204a62eeee91af1b38b6fc01073ae410c702b414",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/schedule.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/summary.csv",
-   "bytes": 1505,
-   "sha256": "716a90ce72c0cab9cc0c36b6239ecdd9f4895f349f6807199f33b014d5ee7f90",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v1/summary.csv"
-  },
-  {
-   "bundle_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/RUN_REPORT.md",
-   "bytes": 3717,
-   "sha256": "825445857858050f05b953fd35e45dc3551cb17fe81a387f5de4c5c2033bc50c",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/RUN_REPORT.md"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/input/rrc00_20260624_ipv4_prefix_origins.csv",
-   "bytes": 169115,
-   "sha256": "14e5af0518705ea2731803e07d8ee2b3aee42349ac17f842e7000fb0e18ad15c",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/input/rrc00_20260624_ipv4_prefix_origins.csv"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/input_manifest.json",
-   "bytes": 9285,
-   "sha256": "a3c9ea1135dd3f9c7a4daf7c6948c50fbbf16624b11b3fc93cb1f963625fd53a",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/input_manifest.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/policies/oracle-spots-1.json",
-   "bytes": 6875,
-   "sha256": "f8792df862ec3ab7b470a4c3a9ea0f92aa0a8e682385ce294da968fc5bf5f79f",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/policies/oracle-spots-1.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/policies/oracle-spots-64.json",
-   "bytes": 8414,
-   "sha256": "01542723bb7ddcdcc728b852c6810b38c5515e2d017995678dece0c4bd28c08f",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/policies/oracle-spots-64.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/policies/policy-1.bin",
-   "bytes": 21,
-   "sha256": "fee8cfabb31917cd7970ad9bc7c1c5b53e97ed64ad287efdaa5c4fc6c5d904ff",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/policies/policy-1.bin"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/policies/policy-1.json",
-   "bytes": 691,
-   "sha256": "5d9647031d8080586c13df4b96b0af1c6230a0b412f4ce86c0c7aafe96064f41",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/policies/policy-1.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/policies/policy-64.bin",
-   "bytes": 651,
-   "sha256": "4554324df783620dec2edab9e2489b1bdaf6a6864a554710a4420da2c10bd33b",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/policies/policy-64.bin"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/policies/policy-64.json",
-   "bytes": 7620,
-   "sha256": "8d54a9792841a4ddca988b00d26c47f37cc1525f77a5c7c3c1cd02db478941a1",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/policies/policy-64.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/raw_batch_samples.csv",
-   "bytes": 4482,
-   "sha256": "f8c7d5c30726c75aafa6ef8a9632cd45aee013e0d7e768a4a6cbd71caea4a7d0",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/raw_batch_samples.csv"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/raw_runs.csv",
-   "bytes": 837,
-   "sha256": "dd25ddeee51d6db3bdc5dfbde3873a093ad29085321d220b9e01da6bf6c568bc",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/raw_runs.csv"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/recomputation_audit.json",
-   "bytes": 1161,
-   "sha256": "c10c882f5c99ef9d71ef856754a34245b9cd2a737297fd6b09a5660aafbf46a3",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/recomputation_audit.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/run_config.json",
-   "bytes": 1060,
-   "sha256": "ae7620d0bdf7e024c73744edc70703db44731f7e6c8c06714f997bfc7951e6f8",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/run_config.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/schedule.json",
-   "bytes": 1043,
-   "sha256": "36d4c79d6964ead1c1e095258efd0f3018a2dc278a6848e207aa0529f0c57e29",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/schedule.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/summary.csv",
-   "bytes": 1506,
-   "sha256": "81d86c84febac743049454813a955971f3d93d54140d73f181504d56aede3953",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v2/summary.csv"
-  },
-  {
-   "bundle_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/RUN_REPORT.md",
-   "bytes": 3884,
-   "sha256": "2c2d78f0165e1e4946d5e2baa3fe6c96d3e8af552f6175ee5244fcdeef4b98ab",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/RUN_REPORT.md"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/input/rrc00_20260624_ipv4_prefix_origins.csv",
-   "bytes": 169115,
-   "sha256": "14e5af0518705ea2731803e07d8ee2b3aee42349ac17f842e7000fb0e18ad15c",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/input/rrc00_20260624_ipv4_prefix_origins.csv"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/input_manifest.json",
-   "bytes": 9360,
-   "sha256": "d4a31b1cbe5c17dfb6bbc88ff3047a14f66d1c6098167fa59df0f35797a66c94",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/input_manifest.json"
-  },
-  {
-   "bundle_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/paper_latency_sentence.txt",
-   "bytes": 218,
-   "sha256": "8ac9ec71aecf165c5728ab7367cde925f5ea8ac01b564d5998b43e930ea6e1e8",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/paper_latency_sentence.txt"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/policies/oracle-spots-1.json",
-   "bytes": 6875,
-   "sha256": "f8792df862ec3ab7b470a4c3a9ea0f92aa0a8e682385ce294da968fc5bf5f79f",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/policies/oracle-spots-1.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/policies/oracle-spots-64.json",
-   "bytes": 8414,
-   "sha256": "01542723bb7ddcdcc728b852c6810b38c5515e2d017995678dece0c4bd28c08f",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/policies/oracle-spots-64.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/policies/policy-1.bin",
-   "bytes": 21,
-   "sha256": "fee8cfabb31917cd7970ad9bc7c1c5b53e97ed64ad287efdaa5c4fc6c5d904ff",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/policies/policy-1.bin"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/policies/policy-1.json",
-   "bytes": 691,
-   "sha256": "c2052eadf9d52ad41b248fed14174b6ee856e7c43995eb2891e526c70cd2a4e0",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/policies/policy-1.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/policies/policy-64.bin",
-   "bytes": 651,
-   "sha256": "4554324df783620dec2edab9e2489b1bdaf6a6864a554710a4420da2c10bd33b",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/policies/policy-64.bin"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/policies/policy-64.json",
-   "bytes": 7620,
-   "sha256": "10e6241484bf2941726d232a258b6c61f1e7dd6e4bb5497c0afa799b51c630e4",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/policies/policy-64.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/raw_batch_samples.csv",
-   "bytes": 4483,
-   "sha256": "14d0c737559b8659fd0f4607d3eca8cd012b36fa063e5d4efca7c022c821abf4",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/raw_batch_samples.csv"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/raw_runs.csv",
-   "bytes": 840,
-   "sha256": "8bd930945e8d322d44a91c2c199c525d5e8ecb4dbebe78ab6c8d1cadad752174",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/raw_runs.csv"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/recomputation_audit.json",
-   "bytes": 1161,
-   "sha256": "5ca93ca3b029ba9952fb3b5e8c0c09c13f6e25409b896a3627aaaad7490e4c46",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/recomputation_audit.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/run_config.json",
-   "bytes": 1060,
-   "sha256": "bbcf7eb6a2f09e4d45c851d808cfdc4094e4b670906dbc50c040e6d232178be1",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/run_config.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/schedule.json",
-   "bytes": 1043,
-   "sha256": "8faa35dde60fa5a4037fad5b60bba2c6123d4ce461d9fa8d2c98ebbd52cd4e7b",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/schedule.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/summary.csv",
-   "bytes": 1520,
-   "sha256": "5e3c5149f350ec517f34a328ff086e311e31c4c8c2505d187d8cdce4610752ec",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-20260828T-processing-v3/summary.csv"
-  },
-  {
-   "bundle_path": "experiments/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/RUN_REPORT.md",
-   "bytes": 1085,
-   "sha256": "557b2a5dbc315380bb0df2bf04cb12aaf3d5c57e2f1303c61551277d2b1f868e",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/RUN_REPORT.md"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/independent_audit.json",
-   "bytes": 3332,
-   "sha256": "05ecf42d717d0736631a149035a82484151010a57c7a65d45ee082ab0cca0c15",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/independent_audit.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/policies/ipv4-subprefixes-0.bin",
-   "bytes": 22,
-   "sha256": "e4138143ed48baa05412cca8338fc16f91e2e20408daea1d97ca8561ec959181",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/policies/ipv4-subprefixes-0.bin"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/policies/ipv4-subprefixes-0.json",
-   "bytes": 884,
-   "sha256": "2e9f9e79168db6269472cc0a971b869724ca1a89db25cc1def77bc0aa9a6056a",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/policies/ipv4-subprefixes-0.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/policies/ipv4-subprefixes-2.bin",
-   "bytes": 42,
-   "sha256": "fed623a5faaca3225140ebef98b25b35a5f8d658b71a689ca2ba99daf5a52b2b",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/policies/ipv4-subprefixes-2.bin"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/policies/ipv4-subprefixes-2.json",
-   "bytes": 1102,
-   "sha256": "878489abd7ce63834c1bb88f293f52c4c311c2d9e79e1f353c5c36bd8f9734f8",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/policies/ipv4-subprefixes-2.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/policies/ipv6-subprefixes-0.bin",
-   "bytes": 40,
-   "sha256": "66ccba47bd08c504f7c3473788f5077efd21462cb91f145736e0be94b61c5959",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/policies/ipv6-subprefixes-0.bin"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/policies/ipv6-subprefixes-0.json",
-   "bytes": 895,
-   "sha256": "74434d1a0bddaf0ff2a9db60279045a5474e0cdecd966bf22633b3ff11cb3ea8",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/policies/ipv6-subprefixes-0.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/policies/ipv6-subprefixes-2.bin",
-   "bytes": 65,
-   "sha256": "3f0e902019038b4a82bc39a13426d8fe0bfcc5117cab7a29c68fb4838119bda6",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/policies/ipv6-subprefixes-2.bin"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/policies/ipv6-subprefixes-2.json",
-   "bytes": 1122,
-   "sha256": "2dc8a00d7c9d4cc660d366957141c25a0e1a595aff1d5fdb7a0d489a3e824519",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/policies/ipv6-subprefixes-2.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/queries/ipv4-queries.json",
-   "bytes": 2448,
-   "sha256": "c83b84f1611266b238550536ee7f38377b83823f1c389e3caa70776789d6cd54",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/queries/ipv4-queries.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/queries/ipv6-queries.json",
-   "bytes": 2591,
-   "sha256": "4dc6576563286ecf70be70b42a7b0b5ac8674238982d1c58acacbe74c0bd3b66",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/queries/ipv6-queries.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/run_config.json",
-   "bytes": 1298,
-   "sha256": "8edbf01cb6bfc7815124ff90beeda0d98b302aba07630c2cc3b12fb38d1ab419",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/run_config.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/schedule.json",
-   "bytes": 2419,
-   "sha256": "3ad373aa9b38c1cb02f929d7d70d55d8820ab8af00c4d36d5a72bda5f4ffcfbc",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/schedule.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/selection_manifest.json",
-   "bytes": 2953,
-   "sha256": "fe10475d6b26a689e0e00ea06c2a1820997340d88f270d3b3d53f9238cd4e300",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/selection_manifest.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/summary.csv",
-   "bytes": 817,
-   "sha256": "95d393c88b35ae502323bfdaef3a8c221dbd2d53f9b530d2ce01669187243975",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/summary.csv"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/summary.json",
-   "bytes": 4176,
-   "sha256": "1f389df0fd7caaf426111b9928a036ba963577675fa38ea2e2c94569a7223ee5",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-controlled-processing-20260829-v1/summary.json"
-  },
-  {
-   "bundle_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/RUN_REPORT.md",
-   "bytes": 3885,
-   "sha256": "735a4c885771bc15dcf5a95375d9f97a2b58f8aeb9d6c772ed7e23e1402b0e96",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/RUN_REPORT.md"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/input/rrc00_20260624_ipv4_prefix_origins.csv",
-   "bytes": 169115,
-   "sha256": "14e5af0518705ea2731803e07d8ee2b3aee42349ac17f842e7000fb0e18ad15c",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/input/rrc00_20260624_ipv4_prefix_origins.csv"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/input_manifest.json",
-   "bytes": 9365,
-   "sha256": "5a562c6462a9714f4fc9300a59424b2b511dac1fa1ca9813b7eb0c29c9cb7dc3",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/input_manifest.json"
-  },
-  {
-   "bundle_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/paper_latency_sentence.txt",
-   "bytes": 218,
-   "sha256": "41092ac122bbd946fdff0a311c07646691e1be1f2fafd09009927d91dba66327",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/paper_latency_sentence.txt"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/policies/oracle-spots-1.json",
-   "bytes": 6875,
-   "sha256": "f8792df862ec3ab7b470a4c3a9ea0f92aa0a8e682385ce294da968fc5bf5f79f",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/policies/oracle-spots-1.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/policies/oracle-spots-64.json",
-   "bytes": 8414,
-   "sha256": "01542723bb7ddcdcc728b852c6810b38c5515e2d017995678dece0c4bd28c08f",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/policies/oracle-spots-64.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/policies/policy-1.bin",
-   "bytes": 21,
-   "sha256": "fee8cfabb31917cd7970ad9bc7c1c5b53e97ed64ad287efdaa5c4fc6c5d904ff",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/policies/policy-1.bin"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/policies/policy-1.json",
-   "bytes": 696,
-   "sha256": "be3283210d788e8f32dec61e1e155b68b2c18c921d66f40fa80bc4ceb88e06fe",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/policies/policy-1.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/policies/policy-64.bin",
-   "bytes": 651,
-   "sha256": "4554324df783620dec2edab9e2489b1bdaf6a6864a554710a4420da2c10bd33b",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/policies/policy-64.bin"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/policies/policy-64.json",
-   "bytes": 7625,
-   "sha256": "38951cc33728321460058fbca2a98fa2451034484ebc0adfe90b776e6d0ff694",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/policies/policy-64.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/raw_batch_samples.csv",
-   "bytes": 4482,
-   "sha256": "1811a96a27d2f2813e46c393a9568831ebb0bcc00bb7dd192dbb9d75ac8b810f",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/raw_batch_samples.csv"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/raw_runs.csv",
-   "bytes": 839,
-   "sha256": "9642821f8d7b9b2f86eddfcf282cad33de500f6e4c52e03f7d723624d8700a5d",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/raw_runs.csv"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/recomputation_audit.json",
-   "bytes": 1161,
-   "sha256": "7d4d550295eb8fe33ae071c3932a7436cefa95748a224c793e034aaeb7f80cd7",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/recomputation_audit.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/run_config.json",
-   "bytes": 1071,
-   "sha256": "0af3a455a57cc112a66a8ab8104eb44b77f1847d196b8189db68f43b9bb7e814",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/run_config.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/schedule.json",
-   "bytes": 1063,
-   "sha256": "2233baaa7a69687decc1f1afe3d3abef02f205dc53646a9db271f844680309f4",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/schedule.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/summary.csv",
-   "bytes": 1489,
-   "sha256": "62193c94942b62d2feabf5b79780692d56a5881ea37fac900f9c615908af2da2",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv4-dualstack-core-20260828/summary.csv"
-  },
-  {
-   "bundle_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/RUN_REPORT.md",
-   "bytes": 3807,
-   "sha256": "db543face75ad667b8ccbcc8beff1bcd489d0d88d4d85b45c7d4db7c0f6c2f88",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/RUN_REPORT.md"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/input/rrc00_20260624_ipv6_prefix_origins.csv",
-   "bytes": 207595,
-   "sha256": "110603ebad621d9caa655930d6756a5311a5f1110c87c5013bdab0dc73aa10f5",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/input/rrc00_20260624_ipv6_prefix_origins.csv"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/input_manifest.json",
-   "bytes": 10047,
-   "sha256": "89036ac24c07911d8256ef88336d87c5fc67264847f633a28dca15d0950badff",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/input_manifest.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/policies/oracle-spots-ipv6-1.json",
-   "bytes": 7287,
-   "sha256": "35d4f9f335d76e31f997b64263453a94ecd9a9c01977ac0437f22d7a40bd158c",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/policies/oracle-spots-ipv6-1.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/policies/oracle-spots-ipv6-64.json",
-   "bytes": 8779,
-   "sha256": "fc8aa511973174fcaecb73af76bc0255ea09699dcde1e36e4654fefb26098137",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/policies/oracle-spots-ipv6-64.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/policies/policy-ipv6-1.bin",
-   "bytes": 37,
-   "sha256": "4c6802f723301e2e07cc9e0312c9bc121c7b5acdd8f3fda982f7afae1e75893e",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/policies/policy-ipv6-1.bin"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/policies/policy-ipv6-1.json",
-   "bytes": 729,
-   "sha256": "09c2ae92374b7c0eddf71d7f2ac960caea396eba855b46012b4ab5ddee16b5bd",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/policies/policy-ipv6-1.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/policies/policy-ipv6-64.bin",
-   "bytes": 834,
-   "sha256": "3e2b328f92bf3417d8bcb0ccca6ec60f7d4c160c25d5d3a4d27bf4b67f8792d5",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/policies/policy-ipv6-64.bin"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/policies/policy-ipv6-64.json",
-   "bytes": 7973,
-   "sha256": "154c555e30b6359e1d2a982e506c6917012a7b4a3cef3a13035b9577e6468f10",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/policies/policy-ipv6-64.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/raw_batch_samples.csv",
-   "bytes": 4482,
-   "sha256": "c80f1811201e9d8100143856f58c87bfd8d1b544c4ccfb99e44378b7e5121ce4",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/raw_batch_samples.csv"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/raw_runs.csv",
-   "bytes": 938,
-   "sha256": "6ea4ebcd621812e98d6e03c96f901e95adc189748e4e9e9cba51307f6b5f1a76",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/raw_runs.csv"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/recomputation_audit.json",
-   "bytes": 1394,
-   "sha256": "62d3b05138d6c8d92df97c0ad767a97d7afe62226f0315a9c904e6e8eff68033",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/recomputation_audit.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/run_config.json",
-   "bytes": 1392,
-   "sha256": "31ea11a88e7d7cb793857d24d889864519c1cadd8d8837db614c9676a099a84e",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/run_config.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/schedule.json",
-   "bytes": 1083,
-   "sha256": "491e9d415e5f1d758b74a2eac0d49ab5c2baab08411adfbe7ce3ffd6c2405eae",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/schedule.json"
-  },
-  {
-   "bundle_path": "results/tables/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/summary.csv",
-   "bytes": 1535,
-   "sha256": "96398f834ad067a3164b8937cbc03155213f296b18a598ab3909e92f609567a9",
-   "source_path": "experiments/cost/processing_benchmark/outputs/selftest-ipv6-20260828T-benchmark-v1/summary.csv"
-  },
-  {
    "bundle_path": "experiments/cost/processing_benchmark/run_controlled_policy_benchmark.py",
    "bytes": 40254,
    "sha256": "0ec915b3ab531ebcfc482e8bceff0902210b18b3ca38505caef4f10d1b7c29c2",
@@ -5749,12 +5185,6 @@
    "source_path": "experiments/attack_reachability/analyze.py"
   },
   {
-   "bundle_path": "results/tables/attack_reachability/failed_plan_relative_path_20260823/manifest.json",
-   "bytes": 244799,
-   "sha256": "76e10ccb599d526f33c5230e1ed3cf25c0ef94751ff99863349838e1119e9e6d",
-   "source_path": "experiments/attack_reachability/failed_plan_relative_path_20260823/manifest.json"
-  },
-  {
    "bundle_path": "results/tables/attack_reachability/results/EVIDENCE_LEDGER.json",
    "bytes": 5071,
    "sha256": "ae6a5023a979609fa1b6a7e8bbe555676b8bd4e9a776f22a65345890e410842f",
@@ -6068,8 +5498,8 @@
   },
   {
    "bundle_path": "experiments/analysis_scripts/run_partial_policy_replay.py",
-   "bytes": 138735,
-   "sha256": "40337056ed6e5a268db4a389cac2a50d2358911023ce6760d7939170daf25507",
+   "bytes": 138742,
+   "sha256": "c6899a2f9fce08aa6e948a5590bcc93511ccb079300662fc37bf216c2984c5b9",
    "source_path": "experiments/analysis_scripts/run_partial_policy_replay.py"
   },
   {
@@ -6104,8 +5534,8 @@
   },
   {
    "bundle_path": "results/numbers.json",
-   "bytes": 111721,
-   "sha256": "b10b6b1d5f06c909a1638be0fb77df58200c139b13feeaa96f1e9827324bb7aa",
+   "bytes": 111351,
+   "sha256": "b674b42c0536eee34580ae400b9b0c673f654d184541df6dd15f5596b171235b",
    "source_path": "results.facts.json"
   },
   {
@@ -6308,14 +5738,14 @@
   },
   {
    "bundle_path": "REPRODUCE.md",
-   "bytes": 2577,
-   "sha256": "1e244bee1a0d98dc8fca78b7c71e57f8ed71784355df1d6a14f2cbd231f307eb",
+   "bytes": 2829,
+   "sha256": "b546c376ffd0d2222a8bf3d46dcadd4e6fc78cce155f0b91005ef251fdd3be8c",
    "source_path": "tools/artifact_REPRODUCE.md"
   },
   {
    "bundle_path": "EXCLUDED-RAW-DATA.md",
-   "bytes": 4418,
-   "sha256": "0de99d7fea6d5990f0172e1ce2df634aaf8abc715a2be6b059e8476969f5de92",
+   "bytes": 4470,
+   "sha256": "f63dc98535a93fe8f160224fd087a6dd5565adc39e3ccc2a5fa1e80efef9abf3",
    "source_path": "tools/artifact_EXCLUDED.md"
   },
   {
@@ -6358,5 +5788,5 @@
  "generated_by": "tools/prepare_artifact.py",
  "size_cap_bytes": 2097152,
  "source_path": "where the file came from, under the naming used here rather than the authors' internal directory names",
- "total_bytes": 30073989
+ "total_bytes": 28679329
 }

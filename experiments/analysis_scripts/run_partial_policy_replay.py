@@ -65,10 +65,10 @@ from utils.s2rov import (  # noqa: E402
 
 DEFAULT_INPUT = (
     REPO
-    / "experiments" / "candidates"
+    / "results" / "tables" / "candidates"
     / "allocation_tree"
     / "visibility_experiment"
-    / "results"
+    / "outputs"
     / "visibility_candidates.csv"
 )
 DEFAULT_SOURCE_DIR = MANUSCRIPT / "figure-data" / "source_data"

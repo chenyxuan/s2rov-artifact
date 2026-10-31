@@ -14,7 +14,7 @@ the shipped results can be rebuilt from source.
 | `experiments/candidates/allocation_tree/outputs/tables/allocation_tree_with_as.csv` | 553 MB | Intermediate join result | allocation-tree pipeline |
 | `experiments/candidates/allocation_tree/outputs/tables/allocation_tree_pairs.csv` | 262 MB | Intermediate pair table | allocation-tree pipeline |
 | `experiments/routing_model/results/**/raw_scenarios.jsonl` | 45–118 MB | Per-scenario routing dumps | `experiments/routing_model/campaign/` (fixed seeds in the contracts) |
-| `experiments/routing_model/results/paper_campaign/manifest.json` | 18 MB | Per-trial index of the campaign | `experiments/routing_model/campaign/` resuming from the archived checkpoint |
+| `experiments/routing_model/results/paper_campaign/manifest.json` | 18 MB | Per-trial index; the checkpoint, report and analysis are shipped, this index is not | `experiments/routing_model/campaign/` resuming from the archived checkpoint |
 | `experiments/routing_model/results/paper_campaign/analysis/holder_contrasts.jsonl` | 83 MB | Per-trial contrast rows | `experiments/routing_model/campaign/` |
 | `implementation/prototype/e2e/outputs/*/raw/**` | — | Per-trial containers, ROA files, ping logs | `implementation/prototype/e2e/` runners |
 | `experiments/candidates/allocation_tree/visibility_experiment/outputs/visibility_candidates.csv` | 12 MB | Candidate table the figure replay reads | `experiments/candidates/allocation_tree/visibility_experiment/scripts/` |

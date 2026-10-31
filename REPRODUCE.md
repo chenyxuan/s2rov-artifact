@@ -30,8 +30,8 @@ Paths are relative to the bundle root. The paper itself is not bundled.
 | Sec. V-C | `experiments/routing_model/campaign/ipv6_sensitivity.py` |
 | Sec. V-D | `experiments/attack_reachability/runner.py`, then `analyze.py` under the same directory |
 
-Run the analysis scripts from `experiments/analysis_scripts/`; they resolve
-their inputs relative to that directory, matching the layout here.
+Run the analysis scripts from anywhere; each locates the repository root
+from its own path, not from the working directory.
 
 ## 3. Rebuild from raw inputs
 
@@ -43,14 +43,18 @@ that regenerates it. In short:
    24 June 2026, plus the CAIDA AS-relationship snapshot of 1 July 2026
    (`CAIDAASGraphCollector_2026.07.25.txt`, the name recorded in
    `experiments/routing_model/evaluation/bgpy.md`).
-2. Run `experiments/candidates/` to regenerate the candidate set for Table I.
+2. Run `experiments/candidates/` to regenerate the candidate set for Table I,
+   then `experiments/routing_model/scripts/prepare_inputs.py` to compile the
+   topology and ROV set the routing model reads. Its defaults name a file
+   path from the authors' machine; pass `--topology-file` and `--rov-json`
+   to point it at your own copies.
 3. Run the experiments in the order their inputs require: candidates, then
    cost and routing model, then reanalysis and the semantic gate.
 4. The routing model needs its own environment:
 
    ```bash
    cd experiments/routing_model
-   python3 -m venv .venv && . .venv/bin/activate
+   python3 -m venv .venv-bgpy && . .venv-bgpy/bin/activate
    pip install -r requirements-bgpy.lock.txt
    ```
 

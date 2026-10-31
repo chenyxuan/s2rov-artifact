@@ -4,9 +4,6 @@
   "facts": {
     "redesigned_evaluation": {
       "version_label": "outcome-oriented-evaluation-v3",
-      "e1a_introduction_sha256_at_freeze": "7ce56be31c293989acaf2e5c99ded6d0dbc5edf8ce4e307c96c547791243a85b",
-      "current_introduction_sha256": "f28e5008b27807ea82ccbdfd9a3b8e9a739346e18548281d98f6374e4a410117",
-      "introduction_post_freeze_change": "later terminology revisions and the partial-policy evaluation restructure do not alter the frozen E1a outputs",
       "gate_status": {
         "E0_longitudinal_use_case": "not_run_external_data_and_license_gate",
         "E_partial_policy_replay": "complete_pass_figures_2_and_3_seeded_replays_four_placement_orders_route_state_recomputation_19_tests",

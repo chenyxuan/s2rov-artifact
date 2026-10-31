@@ -5,6 +5,11 @@ replace the signed prototype-system experiments under `implementation/prototype/
 
 ## Scripts
 
+`processing_benchmark/` holds the two latency drivers, and it is what Fig. 4
+reports: `run_controlled_policy_benchmark.py` for classification throughput
+and `run_policy_update_benchmark.py` for update latency. The scripts below are
+the reference-semantics checks, not the benchmark.
+
 - `scripts/08_semantic_boundary.py` checks the open/closed semantic boundary.  The
   NDSS corpus has no attack ground truth, so the script does not claim hijack
   detection.
