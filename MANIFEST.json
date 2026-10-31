@@ -6302,8 +6302,8 @@
   },
   {
    "bundle_path": "README.md",
-   "bytes": 4220,
-   "sha256": "88e4d7e219b50b0f2665b19403a7a2f177eb78327c747b5173edd50c1e2029d6",
+   "bytes": 3699,
+   "sha256": "80981ca4845dffcbfa41bdbd9eb2fff9ceb62031d7f91f8f59863444019cca8d",
    "source_path": "tools/artifact_README.md"
   },
   {
@@ -6358,5 +6358,5 @@
  "generated_by": "tools/prepare_artifact.py",
  "size_cap_bytes": 2097152,
  "source_path": "where the file came from, under the naming used here rather than the authors' internal directory names",
- "total_bytes": 30074510
+ "total_bytes": 30073989
 }

@@ -43,8 +43,8 @@ a frozen contract, an `EXPERIMENT_CONTRACT.md`.
 ## Requirements
 
 - Python 3.12.
-- `experiments/routing_model/requirements-bgpy.txt` for the routing model, in
-  its own environment.
+- `experiments/routing_model/requirements-bgpy.lock.txt` for the routing model,
+  in its own environment.
 - Nothing at all to read `results/` or `figure-data/`.
 
 ## Verifying the bundle
@@ -55,15 +55,6 @@ python3 verify.py
 
 Recomputes SHA-256 for every bundled file against `MANIFEST.json` and exits
 non-zero on any missing or modified file.
-
-## Notes on paths
-
-Absolute paths, the home directory and the build host name are rewritten to
-`<repo>`, `<home>` and `<host>` while assembling the bundle, so it carries no
-machine-specific paths. That rewriting changes file digests, so the SHA-256
-values frozen inside the experiment contracts no longer match; verify the
-bundle through `MANIFEST.json` instead.
-
 
 ## Labels in the code
 
@@ -78,11 +69,9 @@ the result files refer to them. A few recur:
 | `q2-aggregate-audit/v1` | schema tag on the audit records |
 | `marker-final-v1` | the processing-cost run reported in the paper; siblings under the same directory are earlier attempts kept for audit |
 
-A directory under `outputs/` is one run of that experiment, named with its run
-id. The documents were written against the full working tree, so where one
-names a file that is absent here, it is a run output that was not shipped or
-an input listed in `EXCLUDED-RAW-DATA.md`; those two are the complete set, and
-`MANIFEST.json` settles any doubt about what the bundle contains.
+A directory under `outputs/` is one run of that experiment, named by its run
+id. If a note names a file that is not here, it is either a run output that
+was not shipped or an input listed in `EXCLUDED-RAW-DATA.md`.
 
 ## License and data terms
 
